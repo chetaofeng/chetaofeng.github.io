@@ -1,0 +1,3412 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/2/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/2/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件破解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件破解/" itemprop="url">java JDK安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/oracle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/12/oracle/" itemprop="url">oracle</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T23:11:39+08:00">
+                2018-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>官网：<a href="https://www.oracle.com/index.html" target="_blank" rel="noopener">https://www.oracle.com/index.html</a><br>
+版本中字母的含义：c（cloud）、g（grid）、i（internet）</p>
+<p>下载：<a href="https://www.oracle.com/downloads/%EF%BC%8C%E9%9C%80%E8%A6%81%E7%99%BB%E5%BD%95oracle%E5%AE%98%E7%BD%91%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD" target="_blank" rel="noopener">https://www.oracle.com/downloads/，需要登录oracle官网，下载的两个文件解压在一个文件夹中</a></p>
+<p>安装：</p>
+<ol>
+<li>安装Oracle11g出现INS-13001环境不满足最低要求 <a href="https://blog.csdn.net/q_sea__/article/details/79012808" target="_blank" rel="noopener">https://blog.csdn.net/q_sea__/article/details/79012808</a></li>
+<li>Environment variable: “PATH”<br>
+安装时确保不要关机或断电；安装过程中复制文件过程比较耗费时间</li>
+</ol>
+<p>完整的Oracle数据库通常由两部分组成：Oracle数据库和数据库实例。</p>
+<ol>
+<li>数据库是一系列物理文件的集合（数据文件，控制文件，联机日志，参数文件等）；</li>
+<li>Oracle数据库实例则是一组Oracle后台进程/线程以及在服务器分配的共享内存区。</li>
+</ol>
+<p>在启动Oracle数据库服务器时，实际上是在服务器的内存中创建一个Oracle实例（即在服务器内存中分配共享内存并创建相关的后台内存），然后由这个Oracle数据库实例来访问和控制磁盘中的数据文件。Oracle有一个很大的内存快，称为全局区（SGA）。</p>
+<p>数据库的创建与监听器的配置54C<br>
+创建数据库:Database Conguration Assistant,可以创建、配置、删除、管理数据库<br>
+全局数据库名称为数据库名称，其至少要有一个Oracle实例引用，该实例由SID唯一标识,如：orcl<br>
+配置Enterprise Manager会占用较大内存，先不配置;注意选择字符集;修改scott和hr的密码<br>
+sys用户为数据库的所有者，system用户为数据库的操作员<br>
+监听器的配置：Net Conguration Assistant，配置完成后在系统服务中查看添加了OracleOraDb11g_home1TNSListener,此服务启动之后就允许外部连接数据库了<br>
+OracleServiceORCL是关于数据库实例的服务，此服务启动之后，数据库才可用</p>
+<p>oracle常用数据库工具<br>
+Oracle Universal Installer：OUI（Oracle全局安装器），用来安装卸载oracle数据库管理系统<br>
+Database Conguration Assistant：(DBCA)创建、配置、删除、管理数据库<br>
+Net Conguration Assistant：(NCA)监听器、命名方法、本地网络服务名、目录使用配置<br>
+SQL Plus：基于命令行的oracle官方操作工具<br>
+SQL Devloper：基于Java的图形化的oracle官方操作工具,需人工关联sqldeveloper.exe文件和配置JDK<br>
+PL/SQL Devloper：第三方工具<br>
+TOAD：第三方工具</p>
+<p>Oracle中的用户、权限与角色<br>
+用户管理：需切换到system用户操作<br>
+创建用户：create user 用户名 identified by 密码 [account lock|unlock] [password expire];（password expire表示密码立即过期，第一次登录后需修改密码）用户创建后还需授权才能操作数据库<br>
+修改用户：alter user 用户名 identified by 密码 [account lock|unlock] [password expire];<br>
+删除用户：drop user 用户名 [cascade];(cascade用来表示删除用户下的所有数据对象)<br>
+权限管理：权限为系统中设置的安全规则或安全策略，分为系统权限（用户能否在数据库上完成某个动作）和对象权限（用户能否在某个数据库对象上完成某种操作）<br>
+系统权限授予：grant 权限 to user|role [with admin option];(表示可以级联授予)<br>
+系统权限回收：revoke 权限 from user|role;<br>
+对象权限授予：grant 权限[(col,…)] on 数据库对象 to user|role [with admin option];<br>
+对象权限回收：revoke 权限[(col,…)] on 数据库对象 from user|role;<br>
+对象权限的回收是级联的，系统权限回收是非级联的<br>
+角色管理：角色是权限的集合，用来简化权限管理<br>
+创建／删除角色：create/drop role 角色;<br>
+角色上系统权限授予：grant 权限 to role [with admin option];(表示可以级联授予)<br>
+角色上系统权限回收：revoke 权限 from 角色;<br>
+角色上对象权限授予：grant 权限[(col,…)] on 数据库对象 to role [with admin option];<br>
+角色上对象权限回收：revoke 权限[(col,…)] on 数据库对象 from role;<br>
+用户角色授予：grant 角色 to 用户;<br>
+用户角色回收：revoke 角色 from 用户;</p>
+<p>Oracle表：由行和列组成的数据库中基本的存储单元，访问其他用户的表需要加用户名作为前缀<br>
+约束：表级别约束和列级别约束，由主键、外键、非空、唯一、检查5种约束<br>
+启用表的只读状态便于备份和导出表：alter table 表名 read only;启用表的读写状态：alter table 表名 read write;</p>
+<p>Oracle事务:有一组DML组成的逻辑工作单元，有原子性、一致性、独立性和持久性</p>
+<p>序列sequence：数值生成器，通常用于生成主键值，</p>
+<p>dual是Oracle提供的最小的工作表，只有一行一列，具有某些特殊功用，只有一条记录:‘X’,习惯上,我们称之为’伪表’,他的存在是为了操作上的方便,因为select都是要有特定对象的.<br>
+select count(*) from dual;</p>
+<p>索引和同义词的使用<br>
+索引：通过关联ROWID和关键值来提升查询速度<br>
+同义词：数据库对象的别名，public同义词对所有用户有用，创建需一定权限<br>
+创建：create [public] synonym 名称 for object;<br>
+删除：drop [public] synonym 名称 for object;</p>
+<p>PL/SQL：是一种程序语言，叫做过程化SQL语言（Procedural Language/SQL）。PL/SQL是Oracle数据库对SQL语句的扩展。在普通SQL语句的使用上增加了编程语言的特点<br>
+官网：<a href="https://www.oracle.com/technetwork/database/features/plsql/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/database/features/plsql/index.html</a><br>
+PL/SQL developer官网：<a href="https://www.allroundautomations.com/" target="_blank" rel="noopener">https://www.allroundautomations.com/</a><br>
+PLSQL Developer 12 注册码<br>
+product code： 4vkjwhfeh3ufnqnmpr9brvcuyujrx3n3le<br>
+serial Number：226959<br>
+password: xs374ca</p>
+<p>配置pl/sql的Database的两种方式：<br>
+确保OracleOraDb11g_home1TNSListener和OracleServiceXXXX服务已启动<br>
+1.登录时直接在Database选项输入数据库信息:在登录时输入数据库信息 ip:端口/数据库名,如：127.0.0.1:1521/ORCL<br>
+2.配置product\11.2.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora文件，添加一下内容到文档最后，登录时输入如ORCL即可登录<br>
+ORCL =<br>
+(DESCRIPTION =<br>
+(ADDRESS_LIST =<br>
+(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))<br>
+)<br>
+(CONNECT_DATA =<br>
+(SERVER = DEDICATED)<br>
+(SERVICE_NAME = ORCL)<br>
+)<br>
+)</p>
+<p><a href="https://www.jikexueyuan.com/course/oracledb/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/</a></p>
+<p><a href="https://www.oracle.com/technetwork/topics/winsoft-085727.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/topics/winsoft-085727.html</a></p>
+<p><a href="https://www.cnblogs.com/xiashiwendao/p/7634240.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiashiwendao/p/7634240.html</a></p>
+<p>严格来讲SQL会分为三种类型:</p>
+<p>1、数据操纵语言（DML）：用来操纵数据库中数据的命令。包括：select、insert、update、delete。</p>
+<p>2、数据定义语言（DDL）：用来建立数据库、数据库对象和定义列的命令。包括：create、alter、drop。</p>
+<p>3、数据控制语言（DCL）：用来控制数据库组件</p>
+<p>用select * from tab;来查询用户下的表<br>
+查看表结构用:DESC 表名称</p>
+<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
+全局数据库名：就是一个数据库的标识，在安装时就要想好，以后一般不修改，修改起来也麻烦，因为数据库一旦安装，数据库名就写进了控制文件，数据库表，很多地方都会用到这个数据库名。<br>
+启动数据库：也叫全局数据库，是数据库系统的入口，它会内置一些高级权限的用户如SYS，SYSTEM等。我们用这些高级权限账号登陆就可以在数据库实例中创建表空间，用户，表了。</p>
+<p>查询当前数据库名：select name from v$database;</p>
+<p>我们访问Oracle都是访问一个实例，但这个实例如果关联了数据库文件，就是可以访问的，如果没有，就会得到实例不可用的错误。<br>
+实例名指的是用于响应某个数据库操作的数据库管理系统的名称。她同时也叫SID。实例名是由参数instance_name决定的<br>
+查询当前数据库实例名：select instance_name from v$instance;</p>
+<p>从oracle9i版本开始，引入了一个新的参数，即数据库服务名。数据库的逻辑表示，它是数据库呈现给客户机的方式。参数名是SERVICE_NAME。如果数据库有域名，则数据库服务名就是全局数据库名；否则，数据库服务名与数据库名相同。</p>
+<p>网络服务名(NET SERVICES NAME)<br>
+         它是“连接描述符”简称，连接描述符是网络连接目标特殊格式的描述，它包括网络协议、主机名称或地址、和目标服务<br>
+         在Oracle7和Oracle8版本,目标服务由Oracle系统标识符(SID)来标识，而Oracle8i、Oracle9i则通过数据库服务名来来标识。保存tnsnames.ora文件中在格式如下：<br>
+ myDB =<br>
+   (DESCRIPTION =<br>
+     (ADDRESS_LIST =<br>
+       (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.10.1)(PORT = 1521))<br>
+     )<br>
+     (CONNECT_DATA =<br>
+       (SERVICE_NAME = <a href="http://testDB.ChinaMobile.com" target="_blank" rel="noopener">testDB.ChinaMobile.com</a>)<br>
+     )<br>
+   )</p>
+<p>若要向ORACLE代理商购买ORACLE，是以用户数来算钱的。那么，这个“用户”跟我们在ORACLE中通过</p>
+<p>CREATE USER USERNAME IDENTIFIED BY PASSWORD创建的用户是不同概念，“用户数”指的是并发访问用户数，</p>
+<p>（我理解是同时间访问同一个内存地址的进程数）。要是我买了8个用户的，可以建几十、上百个用户也没问题，只要峰值达不到并发数就可以了。</p>
+<p>打个比方，你的名字叫小明，但是你有很多外号。你父母叫你小明，但是朋友都叫你的外号。<br>
+这里你的父母就是oracle实例，小明就是sid，service name就是你的外号。<br>
+sid用于实例区分各个数据库，service name用于外部链接。</p>
+<p>一个Oracle Server由一个Oracle实例和一个Oracle数据库组成。<br>
+即：Oracle Server = Oracle Instance + Oracle Database</p>
+<p>Oracle实例包括了内存结构(SGA)和一系列后台进程(Background Process),两者合起来称为一个Oracle实例，即：Oracle Instance = SGA + Background Process</p>
+<p>数据库逻辑组织结构<br>
+表空间、段、区、块<br>
+一个数据库由一个或多个表空间组成，一个表空间只能属于一个数据库<br>
+一个表空间由一个或多个多个数据文件组成，一个数据文件只能属于一个表空间<br>
+一个数据文件由一个或多个操作系统块组成，每一个操作系统块只能数以一个数据文件<br>
+一个表空间可以包含一个或多个段，一个段只能属于一个表空间<br>
+一个段由一个或多个区组成，每一个区只能属于一个段<br>
+一个区由一个或多个Oracle 块组成，每一个Oracle块只能属于一个区<br>
+一个区只能属于一个数据文件，数据文件的空间可以分配到一个或多个区<br>
+一个Oracle 块由一个或多个操作系统块组成，一个操作系统块是一个Oracle块的一部分</p>
+<p><a href="https://blog.csdn.net/prince_lintb/article/details/78772999" target="_blank" rel="noopener">https://blog.csdn.net/prince_lintb/article/details/78772999</a></p>
+<p>pl/sql plus： &quot;／&quot;表示执行</p>
+<p>scott库：<a href="https://www.2cto.com/database/201805/742911.html" target="_blank" rel="noopener">https://www.2cto.com/database/201805/742911.html</a></p>
+<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
+<a href="http://www.cnblogs.com/kscnchina/p/4570865.html" target="_blank" rel="noopener">http://www.cnblogs.com/kscnchina/p/4570865.html</a></p>
+<p>声明时，变量以v_开头，常量以c_开头</p>
+<p><a href="https://blog.csdn.net/michaelehome/article/details/79464214" target="_blank" rel="noopener">https://blog.csdn.net/michaelehome/article/details/79464214</a></p>
+<p>select userenv(‘language’) from dual;<br>
+NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
+<p>字符集：<a href="https://www.cnblogs.com/kaishirenshi/p/9018343.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaishirenshi/p/9018343.html</a></p>
+<p>本地动态sql</p>
+<p>SQL环境  begin … end pl/sql环境</p>
+<p>一组SQL语句操作要成为事务，数据库管理系统必须保证这组操作的原子性（Atomicity）、一致性（consistency）、隔离性（Isolation）和持久性（Durability），这就是ACID特性。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/MongoDB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/10/MongoDB/" itemprop="url">MongoDB</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T20:38:05+08:00">
+                2018-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.jikexueyuan.com/course/mongoDB/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/mongoDB/</a></p>
+<p>NoSQL数据库：NoSQL(NoSQL = Not Only SQL )，意即&quot;不仅仅是SQL&quot;，指的是非关系型的数据库</p>
+<p>mongodb官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a><br>
+<a href="https://docs.mongodb.com/manual/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/</a></p>
+<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
+MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
+<p>NoSQL保证数据的最终一致性，数据由更新延迟</p>
+<p>CAP理论</p>
+<p>适用场景：数据缓存；json格式数据存储；高伸缩性场景；<br>
+MongoDB更多适合大数据量、高并发、弱事务的互联网应用，其内置的水平扩展机制提供了从几百万到十亿级别的数据处理能力，可很好的满足Web2.0和移动互联网应用的s数据存储要求。</p>
+<p>MongoDB由C++编写，支持32位（2G限制）和64位应用，是一个基于分布式文件存储的开源数据库系统。</p>
+<p>MongoDB3.0特性：</p>
+<ol>
+<li>加入WiredTiger存储引擎:<br>
+开源的存储引擎；为现代硬件设计：多核CPU，充分利用内存／芯片级缓存；RAM/SSD/HDD；为大数据设计：高性能，低延迟，高并发稳定性</li>
+<li>MMAPv1:内存映射存储引擎，为默认引擎 ，提供了Collection锁；无缝迁移MMAP</li>
+<li>可插拔引擎API</li>
+<li>基于Web的可视化管理工具：Ops Manager</li>
+</ol>
+<p>MongoDB数据模型<br>
+文档：本质上是一种类JSON的BSON格式的数据，可以理解为在JSON基础上添加了一些新的数据类型，包括Date，正则表达式等。<br>
+BSON官网：<a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>
+BSON是由一组组键值对组成，具有轻量性、可靠性和高效性3个特征。可遍历性是MongoDB将BSON作为数据存储的重要原因<br>
+使用文档时需要注意以下事项：<br>
+MongoDB中写操作的原子性限制在文档级别；<br>
+单个文档占用的存储空间不能超过16MB；<br>
+MongoDB会尽量保持文档被插入时键值对的顺序；<br>
+关于文档命名需要注意的事项：<br>
+_id是系统保留的关键字，他是默认的主键，该值在集合中必须唯一，且不可更改；<br>
+键不能包含空字符或\0，这个字符用于表示键的结尾；<br>
+不能以$开头且不能包含点号.<br>
+键是区分大小写的且不能重复</p>
+<p>集合：把一组相关的文档放到一起组成了集合，MongoDB的集合是模式自由的，一个集合里面的文档可以是各式各样的<br>
+MogoDB提供了一些特殊的集合：capped collection、system.indexes、system.namespaces等<br>
+集合命名需注意：<br>
+集合名不能是空字符串；<br>
+集合名不能包含空字符串或\0，该字符表示集合名的结尾<br>
+集合名不能以&quot;system.&quot;开头，此前缀是系统本身保留的<br>
+集合名不能包含$字符，但是可以包含点号.</p>
+<p>数据库：多个文档组成集合，多个集合组成数据库。一个MongoDB实例可承载多个数据库，每个数据库有独立的权限，在磁盘上，不同的数据库也可放置到不通目录<br>
+数据库命名规则：<br>
+不能是空字符串；不能以$开头；不能包含空字符串和点号.;数据库名称区分大小写；建议数据库名全部使用小写；数据库名最长64字节；不要与系统保留数据库名相同</p>
+<p>命名空间：把数据库名添加到集合名前面，中间用点号连接，得到集合的完全限定，就是命名空间<br>
+因为点号可以出现在集合名字中，如：jike.blog.posts 和 jike.blog.authors，可以将posts和authors看作是blog集合的子集合，blog集合甚至可以不存在<br>
+使用子集合的方式，可以是我们更好的组织数据，使数据结构更加清晰明了</p>
+<p>MongoDB数据类型<br>
+基本数据类型<br>
+null：表示空值或者不存在的字段<br>
+布尔：true／false<br>
+数据类型：32-int,64-int,64-double,注意：JavaScript只支持64位浮点数<br>
+字符串类型：使用UTF-8对字符串进行编码<br>
+二进制数据：可以保存由任意字节组成的字符串，如：图片、视频等<br>
+正则表达式类型：主要用于查询，使用正则表达式作为限定条件<br>
+Date类型：是一个64位整数，它代表距Unix epoch：1970-1-1的毫秒数，MongoDB在存储时间是现转换为UTC时间，北京时间=UTC+8小时，MongoDB Shell会根据本地时间 设置显示日期时间<br>
+Timestap：32bit Unix epoch + 32bit自增序数，只供MongoDB数据库服务内部使用，用于记录操作的详细时间<br>
+ObjectId：由24个16精制字符组成，每个字节存储两位16精制数字，总共需12字节存储空间=4字节时间戳+3字节机器标识+2字节pid+3字节计数器，ObjectId(),getTimestamp(),valueOf()<br>
+数组：使用方括号来表示的一组值，数组中可以包含不通数据类型的元素，针对数组，MongoDB提供了许多操作符，如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pop,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span></span></span></span>push,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pull,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span></span></span></span>slice,$addToSet等；MongoDB可自动为数组元素建立MultiKey索引<br>
+内嵌文档：文档可以作为键的值，这样的文档成为内嵌文档。内嵌文档可以使数据不用保存成扁平结果的键值对，从而使数据组织形式更加自然。</p>
+<p>内嵌文档模式VS引用文档模式<br>
+子文档比较小或变化不频繁，则使用内嵌文档模式，否则使用引用文档模式</p>
+<p>MongoDB自动将_id字段设置为主键</p>
+<p>MongoDB Shell：是MongoDB自带的JavaScript Shell，随MongoDB一起发布 =JavaScript V8解释器+MongoDB客户端</p>
+<p>help查看帮助<br>
+执行脚本<br>
+直接执行：mongo [–quiet] script.js<br>
+交互执行：load(“script.js”)<br>
+执行命令行程序：run(“ls”)<br>
+.mongorc.js文件，默认会加载<br>
+编辑复合变量EDITOR：在.bashrc中添加后source生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#EDITOR</span><br><span class="line">EDITOR=/usr/bin/vim</span><br></pre></td></tr></table></figure>
+<p>即可使用editor编辑文档</p>
+<p><a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-intro.html</a><br>
+Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。<br>
+GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。<br>
+MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</p>
+<p>MongoDB数据库安装：</p>
+<ol>
+<li>下载安装文件解压缩并添加bin目录到环境变量</li>
+<li>创建一个data目录，然后在data目录里创建db目录、logs目录</li>
+<li>启动服务端</li>
+<li>启动客户端：mongo</li>
+<li>windows下可以将MongoDB做成系统服务</li>
+</ol>
+<p>mac<br>
+临时添加环境变量：export PATH=/usr/local/mongodb/bin:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mi mathvariant="normal">编</mi><mi mathvariant="normal">辑</mi><mtext> </mtext><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>s</mi><msub><mi>h</mi><mi>p</mi></msub><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">：</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">PATH
+编辑~/.bash_profile,添加：export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord cjk_fallback">编</span><span class="mord cjk_fallback">辑</span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:/usr/local/mongodb4/bin/:$PATH 即可永久添加环境变量</p>
+<p>连接MongoDB数据库：./mongo + 服务器IP:端口号/数据库名<br>
+关闭MongoDB服务在 ./mongo 进入控制台后，输入 use admin,然后输入 db.shutdownServer()</p>
+<p>Mongodb可以通过命令行方式和配置文件的方式来启动：<br>
+这两种方式都是在前台启动Mongodb进程，如果Session窗口关闭，Mongodb进程也随之停止。<br>
+不过Mongodb同时还提供了一种后台Daemon方式启动，只需要加上一个&quot;–fork&quot;参数即可，用到了&quot;–fork&quot;参数就必须启用&quot;–logpath&quot;参数<br>
+通过命令行： ./bin/mongod --dbpath=/data/db --fork --logpath=/data/logs/mongodb.log<br>
+配置文件方式：./bin/mongod -f mongodb.conf  或 ./bin/mongod --config mongodb.conf  //-f 后面写要使用的配置文件<br>
+./bin/mongod --shutdown -f mongod.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">dbpath=/usr/local/mongodb/data/</span><br><span class="line">logpath=/usr/local/mongodb/log/mongodb.log  </span><br><span class="line">fork = true</span><br></pre></td></tr></table></figure>
+<p>命令行操作：<br>
+use mytetDB  //数据库如果不存在则创建<br>
+save时如果给定了_ObjectId则更新创建整条记录；如果要更新部分字段则使用update方法使用$set<br>
+db.dropDatabase()<br>
+db//显示当前数据库<br>
+show dbs<br>
+show collections</p>
+<p>有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。<br>
+admin： 从权限的角度来看，这是&quot;root&quot;数据库。要是将一个用户添加到这个数据库，这个用户自动继承所有数据库的权限。一些特定的服务器端命令也只能从这个数据库运行，比如列出所有的数据库或者关闭服务器。<br>
+local: 这个数据永远不会被复制，可以用来存储限于本地单台服务器的任意集合<br>
+config: 当Mongo用于分片设置时，config数据库在内部使用，用于保存分片的相关信息。</p>
+<p>MongoDB GridFS文件系统<br>
+分布式文件系统：将固定存储于单台机器上的文件系统，扩展到多台机器上，每个节点负责存储部分数据，众多的存储节点组成一个文件系统网络，各个节点通过网络进行通信和数据传输</p>
+<p>当存储文档大于16M时，可以考虑使用GridFS<br>
+GridFS：是MongoDB制定的如何在数据库中存储大文件的规范，MongoDB并没有实现GridFS，而是交由客户端驱动程序实现<br>
+GridFS使用两个集合（collection）存储文件。一个集合是chunks, 用于存储文件内容的二进制数据；一个集合是files，用于存储文件的元数据。<br>
+使用fs.files存储文件的元数据，包含字段如下：<br>
+使用fs.chunks存储以255K进行分割的文件块，包含字段如下：<br>
+GridFS适用于如下场景：<br>
+存储用户产生的文件且文件数量比较大；需要文件的自动备份和分布式存储；需要访问文件的部分内容；存储16MB以上的文件<br>
+mongofiles是MongoDB安装包中提供的一个工具，专门用来存取文件，包括查询所有文件、查看文件、上传一个文件、获取一个文件、按照_id来获取文件、按文件名删除文件、按_id删除文件。<br>
+mongofiles --help其实有四个主要命令，分别为：<br>
+put —存储命令<br>
+get —获取命令<br>
+list —列表命令<br>
+delete —删除命令</p>
+<p>MongoDB聚合管道：聚合操作主要用户批量数据处理，往往将记录按条件分组，然后在每组上分别进行一系列操作，如：求和、求最大小值等<br>
+聚合操作能够对记录进行复杂处理，主要为数理统计和数据挖掘。<br>
+MongoDB提供了3种聚合操作方式：<br>
+聚合管道（Aggregation Pipeline）:MongoDB Shell使用db.collection.aggregate([{…}])来构建和使用聚合管道<br>
+$project:用于修改文档的结构，可以重命名、增加或删除文档字段<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">滤</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi></mrow><annotation encoding="application/x-tex">match:用于过滤文档，在</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">滤</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span></span></span></span>match中不能使用$where,尽量出现在管道的前面，方便借助索引加快查询<br>
+$group:将集合中的文档进行分组，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
+$sort:将集合中的文档进行排序，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
+$skip:跳过指定数量的文档<br>
+$unwind:将文档按照数组字段拆分成多条文档，每条文档包含数组的一个元素<br>
+$geoNear:按照由近到远顺序输出接近某一地理位置的文档<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">将</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">储</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">阶</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">键</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">构</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">：</mi><mn>1</mn><mi mathvariant="normal">将</mi></mrow><annotation encoding="application/x-tex">out:将聚合结果存储到集合中，参数为集合名称
+    。。。
+    聚合管道表达式：阶段操作符可以看作是&quot;键&quot;，所对应的&quot;值&quot;称为管道表达式，管道表达式可以看作是管道操作符的操作数，管道表达式是一个文档结构，由字段名、字段值和表达式操作符组成。
+    聚合管道使用优化：
+    1将</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">储</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">阶</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord">&quot;</span><span class="mord cjk_fallback">键</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord">&quot;</span><span class="mord cjk_fallback">值</span><span class="mord">&quot;</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord">1</span><span class="mord cjk_fallback">将</span></span></span></span>match、$sort放到管道开始阶段，有利于利用索引提高文档处理效率<br>
+2提交过滤可减少流经后续阶段的文档数量<br>
+聚合管道的限制：<br>
+1返回文档结果不能超过16M，可通过返回一个游标或存储到集合中跳过此限制<br>
+单目的聚合操作<br>
+count<br>
+distinct<br>
+group<br>
+MapReduce编程模型</p>
+<p>mongoimport可以导入集合</p>
+<p>MongoDB数据更新<br>
+文档插入和删除：insert、update、delete<br>
+Bulk函数：Bulk可将多个数据更新操作放到一个待执行的列表中批量来执行，顺序执行的Bulk（按添加顺序执行，一个有问题则退出）和并执行的Bulk（随机方式并行）<br>
+1初始化Bulk：<br>
+并行：db.集合名.initializeUnorderedBulkOp()<br>
+顺序：db.集合名.initializeOrderedBulkOp()<br>
+2 bulk.inset({…})<br>
+3 bulk.execute()</p>
+<p>MMAPv1的内存分配策略：如果一个更新操作超过了文档在磁盘上预分配的空间，MongoDB会重新在磁盘上为其分配一块更大的连续空间。使用&quot;2的N次方&quot;的方式分配内存，如：32，64，128，256…2M，4M…<br>
+优点：1有利用内存的重用，降低系统碎片的数量；2减少数据移动频率，提高系统数据写效率</p>
+<p>文档修改<br>
+WriteResult = db.集合名.update(query,obj,upsert,multi)<br>
+query:查询条件，相当于where<br>
+obj：更改的内容，相当于SQL中的set语句<br>
+upsert：当query的文档不存在时是否插入一条新文档<br>
+multi：当query返回多个文档时是否一次更新满足条件的所有文档，默认只更新一条</p>
+<p>内嵌文档的修改：</p>
+<ol>
+<li>修改整个内嵌文档：{$set:{field1:新内嵌文档}}</li>
+<li>修改内嵌文档的某个字段：{$某个修改操作符:{field1.field2:value}}</li>
+</ol>
+<p>数组元素：MongoDB提供了大量的特定操作符，使得数组既可以作为栈、队列等有序对象使用，也可当作集合等无序对象来使用</p>
+<p>MongoDB的写安全机制<br>
+写过程：使用update、save等操作数据集合中数据时，只是修改了数据再内存中的映像，数据更新并没有同步地保存到磁盘上，而且更新内存中数据之前，更新操作会被记录到journal日志文件中，<br>
+每隔100ms将内存journal中的日志写到磁盘journal日志文件中 ，每隔60s将内存中修改的数据写会到磁盘上<br>
+写入安全级别：写入安全Write Concern是一种客户端设置的，用于控制写入安全级别的机制，通过写入安全机制可提高数据的可靠性。<br>
+分为四个级别，分别是：<br>
+非确认式写入Unacknowledged：写操作不会返回结果，所以无法知道是否写入成功；但速度快、效率高、无阻塞<br>
+确认式写入Acknowledged：写操作必须得到MongoDB服务器的写入确认，如果失败，会返回异常<br>
+日志写入Journaled：写操作要等到操作记录存储到Journal日志文件后才返回结果<br>
+复制集确认写入Replica Acknowledged：写操作不仅要得到主节点的写入确认，还要得到从节点的写入确认，可以设置写入节点的个数（包含主节点）</p>
+<p>journal日志相当于oracle中的redo日志文件，用户故障恢复和持久。Journal默认100ms刷新一次，所以最多丢失100ms数据<br>
+文件位于journal目录中，只能以追加方式添加数据，文件名以&quot;j._&quot;开头，超过1G会自动创建新的；数据库正常关闭时，数据库服务会自动清空journal目录下所有文件</p>
+<p>设置写安全操作级别，其实就是在写操作的性能和可靠性间取一个权衡；使用的写操作级别越高，时间越长，可靠性越高</p>
+<p>使用writeConcern函数作为更新函数的一个参数来设置写安全级别,如：db.集合名称.insert({name:“joe”},{writeConcern:{j:true}}),writeConcern函数参数如下：<br>
+w选项，可选择0，1，2等整数值及&quot;majority&quot;，0-非确认式写入 1-确认式写入（未启用复制集）／主节点确认式写入（启用了复制集），&gt;1只能用于复制集，2-数据至少写到1个从节点后返回，majority 只能用于复制集，表示更新操作用到大多数从节点<br>
+j选项，设置为true来使用journaled日志安全级别<br>
+wtimeout选项，用于设置超时单位为毫秒<br>
+以上选项可组合使用</p>
+<p>数据MongoDB数据查询<br>
+Cursor = db.集合名称.find(query,fields,limit,skip)<br>
+query:查询条件，相当于where<br>
+fields:用于字段映射，语法格式：{field:0}（0表示返回结果不包含此字段）或{field:1}（1表示返回结果不包含此字段），默认包含_id字段,相当于select中后面需要的字段<br>
+limit：限制查询结果集的数量，指定查询返回结果的数量上限，也可通过limit()实现<br>
+skip:跳过一定数据量的结果，设置第一条返回文档的偏移量，也可通过skip()实现<br>
+find查询只能正对一个集合；返回的集合默认是无序的</p>
+<p>db.集合名称.findOne()只返回第一条数据</p>
+<p>查询操作符<br>
+比较查询操作符<br>
+逻辑查询操作符<br>
+元素查询操作符<br>
+$where查询操作符：可以将JavaScript表达式的字符串或JavaScript函数作为查询语句的一部分，在js表达式和函数中，可使用this或obj来引用当前操作的文档，当js表达式或函数返回true时，才会返回当前文档</p>
+<p>内嵌文档与数组查询<br>
+内嵌文档查询<br>
+1查询整个内嵌文档：当内嵌文档的键值对数量和键值对顺序都相同时，才会匹配<br>
+2查询文档的某个字段：需要使用.号操作符，如:db.user.find({“address.city”:“BeiJing”})<br>
+数组查询<br>
+1查询整个数组：当数组元素内容和数组元素顺序都相同时，才会匹配<br>
+2查询数组中的元素（普通元素）：<br>
+A与位置无关，查询数组中含有某个值的文档，如：db.user.find({score:80})<br>
+B与位置有关，按照指定的数组索引查询数组元素的值，如：db.user.find({‘scores.2’:80})<br>
+3查询数组中的数组元素是文档时，查询数组元素有两种情况<br>
+A与位置无关，查询数组中满足条件的子文档元素，如：db.user.find(‘scores.成绩’：95)<br>
+B与位置有关，按照指定的数组索引查询数组子文档，如： db.user.find(‘scores.2.成绩’：95)</p>
+<p>MongoDB查询结果返回过程：find函数查询结果是以多条文档的形式分批来返回查询结果的，返回的文档会缓存到内存中，Cursor在一批数据回来之后遍历，下一批没来时会自动发起下一批请求，然后继续遍历</p>
+<p>MongoDB游标：用来遍历结果集中的数据。<br>
+游标的生命周期：创建、使用、销毁<br>
+游标可能会返回那些由于体积变大而被移动到集合末尾的文档而重复返回，可通过对查询快照的方式解决此问题，语法为：db.collection.find().snapshot().<br>
+使用快照之后，查询就会在_id索引上来遍历执行，这样就可以保证每个文档只被返回一次，从而保证获取结果的一致性。</p>
+<p>模糊查询：查询条件可以使用正则表达式实现模糊查询，支持正则表达式操作符和正则表达式对象两种。<br>
+正则表达式操作符：$regex</p>
+<p>findAndModify函数使用执行分为find和update两步，但可以保证操作的原子性</p>
+<p>MongoDB是为分布式存储而设计，_id主键默认使用ObjectId类型的值，比自增方式更适合分布式环境，所以MongoDB默认不支持字段自增长功能</p>
+<p>MongoDB索引：数据库索引是对数据表中一列或多列的值进行排序的一种数据结构，使用索引可快速访问数据表中的特定信息。MogonDB索引不仅提高文档查询速度，还有利于排序时节省内存资源。<br>
+MongoDB所有的索引信息被保存在system.indexes集合中，且默认总为_id创建单字段升序具有唯一属性的索引，可通过db.system.indexes.find()查看所有索引<br>
+MongoDB可在单个字段上建立索引，字段可以是普通字段、整个文档以及子文档的某个字段<br>
+对于复合索引，MongoDB支持前缀匹配<br>
+为确保查询只使用复合索引，可以使用映射来指定不要返回_id字段（除非它是复合索引的一部分）<br>
+多键索引：是对数组类型建立的索引，实际上是对数组的每个元素建立索引，而不是数组本身建立索引；当数组元素是文档时，可为文档的某个字段建立多键索引<br>
+哈希索引：只支持等值查询，不支持范围查询，主要用于分片的集合上，可以作为片键来使用，能将数据比较均匀的分散存储在各个分片上，如：db.集合名.createIndex({name:“hashed”})</p>
+<p>MongoDB索引的属性<br>
+唯一索引:可以确保集合的每一个文档的索引字段都有唯一的值，不会出现重复值，如：db.集合名.createIndex({name:1},{unique:true})，在非空集合创建唯一索引可能会因为已有重复值而失败，可添加dropBups:true删除重复文档<br>
+稀疏索引：只会为索引字段存在的文档建立索引，即使索引字段的值为null，但不会为索引字段不存在的文档建立索引<br>
+TTL(Time To Live)索引：为文档设置一个超时时间，当达到预设置的时间后，该文档会被数据库自动删除，但删除可能有延迟。这种类型的索引对缓存问题非常有用。只能建立在单独非_id字段<br>
+创建了TTL索引后，MongoDB会有一个后台线程来管理文档；在复制集上建立的TTL索引，TTL后台线程只会运行在主节点上</p>
+<p>MongoDB索引的管理<br>
+索引的默认命名规则：keyname1_dir1_keyname2_dir2…，其中keynameX是索引字段的名称，dirX是索引方向，1升序-1降序，也可自定义命名<br>
+创建索引：db.集合名.createIndex(keys,options),返回值为一个文档类型。索引一旦创建就不能修改，创建后可通过db.集合名.getIndexes()查看集合所拥有的索引，创建索引有两种方式：<br>
+1foreground:阻塞所有对数据库的读写请求，直到索引创建完成，为默认方式<br>
+2background：创建索引时，如果有新的数据库请求，创建过程会暂停<br>
+删除索引：db.集合.dropIndex(index)<br>
+查询优化器：用来优化查询过程，通过比较返回100条文档速度得到最佳查询计划<br>
+explain函数：能够提供大量与查询有关的信息，可以很好的评估索引性能，帮助优化索引的使用策略。db.集合.find().explain(mode),支持3种模式：<br>
+1queryPlanner：查询计划，默认<br>
+2executionStatus：查询性能统计<br>
+3allPlansExecution：所有计划统计信息（最优与被拒绝的计划）<br>
+explain返回结果使用由多个阶段（Stage）组成的树形结构来表示查询计划，查询计划自下而上执行，树的叶节点用来访问文档或索引，内部节点处理下层节点返回文档或索引，根节点输出查询结果<br>
+hint函数：强制MongoDB使用特定索引</p>
+<p>MongoDB特殊索引<br>
+地理空间索引：对地理位置数据建立索引，MongoDB支持两种2dsphere球面索引和平面2d索引<br>
+2dSphere球面索引<br>
+2d平面索引</p>
+<p>全文索引：又称为倒排索引，用于在大量文本中对每一个词组建立索引，指出该词在整段文本中出现的位置和次数，此技术主要用于搜索引擎和站内搜索等。<br>
+一个集合只能有一个全文索引</p>
+<p>java对mongodb的使用<br>
+集群搭建：mongodb分布式集群搭建手记</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/MyBatis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/10/MyBatis/" itemprop="url">MyBatis</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T13:43:24+08:00">
+                2018-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Java持久化框架 瞬态+持久态</p>
+<p>iBatis-MyBatis<br>
+apache-google-github</p>
+<p>SQL语句与代码分离；面向配置编程；良好支持复杂数据映射；动态SQL</p>
+<p><a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">https://github.com/mybatis/mybatis-3</a><br>
+<a href="http://www.mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/index.html</a></p>
+<p>日志配置<br>
+<a href="https://www.cnblogs.com/zhaozihan/p/6371133.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaozihan/p/6371133.html</a></p>
+<p>MyBatisg工作流程</p>
+<ol>
+<li>读取配置文件</li>
+<li>生成SqlSessionFactory,表示和数据库的连接，一般是程序级的生命周期</li>
+<li>简历SqlSession</li>
+<li>调用MyBatist提供的API</li>
+<li>查询Map配置</li>
+<li>返回结果</li>
+<li>关闭SqlSession</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;$&#123;driver&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;$&#123;url&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;$&#123;username&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>map文件引用<br>
+1.相对路径 2.绝对路径 3.包路径</p>
+<p>MyBatis配置文件：基本配置文件+映射配置文件</p>
+<p>typeAliases标记定义别名，需要environments标记之前</p>
+<p>map文件方式+注解方式（接口方式）</p>
+<p>mappers里面3种写法：resource／class／package</p>
+<p>Select配置属性说明<br>
+两者只能有一个成立<br>
+resultType<br>
+resultMap解决复杂查询时的映射问题，如属性为对象</p>
+<p>parameterType封装hashmap，key既是key也是sql形参<br>
+parameterType封装对象如User，对象参数自动匹配属性，如果对象属性和列名不一样用别名</p>
+<p>返回多上记录时MyBatis自动封装成List</p>
+<p>事务处理：<br>
+MyBatis事务处理由两种方式处理：JDBC+MANAGED</p>
+<p>每张表单独的一个配置文件，方便管理</p>
+<p>MyBatis自动id返回，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one.setUserName(&quot;123&quot;);</span><br><span class="line">session.insert(&quot;insertOne&quot;,one);</span><br><span class="line">System.out.println(one.id);  //可以正常获取id</span><br></pre></td></tr></table></figure>
+<p>高级查询<br>
+关联查询<br>
+联合查询：association<br>
+构造查询：POJO添加构造函数，同时确保要有默认构造函数，防止构造函数重新后找不到默认构造函数<br>
+子查询：所有联合查询，都可以通过子查询替换，但是他让查询成了N+1次的查询</p>
+<pre><code>子查询和联合查询的区别：
+联合查询一次查询占用资源大，子查询N+1次查询占用资源可大可小，MyBatis中子查询可能速度比联合查询速度高如果开启了懒加载的话
+懒加载的使用：配置要在配置别名之前
+</code></pre>
+<p>集合查询：Collection标记，适用于查询的对象还有一个集合引用的事后<br>
+鉴别器：discriminator标记<br>
+javaType属性：<br>
+Column属性：<br>
+Case子标记：</p>
+<p>MyBatis动态SQL：动态生成SQL</p>
+<p><a href="https://www.aliyun.com/jiaocheng/811373.html" target="_blank" rel="noopener">https://www.aliyun.com/jiaocheng/811373.html</a></p>
+<p><a href="https://www.jikexueyuan.com/course/oracledb/1-0-0-0/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/1-0-0-0/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Kotlin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/Kotlin/" itemprop="url">Kotlin</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://kotlinlang.org/" target="_blank" rel="noopener">http://kotlinlang.org/</a><br>
+<a href="https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt" target="_blank" rel="noopener">https://try.kotlinlang.org/#/Examples/Hello, world!/Simplest version/Simplest version.kt</a></p>
+<p>Kotlin作者Andrey<br>
+Kotlin是一种在 Java 虚拟机上运行的静态类型编程语言,被称之为 Android 世界的Swift,由 JetBrains 设计开发并开源<br>
+Kotlin是一种运行在Java虚拟机、Android、浏览器上的静态语言<br>
+Kotlin可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。<br>
+Android官方语言；100%兼容Java；Kotlin-js前端开发；Kotlin-jvm服务端开发；Kotlin-native本地执行程序；Kotlin是一门全栈语言</p>
+<p>千里之行，始于Hello World</p>
+<p>Kotlin不存在拆箱装箱问题;Kotlin不可隐式转换类型<br>
+var tmp:[类型]=[变量值]</p>
+<p>Boolean类型<br>
+Number数据类型：Byte，Short，Int，Long，Float，Double<br>
+Char数据类型：Char<br>
+String数据类型：String         字符串a==b 比较内容；a===b比较应用  字符串模版$args1  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>1</mn><mo>+</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>2</mn></mrow><mo separator="true">,</mo><mi mathvariant="normal">引</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">中</mi></mrow><annotation encoding="application/x-tex">{args1+args2},引号中</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">2</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">中</span></span></span></span>引用变量 ，多行<br>
+var a:String …<br>
+a1<br>
+a2<br>
+…</p>
+<p>Kotlin中 Any 等于 Java中 Object，是顶级类</p>
+<p>空类型：任意类型都有可空和不可空两种状态，？表示可为空，!!表示强制认定nullable不可为空<br>
+fun main(args:Array<string>){<br>
+var name:String = getName() ?: return<br>
+println(name)</string></p>
+<pre><code>var tmp:String? = &quot;Hello Kotlin&quot;
+println(tmp)
+println(tmp!!.length)
+</code></pre>
+<p>}</p>
+<p>fun getName():String?{<br>
+return null<br>
+}</p>
+<p>智能类型转换<br>
+Java方式的：var sub:Subclass = parent as Subclass   //类似于Java方式，转换异常则会抛异常<br>
+安全类型转换：var sub:Subclass? = parent as? Subclass   //如果转换失败，则返回null，不抛异常</p>
+<p>if(parent is Subclass)</p>
+<p>import com.test as test</p>
+<p>区间Range:一个数学上的概念，表示范围；是ClosedRange的子类，IntRange最常用；i in 0…1024 判断i是否在区间内<br>
+var range:IntRange = 0…1024    //[0,1024]<br>
+var range:IntRange = 0 until 1024    //[0,1024) == [0,1023]</p>
+<p>className::java.class.name<br>
+className::java.class.simpleName</p>
+<p>数组: val array:Array&lt;&gt; = arrayOf(…)<br>
+为了避免不必要的拆箱和装箱，基本类型的数组是定制的<br>
+val arrayOfInt:IntArray = intArrayOf(1,2,4)<br>
+val arrayOfChar:CharArray = charArrayOf(‘H’,‘e’,‘y’)<br>
+val arrayOfString: Array<string> = arrayOf(“Hello”,“Kotlin”)<br>
+val arrayOfOther:Array<other> = arrayOf(Other(1),Other(2))</other></string></p>
+<p>常量：val，常量因为赋值了，编译器可以推导出来类型，所以类型可以不用写，变量：var</p>
+<p>External Tools<br>
+Tools-&gt;Kotlin-&gt;Show Kotlin Bytecode</p>
+<p>函数：Kotlin中没有申明返回值的默认返回值是Unit<br>
+kotlinc安装，使用和javac一样<br>
+变量函数<br>
+var int2Long = fun(x:Int):Long{<br>
+return x.toLong()<br>
+}<br>
+int2Long(123)<br>
+fun sum(arg1:Int,arg2:Int) = arg1+arg2<br>
+Lambda表达式调用使用()或者invoke(),如：sum(1,2) 或 sum.invoke(1,2)<br>
+Lambda表达式–匿名函数</p>
+<p>var = {arg1:Int,arg2:Int -&gt; arg1+arg2}</p>
+<p>arrayOfString.forEach { println(it) }   //如果字面函数只有一个参数,可以省略该参数声明,并用“it”代替<br>
+arrayOfString.forEach(::println)</p>
+<p>Lambda表达式中的return<br>
+<a href="https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app</a></p>
+<p>public inline fun <t> Array<out t="">.forEach(action: (T) -&gt; Unit): Unit {<br>
+for (element in this) action(element)<br>
+}</out></t></p>
+<p>indexes.forEach {<br>
+if (it &gt; 5) {<br>
+return@forEach<br>
+}<br>
+println(it)<br>
+}</p>
+<p>indexes.forEach label@ {<br>
+if (it &gt; 5) {<br>
+return @label<br>
+}<br>
+println(it)<br>
+}</p>
+<p>函数参数调用时最后一个Lambda可以移出去<br>
+函数参数只有一个Lambda，调用时小括号可以省略<br>
+Lambda有一个参数，可默认为it<br>
+入参、返回值与形参一致的函数可以用函数引用的方式作为实参传入</p>
+<p>类成员方法和成员变量<br>
+class B<br>
+class A{<br>
+var b=0;<br>
+lateinit var c:String<br>
+val d:B by lazy{<br>
+B()<br>
+}<br>
+}<br>
+属性初始化</p>
+<ol>
+<li>尽量在构造方法中完成</li>
+<li>无法在构造方法中完成的，尝试降级为局部变量</li>
+<li>var用lateinit延迟初始化，val用lazy</li>
+<li>可空类型慎用null直接初始化</li>
+</ol>
+<p>中缀表达式：只有一个参数，且用infix修饰的函数<br>
+class Book {infix fun on(placeString:String){…}}<br>
+Book() on “My Desk” //使用方式<br>
+分支表达式：<br>
+val mode=if(args.isNotEmpty() &amp;&amp; args[0] ==1){<br>
+0<br>
+}else{<br>
+1<br>
+}</p>
+<p>异常捕捉<br>
+try …catch …finally中的执行完之后，再返回结果，可通过var获取返回值</p>
+<p>具名参数：sum(arg1=2,arg0=3)  //参数就可以不按照顺序传递了<br>
+变长参数：如main方法中的args<br>
+fun test(vararg  args:String){}<br>
+默认参数：给出参数默认值</p>
+<p>导出可执行程序</p>
+<p>kotlin应用场景：</p>
+<p>kotlin-android</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/SpringBoot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/SpringBoot/" itemprop="url">SpringBoot</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T14:41:51+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://spring.io/" target="_blank" rel="noopener">http://spring.io/</a></p>
+<p><a href="https://www.imooc.com/video/16358" target="_blank" rel="noopener">https://www.imooc.com/video/16358</a></p>
+<p>英文文档：<a href="https://docs.spring.io/spring-boot/docs/current/reference/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/</a></p>
+<p>Spring Framework是一种JavaEE的框架<br>
+Spring Boot是一种快速构建的Spring应用<br>
+Spring Cloud是构建SpringBoot的分布式应用</p>
+<p>SpringBoot2.0<br>
+编程语言：Java 8+，Kotlin，底层框架：SpringFramework 5.0.X,支持Web Flux</p>
+<p>Web Flux</p>
+<ol>
+<li>支持函数编程，Java 8 Lambda</li>
+<li>响应式编程,Reactive Streams</li>
+<li>异步编程，Servlet3.1和Asyc NIO</li>
+</ol>
+<p>InteliJ中配置Java和Maven</p>
+<p>构建项目：<br>
+图形化方式<br>
+1 <a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a> ，输入选择Reactive Web<br>
+2 导入项目<br>
+命令行方式（Maven）<br>
+mvn archetype:generate -DinteractiveMode=false -DgroupId=com.test -DartifactId=first-app-by-maven -Dversion=1.0.0-SNAPSHOT<br>
+添加<br>
+<parent><br>
+<groupid>org.springframework.boot</groupid><br>
+<artifactid>spring-boot-starter-parent</artifactid><br>
+<version>1.5.9.RELEASE</version><br>
+<relativepath><br>
+</relativepath></parent></p>
+<dependencies>
+    <dependency>
+        <groupid>org.springframework.boot</groupid>
+        <artifactid>spring-boot-starter-web</artifactid>
+    </dependency>
+</dependencies>
+<p>取消Junit的版本，需要4.1.2以上，取掉之后spring-boot-starter-parent继承版本</p>
+<hr>
+<p>父Module的packaging设置为pom</p>
+<p>打包方式<br>
+Jar包方式<br>
+War包方式<br>
+指定Main-class方式</p>
+<plugin>
+  <groupid>org.springframework.boot</groupid>
+  <artifactid>spring-boot-maven-plugin</artifactid>
+  <version>1.5.4.RELEASE</version>
+  <configuration>
+    <mainclass>${start-class}</mainclass>
+    <layout>ZIP</layout>
+  </configuration>
+  <executions>
+    <execution>
+      <goals>
+        <goal>repackage</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin> 
+<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html</a></p>
+<p>jar包形式<br>
+mvn -Dmaven.test.skip -U clean package<br>
+java -jar [jar名称.jar]</p>
+<p>war包形式，需要有webapp-&gt;WEB-INF-&gt;web.xml<br>
+java -jar [war名称.war]</p>
+<p>运行模式<br>
+IDEA方式<br>
+Jar／War方式<br>
+Maven插件方式：<br>
+mvn srping-boot:run//需要在Main方法module，使用前，需要在父Module mvn -Dmaven.test.skip -U clean install<br>
+<a href="https://blog.csdn.net/taiyangdao/article/details/75303181" target="_blank" rel="noopener">https://blog.csdn.net/taiyangdao/article/details/75303181</a></p>
+<p>ConcurrentHashMap  <a href="http://www.importnew.com/28263.html" target="_blank" rel="noopener">http://www.importnew.com/28263.html</a>  <a href="https://www.cnblogs.com/heyonggang/p/9112731.html" target="_blank" rel="noopener">https://www.cnblogs.com/heyonggang/p/9112731.html</a><br>
+AtomicInteger <a href="https://www.cnblogs.com/sharkli/p/5623524.html" target="_blank" rel="noopener">https://www.cnblogs.com/sharkli/p/5623524.html</a><br>
+好的习惯，实体都实现toString()方法</p>
+<p>Flux &amp; Mono<br>
+Flux：0到N个对象的集合<br>
+Mono：0到1个对象的集合<br>
+Reactive中的Flux和Mono是异步处理的，都是Publisher</p>
+<p><a href="https://www.imooc.com/learn/1058" target="_blank" rel="noopener">https://www.imooc.com/learn/1058</a><br>
+组件自动装配：规约大于配置，专注核心业务<br>
+外部化部署：一次构建、按需调配，到处运行<br>
+嵌入式容器：内置容器、无需部署、独立运行<br>
+SpringBoot Starter:简化依赖、按需装配、自我包含<br>
+Production-Ready：一站式运维、生态无缝整合</p>
+<p>Java 能长盛不衰，主要是命好。每当人们觉得 Java 不行了的时候，总会有英雄横刀救美。<br>
+最初 Java 开发出来不知道有什么用的时候，发现可以用 Applet 在网页上做动画。后来企业级软件开发时代 JavaEE 大行其道，开源社区 Spring 桃李满天下。<br>
+等到了移动时代，人们觉得 Java 要完蛋了，Google 拍马救市，收购并开放了 Android 平台，当家语言就是 Java，于是 Java 再次焕发勃勃生机。<br>
+目前大数据领域，Java 同样是当仁不让的好手。</p>
+<p>现在 Spring Framework 那套东西使用了十几年，正当大家被长达几千行的 ApplicationContext 配置文件折磨的死去活来的时候，Spring Boot 诞生了。什么是 Spring Boot？用来简化 Spring 应用程序开发的。</p>
+<p>换句话说就是，当你觉得 Java 不好用的时候，我做了个轻量级的 S，让你好好用 Java。等你觉的 S 也不够轻了，我做了个 SB，让你觉得 S 还是挺轻的。</p>
+<p><a href="https://www.imooc.com/video/16783" target="_blank" rel="noopener">https://www.imooc.com/video/16783</a><br>
+SrpingBoot为微服务框架，与Spring4一起诞生</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/02/NuGet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/02/NuGet/" itemprop="url">NuGet</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T10:44:02+08:00">
+                2018-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.cnblogs.com/nizhenghua/p/6422078.html" target="_blank" rel="noopener">https://www.cnblogs.com/nizhenghua/p/6422078.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/ECMAScript规范/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/ECMAScript规范/" itemprop="url">ECMAScript规范</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>ECMAScript 6（简称ES6）是JavaScript语言的下一代标准，于2015年6月正式发布，也称ECMAScript 2015。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考资料</span><br><span class="line">《ECMAScript 6 入门》： http://es6.ruanyifeng.com/</span><br></pre></td></tr></table></figure>
+<p>ECMA是标准，js是实现</p>
+<p>[toc]</p>
+<h3 id="历史"><a class="markdownIt-Anchor" href="#历史"></a> 历史</h3>
+<ul>
+<li>1996    ES1.0   js稳定，Netscapte将js提交给ECMA组织，ES正式出现</li>
+<li>1998  ES2.0   ES2.0正式发布</li>
+<li>1999  ES3.0   ES3被浏览器广泛支持</li>
+<li>2007  ES4.0   ES4过于激进，被废除了</li>
+<li>2008  ES3.1   4.0退化为严重缩水版3.1，代号Harmony（和谐）</li>
+<li>2009  ES5.0   ES5正式发布了，公布了JS.next，即后来的ES6.0</li>
+<li>2011  ES5.1   ES5.1成为了ISO国际标准</li>
+<li>2013.3  ES6.0   制定草案</li>
+<li>2013.12   ES6.0   ES6.0草案发布</li>
+<li>2015.6    ES6.0   ES6.0预计发布正式版，同时JS.next指向ES7.0</li>
+</ul>
+<h3 id="兼容性"><a class="markdownIt-Anchor" href="#兼容性"></a> 兼容性</h3>
+<blockquote>
+<p>目前ES5、ES6支持还可以，凑合；ES5、ES6逐渐沦为后台语言</p>
+</blockquote>
+<blockquote>
+<p>在浏览器中使用需要用到编译工具，babel／traceur（由google出的编译器，把ES6语法编译成ES5）</p>
+</blockquote>
+<h3 id="使用的三种方式"><a class="markdownIt-Anchor" href="#使用的三种方式"></a> 使用的三种方式</h3>
+<ol>
+<li>网页内直接使用</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;traceur.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;module&quot;&gt;</span><br><span class="line">    //此出写ES6代码</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>直接在线编译（主要用于测试）</li>
+</ol>
+<ul>
+<li><a href="http://babeljs.io/repl/" target="_blank" rel="noopener">http://babeljs.io/repl/</a></li>
+<li><a href="https://google.github.io/traceur-compiler/demo/repl.html" target="_blank" rel="noopener">https://google.github.io/traceur-compiler/demo/repl.html</a></li>
+</ul>
+<ol start="3">
+<li>直接在node中使用</li>
+</ol>
+<ul>
+<li>直接用，需添加‘use strict’</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//test.js</span><br><span class="line">&apos;use strict&apos;</span><br><span class="line">let a=2;</span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure>
+<p>node test.js</p>
+<ul>
+<li>node --harmony_desctructuring test.js</li>
+</ul>
+<h3 id="新增功能"><a class="markdownIt-Anchor" href="#新增功能"></a> 新增功能</h3>
+<h4 id="定义变量-let"><a class="markdownIt-Anchor" href="#定义变量-let"></a> 定义变量 let</h4>
+<ul>
+<li>let定义的变量只能在代码块中使用，具备块级作用域；var具备函数级作用域；</li>
+<li>块级作用域其实就是匿名函数立即调用</li>
+<li>变量不能重复定义</li>
+<li>可用于封闭空间;封闭空间可解决i问题<br>
+以前：<br>
+(function(i){<br>
+var a=12;<br>
+})(i);<br>
+现在：<br>
+{<br>
+let  a=12;<br>
+}</li>
+</ul>
+<h4 id="定义常量-const"><a class="markdownIt-Anchor" href="#定义常量-const"></a> 定义常量 const</h4>
+<p>定义后则不能修改</p>
+<h4 id="字符串连接"><a class="markdownIt-Anchor" href="#字符串连接"></a> 字符串连接</h4>
+<p>==反单引号==：==``==,内容模版,==${变量名}填充模版==</p>
+<h4 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值"></a> 解构赋值</h4>
+<ul>
+<li>var [a,b,c]=[12,5,101];解析结构，给a、b、c都赋值；</li>
+<li>json格式（通过名称匹配，与顺序无关）也支持</li>
+<li>==模式匹配==：var [a,[b,c],d] =[12,[3,2],101],左侧的样子需要和右侧一样</li>
+<li>可==以给默认值==。var {time=12,date} ={data=123}</li>
+</ul>
+<h4 id="复制数组"><a class="markdownIt-Anchor" href="#复制数组"></a> 复制数组</h4>
+<p>数组赋值为引用赋值，复制以前用for循环🔥 Array.from()函数，现在使用==超引用’…’==, var arr2 = […arr1]; 在函数中通过 …args 接收多个参数</p>
+<h4 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h4>
+<p>以前是for或for in，现在：for of，支持数组、json、map</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//i表示数组或者json的值，for in中i是下标，for of中表示key+value，实质是jsonObj.entrys(),类似的还有jsonObj.keys()、jsonObj.values()</span><br><span class="line">for(var i of arr)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="map操作"><a class="markdownIt-Anchor" href="#map操作"></a> map操作</h4>
+<p>get()\set()\delete()</p>
+<h4 id="箭头函数"><a class="markdownIt-Anchor" href="#箭头函数"></a> 箭头函数  =&gt;</h4>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>this问题  //this指向了window对象</li>
+<li>arguments不能使用，箭头函数没有自己的 arguments</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123; </span><br><span class="line">  var f = (...args) =&gt; args[0]; </span><br><span class="line">  return f(2); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(1); // 2</span><br></pre></td></tr></table></figure>
+<p>更多：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a></p>
+<h4 id="对象语法简洁化"><a class="markdownIt-Anchor" href="#对象语法简洁化"></a> 对象语法简洁化</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//以前</span><br><span class="line">var person=&#123;</span><br><span class="line">    name:&apos;abc&apos;,</span><br><span class="line">    age:100,</span><br><span class="line">    showName:function()&#123;</span><br><span class="line">        alert(this.name);       //this有问题</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">var name=&apos;abc&apos;;</span><br><span class="line">var age =100;</span><br><span class="line">var person=&#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    showName()&#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//以前面向对象</span><br><span class="line">function Person(name,age)&#123;  //类和构造函数一体</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.showName=function()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;</span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//ES6面向对象</span><br><span class="line">class Person&#123;</span><br><span class="line">    constructor(name=&apos;defalut&apos;,age=0)&#123;  //此处可以设置默认值，这是函数的功能，即：函数参数可以给默认值</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    showName()&#123;</span><br><span class="line">        return this.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);     </span><br><span class="line">alert(p1.showName());</span><br></pre></td></tr></table></figure>
+<p>继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//以前  子类.prototype = new 父类();</span><br><span class="line">function Worker(name,age)&#123;</span><br><span class="line">    Person.apply(this,arguments);</span><br><span class="line">&#125;</span><br><span class="line">Worker.prototype=new Person();</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">class Woker extends Person&#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        super();    //调用父级构造</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="es5-thisbind"><a class="markdownIt-Anchor" href="#es5-thisbind"></a> ES5:  this.bind();</h4>
+<h4 id="模块化"><a class="markdownIt-Anchor" href="#模块化"></a> 模块化</h4>
+<blockquote>
+<p>当前使用模块化必须引入traceur和bootstrap，type必须写成module</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//定义</span><br><span class="line">export default &#123;a,b&#125;</span><br><span class="line">//引用</span><br><span class="line">import modA from &apos;./a.js&apos;;</span><br><span class="line">//使用</span><br><span class="line">var sum = modA.a + modA.b</span><br></pre></td></tr></table></figure>
+<h4 id="promise"><a class="markdownIt-Anchor" href="#promise"></a> Promise</h4>
+<blockquote>
+<p>本身为一个对象，用来传递异步操作的数据</p>
+</blockquote>
+<blockquote>
+<p>整体是链式操作</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pending(等待、处理中)  ---&gt; Resolve（完成）   </span><br><span class="line">                     ---&gt; Reject  (拒绝)</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var p1 = new Promise(function(resolve,reject)&#123;</span><br><span class="line">    if(异步处理成功了)</span><br><span class="line">        resolve(成功数据)</span><br><span class="line">    else</span><br><span class="line">        reject(失败原因)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>包含方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">所有方法都支持链式编程</span><br><span class="line">*  then(成功(resolve数据),失败（reject数据）)  //此方法可以防止异步编程括号深度太多的的问题</span><br><span class="line">*  catch（function（e）&#123;&#125;）；    // 用来捕获错误</span><br><span class="line">*  all[p1,p2,p3....]  //用于将多个promise对象组合／包装成一个全新的promise对象,数组中的Promise又一个错误则按错误流程走，所有都成功则按成功流程走</span><br><span class="line">*  Promise.race([p1,p2....]).then(function(value)&#123;&#125;); //返回最先执行的Promise的结果</span><br><span class="line">*  Promise.reject()         //生成错误的Promise</span><br><span class="line">*  Promise.resolve()        //生成成功的Promise</span><br></pre></td></tr></table></figure>
+<h4 id="generatoryield"><a class="markdownIt-Anchor" href="#generatoryield"></a> Generator+yield</h4>
+<blockquote>
+<p>Generator:生成器，是一个函数，可以遍历</p>
+</blockquote>
+<ul>
+<li>Generator函数名字前有*</li>
+<li>Generator函数内部使用yield语句</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//普通函数</span><br><span class="line">function show()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">function* show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">*show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var res=show();</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;Hello&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;World&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;undefined&quot;,done:true&#125;</span><br><span class="line">~~~ </span><br><span class="line">* Generator函数调用后的对象有next方法</span><br><span class="line">* next方法每次返回一个value和done结果，value位yield后面的值，done代表是否遍历结束</span><br><span class="line">* yield语句本身没有返回值或每次返回undefined</span><br><span class="line">* next可以带参数，所带参数给了上一个yield</span><br><span class="line">* for ...of循环支持Generator函数</span><br></pre></td></tr></table></figure>
+<p>for (let v of show()){<br>
+document.write(v);<br>
+}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 展开运算符</span><br><span class="line"> 扩展语法允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组文本）或多个变量（用于解构赋值）的位置扩展</span><br><span class="line">1. 用于函数调用</span><br></pre></td></tr></table></figure>
+<p>myFunction(…iterableObj);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 用于数组字面量</span><br></pre></td></tr></table></figure>
+<p>[…iterableObj, 4, 5, 6]</p>
+<pre class="highlight"><code class="">
+ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/CommonJS规范-AMD-CMD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/CommonJS规范-AMD-CMD/" itemprop="url">CommonJS规范&AMD&CMD</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:41:00+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>浏览器端的js和服务器端js都主要做了哪些事</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>服务器端JS</th>
+<th>浏览器端JS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相同的代码需要多次执行</td>
+<td>代码需要从一个服务器端分发到多个客户端执行</td>
+</tr>
+<tr>
+<td>CPU和内存资源是瓶颈</td>
+<td>带宽是瓶颈</td>
+</tr>
+<tr>
+<td>加载时从磁盘中加载</td>
+<td>加载时需要通过网络加载</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>CommonJS是主要为了JS在==后端的表现制定==的，他是不适合前端的;AMD(异步模块定义)出现了，它就主要==为前端JS的表现制定规范==</p>
+</blockquote>
+<blockquote>
+<p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。</p>
+</blockquote>
+<blockquote>
+<p>AMD规范则是非同步加载模块，允许指定回调函数。</p>
+</blockquote>
+<blockquote>
+<p>由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，所以CommonJS规范比较适用。但是，如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范</p>
+</blockquote>
+<p>[toc]</p>
+<h1 id="commonjs"><a class="markdownIt-Anchor" href="#commonjs"></a> CommonJS</h1>
+<blockquote>
+<p>CommonJS规范: <a href="http://javascript.ruanyifeng.com/nodejs/module.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/nodejs/module.html</a></p>
+</blockquote>
+<blockquote>
+<p>CommonJS模块的特点如下:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">所有代码都运行在模块作用域，不会污染全局作用域。</span><br><span class="line">模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。</span><br><span class="line">模块加载的顺序，按照其在代码中出现的顺序</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>CommonJS是一种规范，NodeJS是这种规范的实现</p>
+</blockquote>
+<blockquote>
+<p>JavaScript是一个强大面向对象语言，它有很多快速高效的解释器。官方JavaScript标准定义的API是为了构建基于浏览器的应用程序。然而，并没有定于一个用于更广泛的应用程序的标准库。</p>
+</blockquote>
+<blockquote>
+<p>CommonJS API定义很多普通应用程序（主要指非浏览器的应用）使用的API，从而填补了这个空白。它的终极目标是提供一个类似Python，Ruby和Java标准库。这样的话，开发者可以使用CommonJS API编写==应用程序==，然后这些应用可以运行在不同的JavaScript解释器和不同的主机环境中。</p>
+</blockquote>
+<p>CommonJS定义的模块分为:模块引用(require)；模块定义(exports)；模块标识(module)</p>
+<h2 id="require"><a class="markdownIt-Anchor" href="#require"></a> require</h2>
+<blockquote>
+<p>require命令用于加载文件，后缀名默认为.js</p>
+</blockquote>
+<blockquote>
+<p>每个模块中有一个自由变量require，它是一个方法，这个方法接受一个参数，即模块的唯一ID。</p>
+</blockquote>
+<blockquote>
+<p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值</p>
+</blockquote>
+<blockquote>
+<p>require根据外部模块ID，返回该模块输出的API。如果外部模块被required的时候还没有执行完，require至少应改返回该模块的exports（另一个自由变量）。如果必需的模块不存在，require方法应该抛出一个异常。</p>
+</blockquote>
+<blockquote>
+<p>require可以有一个main属性，属性值要么为undefined，要么等于module（另一个自由变量）;可以用来判断模块是直接执行，还是被调用执行。直接执行的时候（node module.js），require.main属性指向模块本身;调用执行的时候（通过require加载该脚本执行），==require.main === module== 返回false</p>
+</blockquote>
+<blockquote>
+<p>require可以有一个paths属性，属性值为由路径字符串组成的数组，路径按优先级从高到低的顺序排列</p>
+</blockquote>
+<p>根据参数的不同格式，require命令去不同路径寻找模块文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 如果参数字符串以“/”开头，则表示加载的是一个位于绝对路径的模块文</span><br><span class="line">* 如果参数字符串以“./”开头，则表示加载的是一个位于相对路径的模块文件</span><br><span class="line">* 如果参数字符串不以“./“或”/“开头，则表示加载的是一个默认提供的核心模块或者一个位于各级node_modules目录的已安装模块</span><br><span class="line">* 如果参数字符串不以“./“或”/“开头，而且是一个路径如果参数字符串不以“./“或”/“开头，而且是一个路径，比如require(&apos;example-module/path/to/file&apos;)，则将先找到example-module的位置，然后再以它为参数，找到后续路径。</span><br><span class="line">* 如果指定的模块文件没有发现，Node会尝试为文件名添加.js、.json、.node后，再去搜索</span><br><span class="line">* 如果想得到require命令加载的确切文件名，使用require.resolve()方法</span><br></pre></td></tr></table></figure>
+<h2 id="exports"><a class="markdownIt-Anchor" href="#exports"></a> exports</h2>
+<p>每个模块中还有一个自由变量exports，它是一个对象，==模块对外输出的API就绑定在这个对象上==。而且==exports是模块对外输出API的唯一途径==。Node为每个模块提供一个exports变量，指向module.exports</p>
+<blockquote>
+<p>不能直接将exports变量指向一个值，因为这样等于切断了exports与module.exports的联系</p>
+</blockquote>
+<h2 id="module"><a class="markdownIt-Anchor" href="#module"></a> module</h2>
+<p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。==加载某个模块，其实是加载该模块的module.exports属性==</p>
+<blockquote>
+<p>每个模块中必须有一个自由变量module，它是对象。这个对象有一个id属性，表示该模块的id，同时应该是只读属性。</p>
+</blockquote>
+<blockquote>
+<p>module对象可以有一个uri属性，表示这个模块被加载的来源。</p>
+</blockquote>
+<p>每个模块内部，都有一个module对象，代表当前模块。它有以下属性:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.id 模块的识别符，通常是带有绝对路径的模块文件名。</span><br><span class="line">module.filename 模块的文件名，带有绝对路径。</span><br><span class="line">module.loaded 返回一个布尔值，表示模块是否已经完成加载。</span><br><span class="line">module.parent 返回一个对象，表示调用该模块的模块。</span><br><span class="line">module.children 返回一个数组，表示该模块要用到的其他模块。</span><br><span class="line">module.exports 表示模块对外输出的值</span><br></pre></td></tr></table></figure>
+<h2 id="目录的加载规则"><a class="markdownIt-Anchor" href="#目录的加载规则"></a> 目录的加载规则</h2>
+<blockquote>
+<p>通常，我们会把相关的文件会放在一个目录里面，便于组织。这时，最好为该目录设置一个入口文件，让require方法可以通过这个入口文件，加载整个目录</p>
+</blockquote>
+<blockquote>
+<p>在目录中放置一个package.json文件，并且将入口文件写入main字段</p>
+</blockquote>
+<blockquote>
+<p>如果package.json文件没有main字段，或者根本就没有package.json文件，则会加载该目录下的index.js文件或index.node文件</p>
+</blockquote>
+<h2 id="模块的缓存"><a class="markdownIt-Anchor" href="#模块的缓存"></a> 模块的缓存</h2>
+<blockquote>
+<p>第一次加载某个模块时，Node会缓存该模块。以后再加载该模块，就直接从缓存取出该模块的module.exports属性</p>
+</blockquote>
+<blockquote>
+<p>所有缓存的模块保存在require.cache之中，如果想删除模块的缓存，可以像下面这样写</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 删除指定模块的缓存</span><br><span class="line">delete require.cache[moduleName];</span><br><span class="line"></span><br><span class="line">// 删除所有模块的缓存</span><br><span class="line">Object.keys(require.cache).forEach(function(key) &#123;</span><br><span class="line">  delete require.cache[key];</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="amd"><a class="markdownIt-Anchor" href="#amd"></a> AMD</h1>
+<blockquote>
+<p>AMD就只有一个接口：define(id?,dependencies?,factory);</p>
+</blockquote>
+<blockquote>
+<p>RequireJS就是实现了AMD规范</p>
+</blockquote>
+<h1 id="cmd"><a class="markdownIt-Anchor" href="#cmd"></a> CMD</h1>
+<blockquote>
+<p>大名远扬的玉伯写了seajs，就是遵循他提出的CMD规范，与AMD蛮相近的，不过用起来感觉更加方便些，最重要的是中文版</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/middleware/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/middleware/" itemprop="url">middleware</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:32:09+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://zhuanlan.zhihu.com/p/20597452" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20597452</a></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>middleware 提供了一个分类处理 action 的机会，在 middleware 中你可以检阅每一个流过的 action，挑选出特定类型的 action 进行相应操作，给你一次改变 action 的机会</li>
+<li>redux 的 middleware 是为了增强 dispatch 而出现的</li>
+<li>redux 提供了 applyMiddleware 这个 api 来加载 middleware</li>
+</ul>
+<p><img src="/pub-images/redux-middleware1.png" alt="image"><br>
+<img src="/pub-images/redux-middleware2.png" alt="image"></p>
+<h1 id="四步理解-middleware-机制"><a class="markdownIt-Anchor" href="#四步理解-middleware-机制"></a> 四步理解 middleware 机制</h1>
+<p><img src="/pub-images/middleware%E6%9C%BA%E5%88%B6%E7%A4%BA%E4%BE%8B.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var middlewareAPI = &#123;</span><br><span class="line">  getState: store.getState,</span><br><span class="line">  dispatch: (action) =&gt; dispatch(action)</span><br><span class="line">&#125;;</span><br><span class="line">chain = middlewares.map(middleware =&gt; middleware(middlewareAPI));</span><br></pre></td></tr></table></figure>
+<h2 id="函数式编程思想设计-middleware"><a class="markdownIt-Anchor" href="#函数式编程思想设计-middleware"></a> 函数式编程思想设计 middleware</h2>
+<p>middleware 的设计有点特殊，是一个层层包裹的匿名函数，这其实是函数式编程中的柯里化 curry，一种使用匿名单参数函数来实现多参数函数的方法。applyMiddleware 会对 logger 这个 middleware 进行层层调用，动态地对 store 和 next 参数赋值</p>
+<p>柯里化的 middleware 结构好处在于：</p>
+<ol>
+<li>易串联，柯里化函数具有延迟执行的特性，通过不断柯里化形成的 middleware 可以累积参数，配合组合（ compose，函数式编程的概念，Step. 2 中会介绍）的方式，很容易形成 pipeline 来处理数据流</li>
+<li>共享store，在 applyMiddleware 执行过程中，store 还是旧的，但是因为闭包的存在，applyMiddleware 完成后，所有的 middlewares 内部拿到的 store 是最新且相同的</li>
+</ol>
+<h2 id="给-middleware-分发-store"><a class="markdownIt-Anchor" href="#给-middleware-分发-store"></a> 给 middleware 分发 store</h2>
+<p>创建一个普通的 store 通过如下方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//applyMiddleware 函数陆续获得了三个参数</span><br><span class="line">//第一个是 middlewares 数组，[mid1, mid2, mid3, ...]</span><br><span class="line">//第二个 next 是 Redux 原生的 createStore</span><br><span class="line">//最后一个是 reducer</span><br><span class="line">let newStore = applyMiddleware(mid1, mid2, mid3, ...)(createStore)(reducer, null);</span><br></pre></td></tr></table></figure>
+<h2 id="组合串联-middlewares"><a class="markdownIt-Anchor" href="#组合串联-middlewares"></a> 组合串联 middlewares</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch = compose(...chain)(store.dispatch);</span><br></pre></td></tr></table></figure>
+<p>compose 是函数式编程中的组合，compose 将 chain 中的所有匿名函数，[f1, f2, … , fx, …, fn]，组装成一个新的函数，即新的 dispatch，当新 dispatch 执行时，[f1, f2, … , fx, …, fn]，从右到左依次执行（ 所以顺序很重要）</p>
+<h2 id="在-middleware-中调用-dispatch"><a class="markdownIt-Anchor" href="#在-middleware-中调用-dispatch"></a> 在 middleware 中调用 dispatch</h2>
+<p>在middleware 中调用 store.dispatch() 和在其他任何地方调用效果是一样的，而在 middleware 中调用 next()，效果是进入下一个 middleware</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共36.7k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
