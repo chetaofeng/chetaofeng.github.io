@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="工具,node," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[toc] Grunt中文网：http://www.gruntjs.net/  简介  Grunt和 Grunt 插件是通过 npm 安装并管理的，npm是 Node.js 的包管理器。Grunt配合Node.js有相应的版本要求，如：Grunt 0.4.x 必须配合Node.js &amp;gt;= 0.8.0版本使用   奇数版本号的 Node.js 被认为是不稳定的开发版   Grunt-CLI">
+<meta name="keywords" content="工具,node">
+<meta property="og:type" content="article">
+<meta property="og:title" content="grunt入门">
+<meta property="og:url" content="https://chetaofeng.github.io/2018/10/26/前端开发-grunt入门/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="[toc] Grunt中文网：http://www.gruntjs.net/  简介  Grunt和 Grunt 插件是通过 npm 安装并管理的，npm是 Node.js 的包管理器。Grunt配合Node.js有相应的版本要求，如：Grunt 0.4.x 必须配合Node.js &amp;gt;= 0.8.0版本使用   奇数版本号的 Node.js 被认为是不稳定的开发版   Grunt-CLI">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-14T06:27:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="grunt入门">
+<meta name="twitter:description" content="[toc] Grunt中文网：http://www.gruntjs.net/  简介  Grunt和 Grunt 插件是通过 npm 安装并管理的，npm是 Node.js 的包管理器。Grunt配合Node.js有相应的版本要求，如：Grunt 0.4.x 必须配合Node.js &amp;gt;= 0.8.0版本使用   奇数版本号的 Node.js 被认为是不稳定的开发版   Grunt-CLI">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/2018/10/26/前端开发-grunt入门/"/>
+
+
+
+
+
+  <title>grunt入门 | 行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-grunt入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">grunt入门</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/26/前端开发-grunt入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/10/26/前端开发-grunt入门/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[toc]</p>
+<p>Grunt中文网：<a href="http://www.gruntjs.net/" target="_blank" rel="noopener">http://www.gruntjs.net/</a></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<blockquote>
+<p>Grunt和 Grunt 插件是通过 npm 安装并管理的，npm是 Node.js 的包管理器。Grunt配合Node.js有相应的版本要求，如：Grunt 0.4.x 必须配合Node.js &gt;= 0.8.0版本使用</p>
+</blockquote>
+<blockquote>
+<p>奇数版本号的 Node.js 被认为是不稳定的开发版</p>
+</blockquote>
+<h1 id="grunt-cli"><a class="markdownIt-Anchor" href="#grunt-cli"></a> Grunt-CLI</h1>
+<h2 id="简介-2"><a class="markdownIt-Anchor" href="#简介-2"></a> 简介</h2>
+<p>安装：npm install -g grunt-cli</p>
+<p>注意：</p>
+<ol>
+<li>安装grunt-cli并不等于安装了 Grunt！</li>
+<li>Grunt CLI的任务很简单：调用与Gruntfile在同一目录中 Grunt。这样带来的好处是，允许你在同一个系统上同时安装多个版本的 Grunt。</li>
+</ol>
+<p>运行原理：</p>
+<ol>
+<li>每次运行grunt 时，他就利用node提供的require()系统查找本地安装的 Grunt。正是由于这一机制，你可以在项目的任意子目录中运行grunt 。</li>
+<li>如果找到一份本地安装的 Grunt，CLI就将其加载，并传递Gruntfile中的配置信息，然后执行你所指定的任务。</li>
+</ol>
+<p>一份新的 Grunt项目一般需要在你的项目中添加两份文件：package.json 和 Gruntfile</p>
+<h2 id="packagejson"><a class="markdownIt-Anchor" href="#packagejson"></a> package.json:</h2>
+<p>package.json字段全解：<a href="http://blog.csdn.net/woxueliuyun/article/details/39294375" target="_blank" rel="noopener">http://blog.csdn.net/woxueliuyun/article/details/39294375</a></p>
+<ol>
+<li>被npm用于存储项目的元数据便将此项目发布为npm模块。你可以在此文件中列出项目依赖的grunt和Grunt插件，放置于devDependencies配置段内</li>
+<li>package.json应当放置于项目的根目录中，与Gruntfile在同一目录中，并且应该与项目的源代码一起被提交</li>
+<li>在目录(package.json所在目录)中运行npm install将依据package.json文件中所列出的每个依赖来自动安装适当版本的依赖</li>
+<li>为项目添加package.json文件的方式：</li>
+</ol>
+<ul>
+<li>大部分 grunt-init 模版都会自动创建特定于项目的package.json文件</li>
+<li>npm init命令会创建一个基本的package.json文件</li>
+<li>复制下面的案例，并根据需要做扩充，参考https://npmjs.org/doc/json.html</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;name&quot;: &quot;my-project-name&quot;,</span><br><span class="line"> &quot;version&quot;: &quot;0.1.0&quot;,</span><br><span class="line"> &quot;devDependencies&quot;: &#123;</span><br><span class="line">      &quot;grunt&quot;: &quot;~0.4.1&quot;,</span><br><span class="line">      &quot;grunt-contrib-jshint&quot;: &quot;~0.6.0&quot;,</span><br><span class="line">      &quot;grunt-contrib-nodeunit&quot;: &quot;~0.2.0&quot;,</span><br><span class="line">      &quot;grunt-contrib-uglify&quot;: &quot;~0.2.2&quot;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="gruntfile"><a class="markdownIt-Anchor" href="#gruntfile"></a> Gruntfile:</h2>
+<ol>
+<li>此文件被命名为 Gruntfile.js 或 Gruntfile.coffee，用来配置或定义任务（task）并加载Grunt插件的</li>
+<li>Gruntfile.js 或 Gruntfile.coffee 文件是有效的 JavaScript 或 CoffeeScript 文件，应当放在你的项目根目录中，和package.json文件在同一目录层级</li>
+<li>Gruntfile由以下几部分构成：“wrapper” 函数；项目与任务配置；加载grunt插件和任务；自定义任务</li>
+</ol>
+<ul>
+<li>&quot;wrapper&quot;函数:<br>
+每一份 Gruntfile（和grunt插件）都遵循同样的格式，你所书写的Grunt代码必须放在此函数内：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function(grunt) &#123;</span><br><span class="line"> // Do grunt-related things in here</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>项目与任务配置:大部分的Grunt任务都依赖某些配置数据，这些数据被定义在一个object内，并传递给grunt.initConfig方法，如package.json文件</li>
+<li>加载grunt插件和任务:像 concatenation、[minification]、grunt-contrib-uglify 和 linting这些常用的任务（task）都已经以grunt插件的形式被开发出来了。只要在 package.json 文件中被列为dependency（依赖）的包，并通过npm install安装之后，都可以在Gruntfile中以简单命令的形式使用：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 加载能够提供&quot;uglify&quot;任务的插件。</span><br><span class="line">grunt.loadNpmTasks(&apos;grunt-contrib-uglify&apos;);</span><br></pre></td></tr></table></figure>
+<p>注意： grunt --help 命令将列出所有可用的任务。</p>
+<ul>
+<li>自定义任务:通过定义 default 任务，可以让Grunt默认执行一个或多个任务</li>
+</ul>
+<p>Gruntfile.js文件示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function(grunt) &#123;</span><br><span class="line">    // Project configuration.</span><br><span class="line">    grunt.initConfig(&#123;</span><br><span class="line">        pkg: grunt.file.readJSON(&apos;package.json&apos;), //package.json文件中的项目元数据（metadata）被导入到 Grunt 配置中</span><br><span class="line">        uglify: &#123;</span><br><span class="line">            options: &#123;</span><br><span class="line">                banner: &apos;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&apos;</span><br><span class="line">            &#125;,</span><br><span class="line">            build: &#123;</span><br><span class="line">                src: &apos;src/&lt;%= pkg.name %&gt;.js&apos;,</span><br><span class="line">                dest: &apos;build/&lt;%= pkg.name %&gt;.min.js&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;); </span><br><span class="line">    // 加载包含 &quot;uglify&quot; 任务的插件。</span><br><span class="line">    grunt.loadNpmTasks(&apos;grunt-contrib-uglify&apos;);</span><br><span class="line">    // 默认被执行的任务列表。</span><br><span class="line">    grunt.registerTask(&apos;default&apos;, [&apos;uglify&apos;]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Gurnt CLI参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">--help, -h ==Display help text</span><br><span class="line">--base, -b ==Specify an alternate base path. By default, all file paths are relative to the Gruntfile.</span><br><span class="line">==Alternative to grunt.file.setBase(...)</span><br><span class="line">--no-color ==Disable colored output.</span><br><span class="line">--gruntfile ==Specify an alternate Gruntfile.</span><br><span class="line">==By default,grunt looks in the current or parent directories for the nearest Gruntfile.(js/coffee) file.</span><br><span class="line">--debug, -d ==Enable debugging mode for tasks that support it.</span><br><span class="line">--stack ==Print a stack trace when exiting with a warning or fatal error.</span><br><span class="line">--force, -f ==A way to force your way past warnings.Want a suggestion? Don&apos;t use this option, fix your code.</span><br><span class="line">--tasks ==Additional directory paths to scan for task and &quot;extra&quot; files.Alternative to grunt.loadTasks(...)</span><br><span class="line">--npm ==Npm-installed grunt plugins to scan for task and &quot;extra&quot; files.Alternative to grunt.loadNpmTasks(...)</span><br><span class="line">--no-write ==Disable writing files (dry run).</span><br><span class="line">--verbose, -v ==Verbose mode. A lot more information output.</span><br><span class="line">--version, -V ==Print the grunt version. Combine with --verbose for more info.</span><br><span class="line">--completion ==Output shell auto-completion rules. See the grunt-cli documentation for more information.</span><br></pre></td></tr></table></figure>
+<h1 id="安装gurnt和gurnt插件"><a class="markdownIt-Anchor" href="#安装gurnt和gurnt插件"></a> 安装Gurnt和Gurnt插件</h1>
+<h2 id="安装命令"><a class="markdownIt-Anchor" href="#安装命令"></a> 安装命令</h2>
+<ul>
+<li>npm install grunt --save-dev</li>
+<li>npm install grunt ==[@VERSION]== --save-dev</li>
+</ul>
+<h2 id="gurnt插件"><a class="markdownIt-Anchor" href="#gurnt插件"></a> Gurnt插件</h2>
+<blockquote>
+<p><a href="http://gruntjs.com/plugins" target="_blank" rel="noopener">http://gruntjs.com/plugins</a></p>
+</blockquote>
+<blockquote>
+<p>Grunt官方插件列表，其中带星号的为官方维护的插件</p>
+</blockquote>
+<p>创建插件：</p>
+<ol>
+<li>通过 npm install -g grunt-init 命令安装 grunt-init 。</li>
+<li>通过 git clone git://github.com/gruntjs/grunt-init-gruntplugin.git ~/.grunt-init/gruntplugin 命令安装grunt插件模版。</li>
+<li>在一个空的目录中执行 grunt-init gruntplugin 。</li>
+<li>执行 npm install 命令以准备开发环境。</li>
+<li>为你的插件书写代码。</li>
+<li>执行 npm publish 命令将你创建的 Grunt 插件提发布npm</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>grunt-contrib&quot; 命名空间保留给 Grunt 团队维护的task使用，请给你自己的task起一个合适名字，并且避免使用被保留的命名空间</li>
+<li>Grunt默认隐藏error stack traces，但可–stack启用方便调试自己的task;在bash中可通过alias grunt='grunt --stack’创建别名默认记录下stack trace</li>
+<li>存储任务文件：建议使用几个常用npm模块（例如 temporary、tmp）来调用操作系统级别的临时目录功能</li>
+<li>避免改变当前工作目录：process.cwd()</li>
+</ol>
+<ul>
+<li>默认包含gruntfile文件的目录被设置为当前工作目录。用户可在自己的gruntfile中通过grunt.file.setBase()改变改变当前工作目录，但是插件不应该改变它</li>
+<li>path.resolve(‘foo’) 可以被用来获取’foo’ 相对于 Gruntfile 所在目录的绝对路径</li>
+</ul>
+<ol start="5">
+<li>Grunt常用插件</li>
+</ol>
+<ul>
+<li>grunt-contrib-uglify：压缩js代码</li>
+<li>grunt-contrib-concat：合并js文件</li>
+<li>grunt-contrib-qunit：单元测试</li>
+<li>grunt-contrib-jshint：js代码检查</li>
+<li>grunt-contrib-watch：监控文件修改并重新执行注册的任务</li>
+</ul>
+<h1 id="task"><a class="markdownIt-Anchor" href="#task"></a> Task</h1>
+<blockquote>
+<p>Grunt就只支持两种任务：基本的Task以及MultiTasks</p>
+</blockquote>
+<blockquote>
+<p>区别是基本的Task的任务配置只有一个，而MultiTasks则有多个。大多数的grunt插件任务都是MultiTasks</p>
+</blockquote>
+<h2 id="task的创建"><a class="markdownIt-Anchor" href="#task的创建"></a> Task的创建</h2>
+<ul>
+<li>grunt注册任务的格式:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt.registerTask(taskName, [description, ] taskList)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>grunt默认任务:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//如果运行Grunt时没有指定任何任务，它将自动执行&apos;jshint&apos;、&apos;qunit&apos;、&apos;concat&apos; 和 &apos;uglify&apos; 任务</span><br><span class="line">grunt.registerTask(&apos;default&apos;, [&apos;jshint&apos;, &apos;qunit&apos;, &apos;concat&apos;, &apos;uglify&apos;]);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>grunt任务带参数的格式:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grunt.registerTask(&apos;dist&apos;, [&apos;concat:distArg&apos;, &apos;uglify:distArg&apos;]);</span><br></pre></td></tr></table></figure>
+<ol>
+<li>当一个基本任务执行时，Grunt并不会检查配置和环境 – 它仅仅执行指定的任务函数，并传递任何使用冒号分割的参数作为函数的参数</li>
+<li>如果你的任务并没有遵循 “多任务” 结构，那就使用自定义任务，在一个任务内部，执行其他的任务，使用grunt.task.run(‘bar’, ‘baz’);</li>
+<li>任务还可以依赖于其他任务的成功执行。注意 grunt.task.requires 并不会真正的运行其他任务，它仅仅检查其它任务是否已经执行，并且没有失败</li>
+</ol>
+<h2 id="task的配置"><a class="markdownIt-Anchor" href="#task的配置"></a> Task的配置</h2>
+<p>Grunt的task配置都是在 Gruntfile 中的grunt.initConfig方法中指定的。此配置主要是以任务名称命名的属性，也可以包含其他任意数据。一旦这些代表任意数据的属性与任务所需要的属性相冲突，就将被忽略。</p>
+<p>在一个任务配置中:</p>
+<ul>
+<li>options属性可以用来指定覆盖内置属性的默认。</li>
+<li>每一个目标（target）中还可以拥有一个专门针对此目标（target）的options属性</li>
+<li>目标（target）级的options将会覆盖任务级的options</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">grunt.initConfig(&#123;</span><br><span class="line">    concat: &#123; =================Task</span><br><span class="line">        options: &#123;</span><br><span class="line">         // 这里是任务级的Options，覆盖默认值</span><br><span class="line">        &#125;,</span><br><span class="line">        foo: &#123; =================Target，并非子任务</span><br><span class="line">            options: &#123;</span><br><span class="line">            // &quot;foo&quot; target options may go here, overriding task-level options.</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        bar: &#123;</span><br><span class="line">        // No options specified; this target will use task-level options.</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="文件"><a class="markdownIt-Anchor" href="#文件"></a> 文件</h2>
+<p>由于大多的任务都是执行文件操作，Grunt有一个强大的抽象层用于声明任务应该操作哪些文件。这里有好几种定义src-dest(源文件-目标文件)文件映射的方式，均提供了不同程度的描述和控制操作方式。任何一种多任务（multi-task）都能理解下面的格式，所以你只需要选择满足你需求的格式就行。</p>
+<p>详见：<a href="http://www.gruntjs.net/configuring-tasks" target="_blank" rel="noopener">http://www.gruntjs.net/configuring-tasks</a></p>
+<h1 id="项目实战"><a class="markdownIt-Anchor" href="#项目实战"></a> 项目实战</h1>
+<p>Nodejs和CLI安装好之后，参考：<a href="http://www.bluesdream.com/blog/windows-installs-the-grunt-and-instructions.html" target="_blank" rel="noopener">http://www.bluesdream.com/blog/windows-installs-the-grunt-and-instructions.html</a></p>
+<ol>
+<li>mkdir testProject  -&gt; cd testProject</li>
+<li>创建package.json文件</li>
+</ol>
+<p>package.json官方文档:<a href="https://docs.npmjs.com/json" target="_blank" rel="noopener">https://docs.npmjs.com/json</a></p>
+<ul>
+<li>A: npm init ==自动创建pachage.json文件</li>
+<li>B: 手动创建package.json文件，添加项目/模块的描述信息</li>
+</ul>
+<ol start="3">
+<li>安装Grunt和Grunt插件：</li>
+</ol>
+<ul>
+<li>手动添加，修改package.json文件，然后执行npm install<br>
+{<br>
+“name”: “my-project”,<br>
+“version”: “0.1.0”,<br>
+“devDependencies”: {<br>
+“grunt”: “~0.4.1”,<br>
+“grunt-contrib-cssmin”: “~0.7.0” //其中&quot;~0.7.0&quot;代表安装该插件的某个特定版本，如果只需安装最新版本，可以改成&quot;*&quot;<br>
+}<br>
+}</li>
+<li>自动安装： 其中–save-dev，表示将它作为你的项目依赖添加到package.json文件中devDependencies内</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install grunt --save-dev //安装最新版的Grunt</span><br><span class="line">npm install grunt-contrib-cssmin --save-dev //安装我们所需要的插件</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>创建Gruntfile.js文件：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function(grunt) &#123;</span><br><span class="line">    // 配置任务参数</span><br><span class="line">    grunt.initConfig(&#123;</span><br><span class="line">        pkg: grunt.file.readJSON(&apos;package.json&apos;),</span><br><span class="line">        cssmin: &#123;</span><br><span class="line">            combine: &#123;</span><br><span class="line">                files: &#123;</span><br><span class="line">                    &apos;css/release/compress.css&apos;: [&apos;css/*.css&apos;] // 指定合并的CSS文件 [&apos;css/base.css&apos;, &apos;css/global.css&apos;]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            minify: &#123;</span><br><span class="line">                options: &#123;</span><br><span class="line">                    keepSpecialComments: 0, /* 删除所有注释 */</span><br><span class="line">                    banner: &apos;/* minified css file */&apos;</span><br><span class="line">                &#125;,</span><br><span class="line">                files: &#123;</span><br><span class="line">                    &apos;css/release/master.min.css&apos;: [&apos;css/master.css&apos;]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    // 插件加载（加载 &quot;cssmin&quot; 模块）</span><br><span class="line">    grunt.loadNpmTasks(&apos;grunt-contrib-cssmin&apos;);</span><br><span class="line">    // 自定义任务：通过定义 default 任务，可以让Grunt默认执行一个或多个任务。</span><br><span class="line">    grunt.registerTask(&apos;default&apos;, [&apos;cssmin&apos;]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>执行：</li>
+</ol>
+<ul>
+<li>grunt //执行配置中所有的任务</li>
+<li>grunt cssmin //执行特定的任务</li>
+</ul>
+<ol start="6">
+<li>测试：</li>
+</ol>
+<ul>
+<li>在项目文件夹中创建个子文件夹，命名为：CSS</li>
+<li>在里面创建base.css和master.css，2个CSS文件，你可以随便写点内容在里面。</li>
+<li>在命令行中执行grunt，看到如下提示说明执行成功：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Running &quot;cssmin:combine&quot; (cssmin) task</span><br><span class="line">File css/release/compress.css created.</span><br><span class="line">Running &quot;cssmin:minify&quot; (cssmin) task</span><br><span class="line">File css/release/master.min.css created.</span><br><span class="line">Done, without errors.</span><br></pre></td></tr></table></figure>
+<h1 id="jsdocgrunt"><a class="markdownIt-Anchor" href="#jsdocgrunt"></a> JSDoc&amp;Grunt</h1>
+<p>grunt-jsdoc是一个Grunt的插件。这个插件集成了JsDoc Toolkit 3，并且你能够通过配置Grunt任务来生成API文档</p>
+<p>补充：grunt-jsdoc-plugin是同一个开发者，但是区别是grunt-jsdoc是基于JsDoc Toolkit 3而grunt-jsdoc-plugin是基于JsDoc Toolkit 2的</p>
+<p>安装:</p>
+<ol>
+<li>已安装好JAVA且配置好了Java环境变量</li>
+<li>npm install grunt-jsdoc --save-dev //安装jsdoc插件</li>
+</ol>
+<p>grunt-jsdoc的grunt任务配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">grunt.initConfig(&#123;</span><br><span class="line">    jsdoc : &#123;</span><br><span class="line">        dist : &#123;</span><br><span class="line">            src: [&apos;src/*.js&apos;, &apos;test/*.js&apos;],</span><br><span class="line">            options: &#123;</span><br><span class="line">                destination: &apos;doc&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">src: 要自动生成API文档的源文件路径数组</span><br><span class="line">jsdoc: jsdoc的bin文件夹目录</span><br><span class="line">options: jsdoc单独使用的配置项</span><br><span class="line">destination： 必填，指定文档输出路径</span><br><span class="line">configure： jsdoc配置文件路径</span><br><span class="line">template： 文档模板路径</span><br><span class="line">private： 是否在文档中输出private成员，默认为true</span><br></pre></td></tr></table></figure>
+<p>更多参数：参考官方文档：Command-line arguments to JSDoc: <a href="http://usejsdoc.org/about-commandline.html" target="_blank" rel="noopener">http://usejsdoc.org/about-commandline.html</a></p>
+<h1 id="gruntjs和gulpjs工作方式的区别"><a class="markdownIt-Anchor" href="#gruntjs和gulpjs工作方式的区别"></a> Grunt.js和Gulp.js工作方式的区别</h1>
+<ul>
+<li>Grunt主要是以文件为媒介来运行它的工作流的，比如在Grunt中执行完一项任务后，会把结果写入到一个临时文件中，然后可以在这个临时文件内容的基础上执行其它任务，执行完成后又把结果写入到临时文件中，然后又以这个为基础继续执行其它任务…就这样反复下去。</li>
+<li>在Gulp中，使用的是Nodejs中的stream(流)，首先获取到需要的stream，然后可以通过stream的pipe()方法把流导入到你想要的地方，比如Gulp的插件中，经过插件处理后的流又可以继续导入到其他插件中，当然也可以把流写入到文件中。所以Gulp是以stream为媒介的，它不需要频繁的生成临时文件，这也是Gulp的速度比Grunt快的一个原因</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/10/26/前端开发-grunt入门/">grunt入门</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
+  <p><span>发布时间:</span>2018年10月26日 - 16:10</p>
+  <p><span>最后更新:</span>2019年02月14日 - 14:02</p>
+  <p><span>原始链接:</span><a href="/2018/10/26/前端开发-grunt入门/" title="grunt入门">https://chetaofeng.github.io/2018/10/26/前端开发-grunt入门/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/10/26/前端开发-grunt入门/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用</a> 转载请保留原文链接及作者</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/pub-images/wechatpay.png" alt="行锋 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/pub-images/alipay.png" alt="行锋 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工具/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+          
+            <a href="/tags/node/" rel="tag"><i class="fa fa-tag"></i> node</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/26/前端开发-gulp入门/" rel="next" title="gulp入门">
+                <i class="fa fa-chevron-left"></i> gulp入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/26/前端开发-NodeJS快速入门/" rel="prev" title="NodeJS快速入门">
+                NodeJS快速入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#grunt-cli"><span class="nav-number">2.</span> <span class="nav-text"> Grunt-CLI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#packagejson"><span class="nav-number">2.2.</span> <span class="nav-text"> package.json:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gruntfile"><span class="nav-number">2.3.</span> <span class="nav-text"> Gruntfile:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装gurnt和gurnt插件"><span class="nav-number">3.</span> <span class="nav-text"> 安装Gurnt和Gurnt插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装命令"><span class="nav-number">3.1.</span> <span class="nav-text"> 安装命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gurnt插件"><span class="nav-number">3.2.</span> <span class="nav-text"> Gurnt插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#task"><span class="nav-number">4.</span> <span class="nav-text"> Task</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#task的创建"><span class="nav-number">4.1.</span> <span class="nav-text"> Task的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#task的配置"><span class="nav-number">4.2.</span> <span class="nav-text"> Task的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件"><span class="nav-number">4.3.</span> <span class="nav-text"> 文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目实战"><span class="nav-number">5.</span> <span class="nav-text"> 项目实战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsdocgrunt"><span class="nav-number">6.</span> <span class="nav-text"> JSDoc&amp;Grunt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gruntjs和gulpjs工作方式的区别"><span class="nav-number">7.</span> <span class="nav-text"> Grunt.js和Gulp.js工作方式的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共97.8k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'chetaofeng',
+            repo: 'chetaofeng.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3a517daf6c3ddafc8d92d32fc3499e190849e1b2',
+            
+                client_id: 'cdad0b52d3b0f16bb4ea'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

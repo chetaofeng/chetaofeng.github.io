@@ -1,0 +1,3186 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/7/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/7/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-CommonJS规范-AMD-CMD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-CommonJS规范-AMD-CMD/" itemprop="url">CommonJS规范&AMD&CMD</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:41:00+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>浏览器端的js和服务器端js都主要做了哪些事</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>服务器端JS</th>
+<th>浏览器端JS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相同的代码需要多次执行</td>
+<td>代码需要从一个服务器端分发到多个客户端执行</td>
+</tr>
+<tr>
+<td>CPU和内存资源是瓶颈</td>
+<td>带宽是瓶颈</td>
+</tr>
+<tr>
+<td>加载时从磁盘中加载</td>
+<td>加载时需要通过网络加载</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>CommonJS是主要为了JS在==后端的表现制定==的，他是不适合前端的;AMD(异步模块定义)出现了，它就主要==为前端JS的表现制定规范==</p>
+</blockquote>
+<blockquote>
+<p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。</p>
+</blockquote>
+<blockquote>
+<p>AMD规范则是非同步加载模块，允许指定回调函数。</p>
+</blockquote>
+<blockquote>
+<p>由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，所以CommonJS规范比较适用。但是，如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范</p>
+</blockquote>
+<p>[toc]</p>
+<h1 id="commonjs"><a class="markdownIt-Anchor" href="#commonjs"></a> CommonJS</h1>
+<blockquote>
+<p>CommonJS规范: <a href="http://javascript.ruanyifeng.com/nodejs/module.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/nodejs/module.html</a></p>
+</blockquote>
+<blockquote>
+<p>CommonJS模块的特点如下:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">所有代码都运行在模块作用域，不会污染全局作用域。</span><br><span class="line">模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。</span><br><span class="line">模块加载的顺序，按照其在代码中出现的顺序</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>CommonJS是一种规范，NodeJS是这种规范的实现</p>
+</blockquote>
+<blockquote>
+<p>JavaScript是一个强大面向对象语言，它有很多快速高效的解释器。官方JavaScript标准定义的API是为了构建基于浏览器的应用程序。然而，并没有定于一个用于更广泛的应用程序的标准库。</p>
+</blockquote>
+<blockquote>
+<p>CommonJS API定义很多普通应用程序（主要指非浏览器的应用）使用的API，从而填补了这个空白。它的终极目标是提供一个类似Python，Ruby和Java标准库。这样的话，开发者可以使用CommonJS API编写==应用程序==，然后这些应用可以运行在不同的JavaScript解释器和不同的主机环境中。</p>
+</blockquote>
+<p>CommonJS定义的模块分为:模块引用(require)；模块定义(exports)；模块标识(module)</p>
+<h2 id="require"><a class="markdownIt-Anchor" href="#require"></a> require</h2>
+<blockquote>
+<p>require命令用于加载文件，后缀名默认为.js</p>
+</blockquote>
+<blockquote>
+<p>每个模块中有一个自由变量require，它是一个方法，这个方法接受一个参数，即模块的唯一ID。</p>
+</blockquote>
+<blockquote>
+<p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值</p>
+</blockquote>
+<blockquote>
+<p>require根据外部模块ID，返回该模块输出的API。如果外部模块被required的时候还没有执行完，require至少应改返回该模块的exports（另一个自由变量）。如果必需的模块不存在，require方法应该抛出一个异常。</p>
+</blockquote>
+<blockquote>
+<p>require可以有一个main属性，属性值要么为undefined，要么等于module（另一个自由变量）;可以用来判断模块是直接执行，还是被调用执行。直接执行的时候（node module.js），require.main属性指向模块本身;调用执行的时候（通过require加载该脚本执行），==require.main === module== 返回false</p>
+</blockquote>
+<blockquote>
+<p>require可以有一个paths属性，属性值为由路径字符串组成的数组，路径按优先级从高到低的顺序排列</p>
+</blockquote>
+<p>根据参数的不同格式，require命令去不同路径寻找模块文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 如果参数字符串以“/”开头，则表示加载的是一个位于绝对路径的模块文</span><br><span class="line">* 如果参数字符串以“./”开头，则表示加载的是一个位于相对路径的模块文件</span><br><span class="line">* 如果参数字符串不以“./“或”/“开头，则表示加载的是一个默认提供的核心模块或者一个位于各级node_modules目录的已安装模块</span><br><span class="line">* 如果参数字符串不以“./“或”/“开头，而且是一个路径如果参数字符串不以“./“或”/“开头，而且是一个路径，比如require(&apos;example-module/path/to/file&apos;)，则将先找到example-module的位置，然后再以它为参数，找到后续路径。</span><br><span class="line">* 如果指定的模块文件没有发现，Node会尝试为文件名添加.js、.json、.node后，再去搜索</span><br><span class="line">* 如果想得到require命令加载的确切文件名，使用require.resolve()方法</span><br></pre></td></tr></table></figure>
+<h2 id="exports"><a class="markdownIt-Anchor" href="#exports"></a> exports</h2>
+<p>每个模块中还有一个自由变量exports，它是一个对象，==模块对外输出的API就绑定在这个对象上==。而且==exports是模块对外输出API的唯一途径==。Node为每个模块提供一个exports变量，指向module.exports</p>
+<blockquote>
+<p>不能直接将exports变量指向一个值，因为这样等于切断了exports与module.exports的联系</p>
+</blockquote>
+<h2 id="module"><a class="markdownIt-Anchor" href="#module"></a> module</h2>
+<p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。==加载某个模块，其实是加载该模块的module.exports属性==</p>
+<blockquote>
+<p>每个模块中必须有一个自由变量module，它是对象。这个对象有一个id属性，表示该模块的id，同时应该是只读属性。</p>
+</blockquote>
+<blockquote>
+<p>module对象可以有一个uri属性，表示这个模块被加载的来源。</p>
+</blockquote>
+<p>每个模块内部，都有一个module对象，代表当前模块。它有以下属性:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.id 模块的识别符，通常是带有绝对路径的模块文件名。</span><br><span class="line">module.filename 模块的文件名，带有绝对路径。</span><br><span class="line">module.loaded 返回一个布尔值，表示模块是否已经完成加载。</span><br><span class="line">module.parent 返回一个对象，表示调用该模块的模块。</span><br><span class="line">module.children 返回一个数组，表示该模块要用到的其他模块。</span><br><span class="line">module.exports 表示模块对外输出的值</span><br></pre></td></tr></table></figure>
+<h2 id="目录的加载规则"><a class="markdownIt-Anchor" href="#目录的加载规则"></a> 目录的加载规则</h2>
+<blockquote>
+<p>通常，我们会把相关的文件会放在一个目录里面，便于组织。这时，最好为该目录设置一个入口文件，让require方法可以通过这个入口文件，加载整个目录</p>
+</blockquote>
+<blockquote>
+<p>在目录中放置一个package.json文件，并且将入口文件写入main字段</p>
+</blockquote>
+<blockquote>
+<p>如果package.json文件没有main字段，或者根本就没有package.json文件，则会加载该目录下的index.js文件或index.node文件</p>
+</blockquote>
+<h2 id="模块的缓存"><a class="markdownIt-Anchor" href="#模块的缓存"></a> 模块的缓存</h2>
+<blockquote>
+<p>第一次加载某个模块时，Node会缓存该模块。以后再加载该模块，就直接从缓存取出该模块的module.exports属性</p>
+</blockquote>
+<blockquote>
+<p>所有缓存的模块保存在require.cache之中，如果想删除模块的缓存，可以像下面这样写</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 删除指定模块的缓存</span><br><span class="line">delete require.cache[moduleName];</span><br><span class="line"></span><br><span class="line">// 删除所有模块的缓存</span><br><span class="line">Object.keys(require.cache).forEach(function(key) &#123;</span><br><span class="line">  delete require.cache[key];</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="amd"><a class="markdownIt-Anchor" href="#amd"></a> AMD</h1>
+<blockquote>
+<p>AMD就只有一个接口：define(id?,dependencies?,factory);</p>
+</blockquote>
+<blockquote>
+<p>RequireJS就是实现了AMD规范</p>
+</blockquote>
+<h1 id="cmd"><a class="markdownIt-Anchor" href="#cmd"></a> CMD</h1>
+<blockquote>
+<p>大名远扬的玉伯写了seajs，就是遵循他提出的CMD规范，与AMD蛮相近的，不过用起来感觉更加方便些，最重要的是中文版</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-middleware/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-middleware/" itemprop="url">middleware</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:32:09+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://zhuanlan.zhihu.com/p/20597452" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20597452</a></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>middleware 提供了一个分类处理 action 的机会，在 middleware 中你可以检阅每一个流过的 action，挑选出特定类型的 action 进行相应操作，给你一次改变 action 的机会</li>
+<li>redux 的 middleware 是为了增强 dispatch 而出现的</li>
+<li>redux 提供了 applyMiddleware 这个 api 来加载 middleware</li>
+</ul>
+<p><img src="/pub-images/redux-middleware1.png" alt="image"><br>
+<img src="/pub-images/redux-middleware2.png" alt="image"></p>
+<h1 id="四步理解-middleware-机制"><a class="markdownIt-Anchor" href="#四步理解-middleware-机制"></a> 四步理解 middleware 机制</h1>
+<p><img src="/pub-images/middleware%E6%9C%BA%E5%88%B6%E7%A4%BA%E4%BE%8B.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var middlewareAPI = &#123;</span><br><span class="line">  getState: store.getState,</span><br><span class="line">  dispatch: (action) =&gt; dispatch(action)</span><br><span class="line">&#125;;</span><br><span class="line">chain = middlewares.map(middleware =&gt; middleware(middlewareAPI));</span><br></pre></td></tr></table></figure>
+<h2 id="函数式编程思想设计-middleware"><a class="markdownIt-Anchor" href="#函数式编程思想设计-middleware"></a> 函数式编程思想设计 middleware</h2>
+<p>middleware 的设计有点特殊，是一个层层包裹的匿名函数，这其实是函数式编程中的柯里化 curry，一种使用匿名单参数函数来实现多参数函数的方法。applyMiddleware 会对 logger 这个 middleware 进行层层调用，动态地对 store 和 next 参数赋值</p>
+<p>柯里化的 middleware 结构好处在于：</p>
+<ol>
+<li>易串联，柯里化函数具有延迟执行的特性，通过不断柯里化形成的 middleware 可以累积参数，配合组合（ compose，函数式编程的概念，Step. 2 中会介绍）的方式，很容易形成 pipeline 来处理数据流</li>
+<li>共享store，在 applyMiddleware 执行过程中，store 还是旧的，但是因为闭包的存在，applyMiddleware 完成后，所有的 middlewares 内部拿到的 store 是最新且相同的</li>
+</ol>
+<h2 id="给-middleware-分发-store"><a class="markdownIt-Anchor" href="#给-middleware-分发-store"></a> 给 middleware 分发 store</h2>
+<p>创建一个普通的 store 通过如下方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//applyMiddleware 函数陆续获得了三个参数</span><br><span class="line">//第一个是 middlewares 数组，[mid1, mid2, mid3, ...]</span><br><span class="line">//第二个 next 是 Redux 原生的 createStore</span><br><span class="line">//最后一个是 reducer</span><br><span class="line">let newStore = applyMiddleware(mid1, mid2, mid3, ...)(createStore)(reducer, null);</span><br></pre></td></tr></table></figure>
+<h2 id="组合串联-middlewares"><a class="markdownIt-Anchor" href="#组合串联-middlewares"></a> 组合串联 middlewares</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch = compose(...chain)(store.dispatch);</span><br></pre></td></tr></table></figure>
+<p>compose 是函数式编程中的组合，compose 将 chain 中的所有匿名函数，[f1, f2, … , fx, …, fn]，组装成一个新的函数，即新的 dispatch，当新 dispatch 执行时，[f1, f2, … , fx, …, fn]，从右到左依次执行（ 所以顺序很重要）</p>
+<h2 id="在-middleware-中调用-dispatch"><a class="markdownIt-Anchor" href="#在-middleware-中调用-dispatch"></a> 在 middleware 中调用 dispatch</h2>
+<p>在middleware 中调用 store.dispatch() 和在其他任何地方调用效果是一样的，而在 middleware 中调用 next()，效果是进入下一个 middleware</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-redux-thunk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-redux-thunk/" itemprop="url">redux-thunk</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:30:47+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>redux-thunk 是一个比较流行的 redux 异步 action 中间件，比如 action 中有 setTimeout 或者通过  fetch 通用远程 API 这些场景，那么久应该使用 redux-thunk 了</li>
+<li>redux-thunk 帮助你统一了异步和同步 action 的调用方式，把异步过程放在 action 级别解决，对 component 没有影响</li>
+<li>redux-thunk中间件可以让action创建函数先不返回一个action对象，而是返回一个函数，函数传递两个参数(dispatch,getState),在函数体内进行业务逻辑的封装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function add() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        type: &apos;ADD&apos;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function addIfOdd() &#123;</span><br><span class="line">    return (dispatch, getState) =&gt; &#123;</span><br><span class="line">        const currentValue = getState();</span><br><span class="line">        if (currentValue % 2 == 0) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        //分发一个任务</span><br><span class="line">        dispatch(add())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="使用方式"><a class="markdownIt-Anchor" href="#使用方式"></a> 使用方式</h1>
+<ol>
+<li>安装:npm install redux-thunk --save-dev</li>
+<li>导入thunk： import thunk from ‘redux-thunk’</li>
+<li>导入中间件: import {createStore,applyMiddleware} from ‘redux’</li>
+<li>创建store：let store = createStore(reducer函数，applyMiddleware(thunk))</li>
+<li>激活redux-thunk中间件，只需要在createStore中加入applyMiddleware(thunk)就可以</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React相关需学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-React相关需学习/" itemprop="url">React相关需学习</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:28:57+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="immutablejs简介"><a class="markdownIt-Anchor" href="#immutablejs简介"></a> ImmutableJS简介</h1>
+<p>ImmutableJS是FaceBook开发的一个JS库，能够在JS种实现不可变对象</p>
+<p>不可变对象可以大大提高对象的比较性能，用于状态和属性判断非常有效</p>
+<p>实际上，提高比较性能的代价是降低修改性能，只不过收益更大</p>
+<h1 id="flux简介"><a class="markdownIt-Anchor" href="#flux简介"></a> Flux简介</h1>
+<p>Flux不是一个具体的框架，而是Facebook提出的一种代码架构</p>
+<p>React只是一个视图库，Fulx是在React基础上对于前端整体的组织方案</p>
+<p>Fulx目的是保证逻辑清晰、数据流向清晰、依赖关系清晰</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-Jest/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-Jest/" itemprop="url">Jest</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:27:45+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>Jest是一个JS的单元测试工具</p>
+<p>单元测试可以保证函数或者模块完成我们想要的功能，测试具体功能是否正常</p>
+<p>使用Jest需要配置NodeJS环境</p>
+<h1 id="入门"><a class="markdownIt-Anchor" href="#入门"></a> 入门</h1>
+<ol>
+<li>npm install jest-cli</li>
+<li>sum.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sum(a,b)&#123;</span><br><span class="line">    return a+b;</span><br><span class="line">&#125;</span><br><span class="line">module.exports=sum;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>test.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jest.dontMock(&apos;../sum&apos;);</span><br><span class="line"></span><br><span class="line">describe(&apos;sum&apos;,function()&#123;</span><br><span class="line">    it(&apos;adds 1 + 2 to equal 3&apos;,function()&#123;</span><br><span class="line">        var sum = require(&apos;../sum&apos;);</span><br><span class="line">        expect(sum(1,2)).toBe(3);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-react-router-redux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-react-router-redux/" itemprop="url">react-router-redux</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:24:49+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h1>
+<blockquote>
+<p>用Redux去管理你的应用状态（state），使用React Router去管理路由，但是，这两个库不能协同工作，react-router-redux库可以协调这两个库</p>
+</blockquote>
+<blockquote>
+<p>react-router-redux允许你使用React Router库中的api，使用Redux库像平常一样去管理应用的状态state。 本库只是简单的加强了React Router库中history这个实例，以允许将history中接受到的变化反应到stae中去。</p>
+</blockquote>
+<h1 id="原理示例"><a class="markdownIt-Anchor" href="#原理示例"></a> 原理示例</h1>
+<p><img src="/pub-images/react-router-redux%E7%A4%BA%E4%BE%8B.png" alt="image"><br>
+现在，你进行的所有页面导航和App导航，加强版的history会首先将新的路径通过Redux store传递，然后再通过React Router去更新组件树</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-Redux入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-Redux入门/" itemprop="url">Redux入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:20:26+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://redux.js.org/</span><br><span class="line">http://www.redux.org.cn/</span><br><span class="line">http://www.imooc.com/learn/744  视频教程</span><br></pre></td></tr></table></figure>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>Redux 由 Flux 演变而来，但受 Elm 的启发，避开了 Flux 的复杂性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createStore &#125; from &apos;redux&apos;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 这是一个 reducer，形式为 (state, action) =&gt; state 的纯函数。</span><br><span class="line"> * 描述了 action 如何把 state 转变成下一个 state。</span><br><span class="line"> *</span><br><span class="line"> * state 的形式取决于你，可以是基本类型、数组、对象、</span><br><span class="line"> * 甚至是 Immutable.js 生成的数据结构。惟一的要点是</span><br><span class="line"> * 当 state 变化时需要返回全新的对象，而不是修改传入的参数。</span><br><span class="line"> *</span><br><span class="line"> * 下面例子使用 `switch` 语句和字符串来做判断，但你可以写帮助类(helper)</span><br><span class="line"> * 根据不同的约定（如方法映射）来判断，只要适用你的项目即可。</span><br><span class="line"> */</span><br><span class="line">function counter(state = 0, action) &#123;</span><br><span class="line">  switch (action.type) &#123;</span><br><span class="line">  case &apos;INCREMENT&apos;:</span><br><span class="line">    return state + 1;</span><br><span class="line">  case &apos;DECREMENT&apos;:</span><br><span class="line">    return state - 1;</span><br><span class="line">  default:</span><br><span class="line">    return state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建 Redux store 来存放应用的状态。</span><br><span class="line">// API 是 &#123; subscribe, dispatch, getState &#125;。</span><br><span class="line">let store = createStore(counter);</span><br><span class="line"></span><br><span class="line">// 可以手动订阅更新，也可以事件绑定到视图层。</span><br><span class="line">store.subscribe(() =&gt;</span><br><span class="line">  console.log(store.getState())</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">// 改变内部 state 惟一方法是 dispatch 一个 action。</span><br><span class="line">// action 可以被序列化，用日记记录和储存下来，后期还可以以回放的方式执行</span><br><span class="line">store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;);</span><br><span class="line">// 1</span><br><span class="line">store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;);</span><br><span class="line">// 2</span><br><span class="line">store.dispatch(&#123; type: &apos;DECREMENT&apos; &#125;);</span><br><span class="line">// 1</span><br></pre></td></tr></table></figure>
+<p>Redux 没有 Dispatcher 且不支持多个 store。相反，只有一个单一的 store 和一个根级的 reduce 函数（reducer）</p>
+<p><img src="http://note.youdao.com/yws/api/personal/file/WEBe992302275f8c8d667e0a308299fd566?method=download&amp;shareKey=f1d0d83b8281356a94bc605858349a2d" alt="image"></p>
+<h2 id="中间件"><a class="markdownIt-Anchor" href="#中间件"></a> 中间件</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">redux-thunk — 用最简单的方式搭建异步 action 构造器</span><br><span class="line">redux-promise — 遵从 FSA 标准的 promise 中间件</span><br><span class="line">redux-axios-middleware — 使用 axios HTTP 客户端获取数据的 Redux 中间件</span><br><span class="line">redux-observable — Redux 的 RxJS 中间件</span><br><span class="line">redux-rx — 给 Redux 用的 RxJS 工具，包括观察变量的中间件</span><br><span class="line">redux-logger — 记录所有 Redux action 和下一次 state 的日志</span><br><span class="line">redux-immutable-state-invariant — 开发中的状态变更提醒</span><br><span class="line">redux-unhandled-action — 开发过程中，若 Action 未使 State 发生变化则发出警告</span><br><span class="line">redux-analytics — Redux middleware 分析</span><br><span class="line">redux-gen — Redux middleware 生成器</span><br><span class="line">redux-saga — Redux 应用的另一种副作用 model</span><br><span class="line">redux-action-tree — Redux 的可组合性 Cerebral-style 信号</span><br><span class="line">apollo-client — 针对 GraphQL 服务器及基于 Redux 的 UI 框架的缓存客户端</span><br></pre></td></tr></table></figure>
+<h1 id="三大原则"><a class="markdownIt-Anchor" href="#三大原则"></a> 三大原则</h1>
+<p>Redux 可以用这三个基本原则来描述：</p>
+<h2 id="单一数据源"><a class="markdownIt-Anchor" href="#单一数据源"></a> 单一数据源</h2>
+<p>整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中</p>
+<h2 id="state-是只读的"><a class="markdownIt-Anchor" href="#state-是只读的"></a> State 是只读的</h2>
+<p>惟一改变 state 的方法就是触发 action，action 是一个用于描述已发生事件的普通对象</p>
+<h2 id="使用纯函数来执行修改"><a class="markdownIt-Anchor" href="#使用纯函数来执行修改"></a> 使用纯函数来执行修改</h2>
+<p>为了描述 action 如何改变 state tree ，你需要编写 reducers；Reducer 只是一些纯函数，它接收先前的 state 和 action，并返回新的 state</p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<ol>
+<li>应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中</li>
+<li>惟一改变 state 的办法是触发 action，一个描述发生什么的对象</li>
+<li>为了描述 action 如何改变 state 树，你需要编写 reducers</li>
+<li>编写专门的函数来决定每个 action 如何改变应用的 state，这个函数被叫做 reducer</li>
+</ol>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<ol>
+<li>安装redux：npm install redux --save</li>
+<li>使用 React 绑定库和开发者工具：npm install  react-redux --save；npm install redux-devtools --save-dev</li>
+</ol>
+<h1 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h1>
+<p><img src="/pub-images/redux%E7%BB%84%E4%BB%B6%E9%85%8D%E5%90%88%E5%8E%9F%E7%90%86.png" alt="image"></p>
+<h1 id="action"><a class="markdownIt-Anchor" href="#action"></a> Action</h1>
+<p>Action 是把数据从应用传到 store 的有效载荷,它是 store 数据的唯一来源。一般来说会通过 store.dispatch() 将 action 传到 store。</p>
+<p>action 内必须使用一个字符串类型的 type 字段来表示将要执行的动作.多数情况下，type 会被定义成字符串常量,建议使用单独的模块或文件来存放 action。除了 type 字段外，action 对象的结构完全由自己决定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ADD_TODO, REMOVE_TODO &#125; from &apos;../actionTypes&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="action-创建函数"><a class="markdownIt-Anchor" href="#action-创建函数"></a> Action 创建函数</h2>
+<p>Action 创建函数 就是生成 action 的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function addTodo(text) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    type: ADD_TODO,</span><br><span class="line">    text</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>bindActionCreators() 可以自动把多个 action 创建函数 绑定到 dispatch() 方法上。</p>
+<h1 id="reducer"><a class="markdownIt-Anchor" href="#reducer"></a> Reducer</h1>
+<p>永远不要在 reducer 里做这些操作：</p>
+<ol>
+<li>修改传入参数；</li>
+<li>执行有副作用的操作，如 API 请求和路由跳转；</li>
+<li>调用非纯函数，如 Date.now() 或 Math.random()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function todoApp(state = initialState, action) &#123;</span><br><span class="line">  switch (action.type) &#123;</span><br><span class="line">    case SET_VISIBILITY_FILTER:</span><br><span class="line">      return Object.assign(&#123;&#125;, state, &#123;</span><br><span class="line">        visibilityFilter: action.filter</span><br><span class="line">      &#125;)</span><br><span class="line">    case ADD_TODO:</span><br><span class="line">      return Object.assign(&#123;&#125;, state, &#123;</span><br><span class="line">        todos: [</span><br><span class="line">          ...state.todos,</span><br><span class="line">          &#123;</span><br><span class="line">            text: action.text,</span><br><span class="line">            completed: false</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;)</span><br><span class="line">    default:</span><br><span class="line">      return state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>不要修改 state。 使用 Object.assign() 新建了一个副本。不能这样使用 Object.assign(state, { visibilityFilter: action.filter })，因为它会改变第一个参数的值。你必须把第一个参数设置为空对象。你也可以开启对ES7提案对象展开运算符的支持, 从而使用 { …state, …newState } 达到相同的目的。</li>
+<li>在 default 情况下返回旧的 state</li>
+<li>Object.assign() 是 ES6 特性，但多数浏览器并不支持。你要么使用 polyfill，Babel 插件，或者使用其它库如 _.assign() 提供的帮助方法。</li>
+<li>新的 todos 对象就相当于旧的 todos 在末尾加上新建的 todo。而这个新的 todo 又是基于 action 中的数据创建的</li>
+</ol>
+<h1 id="store"><a class="markdownIt-Anchor" href="#store"></a> Store</h1>
+<p>Store 有以下职责：</p>
+<ol>
+<li>维持应用的 state；</li>
+<li>提供 getState() 方法获取 state；</li>
+<li>提供 dispatch(action) 方法更新 state；</li>
+<li>通过 subscribe(listener) 注册监听器;</li>
+<li>通过 subscribe(listener) 返回的函数注销监听器</li>
+</ol>
+<h1 id="搭配react"><a class="markdownIt-Anchor" href="#搭配react"></a> 搭配react</h1>
+<p>Redux 和 React 之间没有关系。Redux 支持 React、Angular、Ember、jQuery 甚至纯 JavaScript。</p>
+<p>连接到 Redux：我们需要做出两个变化，将 App 组件连接到 Redux 并且让它能够 dispatch actions 以及从 Redux store 读取到 state</p>
+<ol>
+<li>获取从之前安装好的 react-redux 提供的 Provider，并且在渲染之前将根组件包装进 <provider></provider></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//index.js</span><br><span class="line">import React from &apos;react&apos;</span><br><span class="line">import &#123; render &#125; from &apos;react-dom&apos;</span><br><span class="line">import &#123; createStore &#125; from &apos;redux&apos;</span><br><span class="line">import &#123; Provider &#125; from &apos;react-redux&apos;</span><br><span class="line">import App from &apos;./containers/App&apos;</span><br><span class="line">import todoApp from &apos;./reducers&apos;</span><br><span class="line"></span><br><span class="line">let store = createStore(todoApp);</span><br><span class="line"></span><br><span class="line">let rootElement = document.getElementById(&apos;root&apos;)</span><br><span class="line">render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &lt;App /&gt;</span><br><span class="line">  &lt;/Provider&gt;,</span><br><span class="line">  rootElement</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过 react-redux 提供的 connect() 方法将包装好的组件连接到Redux</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component, PropTypes &#125; from &apos;react&apos;;</span><br><span class="line">import &#123; connect &#125; from &apos;react-redux&apos;;</span><br><span class="line">import &#123; addTodo, completeTodo, setVisibilityFilter, VisibilityFilters &#125; from &apos;../actions&apos;;</span><br><span class="line">import AddTodo from &apos;../components/AddTodo&apos;;</span><br><span class="line">import TodoList from &apos;../components/TodoList&apos;;</span><br><span class="line">import Footer from &apos;../components/Footer&apos;;</span><br><span class="line"></span><br><span class="line">class App extends Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    // 通过调用 connect() 注入:</span><br><span class="line">    const &#123; dispatch, visibleTodos, visibilityFilter &#125; = this.props</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;AddTodo</span><br><span class="line">          onAddClick=&#123;text =&gt;</span><br><span class="line">            dispatch(addTodo(text))</span><br><span class="line">          &#125; /&gt;</span><br><span class="line">        &lt;TodoList</span><br><span class="line">          todos=&#123;this.props.visibleTodos&#125;</span><br><span class="line">          onTodoClick=&#123;index =&gt;</span><br><span class="line">            dispatch(completeTodo(index))</span><br><span class="line">          &#125; /&gt;</span><br><span class="line">        &lt;Footer</span><br><span class="line">          filter=&#123;visibilityFilter&#125;</span><br><span class="line">          onFilterChange=&#123;nextFilter =&gt;</span><br><span class="line">            dispatch(setVisibilityFilter(nextFilter))</span><br><span class="line">          &#125; /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">App.propTypes = &#123;</span><br><span class="line">  visibleTodos: PropTypes.arrayOf(PropTypes.shape(&#123;</span><br><span class="line">    text: PropTypes.string.isRequired,</span><br><span class="line">    completed: PropTypes.bool.isRequired</span><br><span class="line">  &#125;)),</span><br><span class="line">  visibilityFilter: PropTypes.oneOf([</span><br><span class="line">    &apos;SHOW_ALL&apos;,</span><br><span class="line">    &apos;SHOW_COMPLETED&apos;,</span><br><span class="line">    &apos;SHOW_ACTIVE&apos;</span><br><span class="line">  ]).isRequired</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function selectTodos(todos, filter) &#123;</span><br><span class="line">  switch (filter) &#123;</span><br><span class="line">  case VisibilityFilters.SHOW_ALL:</span><br><span class="line">    return todos;</span><br><span class="line">  case VisibilityFilters.SHOW_COMPLETED:</span><br><span class="line">    return todos.filter(todo =&gt; todo.completed);</span><br><span class="line">  case VisibilityFilters.SHOW_ACTIVE:</span><br><span class="line">    return todos.filter(todo =&gt; !todo.completed);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 基于全局 state ，哪些是我们想注入的 props ?</span><br><span class="line">// 注意：使用 https://github.com/reactjs/reselect 效果更佳。</span><br><span class="line">function select(state) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    visibleTodos: selectTodos(state.todos, state.visibilityFilter),</span><br><span class="line">    visibilityFilter: state.visibilityFilter</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；</span><br><span class="line">export default connect(select)(App);</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React-Router/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-React-Router/" itemprop="url">React Router</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:18:27+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener">https://reacttraining.com/react-router/</a></p>
+<h1 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h1>
+<p>React Router 4.0 （以下简称 RR4）</p>
+<p>RR4 本次采用单代码仓库模型架构（monorepo），这意味者这个仓库里面有若干相互独立的包，分别是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">react-router React Router 核心</span><br><span class="line">react-router-dom 用于 DOM 绑定的 React Router</span><br><span class="line">react-router-native 用于 React Native 的 React Router</span><br><span class="line">react-router-redux React Router 和 Redux 的集成</span><br><span class="line">react-router-config 静态路由配置的小助手</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>它是官方维护的，事实上也是唯一可选的路由库。</p>
+</blockquote>
+<h1 id="react-router-还是-react-router-dom"><a class="markdownIt-Anchor" href="#react-router-还是-react-router-dom"></a> react-router 还是 react-router-dom</h1>
+<ol>
+<li>在 React 的使用中，我们一般要引入两个包，react 和 react-dom</li>
+<li>react-router 和 react-router-dom 两个只要引用一个就行了，不同之处就是后者比前者多出了 <link> <browserrouter> 这样的 DOM 类组件</browserrouter></li>
+</ol>
+<h1 id="学习"><a class="markdownIt-Anchor" href="#学习"></a> 学习</h1>
+<ul>
+<li>（阮一峰）<a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/05/react_router.html</a></li>
+<li>（gitbook）<a href="http://react-guide.github.io/react-router-cn/docs/API.html" target="_blank" rel="noopener">http://react-guide.github.io/react-router-cn/docs/API.html</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-React入门/" itemprop="url">React入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:04:22+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>React 是一个用于构建用户界面的 JAVASCRIPT 库</li>
+<li>React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）</li>
+<li>React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源</li>
+<li>React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它</li>
+<li>React 拥有一个强大的组合模型，我们建议使用组合而不是继承以实现代码的重用</li>
+<li>react有 函数式组件和类组件，现在的使用都以类组件为主，函数式组件不考虑</li>
+<li>angualr霸道，用了之后原生定时器、jquery等都不能用，而react没有这个限制</li>
+<li>react中对事件的大小写敏感，因为有一个编译过程</li>
+<li>相关有用网址</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">官网：https://facebook.github.io/react/</span><br><span class="line">中文网站：http://www.css88.com/react/</span><br><span class="line">中文论坛:http://react-china.org/</span><br></pre></td></tr></table></figure>
+<h1 id="react特点"><a class="markdownIt-Anchor" href="#react特点"></a> react特点</h1>
+<ol>
+<li>声明式设计 −React采用声明范式，可以轻松描述应用。</li>
+<li>高效 −虚拟DOM,React通过对DOM的模拟，最大限度地减少与DOM的交互。React DOM 会将元素及其子元素与之前版本逐一对比, 并只对有必要更新的 DOM 进行更新, 以达到 DOM 所需的状态</li>
+<li>灵活 −React可以与已知的库或框架很好地配合。</li>
+<li>JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单</li>
+</ol>
+<h1 id="react全家桶技术栈"><a class="markdownIt-Anchor" href="#react全家桶技术栈"></a> react全家桶（技术栈）</h1>
+<blockquote>
+<p>如果一个技术你不知道，那说明你还用不上</p>
+</blockquote>
+<ol>
+<li>react：主体</li>
+<li>webpack、grunt、gulp自动化构建工具</li>
+<li>Flex：布局</li>
+<li>react-route：路由</li>
+<li>redux：view层</li>
+<li>Mocha：测试</li>
+<li>Istanbul：覆盖率</li>
+</ol>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<h2 id="网页使用"><a class="markdownIt-Anchor" href="#网页使用"></a> 网页使用</h2>
+<p>网页中用babel会页面加载会有编译过程，比较缓慢，babel也可以后台编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/react/15.4.2/react.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/react/15.4.2/react-dom.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/babel&quot;&gt;</span><br><span class="line">  ReactDOM.render(</span><br><span class="line">    &lt;h1&gt;Hello, world!&lt;/h1&gt;,</span><br><span class="line">    document.getElementById(&apos;example&apos;)</span><br><span class="line">  );</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>引入了三个库： react.min.js 、react-dom.min.js 和 babel.min.js：</p>
+<ol>
+<li>react.min.js - React 的核心库</li>
+<li>react-dom.min.js - 提供与 DOM 相关的功能</li>
+<li>babel.min.js - Babel 可以将 ES6 代码转为 ES5 代码，这样我们就能在目前不支持 ES6 浏览器上执行 React 代码。Babel 内嵌了对 JSX 的支持。通过将 Babel 和 babel-sublime 包（package）一同使用可以让源码的语法渲染上升到一个全新的水平</li>
+</ol>
+<h2 id="使用-create-react-app-快速构建"><a class="markdownIt-Anchor" href="#使用-create-react-app-快速构建"></a> 使用 create-react-app 快速构建</h2>
+<ul>
+<li>create-react-app 是来自于 Facebook，通过该命令我们无需配置就能快速构建 React 开发环境。</li>
+<li>create-react-app 自动创建的项目是基于 Webpack + ES6</li>
+<li>create-react-app网址：<a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app</a></li>
+<li>create-react-app说明：<a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install -g create-react-app</span><br><span class="line">$ create-react-app my-app</span><br><span class="line">$ cd my-app/</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<p>在浏览器中打开 <a href="http://localhost:3000/,%E6%9F%A5%E7%9C%8B%E7%BB%93%E6%9E%9C" target="_blank" rel="noopener">http://localhost:3000/,查看结果</a></p>
+<h1 id="jsx"><a class="markdownIt-Anchor" href="#jsx"></a> JSX</h1>
+<blockquote>
+<p>JSX是可选的，对于使用 React而言不需要</p>
+</blockquote>
+<p>React 使用 JSX 来替代常规的 JavaScript，JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。</p>
+<p>优点：</p>
+<ul>
+<li>JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化，需babel编译后才能运行，bower babel install,官网：<a href="http://babeljs.io/" target="_blank" rel="noopener">http://babeljs.io/</a></li>
+<li>它是类型安全的，在编译过程中就能发现错误</li>
+<li>使用 JSX 编写模板更加简单快速</li>
+</ul>
+<p>使用过程中的注意事项：</p>
+<ol>
+<li>组件必须返回一个单独的根元素。render的内容必须有且仅有一个父元</li>
+<li>网页中使用：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;js/react.js&quot; charset=&quot;utf-8&quot;/&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;js/react-dom.js&quot; charset=&quot;utf-8&quot;/&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;js/browser.js&quot; charset=&quot;utf-8&quot;/&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/babel&quot;&gt;</span><br><span class="line">    window.onload=function()&#123;</span><br><span class="line">        var oDiv = document.getElementById(&quot;div1&quot;); </span><br><span class="line">        ReactDom.render(</span><br><span class="line">            &lt;span&gt;111&lt;/span&gt;,//内容</span><br><span class="line">            oDiv//到哪</span><br><span class="line">        ); </span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;div1&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>添加自定义属性需要使用 data- 前缀，因为jsx对html标签有识别，如果符合则不显示，而在自定义属性前面加data-可以保证显示显示</li>
+<li>自定义组件可以单独文件存储</li>
+<li>可以在 JSX 中使用 JavaScript 表达式。表达式写在花括号 {} 中；在 JSX 中不能使用 if else 语句，但可以使用 conditional (三元运算) 表达式来替代</li>
+<li>React 推荐使用内联样式。我们可以使用 camelCase 语法来设置内联样式. React 会在指定元素数字后自动添加 px</li>
+<li>JSX 允许在模板中插入数组，数组会自动展开所有成员</li>
+<li>注释:在标签内部的注释需要花括号;在标签外的的注释不能使用花括号</li>
+<li>可以使用双引号来指定字符串字面量作为属性值</li>
+<li>class 在JSX中变为className，tabindex 变为 tabIndex</li>
+<li>React DOM 使用驼峰(camelCase)属性命名约定, 而不是HTML属性名称</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(</span><br><span class="line">    /*注释 */</span><br><span class="line">    &lt;h1&gt;孙朝阳 &#123;/*注释*/&#125;&lt;/h1&gt;,</span><br><span class="line">    document.getElementById(&apos;example&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ol start="12">
+<li>如果你有一个单一模块(module) ，但却 导出(exports) 多个 React 组件时十分有用</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line"></span><br><span class="line">const MyComponents = &#123;</span><br><span class="line">  DatePicker: function DatePicker(props) &#123;</span><br><span class="line">    return &lt;div&gt;Imagine a &#123;props.color&#125; datepicker here.&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function BlueDatePicker() &#123;</span><br><span class="line">  return &lt;MyComponents.DatePicker color=&quot;blue&quot; /&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>JSX 中的 Children：在 JSX 表达式中可以包含开放标签和闭合标签，标签中的内容会被传递一个特殊的 props(属性) ： props.children</li>
+</ol>
+<h1 id="组件"><a class="markdownIt-Anchor" href="#组件"></a> 组件</h1>
+<ul>
+<li>组件名称总是以大写字母开始</li>
+<li>组件有构造函数，构造函数的第一行应该是调用super函数，其参数为…args参数，在constructor方法中进行一些初始</li>
+<li>绑定事件的方式：onChange={this.函数名称.bind(this)}</li>
+<li>有狗那年，定时器中的this就不合适，在使用前通过_this=this保存一份，然后在定时中用_this代替</li>
+<li>react处理了this，原生中如果要用this，最好也处理一下</li>
+<li>react中阻止事件冒泡：ev.nativeEvent.stopImmediatePropergation</li>
+<li>父级属性传递给子级直接通过属性，子级属性传递给父级需要通过在父级绑定回调函数如cb()，在子级中通过this.props.cb(传递的参数)的方式把参数传递到父级</li>
+<li>react中设置样式style需要通过双大括号}}来设置</li>
+<li>键(Keys) 帮助 React 标识哪个项被修改、添加或者移除了。数组中的每一个元素都应该有一个唯一不变的键(Keys)来标识。keys 只在数组的上下文中存在意义； keys 必须在它们的同辈之间唯一。然而它们并不需要全局唯一</li>
+<li>自定义组件的方式如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class 组件名称 extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        retrun &lt;span&gt;我的年龄是：&#123;this.props.age&#125;&lt;/span&gt;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//定义</span><br><span class="line">class Comp extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;span&gt;111&lt;/span&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>组件使用：类似于标签的使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReactDom.render(</span><br><span class="line">    &lt;Comp age=&quot;18&quot;/&gt;,//内容,类名</span><br><span class="line">    document.body//到哪</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">window.onload=function()&#123; </span><br><span class="line">    ReactDom.render(</span><br><span class="line">        &lt;Comp/&gt;,//内容,类名</span><br><span class="line">        document.body//到哪</span><br><span class="line">    ); </span><br><span class="line">&#125;;</span><br><span class="line">~~~ </span><br><span class="line"></span><br><span class="line"># 状态state</span><br><span class="line">* React 把组件看成是一个状态机（State Machines）。通过与用户的交互，实现不同状态，然后渲染 UI，让用户界面和数据保持一致。</span><br><span class="line">* React 里，只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。</span><br><span class="line">* this.setState(&#123;属性：&apos;值&apos;&#125;);  </span><br><span class="line">* state(状态) 更新可能是异步的。React 为了优化性能，有可能会将多个 setState() 调用合并为一次更新。因为 this.props 和 this.state 可能是异步更新的，你不能依赖他们的值计算下一个state(状态)。</span><br><span class="line"></span><br><span class="line"># 属性props</span><br><span class="line">state 和 props 主要的区别在于 props 是不可变的，而 state 可以根据与用户交互来改变。这就是为什么有些容器组件需要定义 state 来更新和修改数据。 而子组件只能通过 props 来传递数据</span><br><span class="line"></span><br><span class="line">* 如果你没给 prop(属性) 传值，那么他默认为 true</span><br><span class="line">* 控制表单的value，如果用props设置了默认值，由于props是死的，不能修改，修改为defaultValue即可</span><br><span class="line">* 控制checkbox的默认值，修改为defalultChecked</span><br><span class="line">* 属性扩展:如果你已经有一个 object 类型的 props，并且希望在 JSX 中传入，你可以使用扩展操作符 ... 传入整个 props 对象。以上两种方法等效：</span><br></pre></td></tr></table></figure>
+<p>function App1() {<br>
+return <greeting firstname="Ben" lastname="Hector">;<br>
+}</greeting></p>
+<p>function App2() {<br>
+const props = {firstName: ‘Ben’, lastName: ‘Hector’};<br>
+return &lt;Greeting {…props} /&gt;;<br>
+}</p>
+<pre class="highlight"><code class="">
+# 组件生命周期
+组件的生命周期可分成三个状态：
+1. Mounting：已插入真实 DOM
+2. Updating：正在被重新渲染
+3. Unmounting：已移出真实 DOM
+
+生命周期的方法有：
+* componentWillMount 在渲染前调用,在客户端也在服务端
+* componentDidMount : 在第一次渲染后调用，只在客户端。之后组件已经生成了对应的DOM结构，可以通过this.getDOMNode()来进行访问。 如果你想和其他JavaScript框架一起使用，可以在这个方法中调用setTimeout, setInterval或者发送AJAX请求等操作(防止异部操作阻塞UI)
+* componentWillReceiveProps 在组件接收到一个新的prop时被调用。这个方法在初始化render时不会被调用
+* shouldComponentUpdate 返回一个布尔值。在组件接收到新的props或者state时被调用。在初始化时或者使用forceUpdate时不被调用
+* componentWillUpdate在组件接收到新的props或者state但还没有render时被调用。在初始化时不会被调用
+* componentDidUpdate 在组件完成更新后立即调用。在初始化时不会被调用
+* componentWillUnmount在组件从 DOM 中移除的时候立刻被调用。==当使用异步加载数据时，在组件卸载前使用 componentWillUnmount 来取消未完成的请求==
+
+# React Refs
+* React 支持一种非常特殊的属性 Ref ，可以用来绑定到 render() 输出的任何组件上。
+这个特殊的属性允许你引用 render() 返回的相应的支撑实例（ backing instance ）。这样就可以确保在任何时间总是拿到正确的实例
+* 可以通过使用 this 来获取当前 React 组件，或使用 ref 来获取组件的引用
+* ref 标示组件内的node，可以原生操作节点，在this.refs['ref名字']=原生
+* React 支持给任何组件添加特殊属性。ref 属性接受回调函数，并且当组件 装载(mounted) 或者 卸载(unmounted) 之后，回调函数会立即执行
+* 不能在函数式组件上使用 ref 属性，因为它们没有实例
+
+# 使用 Chrome Timeline 分析组件性能
+在 开发模式 中，你可以在支持相关功能的浏览器中使用性能工具来可视化组件 装载(mount) ，更新(update) 和 卸载(unmount) 的各个过程。在 Chrome 中具体操作如下： 
+1. 通过添加 ?react_perf 查询字段加载你的应用(例如：http://localhost:3000/?react_perf)
+2. 打开 Chrome DevTools Timeline 并点击 Record
+3. 执行你想要分析的操作，不要超过20秒，否则 Chrome 可能会挂起
+4. 停止记录
+5. 在 User Timing 标签下，React事件将会分组列出
+
+注意：上述数字是相对的，组件会在生产环境中会更快
+
+
+# route
+react-router + react-router-redux: 前者是业界标准，后者可以同步 route 信息到 state，这样你可以在 view 根据 route 信息调整展现，以及通过 action 来修改 route 。</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-2018-10-18-docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/容器技术-2018-10-18-docker/" itemprop="url">docker</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-18T09:38:59+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>阿里云服务器购买<br>
+<a href="http://www.runoob.com/docker/docker-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/docker/docker-tutorial.html</a></p>
+<p>官网：<a href="https://www.docker.com/" target="_blank" rel="noopener">https://www.docker.com/</a><br>
+中文社区：<a href="http://www.docker.org.cn/" target="_blank" rel="noopener">http://www.docker.org.cn/</a></p>
+<p><a href="http://www.cnblogs.com/SzeCheng/p/6822905.html" target="_blank" rel="noopener">http://www.cnblogs.com/SzeCheng/p/6822905.html</a></p>
+<p>Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术<br>
+其中docker服务端是一个服务进程，管理着所有的容器。<br>
+docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。<br>
+大部分情况下，docker服务端和客户端运行在一台机器上。</p>
+<p>Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的<br>
+Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write）</p>
+<p>Docker容器的能力<br>
+1文件系统隔离：每个容器都有自己的root文件系统<br>
+2进程隔离：每个容器都运行在自己的进程环境中<br>
+3网络隔离：容器间的虚拟网络接口和IP地址都是分开的<br>
+4资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器</p>
+<p>docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作<br>
+docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器<br>
+docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm）</p>
+<p><a href="https://www.cnblogs.com/atuotuo/p/6668233.html" target="_blank" rel="noopener">https://www.cnblogs.com/atuotuo/p/6668233.html</a></p>
+<p>安装：下载安装完成之后docker version查看</p>
+<p>Kitematic，</p>
+<p>Vagrant+virtualbox<br>
+<a href="https://www.vagrantup.com/" target="_blank" rel="noopener">https://www.vagrantup.com/</a><br>
+<a href="https://www.virtualbox.org/" target="_blank" rel="noopener">https://www.virtualbox.org/</a><br>
+<a href="https://app.vagrantup.com/boxes/search" target="_blank" rel="noopener">https://app.vagrantup.com/boxes/search</a></p>
+<p>mkdir centos7<br>
+ls<br>
+vagrant init centos/7<br>
+vagrant up<br>
+vagrant ssh<br>
+sudo yum update<br>
+exit<br>
+vagrant status<br>
+vagrant halt<br>
+vagrant destroy</p>
+<p>Docker Machine<br>
+docker-machine ls<br>
+docker-machine ssh demo</p>
+<p>远程登录管理deocker和本地管理远程docker<br>
+<a href="https://labs.play-with-docker.com/" target="_blank" rel="noopener">https://labs.play-with-docker.com/</a></p>
+<p>docker提供了一个开发，打包，运行app的平台，把app和底层infratructure隔离开来</p>
+<p>docker底层技术支持,依赖于Linux内核特性Namespaces和Cgroups<br>
+Namespaces：做隔离pid，net，ipc，mnt，uts<br>
+Control Groups：做资源限制<br>
+Union file Systems：Container和image的分层</p>
+<p>namespace，容器隔离的基础，保证A容器看不到B容器. 6个名空间：User,Mnt,Network,UTS,IPC,Pid<br>
+cgroups，容器资源统计和隔离。主要用到的cgroups子系统：cpu,blkio,device,freezer,memory<br>
+unionfs，典型：aufs/overlayfs，分层镜像实现的基础</p>
+<p>docker image：是容器的基石，本身为层叠的只读文件系统，<br>
+docker通过联合加载技术一次加载多个文件系统，从外部看，只能看到一个文件系统，包含所有文件系统的文件和目录。bootfs-rootfs(如：ubuntu)-apache。。。，rootfs称为基础镜像<br>
+文件和meta data的集合（root filesystem）<br>
+分层的，并且每一层都可以添加改变删除文件，成为一个新的image<br>
+不同的image可以共享x相同的layer<br>
+image本身是read-only的<br>
+sudo docker image ls<br>
+docker history [imageID]</p>
+<p>image的获取</p>
+<ol>
+<li>通过Dockerfile</li>
+<li>从Registry获取，如：docker pull ubuntu:14.04，<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></li>
+<li>命令行的格式为：docker search 镜像名字</li>
+</ol>
+<p>DIY一个Base Image</p>
+<p>Container<br>
+docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
+<p>通过Image创建<br>
+在Image Layer之上建立一个container layer（可读写）<br>
+类比面向对象：类和实例<br>
+Image负责app的存储和分发，Container负责运行app<br>
+container id只要能够区分出来就行，不用全部输入<br>
+docker container ls //运行的<br>
+docker container ls -a  //所有的，包括退出的和正在运行的</p>
+<p>docker run命令有两个参数，一个是镜像名，一个是要在镜像中运行的命令。</p>
+<p>docker run [name]   //运行container<br>
+docker run -it [name]   //交互式运行container</p>
+<p>命令简写<br>
+docker container ls -a  == docker ps -a<br>
+docker container rm [conatinerID] == docker rm [conatinerID]<br>
+docker image ls == docker images<br>
+docker image rm [imageID] == docker rmi [imageID]</p>
+<p>docker container ls -aq //列出所有conatinerID</p>
+<p>构建自己的docker镜像<br>
+docker commit [containerName] [dockerhubID/imageNewName]</p>
+<p>通过Dockerfile创建</p>
+<ol>
+<li>新建空文件夹</li>
+<li>创建Dockerfile文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM [BaseImageName]    //如果没有则值为scratch</span><br><span class="line">RUN yum install -y vim</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>docker build -t [dockerhubID/imageNewName] .   //.表示当前目录中查找Dockerfile</li>
+<li>docker image ls查看</li>
+</ol>
+<p>Dockerfile语法梳理及最佳实践</p>
+<ol>
+<li>FROM:尽量使用官方的iamge作为base image</li>
+<li>LABEL:Metadata不可少，让大家了解到image的信息，相当于image的注释</li>
+<li>RUN:为了美观，复杂的RUN请用反斜线换行，避免无用分层，合并多条命令成一行</li>
+<li>WORKDIR:设定当前工作目录，如果没有则会自动创建目录；用WORKDIR，不要用RUN cd，尽量使用绝对目录</li>
+<li>ADD和COPY：把本地文件（构建目录中的相对地址 ）添加到image里面，同时ADD添加的文件如果是压缩文件的话，会自动解压缩，大部分情况COPY优于ADD，添加远程文件／目录请使用crul或wget；目标路径需指定docker中的绝对路径</li>
+<li>ENV：设置环境变量，尽量使用ENV增加可维护性</li>
+</ol>
+<p><a href="https://github.com/docker-library/" target="_blank" rel="noopener">https://github.com/docker-library/</a></p>
+<p>MAINTAINER：指定容器的相关维护信息，维护人、邮箱等<br>
+RUN：执行命令并创建新的Image Layer，是在容器构建时执行<br>
+CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数<br>
+ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint<br>
+EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口<br>
+VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能<br>
+WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去<br>
+USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户<br>
+ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行</p>
+<p>使用中间层镜像进行调试，查找错误<br>
+docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像</p>
+<p>构建缓存：构建过程中会产生缓存，下次构建直接使用缓存镜像，如果不想使用构建缓存，则可通过：docker build --no-cache,或者通过dockerfile文件的ENV REFRESH_DATE修改日期，则本条语句后就不使用缓存了</p>
+<p>docker history 镜像，用来查看镜像的构建过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPY docker-entrypoint.sh /usr/local/bin/</span><br><span class="line">ENTRYPOINT [&quot;docker-entrypoint.sh &quot;]</span><br></pre></td></tr></table></figure>
+<p>shell格式和EXEC格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get install -y vim</span><br><span class="line">CMD echo &quot;Hello Docker&quot;</span><br><span class="line">ENTRYPOINT echo &quot;Hello Docker&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN [&quot;apt-get&quot;,&quot;install&quot;,&quot;-y&quot;,&quot;vim&quot;]</span><br><span class="line">CMD [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br><span class="line">ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br></pre></td></tr></table></figure>
+<p>登录dockerhub<br>
+docker login:  用户名（非邮箱）／密码</p>
+<ol>
+<li>本地push上去，其他人就可以pull</li>
+<li>关联github，github管理Dockerfile，有修改后自动build。Create-Create Automated build</li>
+<li>通过docker的registry本地自己搭建。<a href="https://hub.docker.com/_/registry/,%E5%90%8E%E6%9C%9F%E5%AD%A6%E4%B9%A0" target="_blank" rel="noopener">https://hub.docker.com/_/registry/,后期学习</a></li>
+</ol>
+<p>Dockerfile实战<br>
+Dockerfile是docker构建镜像的基础，也是docker区别于其他容器的重要特征，正是有了Dockerfile，docker的自动化和可移植性才成为可能。<br>
+不论是开发还是运维，学会编写Dockerfile几乎是必备的</p>
+<p>容器的操作<br>
+//对容器执行命令<br>
+docker exec<br>
+docker exec -it [containerID] /bin/bash<br>
+docker inspect [imageName] //查看<br>
+docker logs [containerID]</p>
+<p>前3章</p>
+<p>Docker常见命令<br>
+容器相关操作<br>
+docker create # 创建一个容器但是不启动它<br>
+docker run # 创建并启动一个容器<br>
+docker stop # 停止容器运行，发送信号SIGTERM<br>
+docker start # 启动一个停止状态的容器<br>
+docker restart # 重启一个容器<br>
+docker rm # 删除一个容器<br>
+docker kill # 发送信号给容器，默认SIGKILL<br>
+docker attach # 连接(进入)到一个正在运行的容器<br>
+docker wait # 阻塞到一个容器，直到容器停止运行<br>
+获取容器相关信息<br>
+docker ps # 显示状态为运行（Up）的容器<br>
+docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited)<br>
+docker inspect # 深入容器内部获取容器所有信息<br>
+docker logs # 查看容器的日志(stdout/stderr)<br>
+docker events # 得到docker服务器的实时的事件<br>
+docker port # 显示容器的端口映射<br>
+docker top # 显示容器的进程信息<br>
+docker diff # 显示容器文件系统的前后变化<br>
+导出容器<br>
+docker cp # 从容器里向外拷贝文件或目录<br>
+docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息<br>
+执行<br>
+docker exec # 在容器里执行一个命令，可以执行bash进入交互式<br>
+镜像操作<br>
+docker images # 显示本地所有的镜像列表<br>
+docker import # 从一个tar包创建一个镜像，往往和export结合使用<br>
+docker build # 使用Dockerfile创建镜像（推荐）<br>
+docker commit # 从容器创建镜像<br>
+docker rmi # 删除一个镜像<br>
+docker load # 从一个tar包创建一个镜像，和save配合使用<br>
+docker save # 将一个镜像保存为一个tar包，带layers和tag信息<br>
+docker history # 显示生成一个镜像的历史命令<br>
+docker tag # 为镜像起一个别名<br>
+镜像仓库(registry)操作<br>
+docker login # 登录到一个registry<br>
+docker search # 从registry仓库搜索镜像<br>
+docker pull # 从仓库下载镜像到本地<br>
+docker push # 将一个镜像push到registry仓库中</p>
+<p>docker system df    //查看镜像、容器、数据卷所占用的空间<br>
+docker commit -m “ubuntu with vim” -a “sgy” aa97ba3292ce sgy/ubuntu:vim</p>
+<p>前后端分离部署及运维<br>
+高性能高负载高可用</p>
+<p><a href="https://www.renren.io" target="_blank" rel="noopener">https://www.renren.io</a>  renren-fast</p>
+<p>Swagger:<br>
+JWT:</p>
+<p><a href="https://www.ghostcloud.cn/" target="_blank" rel="noopener">https://www.ghostcloud.cn/</a></p>
+<p>服务器虚拟化 （vsphere  cas  ZStack不通厂家命名）：裸机虚拟化、半裸机虚拟化<br>
+网络虚拟化 SDN<br>
+存储虚拟化 VSAN   服务器做raid保证系统安全，然后做存储虚拟化</p>
+<p>Mac 上的 Docker 背后应该是一个 Linux 虚机，和 Windows 版本的 Docker 是一样的原理</p>
+<p>容器一旦被直接推出，之前安装的gcc啊vim啊啥的就会全部gg掉。如果要保存修改，就需要将当前容器封装成一个新的镜像，这样下次启动这个新的镜像后之前作出的修改还都在。</p>
+<p>容器不适合构建那种发布周期以周或月为单位的大型单一架构企业软件，容器适合采用微服务的方式，以及探索诸如持续部署这样的技术，使得我们能安全地在一天内多次更新生产环境。</p>
+<p><a href="https://blog.csdn.net/xdy3008/article/details/74531125" target="_blank" rel="noopener">https://blog.csdn.net/xdy3008/article/details/74531125</a></p>
+<p><a href="https://www.missshi.cn/api/view/blog/5a6327c00a745f6335000004" target="_blank" rel="noopener">https://www.missshi.cn/api/view/blog/5a6327c00a745f6335000004</a></p>
+<p>想看到docker容器的ip地址，只需要安装net-tools就可以了：yum install net-tools -y</p>
+<p>如果你仅仅是想管理虚拟机，那么你应该使用vagrant。如果你想快速开发和部署应用，那么应该使用docker。<br>
+vagrant是一款管理虚拟机的工具，而docker是一款通过将应用打包到轻量级容器，而实现构建和部署的工具。两者适用范围不同。一个容器就是一个包含了应用执行所依赖的数据(包括lib，配置文件等等)。它可以保证应用在一个可重复的环境中随时执行。</p>
+<p>数据卷：是经过特殊设计的目录，可以绕过联合文件系统ufs，为一个或多个容其提供访问。让你可以不受容器生命周期影响进行数据持久化。它们表现为容器内的空间，但实际保存在容器之外，从而允许你在不影响数据的情况下销毁、重建、修改、丢弃容器。<br>
+Docker允许你定义应用部分和数据部分，并提供工具让你将他们分开。容器是短暂和一次性的。<br>
+docker run -v ~/container_data:/data:ro -it centos,映射本地~/container_data到容器/data下,且/data的权限为ro只读，登录进去后ls查看，发现会有data目录</p>
+<p>数据卷容器：命名的容器挂载数据卷，其他容器通过挂载这个容器实现数据共享，挂载数据卷的容器，就叫做数据卷容器。<br>
+docker run --volumes-from 数据卷容器名称<br>
+即使删除了数据卷容器，挂载了数据卷容器的容器，仍然可以访问数据卷容器的目录，数据卷容器起的作用仅仅是将挂载配置传递到待挂载容器</p>
+<p>Docker数据卷的备份与还原：通过挂载目录压缩后放到挂载目录</p>
+<p>Docker For Mac的Docker Daemon是运行于虚拟机(xhyve)中的, 而不是像Linux上那样作为进程运行于宿主机，因此Docker For Mac没有docker0网桥，不能实现host网络模式，host模式会使Container复用Daemon的网络栈(在xhyve虚拟机中)，而不是与Host主机网络栈，这样虽然其它容器仍然可通过xhyve网络栈进行交互，但却不是用的Host上的端口(在Host上无法访问)。bridge网络模式 -p 参数不受此影响，它能正常打开Host上的端口并映射到Container的对应Port。</p>
+<p>docker容器的网络连接<br>
+docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡<br>
+docker0地址划分：IP127.17.42.1,掩码255.255.0.0,总共提供了65534个地址<br>
+网桥操作需安装bridge-utils工具，安装之后brctl show查看网桥信息，可以添加网桥或者配置网桥信息<br>
+docker容器的IP地址在重启容器之后会变化，是不可靠的</p>
+<p>容器互联：在同一宿主机下，docker容器是通过虚拟网桥互相连接的，默认在同一宿主机下docker允许所有容器互联。让容器之间可以相互连接主要借用了一个link的功能。 在使用纯Docker时，被连接的容器必须在同一个Docker宿主机中。不同宿主机之间的容器如果想要连接，则需要借助Swarm或Kubernetes等编排工具。<br>
+–link:链接容器，docker run -it --name cct3 --link=cct1:webtest bitchofgod/testnet （webtest为cct1的别名），然后在cct3中ping webtest即可互联<br>
+Docker在父容器中的以下两个地方写入了连接信息：<br>
+/etc/hosts文件中，–link在此文件中写入了映射信息，当docker重新启动的时候，docker会自动维护此文件中的映射<br>
+包含连接信息的环境变量中<br>
+如果拒绝所有容器互联，则修改docker配置，在/ect/default/docker文件中添加DOCKER_OPTS=&quot; --icc=false&quot;后重启docker服务即可<br>
+如果需要特定容器互联，则通过–link、–icc=false、–iptables=true来实现</p>
+<p>docker容器与外部网络的连接<br>
+ipforward<br>
+iptables</p>
+<p>Ctrl+p，Ctrl+q退出交互界面<br>
+docker attach containerName重新打开交互界面</p>
+<p>CaaS(Container as a Service):镜像容器托管<br>
+从Docker到Caas<br>
+容器集群管理工具<br>
+容器调度<br>
+配置管理<br>
+服务发现<br>
+日志／监控／报警</p>
+<p>LaaS（基础设施） 出租计算、存储、网络、DNS等基础IT服务<br>
+PaaS（基础设施+系统平台—应用服务器应用框架 编程语言） 提供应用运行和开发环境 提供应用开发组件（邮件、消息、计费、支付）<br>
+SaaS （基础设施+系统平台+软件应用）互联网Web2.0应用 企业应用（ERP/CRM等）</p>
+<p>通俗点讲<br>
+SaaS：软件即服务，简单来说就是把企业想要的功能开发好成应用软件，然后直接卖给用户使用。通俗点讲就是去饭店吃饭一样，什么都是店家的。<br>
+PaaS：平台即服务，简单来说就是云计算平台提供硬件、编程语言、开发库等帮助用户更好更快的开发软件。通俗来说就是点外卖，使用时店家的，但是餐桌是自己的。<br>
+IaaS：基础设施即服务，简单来说就是云服务商提供企业所需要的服务器、存储、网络给企业用。通俗来说就是买菜买面，回家自己做饭。</p>
+<p><a href="https://blog.csdn.net/weixin_38003389/article/details/84025762" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38003389/article/details/84025762</a></p>
+<p>Docker Machine：目的是简化 Docker 的安装和远程管理,是官方提供的一个工具。<br>
+先创建Docker Machine机器</p>
+<p>Docker Compose：Docker Compose 是 Docker 官方编排（Orchestration）项目之一，负责快速在集群中部署分布式应用。<br>
+Docker Compose允许用户通过一个单独的 docker-compose.yml 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）<br>
+Compose 中有两个重要的概念：<br>
+项目 ( project )：由一组关联的应用容器组成的一个完整业务单元，在 dockercompose.yml 文件中定义。<br>
+服务 ( service )：一个应用的容器，实际上可以包括若干运行相同镜像的容器实例<br>
+运行 compose 项目：docker-compose up</p>
+<p>Docker Compose命令集<br>
+管理镜像：build/pull<br>
+管理服务：up/start/stop/kill/rm/scale<br>
+服务状态：ps/logs/port<br>
+一次性服务：run</p>
+<p>Docker Swarm:Docker集群管理工具，支持标准的Docker API,其主要作用是把若干台Docker主机抽象为一个整体，并且通过一个入口统一管理这些Docker主机上的各种Docker资源。<br>
+Swarm和Kubernetes比较类似，但是更加轻，具有的功能也较kubernetes更少一些。</p>
+<p>Docker Compose 是一个在单个服务器或主机上创建多个容器的工具，而 Docker Swarm 则可以在多个服务器或主机上创建容器集群服务，对于微服务的部署，显然 Docker Swarm 会更加适合。</p>
+<p>三大主流调度框架：Swarm、Kubernetes和Mesos</p>
+<p>Kubernetes：交互工具kubectl<br>
+pods：创建、调度及管理的最小单元，共存的一组容器的集合，同一pods中的容器共享pid、网络、ipc及utf命名空间和共享存储卷</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共97.8k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

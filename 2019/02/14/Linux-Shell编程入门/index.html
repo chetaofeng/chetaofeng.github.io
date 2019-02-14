@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="title: Shell编程入门 tags:  Shell编程 copyright: true comments: true toc: true date: 2018-12-19 15:29:55 categories: Linux password:   [toc]  认识Shell环境  Shell是工作在Linux内核与用户之间的==解释程序==，相当于操作系统的“外壳”，是向Linux内">
+<meta property="og:type" content="article">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/2019/02/14/Linux-Shell编程入门/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="title: Shell编程入门 tags:  Shell编程 copyright: true comments: true toc: true date: 2018-12-19 15:29:55 categories: Linux password:   [toc]  认识Shell环境  Shell是工作在Linux内核与用户之间的==解释程序==，相当于操作系统的“外壳”，是向Linux内">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-14T05:41:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="title: Shell编程入门 tags:  Shell编程 copyright: true comments: true toc: true date: 2018-12-19 15:29:55 categories: Linux password:   [toc]  认识Shell环境  Shell是工作在Linux内核与用户之间的==解释程序==，相当于操作系统的“外壳”，是向Linux内">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/2019/02/14/Linux-Shell编程入门/"/>
+
+
+
+
+
+  <title> | 行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-Shell编程入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline"></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T13:41:34+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/14/Linux-Shell编程入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/02/14/Linux-Shell编程入门/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>title: Shell编程入门<br>
+tags:</p>
+<ul>
+<li>Shell编程<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2018-12-19 15:29:55<br>
+categories: Linux<br>
+password:</li>
+</ul>
+<hr>
+<p>[toc]</p>
+<h1 id="认识shell环境"><a class="markdownIt-Anchor" href="#认识shell环境"></a> 认识Shell环境</h1>
+<ul>
+<li>Shell是工作在Linux内核与用户之间的==解释程序==，相当于操作系统的“外壳”，是向Linux内核传达用户指令的“翻译官”，通常指BASH（/bin/bash）,常见的还有zsh、tcsh，用于和操作系统内核交互，操作系统内核控制底层硬件</li>
+<li>windows下的Shell为cmd.exe</li>
+<li>查看当前的Shell的命令为：echo $SHELL</li>
+<li>可以手动选择Shell环境，直接在Shell中输入shell如：tcsh，相当于新建了一个子环境（父–子进程）</li>
+<li>shell操作有交互式和非交互式两种</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>交互式</th>
+<th>非交互式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人工干预、智能化程度低</td>
+<td>需提前设计、智能化难度大</td>
+</tr>
+<tr>
+<td>逐条解释执行、效率低</td>
+<td>批量执行、效率高</td>
+</tr>
+<tr>
+<td></td>
+<td>方便在后台静悄悄地运行</td>
+</tr>
+</tbody>
+</table>
+<h1 id="shell脚本"><a class="markdownIt-Anchor" href="#shell脚本"></a> shell脚本</h1>
+<ul>
+<li>shell脚本指提前写好的可执行代码，用来完成特定任务的文件，特点为：顺序、批处理，解释型程序</li>
+<li>shell脚本编写步骤：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>1. 理清任务</th>
+<th>自然语言：步骤拆分、顺序化整理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2. 编写可执行语句</td>
+<td>脚本语言：各步骤如何实现</td>
+</tr>
+<tr>
+<td>3. 完善脚本</td>
+<td>界面友好／结构规范／代码优化</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>shell脚本一般以.sh结尾，==第一行 #!/bin/bash== 用来申明Shell环境</p>
+</li>
+<li>
+<p>shell脚本的免交互及输出处理</p>
+<ul>
+<li>免交互：通过选项 ==–stdin== 可以从标准输入读取字串；也可以从键盘或由另一个命令给出</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 修改root密码</span><br><span class="line">passwd --stdin root     //从键盘读入</span><br><span class="line">echo 1234567 | passwd --stdin root  //由echo命令给出</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>输出处理：</p>
+<ul>
+<li>忽略无关输出:黑洞设备/dev/null</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相当于只能写入、不能读出的单向文件；存放到其中的数据都会丢失，用法：可执行语句 &amp;&gt; /dev/null，如：</span><br><span class="line">echo 1234567 | passwd --stdin root &amp;&gt; /dev/null</span><br></pre></td></tr></table></figure>
+<ul>
+<li>记录错误输出：根据需要，将出错信息保存到指定文件</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">是针对后台脚本的有效排错手段，适用于不便交互但又需要查看报错的情况，用法：可执行语句 2&gt;/路径／文件，如：</span><br><span class="line">useradd root 2&gt;/tmp/err.log</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>命令的组合运用</p>
+<ul>
+<li>顺序分割–==使用分号==，格式：命令1；命令2；命令3…,依次执行，只有先后，没有逻辑关系</li>
+<li>逻辑“与”分割–==使用&amp;&amp;==，格式：命令1 &amp;&amp; 命令2 &amp;&amp; 命令3…,逻辑关系为“而且”（and），期望所有命令都能执行成功，一旦出现失败，后续命令不再执行</li>
+<li>逻辑“或”分割–==使用||==，格式：命令1 || 命令2 || 命令3…,逻辑关系为“或者”（or），任何一条成功都符合期望，只在前面的命令失败时，后续命令才执行</li>
+<li>管道–==使用|==，格式：命令1|命令2，后续命令要能正确处理传来的文本，否则无意义，如：</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /etc -type f | wc -l   //计算／etc下文件数量，将结果交给wc统计行数</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>shell脚本的运行方式</p>
+<ul>
+<li>作为指定shell解释程序的参数</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-sh 代码文件路径    ===     bash 代码文件路径</span><br><span class="line">-.  代码文件路径    ===     source  代码文件路径</span><br></pre></td></tr></table></figure>
+<ul>
+<li>作为可独立运行的脚本程序</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">为shell代码文件添加x权限，指定脚本路径即可运行.如：</span><br><span class="line">chmod +x ／root／first.sh；/root/first.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="标准输入输出和重定向"><a class="markdownIt-Anchor" href="#标准输入输出和重定向"></a> 标准输入输出和重定向</h1>
+<blockquote>
+<p>Unix/Linux基本思想：普通文件、目录、鼠标、键盘…都是以文件形式存在；要访问硬件设备，必须找对应的设备文件</p>
+</blockquote>
+<p>I/O交互设备</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>设备文件</th>
+<th>文件描述号</th>
+<th>默认设备</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准输入</td>
+<td>/dev/stdin</td>
+<td>0</td>
+<td>键盘</td>
+<td>从此设备接收用户输入的数据</td>
+</tr>
+<tr>
+<td>标准输出</td>
+<td>/dev/stdout</td>
+<td>1</td>
+<td>显示器</td>
+<td>通过此设备向用户报告正常的命令输出结果</td>
+</tr>
+<tr>
+<td>标准错误输出</td>
+<td>/dev/stderr</td>
+<td>2</td>
+<td>显示器</td>
+<td>通过此设备报告执行中的错误信息</td>
+</tr>
+</tbody>
+</table>
+<p>重定向：重新指定命令执行是I/O设备的方向</p>
+<p>根据I／O方向和类型区分</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>操作符</th>
+<th>用途</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重定向输入</td>
+<td>&lt;</td>
+<td>将文本输入来源由键盘改为指定的文件</td>
+<td>mial -s ‘A Test Mail’ root@localhost &lt; /root/mail.txt</td>
+</tr>
+<tr>
+<td>重定向输出</td>
+<td>&gt;</td>
+<td>将命令行的正常输出保存到文件，而非显示器</td>
+<td>echo ‘nameserver 8.8.8.8’ &gt; /etc/resolv.conf</td>
+</tr>
+<tr>
+<td>重定向输出</td>
+<td>&gt;&gt;</td>
+<td>与“&gt;”类似，但操作是追加而不是覆盖</td>
+<td></td>
+</tr>
+<tr>
+<td>重定向错误</td>
+<td>2&gt;</td>
+<td>将命令行的错误输出保存到文件，而非显示器</td>
+<td></td>
+</tr>
+<tr>
+<td>重定向错误</td>
+<td>2&gt;&gt;</td>
+<td>与“2&gt;”类似，但操作是追加而不是覆盖</td>
+<td></td>
+</tr>
+<tr>
+<td>混合重定向</td>
+<td>&amp;&gt;</td>
+<td>相当于“&gt;”和“2&gt;”</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="脚本逻辑"><a class="markdownIt-Anchor" href="#脚本逻辑"></a> 脚本逻辑</h1>
+<h2 id="变量值及范围控制"><a class="markdownIt-Anchor" href="#变量值及范围控制"></a> 变量值及范围控制</h2>
+<ol>
+<li>引号在赋值中的应用</li>
+</ol>
+<ul>
+<li>双引号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 在双引号内允许$扩展，可调用其他变量的值</span><br><span class="line">- 出现特殊字符时，可采用\符号转义</span><br><span class="line">- 当变量值不包括空格、制表符时，双引号通常被省略，如：A=CentOS7</span><br></pre></td></tr></table></figure>
+<ul>
+<li>单引号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 所有字符均视为该字符本身（无特殊含义）</span><br><span class="line">- 不允许\转义</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>read读入变量值</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 基本格式</span><br><span class="line"> - read 变量名.. ..</span><br><span class="line"> - read -p &quot;提示信息&quot; 变量名 .. ..  //read -p &quot;svr5 login&quot; YOUR_NAME</span><br><span class="line"> - 启用read命令的 -s 选项，可关闭输入回显，适合敏感信息，提高安全性，如密码</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>变量的作用范围</li>
+</ol>
+<ul>
+<li>局部变量：只在定义此变量的shell环境有效；自定义变量默认都是局部变量</li>
+<li>全局变量：在当前shell及所有子shell环境下有效；子shell中若赋值同名变量，与父shell中变量无关</li>
+</ul>
+<p>发布全局变量</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export 局部变量名[=变量值] .. ..</span><br><span class="line"> - 直接定义／赋值指定的变量，作为全局变量发布</span><br><span class="line"> - 对已有的局部变量，只需发布不需赋值</span><br></pre></td></tr></table></figure>
+<h2 id="数值运算及处理"><a class="markdownIt-Anchor" href="#数值运算及处理"></a> 数值运算及处理</h2>
+<blockquote>
+<p>bash内置机制仅支持整数运算</p>
+</blockquote>
+<h3 id="基本运算类别"><a class="markdownIt-Anchor" href="#基本运算类别"></a> 基本运算类别</h3>
+<p>加减乘除求模  ±*／%</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. expr工具：==expr 数值1 运算符 数值2==  </span><br><span class="line">乘法操作需转义</span><br><span class="line">2. 使用$[]表达式： ==$[数值1 运算符 数值2]==  </span><br><span class="line">* 乘法操作无需转义，运算符两侧可以无空格，引用变量可省略$符号，如：echo $[x+100-Y*2/7]</span><br><span class="line">* 支持混合运算，乘除优先</span><br><span class="line">* 支持乘方运算,如：echo $[10**3]</span><br></pre></td></tr></table></figure>
+<p>自增表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 加减乘除求模自增，如：i+=2 或 i=i+2 或 $[i+=2]</span><br><span class="line">2. 如果步长为1，则支持如： --i，++i/i--，i++</span><br></pre></td></tr></table></figure>
+<p>let命令操作变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作变量值运算，并保存新结果，适用于不需要输出的情况，如：let  x++</span><br></pre></td></tr></table></figure>
+<h3 id="使用随机整数"><a class="markdownIt-Anchor" href="#使用随机整数"></a> 使用随机整数</h3>
+<ol>
+<li>环境变量RANDOM:随机生成0～32767之间的一个整数</li>
+<li>扩大随机数范围：多个随机数相乘</li>
+<li>缩小随机数范围：取余数，如：$[RANDOM%1000]取0～999的整数</li>
+</ol>
+<h3 id="整数序列"><a class="markdownIt-Anchor" href="#整数序列"></a> 整数序列</h3>
+<p>使用seq命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用格式：默认分隔符为\n</span><br><span class="line">- seq 末数  ;默认从1开始，步长为1</span><br><span class="line">- seq 首数 末数</span><br><span class="line">- seq 首数 步长 末数</span><br><span class="line">参数选项：</span><br><span class="line">  -s：定义分隔符，如：seq -s&apos; &apos; 3,结果“1  2  3”</span><br><span class="line">  -w：等宽显示,不足前面补0</span><br></pre></td></tr></table></figure>
+<h3 id="bc计算器"><a class="markdownIt-Anchor" href="#bc计算器"></a> bc计算器</h3>
+<blockquote>
+<p>bc运算器支持高精度的数值运算，输入bc进入交互式预算界面，quit退出，设置scale=n可约束小数位，也支持小数值的比较，大多数Linux系统已内置</p>
+</blockquote>
+<p>使用举例：</p>
+<ol>
+<li>echo “scale=4;123.4*2.5” | bc</li>
+<li>echo “<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">A&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span>B” | bc</li>
+</ol>
+<h2 id="shell变量"><a class="markdownIt-Anchor" href="#shell变量"></a> Shell变量</h2>
+<ul>
+<li>变量：以固定名称存放的可能会变化的值</li>
+<li>定义／赋值变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">变量名=变量值</span><br><span class="line">1. 如果变量名已存在，则相当于赋值</span><br><span class="line">2. 等号两边不能有空格</span><br><span class="line">3. 变量区分大小写</span><br><span class="line">4. 变量名不能以数字开头，不要使用关键字和特殊字符</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看／引用变量：$变量名  或  ${变量名}</li>
+<li>取消变量：退出shell变量自动失效 或  ==unset 变量名==  方式手动取消</li>
+</ul>
+<p>变量的分类</p>
+<ol>
+<li>存储类型：shell不作为高级编程语言，对存储类型的要求比较松散</li>
+<li>使用类型</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>环境变量</td>
+<td>变量名通常大写，由系统维护，用来设置工作环境，其中只有个别变量用户可以直接修改</td>
+<td>配置文件：/etc/profile,~/.bash_profile</td>
+</tr>
+<tr>
+<td>位置变量</td>
+<td>由bash内置，用来存储在执行脚本时提供的命令行参数</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi mathvariant="normal">从</mi><mn>1</mn><mi mathvariant="normal">开</mi><mi mathvariant="normal">始</mi><mo separator="true">,</mo><mi mathvariant="normal">当</mi><mi>n</mi><mo>&gt;</mo><mn>10</mn><mi mathvariant="normal">，</mi><mi mathvariant="normal">格</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">为</mi><mo>=</mo><mo>=</mo></mrow><annotation encoding="application/x-tex">n,从1开始,当n&gt;10，格式为 ==</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">从</span><span class="mord">1</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">始</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">当</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">为</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span></span></span></span>{n}==</td>
+</tr>
+<tr>
+<td>预定义变量</td>
+<td>由bash内置，一类有特殊用途的变量，可以直接调用，但不能直接赋值或修改</td>
+<td>参见下表与定义变量定义</td>
+</tr>
+<tr>
+<td>自定义变量</td>
+<td>用户自主设置、修改及使用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>env-列出所有环境变量；<br>
+set-列出所有变量</p>
+<p>常见环境变量：PWD,PATH,USER,LOGNAME,UID,SHELL,HOME,PS1,PS2…</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0</td>
+<td>当前所在进程或脚本名</td>
+<td></td>
+</tr>
+<tr>
+<td>$$</td>
+<td>当前运行进程PID</td>
+<td></td>
+</tr>
+<tr>
+<td>$?</td>
+<td>命令执行后的状态值，0-正常   1或其他-异常</td>
+<td></td>
+</tr>
+<tr>
+<td>$#</td>
+<td>已加载位置变量个数</td>
+<td>如传入参数个数判断: if[ $# -ne 2 ]</td>
+</tr>
+<tr>
+<td>$*</td>
+<td>所有位置变量的值</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="条件测试"><a class="markdownIt-Anchor" href="#条件测试"></a> 条件测试</h2>
+<h3 id="返回状态值"><a class="markdownIt-Anchor" href="#返回状态值"></a> 返回状态值：$?</h3>
+<h3 id="专用测试工具test"><a class="markdownIt-Anchor" href="#专用测试工具test"></a> 专用测试工具test</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* test 选项  参数...</span><br><span class="line">* [ 选项 参数... ]</span><br></pre></td></tr></table></figure>
+<h3 id="文件状态检测test的参数则为文件或目录"><a class="markdownIt-Anchor" href="#文件状态检测test的参数则为文件或目录"></a> 文件状态检测：test的参数则为文件或目录</h3>
+<table>
+<thead>
+<tr>
+<th>测试选项</th>
+<th>含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-e</td>
+<td>检测对象是否存在Exist</td>
+<td>[ -e /etc/test ];echo $?</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>检测对象是否为目录Directory</td>
+<td></td>
+</tr>
+<tr>
+<td>-f</td>
+<td>检测对象是否为文件File</td>
+<td></td>
+</tr>
+<tr>
+<td>-r</td>
+<td>检测对象是否有可读权限Read</td>
+<td></td>
+</tr>
+<tr>
+<td>-w</td>
+<td>检测对象是否有可写权限Write</td>
+<td></td>
+</tr>
+<tr>
+<td>-x</td>
+<td>检测对象是否有可执行权限eXcute</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="整数值比较"><a class="markdownIt-Anchor" href="#整数值比较"></a> 整数值比较</h3>
+<table>
+<thead>
+<tr>
+<th>测试选项</th>
+<th>含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-eq</td>
+<td>等于Equal</td>
+<td>[ $(who|wc -l) -eq 10 ]//判断登陆用户数等于10</td>
+</tr>
+<tr>
+<td>-ne</td>
+<td>不等于Not Equal</td>
+<td></td>
+</tr>
+<tr>
+<td>-ge</td>
+<td>大于或等于 Greater or Equal</td>
+<td></td>
+</tr>
+<tr>
+<td>-le</td>
+<td>小于或等于 Lesser or Equal</td>
+<td></td>
+</tr>
+<tr>
+<td>-gt</td>
+<td>大于 Greater Than</td>
+<td></td>
+</tr>
+<tr>
+<td>-lt</td>
+<td>小于 Lesser Than</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="组合多个条件"><a class="markdownIt-Anchor" href="#组合多个条件"></a> 组合多个条件</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* test 测试条件1 -a或-o 测试条件2...</span><br><span class="line">* [[ 测试条件1 &amp;&amp;或|| 测试条件2...]]</span><br></pre></td></tr></table></figure>
+<h3 id="字符串比较"><a class="markdownIt-Anchor" href="#字符串比较"></a> 字符串比较</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* [ 字符串1 选项  字符串2 ]</span><br><span class="line">* [ 选项 字符串 ]</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>测试选项</th>
+<th>含义</th>
+<th>举例/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>两字符串相同</td>
+<td>[ $USER = ‘root’ ] &amp;&amp; echo $USER</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>两字符串不同</td>
+<td></td>
+</tr>
+<tr>
+<td>-z</td>
+<td>字符串值为空</td>
+<td>Zero</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>字符串值不为空</td>
+<td>Not zero</td>
+</tr>
+</tbody>
+</table>
+<h3 id="将条件取反"><a class="markdownIt-Anchor" href="#将条件取反"></a> 将条件取反</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">[ ! 测试条件 ]</span><br><span class="line">举例：</span><br><span class="line">[ ! 100 -gt 200] &amp;&amp; echo YES</span><br></pre></td></tr></table></figure>
+<h2 id="字符串处理"><a class="markdownIt-Anchor" href="#字符串处理"></a> 字符串处理</h2>
+<h3 id="截取字符串"><a class="markdownIt-Anchor" href="#截取字符串"></a> 截取字符串</h3>
+<ol>
+<li>使用expr命令，==expr substr $var1 起始位置 截取长度==</li>
+<li>使用cut命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 命令输出|cut -c 起始位置-结束位置，echo $var1|cut -c 5-6</span><br><span class="line">* 命令输出|cut -d &apos;分隔符&apos; -f 字段编号....,echo &quot;CentOS6.5&quot; |cut -d &apos;t&apos; -f2 //OS6.5，相当于java中的split[2]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用${}</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* $&#123;var1:起始位置:截取长度&#125;</span><br><span class="line">* $&#123;var1::截取长度&#125; //默认从头开始</span><br></pre></td></tr></table></figure>
+<h3 id="字符串替换"><a class="markdownIt-Anchor" href="#字符串替换"></a> 字符串替换</h3>
+<p>使用${}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* $&#123;var1/old/new&#125;   //只替换一个</span><br><span class="line">* $&#123;var1//old/new&#125;  //替换全部</span><br></pre></td></tr></table></figure>
+<h3 id="tr单字替换工具"><a class="markdownIt-Anchor" href="#tr单字替换工具"></a> tr单字替换工具</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* 命令输出|tr &apos;abc&apos; &apos;ABC&apos;  //abc替换为大写ABC</span><br><span class="line">* 命令输出|tr -d &apos;abc&apos;     //删除所有的abc</span><br></pre></td></tr></table></figure>
+<h3 id="路径分割"><a class="markdownIt-Anchor" href="#路径分割"></a> 路径分割</h3>
+<ul>
+<li>dirname “路径字符串”:取目录位置</li>
+<li>basename “路径字符串”:取基本名称</li>
+</ul>
+<h3 id="使用随机字符串"><a class="markdownIt-Anchor" href="#使用随机字符串"></a> 使用随机字符串</h3>
+<ul>
+<li>随机数变量：RANDOM</li>
+<li>特殊设备文件：/dev/urandom</li>
+<li>UUID生成命令：uuidgen</li>
+</ul>
+<p>随机信息的转换：md5sum</p>
+<blockquote>
+<p>依据输入文本计算出256位(32字符)的MD5编码值</p>
+</blockquote>
+<ul>
+<li>echo $RANDOM |md5sum</li>
+<li>head -1 /dev/urandom|md5sum</li>
+</ul>
+<h3 id="命令替换"><a class="markdownIt-Anchor" href="#命令替换"></a> 命令替换</h3>
+<ol>
+<li>反撇号`</li>
+</ol>
+<ul>
+<li>适用场景：在命令行潜入另一个命令的输出结果；将命令的输出保存到指定变量</li>
+<li>优先执行反撇号内的命令，并将执行结果作为输入</li>
+<li>举例：rpm -qf <code>which tr</code></li>
+</ul>
+<ol start="2">
+<li>$(可执行命令)，优点为==可嵌套使用==，举例：rpm -qf $(which tr)</li>
+</ol>
+<h2 id="流程控制"><a class="markdownIt-Anchor" href="#流程控制"></a> 流程控制</h2>
+<h3 id="if语句"><a class="markdownIt-Anchor" href="#if语句"></a> if语句</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//单分支</span><br><span class="line">if 条件测试</span><br><span class="line">    then 命令序列</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">//双分支</span><br><span class="line">if 条件测试</span><br><span class="line">    then 命令序列1</span><br><span class="line">    else 命令序列2</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">//多分支（嵌套）</span><br><span class="line">if 条件测试1</span><br><span class="line">    then 命令序列1</span><br><span class="line">elif 条件测试2 ;then</span><br><span class="line">    命令序列2</span><br><span class="line">else </span><br><span class="line">    命令序列n</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>说明：如果then要跟着条件测试写在一行，则需在then前加封号，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if 条件测试 ;then</span><br><span class="line">    命令序列</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h3 id="for循环"><a class="markdownIt-Anchor" href="#for循环"></a> for循环</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for 变量名 in 值列表</span><br><span class="line">do</span><br><span class="line">    命令序列</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h3 id="while循环"><a class="markdownIt-Anchor" href="#while循环"></a> while循环</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while 条件测试</span><br><span class="line">do</span><br><span class="line">    命令序列</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h3 id="case分支"><a class="markdownIt-Anchor" href="#case分支"></a> case分支</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">case 变量值  in</span><br><span class="line">模式1)</span><br><span class="line">    命令序列1;;</span><br><span class="line">模式2)</span><br><span class="line">    命令序列2;;</span><br><span class="line">    .. ..</span><br><span class="line">*)</span><br><span class="line">    默认命令序列</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<h3 id="中断及退出控制"><a class="markdownIt-Anchor" href="#中断及退出控制"></a> 中断及退出控制</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>跳出当前所在循环体，执行循环体后的语句块</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>跳过循环体内余下的语句，重新判断条件以便执行下一次循环</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>退出脚本，可以指定返回的状态值，默认返回0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="编写服务脚本"><a class="markdownIt-Anchor" href="#编写服务脚本"></a> 编写服务脚本</h2>
+<h3 id="shell函数"><a class="markdownIt-Anchor" href="#shell函数"></a> shell函数</h3>
+<p>type 名称  //查看名称对应类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">基本格式:</span><br><span class="line">function 函数名()&#123;</span><br><span class="line">    命令序列</span><br><span class="line">    .. ..</span><br><span class="line">&#125;</span><br><span class="line">或🔥</span><br><span class="line">函数名()&#123;</span><br><span class="line">    命令序列</span><br><span class="line">    .. ..</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">调用： 函数名</span><br><span class="line">传参： 函数名  参数1  参数2 .. ..  //传递的值作为函数的位置参数</span><br></pre></td></tr></table></figure>
+<h3 id="系统服务管理"><a class="markdownIt-Anchor" href="#系统服务管理"></a> 系统服务管理</h3>
+<ul>
+<li>查看服务列表、自启状态</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>chkconfig --list [服务名]</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>chkconfig 服务名  on/off</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>启动／停止／重启服务</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>service 服务名 start/stop/restart</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>/etc/init.d/服务名 start/stop/restart</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>ntsysv:可视化设置自启动状态</li>
+</ul>
+<ol>
+<li>shell脚本直接交给service控制，则将脚本或者脚本的快捷方式放到/etc/init.d／下即可</li>
+<li>shell脚本交给chkconfig工具管理,需设置适用级别、启动／停止顺序、服务说明</li>
+</ol>
+<ul>
+<li>添加设置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#</span><br><span class="line"># chkconfig:2345 10 95</span><br><span class="line"># description:服务相关说明</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加服务：chkconfig --add 服务名</li>
+</ul>
+<h2 id="文件的排序集统计"><a class="markdownIt-Anchor" href="#文件的排序集统计"></a> 文件的排序集统计</h2>
+<h3 id="ls列表排序"><a class="markdownIt-Anchor" href="#ls列表排序"></a> ls列表排序</h3>
+<ul>
+<li>-S:按文档大小降序排列</li>
+<li>-t:按文档的修改时间降序排列</li>
+<li>-r:反序排列</li>
+</ul>
+<h3 id="uniq去重工具"><a class="markdownIt-Anchor" href="#uniq去重工具"></a> uniq去重工具</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用法1：uniq 文件</span><br><span class="line">用法2: 命令|uniq</span><br></pre></td></tr></table></figure>
+<p>缺点：==未排序的文本会出现重复现象==，需配合其他方式先排序，再去重<br>
+方法：sort 文件名|uniq -c</p>
+<h3 id="sort工具"><a class="markdownIt-Anchor" href="#sort工具"></a> sort工具</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">用法1:sort 文件</span><br><span class="line">用法2:命令|sort</span><br><span class="line"></span><br><span class="line">常用选项：</span><br><span class="line">* -u: 去除重复行</span><br><span class="line">* -n：按数字升序排列</span><br><span class="line">* -r：反向排序</span><br><span class="line">* -k：优先对第几列内容排序，即优先对哪个字段排序，只是字段是通过显示顺序编号的</span><br></pre></td></tr></table></figure>
+<h2 id="文本处理的的特殊应用"><a class="markdownIt-Anchor" href="#文本处理的的特殊应用"></a> 文本处理的的特殊应用</h2>
+<h3 id="tac-rev反序输出"><a class="markdownIt-Anchor" href="#tac-rev反序输出"></a> tac、rev反序输出</h3>
+<ul>
+<li>tac：以行为单位反序，与cat命令效果相反</li>
+<li>rev: 以字符为单位反序，与echo命令效果相反</li>
+</ul>
+<h3 id="tee整合重定向"><a class="markdownIt-Anchor" href="#tee整合重定向"></a> tee整合重定向</h3>
+<p>举例：uname -r|tee un.txt</p>
+<h3 id="unix2dos与dos2unix转换"><a class="markdownIt-Anchor" href="#unix2dos与dos2unix转换"></a> unix2dos与dos2unix转换</h3>
+<p>windows和linux系统文本格式转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装：yum -y install unix2dos dos2unix</span><br><span class="line">基本用法：</span><br><span class="line">* unix2dos Linux文件</span><br><span class="line">* dos2unix Windows文件</span><br></pre></td></tr></table></figure>
+<h2 id="xargs多参数处理"><a class="markdownIt-Anchor" href="#xargs多参数处理"></a> xargs多参数处理</h2>
+<p>背景：ls、mv、rm、cp等命令给出的参数长度不能超过2.5M，基于*匹配、find等方式处理大量文件时容易出错</p>
+<h3 id="多参数的分散处理"><a class="markdownIt-Anchor" href="#多参数的分散处理"></a> 多参数的分散处理</h3>
+<ul>
+<li>利用find… … -exec… … 查找处理  //仅适用于处理文件或目录参数，如：find / -exec ls -lh {} ;</li>
+<li>xargs工具:根据给定的参数组（以行为单位）分次执行目标命令行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">用法1：提供参数的命令 | xargs 目标命令，如：find /|args ls -lh</span><br><span class="line">用法2: xargs --arg-file=提供参数的文件  目标命令</span><br><span class="line">选项：</span><br><span class="line">* -I：定义标记，如：ls txt.log* | xargs -I&#123;&#125; cp &#123;&#125; &#123;&#125;.new</span><br><span class="line">* -d: 制定分割符，默认按行分割，如：head -1 /etc/passwd |xargs -d: -I&#123;&#125; echo &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="expect预期交互控制"><a class="markdownIt-Anchor" href="#expect预期交互控制"></a> expect预期交互控制</h2>
+<blockquote>
+<p>基于TCL编写的自动化交互式程序，可以用在Shell脚本中，为FTP、SSH等交互过程自动输送预先准备的文本或指令，而无需人工干预，出发的依据是预期会出现的特征提示文本</p>
+</blockquote>
+<ul>
+<li>安装：yum -y install expect</li>
+</ul>
+<ol>
+<li>手动交互</li>
+<li>自动交互</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cat mike-ftp.sh</span><br><span class="line">--------------------</span><br><span class="line">spawn ftp 192.168.4.5</span><br><span class="line">expect &quot;):&quot;</span><br><span class="line">send &quot;mike\r&quot;</span><br><span class="line">expect &quot;Password:&quot;</span><br><span class="line">send &quot;123456\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;put install.log\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;quit\r&quot;</span><br><span class="line">---------------------</span><br><span class="line">epxect mike-ftp.sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调整执行环境：添加Sha-Bang环境声明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cat mike-ftp.sh</span><br><span class="line">-----------------------</span><br><span class="line">#!/usr/bin/expect</span><br><span class="line">spawn ftp 192.168.4.5</span><br><span class="line">expect &quot;):&quot;</span><br><span class="line">send &quot;mike\r&quot;</span><br><span class="line">expect &quot;Password:&quot;</span><br><span class="line">send &quot;123456\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;put install.log\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;quit\r&quot;</span><br><span class="line">------------------------</span><br><span class="line">sh mike-ftp.sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li>SSH登陆免交互举例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/expect</span><br><span class="line">set host 192.168.4.5</span><br><span class="line">set user mike</span><br><span class="line">set password &quot;1234567&quot;</span><br><span class="line">spawn ssh $user@$host</span><br><span class="line">expect &quot;password:&quot;&#123;send &quot;$password\r&quot;&#125;</span><br><span class="line">expect &quot;\[$user\@&quot;&#123;send &quot;pwd&gt;/tmp/$user.txt;exit\r&quot;&#125;</span><br><span class="line">expect eof</span><br></pre></td></tr></table></figure>
+<h1 id="应用技巧"><a class="markdownIt-Anchor" href="#应用技巧"></a> 应用技巧</h1>
+<h2 id="正则表达式"><a class="markdownIt-Anchor" href="#正则表达式"></a> 正则表达式</h2>
+<blockquote>
+<p>使用“一串符号”来描述有共同属性的数据</p>
+</blockquote>
+<h3 id="egrep测试工具"><a class="markdownIt-Anchor" href="#egrep测试工具"></a> egrep测试工具</h3>
+<ul>
+<li>用法1:egrep [选项] ‘正则表达式’ 文件</li>
+<li>用法2:前置命令|egrep [选项] ‘正则表达式’</li>
+</ul>
+<p>选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-i：忽略大小写</span><br><span class="line">-v: 取反</span><br><span class="line">-c：统计匹配行数</span><br><span class="line">-q：静默、无任何输出</span><br><span class="line">-n：显示出所匹配结果所在的行号</span><br></pre></td></tr></table></figure>
+<h3 id="基本元字符"><a class="markdownIt-Anchor" href="#基本元字符"></a> 基本元字符</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>匹配行首</td>
+<td>^abc 或 ^#</td>
+<td>以abc开头的行  或  以#开头的行（比如注释行）</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配行尾</td>
+<td>abc$ 或 ^$</td>
+<td>以abc结尾的行  或  空行</td>
+</tr>
+<tr>
+<td>.</td>
+<td>单个字符</td>
+<td>.</td>
+<td>除换行符\n以外的任意单个字符</td>
+</tr>
+<tr>
+<td>+</td>
+<td>最少匹配一次</td>
+<td>a+ 或 (abc)+</td>
+<td>一个或多个连续的a 或  一个或多个连续的abc</td>
+</tr>
+<tr>
+<td>?</td>
+<td>最多匹配一次</td>
+<td>a? 或 (abc)?</td>
+<td>0个或1个a 或  0或1个abc</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配任意次数</td>
+<td>a* 或 (abc)* 或 .*</td>
+<td>0个或多个连续的a 或 0个或多个连续的abc 或 任意长度的任意字符串</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>匹配n次</td>
+<td>(ab){3}</td>
+<td>匹配ababab</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>匹配n～m次</td>
+<td>(ab){1,3}</td>
+<td>匹配ab、abab、ababab</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>匹配至少n次</td>
+<td>(ab){2,}</td>
+<td>匹配2个及以上连续的ab</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>匹配范围内的单个字符</td>
+<td>[a-z]</td>
+<td>匹配任意小写字母</td>
+</tr>
+<tr>
+<td>[]内加^</td>
+<td>可取反</td>
+<td>[^a-z]</td>
+<td>匹配任意非小写字母</td>
+</tr>
+<tr>
+<td>()</td>
+<td>组合为整体</td>
+<td>(ab)</td>
+<td>连续的ab</td>
+</tr>
+<tr>
+<td></td>
+<td>或者</td>
+<td>root|bin</td>
+<td>匹配root、bin</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>单词边界</td>
+<td>\broot\b</td>
+<td>匹配root，不匹配keroot、rooty、brooty等字符串</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>单词的开头</td>
+<td>&lt;th</td>
+<td>匹配以th开头的单词</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>单词的结尾</td>
+<td>th&gt;</td>
+<td>匹配以th结尾的单词</td>
+</tr>
+</tbody>
+</table>
+<h2 id="awk文本过滤"><a class="markdownIt-Anchor" href="#awk文本过滤"></a> awk文本过滤</h2>
+<blockquote>
+<p>awk:模式扫描及处理语言，创始人Aho、Weinberger、Kernighan，基于模式匹配检查输入的文本，逐行处理并print结果，目前最常用的实际是GNU版本的gawk</p>
+</blockquote>
+<ul>
+<li>用法1:前置命令|awk [选项] ‘[条件]{编辑指令}’</li>
+<li>用法2:awk [选项] ‘[条件]{编辑指令}’ 文件，如：awk -F “:” ‘{print $1,$2} /etc/passwd’</li>
+</ul>
+<p>条件的表现形式</p>
+<ul>
+<li>正则表达式，/正则表达式/ 🔥 ~匹配、!~不匹配,如：awk -F: ‘/^ro/{print}’ /etc/passwd</li>
+<li>数值／字符串比较</li>
+<li>逻辑比较</li>
+<li>运算符</li>
+</ul>
+<p>选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-F:指定分隔符，可省略，默认空格或Tab位，如：awk -F: &apos;$1==ENVIRON[&quot;USER&quot;]&#123;print $3&#125;&apos; /etc/passwd  //输出当前用户的UID信息</span><br><span class="line">-f:调用awk脚本进行处理</span><br></pre></td></tr></table></figure>
+<p>awk内置变量</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS</td>
+<td>保存或设置字段分隔符，如 FS=“：”</td>
+</tr>
+<tr>
+<td>$n</td>
+<td>指定分隔符的第n个字段，如$1、$3分别表示第1、第3列</td>
+</tr>
+<tr>
+<td>$0</td>
+<td>当前读入的整行文本内容</td>
+</tr>
+<tr>
+<td>NF</td>
+<td>记录当前处理的字段个数（列数）</td>
+</tr>
+<tr>
+<td>NR</td>
+<td>记录当前已读入行的数量（行数）</td>
+</tr>
+<tr>
+<td>FNR</td>
+<td>保存当前处理行在元文本内的序号（行号）</td>
+</tr>
+<tr>
+<td>FILENAME</td>
+<td>当前处理的文件名</td>
+</tr>
+<tr>
+<td>ENVIRON</td>
+<td>调用Shell环境变量，格式：ENVIRON[“变量名”]</td>
+</tr>
+</tbody>
+</table>
+<p>awk处理的时机：可单独使用，也可以同时一起使用，具体如下：</p>
+<ul>
+<li>行前处理,BEGIN{}:读入第一行文本之前执行，一般用来初始化操作</li>
+<li>逐行处理,{}：逐行读入文本执行相应的处理，是最常见的编辑指令块</li>
+<li>行后处理，END{}：处理完最后一行文本之后执行，一般用来输出处理结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;BEGIN&#123;print NR&#125;END&#123;print NR&#125;&apos; m.txt</span><br></pre></td></tr></table></figure>
+<p>awk的流程控制</p>
+<ul>
+<li>if分支，如：if(条件){编辑指令1}else if(条件){编辑指令12}…else{编辑指令n}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -F: &apos;BEGIN&#123;i=0;j=0&#125;&#123;if($3&lt;500)&#123;i++&#125;else&#123;j++&#125;&#125;END&#123;print i,j&#125;&apos;     /etc/passwd</span><br></pre></td></tr></table></figure>
+<ul>
+<li>while循环，如：while(条件){编辑指令}</li>
+<li>do while循环，如：do {编辑指令}while(条件)</li>
+<li>for循环,如：for(初值；条件；步长){编辑指令}</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>结束当前的循环体</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>中止本次循环，转入下一次循环</td>
+</tr>
+<tr>
+<td>next</td>
+<td>跳过当前行，读入下一行文本开始处理</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>结束文本读入，转入END{}执行，没有则直接退出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sed文本流处理"><a class="markdownIt-Anchor" href="#sed文本流处理"></a> sed文本流处理</h2>
+<blockquote>
+<p>sed:Stream EDitor，流式编辑器，基于模式匹配过滤及修改文本，逐行处理并将结果输出到屏幕，可实现文本过滤／删除／替换／复制／剪切，以及导入／导出等各种操作</p>
+</blockquote>
+<ul>
+<li>用法1:前置命令|sed [选项] ‘编辑指令’，如：se -n /etc/inittab |sed -n ‘4,7p’</li>
+<li>用法2:sed [选项] ‘编辑指令’ 文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">编辑指令由“[定址符]处理动作”组成，[定址符]的格式为“[地址1，[地址2]]”</span><br></pre></td></tr></table></figure>
+<p>选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-n:屏蔽默认输出</span><br><span class="line">-i:直接修改文件内容</span><br><span class="line">-f:使用sed脚本</span><br><span class="line">-e:可指定多个处理动作</span><br><span class="line">-r:启用扩展的正则表达式，若与其他选项一起使用，应作为首个选项</span><br><span class="line">&#123;&#125;:可组合多个命令，以分号分隔</span><br></pre></td></tr></table></figure>
+<p>处理动作：替换操作的分隔符“／”可用其他字符，如#、&amp;等以便于修改文件路径</p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>用途</th>
+<th>指令示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>打印行</td>
+<td>2,4p 输出2，3，4行 🔥 2p；4p输出第2行、4行</td>
+</tr>
+<tr>
+<td>d</td>
+<td>删除行</td>
+<td>2,4d 删除第2，3，4行</td>
+</tr>
+<tr>
+<td>s</td>
+<td>字符串替换</td>
+<td>s/old/new/ 将每行第1个old替换为new</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>s/old/new/3 将每行第3个old替换为new</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>s/old/new/g 将所有的old替换为new</td>
+</tr>
+<tr>
+<td>4,+10p</td>
+<td>加10行</td>
+<td>输出第4行及其后10行内容</td>
+</tr>
+<tr>
+<td>n</td>
+<td>表示下一行</td>
+<td>p:n输出奇数行</td>
+</tr>
+<tr>
+<td></td>
+<td>n:p输出偶数行</td>
+<td></td>
+</tr>
+<tr>
+<td>$=</td>
+<td>输出文件的行数</td>
+<td>sed -n ‘$=’ a.txxt</td>
+</tr>
+<tr>
+<td>i</td>
+<td>行前插入文本</td>
+<td>2iYY 在第2行前添加文本行YY</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>4，7iYY 在第4-7行每一行钱添加文本行YY</td>
+</tr>
+<tr>
+<td>a</td>
+<td>行后插入文本</td>
+<td>2aYY 在第2行后插入YY</td>
+</tr>
+<tr>
+<td>c</td>
+<td>替换当前行</td>
+<td>2cYY 将第2行内容修改为YY</td>
+</tr>
+<tr>
+<td>r</td>
+<td>读取文件，结合-i选项才会存入，否则只输出</td>
+<td>3r b.txt 在第3行下发插入文本b.txt</td>
+</tr>
+<tr>
+<td>w</td>
+<td>保存到文件，以覆盖方式</td>
+<td>3w b.txt 将第3行保存到b.txt</td>
+</tr>
+</tbody>
+</table>
+<p>sed复制剪切</p>
+<ul>
+<li>模式空间:存放当前处理的行，将处理结果输出；若当前行不符合处理条件则原样输出；处理完当前行再读入下一行来处理</li>
+<li>保存空间:作用类似剪贴板，默认存放一个空行\n<br>
+选项：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-H：模式空间 追加 到 保持空间 ，即复制</span><br><span class="line">-h：模式空间 覆盖 到 保持空间 ，即复制</span><br><span class="line">-G：保持空间 追加 到 模式空间 ，即粘贴</span><br><span class="line">-g：保持空间 覆盖 到 模式空间 ，即粘贴</span><br><span class="line"></span><br><span class="line">sed &apos;1,3H;$G&apos; reg.txt //把第1～3行复制到文件末尾</span><br></pre></td></tr></table></figure>
+<h1 id="实战脚本"><a class="markdownIt-Anchor" href="#实战脚本"></a> 实战脚本</h1>
+<h2 id="基本知识"><a class="markdownIt-Anchor" href="#基本知识"></a> 基本知识</h2>
+<ol>
+<li>查看用户信息：id gsuis</li>
+<li></li>
+</ol>
+<h2 id="awksed应用实战"><a class="markdownIt-Anchor" href="#awksed应用实战"></a> awk&amp;sed应用实战</h2>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+            
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/pub-images/wechatpay.png" alt="行锋 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/pub-images/alipay.png" alt="行锋 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/14/Linux-RHEL-7-中-systemctl-的用法（替代service-和-chkconfig）/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/14/Linux-CentOS版本说明/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#认识shell环境"><span class="nav-number">1.</span> <span class="nav-text"> 认识Shell环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell脚本"><span class="nav-number">2.</span> <span class="nav-text"> shell脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准输入输出和重定向"><span class="nav-number">3.</span> <span class="nav-text"> 标准输入输出和重定向</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#脚本逻辑"><span class="nav-number">4.</span> <span class="nav-text"> 脚本逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量值及范围控制"><span class="nav-number">4.1.</span> <span class="nav-text"> 变量值及范围控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值运算及处理"><span class="nav-number">4.2.</span> <span class="nav-text"> 数值运算及处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本运算类别"><span class="nav-number">4.2.1.</span> <span class="nav-text"> 基本运算类别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用随机整数"><span class="nav-number">4.2.2.</span> <span class="nav-text"> 使用随机整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数序列"><span class="nav-number">4.2.3.</span> <span class="nav-text"> 整数序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bc计算器"><span class="nav-number">4.2.4.</span> <span class="nav-text"> bc计算器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell变量"><span class="nav-number">4.3.</span> <span class="nav-text"> Shell变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件测试"><span class="nav-number">4.4.</span> <span class="nav-text"> 条件测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#返回状态值"><span class="nav-number">4.4.1.</span> <span class="nav-text"> 返回状态值：$?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#专用测试工具test"><span class="nav-number">4.4.2.</span> <span class="nav-text"> 专用测试工具test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件状态检测test的参数则为文件或目录"><span class="nav-number">4.4.3.</span> <span class="nav-text"> 文件状态检测：test的参数则为文件或目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数值比较"><span class="nav-number">4.4.4.</span> <span class="nav-text"> 整数值比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合多个条件"><span class="nav-number">4.4.5.</span> <span class="nav-text"> 组合多个条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串比较"><span class="nav-number">4.4.6.</span> <span class="nav-text"> 字符串比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将条件取反"><span class="nav-number">4.4.7.</span> <span class="nav-text"> 将条件取反</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串处理"><span class="nav-number">4.5.</span> <span class="nav-text"> 字符串处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#截取字符串"><span class="nav-number">4.5.1.</span> <span class="nav-text"> 截取字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串替换"><span class="nav-number">4.5.2.</span> <span class="nav-text"> 字符串替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tr单字替换工具"><span class="nav-number">4.5.3.</span> <span class="nav-text"> tr单字替换工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路径分割"><span class="nav-number">4.5.4.</span> <span class="nav-text"> 路径分割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用随机字符串"><span class="nav-number">4.5.5.</span> <span class="nav-text"> 使用随机字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令替换"><span class="nav-number">4.5.6.</span> <span class="nav-text"> 命令替换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程控制"><span class="nav-number">4.6.</span> <span class="nav-text"> 流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if语句"><span class="nav-number">4.6.1.</span> <span class="nav-text"> if语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for循环"><span class="nav-number">4.6.2.</span> <span class="nav-text"> for循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#while循环"><span class="nav-number">4.6.3.</span> <span class="nav-text"> while循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#case分支"><span class="nav-number">4.6.4.</span> <span class="nav-text"> case分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中断及退出控制"><span class="nav-number">4.6.5.</span> <span class="nav-text"> 中断及退出控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写服务脚本"><span class="nav-number">4.7.</span> <span class="nav-text"> 编写服务脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shell函数"><span class="nav-number">4.7.1.</span> <span class="nav-text"> shell函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统服务管理"><span class="nav-number">4.7.2.</span> <span class="nav-text"> 系统服务管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件的排序集统计"><span class="nav-number">4.8.</span> <span class="nav-text"> 文件的排序集统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls列表排序"><span class="nav-number">4.8.1.</span> <span class="nav-text"> ls列表排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniq去重工具"><span class="nav-number">4.8.2.</span> <span class="nav-text"> uniq去重工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort工具"><span class="nav-number">4.8.3.</span> <span class="nav-text"> sort工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本处理的的特殊应用"><span class="nav-number">4.9.</span> <span class="nav-text"> 文本处理的的特殊应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tac-rev反序输出"><span class="nav-number">4.9.1.</span> <span class="nav-text"> tac、rev反序输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tee整合重定向"><span class="nav-number">4.9.2.</span> <span class="nav-text"> tee整合重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unix2dos与dos2unix转换"><span class="nav-number">4.9.3.</span> <span class="nav-text"> unix2dos与dos2unix转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xargs多参数处理"><span class="nav-number">4.10.</span> <span class="nav-text"> xargs多参数处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多参数的分散处理"><span class="nav-number">4.10.1.</span> <span class="nav-text"> 多参数的分散处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#expect预期交互控制"><span class="nav-number">4.11.</span> <span class="nav-text"> expect预期交互控制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用技巧"><span class="nav-number">5.</span> <span class="nav-text"> 应用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">5.1.</span> <span class="nav-text"> 正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#egrep测试工具"><span class="nav-number">5.1.1.</span> <span class="nav-text"> egrep测试工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本元字符"><span class="nav-number">5.1.2.</span> <span class="nav-text"> 基本元字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk文本过滤"><span class="nav-number">5.2.</span> <span class="nav-text"> awk文本过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sed文本流处理"><span class="nav-number">5.3.</span> <span class="nav-text"> sed文本流处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实战脚本"><span class="nav-number">6.</span> <span class="nav-text"> 实战脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本知识"><span class="nav-number">6.1.</span> <span class="nav-text"> 基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awksed应用实战"><span class="nav-number">6.2.</span> <span class="nav-text"> awk&amp;sed应用实战</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共97.8k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'chetaofeng',
+            repo: 'chetaofeng.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3a517daf6c3ddafc8d92d32fc3499e190849e1b2',
+            
+                client_id: 'cdad0b52d3b0f16bb4ea'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

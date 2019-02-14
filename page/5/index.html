@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-WebPages/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-Java8-特性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-WebPages/" itemprop="url">ASP.NET WebPages学习笔记</a></h2>
+                <a class="post-title-link" href="/2018/11/26/Java-Java8-特性/" itemprop="url">Java8 特性</a></h2>
         
 
         <div class="post-meta">
@@ -355,1587 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T11:37:50+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
-<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/webpages_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/webpages_intro.asp，</a> 为个人学习笔记记录。</p>
-<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>Web Pages 是三种 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 编程模型中的一种，用于创建 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 网站和 web 应用程序。</p>
-<h1 id="布局"><a class="markdownIt-Anchor" href="#布局"></a> 布局</h1>
-<p>在因特网上，您会发现很多拥有统一外观的网站：</p>
-<ul>
-<li>每页拥有相同的页眉</li>
-<li>每页拥有相同的页脚</li>
-<li>每页拥有相同的样式和布局</li>
-</ul>
-<p>可以通过以下方式实现：</p>
-<ol>
-<li>使用 @RenderPage() 方法从不同的文件导入内容</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">@RenderPage("header.cshtml")</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Web Pages<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line">@RenderPage("footer.cshtml")</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>使用布局页面<br>
-布局网页包含网页的结构，而不是内容。当网页（内容页）链接到布局页时，它会根据布局页（模板）来显示。布局页类似普通的网页，但是会在引用内容页的位置调用 @RenderBody() 方法。每个内容页必须以 Layout 指令开头。</li>
-</ol>
-<p>布局页面：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">@RenderBody() </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>任意网页：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@&#123;Layout="Layout.cshtml";&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to W3Schools<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="防止代码泄露"><a class="markdownIt-Anchor" href="#防止代码泄露"></a> 防止代码泄露</h1>
-<p>在 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 中，名称以下划线开头的文件无法通过 web 来浏览。如果您希望禁止用户查看内容块或布局文件，请对文件重新命名,如：_Layout.cshtml</p>
-<h1 id="~-操作符-与-href-方法"><a class="markdownIt-Anchor" href="#~-操作符-与-href-方法"></a> ~ 操作符 与 Href 方法</h1>
-<ul>
-<li>使用 ~ 操作符在编程代码中规定虚拟根目录,作为项目资源路径根路径，如：var myImagesFolder = “~/images”;</li>
-<li>Href 方法把代码中的路径转换为浏览器能够理解的路径（浏览器无法理解 ~ 操作符），如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@&#123;var myStyleSheet = &quot;~/Shared/Site.css&quot;;&#125;</span><br><span class="line">&lt;!-- 创建指向 CSS 文件的链接 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;@Href(myStyleSheet)&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="page对象"><a class="markdownIt-Anchor" href="#page对象"></a> Page对象</h1>
-<p>Page对象为内置对象，类似与JSP中的Request等对象</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>href</td>
-<td>使用指定的参数构建 URL。</td>
-</tr>
-<tr>
-<td>RenderBody()</td>
-<td>在布局页中，将呈现不在指定部分中的内容页部分。</td>
-</tr>
-<tr>
-<td>RenderPage(page)</td>
-<td>在其他页内呈现某一页的内容。</td>
-</tr>
-<tr>
-<td>RenderSection(section)</td>
-<td>在布局页中，将呈现指定部分的内容。</td>
-</tr>
-<tr>
-<td>Write(object)</td>
-<td>将指定的对象作为 HTML 编码的字符串写入。</td>
-</tr>
-<tr>
-<td>WriteLiteral</td>
-<td>无需先对指定的对象进行 HTML 编码，即可将其写入。</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>isPost</td>
-<td>返回一个值（true 或 false），指示客户端用来请求网页的 HTTP 数据传输方法是否为 POST 请求。</td>
-</tr>
-<tr>
-<td>Layout</td>
-<td>获取或设置布局页的路径。</td>
-</tr>
-<tr>
-<td>Page</td>
-<td>提供对页面、布局页和分页之间共享的页数据的类似属性的访问。</td>
-</tr>
-<tr>
-<td>Request</td>
-<td>获得当前 HTTP 请求的 HttpRequest 对象。</td>
-</tr>
-<tr>
-<td>Server</td>
-<td>获取 HttpServerUtility 对象，该对象所提供的方法能够在网页处理过程中使用。</td>
-</tr>
-</tbody>
-</table>
-<h1 id="web-pages帮助器"><a class="markdownIt-Anchor" href="#web-pages帮助器"></a> Web Pages帮助器</h1>
-<p>Web Helpers 极大地简化了 web 开发和常见的编程任务。其内部实现了表格、图表等内容显示的逻辑及样式，进行了特定封装。</p>
-<h1 id="web-pages参考手册"><a class="markdownIt-Anchor" href="#web-pages参考手册"></a> Web Pages参考手册</h1>
-<p><a href="http://www.w3school.com.cn/aspnet/webpages_ref_classes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/webpages_ref_classes.asp</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-ASP-NET/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-ASP-NET/" itemprop="url">ASP.NET简介</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:22:55+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
-<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/index.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/index.asp，</a> 为个人学习笔记记录。</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 是一个开发框架，用于通过 HTML、CSS、JavaScript 以及服务器脚本来构建网页和网站。<br>
-<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 是新一代的 ASP。它无法兼容经典 ASP，但 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 可以引用 ASP。<br>
-当浏览器请求 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件时，<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 引擎读取该文件，编译并执行文件中的脚本，然后以纯 HTML 向浏览器返回结果。<br>
-<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 支持三种开发模式／服务器技术：</p>
-<ul>
-<li>Web Pages：单页面模型</li>
-<li>MVC：模型视图控制器</li>
-<li>Web Forms：事件驱动模型</li>
-</ul>
-<h1 id="aspnet"><a class="markdownIt-Anchor" href="#aspnet"></a> <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件扩展名</h1>
-<ul>
-<li>ASP 文件的文件扩展名是 .asp</li>
-<li><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件的文件扩展名是 .aspx</li>
-<li><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件使用 C# 语法的文件扩展名是 .cshtml</li>
-<li><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件使用 Razor VB 语法的文件扩展名是 .vbhtml</li>
-</ul>
-<h1 id="版本区别"><a class="markdownIt-Anchor" href="#版本区别"></a> 版本区别</h1>
-<ul>
-<li>
-<p><a href="http://xn--2009ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2009年发行ASP.NET</a> MVC 1.0版</p>
-</li>
-<li>
-<p><a href="http://xn--2010ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2010年发行ASP.NET</a> MVC 2.0版，VS2010</p>
-</li>
-<li>
-<p><a href="http://xn--2011ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2011年发行ASP.NET</a> MVC 3.0版+EF4，需要.Net4.0支持，VS2011</p>
-</li>
-<li>
-<p><a href="http://xn--2012ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2012年发行ASP.NET</a> MVC 4.0版+EF5，需要.Net4.0支持，VS2012</p>
-</li>
-<li>
-<p><a href="http://xn--2013ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2013年发行ASP.NET</a> MVC 5.0版+EF6，需要.Net4.5支持，VS2013</p>
-</li>
-<li>
-<p><a href="http://xn--2015ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2015年发行ASP.NET</a> MVC 6.0版+EF7，需要.Net5.0支持，VS2015</p>
-</li>
-<li>
-<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 5.0　　　　　　将改名为　　<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Core 1.0</p>
-</li>
-<li>
-<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> MVC 6　　　　 将改名为　　<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> MVC Core 1.0</p>
-</li>
-<li>
-<p>Entity Framework 7.0    将改名为　　Entity Framework Core 1.0</p>
-</li>
-<li>
-<p>.NET新的跨平台版本将命名为.NET Core 1.0</p>
-</li>
-</ul>
-<h1 id="推荐文章"><a class="markdownIt-Anchor" href="#推荐文章"></a> 推荐文章</h1>
-<p>WebForms vs. MVC： <a href="http://www.cnblogs.com/heyuquan/p/webForms-vs-mvc.html" target="_blank" rel="noopener">http://www.cnblogs.com/heyuquan/p/webForms-vs-mvc.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-Windows下SVN服务器搭建及VS2015插件安装联动/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-Windows下SVN服务器搭建及VS2015插件安装联动/" itemprop="url">Windows下SVN服务器搭建及VS2015插件安装联动</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:06:35+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>SVN服务端软件下载：<a href="https://www.visualsvn.com/server/download/" target="_blank" rel="noopener">https://www.visualsvn.com/server/download/</a><br>
-VisualSVN-Server-3.9.1-x64以管理员权限（有的话）安装,一路默认，选择standard版本,其他都是默认</p>
-<p>SVN客户端软件下载：<a href="https://www.visualsvn.com/visualsvn/download/tortoisesvn/" target="_blank" rel="noopener">https://www.visualsvn.com/visualsvn/download/tortoisesvn/</a><br>
-默认安装</p>
-<p>VS2015插件下载： <a href="https://www.visualsvn.com/visualsvn/download/" target="_blank" rel="noopener">https://www.visualsvn.com/visualsvn/download/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/CI-Jekins/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/CI-Jekins/" itemprop="url">Jenkins</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:04:03+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="jenkins"><a class="markdownIt-Anchor" href="#jenkins"></a> Jenkins</h1>
-<p>官网下载：<a href="https://jenkins.io/download/" target="_blank" rel="noopener">https://jenkins.io/download/</a> ,注意下载的版本要与jdk的版本对应</p>
-<blockquote>
-<p>Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作</p>
-</blockquote>
-<ul>
-<li>持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成到主干，并进程自动化测试</li>
-<li>持续交付：指的是在持续集成的环境基础之上，将代码部署到预生产环境</li>
-<li>持续部署：在持续交付的基础上，把部署到生产环境的过程自动化，持续部署和持续交付的区别就是最终部署到生产环境是自动化的</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/数据库-2018-10-05-MySQL安装-Windows/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/数据库-2018-10-05-MySQL安装-Windows/" itemprop="url">MySQL安装_Windows</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:04:03+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>下载页面：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p>
-<ul>
-<li>选择&quot;Microsoft Windows&quot;,下载免安装版的zip文件;</li>
-<li>将zip文件解压到本地</li>
-<li>新建一个配置文件（my.ini）用于配置字符集、端口等信息，用以覆盖原始的配置文件（my-default.ini），当然也可以修改这个默认的配置文件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"> # 设置mysql客户端默认字符集</span><br><span class="line"> default-character-set=utf8 </span><br><span class="line"> [mysqld]</span><br><span class="line"> #设置3306端口</span><br><span class="line"> port = 3306 </span><br><span class="line"> # 设置mysql的安装目录</span><br><span class="line"></span><br><span class="line"> basedir=D:\\softwares\\mysql-5.7.14-winx64</span><br><span class="line"> # 设置mysql数据库的数据的存放目录</span><br><span class="line"> datadir=D:\\softwares\\mysql-5.7.14-winx64\\data</span><br><span class="line"></span><br><span class="line"> # 允许最大连接数</span><br><span class="line"> max_connections=200</span><br><span class="line"> # 服务端使用的字符集默认为UTF8</span><br><span class="line"> character-set-server=utf8</span><br><span class="line"> # 创建新表时将使用的默认存储引擎</span><br><span class="line"> default-storage-engine=INNODB</span><br></pre></td></tr></table></figure>
-<p>输入cmd，以管理员身份运行控制台</p>
-<p>S C:\Windows\system32&gt; cd<br>
-S C:\Windows\system32&gt; cd …<br>
-S C:\Windows&gt; cd …<br>
-S C:&gt; cd .\mysql-8.0.12-winx64<br>
-S C:\mysql-8.0.12-winx64&gt; cd .\bin\</p>
-<p>S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe -install<br>
-ervice successfully installed.<br>
-S C:\mysql-8.0.12-winx64\bin&gt; net start mysql<br>
-ySQL 服务正在启动 .<br>
-ySQL 服务无法启动。</p>
-<p>服务没有报告任何错误。</p>
-<p>请键入 NET HELPMSG 3534 以获得更多的帮助。</p>
-<p>S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe -remove<br>
-ervice successfully removed.<br>
-S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe --initialize<br>
-S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe -install<br>
-ervice successfully installed.<br>
-S C:\mysql-8.0.12-winx64\bin&gt; net start mysql<br>
-ySQL 服务正在启动 .<br>
-ySQL 服务已经启动成功。</p>
-<p>S C:\mysql-8.0.12-winx64\bin&gt; .\mysqladmin.exe -u root password “axn7Og=ve;+2”<br>
-ysqladmin: connect to server at ‘localhost’ failed</p>
-<p>alter user user() identified by “root”;<br>
-alter user user() identified by “新密码”;</p>
-<p>mysql -u root -p</p>
-<p>ysql&gt; use mysql<br>
-atabase changed<br>
-ysql&gt; ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘root’;<br>
-uery OK, 0 rows affected (0.04 sec)</p>
-<p>ysql&gt; flush privileges;<br>
-uery OK, 0 rows affected (0.00 sec)</p>
-<p>use mysql</p>
-<p>4.ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘root’;</p>
-<p>5.flush privileges;</p>
-<p>6.可以用navicat登陆了</p>
-<p><a href="https://www.cnblogs.com/anstoner/p/6414440.html" target="_blank" rel="noopener">https://www.cnblogs.com/anstoner/p/6414440.html</a></p>
-<p>net stop mysql</p>
-<p><a href="https://blog.csdn.net/czhilovely/article/details/80360146" target="_blank" rel="noopener">https://blog.csdn.net/czhilovely/article/details/80360146</a></p>
-<p><a href="https://blog.csdn.net/qq_42923798/article/details/81540122" target="_blank" rel="noopener">https://blog.csdn.net/qq_42923798/article/details/81540122</a></p>
-<p><a href="https://blog.csdn.net/u012561176/article/details/78557320" target="_blank" rel="noopener">https://blog.csdn.net/u012561176/article/details/78557320</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/04/环境搭建-10-hexo安装配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/04/环境搭建-10-hexo安装配置/" itemprop="url">hexo使用速记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T22:10:23+08:00">
-                2018-10-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详细学习请参考：<a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs</a> 。<br>
-本文章只是个人使用过程中重点内容记录。</p>
-<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
-<p>前置安装：node，git<br>
-安装：npm install -g hexo-cli</p>
-<h1 id="初始化项目"><a class="markdownIt-Anchor" href="#初始化项目"></a> 初始化项目</h1>
-<ol>
-<li>mkdir [项目名称, 如：test]</li>
-<li>hexo init [项目名称, 如：test] //此处要求文件夹内为空</li>
-<li>cd [项目名称, 如：test]</li>
-<li>npm install</li>
-</ol>
-<h1 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h1>
-<ul>
-<li>hexo new [layout] ‘【文章名称】’    //创建不通类型文章</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">laytou及路径如下：</span><br><span class="line">post	source/_posts</span><br><span class="line">page	source</span><br><span class="line">draft	source/_drafts</span><br></pre></td></tr></table></figure>
-<ul>
-<li>hexo clean    //清除hexo生成静态网站内容</li>
-<li>hexo g        //生成hexo静态网站</li>
-<li>hexo s        //启用hexo服务</li>
-<li>hexo d        //hexo网站部署，配合hexo-deployer-git插件使用</li>
-<li>hexo version  //hexo相关软件版本</li>
-<li>hexo list [type] //type:post,page等</li>
-</ul>
-<h1 id="front-matter和json-front-matter"><a class="markdownIt-Anchor" href="#front-matter和json-front-matter"></a> Front-matter和JSON Front-matter</h1>
-<p>用来设定文章的一些参数，如是否添加密码、版权、标签、分类等信息。</p>
-<ul>
-<li>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，基于YAML</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<ul>
-<li>JSON Front-matter 使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;title&quot;: &quot;Hello World&quot;,</span><br><span class="line">&quot;date&quot;: &quot;2013/7/13 20:46:25&quot;</span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
-<p>可配置参数如下：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-<td></td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td></td>
-</tr>
-<tr>
-<td>date</td>
-<td>建立日期</td>
-<td>文件建立日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-<td>文件更新日期</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>开启文章的评论功能</td>
-<td>true</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>标签（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>categories</td>
-<td>分类（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td>permalink</td>
-<td>覆盖文章网址</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>可以通过直接修改scaffolds内的模版来设定统一的文章额外信息，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">  - </span><br><span class="line">  - </span><br><span class="line">categories: </span><br><span class="line">password: </span><br><span class="line">copyright: true</span><br><span class="line">comments: true</span><br><span class="line">toc: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h1 id="部署"><a class="markdownIt-Anchor" href="#部署"></a> 部署</h1>
-<ul>
-<li>安装 hexo-deployer-git：npm install hexo-deployer-git --save</li>
-<li>配置hexo的_config.yml文件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://[XXX]@github.com/[XXX]/[XXX].github.io  //库（Repository）地址,如：https://epaypad@github.com/epaypad/epaypad.github.io</span><br><span class="line">  branch: master    //分支名称</span><br><span class="line">  message: https://github.com/chetaofeng/MyHexoBlogSource 内容部署 &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125; //自定义提交信息</span><br></pre></td></tr></table></figure>
-<ul>
-<li>hexo d //命令执行后，稍等一会查看部署结果</li>
-</ul>
-<h1 id="hexo主题"><a class="markdownIt-Anchor" href="#hexo主题"></a> hexo主题</h1>
-<p>hexo默认主题为landscape，大家可以根据各自需要使用不通主题。<br>
-本人使用的是NexT主题，使用请参考：<a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">http://theme-next.iissnan.com</a> ，NexT更多配置，请参考：<br>
-<a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">https://www.jianshu.com/p/1f8107a8778c</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/04/环境搭建-11-VirturalBox安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/04/环境搭建-11-VirturalBox安装/" itemprop="url">VirtualBox安装</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T22:10:23+08:00">
-                2018-10-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://jingyan.baidu.com/article/36d6ed1f821ca21bcf4883da.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/36d6ed1f821ca21bcf4883da.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/04/环境搭建-11-MySQL安装配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/04/环境搭建-11-MySQL安装配置/" itemprop="url">MySQL安装配置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T22:10:23+08:00">
-                2018-10-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>下载地址：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a><br>
-官方数据客户端工具： <a href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/workbench/</a><br>
-推荐客户端工具：Navicat Premium- <a href="https://www.navicat.com/en/download/navicat-premium" target="_blank" rel="noopener">https://www.navicat.com/en/download/navicat-premium</a></p>
-<h1 id="安装登陆"><a class="markdownIt-Anchor" href="#安装登陆"></a> 安装登陆</h1>
-<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
-<ol>
-<li>安装dmg安装包，如：mysql-5.7.8-rc-osx10.9-x86_64.dmg，安装过程中会弹出临时的密码，务必截图保存方便后面更改密码，安装过程有时会卡顿，时间会比较长，需耐心等待一会。</li>
-<li>在【系统偏好设置】中启动MySQL服务，如果启动不起来，可选择开机启动，然后重启macOS</li>
-<li>在MySQLWorkBench中，创建连接信息,hostname-127.0.0.1或localhost，端口3307</li>
-<li>点击&quot;Store in Keychain…&quot;输入安装时提示的临时密码后确定</li>
-<li>如果临时密码输入正确，则会弹出修改密码界面，修改密码后重新登陆即可</li>
-</ol>
-<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
-<p>Linux下安装有多种方式：</p>
-<ol>
-<li>直接用软件仓库自动安装（如：ubuntu下，sudo apt-get install mysql-server）</li>
-<li>通过下载deb或rmp安装包，直接双击安装</li>
-<li>下载tar安装包，解压到硬盘，然后自己配置mysql</li>
-<li>通过源码编译安装</li>
-</ol>
-<p>以下以tar包安装记录:参考文章（<a href="http://www.pianshen.com/article/975954037/%EF%BC%89" target="_blank" rel="noopener">http://www.pianshen.com/article/975954037/）</a></p>
-<ol>
-<li>sudo cp mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz /usr</li>
-<li>cd /usr</li>
-<li>sudo tar xvJf mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz</li>
-<li>为MySQL创建专用用户，用户名为mysql，用户组为mysql；<br>
-sudo groupadd mysql //创建组<br>
-sudo useradd -r -g mysql mysql //创建用户并划入mysql组下</li>
-<li>为解压出来的所有文件更改用户和组<br>
-sudo chown -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改拥有者<br>
-sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
-<li>sudo apt-get install libaio1 libaio-dev</li>
-<li>初始化数据库: sudo ./bin/mysqld --initialize --user mysql<br>
-执行过程中会生成一个临时密码，一定要保存好，后面修改密码需要用到，如图：<br>
-<img src="/pub-images/mysql.png" alt="image"></li>
-<li>开启服务: bin/mysqld_safe --user=mysql &amp;</li>
-<li>使用用户root登录: bin/mysql -uroot -p</li>
-<li>更改root用户密码:</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;root&apos; PASSWORD EXPIRE NEVER;   //修改root的密码与加密方式</span><br><span class="line">use mysql; #切换到mysql库 </span><br><span class="line">update user set host=&apos;%&apos; where user=&apos;root&apos;; //更改可以登录的IP为任意IP</span><br><span class="line">ALTER user &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;  //再次更改root用户密码，使其可以在任意IP访问</span><br><span class="line">flush privileges; #刷新权限</span><br></pre></td></tr></table></figure>
-<ol start="11">
-<li>通过客户端测试登陆即可</li>
-</ol>
-<h1 id="navicat安装"><a class="markdownIt-Anchor" href="#navicat安装"></a> Navicat安装</h1>
-<h2 id="linux"><a class="markdownIt-Anchor" href="#linux"></a> Linux</h2>
-<ol>
-<li>进入安装包所在目录下，如：navicat_premium12_cs_x64_for_linux.zip</li>
-<li>sudo cp navicat_premium12_cs_x64_for_linux.zip /usr/</li>
-<li>cd /usr/</li>
-<li>sudo unzip navicat_premium12_cs_x64_for_linux.zip</li>
-<li>cd navicat120_premium_cs_x64</li>
-<li>命令行启动：sudo ./start_navicat，正常的话应该会出现一个Win Mono下载界面，可不下载，跳过即可</li>
-</ol>
-<h2 id="windows-macos"><a class="markdownIt-Anchor" href="#windows-macos"></a> Windows &amp; macOS</h2>
-<p>直接下载安装就行，破解请自行查找</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/02/android-RxJava/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/02/android-RxJava/" itemprop="url">RxJava从源码到应用移动端开发效率秒提速</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-02T22:10:23+08:00">
-                2018-10-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
+                2018-11-26
               </time>
             
 
@@ -1996,18 +417,29 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
       
         
           
-            <h1 id="响应式编程思想概述"><a class="markdownIt-Anchor" href="#响应式编程思想概述"></a> 响应式编程思想概述</h1>
-<ul>
-<li>响应式编程：是一种面向数据流和变化传播的编程范式</li>
-<li>数据流：只能以事先规定好的顺序被读取一次的数据的一个序列</li>
-<li>变化传播：类似观察者模式，变化了要通知别人</li>
-</ul>
-<h1 id="rxjava源码分析"><a class="markdownIt-Anchor" href="#rxjava源码分析"></a> RxJava源码分析</h1>
-<h2 id="基本元素"><a class="markdownIt-Anchor" href="#基本元素"></a> 基本元素</h2>
-<p>RxJava是一个基于回调的异步的库，是一个基于事件分发和消息传递的库</p>
-<h2 id="operator操作符变换原理"><a class="markdownIt-Anchor" href="#operator操作符变换原理"></a> Operator操作符变换原理</h2>
-<h2 id="scheduler线程变换原理"><a class="markdownIt-Anchor" href="#scheduler线程变换原理"></a> Scheduler线程变换原理</h2>
-<h2 id="整体变换compose和transformer原理"><a class="markdownIt-Anchor" href="#整体变换compose和transformer原理"></a> 整体变换compose和transformer原理</h2>
+            <p>[toc]</p>
+<h1 id="sam接口"><a class="markdownIt-Anchor" href="#sam接口"></a> SAM接口</h1>
+<p>Java8中增加了一个新的包：java.util.function，它里面包含了常用的函数式接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Predicate&lt;T&gt;——接收T对象并返回boolean</span><br><span class="line">Consumer&lt;T&gt;——接收T对象，不返回值</span><br><span class="line">Function&lt;T, R&gt;——接收T对象，返回R对象</span><br><span class="line">Supplier&lt;T&gt;——提供T对象（例如工厂），不接收值</span><br><span class="line">UnaryOperator&lt;T&gt;——接收T对象，返回T对象</span><br><span class="line">BinaryOperator&lt;T&gt;——接收两个T对象，返回T对象</span><br></pre></td></tr></table></figure>
+<h1 id="lambda表达式"><a class="markdownIt-Anchor" href="#lambda表达式"></a> lambda表达式</h1>
+<p>参考：<a href="http://note.youdao.com/noteshare?id=3bc7675e64b86f5e9b75534c0e436694" target="_blank" rel="noopener">http://note.youdao.com/noteshare?id=3bc7675e64b86f5e9b75534c0e436694</a></p>
+<h1 id="方法引用和构造器引用"><a class="markdownIt-Anchor" href="#方法引用和构造器引用"></a> 方法引用和构造器引用</h1>
+<h2 id="方法引用"><a class="markdownIt-Anchor" href="#方法引用"></a> 方法引用</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">objectName::instanceMethod</span><br><span class="line"></span><br><span class="line">ClassName::staticMethod</span><br><span class="line"></span><br><span class="line">ClassName::instanceMethod</span><br></pre></td></tr></table></figure>
+<ol>
+<li>前两种方式类似，等同于把lambda表达式的参数直接当成instanceMethod|staticMethod的参数来调用</li>
+<li>最后一种方式，等同于把lambda表达式的第一个参数当成instanceMethod的目标对象，其他剩余参数当成该方法的参数</li>
+</ol>
+<h2 id="构造器引用"><a class="markdownIt-Anchor" href="#构造器引用"></a> 构造器引用</h2>
+<p>构造器引用语法如下：ClassName::new，把lambda表达式的参数当成ClassName构造器的参数 。例如BigDecimal::new等同于x-&gt;new BigDecimal(x)</p>
+<h1 id="stream语法"><a class="markdownIt-Anchor" href="#stream语法"></a> Stream语法</h1>
+<p>stream就是JAVA8提供给我们的对于元素集合统一、快速、并行操作的一种方式。<br>
+它能充分运用多核的优势，以及配合lambda表达式、链式结构对集合等进行许多有用的操作</p>
+<ol>
+<li>Stream是元素的集合，这点让Stream看起来用些类似Iterator,可以把Stream当成一个装饰后的Iterator；</li>
+<li>可以支持顺序和并行的对原Stream进行汇聚的操作；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; nums = Lists.newArrayList(1,null,3,4,null,6);</span><br><span class="line">nums.stream().filter(num -&gt; num != null).count();</span><br></pre></td></tr></table></figure>
 
           
         
@@ -2065,7 +497,7 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/02/环境搭建-2018-10-02-GithubPages/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-SpringBoot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -2084,7 +516,7 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/02/环境搭建-2018-10-02-GithubPages/" itemprop="url">使用Github Pages进行个人博客搭建</a></h2>
+                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-SpringBoot/" itemprop="url">SpringBoot</a></h2>
         
 
         <div class="post-meta">
@@ -2096,8 +528,8 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-02T22:10:23+08:00">
-                2018-10-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T14:41:51+08:00">
+                2018-11-26
               </time>
             
 
@@ -2119,8 +551,8 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
                   </a>
                 </span>
 
@@ -2158,30 +590,1812 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
       
         
           
-            <h1 id="github-pages介绍"><a class="markdownIt-Anchor" href="#github-pages介绍"></a> Github Pages介绍</h1>
-<p>官网：<a href="https://pages.github.com/" target="_blank" rel="noopener">https://pages.github.com/</a><br>
-GitHub Pages 是一个静态网站托管服务，使用github.io域名和HTTPS来提供服务。一个github账号只能有一个Github Pages网站。<br>
-GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有的。如果你敏感的数据在你的Page库中，你可能需要在发布之前删除它。</p>
-<h1 id="github-pages创建"><a class="markdownIt-Anchor" href="#github-pages创建"></a> Github Pages创建</h1>
+            <p><a href="http://spring.io/" target="_blank" rel="noopener">http://spring.io/</a></p>
+<p><a href="https://www.imooc.com/video/16358" target="_blank" rel="noopener">https://www.imooc.com/video/16358</a></p>
+<p>英文文档：<a href="https://docs.spring.io/spring-boot/docs/current/reference/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/</a></p>
+<p>Spring Framework是一种JavaEE的框架<br>
+Spring Boot是一种快速构建的Spring应用<br>
+Spring Cloud是构建SpringBoot的分布式应用</p>
+<p>SpringBoot2.0<br>
+编程语言：Java 8+，Kotlin，底层框架：SpringFramework 5.0.X,支持Web Flux</p>
+<p>Web Flux</p>
 <ol>
-<li>申请邮箱</li>
-<li>申请github账号</li>
+<li>支持函数编程，Java 8 Lambda</li>
+<li>响应式编程,Reactive Streams</li>
+<li>异步编程，Servlet3.1和Asyc NIO</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前两步是为了准备没有进行Github Pages服务开通的github账号，如果已经有，可以跳过</span><br></pre></td></tr></table></figure>
+<p>InteliJ中配置Java和Maven</p>
+<p>构建项目：<br>
+图形化方式<br>
+1 <a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a> ，输入选择Reactive Web<br>
+2 导入项目<br>
+命令行方式（Maven）<br>
+mvn archetype:generate -DinteractiveMode=false -DgroupId=com.test -DartifactId=first-app-by-maven -Dversion=1.0.0-SNAPSHOT<br>
+添加<br>
+<parent><br>
+<groupid>org.springframework.boot</groupid><br>
+<artifactid>spring-boot-starter-parent</artifactid><br>
+<version>1.5.9.RELEASE</version><br>
+<relativepath><br>
+</relativepath></parent></p>
+<dependencies>
+    <dependency>
+        <groupid>org.springframework.boot</groupid>
+        <artifactid>spring-boot-starter-web</artifactid>
+    </dependency>
+</dependencies>
+<p>取消Junit的版本，需要4.1.2以上，取掉之后spring-boot-starter-parent继承版本</p>
+<hr>
+<p>父Module的packaging设置为pom</p>
+<p>打包方式<br>
+Jar包方式<br>
+War包方式<br>
+指定Main-class方式</p>
+<plugin>
+  <groupid>org.springframework.boot</groupid>
+  <artifactid>spring-boot-maven-plugin</artifactid>
+  <version>1.5.4.RELEASE</version>
+  <configuration>
+    <mainclass>${start-class}</mainclass>
+    <layout>ZIP</layout>
+  </configuration>
+  <executions>
+    <execution>
+      <goals>
+        <goal>repackage</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin> 
+<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html</a></p>
+<p>jar包形式<br>
+mvn -Dmaven.test.skip -U clean package<br>
+java -jar [jar名称.jar]</p>
+<p>war包形式，需要有webapp-&gt;WEB-INF-&gt;web.xml<br>
+java -jar [war名称.war]</p>
+<p>运行模式<br>
+IDEA方式<br>
+Jar／War方式<br>
+Maven插件方式：<br>
+mvn srping-boot:run//需要在Main方法module，使用前，需要在父Module mvn -Dmaven.test.skip -U clean install<br>
+<a href="https://blog.csdn.net/taiyangdao/article/details/75303181" target="_blank" rel="noopener">https://blog.csdn.net/taiyangdao/article/details/75303181</a></p>
+<p>ConcurrentHashMap  <a href="http://www.importnew.com/28263.html" target="_blank" rel="noopener">http://www.importnew.com/28263.html</a>  <a href="https://www.cnblogs.com/heyonggang/p/9112731.html" target="_blank" rel="noopener">https://www.cnblogs.com/heyonggang/p/9112731.html</a><br>
+AtomicInteger <a href="https://www.cnblogs.com/sharkli/p/5623524.html" target="_blank" rel="noopener">https://www.cnblogs.com/sharkli/p/5623524.html</a><br>
+好的习惯，实体都实现toString()方法</p>
+<p>Flux &amp; Mono<br>
+Flux：0到N个对象的集合<br>
+Mono：0到1个对象的集合<br>
+Reactive中的Flux和Mono是异步处理的，都是Publisher</p>
+<p><a href="https://www.imooc.com/learn/1058" target="_blank" rel="noopener">https://www.imooc.com/learn/1058</a><br>
+组件自动装配：规约大于配置，专注核心业务<br>
+外部化部署：一次构建、按需调配，到处运行<br>
+嵌入式容器：内置容器、无需部署、独立运行<br>
+SpringBoot Starter:简化依赖、按需装配、自我包含<br>
+Production-Ready：一站式运维、生态无缝整合</p>
+<p>Java 能长盛不衰，主要是命好。每当人们觉得 Java 不行了的时候，总会有英雄横刀救美。<br>
+最初 Java 开发出来不知道有什么用的时候，发现可以用 Applet 在网页上做动画。后来企业级软件开发时代 JavaEE 大行其道，开源社区 Spring 桃李满天下。<br>
+等到了移动时代，人们觉得 Java 要完蛋了，Google 拍马救市，收购并开放了 Android 平台，当家语言就是 Java，于是 Java 再次焕发勃勃生机。<br>
+目前大数据领域，Java 同样是当仁不让的好手。</p>
+<p>现在 Spring Framework 那套东西使用了十几年，正当大家被长达几千行的 ApplicationContext 配置文件折磨的死去活来的时候，Spring Boot 诞生了。什么是 Spring Boot？用来简化 Spring 应用程序开发的。</p>
+<p>换句话说就是，当你觉得 Java 不好用的时候，我做了个轻量级的 S，让你好好用 Java。等你觉的 S 也不够轻了，我做了个 SB，让你觉得 S 还是挺轻的。</p>
+<p><a href="https://www.imooc.com/video/16783" target="_blank" rel="noopener">https://www.imooc.com/video/16783</a><br>
+SrpingBoot为微服务框架，与Spring4一起诞生</p>
+<p><a href="https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/02/C-开发-2018-11-02-NuGet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/02/C-开发-2018-11-02-NuGet/" itemprop="url">NuGet</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T10:44:02+08:00">
+                2018-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.cnblogs.com/nizhenghua/p/6422078.html" target="_blank" rel="noopener">https://www.cnblogs.com/nizhenghua/p/6422078.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-ECMAScript规范/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-ECMAScript规范/" itemprop="url">ECMAScript规范</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>ECMAScript 6（简称ES6）是JavaScript语言的下一代标准，于2015年6月正式发布，也称ECMAScript 2015。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考资料</span><br><span class="line">《ECMAScript 6 入门》： http://es6.ruanyifeng.com/</span><br></pre></td></tr></table></figure>
+<p>ECMA是标准，js是实现</p>
+<p>[toc]</p>
+<h3 id="历史"><a class="markdownIt-Anchor" href="#历史"></a> 历史</h3>
+<ul>
+<li>1996    ES1.0   js稳定，Netscapte将js提交给ECMA组织，ES正式出现</li>
+<li>1998  ES2.0   ES2.0正式发布</li>
+<li>1999  ES3.0   ES3被浏览器广泛支持</li>
+<li>2007  ES4.0   ES4过于激进，被废除了</li>
+<li>2008  ES3.1   4.0退化为严重缩水版3.1，代号Harmony（和谐）</li>
+<li>2009  ES5.0   ES5正式发布了，公布了JS.next，即后来的ES6.0</li>
+<li>2011  ES5.1   ES5.1成为了ISO国际标准</li>
+<li>2013.3  ES6.0   制定草案</li>
+<li>2013.12   ES6.0   ES6.0草案发布</li>
+<li>2015.6    ES6.0   ES6.0预计发布正式版，同时JS.next指向ES7.0</li>
+</ul>
+<h3 id="兼容性"><a class="markdownIt-Anchor" href="#兼容性"></a> 兼容性</h3>
+<blockquote>
+<p>目前ES5、ES6支持还可以，凑合；ES5、ES6逐渐沦为后台语言</p>
+</blockquote>
+<blockquote>
+<p>在浏览器中使用需要用到编译工具，babel／traceur（由google出的编译器，把ES6语法编译成ES5）</p>
+</blockquote>
+<h3 id="使用的三种方式"><a class="markdownIt-Anchor" href="#使用的三种方式"></a> 使用的三种方式</h3>
+<ol>
+<li>网页内直接使用</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;traceur.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;module&quot;&gt;</span><br><span class="line">    //此出写ES6代码</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>直接在线编译（主要用于测试）</li>
+</ol>
+<ul>
+<li><a href="http://babeljs.io/repl/" target="_blank" rel="noopener">http://babeljs.io/repl/</a></li>
+<li><a href="https://google.github.io/traceur-compiler/demo/repl.html" target="_blank" rel="noopener">https://google.github.io/traceur-compiler/demo/repl.html</a></li>
+</ul>
 <ol start="3">
-<li>创建repository。和普通创建一样，但是名称要以&quot;.github.io&quot;结尾，如：<a href="http://test.github.io" target="_blank" rel="noopener">test.github.io</a>，这样创建完之后才在这个项目的settings中有github pages选项</li>
-<li>访问：<a href="https://test.github.io/,%E5%8D%B3%E5%8F%AF%E4%BB%A5%E7%9C%8B%E8%A7%81Github" target="_blank" rel="noopener">https://test.github.io/,即可以看见Github</a> Pages网站</li>
+<li>直接在node中使用</li>
 </ol>
-<h1 id="github-pages网站内容编辑"><a class="markdownIt-Anchor" href="#github-pages网站内容编辑"></a> Github Pages网站内容编辑</h1>
+<ul>
+<li>直接用，需添加‘use strict’</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//test.js</span><br><span class="line">&apos;use strict&apos;</span><br><span class="line">let a=2;</span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure>
+<p>node test.js</p>
+<ul>
+<li>node --harmony_desctructuring test.js</li>
+</ul>
+<h3 id="新增功能"><a class="markdownIt-Anchor" href="#新增功能"></a> 新增功能</h3>
+<h4 id="定义变量-let"><a class="markdownIt-Anchor" href="#定义变量-let"></a> 定义变量 let</h4>
+<ul>
+<li>let定义的变量只能在代码块中使用，具备块级作用域；var具备函数级作用域；</li>
+<li>块级作用域其实就是匿名函数立即调用</li>
+<li>变量不能重复定义</li>
+<li>可用于封闭空间;封闭空间可解决i问题<br>
+以前：<br>
+(function(i){<br>
+var a=12;<br>
+})(i);<br>
+现在：<br>
+{<br>
+let  a=12;<br>
+}</li>
+</ul>
+<h4 id="定义常量-const"><a class="markdownIt-Anchor" href="#定义常量-const"></a> 定义常量 const</h4>
+<p>定义后则不能修改</p>
+<h4 id="字符串连接"><a class="markdownIt-Anchor" href="#字符串连接"></a> 字符串连接</h4>
+<p>==反单引号==：==``==,内容模版,==${变量名}填充模版==</p>
+<h4 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值"></a> 解构赋值</h4>
+<ul>
+<li>var [a,b,c]=[12,5,101];解析结构，给a、b、c都赋值；</li>
+<li>json格式（通过名称匹配，与顺序无关）也支持</li>
+<li>==模式匹配==：var [a,[b,c],d] =[12,[3,2],101],左侧的样子需要和右侧一样</li>
+<li>可==以给默认值==。var {time=12,date} ={data=123}</li>
+</ul>
+<h4 id="复制数组"><a class="markdownIt-Anchor" href="#复制数组"></a> 复制数组</h4>
+<p>数组赋值为引用赋值，复制以前用for循环🔥 Array.from()函数，现在使用==超引用’…’==, var arr2 = […arr1]; 在函数中通过 …args 接收多个参数</p>
+<h4 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h4>
+<p>以前是for或for in，现在：for of，支持数组、json、map</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//i表示数组或者json的值，for in中i是下标，for of中表示key+value，实质是jsonObj.entrys(),类似的还有jsonObj.keys()、jsonObj.values()</span><br><span class="line">for(var i of arr)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="map操作"><a class="markdownIt-Anchor" href="#map操作"></a> map操作</h4>
+<p>get()\set()\delete()</p>
+<h4 id="箭头函数"><a class="markdownIt-Anchor" href="#箭头函数"></a> 箭头函数  =&gt;</h4>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>this问题  //this指向了window对象</li>
+<li>arguments不能使用，箭头函数没有自己的 arguments</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123; </span><br><span class="line">  var f = (...args) =&gt; args[0]; </span><br><span class="line">  return f(2); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(1); // 2</span><br></pre></td></tr></table></figure>
+<p>更多：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a></p>
+<h4 id="对象语法简洁化"><a class="markdownIt-Anchor" href="#对象语法简洁化"></a> 对象语法简洁化</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//以前</span><br><span class="line">var person=&#123;</span><br><span class="line">    name:&apos;abc&apos;,</span><br><span class="line">    age:100,</span><br><span class="line">    showName:function()&#123;</span><br><span class="line">        alert(this.name);       //this有问题</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">var name=&apos;abc&apos;;</span><br><span class="line">var age =100;</span><br><span class="line">var person=&#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    showName()&#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//以前面向对象</span><br><span class="line">function Person(name,age)&#123;  //类和构造函数一体</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.showName=function()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;</span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//ES6面向对象</span><br><span class="line">class Person&#123;</span><br><span class="line">    constructor(name=&apos;defalut&apos;,age=0)&#123;  //此处可以设置默认值，这是函数的功能，即：函数参数可以给默认值</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    showName()&#123;</span><br><span class="line">        return this.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);     </span><br><span class="line">alert(p1.showName());</span><br></pre></td></tr></table></figure>
+<p>继承</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//以前  子类.prototype = new 父类();</span><br><span class="line">function Worker(name,age)&#123;</span><br><span class="line">    Person.apply(this,arguments);</span><br><span class="line">&#125;</span><br><span class="line">Worker.prototype=new Person();</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">class Woker extends Person&#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        super();    //调用父级构造</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="es5-thisbind"><a class="markdownIt-Anchor" href="#es5-thisbind"></a> ES5:  this.bind();</h4>
+<h4 id="模块化"><a class="markdownIt-Anchor" href="#模块化"></a> 模块化</h4>
+<blockquote>
+<p>当前使用模块化必须引入traceur和bootstrap，type必须写成module</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//定义</span><br><span class="line">export default &#123;a,b&#125;</span><br><span class="line">//引用</span><br><span class="line">import modA from &apos;./a.js&apos;;</span><br><span class="line">//使用</span><br><span class="line">var sum = modA.a + modA.b</span><br></pre></td></tr></table></figure>
+<h4 id="promise"><a class="markdownIt-Anchor" href="#promise"></a> Promise</h4>
+<blockquote>
+<p>本身为一个对象，用来传递异步操作的数据</p>
+</blockquote>
+<blockquote>
+<p>整体是链式操作</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pending(等待、处理中)  ---&gt; Resolve（完成）   </span><br><span class="line">                     ---&gt; Reject  (拒绝)</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var p1 = new Promise(function(resolve,reject)&#123;</span><br><span class="line">    if(异步处理成功了)</span><br><span class="line">        resolve(成功数据)</span><br><span class="line">    else</span><br><span class="line">        reject(失败原因)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>包含方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">所有方法都支持链式编程</span><br><span class="line">*  then(成功(resolve数据),失败（reject数据）)  //此方法可以防止异步编程括号深度太多的的问题</span><br><span class="line">*  catch（function（e）&#123;&#125;）；    // 用来捕获错误</span><br><span class="line">*  all[p1,p2,p3....]  //用于将多个promise对象组合／包装成一个全新的promise对象,数组中的Promise又一个错误则按错误流程走，所有都成功则按成功流程走</span><br><span class="line">*  Promise.race([p1,p2....]).then(function(value)&#123;&#125;); //返回最先执行的Promise的结果</span><br><span class="line">*  Promise.reject()         //生成错误的Promise</span><br><span class="line">*  Promise.resolve()        //生成成功的Promise</span><br></pre></td></tr></table></figure>
+<h4 id="generatoryield"><a class="markdownIt-Anchor" href="#generatoryield"></a> Generator+yield</h4>
+<blockquote>
+<p>Generator:生成器，是一个函数，可以遍历</p>
+</blockquote>
+<ul>
+<li>Generator函数名字前有*</li>
+<li>Generator函数内部使用yield语句</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//普通函数</span><br><span class="line">function show()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">function* show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">*show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var res=show();</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;Hello&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;World&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;undefined&quot;,done:true&#125;</span><br><span class="line">~~~ </span><br><span class="line">* Generator函数调用后的对象有next方法</span><br><span class="line">* next方法每次返回一个value和done结果，value位yield后面的值，done代表是否遍历结束</span><br><span class="line">* yield语句本身没有返回值或每次返回undefined</span><br><span class="line">* next可以带参数，所带参数给了上一个yield</span><br><span class="line">* for ...of循环支持Generator函数</span><br></pre></td></tr></table></figure>
+<p>for (let v of show()){<br>
+document.write(v);<br>
+}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 展开运算符</span><br><span class="line"> 扩展语法允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组文本）或多个变量（用于解构赋值）的位置扩展</span><br><span class="line">1. 用于函数调用</span><br></pre></td></tr></table></figure>
+<p>myFunction(…iterableObj);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 用于数组字面量</span><br></pre></td></tr></table></figure>
+<p>[…iterableObj, 4, 5, 6]</p>
+<pre class="highlight"><code class="">
+ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Ant-Design-of-React-dva入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-Ant-Design-of-React-dva入门/" itemprop="url">Ant Design of React+dva入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>是 Ant Design 的 React 实现，开发和服务于企业级后台产品</p>
+<h1 id="安装使用antd"><a class="markdownIt-Anchor" href="#安装使用antd"></a> 安装使用Antd</h1>
 <ol>
-<li>创建源码repository，用来存放Github Pages网站源码</li>
-<li>此处选用Hexo作为网站模版，在本地初始化hexo项目，参考：</li>
-<li>在hexo中安装配置hexo-deployer-git进行github项目管理</li>
-<li>下载【1】中github代码到本地，本人是通过webstorm进行编辑操作的</li>
-<li>拷贝【2】中代码到【1】中的repository中，在本地运行查看hexo效果</li>
-<li>编辑.gitignore文件,忽略操作系统文件、编辑器临时文件、node临时文件等，提交</li>
-<li>提交repository到github</li>
-<li>hexo部署本地代码到Github Pages，查看效果</li>
+<li>npm install antd --save</li>
+<li>浏览器引入</li>
+</ol>
+<ul>
+<li>在浏览器中使用 script 和 link 标签直接引入文件，并使用全局变量 antd</li>
+<li>在 npm 发布包内的 antd/dist 目录下提供了 antd.js antd.css 以及 antd.min.js antd.min.css</li>
+<li>也可以通过 CDNJS <a href="https://cdnjs.com/libraries/antd" target="_blank" rel="noopener">https://cdnjs.com/libraries/antd</a> 或 UNPKG <a href="https://unpkg.com/antd@3.0.2/dist/" target="_blank" rel="noopener">https://unpkg.com/antd@3.0.2/dist/</a> 进行下载</li>
+<li>强烈不推荐使用已构建文件，这样无法按需加载，而且难以获得底层依赖模块的 bug 快速修复支持</li>
+</ul>
+<h1 id="安装使用dva"><a class="markdownIt-Anchor" href="#安装使用dva"></a> 安装使用dva</h1>
+<p>dva 是一个基于 React 和 Redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install dva-cli -g</span><br><span class="line">dva -v</span><br><span class="line">dva new dva-quickstart</span><br><span class="line">cd dva-quickstart</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<p>在浏览器里打开 <a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a> ，你会看到 dva 的欢迎界面</p>
+<h1 id="dva项目中使用antd"><a class="markdownIt-Anchor" href="#dva项目中使用antd"></a> dva项目中使用Antd</h1>
+<ol>
+<li>npm install antd babel-plugin-import --save</li>
+<li>编辑 .roadhogrc，使 babel-plugin-import 插件生效</li>
+</ol>
+<h1 id="按需加载antd"><a class="markdownIt-Anchor" href="#按需加载antd"></a> 按需加载Antd</h1>
+<p>使用 babel-plugin-import</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// .babelrc or babel-loader option</span><br><span class="line">&#123;</span><br><span class="line">  &quot;plugins&quot;: [</span><br><span class="line">    [&quot;import&quot;, &#123; &quot;libraryName&quot;: &quot;antd&quot;, &quot;libraryDirectory&quot;: &quot;es&quot;, &quot;style&quot;: &quot;css&quot; &#125;] // `style: true` 会加载 less 文件</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后只需从 antd 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。</p>
+<p>// babel-plugin-import 会帮助你加载 JS 和 CSS<br>
+import { DatePicker } from ‘antd’;</p>
+<h1 id="在-create-react-app-中使用"><a class="markdownIt-Anchor" href="#在-create-react-app-中使用"></a> 在 create-react-app 中使用</h1>
+<blockquote>
+<p>create-react-app 是业界最优秀的 React 应用开发工具之一</p>
+</blockquote>
+<blockquote>
+<p>使用create-react-app只是创建出了react应用的基本架构，类似于dva-cli创建的架构，antd还是需要自己添加</p>
+</blockquote>
+<h1 id="dva的出现背景"><a class="markdownIt-Anchor" href="#dva的出现背景"></a> dva的出现背景</h1>
+<p><a href="https://github.com/sorrycc/blog/issues/1" target="_blank" rel="noopener">https://github.com/sorrycc/blog/issues/1</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Antd-PRO入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-Antd-PRO入门/" itemprop="url">Antd PRO入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="网址"><a class="markdownIt-Anchor" href="#网址"></a> 网址</h1>
+<ul>
+<li>AntD官网：<a href="https://ant.design/index-cn" target="_blank" rel="noopener">https://ant.design/index-cn</a></li>
+<li>脚手架市场：<a href="http://scaffold.ant.design/#/" target="_blank" rel="noopener">http://scaffold.ant.design/#/</a></li>
+</ul>
+<p>AntD Pro脚手架：（官方脚手架）</p>
+<ul>
+<li>中文：<a href="https://pro.ant.design/index-cn" target="_blank" rel="noopener">https://pro.ant.design/index-cn</a></li>
+<li>e文：<a href="https://pro.ant.design/docs/getting-started" target="_blank" rel="noopener">https://pro.ant.design/docs/getting-started</a></li>
+<li>github：<a href="https://github.com/ant-design/ant-design-pro/blob/master/README.zh-CN.md" target="_blank" rel="noopener">https://github.com/ant-design/ant-design-pro/blob/master/README.zh-CN.md</a></li>
+</ul>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>开箱即用的中台前端/设计解决方案</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBab39c02da574c27d01258b07c812ef04?method=download&amp;shareKey=2db6827dba6c579c7e1c59cdf608586a" alt="image"></p>
+<h1 id="安装使用"><a class="markdownIt-Anchor" href="#安装使用"></a> 安装使用</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install ant-design-pro-cli -g</span><br><span class="line">$ mkdir my-project &amp;&amp; cd my-project</span><br><span class="line">$ pro new  # 安装脚手架</span><br><span class="line">$ npm install</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<h1 id="布局"><a class="markdownIt-Anchor" href="#布局"></a> 布局</h1>
+<ul>
+<li>BasicLayout：基础页面布局，包含了头部导航，侧边栏和通知栏</li>
+<li>BlankLayout：空白的布局</li>
+<li>PageHeaderLayout：带有标准 PageHeader 的布局</li>
+<li>UserLayout：抽离出用于登陆注册页面的通用布局</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-CSS预处理技术/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-CSS预处理技术/" itemprop="url">CSS预处理技术</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>CSS预处理器技术已经非常的成熟，而且也涌现出了越来越多的 CSS 的预处理器框架。最普遍的分别是 Sass、Less CSS、Stylus，本文以Less重点讲解。</p>
+<p>CSS预处理器<br>
+CSS 预处理器是一种语言用来为 CSS 增加一些编程的的特性，无需考虑浏览器的兼容性问题，例如你可以在 CSS 中使用变量、简单的程序逻辑、函数等等在编程语言中的一些基本技巧，可以让你的 CSS 更见简洁，适应性更强，代码更直观等诸多好处</p>
+<p>1.Less 可以运行在 Node、浏览器和 Rhino 平台上。网上有很多第三方工具帮助你编译 Less 源码<br>
+2.Less 可以通过 npm 在命令行上运行；在浏览器上作为脚本文件下载；或者集成在广大的第三方工具内<br>
+3.在服务器端最容易的安装方式就是通过 npm （node.js 的包管理器），方法如下：npm install -g less<br>
+4.安装 Less 后，就可以在命令行上调用 Less 编译器了，如：lessc styles.less或lessc styles.less &gt; styles.css<br>
+若要输出压缩过的 CSS，只需添加 -x 选项。如果希望获得更好的压缩效果，还可以通过 --clean-css 选项启用 Clean CSS 进行压缩<br>
+5.在代码中调用 Less如下：<br>
+var less = require(‘less’);</p>
+<p>less.render(’.class { width: (1 + 1) }’, function (e, css) {<br>
+  console.log(css);<br>
+});<br>
+6.还可以手动调用分析器（paser）和编译器:<br>
+var parser = new(less.Parser);</p>
+<p>parser.parse(’.class { width: (1 + 1) }’, function (err, tree) {<br>
+  if (err) {<br>
+    return console.error(err)<br>
+  }<br>
+  console.log(tree.toCSS());<br>
+});<br>
+7.可以给编译器传递多个参数<br>
+var parser = new(less.Parser)({<br>
+  paths: [’.’, ‘./lib’], // Specify search paths for @import directives<br>
+  filename: ‘style.less’ // Specify a filename, for better error messages<br>
+});</p>
+<p>parser.parse(’.class { width: (1 + 1) }’, function (e, tree) {<br>
+  tree.toCSS({<br>
+    // Minify CSS output<br>
+    compress: true<br>
+  });<br>
+});<br>
+8.Less 还和流行的 Grunt 构建工具进行了集成，可以参考 grunt-contrib-less 插件<br>
+9.在客户端使用 Less.js 是最容易的方式，并且在开发阶段很方便，但是，在生产环境中，性能和可靠性非常重要，我们建议最好使用 node.js 或其它第三方工具进行预编译</p>
+<p><a href="http://www.bootcss.com/p/lesscss/" target="_blank" rel="noopener">http://www.bootcss.com/p/lesscss/</a></p>
+<p>LESS 原理及使用方式<br>
+本质上，LESS 包含一套自定义的语法及一个解析器，用户根据这些语法定义自己的样式规则，这些规则最终会通过解析器，编译生成对应的 CSS 文件。LESS 并没有裁剪 CSS 原有的特性，更不是用来取代 CSS 的，而是在现有 CSS 语法的基础上，为 CSS 加入程序式语言的特性</p>
+<p>LESS 可以直接在客户端使用，也可以在服务器端使用。在实际项目开发中，我们更推荐使用第三种方式，将 LESS 文件编译生成静态 CSS 文件，并在 HTML 文档中应用<br>
+客户端：<link rel="stylesheet/less" type="text/css" href="styles.less"> ==LESS 源文件一定要在 less.js 引入之前引入，这样才能保证 LESS 源文件正确编译解析<br>
+服务器端：目前常用的方式是利用 node 的包管理器 (npm) 安装 LESS，安装成功后就可以在 node 环境中对 LESS 源文件进行编译<br>
+以通过这个关键字引入我们需要的 .less 或 .css 文件。 如：<br>
+@import “variables.less”;<br>
+.less 文件也可以省略后缀名，像这样：<br>
+@import “variables”;<br>
+引入 CSS 同 LESS 文件一样，只是 .css 后缀名不能省略</p>
+<p>变量<br>
+1.LESS 允许开发者自定义变量，变量可以在全局样式中使用，变量使得样式修改起来更加简单<br>
+2.ESS 中的变量和其他编程语言一样，可以实现值的复用，同样它也有生命周期，也就是作用域，查找变量的顺序是先在局部定义中找，如果找不到，则查找上级定义，直至全局<br>
+@width : 20px; <br>
+ #homeDiv { <br>
+   @width : 30px; <br>
+   #centerDiv{ <br>
+       width : @width;// 此处应该取最近定义的变量 width 的值 30px <br>
+              } <br>
+ }</p>
+<p>Mixins（混入）<br>
+1.混入是指在一个 CLASS 中引入另外一个已经定义的 CLASS，就像在当前 CLASS 中增加一个属性一样<br>
+// 定义一个样式选择器<br>
+ .roundedCorners(@radius:5px) { <br>
+ -moz-border-radius: @radius; <br>
+ -webkit-border-radius: @radius; <br>
+ border-radius: @radius; <br>
+ } <br>
+ // 在另外的样式选择器中使用<br>
+ #header { <br>
+ .roundedCorners; <br>
+ } <br>
+ #footer { <br>
+ .roundedCorners(10px); <br>
+ }<br>
+2.Mixins中@arguments是一个很特别的参数，当 Mixins 引用这个参数时，该参数表示所有的变量，很多情况下，这个参数可以省去你很多代码<br>
+.boxShadow(@x:0,@y:0,@blur:1px,@color:#000){ <br>
+ -moz-box-shadow: @arguments; <br>
+ -webkit-box-shadow: @arguments; <br>
+ box-shadow: @arguments; <br>
+ } <br>
+ #header { <br>
+ .boxShadow(2px,2px,3px,#f36); <br>
+ }<br>
+3.LESS也采用了命名空间的方法来避免重名问题<br>
+ #mynamespace { <br>
+ .home {…} <br>
+ .user {…} <br>
+ }<br>
+如果我们要复用 user 这个选择器的时候，就可以了通过：#mynamespace &gt; .user 的方式<br>
+4.嵌套的规则<br>
+在我们书写标准 CSS 的时候，遇到多层的元素嵌套这种情况时，我们要么采用从外到内的选择器嵌套定义，要么采用给特定元素加 CLASS 或 ID 的方式。在 LESS 中我们可以这样写：<br>
+ HTML 片段<br>
+ <div id="home"> <br>
+ <div id="top">top</div> <br>
+ <div id="center"> <br>
+ <div id="left">left</div> <br>
+ <div id="right">right</div> <br>
+ </div> <br>
+ </div><br>
+    对应LESS 文件<br>
+ #home{ <br>
+   color : blue; <br>
+   width : 600px; <br>
+   height : 500px; <br>
+   border:outset; <br>
+   #top{ <br>
+        border:outset; <br>
+        width : 90%; <br>
+   } <br>
+   #center{ <br>
+        border:outset; <br>
+        height : 300px; <br>
+        width : 90%; <br>
+        #left{ <br>
+          border:outset; <br>
+          float : left; <br>
+        width : 40%; <br>
+        } <br>
+        #right{ <br>
+          border:outset; <br>
+          float : left; <br>
+          width : 40%; <br>
+        } <br>
+    } <br>
+ }</p>
+<p>运算及函数<br>
+简单的讲，就是对数值型的 value（数字、颜色、变量等）进行加减乘除四则运算。同时 LESS 还有一个专门针对 color 的操作提供一组函数。<br>
+下面是 LESS 提供的针对颜色操作的函数列表：<br>
+ lighten(@color, 10%); // return a color which is 10% <em>lighter</em> than @color <br>
+ darken(@color, 10%); // return a color which is 10% <em>darker</em> than @color <br>
+ saturate(@color, 10%); // return a color 10% <em>more</em> saturated than @color <br>
+ desaturate(@color, 10%);// return a color 10% <em>less</em> saturated than @color <br>
+ fadein(@color, 10%); // return a color 10% <em>less</em> transparent than @color <br>
+ fadeout(@color, 10%); // return a color 10% <em>more</em> transparent than @color <br>
+ spin(@color, 10); // return a color with a 10 degree larger in hue than @color <br>
+ spin(@color, -10); // return a color with a 10 degree smaller hue than @color<br>
+变量使用示例：<br>
+ @init: #111111; <br>
+ @transition: @init*2; <br>
+ .switchColor { <br>
+  color: @transition; <br>
+ }</p>
+<p>Comments（注释）<br>
+适当的注释是保证代码可读性的必要手段，LESS 对注释也提供了支持，主要有两种方式：单行注释和多行注释<br>
+LESS 中单行注释 (// 单行注释 ) 是不能显示在编译后的 CSS 中，所以如果注释是针对样式说明的请使用多行注释</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-NW-js入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-NW-js入门/" itemprop="url">NW.js入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>NW.js （原名 node-webkit）是一个基于 Chromium 和 node.js 的应用运行时，通过它可以用 HTML 和 JavaScript 编写原生应用程序。它还允许您从 DOM 调用 Node.js 的模块 ，实现了一个用所有 Web 技术来写原生应用程序的新的开发模式。</p>
+<ul>
+<li>官网：<a href="https://nwjs.io/" target="_blank" rel="noopener">https://nwjs.io/</a></li>
+<li>中文文档：<a href="https://www.gitbook.com/book/wizardforcel/nwjs-doc/details" target="_blank" rel="noopener">https://www.gitbook.com/book/wizardforcel/nwjs-doc/details</a></li>
+</ul>
+<h1 id="功能特性"><a class="markdownIt-Anchor" href="#功能特性"></a> 功能特性</h1>
+<ul>
+<li>用现代 HTML5,CSS3,JS 和 WebGL 来编写应用程序</li>
+<li>完全支持 Node.js APIs 和所有其 第三方模块</li>
+<li>良好的性能:Node 和 WebKit</li>
+<li>运行在相同的线程:函数调用是更简洁;对象在同一堆可以互相引用</li>
+<li>容易打包和分发应用程序</li>
+<li>支持 Linux、Mac OS X 和 Windows</li>
+</ul>
+<h1 id="窗口外观常用属性"><a class="markdownIt-Anchor" href="#窗口外观常用属性"></a> 窗口外观常用属性</h1>
+<p>在package.json文件中设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">title : 字符串，设置默认 title。</span><br><span class="line">width/height : 主窗口的大小。</span><br><span class="line">toolbar : bool 值。是否显示导航栏。</span><br><span class="line">icon : 窗口的 icon。</span><br><span class="line">position :字符串。窗口打开时的位置，可以设置为“null”、“center”或者“mouse”。</span><br><span class="line">min_width/min_height : 窗口的最小值。</span><br><span class="line">max_width/max_height : 窗口显示的最大值。</span><br><span class="line">resizable : bool 值。是否允许调整窗口大小。</span><br><span class="line">always-on-top : bool 值。窗口置顶。</span><br><span class="line">fullscreen : bool 值。是否全屏显示。</span><br><span class="line">show_in_taskbar : 是否在任务栏显示图标。</span><br><span class="line">frame : bool 值。如果设置为 false，程序将无边框显示。</span><br></pre></td></tr></table></figure>
+<h1 id="webstorm项目创建及调试"><a class="markdownIt-Anchor" href="#webstorm项目创建及调试"></a> webstorm项目创建及调试</h1>
+<h2 id="下载三个不同-os-平台的-nwjs"><a class="markdownIt-Anchor" href="#下载三个不同-os-平台的-nwjs"></a> 下载三个不同 OS 平台的 NW.js</h2>
+<h2 id="创建项目并运行"><a class="markdownIt-Anchor" href="#创建项目并运行"></a> 创建项目并运行</h2>
+<ol>
+<li>创建空项目</li>
+<li>创建package.json,编辑起内容，最简为:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;helloworld&quot;, </span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.html&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在webstorm 中添加一个nw.js：run – edit configurations – + nw.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NW.js app : 可以是当前项目目录，但要包含package.json文件. 或者是一个.nw的文件</span><br><span class="line">NW.js interpreter 指定可执行的 nw(官网下的包中的) (mac下是nwjs),如：/MyDeveloper/nwjs-v0.22.1-osx-x64/nwjs.app</span><br><span class="line">working direction ： 项目目录</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>运行查看效果</li>
+</ol>
+<h2 id="调试"><a class="markdownIt-Anchor" href="#调试"></a> 调试</h2>
+<p><a href="https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html</a></p>
+<h1 id="打包到各个平台"><a class="markdownIt-Anchor" href="#打包到各个平台"></a> 打包到各个平台</h1>
+<p><a href="https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps" target="_blank" rel="noopener">https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps</a></p>
+<h2 id="mac下打包"><a class="markdownIt-Anchor" href="#mac下打包"></a> mac下打包</h2>
+<ol>
+<li>拷贝下载的nwjs-sdk-v0.22.1-osx-x64.zip中的nwjs.app文件到项目的根目录的同级目录</li>
+<li>修改nwjs.app目录名称为你想要的名称，如：MyNW.app</li>
+<li>在项目根目录执行如下命令：zip -r …/MyNW.app/Contents/Resources/app.nw *,将当前目录下所有文件打包到MyNW.app中</li>
+<li>open MyNW.app可以打开项目</li>
+<li>制作成dmg文件</li>
+</ol>
+<ul>
+<li>
+<ul>
+<li>在应用程序-&gt;实用工具下打开磁盘工具</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>新建一个磁盘映像，放在桌面上(可随意)，名称设置为temp.dmg(可随意)，存储为mytemp</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>拷贝4中的文件到mytemp中</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>执行：ln -s /Applications /Volumes/temp.dmg/Applications</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>成功</li>
+</ol>
+<p>问题：4中制作的文件太大</p>
+<h2 id="代码加密保护"><a class="markdownIt-Anchor" href="#代码加密保护"></a> 代码加密保护</h2>
+<blockquote>
+<p>有些情况下，代码还是不能直接暴露给用户的；我们可以使用V8 Snapshot 的方式来达到代码加密保护的目的</p>
+</blockquote>
+<p>具体的方式是:</p>
+<ol>
+<li>使用 /nwjs.exe 来运行 nwjc source.js core.bin命令</li>
+<li>在index.html里使用require(‘nw.gui’).Window.get().evalNWBin(null, ‘./app/v0.0.1/core.bin’);(注意这里的路径，是相对于nw.exe的位置)将代码引入到项目中；</li>
+<li>加密的代码里不要使用 let、const这些关键字，可能因为这个始终编译不通过</li>
+</ol>
+<h2 id="自动更新"><a class="markdownIt-Anchor" href="#自动更新"></a> 自动更新</h2>
+<h3 id="项目代码需要更新"><a class="markdownIt-Anchor" href="#项目代码需要更新"></a> 项目代码需要更新</h3>
+<p>前面介绍项目接口就提到 /app/v0.0.1/ 就是放置V0.0.1的所有代码的位置；<br>
+那么如果要更新到V0.0.2，那我们新建一个文件夹 /app/V0.0.2,然后把V0.0.2的代码都放到这个文件下，然后把/package.json替换成新版本的package.json；这样重启客户端之后，然会读取v0.0.2的代码了。具体的更新代码就不写了，可以把新版本的代码打包成zip包，然后客户端下载好，解压就行。</p>
+<h3 id="nwjs本身需要更新"><a class="markdownIt-Anchor" href="#nwjs本身需要更新"></a> nw.js本身需要更新</h3>
+<p>通常情况下，不会遇到需要更新nw.js 本身的情况，因为当选定一个版本的NW.js后，就认定它了，除非遇到了什么无法解决的BUG</p>
+<h2 id="系列教程"><a class="markdownIt-Anchor" href="#系列教程"></a> 系列教程</h2>
+<p><a href="https://blog.csdn.net/zeping891103/column/info/19257" target="_blank" rel="noopener">https://blog.csdn.net/zeping891103/column/info/19257</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-TypeScript入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-TypeScript入门/" itemprop="url">TypeScript入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.tslang.cn/</span><br><span class="line">http://www.typescriptlang.org/</span><br></pre></td></tr></table></figure>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>微软出品，2012</p>
+<ol>
+<li>编译型语言</li>
+<li>强类型语言</li>
+<li>真面向对象</li>
+<li>AMD方式</li>
+</ol>
+<p>cnpm install -g typescript</p>
+<p>扩展名：.ts／.tsx/.d.ts<br>
+编译： tsc 1.ts <a href="//1.js">//1.js</a></p>
+<p>number\string\boolean\symbol\void\null\undefined\enum\any</p>
+<p>any:变体变量</p>
+<p>var a:any;<br>
+a=12;<br>
+a=“abc”;</p>
+<p>var a:any; 等同于 var a;//类型推测（隐式类型声明）</p>
+<p>冲突检测：编译器会自动排除掉无用的选项</p>
+<p>联合类型：<br>
+var a:number|string;<br>
+a=12;<br>
+a=‘abc’;<br>
+a=false;//报错</p>
+<p>数组也有类型</p>
+<p>外部声明declare，window等都内部声明过了<br>
+declare var 名字；</p>
+<p>function sum(a:number,b:number):number{<br>
+return  a+b;<br>
+}</p>
+<p>function ajax(url:string,success:(res:string,code:number)=&gt;void,error:(code:number)=&gt;void){</p>
+<p>}</p>
+<p>对象类型：ObjectType<br>
+var a:{x:number,y:number}<br>
+可选声明：var a:{x:number,y:number,z?:number},调用或赋值的时候，z可有可无</p>
+<p>接口：约定、限制<br>
+interface Point{<br>
+x:number,<br>
+y:number,<br>
+z?:number<br>
+}</p>
+<p>泛型：</p>
+<p>class  Calc<t>{<br>
+a:T;<br>
+b:T;<br>
+}</t></p>
+<p>var obj=new Calc<number>();<br>
+obj.a=12;<br>
+obj.b=‘123’;//报错</number></p>
+<p>tsconfig.json</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-ejs模版引擎基本使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-ejs模版引擎基本使用/" itemprop="url">ejs模版引擎基本使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.360doc.com/content/16/0115/10/597197_528136785.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/16/0115/10/597197_528136785.shtml</a></p>
+<h1 id="express中使用ejs"><a class="markdownIt-Anchor" href="#express中使用ejs"></a> express中使用ejs</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var express = require(&apos;express&apos;);//需要安装 express</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">app.set(&quot;view engine&quot;,&quot;ejs&quot;);//模版引擎设置为 ejs</span><br></pre></td></tr></table></figure>
+<h1 id="文件组织"><a class="markdownIt-Anchor" href="#文件组织"></a> 文件组织</h1>
+<p>在express中使用ejs，文件组织遵循express。</p>
+<ul>
+<li>views-------放置动态模版</li>
+<li>public------放置静态网页</li>
+<li>layouts-----放置布局文件</li>
+</ul>
+<h1 id="ejs成员函数"><a class="markdownIt-Anchor" href="#ejs成员函数"></a> EJS成员函数：</h1>
+<ul>
+<li>Render(str,data,[option]):直接渲染字符串并生成html</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str：需要解析的字符串模板</span><br><span class="line">data：数据</span><br><span class="line">option：配置选项</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Compile(str,[option]):编译字符串得到模板函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str：需要解析的字符串模板</span><br><span class="line">option：配置选项</span><br></pre></td></tr></table></figure>
+<h1 id="基本语法"><a class="markdownIt-Anchor" href="#基本语法"></a> 基本语法</h1>
+<ol>
+<li>&lt;% code %&gt;:无缓冲的条件语句元素</li>
+<li>&lt;%= code %&gt;:转义HTML，该code并且会打印出来</li>
+<li>&lt;%- code %&gt;:非转义的buffering，该code并且会打印出来</li>
+<li>&lt;% include file %&gt;:内嵌别的文件</li>
+<li>&lt;% layout(file) -%&gt;:指定布局文件</li>
+<li>&lt;% script(file) -%&gt;:包含js脚本文件</li>
+<li>&lt;% stylesheet(file) -%&gt;:包含css文件</li>
+<li>&lt;% block(code, code) -%&gt;:指定块内容</li>
+<li>&lt;%# %&gt;:注释标签</li>
+</ol>
+<h1 id="基本对象"><a class="markdownIt-Anchor" href="#基本对象"></a> 基本对象</h1>
+<ol>
+<li>scripts:包含的脚本</li>
+<li>stylesheets:包含的css</li>
+<li>blocks:包含的块</li>
 </ol>
 
           
@@ -2231,7 +2445,7 @@ GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有�
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2286,7 +2500,7 @@ GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2297,7 +2511,7 @@ GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有�
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2308,7 +2522,7 @@ GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2379,7 +2593,7 @@ GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有�
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
+ <span id="busuanzi_value_site_uv"></span>
 </span>
 </div>
 
@@ -2402,7 +2616,7 @@ GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有�
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共44.0k字</span>
+  <span class="post-count">博客全站共97.8k字</span>
 </div>
 
 

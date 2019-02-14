@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/8/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/8/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/17/C-开发-2018-10-17-C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/17/C-开发-2018-10-17-C/" itemprop="url">C#</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-17T15:03:28+08:00">
+                2018-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，</p>
+<p><a href="https://blog.csdn.net/zmh458/article/details/78935172" target="_blank" rel="noopener">https://blog.csdn.net/zmh458/article/details/78935172</a><br>
+<a href="https://www.cnblogs.com/lanpingwang/p/6596758.html" target="_blank" rel="noopener">https://www.cnblogs.com/lanpingwang/p/6596758.html</a><br>
+<a href="https://www.cnblogs.com/Inspire-Yi/p/6230567.html" target="_blank" rel="noopener">https://www.cnblogs.com/Inspire-Yi/p/6230567.html</a></p>
+<p><a href="https://www.jianshu.com/p/c82ef6babf8e" target="_blank" rel="noopener">https://www.jianshu.com/p/c82ef6babf8e</a></p>
+<p><a href="https://www.cnblogs.com/caofangsheng/p/5715876.html" target="_blank" rel="noopener">https://www.cnblogs.com/caofangsheng/p/5715876.html</a><br>
+<a href="https://blog.csdn.net/beglorious/article/details/39637475" target="_blank" rel="noopener">https://blog.csdn.net/beglorious/article/details/39637475</a></p>
+<p><a href="https://www.cnblogs.com/servicehot/p/6510199.html" target="_blank" rel="noopener">https://www.cnblogs.com/servicehot/p/6510199.html</a></p>
+<p>首先我觉得action的跳转大致可以这样归一下类，跳转到同一控制器内的action和不同控制器内的action、带有参数的action跳转和不带参数的action跳转。</p>
+<p>一、RedirectToAction(“Index”);//一个参数时在本Controller下，不传入参数。</p>
+<p>二、RedirectToAction(ActionName,ControllerName) //可以直接跳到别的Controller.</p>
+<p>三、RedirectToRoute(new {controller=“Home”,action=“Index”});//可跳到其他controller</p>
+<p>四、RedirectToRoute(new {controller=“Home”,action=“Index”， id=param});//可跳到其他controller,带参数。</p>
+<p>五、Response.Redirect(“Index?id=1”);//适用于本controller下的方法名称,可带参数。<br>
+六、return Redirect(“Index”);//适用于本controller下的方法名称。</p>
+<p>七、return View(“Index”); //直接显示对应的页面 不经过执行Controller的方法。<br>
+八、return View(&quot;~/Views/Home/Index.aspx&quot;);//这种方法是写全路径,直接显示页面,不经过Controller方法<br>
+九、return View();//直接显示页面,不经过Controller方法</p>
+<p><a href="https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1" target="_blank" rel="noopener">https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1</a><br>
+一般情况下我们返回的都是本页面，所以使用return View()就可以解决问题了，</p>
+<p><a href="https://www.cnblogs.com/Cwj-XFH/p/5956142.html" target="_blank" rel="noopener">https://www.cnblogs.com/Cwj-XFH/p/5956142.html</a><br>
+<a href="http://xn--ModelASP-3i5qt911ag97a.NET" target="_blank" rel="noopener">Model验证是ASP.NET</a> MVC中的重要部分，它主要用于判断输入的数据类型及值是否符合我们设定的规则，<a href="http://xn--ASP-y28d97a810d83ofj4bmybj3mnv4c.NET" target="_blank" rel="noopener">这篇文章就介绍下ASP.NET</a> MVC中Model验证的几种方式。</p>
+<p>后台验证<br>
+DataAnnotation<br>
+ValidationAttribute<br>
+IValidatableObject<br>
+IDataErrorInfo<br>
+前端验证</p>
+<p>ViewData和ViewBag</p>
+<p><a href="https://blog.csdn.net/pasic/article/details/7093802" target="_blank" rel="noopener">https://blog.csdn.net/pasic/article/details/7093802</a></p>
+<p><a href="https://www.cnblogs.com/webapi/p/9505400.html" target="_blank" rel="noopener">https://www.cnblogs.com/webapi/p/9505400.html</a></p>
+<p>系列文章：<br>
+<a href="https://blog.csdn.net/ydm19891101/article/details/43338999" target="_blank" rel="noopener">https://blog.csdn.net/ydm19891101/article/details/43338999</a></p>
+<p>WebForm与MVC的本质区别：请求的url不同</p>
+<p><a href="https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1" target="_blank" rel="noopener">https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1</a></p>
+<p>MVC action 返回javascriptResult 需要引入的文件是<br>
+需要引用这个文件 ：   jquery.unobtrusive-ajax.min.js</p>
+<p>同时 用javascrptResult  作为action的返回结果 的话 ，前台必须用ajax.BeginForm</p>
+<p><a href="https://www.cnblogs.com/zjf1987/p/ActionResult.html" target="_blank" rel="noopener">https://www.cnblogs.com/zjf1987/p/ActionResult.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React全家桶/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/15/react-rn-2018-10-15-React全家桶/" itemprop="url">React全家桶</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T08:16:00+08:00">
+                2018-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>React全家桶+Antd共享单车后台管理系统</p>
+<h1 id="react基础知识"><a class="markdownIt-Anchor" href="#react基础知识"></a> react基础知识</h1>
+<p>Vue生态：Vue+Vue-Router+Vuex+Axios+Babel+Webpack<br>
+React生态：React+React-Router+Redux+Axios+Babel+Webpack</p>
+<p>编程式实现：需要以具体代码表达在哪里做什么，如何实现<br>
+声明式实现：只需声明在哪里做什么，无需关心如何实现</p>
+<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">https://react.docschina.org/</a><br>
+<a href="https://reactjs.org.cn/" target="_blank" rel="noopener">https://reactjs.org.cn/</a><br>
+<a href="http://facebook.github.io/react/" target="_blank" rel="noopener">http://facebook.github.io/react/</a></p>
+<p>yarn： <a href="https://yarnpkg.com/zh-Hans/" target="_blank" rel="noopener">https://yarnpkg.com/zh-Hans/</a></p>
+<ul>
+<li>yarn init</li>
+<li>yarn add</li>
+<li>yarn remove</li>
+<li>yarn install</li>
+</ul>
+<p>react生命周期</p>
+<p>react-router ／react-router-dom</p>
+<p>按需加载：<br>
+Antd中less样式<br>
+yarn eject:暴露webpack配置，</p>
+<p>less-loader安装<br>
+webpack.config.xxx.js</p>
+<p>修改完之后，重启项目</p>
+<p><a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">https://ant.design/docs/react/use-with-create-react-app-cn</a></p>
+<p>babel-plugin-import</p>
+<p>css3  calc属性<br>
+height:calc(100vh)</p>
+<p>jsonp：<a href="https://www.npmjs.com/package/jsonp" target="_blank" rel="noopener">https://www.npmjs.com/package/jsonp</a></p>
+<p>浏览器添加debugger</p>
+<p>伪类方式</p>
+<p>项目中前端路由用的是 React-Router V4。</p>
+<p>官方文档：<a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
+<p>中文文档：<a href="http://reacttraining.cn/" target="_blank" rel="noopener">http://reacttraining.cn/</a></p>
+<p>React-Router 4.0<br>
+React-Router：基础包<br>
+React-Router-DOM：浏览器端实现</p>
+<p><a href="https://segmentfault.com/a/1190000011399153" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011399153</a></p>
+<p>箭头函数不加{}表示直接返回结果<br>
+<a href="http://this.props.match.params.XXX" target="_blank" rel="noopener">this.props.match.params.XXX</a><br>
+处理404则不设置path，只设置component即可<br>
+路由外面添加Switch</p>
+<p>详情页面、登录页面、主页面是同层级页面，还有其他自页面嵌套路由</p>
+<p>App.js设置为{this.props.children}代表可以接受任何组件，APP组件作为HashRouter的根组件</p>
+<p>子路由、子组件模式</p>
+<p>传参数需要箭头函数</p>
+<p>Modal.confirm()  等价于  Modal[‘confirm’]</p>
+<p>{}里面必须是一个根对象</p>
+<p><a href="https://blog.csdn.net/little_blue_ljy/article/details/80281803" target="_blank" rel="noopener">https://blog.csdn.net/little_blue_ljy/article/details/80281803</a><br>
+<a href="https://www.cnblogs.com/guolintao/p/9019504.html" target="_blank" rel="noopener">https://www.cnblogs.com/guolintao/p/9019504.html</a><br>
+<a href="https://www.cnblogs.com/xuyuntao/articles/6391728.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyuntao/articles/6391728.html</a><br>
+<a href="https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md" target="_blank" rel="noopener">https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md</a></p>
+<p>ES6模版语法:</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-windows-git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-windows-git/" itemprop="url">windows git</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:15:47+08:00">
+                2018-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+<p><a href="https://www.cnblogs.com/vitah/p/3612473.html" target="_blank" rel="noopener">https://www.cnblogs.com/vitah/p/3612473.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/" itemprop="url">Gitblit搭建git服务器</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:00:14+08:00">
+                2018-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.gitblit.com/" target="_blank" rel="noopener">http://www.gitblit.com/</a><br>
+<a href="https://www.cnblogs.com/ucos/p/3924720.html" target="_blank" rel="noopener">https://www.cnblogs.com/ucos/p/3924720.html</a></p>
+<p><a href="https://blog.csdn.net/llengnuo/article/details/73477355" target="_blank" rel="noopener">https://blog.csdn.net/llengnuo/article/details/73477355</a></p>
+<p><a href="http://gitblit.com/setup_go.html" target="_blank" rel="noopener">http://gitblit.com/setup_go.html</a></p>
+<p><a href="https://blog.csdn.net/zhangwenjie1105/article/details/81482238" target="_blank" rel="noopener">https://blog.csdn.net/zhangwenjie1105/article/details/81482238</a></p>
+<p><a href="https://www.cnblogs.com/royi123/p/7754235.html" target="_blank" rel="noopener">https://www.cnblogs.com/royi123/p/7754235.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信公众平台/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信公众平台/" itemprop="url">微信公众平台使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="官方文档"><a class="markdownIt-Anchor" href="#官方文档"></a> 官方文档</h1>
+<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432</a></p>
+<h1 id="接口整体介绍"><a class="markdownIt-Anchor" href="#接口整体介绍"></a> 接口整体介绍</h1>
+<p>微信接口请求返回格式介绍：</p>
+<p>微信接口是通过GET方式请求<br>
+返回数据格式为JSON</p>
+<h1 id="测试号配置"><a class="markdownIt-Anchor" href="#测试号配置"></a> 测试号配置</h1>
+<p>无需公众账号，可直接体验和测试公众平台所有高级接口。</p>
+<p>配置：</p>
+<ol>
+<li>登录公众账号</li>
+<li>开发&gt;开发者工具&gt;公众平台测试账号</li>
+<li>微信扫一扫登录</li>
+<li>配置URL、TOKEN、JS接口安全域名</li>
+</ol>
+<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
+<ol>
+<li>接口频率限制说明</li>
+<li>全局返回码说明</li>
+</ol>
+<p>网页授权登录：<br>
+如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息。</p>
+<p>两种scope模式：</p>
+<ol>
+<li>snsapi_base时只能获取到openid，静默授权，</li>
+<li>snsapi_userinfo时可获取到其他信息，需要用户手动同意授权的</li>
+</ol>
+<p>微信公众平台（互斥）</p>
+<ol>
+<li>编辑模式</li>
+<li>开发者模式-openid</li>
+</ol>
+<p>接入开发者模式步骤</p>
+<p>为了识别用户，每个用户针对每个公众号会产生一个安全的OpenID<br>
+如果需要在多公众号、移动应用之间做用户共通，则需前往微信开放平台，将这些公众号和应用绑定到一个开放平台账号下，绑定后，一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID</p>
+<p>公众平台以access_token为接口调用凭据，来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储<br>
+公众平台接口调用仅支持80端口。</p>
+<p>网页授权获取用户基本信息：通过该接口，可以获取用户的基本信息（获取用户的OpenID是无需用户同意的，获取用户的基本信息则需用户同意）</p>
+<p>微信JS-SDK：是开发者在网页上通过JavaScript代码使用微信原生功能的工具包，开发者可以使用它在网页上录制和播放微信语音、监听微信分享、上传手机本地图片、拍照等许多能力。</p>
+<p>调试接口可能需要取消关注之后才能看到最新的效果</p>
+<p><a href="https://blog.csdn.net/z496007165/article/details/73239971" target="_blank" rel="noopener">https://blog.csdn.net/z496007165/article/details/73239971</a><br>
+<a href="http://www.php.cn/xiaochengxu-405121.html" target="_blank" rel="noopener">http://www.php.cn/xiaochengxu-405121.html</a></p>
+<p>网页授权接口：<br>
+授权回调页面域名：没有http，如：<a href="http://89495c4f.ngrok.xn--io-k07di11djizfrl" target="_blank" rel="noopener">http://89495c4f.ngrok.io是错误的</a>，应该是： <a href="http://89495c4f.ngrok.io" target="_blank" rel="noopener">89495c4f.ngrok.io</a></p>
+<p><a href="http://www.106jiekou.com/" target="_blank" rel="noopener">http://www.106jiekou.com/</a></p>
+<p><a href="https://blog.csdn.net/kingmax54212008/article/details/50811885" target="_blank" rel="noopener">https://blog.csdn.net/kingmax54212008/article/details/50811885</a></p>
+<p><a href="https://www.cnblogs.com/hoobey/p/6078584.html" target="_blank" rel="noopener">https://www.cnblogs.com/hoobey/p/6078584.html</a></p>
+<p><a href="https://blog.csdn.net/qianxing111/article/details/79884527" target="_blank" rel="noopener">https://blog.csdn.net/qianxing111/article/details/79884527</a></p>
+<p><a href="http://www.it165.net/pro/html/201606/70831.html" target="_blank" rel="noopener">http://www.it165.net/pro/html/201606/70831.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/其他-2018-10-06-ngrok的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/其他-2018-10-06-ngrok的使用/" itemprop="url">ngrok的使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T11:50:40+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://ngrok.com/" target="_blank" rel="noopener">https://ngrok.com/</a></p>
+<p><a href="https://blog.csdn.net/liu_005/article/details/79557818" target="_blank" rel="noopener">https://blog.csdn.net/liu_005/article/details/79557818</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信第三方登录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信第三方登录/" itemprop="url">微信第三方登录</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T11:08:33+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842</a></p>
+<p>用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。</p>
+<p>open id：在关注者与公众号产生消息交互后，公众号可获得关注者的open id， 同一个用户，在不同公众号或移动应用下对应有不同open id标识；<br>
+union id：同一个用户，在不同公众号或移动应用下unionID相同；前提是，如若需要做多个公众号以及移动应用账户互通，得到唯一身份标识union id，则需要将多个公众号或移动应用在微信开放平台进行绑定，然后我们才能给拿到union id；</p>
+<p>微信联合登录；也就是我们常用的微信移动端/PC端之间的扫码登录，PC端用微信扫码登录，微信移动端确认授权登录后，应用可以从微信拿到用户的open id或union id，将微信获取的用户信息与自己账户体系中的用户身份进行关联；<br>
+授权登录：需要用户确认登录，这样可以通过用户的个人确认，获取用户全面的信息，无论是否关注相关微信公众号等都可以获取。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/C-开发-2018-10-06-ASP-NET-HTML表单元素/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/C-开发-2018-10-06-ASP-NET-HTML表单元素/" itemprop="url">ASP.NET HTML表单元素</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T10:30:42+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="beginform"><a class="markdownIt-Anchor" href="#beginform"></a> BeginForm</h1>
+<p><a href="https://www.cnblogs.com/sheng-jie/p/6305385.html" target="_blank" rel="noopener">https://www.cnblogs.com/sheng-jie/p/6305385.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-ASP-NET-WebForms使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-ASP-NET-WebForms使用/" itemprop="url">ASP.NET WebForms学习笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T22:56:59+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
+<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/aspnet_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/aspnet_intro.asp，</a> 为个人学习笔记记录。</p>
+<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
+<p>WebForms可类比WinForm开发，通过可视化拖动的方式快速完成Web页面开发.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-ASP-NET-MVC使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-ASP-NET-MVC使用/" itemprop="url">ASP.NET MVC学习笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T20:08:31+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
+<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/mvc_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/mvc_intro.asp，</a> 为个人学习笔记记录。</p>
+<h1 id="mvc项目文件夹"><a class="markdownIt-Anchor" href="#mvc项目文件夹"></a> MVC项目文件夹</h1>
+<p>典型的 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> MVC web 应用程序拥有如下文件夹内容：<br>
+<img src="/pub-images/ASPMVC.png" width="256" height="256"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">应用程序信息</span><br><span class="line">* Properties</span><br><span class="line">* 引用</span><br><span class="line"></span><br><span class="line">应用程序文件夹</span><br><span class="line">* App_Data 文件夹  //用于存储应用程序数据</span><br><span class="line">* App_Start 文件夹 //含应用程序的配置逻辑文件</span><br><span class="line"> ** BundleConfig.cs: 注册所使用的捆绑的CSS 和 JS文件。</span><br><span class="line"> ** FilterConfig.cs: 注册外部/全局过滤器，这些过滤器可以被应用到每个Action和Controller中去.</span><br><span class="line"> ** RouteConfig.cs: 配置MVC应用程序的系统路由路径。</span><br><span class="line"> ** Startup.Auth.cs: 配置MVC应用程序的安全信息，包括Authentication和Authorization配置  </span><br><span class="line">* Content 文件夹   //用于静态文件，比如样式表（CSS 文件）、图表和图像</span><br><span class="line">* Controllers 文件夹   //包含负责处理用户输入和响应的控制器类,名称必须以 &quot;Controller&quot; 结尾</span><br><span class="line">* Models 文件夹    //包含表示应用程序模型的类。模型存有并操作应用程序的数据</span><br><span class="line">* Scripts 文件夹   //存储应用程序的 JavaScript 文件</span><br><span class="line">* Views 文件夹 //存有与应用程序的显示相关的 HTML 文件 </span><br><span class="line"> ** Shared   //用于存储控制器间分享的视图</span><br><span class="line"> ** [名称]   //每个控制器对应的一个文件夹</span><br><span class="line"> ** _ViewStart.cshtml //其内代码被自动添加到由应用程序显示的所有视图。</span><br><span class="line"></span><br><span class="line">配置文件</span><br><span class="line">* Global.asax   //主要是web应用程序的全局设置文件，该文件包含响应 ASP.NET 或HTTP模块所引发的应用程序级别和会话级别事件的代码。Global.asax 文件驻留在 ASP.NET 应用程序的根目录中。运行时，分析 Global.asax 并将其编译到一个动态生成的 .NET Framework 类，该类是从HttpApplication基类派生的。配置 ASP.NET，以便自动拒绝对 Global.asax 文件的任何直接的 URL 请求；外部用户不能下载或查看其中的代码。Global.asax 文件是可选的。只在希望处理应用程序事件或会话事件时，才应创建它.</span><br><span class="line">* packages.config   //NuGet管理用的</span><br><span class="line">* Web.config</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>控制器位于 Controllers 文件夹，视图位于 Views 文件夹，模型位于 Models 文件夹。您不必在应用程序代码中使用文件夹名称</p>
+</blockquote>
+<h1 id="控制器controllers"><a class="markdownIt-Anchor" href="#控制器controllers"></a> 控制器Controllers</h1>
+<ol>
+<li>web 服务器通常会将进入的 URL 请求直接映射到服务器上的磁盘文件.某个 URL 请求（比如 “<a href="http://www.abc.cn/index.asp" target="_blank" rel="noopener">http://www.abc.cn/index.asp</a>”）将映射到服务器根目录上的文件 “index.asp”。</li>
+</ol>
+<blockquote>
+<p>MVC 框架的映射方式有所不同。</p>
+</blockquote>
+<ol start="2">
+<li>MVC 将 URL 映射到方法。这些方法在类中被称为“控制器”。控制器负责处理进入的请求、处理输入、保存数据、并把响应发送回客户端。</li>
+<li>在mvc中所有的controller类都必须使用&quot;Controller&quot;后缀来命名,并且对Action也有一定的要求：</li>
+</ol>
+<ul>
+<li>必须是一个public方法</li>
+<li>必须是实例方法</li>
+<li>没有标志NonActionAttribute特性的(NoAction)</li>
+<li>不能被重载</li>
+<li>必须返回ActionResult类型</li>
+</ul>
+<blockquote>
+<p>具体可返回数据类型请参考：<a href="https://blog.csdn.net/pasic/article/details/7110134" target="_blank" rel="noopener">https://blog.csdn.net/pasic/article/details/7110134</a></p>
+</blockquote>
+<h1 id="模型models"><a class="markdownIt-Anchor" href="#模型models"></a> 模型Models</h1>
+<p>模型包含所有应用程序逻辑（业务逻辑、验证逻辑、数据访问逻辑），除了纯视图和控制器逻辑。</p>
+<h1 id="html帮助器"><a class="markdownIt-Anchor" href="#html帮助器"></a> HTML帮助器</h1>
+<p>HTML 帮助器用于修改 HTML 输出。</p>
+<h2 id="html-链接"><a class="markdownIt-Anchor" href="#html-链接"></a> HTML 链接</h2>
+<p>通过 MVC，Html.ActionLink() 不连接到视图。它创建控制器操作（controller action）的连接。</p>
+<h2 id="html-表单元素"><a class="markdownIt-Anchor" href="#html-表单元素"></a> HTML 表单元素</h2>
+<ul>
+<li>BeginForm()</li>
+<li>EndForm()</li>
+<li>TextArea()</li>
+<li>TextBox()</li>
+<li>CheckBox()</li>
+<li>RadioButton()</li>
+<li>ListBox()</li>
+<li>DropDownList()</li>
+<li>Hidden()</li>
+<li>Password()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= Html.ValidationSummary(&quot;Create was unsuccessful. Please correct the errors and </span><br><span class="line">try again.&quot;) %&gt;</span><br><span class="line">&lt;% using (Html.BeginForm())&#123;%&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;FirstName&quot;&gt;First Name:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.TextBox(&quot;FirstName&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;FirstName&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;LastName&quot;&gt;Last Name:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.TextBox(&quot;LastName&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;LastName&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;Password&quot;&gt;Password:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.Password(&quot;Password&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;Password&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;Password&quot;&gt;Confirm Password:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.Password(&quot;ConfirmPassword&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;ConfirmPassword&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;Profile&quot;&gt;Profile:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.TextArea(&quot;Profile&quot;, new &#123;cols=60, rows=10&#125;)%&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;%= Html.CheckBox(&quot;ReceiveNewsletter&quot;) %&gt;</span><br><span class="line">&lt;label for=&quot;ReceiveNewsletter&quot; style=&quot;display:inline&quot;&gt;Receive Newsletter?&lt;/label&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Register&quot; /&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="mvc参考手册"><a class="markdownIt-Anchor" href="#mvc参考手册"></a> MVC参考手册</h1>
+<p><a href="http://www.w3school.com.cn/aspnet/mvc_reference.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/mvc_reference.asp</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共97.8k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

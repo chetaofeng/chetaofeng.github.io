@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React全家桶/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-05-node安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/15/react-rn-2018-10-15-React全家桶/" itemprop="url">React全家桶</a></h2>
+                <a class="post-title-link" href="/2018/12/19/环境搭建-05-node安装/" itemprop="url">node安装配置</a></h2>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T08:16:00+08:00">
-                2018-10-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
               </time>
             
 
@@ -378,8 +378,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/react/" itemprop="url" rel="index">
-                    <span itemprop="name">react</span>
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
                   </a>
                 </span>
 
@@ -417,1382 +417,261 @@
       
         
           
-            <p>React全家桶+Antd共享单车后台管理系统</p>
-<h1 id="react基础知识"><a class="markdownIt-Anchor" href="#react基础知识"></a> react基础知识</h1>
-<p>Vue生态：Vue+Vue-Router+Vuex+Axios+Babel+Webpack<br>
-React生态：React+React-Router+Redux+Axios+Babel+Webpack</p>
-<p>编程式实现：需要以具体代码表达在哪里做什么，如何实现<br>
-声明式实现：只需声明在哪里做什么，无需关心如何实现</p>
-<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">https://react.docschina.org/</a><br>
-<a href="https://reactjs.org.cn/" target="_blank" rel="noopener">https://reactjs.org.cn/</a><br>
-<a href="http://facebook.github.io/react/" target="_blank" rel="noopener">http://facebook.github.io/react/</a></p>
-<p>yarn： <a href="https://yarnpkg.com/zh-Hans/" target="_blank" rel="noopener">https://yarnpkg.com/zh-Hans/</a></p>
+            <h1 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h1>
+<p>nodejs：在项目开发时的所需要的代码库<br>
+nvm：nodejs 版本管理工具。<br>
+npm：nodejs包管理工具，在安装的 nodejs 的时候，npm也会跟着一起安装，它是包管理工具，管理nodejs中的第三方插件<br>
+yarn：Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ， 是为了弥补 npm 的一些缺陷而出现的<br>
+即：一个nvm可以管理多个node版本和npm版本</p>
+<h1 id="nvm安装"><a class="markdownIt-Anchor" href="#nvm安装"></a> nvm安装</h1>
+<p>官网： <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a><br>
+安装：curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh</a> | bash<br>
+安装完成后的提示界面会有类似一下的提示信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br></pre></td></tr></table></figure>
+<p>在~/.bash_profile中添加以上内容(如果没有这个文件则创建)后保存；通过source ~/.bash_profile使设置生效。<br>
+安装完成后关闭终端，重新打开终端输入 nvm 验证一下是否安装成功</p>
+<p>注：curl看系统是否已安装，如果没有安装则：sudo apt-get install curl</p>
+<h1 id="nvm常用命令"><a class="markdownIt-Anchor" href="#nvm常用命令"></a> nvm常用命令</h1>
+<p>nvm install stable ## 安装最新稳定版 node，当前是node v9.5.0 (npm v5.6.0)<br>
+nvm install <version> ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4<br>
+nvm uninstall <version> ## 删除已安装的指定版本，语法与install类似<br>
+nvm use <version> ## 切换使用指定的版本node<br>
+nvm ls ## 列出所有安装的版本<br>
+nvm ls-remote ## 列出所有远程服务器的版本（官方node version list）<br>
+nvm current ## 显示当前的版本<br>
+nvm alias <name> <version> ## 给不同的版本号添加别名<br>
+nvm unalias <name> ## 删除已定义的别名<br>
+nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包</version></name></version></name></version></version></version></p>
+<h1 id="nvm安装node"><a class="markdownIt-Anchor" href="#nvm安装node"></a> nvm安装node</h1>
+<p>nvm install stable</p>
+<h1 id="yarn"><a class="markdownIt-Anchor" href="#yarn"></a> yarn</h1>
+<p>快速、可靠、安全的依赖管理工具</p>
+<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
+<p>brew install yarn<br>
+brew install yarn --without-node</p>
+<h1 id="yarn和npm命令对比"><a class="markdownIt-Anchor" href="#yarn和npm命令对比"></a> Yarn和npm命令对比</h1>
+<table>
+<thead>
+<tr>
+<th>npm</th>
+<th>yarn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm install</td>
+<td>yarn install</td>
+</tr>
+<tr>
+<td>npm install react --save</td>
+<td>yarn add react</td>
+</tr>
+<tr>
+<td>npm uninstall react --save</td>
+<td>yarn remove react</td>
+</tr>
+<tr>
+<td>npm install react --save-dev</td>
+<td>yarn add react --dev</td>
+</tr>
+<tr>
+<td>npm update --save</td>
+<td>yarn upgrade</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-06-Java安装/" itemprop="url">JDK安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- oracle官网账号：  chetaofeng@163.com / Chetaofeng123./ --> 
+<h1 id="jdk下载"><a class="markdownIt-Anchor" href="#jdk下载"></a> JDK下载</h1>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<h1 id="环境变量设置说明"><a class="markdownIt-Anchor" href="#环境变量设置说明"></a> 环境变量设置说明</h1>
+<p>（jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置）</p>
 <ul>
-<li>yarn init</li>
-<li>yarn add</li>
-<li>yarn remove</li>
-<li>yarn install</li>
+<li>CLASS_PATH 保证class文件能够在任意目录下运行</li>
+<li>PATH 保证javac可以在任意目录下运行</li>
 </ul>
-<p>react生命周期</p>
-<p>react-router ／react-router-dom</p>
-<p>按需加载：<br>
-Antd中less样式<br>
-yarn eject:暴露webpack配置，</p>
-<p>less-loader安装<br>
-webpack.config.xxx.js</p>
-<p>修改完之后，重启项目</p>
-<p><a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">https://ant.design/docs/react/use-with-create-react-app-cn</a></p>
-<p>babel-plugin-import</p>
-<p>css3  calc属性<br>
-height:calc(100vh)</p>
-<p>jsonp：<a href="https://www.npmjs.com/package/jsonp" target="_blank" rel="noopener">https://www.npmjs.com/package/jsonp</a></p>
-<p>浏览器添加debugger</p>
-<p>伪类方式</p>
-<p>项目中前端路由用的是 React-Router V4。</p>
-<p>官方文档：<a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
-<p>中文文档：<a href="http://reacttraining.cn/" target="_blank" rel="noopener">http://reacttraining.cn/</a></p>
-<p>React-Router 4.0<br>
-React-Router：基础包<br>
-React-Router-DOM：浏览器端实现</p>
-<p><a href="https://segmentfault.com/a/1190000011399153" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011399153</a></p>
-<p>箭头函数不加{}表示直接返回结果<br>
-<a href="http://this.props.match.params.XXX" target="_blank" rel="noopener">this.props.match.params.XXX</a><br>
-处理404则不设置path，只设置component即可<br>
-路由外面添加Switch</p>
-<p>详情页面、登录页面、主页面是同层级页面，还有其他自页面嵌套路由</p>
-<p>App.js设置为{this.props.children}代表可以接受任何组件，APP组件作为HashRouter的根组件</p>
-<p>子路由、子组件模式</p>
-<p>传参数需要箭头函数</p>
-<p>Modal.confirm()  等价于  Modal[‘confirm’]</p>
-<p>{}里面必须是一个根对象</p>
-<p><a href="https://blog.csdn.net/little_blue_ljy/article/details/80281803" target="_blank" rel="noopener">https://blog.csdn.net/little_blue_ljy/article/details/80281803</a><br>
-<a href="https://www.cnblogs.com/guolintao/p/9019504.html" target="_blank" rel="noopener">https://www.cnblogs.com/guolintao/p/9019504.html</a><br>
-<a href="https://www.cnblogs.com/xuyuntao/articles/6391728.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyuntao/articles/6391728.html</a><br>
-<a href="https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md" target="_blank" rel="noopener">https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md</a></p>
-<p>ES6模版语法:</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-windows-git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-windows-git/" itemprop="url">windows git</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:15:47+08:00">
-                2018-10-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-<p><a href="https://www.cnblogs.com/vitah/p/3612473.html" target="_blank" rel="noopener">https://www.cnblogs.com/vitah/p/3612473.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/" itemprop="url">Gitblit搭建git服务器</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:00:14+08:00">
-                2018-10-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://www.gitblit.com/" target="_blank" rel="noopener">http://www.gitblit.com/</a><br>
-<a href="https://www.cnblogs.com/ucos/p/3924720.html" target="_blank" rel="noopener">https://www.cnblogs.com/ucos/p/3924720.html</a></p>
-<p><a href="https://blog.csdn.net/llengnuo/article/details/73477355" target="_blank" rel="noopener">https://blog.csdn.net/llengnuo/article/details/73477355</a></p>
-<p><a href="http://gitblit.com/setup_go.html" target="_blank" rel="noopener">http://gitblit.com/setup_go.html</a></p>
-<p><a href="https://blog.csdn.net/zhangwenjie1105/article/details/81482238" target="_blank" rel="noopener">https://blog.csdn.net/zhangwenjie1105/article/details/81482238</a></p>
-<p><a href="https://www.cnblogs.com/royi123/p/7754235.html" target="_blank" rel="noopener">https://www.cnblogs.com/royi123/p/7754235.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信公众平台/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信公众平台/" itemprop="url">微信公众平台使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/微信/" itemprop="url" rel="index">
-                    <span itemprop="name">微信</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="官方文档"><a class="markdownIt-Anchor" href="#官方文档"></a> 官方文档</h1>
-<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432</a></p>
-<h1 id="接口整体介绍"><a class="markdownIt-Anchor" href="#接口整体介绍"></a> 接口整体介绍</h1>
-<p>微信接口请求返回格式介绍：</p>
-<p>微信接口是通过GET方式请求<br>
-返回数据格式为JSON</p>
-<h1 id="测试号配置"><a class="markdownIt-Anchor" href="#测试号配置"></a> 测试号配置</h1>
-<p>无需公众账号，可直接体验和测试公众平台所有高级接口。</p>
-<p>配置：</p>
+<h1 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h1>
+<p>环境变量配置文件执行的顺序：<br>
+/etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc<br>
+/etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。</p>
+<p>下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过，</p>
+<p>配置环境变量的方式：</p>
 <ol>
-<li>登录公众账号</li>
-<li>开发&gt;开发者工具&gt;公众平台测试账号</li>
-<li>微信扫一扫登录</li>
-<li>配置URL、TOKEN、JS接口安全域名</li>
+<li>找到JDK安装目录，如：</li>
 </ol>
-<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
-<ol>
-<li>接口频率限制说明</li>
-<li>全局返回码说明</li>
-</ol>
-<p>网页授权登录：<br>
-如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息。</p>
-<p>两种scope模式：</p>
-<ol>
-<li>snsapi_base时只能获取到openid，静默授权，</li>
-<li>snsapi_userinfo时可获取到其他信息，需要用户手动同意授权的</li>
-</ol>
-<p>微信公众平台（互斥）</p>
-<ol>
-<li>编辑模式</li>
-<li>开发者模式-openid</li>
-</ol>
-<p>接入开发者模式步骤</p>
-<p>为了识别用户，每个用户针对每个公众号会产生一个安全的OpenID<br>
-如果需要在多公众号、移动应用之间做用户共通，则需前往微信开放平台，将这些公众号和应用绑定到一个开放平台账号下，绑定后，一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID</p>
-<p>公众平台以access_token为接口调用凭据，来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储<br>
-公众平台接口调用仅支持80端口。</p>
-<p>网页授权获取用户基本信息：通过该接口，可以获取用户的基本信息（获取用户的OpenID是无需用户同意的，获取用户的基本信息则需用户同意）</p>
-<p>微信JS-SDK：是开发者在网页上通过JavaScript代码使用微信原生功能的工具包，开发者可以使用它在网页上录制和播放微信语音、监听微信分享、上传手机本地图片、拍照等许多能力。</p>
-<p>调试接口可能需要取消关注之后才能看到最新的效果</p>
-<p><a href="https://blog.csdn.net/z496007165/article/details/73239971" target="_blank" rel="noopener">https://blog.csdn.net/z496007165/article/details/73239971</a><br>
-<a href="http://www.php.cn/xiaochengxu-405121.html" target="_blank" rel="noopener">http://www.php.cn/xiaochengxu-405121.html</a></p>
-<p>网页授权接口：<br>
-授权回调页面域名：没有http，如：<a href="http://89495c4f.ngrok.xn--io-k07di11djizfrl" target="_blank" rel="noopener">http://89495c4f.ngrok.io是错误的</a>，应该是： <a href="http://89495c4f.ngrok.io" target="_blank" rel="noopener">89495c4f.ngrok.io</a></p>
-<p><a href="http://www.106jiekou.com/" target="_blank" rel="noopener">http://www.106jiekou.com/</a></p>
-<p><a href="https://blog.csdn.net/kingmax54212008/article/details/50811885" target="_blank" rel="noopener">https://blog.csdn.net/kingmax54212008/article/details/50811885</a></p>
-<p><a href="https://www.cnblogs.com/hoobey/p/6078584.html" target="_blank" rel="noopener">https://www.cnblogs.com/hoobey/p/6078584.html</a></p>
-<p><a href="https://blog.csdn.net/qianxing111/article/details/79884527" target="_blank" rel="noopener">https://blog.csdn.net/qianxing111/article/details/79884527</a></p>
-<p><a href="http://www.it165.net/pro/html/201606/70831.html" target="_blank" rel="noopener">http://www.it165.net/pro/html/201606/70831.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/其他-2018-10-06-ngrok的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/其他-2018-10-06-ngrok的使用/" itemprop="url">ngrok的使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T11:50:40+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://ngrok.com/" target="_blank" rel="noopener">https://ngrok.com/</a></p>
-<p><a href="https://blog.csdn.net/liu_005/article/details/79557818" target="_blank" rel="noopener">https://blog.csdn.net/liu_005/article/details/79557818</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信第三方登录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信第三方登录/" itemprop="url">微信第三方登录</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T11:08:33+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/微信/" itemprop="url" rel="index">
-                    <span itemprop="name">微信</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842</a></p>
-<p>用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。</p>
-<p>open id：在关注者与公众号产生消息交互后，公众号可获得关注者的open id， 同一个用户，在不同公众号或移动应用下对应有不同open id标识；<br>
-union id：同一个用户，在不同公众号或移动应用下unionID相同；前提是，如若需要做多个公众号以及移动应用账户互通，得到唯一身份标识union id，则需要将多个公众号或移动应用在微信开放平台进行绑定，然后我们才能给拿到union id；</p>
-<p>微信联合登录；也就是我们常用的微信移动端/PC端之间的扫码登录，PC端用微信扫码登录，微信移动端确认授权登录后，应用可以从微信拿到用户的open id或union id，将微信获取的用户信息与自己账户体系中的用户身份进行关联；<br>
-授权登录：需要用户确认登录，这样可以通过用户的个人确认，获取用户全面的信息，无论是否关注相关微信公众号等都可以获取。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/C-开发-2018-10-06-ASP-NET-HTML表单元素/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/C-开发-2018-10-06-ASP-NET-HTML表单元素/" itemprop="url">ASP.NET HTML表单元素</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T10:30:42+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="beginform"><a class="markdownIt-Anchor" href="#beginform"></a> BeginForm</h1>
-<p><a href="https://www.cnblogs.com/sheng-jie/p/6305385.html" target="_blank" rel="noopener">https://www.cnblogs.com/sheng-jie/p/6305385.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-ASP-NET-WebForms使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-ASP-NET-WebForms使用/" itemprop="url">ASP.NET WebForms学习笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T22:56:59+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
-<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/aspnet_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/aspnet_intro.asp，</a> 为个人学习笔记记录。</p>
-<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>WebForms可类比WinForm开发，通过可视化拖动的方式快速完成Web页面开发.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-ASP-NET-MVC使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-ASP-NET-MVC使用/" itemprop="url">ASP.NET MVC学习笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T20:08:31+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
-<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/mvc_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/mvc_intro.asp，</a> 为个人学习笔记记录。</p>
-<h1 id="mvc项目文件夹"><a class="markdownIt-Anchor" href="#mvc项目文件夹"></a> MVC项目文件夹</h1>
-<p>典型的 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> MVC web 应用程序拥有如下文件夹内容：<br>
-<img src="/pub-images/ASPMVC.png" width="256" height="256"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">应用程序信息</span><br><span class="line">* Properties</span><br><span class="line">* 引用</span><br><span class="line"></span><br><span class="line">应用程序文件夹</span><br><span class="line">* App_Data 文件夹  //用于存储应用程序数据</span><br><span class="line">* App_Start 文件夹 //含应用程序的配置逻辑文件</span><br><span class="line"> ** BundleConfig.cs: 注册所使用的捆绑的CSS 和 JS文件。</span><br><span class="line"> ** FilterConfig.cs: 注册外部/全局过滤器，这些过滤器可以被应用到每个Action和Controller中去.</span><br><span class="line"> ** RouteConfig.cs: 配置MVC应用程序的系统路由路径。</span><br><span class="line"> ** Startup.Auth.cs: 配置MVC应用程序的安全信息，包括Authentication和Authorization配置  </span><br><span class="line">* Content 文件夹   //用于静态文件，比如样式表（CSS 文件）、图表和图像</span><br><span class="line">* Controllers 文件夹   //包含负责处理用户输入和响应的控制器类,名称必须以 &quot;Controller&quot; 结尾</span><br><span class="line">* Models 文件夹    //包含表示应用程序模型的类。模型存有并操作应用程序的数据</span><br><span class="line">* Scripts 文件夹   //存储应用程序的 JavaScript 文件</span><br><span class="line">* Views 文件夹 //存有与应用程序的显示相关的 HTML 文件 </span><br><span class="line"> ** Shared   //用于存储控制器间分享的视图</span><br><span class="line"> ** [名称]   //每个控制器对应的一个文件夹</span><br><span class="line"> ** _ViewStart.cshtml //其内代码被自动添加到由应用程序显示的所有视图。</span><br><span class="line"></span><br><span class="line">配置文件</span><br><span class="line">* Global.asax   //主要是web应用程序的全局设置文件，该文件包含响应 ASP.NET 或HTTP模块所引发的应用程序级别和会话级别事件的代码。Global.asax 文件驻留在 ASP.NET 应用程序的根目录中。运行时，分析 Global.asax 并将其编译到一个动态生成的 .NET Framework 类，该类是从HttpApplication基类派生的。配置 ASP.NET，以便自动拒绝对 Global.asax 文件的任何直接的 URL 请求；外部用户不能下载或查看其中的代码。Global.asax 文件是可选的。只在希望处理应用程序事件或会话事件时，才应创建它.</span><br><span class="line">* packages.config   //NuGet管理用的</span><br><span class="line">* Web.config</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>控制器位于 Controllers 文件夹，视图位于 Views 文件夹，模型位于 Models 文件夹。您不必在应用程序代码中使用文件夹名称</p>
-</blockquote>
-<h1 id="控制器controllers"><a class="markdownIt-Anchor" href="#控制器controllers"></a> 控制器Controllers</h1>
-<ol>
-<li>web 服务器通常会将进入的 URL 请求直接映射到服务器上的磁盘文件.某个 URL 请求（比如 “<a href="http://www.abc.cn/index.asp" target="_blank" rel="noopener">http://www.abc.cn/index.asp</a>”）将映射到服务器根目录上的文件 “index.asp”。</li>
-</ol>
-<blockquote>
-<p>MVC 框架的映射方式有所不同。</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li>MVC 将 URL 映射到方法。这些方法在类中被称为“控制器”。控制器负责处理进入的请求、处理输入、保存数据、并把响应发送回客户端。</li>
-<li>在mvc中所有的controller类都必须使用&quot;Controller&quot;后缀来命名,并且对Action也有一定的要求：</li>
+<li>编辑文件~/.bash_profile 文件</li>
 </ol>
-<ul>
-<li>必须是一个public方法</li>
-<li>必须是实例方法</li>
-<li>没有标志NonActionAttribute特性的(NoAction)</li>
-<li>不能被重载</li>
-<li>必须返回ActionResult类型</li>
-</ul>
-<blockquote>
-<p>具体可返回数据类型请参考：<a href="https://blog.csdn.net/pasic/article/details/7110134" target="_blank" rel="noopener">https://blog.csdn.net/pasic/article/details/7110134</a></p>
-</blockquote>
-<h1 id="模型models"><a class="markdownIt-Anchor" href="#模型models"></a> 模型Models</h1>
-<p>模型包含所有应用程序逻辑（业务逻辑、验证逻辑、数据访问逻辑），除了纯视图和控制器逻辑。</p>
-<h1 id="html帮助器"><a class="markdownIt-Anchor" href="#html帮助器"></a> HTML帮助器</h1>
-<p>HTML 帮助器用于修改 HTML 输出。</p>
-<h2 id="html-链接"><a class="markdownIt-Anchor" href="#html-链接"></a> HTML 链接</h2>
-<p>通过 MVC，Html.ActionLink() 不连接到视图。它创建控制器操作（controller action）的连接。</p>
-<h2 id="html-表单元素"><a class="markdownIt-Anchor" href="#html-表单元素"></a> HTML 表单元素</h2>
-<ul>
-<li>BeginForm()</li>
-<li>EndForm()</li>
-<li>TextArea()</li>
-<li>TextBox()</li>
-<li>CheckBox()</li>
-<li>RadioButton()</li>
-<li>ListBox()</li>
-<li>DropDownList()</li>
-<li>Hidden()</li>
-<li>Password()</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= Html.ValidationSummary(&quot;Create was unsuccessful. Please correct the errors and </span><br><span class="line">try again.&quot;) %&gt;</span><br><span class="line">&lt;% using (Html.BeginForm())&#123;%&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;FirstName&quot;&gt;First Name:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.TextBox(&quot;FirstName&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;FirstName&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;LastName&quot;&gt;Last Name:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.TextBox(&quot;LastName&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;LastName&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;Password&quot;&gt;Password:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.Password(&quot;Password&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;Password&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;Password&quot;&gt;Confirm Password:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.Password(&quot;ConfirmPassword&quot;) %&gt;</span><br><span class="line">&lt;%= Html.ValidationMessage(&quot;ConfirmPassword&quot;, &quot;*&quot;) %&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;label for=&quot;Profile&quot;&gt;Profile:&lt;/label&gt;</span><br><span class="line">&lt;%= Html.TextArea(&quot;Profile&quot;, new &#123;cols=60, rows=10&#125;)%&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;%= Html.CheckBox(&quot;ReceiveNewsletter&quot;) %&gt;</span><br><span class="line">&lt;label for=&quot;ReceiveNewsletter&quot; style=&quot;display:inline&quot;&gt;Receive Newsletter?&lt;/label&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Register&quot; /&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="mvc参考手册"><a class="markdownIt-Anchor" href="#mvc参考手册"></a> MVC参考手册</h1>
-<p><a href="http://www.w3school.com.cn/aspnet/mvc_reference.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/mvc_reference.asp</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line"></span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使配置生效：source .bash_profile</li>
+<li>输入 echo $JAVA_HOME 显示刚才配置的路径</li>
+<li>验证安装</li>
+</ol>
+<h1 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h1>
+<p>安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载</p>
+<ol>
+<li>下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹</li>
+<li>sudo mkdir /usr/java</li>
+<li>sudo cp -r jdk1.8.0_77/ /usr/java/</li>
+<li>配置环境变量,sudo vim /etc/profile,在前面添加</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_77</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>source /etc/profile 使配置立即生效</li>
+<li>检查新安装的jdk:java -version;java;javac</li>
+</ol>
 
           
         
@@ -1850,7 +729,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-Razor使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-07-CentOS系统初始设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1869,7 +748,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-Razor使用/" itemprop="url">Razor使用</a></h2>
+                <a class="post-title-link" href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" itemprop="url">CentOS安装设置</a></h2>
         
 
         <div class="post-meta">
@@ -1881,8 +760,8 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T19:58:54+08:00">
-                2018-10-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
               </time>
             
 
@@ -1904,8 +783,8 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
                   </a>
                 </span>
 
@@ -1943,33 +822,1885 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
       
         
           
-            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
-<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/razor_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/razor_intro.asp，</a> 为个人学习笔记记录。</p>
-<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>Razor 是一种允许您向网页中嵌入基于服务器的代码的标记语法。Razor 基于 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a>，它为 web 应用程序的创建而设计。</p>
-<blockquote>
-<p>当网页被写入浏览器时，基于服务器的代码能够创建动态内容。在网页加载时，服务器在向浏览器返回页面之前，会执行页面内的基于服务器代码。由于是在服务器上运行，这种代码能执行复杂的任务，比如访问数据库。</p>
-</blockquote>
-<h1 id="c-的主要-razor-语法规则"><a class="markdownIt-Anchor" href="#c-的主要-razor-语法规则"></a> C# 的主要 Razor 语法规则</h1>
+            <p><a href="https://blog.csdn.net/ganeshys2017/article/details/81300246" target="_blank" rel="noopener">https://blog.csdn.net/ganeshys2017/article/details/81300246</a></p>
+<p><a href="http://www.cnblogs.com/linnuo/p/6257204.html" target="_blank" rel="noopener">http://www.cnblogs.com/linnuo/p/6257204.html</a></p>
+<p><a href="https://blog.csdn.net/lwwl12/article/details/78247307" target="_blank" rel="noopener">https://blog.csdn.net/lwwl12/article/details/78247307</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" itemprop="url">Ubuntu系统安装后的设置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="修改默认源为国内源"><a class="markdownIt-Anchor" href="#修改默认源为国内源"></a> 修改默认源为国内源</h1>
+<ol>
+<li>cd /etc/apt</li>
+<li>cp /etc/apt/sources.list /etc/apt/sources.list.bak   备份/etc/apt/sources.list</li>
+<li>在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#添加阿里源</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>更新源</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+<h1 id="系统分辨率设置"><a class="markdownIt-Anchor" href="#系统分辨率设置"></a> 系统分辨率设置</h1>
+<p>安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改：</p>
+<ol>
+<li>首先打开终端Terminal，输入: sudo apt-get install xdiagnose</li>
+<li>sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】</li>
+<li>sudo reboot 重启系统</li>
+<li>再次打开设置发现分辨率可以设置了,如设置为：1280*800</li>
+</ol>
+<h1 id="chrome浏览器安装"><a class="markdownIt-Anchor" href="#chrome浏览器安装"></a> chrome浏览器安装</h1>
 <ul>
-<li>Razor 代码块由 @{ … } 包围</li>
-<li>行内表达式（变量和函数）以 @ 开始</li>
-<li>代码语句以分号结束</li>
-<li>变量通过 var 关键词进行声明</li>
-<li>字符串用引用来包围</li>
-<li>C# 代码对大小写敏感</li>
-<li>C# 文件的扩展名是 .cshtml</li>
+<li>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="noopener">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></li>
+<li>sudo dpkg -i google-chrome-stable_current_amd64.deb</li>
 </ul>
-<h1 id="编程"><a class="markdownIt-Anchor" href="#编程"></a> 编程</h1>
-<p>Razor编程支持变量、循环、逻辑。</p>
-<h2 id="变量"><a class="markdownIt-Anchor" href="#变量"></a> 变量</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var myString = &apos;103&apos;;</span><br><span class="line">int counter = 103; </span><br><span class="line"></span><br><span class="line">if (myString.IsInt())</span><br><span class="line">&#123;</span><br><span class="line">    myInt=myString.AsInt();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">@for(var i = 10; i &lt; 21; i++)</span><br><span class="line">    &#123;&lt;p&gt;Line @i&lt;/p&gt;&#125;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">@foreach (var x in Request.ServerVariables)</span><br><span class="line">    &#123;&lt;li&gt;@x&lt;/li&gt;&#125;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">@&#123;</span><br><span class="line">var i = 0;</span><br><span class="line">while (i &lt; 5)</span><br><span class="line">    &#123;</span><br><span class="line">    i += 1;</span><br><span class="line">    &lt;p&gt;Line #@i&lt;/p&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@&#123;var price=25;&#125;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">@if (price&gt;=30)</span><br><span class="line">  &#123;</span><br><span class="line">  &lt;p&gt;The price is high.&lt;/p&gt;</span><br><span class="line">  &#125;</span><br><span class="line">else if (price&gt;20 &amp;&amp; price&lt;30) </span><br><span class="line">  &#123;</span><br><span class="line">  &lt;p&gt;The price is OK.&lt;/p&gt;</span><br><span class="line">  &#125;</span><br><span class="line">else</span><br><span class="line">  &#123;</span><br><span class="line">  &lt;p&gt;The price is low.&lt;/p&gt;</span><br><span class="line">  &#125;    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@&#123;</span><br><span class="line">var weekday=DateTime.Now.DayOfWeek;</span><br><span class="line">var day=weekday.ToString();</span><br><span class="line">var message=&quot;&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">@switch(day)</span><br><span class="line">&#123;</span><br><span class="line">case &quot;Monday&quot;:</span><br><span class="line">    message=&quot;This is the first weekday.&quot;;</span><br><span class="line">    break;</span><br><span class="line">case &quot;Thursday&quot;:</span><br><span class="line">    message=&quot;Only one day before weekend.&quot;;</span><br><span class="line">    break;</span><br><span class="line">case &quot;Friday&quot;:</span><br><span class="line">    message=&quot;Tomorrow is weekend!&quot;;</span><br><span class="line">    break;</span><br><span class="line">default:</span><br><span class="line">    message=&quot;Today is &quot; + day;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;@message&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/" itemprop="url">JetBrains系列软件安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="软件破解"><a class="markdownIt-Anchor" href="#软件破解"></a> 软件破解</h1>
+<p>软件破解请参考： <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+<ol>
+<li>使用前请将“0.0.0.0 <a href="http://account.jetbrains.com" target="_blank" rel="noopener">account.jetbrains.com</a>”添加到hosts文件中</li>
+<li>在网页获取注册码，在注册页面填入注册码即可</li>
+</ol>
+<h1 id="android-studio安装"><a class="markdownIt-Anchor" href="#android-studio安装"></a> Android Studio安装</h1>
+<p>以下为相关软件下载，2／3中软件为采用第三方模拟器的时候需要下载，利用自带模拟器则可跳过下载</p>
+<ol>
+<li>下载Android Studio安装软件： <a href="https://developer.android.google.cn/studio/#downloads" target="_blank" rel="noopener">https://developer.android.google.cn/studio/#downloads</a></li>
+<li>下载virtualbox： <a href="https://www.virtualbox.org/wiki/Linux_Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Linux_Downloads</a></li>
+<li>下载Genymotion： <a href="https://www.genymotion.com/download" target="_blank" rel="noopener">https://www.genymotion.com/download</a></li>
+</ol>
+<p>安装前请确保网络状态良好，现在安装Android Studio，所需Android SDK、自带模拟器镜像、gradle等都可以在线直接通过开发工具下载安装</p>
+<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
+<p>直接安装dmg安装包即可</p>
+<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
+<ol>
+<li>进入安装包所在目录下，如：android-studio-ide-181.5056338-linux.zip</li>
+<li>sudo mkdir /usr/JetBrains</li>
+<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains</li>
+<li>cd /usr/JetBrains</li>
+<li>sudo unzip  android-studio-ide-181.5056338-linux.zip</li>
+<li>cd android-studio/bin</li>
+<li>命令行启动AndroidStuido： ./studio.sh，正常的话应该会出现软件的配置设置</li>
+<li>软件启动，因为没有Android SDK，会弹出提示界面，点击cancle之后会自动下载Android SDK，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+</ol>
+<p>设置启动图标启动Android Studio</p>
+<ol>
+<li>sudo vim /usr/share/applications/android-studio.desktop</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=Android Studio</span><br><span class="line">Comment=Android Studio Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/android-studio/bin/studio.png</span><br><span class="line">Exec=/usr/JetBrains/android-studio/bin/studio.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在启动器别表即可找到Android Studio启动图标，点击启动即可</li>
+</ol>
+<h1 id="模拟器"><a class="markdownIt-Anchor" href="#模拟器"></a> 模拟器</h1>
+<p>Android程序调试可通过真机、自带模拟器、第三方模拟器调试</p>
+<p>第三方模拟器大多使用Genymotion，官网下载：<a href="https://www.genymotion.com/download/" target="_blank" rel="noopener">https://www.genymotion.com/download/</a><br>
+android Studio安装Genymotion插件使用</p>
+<h2 id="安装过程遇到的问题"><a class="markdownIt-Anchor" href="#安装过程遇到的问题"></a> 安装过程遇到的问题</h2>
+<ol>
+<li>
+<p>linux中启动模拟器出现grant current user access to /dev/kvm错误<br>
+解决方法：打开terminal,输入代码who／whoami查找当前用户名；sudo chown username -R /dev/kvm 注意username是你用的用户名</p>
+</li>
+<li>
+<p>无法修改模拟器创建时的选项 emulated performance<br>
+解决方法： Nexus 5X和Nexus 5镜像不支持，换成其他镜像即可</p>
+</li>
+</ol>
+<p><a href="https://blog.csdn.net/wshish920907/article/details/78249528" target="_blank" rel="noopener">https://blog.csdn.net/wshish920907/article/details/78249528</a></p>
+<h1 id="intelij-idea安装"><a class="markdownIt-Anchor" href="#intelij-idea安装"></a> InteliJ IDEA安装</h1>
+<p>下载地址：<a href="http://www.jetbrains.com/idea/?fromMenu" target="_blank" rel="noopener">http://www.jetbrains.com/idea/?fromMenu</a></p>
+<h2 id="linux系统-2"><a class="markdownIt-Anchor" href="#linux系统-2"></a> Linux系统</h2>
+<ol>
+<li>进入安装包所在目录下，如：ideaIU-2016.1.2.tar.gz</li>
+<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains，如果没有JetBrains则自己创建</li>
+<li>cd /usr/JetBrains</li>
+<li>sudo tar -zxvf ideaIU-2016.1.2.tar.gz</li>
+<li>sudo mv idea-IU-145.971.21 idea</li>
+<li>cd idea/bin</li>
+<li>命令行启动Idea： ./idea.sh，正常的话应该会出现软件的配置设置</li>
+<li>软件启动，创建任意Java程序，配置JDK路径，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+</ol>
+<p>设置启动图标启动Idea</p>
+<ol>
+<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=InteliJ IDEA</span><br><span class="line">Comment=InteliJ IDEA Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/idea/bin/idea.png</span><br><span class="line">Exec=/usr/JetBrains/idea/bin/idea.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在启动器别表即可找到InteliJ IDEA启动图标，点击启动即可</li>
+</ol>
+<h1 id="webstorm安装"><a class="markdownIt-Anchor" href="#webstorm安装"></a> WebStorm安装</h1>
+<p>下载地址：<a href="http://www.jetbrains.com/webstorm/download/#section=linux" target="_blank" rel="noopener">http://www.jetbrains.com/webstorm/download/#section=linux</a></p>
+<p>webstorm安装请参考AndroidStudio和IDEA</p>
+<p>设置启动图标启动Idea</p>
+<ol>
+<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=WebStorm</span><br><span class="line">Comment=WebStorm Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/WebStorm/bin/webstorm.png</span><br><span class="line">Exec=/usr/JetBrains/WebStorm/bin/webstorm.sh</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-01-linux-配置文件启动顺序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-01-linux-配置文件启动顺序/" itemprop="url">linux 配置文件启动顺序</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.cnblogs.com/GO-NO-1/p/9084713.html" target="_blank" rel="noopener">https://www.cnblogs.com/GO-NO-1/p/9084713.html</a></p>
+<p>[toc]</p>
+<h1 id="启动顺序概述"><a class="markdownIt-Anchor" href="#启动顺序概述"></a> 启动顺序概述</h1>
+<p>当用户打开PC的电源，BIOS开机自检，按BIOS中设置的启动设备(通常是硬盘)启动，接着启动设备上安装的引导程序lilo或grub开始引导 Linux，Linux首先进行内核的引导，接下来执行init程序，init程序调用了rc.sysinit和rc等程序，rc.sysinit和rc 当完成系统初始化和运行服务的任务后，返回init；init启动了mingetty后，打开了终端供用户登录系统，用户登录成功后进入了Shell，这 样就完成了从开机到登录的整个启动过程。</p>
+<h1 id="0bios加电自检"><a class="markdownIt-Anchor" href="#0bios加电自检"></a> 0.BIOS加电自检</h1>
+<ul>
+<li>首先被启动执行的就是这个BIOS（BasicInput/Output System）程序。访问硬盘先头512Bit的MBR（Master Boot Record）</li>
+<li>经BIOS的控制，将MBR中的Boot Record调入内存中。这里就要说说Linux的Boot程序了，Linux的Boot程序有GRUB和LILO，而CentOS默认的Boot程序是GRUB</li>
+<li>通过Boot程序，访问硬盘中的Linux内核程序</li>
+<li>将内核程序调入内存中</li>
+</ul>
+<h1 id="1内核的引导核内引导"><a class="markdownIt-Anchor" href="#1内核的引导核内引导"></a> 1.内核的引导(核内引导)</h1>
+<blockquote>
+<p>Red Hat可以使用lilo或grub等引导程序开始引导Linux系统，当引导程序成功完成引导任务后，Linux从它们手中接管了CPU的控制权， 然后CPU就开始执行Linux的核心映象代码，开始了Linux启动过程。</p>
+</blockquote>
+<p>内核程序调用完成后，通过内核访问硬盘中将要用到的其他文件。<br>
+内核第一个执行的文件是/sbin/init，而这个文件的设置和定义文件是/etc/inittab这个文件，也就是说/sbin/init按照/etc/inittab的定义来执行下一步的启动</p>
+<h1 id="2运行init"><a class="markdownIt-Anchor" href="#2运行init"></a> 2.运行init</h1>
+<ol>
+<li>init是一个由内核启动的用户级进程。它的进程号是1，从这一点就能看出，init进程是系统所有进程的起点，Linux在完成核内引导以后，就开始运行init程序</li>
+<li>init程序需 要读取配置文件/etc/inittab。inittab是一个不可执行的文本文件，它有若干行指令所组成</li>
+<li>inittab的格式如下。其中以#开始的行是注释行，除了注释行之外，每一行都有以下格式：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">id:runlevel:action:process</span><br><span class="line">* id:是指入口标识符，它是一个字符串，对于getty或mingetty等其他login程序项，要求id与tty的编号相同，否则getty程序将不能正常工作。</span><br><span class="line">* runlevel: 是init所处于的运行级别的标识，一般使用0－6以及S或s。</span><br><span class="line"> - 0、1、6运行级别被系统保留：其中0作为shutdown动作，1作为重启至单用户模 式，6为重启；S和s意义相同，表示单用户模式，且无需inittab文件，因此也不在inittab中出现</span><br><span class="line"> - runlevel可以是并列的多个值，以匹配多个运行级别，对大多数action来说，仅当runlevel与当前运行级别匹配成功才会执行</span><br><span class="line">* action:描述其后的process的运行方式的。action可取的值包括：initdefault、sysinit、boot、bootwait等</span><br><span class="line">* process为具体的执行程序。程序后面可以带参数</span><br></pre></td></tr></table></figure>
+<p>加载内核 执行init程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* /etc/rc.d/rc.sysinit  #由init执行的第一个脚本</span><br><span class="line"> - 主要做在各个运行模式中相同的初始化工作，包括： 调入keymap以及系统字体 启动swapping 设置主机名、设置NIS域名检查(fsck)并mount文件系统打开quota 装载声卡模块设置系统时钟等等</span><br><span class="line">* /etc/rc.d/rc $RUNLEVEL #$RUNLEVEL为缺省的运行模式</span><br><span class="line">* /etc/rc.d/rc.local #相应级别服务启动之后、在执行该文件(其实也可以把需要执行的命令写到该文件中) </span><br><span class="line">* /sbin/mingetty # 等待用户登录</span><br></pre></td></tr></table></figure>
+<h1 id="3系统初始化"><a class="markdownIt-Anchor" href="#3系统初始化"></a> 3.系统初始化</h1>
+<p>在init的配置文件中有这么一行:si::sysinit:/etc/rc.d/rc.sysinit<br>
+,它调用执行了/etc/rc.d/rc.sysinit，而rc.sysinit是一个bash shell的脚本，它主要是完成一些系统初始化的工作，rc.sysinit是每一个运行级别都要首先运行的重要脚本。它主要完成的工作有：激活交换分 区，检查磁盘，加载硬件模块以及其它一些需要优先执行任务。</p>
+<h1 id="4启动对应运行级别的守护进程"><a class="markdownIt-Anchor" href="#4启动对应运行级别的守护进程"></a> 4.启动对应运行级别的守护进程</h1>
+<p>在rc.sysinit执行后，将返回init继续其它的动作，通常接下来会执行到/etc/rc.d/rc程序。</p>
+<p>以运行级别3为例，init将执行配置文件inittab中的以下这行：<br>
+==l5:5:wait:/etc/rc.d/rc 5==</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 这一行表示以5为参数运行/etc/rc.d/rc，/etc/rc.d/rc是一个Shell脚本，它接受5作为参数，去执行/etc/rc.d /rc5.d/目录下的所有的rc启动脚本</span><br><span class="line">* /etc/rc.d/rc5.d/目录中的这些启动脚本实际上都是一些链接文件，而不是真正的rc启动脚本， 真正的rc启动脚本实际上都是放在/etc/rc.d/init.d/目录下</span><br><span class="line">* 这些rc启动脚本有着类似的用法，它们一般能接受start、stop、 restart、status等参数</span><br><span class="line">* /etc/rc.d/rc5.d/中的rc启动脚本通常是K或S开头的链接文件，对于以以S开头的启动脚本，将以start参数来运行；调用的顺序按xx 从小到大来执行</span><br><span class="line">* 如果发现存在相应的脚本也存在K打头的链接，而且已经处于运行态了(以/var/lock/subsys/下的文件作 为标志)，则将首先以stop为参数停止这些已经启动了的守护进程，然后再重新运行</span><br></pre></td></tr></table></figure>
+<h1 id="5建立终端"><a class="markdownIt-Anchor" href="#5建立终端"></a> 5.建立终端</h1>
+<ul>
+<li>rc执行完毕后，返回init。这时基本系统环境已经设置好了，各种守护进程也已经启动了。init接下来会打开6个终端，以便用户登录系统</li>
+<li>通过按Alt+Fn(n对应1-6)可以在这6个终端中切换。在inittab中的以下6行就是定义了6个终端：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1:2345:respawn:/sbin/mingetty tty1</span><br><span class="line">2:2345:respawn:/sbin/mingetty tty2</span><br><span class="line">3:2345:respawn:/sbin/mingetty tty3</span><br><span class="line">4:2345:respawn:/sbin/mingetty tty4</span><br><span class="line">5:2345:respawn:/sbin/mingetty tty5</span><br><span class="line">6:2345:respawn:/sbin/mingetty tty6</span><br></pre></td></tr></table></figure>
+<p>从 上面可以看出在2、3、4、5的运行级别中都将以respawn方式运行mingetty程序，mingetty程序能打开终端、设置模式。同时它会显示 一个文本登录界面，这个界面就是我们经常看到的登录界面，在这个登录界面中会提示用户输入用户名，而用户输入的用户将作为参数传给login程序来验证用 户的身份。</p>
+<h1 id="6登录系统启动完成"><a class="markdownIt-Anchor" href="#6登录系统启动完成"></a> 6.登录系统，启动完成</h1>
+<ul>
+<li>当我们看到mingetty的登录界面时，我们就可以输入用户名和密码来登录系统了</li>
+<li>Linux 的账号验证程序是login，login会接收mingetty传来的用户名作为用户名参数。然后login会对用户名进行分析：如果用户名不是 root，且存在/etc/nologin文件，login将输出nologin文件的内容，然后退出。这通常用来系统维护时防止非root用户登录。</li>
+<li>在分析完用户名后，login将搜索/etc/passwd以及/etc/shadow来验证密码以及设置账户的其它信息
+<ul>
+<li>对于bash来说，系统首先寻找/etc/profile脚本文件，并执行它；然后如果用户的主目录中存在.bash_profile文件，就执行它</li>
+</ul>
+</li>
+</ul>
+<h2 id="登录时自动运行程序"><a class="markdownIt-Anchor" href="#登录时自动运行程序"></a> 登录时自动运行程序</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">用户登录时，bash首先自动执行系统管理员建立的全局登录script ：/etc/profile。</span><br><span class="line">然后bash在用户起始目录下按顺序查找三个特殊文件中的一个：/.bash_profile、/.bash_login、 /.profile，但只执行最先找到的一个。</span><br><span class="line">因此，只需根据实际需要在上述文件中加入命令就可以实现用户登录时自动运行某些程序（类似于DOS下的Autoexec.bat）</span><br></pre></td></tr></table></figure>
+<h2 id="退出登录时自动运行程序"><a class="markdownIt-Anchor" href="#退出登录时自动运行程序"></a> 退出登录时自动运行程序</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">退出登录时，bash自动执行个人的退出登录脚本/.bash_logout。</span><br><span class="line">例如，在/.bash_logout中加入命令&quot;tar －cvzf c.source.tgz ＊.c&quot;，则在每次退出登录时自动执行 &quot;tar&quot; 命令备份 ＊.c 文件。</span><br></pre></td></tr></table></figure>
+<h1 id="rcd目录"><a class="markdownIt-Anchor" href="#rcd目录"></a> rc.d目录</h1>
+<blockquote>
+<p>执行==ls -l /etc/rc.d==命令，会有刚提到的目录，说明如下：</p>
+</blockquote>
+<ol>
+<li>init.d</li>
+</ol>
+<ul>
+<li>这个不是文件，是一个目录，这个目录下面存放着各各服务的控制脚本，这下面的文件和你安装了些什么软件包有关系。</li>
+<li>etc/rc.d/rcX.d下的文件和这个init.d下面的文件是通过软连接相连的</li>
+</ul>
+<ol start="2">
+<li>rc</li>
+<li>rc.loca</li>
+</ol>
+<blockquote>
+<p>可以将启动命令写到这个文件中，让开机启动服务完毕之后，==最后==启动这个服务</p>
+</blockquote>
+<ol start="4">
+<li>rc.sysini</li>
+</ol>
+<blockquote>
+<p>这个文件是在boot的时候就被执行的脚本，它的任务是初始化系统的网络，设定hostname，欢迎信息表示，时钟设置，挂载文件系统等。</p>
+</blockquote>
+<ol start="5">
+<li>rcX.d</li>
+</ol>
+<blockquote>
+<p>在察看这个文件的时候注意3点：</p>
+</blockquote>
+<ul>
+<li>ls -l 察看它们的详细信息，看看他们的link指向</li>
+<li>ls -l 察看它们的文件名的头字母，形式应该是这样的[S或K &lt;数字&gt; &lt;名称&gt;]的形势。==S代表启动==，==K代表停止==。<br>
+即：开机的时候，以S开头的脚本文件别执行，已被开机运行；以K开头的文件不被执行，这个文件所控制的服务也不被执行，这个文件控制的服务也不被开机运行</li>
+<li>打开link指向的文件，文件头有类似“# chkconfig: 2345 10 90”一行，这一行就指定了其启动和的优先级</li>
+</ul>
+<h1 id="控制服务的一些工具"><a class="markdownIt-Anchor" href="#控制服务的一些工具"></a> 控制服务的一些工具</h1>
+<h2 id="chkconfig"><a class="markdownIt-Anchor" href="#chkconfig"></a> chkconfig</h2>
+<h2 id="setup"><a class="markdownIt-Anchor" href="#setup"></a> setup</h2>
+<blockquote>
+<p>是系统综合的配置工具，命令行下也可以用</p>
+</blockquote>
+<h2 id="system-config-services"><a class="markdownIt-Anchor" href="#system-config-services"></a> system-config-services</h2>
+<blockquote>
+<p>如果你安装了gnome这样的窗口桌面系统，你也可以使用这个工具来体验下鼠标点击带来的方便。</p>
+</blockquote>
+<h1 id="linux设置服务自启动的三种方式"><a class="markdownIt-Anchor" href="#linux设置服务自启动的三种方式"></a> Linux设置服务自启动的三种方式</h1>
+<h2 id="ln-s"><a class="markdownIt-Anchor" href="#ln-s"></a> ln -s</h2>
+<blockquote>
+<p>ln -s                 在/etc/rc.d/rc*.d目录中建立/etc/init.d/服务的软链接(*代表0～6七个运行级别之一）</p>
+</blockquote>
+<blockquote>
+<p>etc/rc[0<sub>6].d其实是/etc/rc.d/rc[0</sub>6].d的软连接，主要是为了保持和Unix的兼容性才做此策</p>
+</blockquote>
+<blockquote>
+<p>例如：etc/rc[0<sub>6].d其实是/etc/rc.d/rc[0</sub>6].d的软连接，主要是为了保持和Unix的兼容性才做此策</p>
+</blockquote>
+<p>文件位于/etc/rc.d/init.d下,名为apached，如果要服务自启动，则：</p>
+<ul>
+<li>#chmod +x /etc/rc.d/init.d/apached //设置文件的属性为可执行</li>
+<li>#ln -s /etc/rc.d/init.d/apached /etc/rc3.d/S90apache //建立软连接,快捷方式</li>
+<li>#ln -s /etc/rc.d/init.d/apached /etc/rc0.d/K20apache</li>
+</ul>
+<h2 id="chkonfig"><a class="markdownIt-Anchor" href="#chkonfig"></a> chkonfig</h2>
+<blockquote>
+<p>命令行运行级别设置</p>
+</blockquote>
+<blockquote>
+<p>如果需要自启动某些服务，只需使用chkconfig 服务名 on即可，若想关闭，将on改为off<br>
+在默认情况下，chkconfig会自启动2345这四个级别，如果想自定义可以加上–level选项</p>
+</blockquote>
+<h2 id="ntsysv"><a class="markdownIt-Anchor" href="#ntsysv"></a> ntsysv</h2>
+<blockquote>
+<p>伪图形运行级别设置</p>
+</blockquote>
+<blockquote>
+<p>启动ntsysv有两种方式，一是直接在命令行中输入ntsysv，二是使用setup命令，然后选择系统服务</p>
+</blockquote>
+<h1 id="常见的守护进程"><a class="markdownIt-Anchor" href="#常见的守护进程"></a> 常见的守护进程</h1>
+<blockquote>
+<p>在每个运行级中将运行哪些守护进程，用户可以通过chkconfig或setup中的&quot;System Services&quot;来自行设定.</p>
+</blockquote>
+<p>常见的守护进程:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">amd：自动安装NFS守护进程</span><br><span class="line">apmd:高级电源管理守护进程</span><br><span class="line">arpwatch：记录日志并构建一个在LAN接口上看到的以太网地址和IP地址对数据库</span><br><span class="line">autofs：自动安装管理进程automount，与NFS相关，依赖于NIS</span><br><span class="line">crond：Linux下的计划任务的守护进程</span><br><span class="line">named：DNS服务器</span><br><span class="line">netfs：安装NFS、Samba和NetWare网络文件系统</span><br><span class="line">network：激活已配置网络接口的脚本程序</span><br><span class="line">nfs：打开NFS服务</span><br><span class="line">portmap：RPC portmap管理器，它管理基于RPC服务的连接</span><br><span class="line">sendmail：邮件服务器sendmail</span><br><span class="line">smb：Samba文件共享/打印服务</span><br><span class="line">syslog：一个让系统引导时起动syslog和klogd系统日志守候进程的脚本</span><br><span class="line">xfs：X Window字型服务器，为本地和远程X服务器提供字型集</span><br><span class="line">Xinetd：支持多种网络服务的核心守护进程，可以管理wuftp、sshd、telnet等服务</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/数据库-2018-12-12-oracle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/12/数据库-2018-12-12-oracle/" itemprop="url">oracle</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T23:11:39+08:00">
+                2018-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>官网：<a href="https://www.oracle.com/index.html" target="_blank" rel="noopener">https://www.oracle.com/index.html</a><br>
+版本中字母的含义：c（cloud）、g（grid）、i（internet）</p>
+<p>下载：<a href="https://www.oracle.com/downloads/%EF%BC%8C%E9%9C%80%E8%A6%81%E7%99%BB%E5%BD%95oracle%E5%AE%98%E7%BD%91%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD" target="_blank" rel="noopener">https://www.oracle.com/downloads/，需要登录oracle官网，下载的两个文件解压在一个文件夹中</a></p>
+<p>安装：</p>
+<ol>
+<li>安装Oracle11g出现INS-13001环境不满足最低要求 <a href="https://blog.csdn.net/q_sea__/article/details/79012808" target="_blank" rel="noopener">https://blog.csdn.net/q_sea__/article/details/79012808</a></li>
+<li>Environment variable: “PATH”<br>
+安装时确保不要关机或断电；安装过程中复制文件过程比较耗费时间</li>
+</ol>
+<p>完整的Oracle数据库通常由两部分组成：Oracle数据库和数据库实例。</p>
+<ol>
+<li>数据库是一系列物理文件的集合（数据文件，控制文件，联机日志，参数文件等）；</li>
+<li>Oracle数据库实例则是一组Oracle后台进程/线程以及在服务器分配的共享内存区。</li>
+</ol>
+<p>在启动Oracle数据库服务器时，实际上是在服务器的内存中创建一个Oracle实例（即在服务器内存中分配共享内存并创建相关的后台内存），然后由这个Oracle数据库实例来访问和控制磁盘中的数据文件。Oracle有一个很大的内存快，称为全局区（SGA）。</p>
+<p>数据库的创建与监听器的配置54C<br>
+创建数据库:Database Conguration Assistant,可以创建、配置、删除、管理数据库<br>
+全局数据库名称为数据库名称，其至少要有一个Oracle实例引用，该实例由SID唯一标识,如：orcl<br>
+配置Enterprise Manager会占用较大内存，先不配置;注意选择字符集;修改scott和hr的密码<br>
+sys用户为数据库的所有者，system用户为数据库的操作员<br>
+监听器的配置：Net Conguration Assistant，配置完成后在系统服务中查看添加了OracleOraDb11g_home1TNSListener,此服务启动之后就允许外部连接数据库了<br>
+OracleServiceORCL是关于数据库实例的服务，此服务启动之后，数据库才可用</p>
+<p>oracle常用数据库工具<br>
+Oracle Universal Installer：OUI（Oracle全局安装器），用来安装卸载oracle数据库管理系统<br>
+Database Conguration Assistant：(DBCA)创建、配置、删除、管理数据库<br>
+Net Conguration Assistant：(NCA)监听器、命名方法、本地网络服务名、目录使用配置<br>
+SQL Plus：基于命令行的oracle官方操作工具<br>
+SQL Devloper：基于Java的图形化的oracle官方操作工具,需人工关联sqldeveloper.exe文件和配置JDK<br>
+PL/SQL Devloper：第三方工具<br>
+TOAD：第三方工具</p>
+<p>Oracle中的用户、权限与角色<br>
+用户管理：需切换到system用户操作<br>
+创建用户：create user 用户名 identified by 密码 [account lock|unlock] [password expire];（password expire表示密码立即过期，第一次登录后需修改密码）用户创建后还需授权才能操作数据库<br>
+修改用户：alter user 用户名 identified by 密码 [account lock|unlock] [password expire];<br>
+删除用户：drop user 用户名 [cascade];(cascade用来表示删除用户下的所有数据对象)<br>
+权限管理：权限为系统中设置的安全规则或安全策略，分为系统权限（用户能否在数据库上完成某个动作）和对象权限（用户能否在某个数据库对象上完成某种操作）<br>
+系统权限授予：grant 权限 to user|role [with admin option];(表示可以级联授予)<br>
+系统权限回收：revoke 权限 from user|role;<br>
+对象权限授予：grant 权限[(col,…)] on 数据库对象 to user|role [with admin option];<br>
+对象权限回收：revoke 权限[(col,…)] on 数据库对象 from user|role;<br>
+对象权限的回收是级联的，系统权限回收是非级联的<br>
+角色管理：角色是权限的集合，用来简化权限管理<br>
+创建／删除角色：create/drop role 角色;<br>
+角色上系统权限授予：grant 权限 to role [with admin option];(表示可以级联授予)<br>
+角色上系统权限回收：revoke 权限 from 角色;<br>
+角色上对象权限授予：grant 权限[(col,…)] on 数据库对象 to role [with admin option];<br>
+角色上对象权限回收：revoke 权限[(col,…)] on 数据库对象 from role;<br>
+用户角色授予：grant 角色 to 用户;<br>
+用户角色回收：revoke 角色 from 用户;</p>
+<p>Oracle表：由行和列组成的数据库中基本的存储单元，访问其他用户的表需要加用户名作为前缀<br>
+约束：表级别约束和列级别约束，由主键、外键、非空、唯一、检查5种约束<br>
+启用表的只读状态便于备份和导出表：alter table 表名 read only;启用表的读写状态：alter table 表名 read write;</p>
+<p>Oracle事务:有一组DML组成的逻辑工作单元，有原子性、一致性、独立性和持久性</p>
+<p>序列sequence：数值生成器，通常用于生成主键值，</p>
+<p>dual是Oracle提供的最小的工作表，只有一行一列，具有某些特殊功用，只有一条记录:‘X’,习惯上,我们称之为’伪表’,他的存在是为了操作上的方便,因为select都是要有特定对象的.<br>
+select count(*) from dual;</p>
+<p>索引和同义词的使用<br>
+索引：通过关联ROWID和关键值来提升查询速度<br>
+同义词：数据库对象的别名，public同义词对所有用户有用，创建需一定权限<br>
+创建：create [public] synonym 名称 for object;<br>
+删除：drop [public] synonym 名称 for object;</p>
+<p>PL/SQL：是一种程序语言，叫做过程化SQL语言（Procedural Language/SQL）。PL/SQL是Oracle数据库对SQL语句的扩展。在普通SQL语句的使用上增加了编程语言的特点<br>
+官网：<a href="https://www.oracle.com/technetwork/database/features/plsql/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/database/features/plsql/index.html</a><br>
+PL/SQL developer官网：<a href="https://www.allroundautomations.com/" target="_blank" rel="noopener">https://www.allroundautomations.com/</a><br>
+PLSQL Developer 12 注册码<br>
+product code： 4vkjwhfeh3ufnqnmpr9brvcuyujrx3n3le<br>
+serial Number：226959<br>
+password: xs374ca</p>
+<p>配置pl/sql的Database的两种方式：<br>
+确保OracleOraDb11g_home1TNSListener和OracleServiceXXXX服务已启动<br>
+1.登录时直接在Database选项输入数据库信息:在登录时输入数据库信息 ip:端口/数据库名,如：127.0.0.1:1521/ORCL<br>
+2.配置product\11.2.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora文件，添加一下内容到文档最后，登录时输入如ORCL即可登录<br>
+ORCL =<br>
+(DESCRIPTION =<br>
+(ADDRESS_LIST =<br>
+(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))<br>
+)<br>
+(CONNECT_DATA =<br>
+(SERVER = DEDICATED)<br>
+(SERVICE_NAME = ORCL)<br>
+)<br>
+)</p>
+<p><a href="https://www.jikexueyuan.com/course/oracledb/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/</a></p>
+<p><a href="https://www.oracle.com/technetwork/topics/winsoft-085727.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/topics/winsoft-085727.html</a></p>
+<p><a href="https://www.cnblogs.com/xiashiwendao/p/7634240.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiashiwendao/p/7634240.html</a></p>
+<p>严格来讲SQL会分为三种类型:</p>
+<p>1、数据操纵语言（DML）：用来操纵数据库中数据的命令。包括：select、insert、update、delete。</p>
+<p>2、数据定义语言（DDL）：用来建立数据库、数据库对象和定义列的命令。包括：create、alter、drop。</p>
+<p>3、数据控制语言（DCL）：用来控制数据库组件</p>
+<p>用select * from tab;来查询用户下的表<br>
+查看表结构用:DESC 表名称</p>
+<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
+全局数据库名：就是一个数据库的标识，在安装时就要想好，以后一般不修改，修改起来也麻烦，因为数据库一旦安装，数据库名就写进了控制文件，数据库表，很多地方都会用到这个数据库名。<br>
+启动数据库：也叫全局数据库，是数据库系统的入口，它会内置一些高级权限的用户如SYS，SYSTEM等。我们用这些高级权限账号登陆就可以在数据库实例中创建表空间，用户，表了。</p>
+<p>查询当前数据库名：select name from v$database;</p>
+<p>我们访问Oracle都是访问一个实例，但这个实例如果关联了数据库文件，就是可以访问的，如果没有，就会得到实例不可用的错误。<br>
+实例名指的是用于响应某个数据库操作的数据库管理系统的名称。她同时也叫SID。实例名是由参数instance_name决定的<br>
+查询当前数据库实例名：select instance_name from v$instance;</p>
+<p>从oracle9i版本开始，引入了一个新的参数，即数据库服务名。数据库的逻辑表示，它是数据库呈现给客户机的方式。参数名是SERVICE_NAME。如果数据库有域名，则数据库服务名就是全局数据库名；否则，数据库服务名与数据库名相同。</p>
+<p>网络服务名(NET SERVICES NAME)<br>
+         它是“连接描述符”简称，连接描述符是网络连接目标特殊格式的描述，它包括网络协议、主机名称或地址、和目标服务<br>
+         在Oracle7和Oracle8版本,目标服务由Oracle系统标识符(SID)来标识，而Oracle8i、Oracle9i则通过数据库服务名来来标识。保存tnsnames.ora文件中在格式如下：<br>
+ myDB =<br>
+   (DESCRIPTION =<br>
+     (ADDRESS_LIST =<br>
+       (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.10.1)(PORT = 1521))<br>
+     )<br>
+     (CONNECT_DATA =<br>
+       (SERVICE_NAME = <a href="http://testDB.ChinaMobile.com" target="_blank" rel="noopener">testDB.ChinaMobile.com</a>)<br>
+     )<br>
+   )</p>
+<p>若要向ORACLE代理商购买ORACLE，是以用户数来算钱的。那么，这个“用户”跟我们在ORACLE中通过</p>
+<p>CREATE USER USERNAME IDENTIFIED BY PASSWORD创建的用户是不同概念，“用户数”指的是并发访问用户数，</p>
+<p>（我理解是同时间访问同一个内存地址的进程数）。要是我买了8个用户的，可以建几十、上百个用户也没问题，只要峰值达不到并发数就可以了。</p>
+<p>打个比方，你的名字叫小明，但是你有很多外号。你父母叫你小明，但是朋友都叫你的外号。<br>
+这里你的父母就是oracle实例，小明就是sid，service name就是你的外号。<br>
+sid用于实例区分各个数据库，service name用于外部链接。</p>
+<p>一个Oracle Server由一个Oracle实例和一个Oracle数据库组成。<br>
+即：Oracle Server = Oracle Instance + Oracle Database</p>
+<p>Oracle实例包括了内存结构(SGA)和一系列后台进程(Background Process),两者合起来称为一个Oracle实例，即：Oracle Instance = SGA + Background Process</p>
+<p>数据库逻辑组织结构<br>
+表空间、段、区、块<br>
+一个数据库由一个或多个表空间组成，一个表空间只能属于一个数据库<br>
+一个表空间由一个或多个多个数据文件组成，一个数据文件只能属于一个表空间<br>
+一个数据文件由一个或多个操作系统块组成，每一个操作系统块只能数以一个数据文件<br>
+一个表空间可以包含一个或多个段，一个段只能属于一个表空间<br>
+一个段由一个或多个区组成，每一个区只能属于一个段<br>
+一个区由一个或多个Oracle 块组成，每一个Oracle块只能属于一个区<br>
+一个区只能属于一个数据文件，数据文件的空间可以分配到一个或多个区<br>
+一个Oracle 块由一个或多个操作系统块组成，一个操作系统块是一个Oracle块的一部分</p>
+<p><a href="https://blog.csdn.net/prince_lintb/article/details/78772999" target="_blank" rel="noopener">https://blog.csdn.net/prince_lintb/article/details/78772999</a></p>
+<p>pl/sql plus： &quot;／&quot;表示执行</p>
+<p>scott库：<a href="https://www.2cto.com/database/201805/742911.html" target="_blank" rel="noopener">https://www.2cto.com/database/201805/742911.html</a></p>
+<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
+<a href="http://www.cnblogs.com/kscnchina/p/4570865.html" target="_blank" rel="noopener">http://www.cnblogs.com/kscnchina/p/4570865.html</a></p>
+<p>声明时，变量以v_开头，常量以c_开头</p>
+<p><a href="https://blog.csdn.net/michaelehome/article/details/79464214" target="_blank" rel="noopener">https://blog.csdn.net/michaelehome/article/details/79464214</a></p>
+<p>select userenv(‘language’) from dual;<br>
+NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
+<p>字符集：<a href="https://www.cnblogs.com/kaishirenshi/p/9018343.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaishirenshi/p/9018343.html</a></p>
+<p>本地动态sql</p>
+<p>SQL环境  begin … end pl/sql环境</p>
+<p>一组SQL语句操作要成为事务，数据库管理系统必须保证这组操作的原子性（Atomicity）、一致性（consistency）、隔离性（Isolation）和持久性（Durability），这就是ACID特性。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/数据库-2018-12-10-MongoDB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/10/数据库-2018-12-10-MongoDB/" itemprop="url">MongoDB</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T20:38:05+08:00">
+                2018-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.jikexueyuan.com/course/mongoDB/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/mongoDB/</a></p>
+<p>NoSQL数据库：NoSQL(NoSQL = Not Only SQL )，意即&quot;不仅仅是SQL&quot;，指的是非关系型的数据库</p>
+<p>mongodb官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a><br>
+<a href="https://docs.mongodb.com/manual/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/</a></p>
+<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
+MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
+<p>NoSQL保证数据的最终一致性，数据由更新延迟</p>
+<p>CAP理论</p>
+<p>适用场景：数据缓存；json格式数据存储；高伸缩性场景；<br>
+MongoDB更多适合大数据量、高并发、弱事务的互联网应用，其内置的水平扩展机制提供了从几百万到十亿级别的数据处理能力，可很好的满足Web2.0和移动互联网应用的s数据存储要求。</p>
+<p>MongoDB由C++编写，支持32位（2G限制）和64位应用，是一个基于分布式文件存储的开源数据库系统。</p>
+<p>MongoDB3.0特性：</p>
+<ol>
+<li>加入WiredTiger存储引擎:<br>
+开源的存储引擎；为现代硬件设计：多核CPU，充分利用内存／芯片级缓存；RAM/SSD/HDD；为大数据设计：高性能，低延迟，高并发稳定性</li>
+<li>MMAPv1:内存映射存储引擎，为默认引擎 ，提供了Collection锁；无缝迁移MMAP</li>
+<li>可插拔引擎API</li>
+<li>基于Web的可视化管理工具：Ops Manager</li>
+</ol>
+<p>MongoDB数据模型<br>
+文档：本质上是一种类JSON的BSON格式的数据，可以理解为在JSON基础上添加了一些新的数据类型，包括Date，正则表达式等。<br>
+BSON官网：<a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>
+BSON是由一组组键值对组成，具有轻量性、可靠性和高效性3个特征。可遍历性是MongoDB将BSON作为数据存储的重要原因<br>
+使用文档时需要注意以下事项：<br>
+MongoDB中写操作的原子性限制在文档级别；<br>
+单个文档占用的存储空间不能超过16MB；<br>
+MongoDB会尽量保持文档被插入时键值对的顺序；<br>
+关于文档命名需要注意的事项：<br>
+_id是系统保留的关键字，他是默认的主键，该值在集合中必须唯一，且不可更改；<br>
+键不能包含空字符或\0，这个字符用于表示键的结尾；<br>
+不能以$开头且不能包含点号.<br>
+键是区分大小写的且不能重复</p>
+<p>集合：把一组相关的文档放到一起组成了集合，MongoDB的集合是模式自由的，一个集合里面的文档可以是各式各样的<br>
+MogoDB提供了一些特殊的集合：capped collection、system.indexes、system.namespaces等<br>
+集合命名需注意：<br>
+集合名不能是空字符串；<br>
+集合名不能包含空字符串或\0，该字符表示集合名的结尾<br>
+集合名不能以&quot;system.&quot;开头，此前缀是系统本身保留的<br>
+集合名不能包含$字符，但是可以包含点号.</p>
+<p>数据库：多个文档组成集合，多个集合组成数据库。一个MongoDB实例可承载多个数据库，每个数据库有独立的权限，在磁盘上，不同的数据库也可放置到不通目录<br>
+数据库命名规则：<br>
+不能是空字符串；不能以$开头；不能包含空字符串和点号.;数据库名称区分大小写；建议数据库名全部使用小写；数据库名最长64字节；不要与系统保留数据库名相同</p>
+<p>命名空间：把数据库名添加到集合名前面，中间用点号连接，得到集合的完全限定，就是命名空间<br>
+因为点号可以出现在集合名字中，如：jike.blog.posts 和 jike.blog.authors，可以将posts和authors看作是blog集合的子集合，blog集合甚至可以不存在<br>
+使用子集合的方式，可以是我们更好的组织数据，使数据结构更加清晰明了</p>
+<p>MongoDB数据类型<br>
+基本数据类型<br>
+null：表示空值或者不存在的字段<br>
+布尔：true／false<br>
+数据类型：32-int,64-int,64-double,注意：JavaScript只支持64位浮点数<br>
+字符串类型：使用UTF-8对字符串进行编码<br>
+二进制数据：可以保存由任意字节组成的字符串，如：图片、视频等<br>
+正则表达式类型：主要用于查询，使用正则表达式作为限定条件<br>
+Date类型：是一个64位整数，它代表距Unix epoch：1970-1-1的毫秒数，MongoDB在存储时间是现转换为UTC时间，北京时间=UTC+8小时，MongoDB Shell会根据本地时间 设置显示日期时间<br>
+Timestap：32bit Unix epoch + 32bit自增序数，只供MongoDB数据库服务内部使用，用于记录操作的详细时间<br>
+ObjectId：由24个16精制字符组成，每个字节存储两位16精制数字，总共需12字节存储空间=4字节时间戳+3字节机器标识+2字节pid+3字节计数器，ObjectId(),getTimestamp(),valueOf()<br>
+数组：使用方括号来表示的一组值，数组中可以包含不通数据类型的元素，针对数组，MongoDB提供了许多操作符，如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pop,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span></span></span></span>push,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pull,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span></span></span></span>slice,$addToSet等；MongoDB可自动为数组元素建立MultiKey索引<br>
+内嵌文档：文档可以作为键的值，这样的文档成为内嵌文档。内嵌文档可以使数据不用保存成扁平结果的键值对，从而使数据组织形式更加自然。</p>
+<p>内嵌文档模式VS引用文档模式<br>
+子文档比较小或变化不频繁，则使用内嵌文档模式，否则使用引用文档模式</p>
+<p>MongoDB自动将_id字段设置为主键</p>
+<p>MongoDB Shell：是MongoDB自带的JavaScript Shell，随MongoDB一起发布 =JavaScript V8解释器+MongoDB客户端</p>
+<p>help查看帮助<br>
+执行脚本<br>
+直接执行：mongo [–quiet] script.js<br>
+交互执行：load(“script.js”)<br>
+执行命令行程序：run(“ls”)<br>
+.mongorc.js文件，默认会加载<br>
+编辑复合变量EDITOR：在.bashrc中添加后source生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#EDITOR</span><br><span class="line">EDITOR=/usr/bin/vim</span><br></pre></td></tr></table></figure>
+<p>即可使用editor编辑文档</p>
+<p><a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-intro.html</a><br>
+Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。<br>
+GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。<br>
+MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</p>
+<p>MongoDB数据库安装：</p>
+<ol>
+<li>下载安装文件解压缩并添加bin目录到环境变量</li>
+<li>创建一个data目录，然后在data目录里创建db目录、logs目录</li>
+<li>启动服务端</li>
+<li>启动客户端：mongo</li>
+<li>windows下可以将MongoDB做成系统服务</li>
+</ol>
+<p>mac<br>
+临时添加环境变量：export PATH=/usr/local/mongodb/bin:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mi mathvariant="normal">编</mi><mi mathvariant="normal">辑</mi><mtext> </mtext><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>s</mi><msub><mi>h</mi><mi>p</mi></msub><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">：</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">PATH
+编辑~/.bash_profile,添加：export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord cjk_fallback">编</span><span class="mord cjk_fallback">辑</span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:/usr/local/mongodb4/bin/:$PATH 即可永久添加环境变量</p>
+<p>连接MongoDB数据库：./mongo + 服务器IP:端口号/数据库名<br>
+关闭MongoDB服务在 ./mongo 进入控制台后，输入 use admin,然后输入 db.shutdownServer()</p>
+<p>Mongodb可以通过命令行方式和配置文件的方式来启动：<br>
+这两种方式都是在前台启动Mongodb进程，如果Session窗口关闭，Mongodb进程也随之停止。<br>
+不过Mongodb同时还提供了一种后台Daemon方式启动，只需要加上一个&quot;–fork&quot;参数即可，用到了&quot;–fork&quot;参数就必须启用&quot;–logpath&quot;参数<br>
+通过命令行： ./bin/mongod --dbpath=/data/db --fork --logpath=/data/logs/mongodb.log<br>
+配置文件方式：./bin/mongod -f mongodb.conf  或 ./bin/mongod --config mongodb.conf  //-f 后面写要使用的配置文件<br>
+./bin/mongod --shutdown -f mongod.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">dbpath=/usr/local/mongodb/data/</span><br><span class="line">logpath=/usr/local/mongodb/log/mongodb.log  </span><br><span class="line">fork = true</span><br></pre></td></tr></table></figure>
+<p>命令行操作：<br>
+use mytetDB  //数据库如果不存在则创建<br>
+save时如果给定了_ObjectId则更新创建整条记录；如果要更新部分字段则使用update方法使用$set<br>
+db.dropDatabase()<br>
+db//显示当前数据库<br>
+show dbs<br>
+show collections</p>
+<p>有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。<br>
+admin： 从权限的角度来看，这是&quot;root&quot;数据库。要是将一个用户添加到这个数据库，这个用户自动继承所有数据库的权限。一些特定的服务器端命令也只能从这个数据库运行，比如列出所有的数据库或者关闭服务器。<br>
+local: 这个数据永远不会被复制，可以用来存储限于本地单台服务器的任意集合<br>
+config: 当Mongo用于分片设置时，config数据库在内部使用，用于保存分片的相关信息。</p>
+<p>MongoDB GridFS文件系统<br>
+分布式文件系统：将固定存储于单台机器上的文件系统，扩展到多台机器上，每个节点负责存储部分数据，众多的存储节点组成一个文件系统网络，各个节点通过网络进行通信和数据传输</p>
+<p>当存储文档大于16M时，可以考虑使用GridFS<br>
+GridFS：是MongoDB制定的如何在数据库中存储大文件的规范，MongoDB并没有实现GridFS，而是交由客户端驱动程序实现<br>
+GridFS使用两个集合（collection）存储文件。一个集合是chunks, 用于存储文件内容的二进制数据；一个集合是files，用于存储文件的元数据。<br>
+使用fs.files存储文件的元数据，包含字段如下：<br>
+使用fs.chunks存储以255K进行分割的文件块，包含字段如下：<br>
+GridFS适用于如下场景：<br>
+存储用户产生的文件且文件数量比较大；需要文件的自动备份和分布式存储；需要访问文件的部分内容；存储16MB以上的文件<br>
+mongofiles是MongoDB安装包中提供的一个工具，专门用来存取文件，包括查询所有文件、查看文件、上传一个文件、获取一个文件、按照_id来获取文件、按文件名删除文件、按_id删除文件。<br>
+mongofiles --help其实有四个主要命令，分别为：<br>
+put —存储命令<br>
+get —获取命令<br>
+list —列表命令<br>
+delete —删除命令</p>
+<p>MongoDB聚合管道：聚合操作主要用户批量数据处理，往往将记录按条件分组，然后在每组上分别进行一系列操作，如：求和、求最大小值等<br>
+聚合操作能够对记录进行复杂处理，主要为数理统计和数据挖掘。<br>
+MongoDB提供了3种聚合操作方式：<br>
+聚合管道（Aggregation Pipeline）:MongoDB Shell使用db.collection.aggregate([{…}])来构建和使用聚合管道<br>
+$project:用于修改文档的结构，可以重命名、增加或删除文档字段<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">滤</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi></mrow><annotation encoding="application/x-tex">match:用于过滤文档，在</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">滤</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span></span></span></span>match中不能使用$where,尽量出现在管道的前面，方便借助索引加快查询<br>
+$group:将集合中的文档进行分组，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
+$sort:将集合中的文档进行排序，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
+$skip:跳过指定数量的文档<br>
+$unwind:将文档按照数组字段拆分成多条文档，每条文档包含数组的一个元素<br>
+$geoNear:按照由近到远顺序输出接近某一地理位置的文档<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">将</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">储</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">阶</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">键</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">构</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">：</mi><mn>1</mn><mi mathvariant="normal">将</mi></mrow><annotation encoding="application/x-tex">out:将聚合结果存储到集合中，参数为集合名称
+    。。。
+    聚合管道表达式：阶段操作符可以看作是&quot;键&quot;，所对应的&quot;值&quot;称为管道表达式，管道表达式可以看作是管道操作符的操作数，管道表达式是一个文档结构，由字段名、字段值和表达式操作符组成。
+    聚合管道使用优化：
+    1将</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">储</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">阶</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord">&quot;</span><span class="mord cjk_fallback">键</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord">&quot;</span><span class="mord cjk_fallback">值</span><span class="mord">&quot;</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord">1</span><span class="mord cjk_fallback">将</span></span></span></span>match、$sort放到管道开始阶段，有利于利用索引提高文档处理效率<br>
+2提交过滤可减少流经后续阶段的文档数量<br>
+聚合管道的限制：<br>
+1返回文档结果不能超过16M，可通过返回一个游标或存储到集合中跳过此限制<br>
+单目的聚合操作<br>
+count<br>
+distinct<br>
+group<br>
+MapReduce编程模型</p>
+<p>mongoimport可以导入集合</p>
+<p>MongoDB数据更新<br>
+文档插入和删除：insert、update、delete<br>
+Bulk函数：Bulk可将多个数据更新操作放到一个待执行的列表中批量来执行，顺序执行的Bulk（按添加顺序执行，一个有问题则退出）和并执行的Bulk（随机方式并行）<br>
+1初始化Bulk：<br>
+并行：db.集合名.initializeUnorderedBulkOp()<br>
+顺序：db.集合名.initializeOrderedBulkOp()<br>
+2 bulk.inset({…})<br>
+3 bulk.execute()</p>
+<p>MMAPv1的内存分配策略：如果一个更新操作超过了文档在磁盘上预分配的空间，MongoDB会重新在磁盘上为其分配一块更大的连续空间。使用&quot;2的N次方&quot;的方式分配内存，如：32，64，128，256…2M，4M…<br>
+优点：1有利用内存的重用，降低系统碎片的数量；2减少数据移动频率，提高系统数据写效率</p>
+<p>文档修改<br>
+WriteResult = db.集合名.update(query,obj,upsert,multi)<br>
+query:查询条件，相当于where<br>
+obj：更改的内容，相当于SQL中的set语句<br>
+upsert：当query的文档不存在时是否插入一条新文档<br>
+multi：当query返回多个文档时是否一次更新满足条件的所有文档，默认只更新一条</p>
+<p>内嵌文档的修改：</p>
+<ol>
+<li>修改整个内嵌文档：{$set:{field1:新内嵌文档}}</li>
+<li>修改内嵌文档的某个字段：{$某个修改操作符:{field1.field2:value}}</li>
+</ol>
+<p>数组元素：MongoDB提供了大量的特定操作符，使得数组既可以作为栈、队列等有序对象使用，也可当作集合等无序对象来使用</p>
+<p>MongoDB的写安全机制<br>
+写过程：使用update、save等操作数据集合中数据时，只是修改了数据再内存中的映像，数据更新并没有同步地保存到磁盘上，而且更新内存中数据之前，更新操作会被记录到journal日志文件中，<br>
+每隔100ms将内存journal中的日志写到磁盘journal日志文件中 ，每隔60s将内存中修改的数据写会到磁盘上<br>
+写入安全级别：写入安全Write Concern是一种客户端设置的，用于控制写入安全级别的机制，通过写入安全机制可提高数据的可靠性。<br>
+分为四个级别，分别是：<br>
+非确认式写入Unacknowledged：写操作不会返回结果，所以无法知道是否写入成功；但速度快、效率高、无阻塞<br>
+确认式写入Acknowledged：写操作必须得到MongoDB服务器的写入确认，如果失败，会返回异常<br>
+日志写入Journaled：写操作要等到操作记录存储到Journal日志文件后才返回结果<br>
+复制集确认写入Replica Acknowledged：写操作不仅要得到主节点的写入确认，还要得到从节点的写入确认，可以设置写入节点的个数（包含主节点）</p>
+<p>journal日志相当于oracle中的redo日志文件，用户故障恢复和持久。Journal默认100ms刷新一次，所以最多丢失100ms数据<br>
+文件位于journal目录中，只能以追加方式添加数据，文件名以&quot;j._&quot;开头，超过1G会自动创建新的；数据库正常关闭时，数据库服务会自动清空journal目录下所有文件</p>
+<p>设置写安全操作级别，其实就是在写操作的性能和可靠性间取一个权衡；使用的写操作级别越高，时间越长，可靠性越高</p>
+<p>使用writeConcern函数作为更新函数的一个参数来设置写安全级别,如：db.集合名称.insert({name:“joe”},{writeConcern:{j:true}}),writeConcern函数参数如下：<br>
+w选项，可选择0，1，2等整数值及&quot;majority&quot;，0-非确认式写入 1-确认式写入（未启用复制集）／主节点确认式写入（启用了复制集），&gt;1只能用于复制集，2-数据至少写到1个从节点后返回，majority 只能用于复制集，表示更新操作用到大多数从节点<br>
+j选项，设置为true来使用journaled日志安全级别<br>
+wtimeout选项，用于设置超时单位为毫秒<br>
+以上选项可组合使用</p>
+<p>数据MongoDB数据查询<br>
+Cursor = db.集合名称.find(query,fields,limit,skip)<br>
+query:查询条件，相当于where<br>
+fields:用于字段映射，语法格式：{field:0}（0表示返回结果不包含此字段）或{field:1}（1表示返回结果不包含此字段），默认包含_id字段,相当于select中后面需要的字段<br>
+limit：限制查询结果集的数量，指定查询返回结果的数量上限，也可通过limit()实现<br>
+skip:跳过一定数据量的结果，设置第一条返回文档的偏移量，也可通过skip()实现<br>
+find查询只能正对一个集合；返回的集合默认是无序的</p>
+<p>db.集合名称.findOne()只返回第一条数据</p>
+<p>查询操作符<br>
+比较查询操作符<br>
+逻辑查询操作符<br>
+元素查询操作符<br>
+$where查询操作符：可以将JavaScript表达式的字符串或JavaScript函数作为查询语句的一部分，在js表达式和函数中，可使用this或obj来引用当前操作的文档，当js表达式或函数返回true时，才会返回当前文档</p>
+<p>内嵌文档与数组查询<br>
+内嵌文档查询<br>
+1查询整个内嵌文档：当内嵌文档的键值对数量和键值对顺序都相同时，才会匹配<br>
+2查询文档的某个字段：需要使用.号操作符，如:db.user.find({“address.city”:“BeiJing”})<br>
+数组查询<br>
+1查询整个数组：当数组元素内容和数组元素顺序都相同时，才会匹配<br>
+2查询数组中的元素（普通元素）：<br>
+A与位置无关，查询数组中含有某个值的文档，如：db.user.find({score:80})<br>
+B与位置有关，按照指定的数组索引查询数组元素的值，如：db.user.find({‘scores.2’:80})<br>
+3查询数组中的数组元素是文档时，查询数组元素有两种情况<br>
+A与位置无关，查询数组中满足条件的子文档元素，如：db.user.find(‘scores.成绩’：95)<br>
+B与位置有关，按照指定的数组索引查询数组子文档，如： db.user.find(‘scores.2.成绩’：95)</p>
+<p>MongoDB查询结果返回过程：find函数查询结果是以多条文档的形式分批来返回查询结果的，返回的文档会缓存到内存中，Cursor在一批数据回来之后遍历，下一批没来时会自动发起下一批请求，然后继续遍历</p>
+<p>MongoDB游标：用来遍历结果集中的数据。<br>
+游标的生命周期：创建、使用、销毁<br>
+游标可能会返回那些由于体积变大而被移动到集合末尾的文档而重复返回，可通过对查询快照的方式解决此问题，语法为：db.collection.find().snapshot().<br>
+使用快照之后，查询就会在_id索引上来遍历执行，这样就可以保证每个文档只被返回一次，从而保证获取结果的一致性。</p>
+<p>模糊查询：查询条件可以使用正则表达式实现模糊查询，支持正则表达式操作符和正则表达式对象两种。<br>
+正则表达式操作符：$regex</p>
+<p>findAndModify函数使用执行分为find和update两步，但可以保证操作的原子性</p>
+<p>MongoDB是为分布式存储而设计，_id主键默认使用ObjectId类型的值，比自增方式更适合分布式环境，所以MongoDB默认不支持字段自增长功能</p>
+<p>MongoDB索引：数据库索引是对数据表中一列或多列的值进行排序的一种数据结构，使用索引可快速访问数据表中的特定信息。MogonDB索引不仅提高文档查询速度，还有利于排序时节省内存资源。<br>
+MongoDB所有的索引信息被保存在system.indexes集合中，且默认总为_id创建单字段升序具有唯一属性的索引，可通过db.system.indexes.find()查看所有索引<br>
+MongoDB可在单个字段上建立索引，字段可以是普通字段、整个文档以及子文档的某个字段<br>
+对于复合索引，MongoDB支持前缀匹配<br>
+为确保查询只使用复合索引，可以使用映射来指定不要返回_id字段（除非它是复合索引的一部分）<br>
+多键索引：是对数组类型建立的索引，实际上是对数组的每个元素建立索引，而不是数组本身建立索引；当数组元素是文档时，可为文档的某个字段建立多键索引<br>
+哈希索引：只支持等值查询，不支持范围查询，主要用于分片的集合上，可以作为片键来使用，能将数据比较均匀的分散存储在各个分片上，如：db.集合名.createIndex({name:“hashed”})</p>
+<p>MongoDB索引的属性<br>
+唯一索引:可以确保集合的每一个文档的索引字段都有唯一的值，不会出现重复值，如：db.集合名.createIndex({name:1},{unique:true})，在非空集合创建唯一索引可能会因为已有重复值而失败，可添加dropBups:true删除重复文档<br>
+稀疏索引：只会为索引字段存在的文档建立索引，即使索引字段的值为null，但不会为索引字段不存在的文档建立索引<br>
+TTL(Time To Live)索引：为文档设置一个超时时间，当达到预设置的时间后，该文档会被数据库自动删除，但删除可能有延迟。这种类型的索引对缓存问题非常有用。只能建立在单独非_id字段<br>
+创建了TTL索引后，MongoDB会有一个后台线程来管理文档；在复制集上建立的TTL索引，TTL后台线程只会运行在主节点上</p>
+<p>MongoDB索引的管理<br>
+索引的默认命名规则：keyname1_dir1_keyname2_dir2…，其中keynameX是索引字段的名称，dirX是索引方向，1升序-1降序，也可自定义命名<br>
+创建索引：db.集合名.createIndex(keys,options),返回值为一个文档类型。索引一旦创建就不能修改，创建后可通过db.集合名.getIndexes()查看集合所拥有的索引，创建索引有两种方式：<br>
+1foreground:阻塞所有对数据库的读写请求，直到索引创建完成，为默认方式<br>
+2background：创建索引时，如果有新的数据库请求，创建过程会暂停<br>
+删除索引：db.集合.dropIndex(index)<br>
+查询优化器：用来优化查询过程，通过比较返回100条文档速度得到最佳查询计划<br>
+explain函数：能够提供大量与查询有关的信息，可以很好的评估索引性能，帮助优化索引的使用策略。db.集合.find().explain(mode),支持3种模式：<br>
+1queryPlanner：查询计划，默认<br>
+2executionStatus：查询性能统计<br>
+3allPlansExecution：所有计划统计信息（最优与被拒绝的计划）<br>
+explain返回结果使用由多个阶段（Stage）组成的树形结构来表示查询计划，查询计划自下而上执行，树的叶节点用来访问文档或索引，内部节点处理下层节点返回文档或索引，根节点输出查询结果<br>
+hint函数：强制MongoDB使用特定索引</p>
+<p>MongoDB特殊索引<br>
+地理空间索引：对地理位置数据建立索引，MongoDB支持两种2dsphere球面索引和平面2d索引<br>
+2dSphere球面索引<br>
+2d平面索引</p>
+<p>全文索引：又称为倒排索引，用于在大量文本中对每一个词组建立索引，指出该词在整段文本中出现的位置和次数，此技术主要用于搜索引擎和站内搜索等。<br>
+一个集合只能有一个全文索引</p>
+<p>java对mongodb的使用<br>
+集群搭建：mongodb分布式集群搭建手记</p>
+<p>学习：<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html" target="_blank" rel="noopener">http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html</a></p>
+<p>分析没有默认的，因为你还没给root设置密码，第一个 user 是在 admin 组 ，所以他可以给 root 设置密码 , so<br>
+sudo passwd root</p>
+<p>Language Support</p>
+<p><a href="http://blog.csdn.net/sinat_35418761/article/details/53241481" target="_blank" rel="noopener">http://blog.csdn.net/sinat_35418761/article/details/53241481</a></p>
+<p><a href="http://www.2cto.com/database/201504/395442.html" target="_blank" rel="noopener">http://www.2cto.com/database/201504/395442.html</a><br>
+<a href="http://www.myexception.cn/operating-system/1685604.html" target="_blank" rel="noopener">http://www.myexception.cn/operating-system/1685604.html</a></p>
+<p><a href="https://my.oschina.net/chinacaptain/blog/465723" target="_blank" rel="noopener">https://my.oschina.net/chinacaptain/blog/465723</a></p>
+<p><a href="http://api.mongodb.com/java/current/" target="_blank" rel="noopener">http://api.mongodb.com/java/current/</a></p>
+<p>MongoDB是什么<br>
+MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
+他的特点:高性能、易部署、易使用，存储数据非常方便。</p>
+<p>Bson：Binary Serialized Document Format，是一种类json的一种二进制形式的存储格式，简称Binary JSON，它和JSON一样，支持内嵌的文档对象和数组对象，但是BSON有JSON没有的一些数据类型，如Date和BinData类型</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/10/Java-2018-12-10-MyBatis/" itemprop="url">MyBatis</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T13:43:24+08:00">
+                2018-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Java持久化框架 瞬态+持久态</p>
+<p>iBatis-MyBatis<br>
+apache-google-github</p>
+<p>SQL语句与代码分离；面向配置编程；良好支持复杂数据映射；动态SQL</p>
+<p><a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">https://github.com/mybatis/mybatis-3</a><br>
+<a href="http://www.mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/index.html</a></p>
+<p>日志配置<br>
+<a href="https://www.cnblogs.com/zhaozihan/p/6371133.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaozihan/p/6371133.html</a></p>
+<p>MyBatisg工作流程</p>
+<ol>
+<li>读取配置文件</li>
+<li>生成SqlSessionFactory,表示和数据库的连接，一般是程序级的生命周期</li>
+<li>简历SqlSession</li>
+<li>调用MyBatist提供的API</li>
+<li>查询Map配置</li>
+<li>返回结果</li>
+<li>关闭SqlSession</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;$&#123;driver&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;$&#123;url&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;$&#123;username&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>map文件引用<br>
+1.相对路径 2.绝对路径 3.包路径</p>
+<p>MyBatis配置文件：基本配置文件+映射配置文件</p>
+<p>typeAliases标记定义别名，需要environments标记之前</p>
+<p>map文件方式+注解方式（接口方式）</p>
+<p>mappers里面3种写法：resource／class／package</p>
+<p>Select配置属性说明<br>
+两者只能有一个成立<br>
+resultType<br>
+resultMap解决复杂查询时的映射问题，如属性为对象</p>
+<p>parameterType封装hashmap，key既是key也是sql形参<br>
+parameterType封装对象如User，对象参数自动匹配属性，如果对象属性和列名不一样用别名</p>
+<p>返回多上记录时MyBatis自动封装成List</p>
+<p>事务处理：<br>
+MyBatis事务处理由两种方式处理：JDBC+MANAGED</p>
+<p>每张表单独的一个配置文件，方便管理</p>
+<p>MyBatis自动id返回，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one.setUserName(&quot;123&quot;);</span><br><span class="line">session.insert(&quot;insertOne&quot;,one);</span><br><span class="line">System.out.println(one.id);  //可以正常获取id</span><br></pre></td></tr></table></figure>
+<p>高级查询<br>
+关联查询<br>
+联合查询：association<br>
+构造查询：POJO添加构造函数，同时确保要有默认构造函数，防止构造函数重新后找不到默认构造函数<br>
+子查询：所有联合查询，都可以通过子查询替换，但是他让查询成了N+1次的查询</p>
+<pre><code>子查询和联合查询的区别：
+联合查询一次查询占用资源大，子查询N+1次查询占用资源可大可小，MyBatis中子查询可能速度比联合查询速度高如果开启了懒加载的话
+懒加载的使用：配置要在配置别名之前
+</code></pre>
+<p>集合查询：Collection标记，适用于查询的对象还有一个集合引用的事后<br>
+鉴别器：discriminator标记<br>
+javaType属性：<br>
+Column属性：<br>
+Case子标记：</p>
+<p>MyBatis动态SQL：动态生成SQL</p>
+<p><a href="https://www.aliyun.com/jiaocheng/811373.html" target="_blank" rel="noopener">https://www.aliyun.com/jiaocheng/811373.html</a></p>
+<p><a href="https://www.jikexueyuan.com/course/oracledb/1-0-0-0/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/1-0-0-0/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-Kotlin/" itemprop="url">Kotlin</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://kotlinlang.org/" target="_blank" rel="noopener">http://kotlinlang.org/</a><br>
+<a href="https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt" target="_blank" rel="noopener">https://try.kotlinlang.org/#/Examples/Hello, world!/Simplest version/Simplest version.kt</a></p>
+<p>Kotlin作者Andrey<br>
+Kotlin是一种在 Java 虚拟机上运行的静态类型编程语言,被称之为 Android 世界的Swift,由 JetBrains 设计开发并开源<br>
+Kotlin是一种运行在Java虚拟机、Android、浏览器上的静态语言<br>
+Kotlin可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。<br>
+Android官方语言；100%兼容Java；Kotlin-js前端开发；Kotlin-jvm服务端开发；Kotlin-native本地执行程序；Kotlin是一门全栈语言</p>
+<p>千里之行，始于Hello World</p>
+<p>Kotlin不存在拆箱装箱问题;Kotlin不可隐式转换类型<br>
+var tmp:[类型]=[变量值]</p>
+<p>Boolean类型<br>
+Number数据类型：Byte，Short，Int，Long，Float，Double<br>
+Char数据类型：Char<br>
+String数据类型：String         字符串a==b 比较内容；a===b比较应用  字符串模版$args1  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>1</mn><mo>+</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>2</mn></mrow><mo separator="true">,</mo><mi mathvariant="normal">引</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">中</mi></mrow><annotation encoding="application/x-tex">{args1+args2},引号中</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">2</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">中</span></span></span></span>引用变量 ，多行<br>
+var a:String …<br>
+a1<br>
+a2<br>
+…</p>
+<p>Kotlin中 Any 等于 Java中 Object，是顶级类</p>
+<p>空类型：任意类型都有可空和不可空两种状态，？表示可为空，!!表示强制认定nullable不可为空<br>
+fun main(args:Array<string>){<br>
+var name:String = getName() ?: return<br>
+println(name)</string></p>
+<pre><code>var tmp:String? = &quot;Hello Kotlin&quot;
+println(tmp)
+println(tmp!!.length)
+</code></pre>
+<p>}</p>
+<p>fun getName():String?{<br>
+return null<br>
+}</p>
+<p>智能类型转换<br>
+Java方式的：var sub:Subclass = parent as Subclass   //类似于Java方式，转换异常则会抛异常<br>
+安全类型转换：var sub:Subclass? = parent as? Subclass   //如果转换失败，则返回null，不抛异常</p>
+<p>if(parent is Subclass)</p>
+<p>import com.test as test</p>
+<p>区间Range:一个数学上的概念，表示范围；是ClosedRange的子类，IntRange最常用；i in 0…1024 判断i是否在区间内<br>
+var range:IntRange = 0…1024    //[0,1024]<br>
+var range:IntRange = 0 until 1024    //[0,1024) == [0,1023]</p>
+<p>className::java.class.name<br>
+className::java.class.simpleName</p>
+<p>数组: val array:Array&lt;&gt; = arrayOf(…)<br>
+为了避免不必要的拆箱和装箱，基本类型的数组是定制的<br>
+val arrayOfInt:IntArray = intArrayOf(1,2,4)<br>
+val arrayOfChar:CharArray = charArrayOf(‘H’,‘e’,‘y’)<br>
+val arrayOfString: Array<string> = arrayOf(“Hello”,“Kotlin”)<br>
+val arrayOfOther:Array<other> = arrayOf(Other(1),Other(2))</other></string></p>
+<p>常量：val，常量因为赋值了，编译器可以推导出来类型，所以类型可以不用写，变量：var</p>
+<p>External Tools<br>
+Tools-&gt;Kotlin-&gt;Show Kotlin Bytecode</p>
+<p>函数：Kotlin中没有申明返回值的默认返回值是Unit<br>
+kotlinc安装，使用和javac一样<br>
+变量函数<br>
+var int2Long = fun(x:Int):Long{<br>
+return x.toLong()<br>
+}<br>
+int2Long(123)<br>
+fun sum(arg1:Int,arg2:Int) = arg1+arg2<br>
+Lambda表达式调用使用()或者invoke(),如：sum(1,2) 或 sum.invoke(1,2)<br>
+Lambda表达式–匿名函数</p>
+<p>var = {arg1:Int,arg2:Int -&gt; arg1+arg2}</p>
+<p>arrayOfString.forEach { println(it) }   //如果字面函数只有一个参数,可以省略该参数声明,并用“it”代替<br>
+arrayOfString.forEach(::println)</p>
+<p>Lambda表达式中的return<br>
+<a href="https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app</a></p>
+<p>public inline fun <t> Array<out t="">.forEach(action: (T) -&gt; Unit): Unit {<br>
+for (element in this) action(element)<br>
+}</out></t></p>
+<p>indexes.forEach {<br>
+if (it &gt; 5) {<br>
+return@forEach<br>
+}<br>
+println(it)<br>
+}</p>
+<p>indexes.forEach label@ {<br>
+if (it &gt; 5) {<br>
+return @label<br>
+}<br>
+println(it)<br>
+}</p>
+<p>函数参数调用时最后一个Lambda可以移出去<br>
+函数参数只有一个Lambda，调用时小括号可以省略<br>
+Lambda有一个参数，可默认为it<br>
+入参、返回值与形参一致的函数可以用函数引用的方式作为实参传入</p>
+<p>类成员方法和成员变量<br>
+class B<br>
+class A{<br>
+var b=0;<br>
+lateinit var c:String<br>
+val d:B by lazy{<br>
+B()<br>
+}<br>
+}<br>
+属性初始化</p>
+<ol>
+<li>尽量在构造方法中完成</li>
+<li>无法在构造方法中完成的，尝试降级为局部变量</li>
+<li>var用lateinit延迟初始化，val用lazy</li>
+<li>可空类型慎用null直接初始化</li>
+</ol>
+<p>中缀表达式：只有一个参数，且用infix修饰的函数<br>
+class Book {infix fun on(placeString:String){…}}<br>
+Book() on “My Desk” //使用方式<br>
+分支表达式：<br>
+val mode=if(args.isNotEmpty() &amp;&amp; args[0] ==1){<br>
+0<br>
+}else{<br>
+1<br>
+}</p>
+<p>异常捕捉<br>
+try …catch …finally中的执行完之后，再返回结果，可通过var获取返回值</p>
+<p>具名参数：sum(arg1=2,arg0=3)  //参数就可以不按照顺序传递了<br>
+变长参数：如main方法中的args<br>
+fun test(vararg  args:String){}<br>
+默认参数：给出参数默认值</p>
+<p>导出可执行程序</p>
+<p>kotlin应用场景：</p>
+<p>kotlin-android</p>
+
           
         
       
@@ -2017,7 +2748,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2072,7 +2803,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2083,7 +2814,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2094,7 +2825,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2165,7 +2896,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
+ <span id="busuanzi_value_site_uv"></span>
 </span>
 </div>
 
@@ -2188,7 +2919,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共44.0k字</span>
+  <span class="post-count">博客全站共97.8k字</span>
 </div>
 
 

@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Java-2018-12-19-aa/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/" itemprop="url">JetBrains系列软件安装配置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Java-2018-12-19-aa/" itemprop="url">aa</a></h2>
         
 
         <div class="post-meta">
@@ -365,28 +365,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -417,89 +395,25 @@
       
         
           
-            <h1 id="软件破解"><a class="markdownIt-Anchor" href="#软件破解"></a> 软件破解</h1>
-<p>软件破解请参考： <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
-<ol>
-<li>使用前请将“0.0.0.0 <a href="http://account.jetbrains.com" target="_blank" rel="noopener">account.jetbrains.com</a>”添加到hosts文件中</li>
-<li>在网页获取注册码，在注册页面填入注册码即可</li>
-</ol>
-<h1 id="android-studio安装"><a class="markdownIt-Anchor" href="#android-studio安装"></a> Android Studio安装</h1>
-<p>以下为相关软件下载，2／3中软件为采用第三方模拟器的时候需要下载，利用自带模拟器则可跳过下载</p>
-<ol>
-<li>下载Android Studio安装软件： <a href="https://developer.android.google.cn/studio/#downloads" target="_blank" rel="noopener">https://developer.android.google.cn/studio/#downloads</a></li>
-<li>下载virtualbox： <a href="https://www.virtualbox.org/wiki/Linux_Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Linux_Downloads</a></li>
-<li>下载Genymotion： <a href="https://www.genymotion.com/download" target="_blank" rel="noopener">https://www.genymotion.com/download</a></li>
-</ol>
-<p>安装前请确保网络状态良好，现在安装Android Studio，所需Android SDK、自带模拟器镜像、gradle等都可以在线直接通过开发工具下载安装</p>
-<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
-<p>直接安装dmg安装包即可</p>
-<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
-<ol>
-<li>进入安装包所在目录下，如：android-studio-ide-181.5056338-linux.zip</li>
-<li>sudo mkdir /usr/JetBrains</li>
-<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains</li>
-<li>cd /usr/JetBrains</li>
-<li>sudo unzip  android-studio-ide-181.5056338-linux.zip</li>
-<li>cd android-studio/bin</li>
-<li>命令行启动AndroidStuido： ./studio.sh，正常的话应该会出现软件的配置设置</li>
-<li>软件启动，因为没有Android SDK，会弹出提示界面，点击cancle之后会自动下载Android SDK，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
-</ol>
-<p>设置启动图标启动Android Studio</p>
-<ol>
-<li>sudo vim /usr/share/applications/android-studio.desktop</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=Android Studio</span><br><span class="line">Comment=Android Studio Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/android-studio/bin/studio.png</span><br><span class="line">Exec=/usr/JetBrains/android-studio/bin/studio.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在启动器别表即可找到Android Studio启动图标，点击启动即可</li>
-</ol>
-<h1 id="模拟器"><a class="markdownIt-Anchor" href="#模拟器"></a> 模拟器</h1>
-<p>Android程序调试可通过真机、自带模拟器、第三方模拟器调试</p>
-<p>第三方模拟器大多使用Genymotion，官网下载：<a href="https://www.genymotion.com/download/" target="_blank" rel="noopener">https://www.genymotion.com/download/</a><br>
-android Studio安装Genymotion插件使用</p>
-<h2 id="安装过程遇到的问题"><a class="markdownIt-Anchor" href="#安装过程遇到的问题"></a> 安装过程遇到的问题</h2>
-<ol>
-<li>
-<p>linux中启动模拟器出现grant current user access to /dev/kvm错误<br>
-解决方法：打开terminal,输入代码who／whoami查找当前用户名；sudo chown username -R /dev/kvm 注意username是你用的用户名</p>
-</li>
-<li>
-<p>无法修改模拟器创建时的选项 emulated performance<br>
-解决方法： Nexus 5X和Nexus 5镜像不支持，换成其他镜像即可</p>
-</li>
-</ol>
-<p><a href="https://blog.csdn.net/wshish920907/article/details/78249528" target="_blank" rel="noopener">https://blog.csdn.net/wshish920907/article/details/78249528</a></p>
-<h1 id="intelij-idea安装"><a class="markdownIt-Anchor" href="#intelij-idea安装"></a> InteliJ IDEA安装</h1>
-<p>下载地址：<a href="http://www.jetbrains.com/idea/?fromMenu" target="_blank" rel="noopener">http://www.jetbrains.com/idea/?fromMenu</a></p>
-<h2 id="linux系统-2"><a class="markdownIt-Anchor" href="#linux系统-2"></a> Linux系统</h2>
-<ol>
-<li>进入安装包所在目录下，如：ideaIU-2016.1.2.tar.gz</li>
-<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains，如果没有JetBrains则自己创建</li>
-<li>cd /usr/JetBrains</li>
-<li>sudo tar -zxvf ideaIU-2016.1.2.tar.gz</li>
-<li>sudo mv idea-IU-145.971.21 idea</li>
-<li>cd idea/bin</li>
-<li>命令行启动Idea： ./idea.sh，正常的话应该会出现软件的配置设置</li>
-<li>软件启动，创建任意Java程序，配置JDK路径，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
-</ol>
-<p>设置启动图标启动Idea</p>
-<ol>
-<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=InteliJ IDEA</span><br><span class="line">Comment=InteliJ IDEA Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/idea/bin/idea.png</span><br><span class="line">Exec=/usr/JetBrains/idea/bin/idea.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在启动器别表即可找到InteliJ IDEA启动图标，点击启动即可</li>
-</ol>
-<h1 id="webstorm安装"><a class="markdownIt-Anchor" href="#webstorm安装"></a> WebStorm安装</h1>
-<p>下载地址：<a href="http://www.jetbrains.com/webstorm/download/#section=linux" target="_blank" rel="noopener">http://www.jetbrains.com/webstorm/download/#section=linux</a></p>
-<p>webstorm安装请参考AndroidStudio和IDEA</p>
-<p>设置启动图标启动Idea</p>
-<ol>
-<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=WebStorm</span><br><span class="line">Comment=WebStorm Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/WebStorm/bin/webstorm.png</span><br><span class="line">Exec=/usr/JetBrains/WebStorm/bin/webstorm.sh</span><br></pre></td></tr></table></figure>
+            <p><a href="https://www.cnblogs.com/god--love-you/p/6133390.html" target="_blank" rel="noopener">https://www.cnblogs.com/god--love-you/p/6133390.html</a></p>
+<p>springboot<br>
+<a href="https://blog.csdn.net/forezp/column/info/15397/1" target="_blank" rel="noopener">https://blog.csdn.net/forezp/column/info/15397/1</a><br>
+<a href="https://blog.csdn.net/vbirdbest/article/category/7490600/3" target="_blank" rel="noopener">https://blog.csdn.net/vbirdbest/article/category/7490600/3</a></p>
+<p><a href="https://github.com/lenve/vhr" target="_blank" rel="noopener">https://github.com/lenve/vhr</a></p>
+<p>netty<br>
+<a href="https://waylau.com/netty-4-user-guide/" target="_blank" rel="noopener">https://waylau.com/netty-4-user-guide/</a></p>
+<p><a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener">https://github.com/doocs/advanced-java</a></p>
+<p><a href="https://blog.csdn.net/qq_38765404/article/details/78615572" target="_blank" rel="noopener">https://blog.csdn.net/qq_38765404/article/details/78615572</a></p>
+<p><a href="http://www.cnblogs.com/felixzh/p/5869212.html" target="_blank" rel="noopener">http://www.cnblogs.com/felixzh/p/5869212.html</a></p>
+<p>oracle<br>
+<a href="https://www.cnblogs.com/kane1990/p/OracleNetManager.html" target="_blank" rel="noopener">https://www.cnblogs.com/kane1990/p/OracleNetManager.html</a><br>
+<a href="https://blog.csdn.net/u011179993/article/details/51554324" target="_blank" rel="noopener">https://blog.csdn.net/u011179993/article/details/51554324</a><br>
+<a href="https://www.cnblogs.com/yadongliang/p/5840203.html" target="_blank" rel="noopener">https://www.cnblogs.com/yadongliang/p/5840203.html</a><br>
+<a href="http://blog.51cto.com/mazongfei/2126876" target="_blank" rel="noopener">http://blog.51cto.com/mazongfei/2126876</a><br>
+<a href="https://blog.csdn.net/weixin_37480339/article/details/81017214" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37480339/article/details/81017214</a><br>
+<a href="https://blog.csdn.net/wangjialiang/article/details/7867791" target="_blank" rel="noopener">https://blog.csdn.net/wangjialiang/article/details/7867791</a></p>
+<p><a href="http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html</a></p>
+
           
         
       
@@ -556,7 +470,7 @@ android Studio安装Genymotion插件使用</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -575,7 +489,7 @@ android Studio安装Genymotion插件使用</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-04-git安装配置/" itemprop="url">git安装配置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
         
 
         <div class="post-meta">
@@ -610,8 +524,1357 @@ android Studio安装Genymotion插件使用</p>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
+</blockquote>
+<blockquote>
+<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
+</blockquote>
+<blockquote>
+<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
+<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
+<p>Centos7解决图形界面卡死问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS下yum源的搭建与使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS下yum源的搭建与使用/" itemprop="url">CentOS下yum源的搭建与使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="yum简介"><a class="markdownIt-Anchor" href="#yum简介"></a> yum简介</h1>
+<ul>
+<li>yum就是为了解决依赖关系而存在的</li>
+<li>yum源就相当是一个目录项，当我们使用yum机制安装软件时，若需要安装依赖软件，则yum机制就会根据在yum源中定义好的路径查找依赖软件，并将依赖软件安装好</li>
+<li>YUM是“Yellow dog Updater, Modified”的缩写，是一个软件包管理器，YUM从指定的地方（相关网站的rpm包地址或本地的rpm路径）自动下载RPM包并且安装，能够很好的解决依赖关系问题</li>
+<li>yum两种源：本地yum源和网络yum源</li>
+</ul>
+<h1 id="yum工作机制"><a class="markdownIt-Anchor" href="#yum工作机制"></a> yum工作机制</h1>
+<ol>
+<li>服务器端</li>
+</ol>
+<ul>
+<li>在服务器上面存放了所有的RPM软件包，然后以相关的功能去分析每个RPM文件的依赖性关系，将这些数据记录成文件存放在服务器的某特定目录内</li>
+</ul>
+<ol start="2">
+<li>客户端</li>
+</ol>
+<ul>
+<li>如果需要安装某个软件时，先下载服务器上面记录的依赖性关系文件(可通过WWW或FTP方式)，通过对服务器端下载的纪录数据进行分析，然后取得所有相关的软件，一次全部下载下来进行安装</li>
+</ul>
+<h1 id="yum文件"><a class="markdownIt-Anchor" href="#yum文件"></a> yum文件</h1>
+<blockquote>
+<p>在/etc/yum.repos.d 目录下存放的就是yum源的设定文件</p>
+</blockquote>
+<blockquote>
+<p>yum repolist all   //此命令可查看启用的源配置文件</p>
+</blockquote>
+<p>*.repo各配置项说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* [base]：代表容器的名字，里面的名称则可以随意取，但是不能有两个相同的容器名称， 否则 yum 会不晓得该到哪里去找容器相关软体清单档案</span><br><span class="line">* name：只是说明一下这个容器的意义而已，重要性不高</span><br><span class="line">* mirrorlist=：列出这个容器可以使用的映射站台，如果不想使用，可以注解到这行</span><br><span class="line">* baseurl=：这个最重要，因为后面接的就是容器的实际网址！ mirrorlist 是由 yum 程式自行去捉映射站台， baseurl 则是指定固定的一个容器网址</span><br><span class="line">* enable=1：就是让这个容器被启动  </span><br><span class="line">* gpgcheck=1：指定是否需要查阅RPM档案内的数位签章！0表示不检测</span><br><span class="line">* gpgkey=：就是数位签章的公钥档所在位置！使用预设值即可</span><br></pre></td></tr></table></figure>
+<h1 id="更改yum源与更新系统"><a class="markdownIt-Anchor" href="#更改yum源与更新系统"></a> 更改yum源与更新系统</h1>
+<ul>
+<li>备份/etc/yum.repos.d/CentOS-Base.repo:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
+<ul>
+<li>进入yum源配置文件所在文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>下载163或其他的yum源配置文件，放入/etc/yum.repos.d/(操作前请做好相应备份)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.163.com/.help/CentOS6-Base-163.repo</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行yum makecache生成缓存:yum makecache</li>
+<li>更新系统:yum -y update</li>
+</ul>
+<h1 id="yum基本使用"><a class="markdownIt-Anchor" href="#yum基本使用"></a> yum基本使用</h1>
+<p>参数说明:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-y : 如果在工作过程中如要使用者响应,这个参数可以直接回答yes</span><br><span class="line">list : 列出在yum server 上面有的RPM套件</span><br><span class="line">install: 安装某个套件</span><br><span class="line">update : 升级某个套件,如果update后面没有接套件名称,即更新目前主机所有已安装的套件.</span><br><span class="line">info   : 列出某个套件的详细信息,相当于rpm -qi package内容</span><br><span class="line">clean : 将已下载到本机的packages或headers移除</span><br><span class="line">remove : 移除已经安装在系统中的某个套件</span><br><span class="line">yum localinstall package 本地安装软件包</span><br><span class="line">yum update 全部更新</span><br><span class="line">yum update package 更新指定程序包package</span><br><span class="line">yum check-update 检查可更新的程序</span><br><span class="line">yum info 显示安装包信息</span><br><span class="line">yum list 显示所有已经安装和可以安装的程序包 </span><br><span class="line">yum search 查找软件包</span><br><span class="line">yum remove | erase package1 删除程序包</span><br><span class="line">yum clean headers 清除header</span><br><span class="line">yum clean packages 清除下载的rpm包</span><br><span class="line">yum clean all 清除header与rpm包</span><br></pre></td></tr></table></figure>
+<h1 id="yum源服务器的搭建"><a class="markdownIt-Anchor" href="#yum源服务器的搭建"></a> yum源服务器的搭建</h1>
+<p>yum源的搭建可分为三步：①搭建Apache服务器②挂载ISO镜像，将镜像中的包放至Apache服务器目录下③ISO镜像的包比较老旧，可以定时同步其他源中的包到本地</p>
+<h1 id="客户端访问yum源服务器"><a class="markdownIt-Anchor" href="#客户端访问yum源服务器"></a> 客户端访问yum源服务器</h1>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS查看硬件信息/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS查看硬件信息/" itemprop="url">CentOS查看硬件信息</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>操作系统信息：lsb_release -a ；uname -a</li>
+<li>查看网卡型号：lspci | grep  Ethernet controller</li>
+<li>查看硬盘信息：df -ah</li>
+<li>查看内存信息：cat /proc/meminfo</li>
+<li>查看CPU信息：more /proc/cpuinfo | grep “model name”</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS系统GRUB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS系统GRUB/" itemprop="url">CentOS系统GRUB</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<blockquote>
+<p>Grub（GRand Unified Bootloader）是统一资源引导器，也就是引导加载器；它的工作是提供一个菜单，允许用户选择要启动的系统或不同的内核版本；把用户选定的内核装载到RAM中的特定空间中，然后解压、展开，而后把系统控制权移交给内核</p>
+</blockquote>
+<blockquote>
+<p>它目前有两个版本：</p>
+</blockquote>
+<ol>
+<li>GRUB 0.X：Grub Legacy</li>
+<li>GRUB 1.X：Grub2</li>
+</ol>
+<p><img src="http://note.youdao.com/yws/api/personal/file/WEB1757c30da1a3a8c8f9ff3272fc6119ea?method=download&amp;shareKey=df69cd3a77eed3186307b58a07a55ad5" alt="Grub启动流程图"></p>
+<h1 id="grub-legacy概述"><a class="markdownIt-Anchor" href="#grub-legacy概述"></a> Grub Legacy概述</h1>
+<blockquote>
+<p>Grub Legacy是最经典的Grub程序。它分为三个部分stage1、stage1_5和stage2</p>
+</blockquote>
+<ol>
+<li>stage1</li>
+</ol>
+<blockquote>
+<p>即写入mbr中存储的bootloader程序。它的任务就是将stage1_5（此时并不能算是磁盘分区/boot/grub/下的stage1_5,因为stage1无法识别文件系统）载入内存执行</p>
+</blockquote>
+<ol start="2">
+<li>stage1_5</li>
+</ol>
+<blockquote>
+<p>位于mbr之后的扇区，通过提供基本文件系统驱动让stage1中的bootloader程序能识别磁盘分区/boot/grub/上的stage2文件并载入内存执行</p>
+</blockquote>
+<p>注意：此处若是boot分区的文件系统类型不属于stage1_5的中的一个，则会借助ramdisk来加载在/lib64/moudles/下额外的文件系统驱动。</p>
+<ol start="3">
+<li>stage2</li>
+</ol>
+<blockquote>
+<p>这个程序主要给用户提供一个比较友好的启动菜单，而后去加载位于同一个磁盘分区/boot/的内核文件（例如 vmlinuz-2.6.32-573.el6.x86_64）</p>
+</blockquote>
+<h1 id="grub的配置文件和功用"><a class="markdownIt-Anchor" href="#grub的配置文件和功用"></a> Grub的配置文件和功用</h1>
+<blockquote>
+<p>配置文件：/boot/grub/grub.conf，保证grub和内核等在一个目录；此外它创建了一个链接文件/etc/grub.conf指向配置文件来保证用户使用配置文件一致性</p>
+</blockquote>
+<p>配置项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">default=#：设定默认启动的菜单项：菜单项（title）编号从0开始</span><br><span class="line">timeout=#：指定菜单项等待选项选择的时长；</span><br><span class="line">splashimage=(hd#,#)/PATH/TO/XPM_PIC_FILE：指明菜单背景图片文件路径；</span><br><span class="line">hiddemenu：隐藏菜单</span><br><span class="line">password [--md5] STRING：菜单编辑认证；</span><br><span class="line">title TITLE：定义菜单项“标题”，可出现多次；</span><br><span class="line">   root（hd#，#）：grub查找stage2及kernel文件所在设备分区：为grub的“根”</span><br><span class="line">   kernel /PATH/TO/VMLINUZ_FILE [PARAMETERS]：启动的内核</span><br><span class="line">   initrd /PATH/TO/INITRAMFS_FILE：内核匹配的ramfs文件</span><br><span class="line">   password [--md5] STRING：启动选定的内核或者操作系统进行认证；</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<blockquote>
+<p>/boot/grub/menu.lst 或者 /boot/grub/grub.conf  CentOS下这两个文件是绑定的</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># grub.conf generated by anaconda     </span><br><span class="line">#     </span><br><span class="line"># Note that you do not have to rerun grub after making changes to this file     </span><br><span class="line"># NOTICE:  You have a /boot partition.  This means that     </span><br><span class="line">#          all kernel and initrd paths are relative to /boot/, eg.     </span><br><span class="line">#          root (hd1,0)     </span><br><span class="line">#          kernel /vmlinuz-version ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">#          initrd /initrd-version.img     </span><br><span class="line">#boot=/dev/sdb     </span><br><span class="line">default=0    </span><br><span class="line">timeout=5    </span><br><span class="line">splashimage=(hd0,0)/grub/splash.xpm.gz     </span><br><span class="line">hiddenmenu     </span><br><span class="line">title CentOS (2.6.18-274.3.1.el5)     </span><br><span class="line">        root (hd0,0)     </span><br><span class="line">        kernel /vmlinuz-2.6.18-274.3.1.el5 ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">        initrd /initrd-2.6.18-274.3.1.el5.img     </span><br><span class="line">title CentOS (2.6.18-238.el5)     </span><br><span class="line">        root (hd0,0)     </span><br><span class="line">        kernel /vmlinuz-2.6.18-238.el5 ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">        initrd /initrd-2.6.18-238.el5.img     </span><br><span class="line">title Other     </span><br><span class="line">        rootnoverify (hd0,3)     </span><br><span class="line">        chainloader +1</span><br></pre></td></tr></table></figure>
+<p>功用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 提供菜单、并提供交互式接口</span><br><span class="line">* e：编辑模式，用于编辑菜单</span><br><span class="line">* c：命令模式，交互式接口</span><br><span class="line">2. 加载用户选择的内核或操作系统</span><br><span class="line">* 允许传递参数给内核；可隐藏此菜单（通过grub.conf中的hiddenmenu）</span><br><span class="line">3. 为菜单提供了保护机制</span><br><span class="line">* 为编辑菜单进行认证（title上定义的password）</span><br><span class="line">* 为启用内核或者操作系统进行认证（title下的password字段）</span><br></pre></td></tr></table></figure>
+<h1 id="grub的命令行接口和编辑功能"><a class="markdownIt-Anchor" href="#grub的命令行接口和编辑功能"></a> Grub的命令行接口和编辑功能</h1>
+<ol>
+<li>进入grub的命令行界面和编辑界面</li>
+</ol>
+<ul>
+<li>启动机器时，按ESC键可进入内核选择界面</li>
+<li>按c可进入命令行界面</li>
+<li>按e可进入编辑界面</li>
+</ul>
+<ol start="2">
+<li>rub的命令行命令和编辑命令</li>
+</ol>
+<p>grub的命令行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">help：获取帮助信息</span><br><span class="line">help KEYWORD：获取某一具体命令的帮助信息</span><br><span class="line">find (hd#,#)/PATH/TO/SOMEFFILE：查找文件（内核文件等）</span><br><span class="line">root (hd#,#)：设定那个磁盘是根，执行后，fnd不需指磁盘了；</span><br><span class="line">kernel /PATH/TO/KERNEL_FILE：设定本次启动时用到的内核文件；</span><br><span class="line">initrd /PATH/TO/OMOTRAMFS_FILE：设定为选定的initrd文件</span><br><span class="line">boot：引导启动选定的内核；</span><br></pre></td></tr></table></figure>
+<p>grub的编辑命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">b：boot，启动</span><br><span class="line">e：edit，编辑选中的项</span><br><span class="line">o：在选中行的下一行新加一行</span><br><span class="line">O：在选中行的上一行添加一行</span><br><span class="line">d：删除选中行</span><br><span class="line">ESC：可以退出编辑界面进入主界面</span><br></pre></td></tr></table></figure>
+<h1 id="grub的安装"><a class="markdownIt-Anchor" href="#grub的安装"></a> grub的安装</h1>
+<ol>
+<li>grub-install</li>
+</ol>
+<p>使用格式：grub-install --root-directory=/PATH/TO/rootDIR DEVICE<br>
+示例：grub-install --root-directory=/ /dev/sda3<br>
+2. grub命令（shell中输入）</p>
+<p>grub&gt; root (hd0,0)</p>
+<p>grub&gt; setup (hd0)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-Linux下scp命令详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-Linux下scp命令详解/" itemprop="url">CentOS修改Root密码</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="scp简介"><a class="markdownIt-Anchor" href="#scp简介"></a> scp简介</h1>
+<p>scp是secure copy的简写，用于在Linux下进行远程拷贝文件的命令，和它类似的命令有cp，不过cp只是在本机进行拷贝不能跨服务器，而且scp传输是加密的。可能会稍微影响一下速度。</p>
+<h1 id="scp作用说明"><a class="markdownIt-Anchor" href="#scp作用说明"></a> scp作用说明</h1>
+<ol>
+<li>我们需要获得远程服务器上的某个文件，远程服务器既没有配置ftp服务器，没有开启web服务器，也没有做共享，无法通过常规途径获得文件时，只需要通过scp命令便可轻松的达到目的</li>
+<li>我们需要将本机上的文件上传到远程服务器上，远程服务器没有开启ftp服务器或共享，无法通过常规途径上传是，只需要通过scp命令便可以轻松的达到目的。</li>
+</ol>
+<h1 id="使用举例"><a class="markdownIt-Anchor" href="#使用举例"></a> 使用举例</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#将本地文件拷贝到服务器上</span><br><span class="line">scp -rp /path/filename username@remoteIP:/path </span><br><span class="line">#将远程文件从服务器下载到本地</span><br><span class="line">scp -rp username@remoteIP:/path/filename /path </span><br><span class="line"></span><br><span class="line">#压缩传输</span><br><span class="line">tar cvzf - /path/ | ssh username@remoteip &quot;cd /some/path/; cat -&gt; path.tar.gz&quot; </span><br><span class="line">#压缩传输一个目录并解压</span><br><span class="line">tar cvzf - /path/ | ssh username@remoteip &quot;cd /some/path/; tar xvzf -&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="脚本方式举例"><a class="markdownIt-Anchor" href="#脚本方式举例"></a> 脚本方式举例</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash  </span><br><span class="line">ssh root@192.168.0.23   &lt;&lt; remotessh  </span><br><span class="line">killall -9 java  </span><br><span class="line">cd /data/apache-tomcat-7.0.53/webapps/  </span><br><span class="line">exit  </span><br><span class="line">remotessh</span><br></pre></td></tr></table></figure>
+<p>远程执行的内容在“&lt;&lt; remotessh ” 至“ remotessh ”之间，在远程机器上的操作就位于其中，注意的点：&lt;&lt; remotessh，ssh后直到遇到remotessh这样的内容结束，remotessh可以随便修改成其他形式。在结束前，加exit退出远程节点</p>
+<h1 id="参数"><a class="markdownIt-Anchor" href="#参数"></a> 参数</h1>
+<ul>
+<li>-v 和大多数 linux 命令中的 -v 意思一样 , 用来显示进度 . 可以用来查看连接 , 认证 , 或是配置错误</li>
+<li>-C 使能压缩选项</li>
+<li>-4 强行使用 IPV4 地址</li>
+<li>-6 强行使用 IPV6 地址</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-Shell脚本调试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-Shell脚本调试/" itemprop="url">Shell脚本调试</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<blockquote>
+<p>shell编程在unix/linux世界中使用得非常广泛，熟练掌握shell编程也是成为一名优秀的unix/linux开发者和系统管理员的必经之路</p>
+</blockquote>
+<blockquote>
+<p>与其它高级语言相比，shell解释器缺乏相应的调试机制和调试工具的支持，其输出的错误信息又往往很不明确</p>
+</blockquote>
+<h1 id="调试方法"><a class="markdownIt-Anchor" href="#调试方法"></a> 调试方法</h1>
+<h2 id="通过echo方式"><a class="markdownIt-Anchor" href="#通过echo方式"></a> 通过echo方式</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">功能: 最简单的调试方法，可以在任何怀疑出错的地方用echo打印变量</span><br><span class="line">场合: 所有怀疑可能有问题的地方</span><br><span class="line">示例: echo $VAR</span><br></pre></td></tr></table></figure>
+<h2 id="通过test的方式"><a class="markdownIt-Anchor" href="#通过test的方式"></a> 通过test的方式</h2>
+<p>返回值为0为真,1表假</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test -f /test.sh | echo $?</span><br></pre></td></tr></table></figure>
+<h2 id="使用调试工具-bashdb"><a class="markdownIt-Anchor" href="#使用调试工具-bashdb"></a> 使用调试工具-bashdb</h2>
+<blockquote>
+<p>使用shell调试器bashdb，这是一个类似于GDB的调试工具，可以完成对shell脚本的断点设置，单步执行，变量观察等许多功能</p>
+</blockquote>
+<p>用法：bashdb -c <a href="http://script.sh" target="_blank" rel="noopener">script.sh</a>   或者 bashdb <a href="http://script.sh" target="_blank" rel="noopener">script.sh</a></p>
+<h2 id="通过trap来调试"><a class="markdownIt-Anchor" href="#通过trap来调试"></a> 通过trap来调试</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">作用: 用于捕获指定的信号并执行预定义的命令</span><br><span class="line">语法: trap `command` signal</span><br><span class="line">说明: signal是要捕获的信号,command是捕获到指定的信号，所要执行的命令, 可以用kill -l命令看到系统中全部可用的信号名,捕获信号后所执行的命令,可以是一条或多条合法的Shell语句,也可以是一个函数名, Shell脚本执行时，会产生三个伪信号(之所以称为伪信息，因这是shell自己产生，而非操作系统产生)，通过使用trap 捕获这三个伪信号并输出信息对调试大有帮助</span><br><span class="line"></span><br><span class="line">Shell脚本执行时，会产生三个伪信号(之所以称为伪信息，因这是shell自己产生，而非操作系统产生)，通过使用trap 捕获这三个伪信号并输出信息对调试大有帮助.SHELL三个伪信号:</span><br><span class="line"></span><br><span class="line">* EXIT  从一个函数中退出或整个执行完毕</span><br><span class="line">* ERR   当一个命令执行不成功，返回非0状态时</span><br><span class="line">* DEBUG 脚本中每一条命令执行之前</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">errorTrap()</span><br><span class="line">&#123;</span><br><span class="line">    echo &quot;[LINE:$1]Error: Command or function exited with status $?&quot;</span><br><span class="line">&#125;</span><br><span class="line">foo()</span><br><span class="line">&#123;</span><br><span class="line">    return 1;</span><br><span class="line">&#125;</span><br><span class="line">trap &apos;errorTrap $LINENO&apos; ERR</span><br><span class="line">abc</span><br><span class="line">foo</span><br><span class="line">脚本输出:</span><br><span class="line">[root@localhost:shell]# bash test.sh</span><br><span class="line">test.sh: line 12: abc: command not found</span><br><span class="line">[LINE:12]Error: Command or function exited with status 127</span><br><span class="line">[LINE:9]Error: Command or function exited with status 1</span><br></pre></td></tr></table></figure>
+<p>在调试过程中，为了跟踪某些变量的值，我们常常需要在shell脚本的许多地方插入相同的echo语句来打印相关变量的值，这种做法显得烦琐而笨拙。而通过捕获DEBUG信号，我们只需要一条trap语句就可以完成对相关变量的全程跟踪。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">trap &apos;echo “before execute line:$LINENO, a=$a,b=$b,c=$c”&apos; DEBUG</span><br><span class="line">a=1</span><br><span class="line">if [ &quot;$a&quot; -eq 1 ]</span><br><span class="line">then</span><br><span class="line">  b=2</span><br><span class="line">else</span><br><span class="line">  b=1</span><br><span class="line">fi</span><br><span class="line">c=3</span><br><span class="line">echo &quot;end&quot;</span><br></pre></td></tr></table></figure>
+<p>其执行输出结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">before execute line:3, a=,b=,c=</span><br><span class="line">before execute line:4, a=1,b=,c=</span><br><span class="line">before execute line:6, a=1,b=,c=</span><br><span class="line">before execute line:10, a=1,b=2,c=</span><br><span class="line">before execute line:11, a=1,b=2,c=3</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="使用tee命令"><a class="markdownIt-Anchor" href="#使用tee命令"></a> 使用tee命令</h2>
+<blockquote>
+<p>在shell脚本中管道以及输入输出重定向使用得非常多，在管道的作用下，一些命令的执行结果直接成为了下一条命令的输入。如果我们发现由管道连接起来的一批命令的执行结果并非如预期的那样，就需要逐步检查各条命令的执行结果来判断问题出在哪儿，但因为使用了管道，这些中间结果并不会显示在屏幕上，给调试带来了困难，此时我们就可以借助于tee命令了</p>
+</blockquote>
+<blockquote>
+<p>tee命令会从标准输入读取数据，将其内容输出到标准输出设备,同时又可将内容保存成文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipaddr=`/sbin/ifconfig | grep &apos;inet addr:&apos; | grep -v &apos;127.0.0.1&apos;</span><br><span class="line">| tee temp.txt | cut -d : -f3 | awk &apos;&#123;print $1&#125;&apos;`</span><br></pre></td></tr></table></figure>
+<h2 id="使用调试钩子"><a class="markdownIt-Anchor" href="#使用调试钩子"></a> 使用&quot;调试钩子&quot;</h2>
+<blockquote>
+<p>在C语言程序中，我们经常使用DEBUG宏来控制是否要输出调试信息，在shell脚本中我们同样可以使用这样的机制，这样的代码块通常称之为“调试钩子”或“调试块”.如下列代码所示：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if [ “$DEBUG” = “true” ]; then</span><br><span class="line">echo “debugging”  #此处可以输出调试信息</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h2 id="通过选项方式"><a class="markdownIt-Anchor" href="#通过选项方式"></a> 通过选项方式</h2>
+<ul>
+<li>-n:选项只做语法检查，而不执行脚本  //sh -n script_name.sh</li>
+<li>-x:启动调试   //sh -x script_name.sh</li>
+</ul>
+<blockquote>
+<p>进入调试模式后，Shell依次执行读入的语句，产生的输出中有的带加号，有的不带。带加号表示该条语句是Shell执行的；不带加号表示该语句是Shell产生的输出；前面有“++”号的行是执行trap机制中指定的命令。&quot;+&quot;号后面显示的是经过了变量替换之后的命令行的内容，有助于分析实际执行的是什么命令</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1).在命令行提供参数：$ sh -x script.sh</span><br><span class="line">2).脚本开头提供参数：#!/bin/sh -x</span><br><span class="line">3).在脚本中用set命令启用or禁用参数：其中set -x表启用，set +x表禁用</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-c:该选项使Shell解析器从字符串而非文件中读取并执行命令,如：bash -c ‘x=1;y=2;let z=x+y;echo “z=$z”’</li>
+<li>-v：区别于-x参数,该选项打印命令行的原始内容，-x参数打印出经过替换后命令行的内容，适用于仅想显示命令行的原始内容</li>
+<li>Ctrl + Z:中断调试，观察结果，然后再按fg键继续调试即可</li>
+<li>调试代码块:-x选项是调试整个脚本的，如果脚本很大，会很不方便，还有一种方法是调试某一块代码的</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -x</span><br><span class="line">...</span><br><span class="line">code block</span><br><span class="line">...</span><br><span class="line">set +x</span><br></pre></td></tr></table></figure>
+<h1 id="shell内置的环境变量"><a class="markdownIt-Anchor" href="#shell内置的环境变量"></a> shell内置的环境变量</h1>
+<ul>
+<li>$LINENO：代表shell脚本的当前行号，类似于C语言中的内置宏__LINE__</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mi>U</mi><mi>N</mi><mi>C</mi><mi>N</mi><mi>A</mi><mi>M</mi><mi>E</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">它</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">量</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">其</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">包</mi><mi mathvariant="normal">含</mi><mi mathvariant="normal">了</mi><mi mathvariant="normal">整</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">调</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">链</mi><mi mathvariant="normal">上</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">故</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">量</mi></mrow><annotation encoding="application/x-tex">FUNCNAME：函数的名字，它是一个数组变量，其中包含了整个调用链上所有的函数的名字，故变量</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">它</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">变</span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">包</span><span class="mord cjk_fallback">含</span><span class="mord cjk_fallback">了</span><span class="mord cjk_fallback">整</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">调</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">链</span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">故</span><span class="mord cjk_fallback">变</span><span class="mord cjk_fallback">量</span></span></span></span>{FUNCNAME[0]}代表shell脚本当前正在执行的函数的名字，而变量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>F</mi><mi>U</mi><mi>N</mi><mi>C</mi><mi>N</mi><mi>A</mi><mi>M</mi><mi>E</mi><mo>[</mo><mn>1</mn><mo>]</mo></mrow><mi mathvariant="normal">则</mi><mi mathvariant="normal">代</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">调</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi></mrow><annotation encoding="application/x-tex">{FUNCNAME[1]}则代表调用函数</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span><span class="mord cjk_fallback">则</span><span class="mord cjk_fallback">代</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">调</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span></span></span></span>{FUNCNAME[0]}的函数的名字，余者可以依此类推</li>
+<li>$PS4：</li>
+</ul>
+<h1 id="常见错误诊断"><a class="markdownIt-Anchor" href="#常见错误诊断"></a> 常见错误诊断</h1>
+<ul>
+<li><a href="http://xxx.sh" target="_blank" rel="noopener">xxx.sh</a>: cannot shift</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这种错误一般是参数传递有误，比如没有给参数，或者参数个数少了。因为shell脚本使用shift来获取下一个参数，如果个数不对，shift命令就会失败</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://xxx.sh" target="_blank" rel="noopener">xxx.sh</a>: ^M: not found</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">^M是Windows上的回车符\r在UNIX上的显示形式。这种情况多半是在Windows上编辑了shell脚本，然后拿到UNIX/Linux上执行。如下处理即可：</span><br><span class="line">tr -d &quot;\015&quot; &lt; oldfile.sh &gt; newfile.sh  //\r的ASCII码是\015</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-VI编辑器使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-VI编辑器使用/" itemprop="url">VI编辑器使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>vi编辑器是所有Unix及Linux系统下标准的编辑器，它的强大不逊色于任何最新的文本编辑器，对Unix及Linux系统的任何版本，vi编辑器是完全相同的。</p>
+</blockquote>
+<h1 id="vi的基本概念"><a class="markdownIt-Anchor" href="#vi的基本概念"></a> vi的基本概念</h1>
+<ol>
+<li>命令行模式command mode</li>
+</ol>
+<blockquote>
+<p>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段及进入Insert mode下，或者到 last line mode；</p>
+</blockquote>
+<ol start="2">
+<li>插入模式（Insert mode）</li>
+</ol>
+<blockquote>
+<p>只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令行模式</p>
+</blockquote>
+<ol start="3">
+<li>底行模式（last line mode）</li>
+</ol>
+<blockquote>
+<p>将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……</p>
+</blockquote>
+<p>不过一般我们在使用时把vi简化成两个模式，就是将底行模式（last line mode）也算入命令行模式command mode）</p>
+<h1 id="vi的基本操作"><a class="markdownIt-Anchor" href="#vi的基本操作"></a> vi的基本操作</h1>
+<ol>
+<li>进入vi的命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi filename:打开或新建文件，并将光标置于第一行首</span><br><span class="line">vi +n filename：打开文件，并将光标置于第n行首</span><br><span class="line">vi + filename ：打开文件，并将光标置于最后一行首</span><br><span class="line">vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处</span><br><span class="line">vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename</span><br><span class="line">vi filename....filename ：打开多个文件，依次编辑</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>退出vi及保存文件</li>
+</ol>
+<blockquote>
+<p>在「命令行模式（command mode）」下，按一下「：」冒号键进入「Last line mode」</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">: w filename （输入 「w filename」将文章以指定的文件名filename保存）</span><br><span class="line">: wq (输入「wq」，存盘并退出vi)</span><br><span class="line">: q! (输入q!， 不存盘强制退出vi)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>移动光标</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">按「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格。</span><br><span class="line">按「ctrl」+「b」：屏幕往&quot;后&quot;移动一页</span><br><span class="line">按「ctrl」+「f」：屏幕往&quot;前&quot;移动一页</span><br><span class="line">按「ctrl」+「u」：屏幕往&quot;后&quot;移动半页</span><br><span class="line">按「ctrl」+「d」：屏幕往&quot;前&quot;移动半页</span><br><span class="line">按数字「0」：移到文章的开头</span><br><span class="line">按「G」：移动到文章的最后</span><br><span class="line">按「$」：移动到光标所在行的&quot;行尾&quot;</span><br><span class="line">按「^」：移动到光标所在行的&quot;行首&quot;</span><br><span class="line">按「w」：光标跳到下个字的开头</span><br><span class="line">按「e」：光标跳到下个字的字尾</span><br><span class="line">按「b」：光标回到上个字的开头</span><br><span class="line">按「#l」：光标移到该行的第#个位置，如：5l,56l</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>删除文字</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">「x」：每按一次，删除光标所在位置的&quot;后面&quot;一个字符</span><br><span class="line">「#x」：例如，「6x」表示删除光标所在位置的&quot;后面&quot;6个字符</span><br><span class="line">「X」：大写的X，每按一次，删除光标所在位置的&quot;前面&quot;一个字符</span><br><span class="line">「#X」：例如，「20X」表示删除光标所在位置的&quot;前面&quot;20个字符</span><br><span class="line">「dd」：删除光标所在行</span><br><span class="line">「#dd」：从光标所在行开始删除#行</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>复制</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">「yw」：将光标所在之处到字尾的字符复制到缓冲区中</span><br><span class="line">「#yw」：复制#个字到缓冲区</span><br><span class="line">「yy」：复制光标所在行到缓冲区</span><br><span class="line">「#yy」：例如，「6yy」表示拷贝从光标所在的该行&quot;往下数&quot;6行文字</span><br><span class="line">「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与&quot;y&quot;有关的复制命令都必须与&quot;p&quot;配合才能完成复制与粘贴功能</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>恢复上一次操作</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">「u」：如果您误执行一个命令，可以马上按下「u」，回到上一个操作。按多次&quot;u&quot;可以执行多次恢复</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>跳至指定的行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">「ctrl」+「g」列出光标所在行的行号</span><br><span class="line">「#G」：例如，「15G」，表示移动光标至文章的第15行行首</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>列出行号</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行模式：输入「set nu」后，会在文件中的每一行前面列出行号</span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li>跳到文件中的某一行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行模式：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行</span><br></pre></td></tr></table></figure>
+<ol start="10">
+<li>查找字符</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止;</span><br><span class="line">* 「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-XShell使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-XShell使用/" itemprop="url">XShell使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -650,2232 +1913,215 @@ android Studio安装Genymotion插件使用</p>
         
           
             <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>
-Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。<br>
-Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
-<p>详细学习，推荐：</p>
-<ul>
-<li><a href="http://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/git/git-tutorial.html</a></li>
-<li>廖雪峰大神的git教程<br>
-<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
-<li>git的前世今生： <a href="https://blog.csdn.net/csdnprogram/article/details/52155078" target="_blank" rel="noopener">https://blog.csdn.net/csdnprogram/article/details/52155078</a></li>
-</ul>
-<h1 id="工作原理"><a class="markdownIt-Anchor" href="#工作原理"></a> 工作原理</h1>
-<h2 id="本地"><a class="markdownIt-Anchor" href="#本地"></a> 本地</h2>
-<ul>
-<li>工作区（Working Directory）：就是你在电脑里能看到的目录</li>
-<li>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库<br>
-Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
-</ul>
-<p><img src="/pub-images/git.png" alt="image"><br>
-我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
-<ul>
-<li>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
-<li>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</li>
-</ul>
-<h2 id="远程配合"><a class="markdownIt-Anchor" href="#远程配合"></a> 远程配合</h2>
-<p><img src="/pub-images/git2.png" alt="image"></p>
-<h1 id="git安装"><a class="markdownIt-Anchor" href="#git安装"></a> git安装</h1>
-<p>参考教程：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">https://git-scm.com/book/zh/v2/起步-安装-Git</a></p>
-<p>各平台都支持安装包安装方式</p>
-<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; brew install git</span><br><span class="line">&gt; git --version //验证安装</span><br></pre></td></tr></table></figure>
-<h1 id="git全局设置"><a class="markdownIt-Anchor" href="#git全局设置"></a> git全局设置</h1>
-<p>config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local,底层配置会覆盖顶层配置<br>
-查看git不同级别配置信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list</span><br><span class="line">git config --global --list</span><br><span class="line">git config --和local --list</span><br></pre></td></tr></table></figure>
-<p>git安装完成后，还需要最后一步设置，在命令行输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</p>
-<h1 id="git账号关联流程"><a class="markdownIt-Anchor" href="#git账号关联流程"></a> git账号关联流程</h1>
-<ol>
-<li>生成SSHkey<br>
-ssh-keygen命令用于为“ssh”生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥.<br>
-ssh-keygen(选项)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：指定密钥长度； </span><br><span class="line">-e：读取openssh的私钥或者公钥文件； </span><br><span class="line">-C：添加注释； </span><br><span class="line">-f：指定用来保存密钥的文件名； </span><br><span class="line">-i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥； </span><br><span class="line">-l：显示公钥文件的指纹数据； </span><br><span class="line">-N：提供一个新密语； </span><br><span class="line">-P：提供（旧）密语；</span><br><span class="line">-q：静默模式； </span><br><span class="line">-t：指定要创建的密钥类型。</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>登陆git服务器，添加public key信息</li>
-<li>测试登陆</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">测试是否成功,第一此输入命令，需输入yes后再次输入测试命令后出现类似&quot;Hi...&quot;，表示配置成功</span><br><span class="line">&gt; ssh -T git@github.com</span><br><span class="line">&gt; ssh -T git@gitee.com</span><br><span class="line">&gt; ssh -T git@gitlab.com</span><br></pre></td></tr></table></figure>
-<h1 id="git单账号关联"><a class="markdownIt-Anchor" href="#git单账号关联"></a> git单账号关联</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）</span><br><span class="line">&gt; cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>登陆网站，如github／gitee／gitlab等，在如设置／Settings中有SSH and GPG keys中【add new keys】，将id_rsa.pub内容添加，会自动识别标题,设置完成之后测试登陆</p>
-<h1 id="git多账号设置关联"><a class="markdownIt-Anchor" href="#git多账号设置关联"></a> git多账号设置关联</h1>
-<p>多账号配置是通过.ssh文件夹下config文件实现，操作如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; touch ~/.ssh/config </span><br><span class="line">&gt; chmod 600 ~/.ssh/config </span><br><span class="line"></span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.github -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitee -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitlab -t rsa -C &quot;chetaofeng@163.com&quot;</span><br></pre></td></tr></table></figure>
-<p>config文件内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa.github</span><br><span class="line"></span><br><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">     HostName gitee.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitee</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.com</span><br><span class="line">     HostName gitlab.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitlab</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Host： 是我们在输入命令的时候的名字 比如我这里是lab  那么我使用ssh命令的时候需要使用 ssh lab</li>
-<li>HostName： 是目标主机的主机名，也就是平时我们使用ssh后面跟的地址名称。</li>
-<li>Port：指定的端口号。</li>
-<li>User：指定的登陆用户名。</li>
-<li>IdentifyFile：指定的私钥地址。</li>
-</ul>
-<h1 id="gitignore文件"><a class="markdownIt-Anchor" href="#gitignore文件"></a> .gitignore文件</h1>
-<p>不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件</p>
-<h1 id="开发环境中配置"><a class="markdownIt-Anchor" href="#开发环境中配置"></a> 开发环境中配置</h1>
-<p>在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可<br>
-<img src="/pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
-gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
-<img src="/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
-<p>以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下：</p>
-<ul>
-<li>GitLab Server Url: <a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></li>
-<li>GitLab API Key： <a href="https://gitlab.com/profile/account" target="_blank" rel="noopener">https://gitlab.com/profile/account</a></li>
-</ul>
-<h1 id="git项目权限管理"><a class="markdownIt-Anchor" href="#git项目权限管理"></a> git项目权限管理</h1>
-<p>Git项目一般有五种身份权限，分别是：</p>
-<ul>
-<li>Owner 项目所有者，拥有所有的操作权限</li>
-<li>Master 项目的管理者，除更改、删除项目元信息外其它操作均可</li>
-<li>Developer 项目的开发人员，做一些开发工作，对受保护内容无权限</li>
-<li>Reporter 项目的报告者，只有项目的读权限，可以创建代码片断</li>
-<li>Guest 项目的游客，只能提交问题和评论内容</li>
-</ul>
-<h1 id="私服项目使用推荐流程"><a class="markdownIt-Anchor" href="#私服项目使用推荐流程"></a> 私服项目使用推荐流程</h1>
 <blockquote>
-<p>以下为项目owner需进行工作</p>
+<p>Xshell是一款服务器终端模拟软件，用户可以使用Xshell软件在Windows、Mac OS电脑上访问不同系统的服务器主机，让你可以方便对其进行控制管理。</p>
+</blockquote>
+<blockquote>
+<p>创新的设计和优良的体验，让用户以最高效率对服务器进行管理</p>
+</blockquote>
+<h1 id="功能特色"><a class="markdownIt-Anchor" href="#功能特色"></a> 功能特色</h1>
+<ul>
+<li>可以保存多个vps登陆信息，免去每次输入的烦恼</li>
+<li>设置命令快捷按钮</li>
+<li>通过代理登陆vps</li>
+<li>鼠标右键粘贴可将本地粘贴板内容复制到vps</li>
+</ul>
+<h1 id="xshell-注册说明"><a class="markdownIt-Anchor" href="#xshell-注册说明"></a> Xshell 注册说明</h1>
+<ol>
+<li>公司名字随便填</li>
+<li>注册码 690313-111999-999313</li>
+</ol>
+<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
+<p>安装完成之后键盘输入无反应，解决方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件--属性--终端--编码 改成Unicode(UTF-8)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-cat和EOF的使用-action用法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-cat和EOF的使用-action用法/" itemprop="url">cat和EOF的使用+action用法</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>cat：用于显示文本文件内容，全部输出</li>
+<li>EOF： “end of file”，表示文本结束符</li>
+</ul>
+<blockquote>
+<p>EOF“通常与”&lt;&lt;“结合使用，“&lt;&lt;EOF“表示后续的输入作为子命令或子shell的输入，直到遇到”EOF“，再次返回到主调shell，可将其理解为分界符（delimiter）</p>
+</blockquote>
+<blockquote>
+<p>当shell看到”&lt;&lt;“知道其后面输入的分界符，当shell再次看到分界符时，两个分界符中间的部分将作为标准输入,其使用形式如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">交互式程序(命令)&lt;&lt;EOF</span><br><span class="line">command1</span><br><span class="line">command2</span><br><span class="line">...</span><br><span class="line">EOF     //最后的”EOF“必须单独占一行，必须顶行写，前面不能用制表符或者空格</span><br></pre></td></tr></table></figure>
+<h1 id="cateof的使用"><a class="markdownIt-Anchor" href="#cateof的使用"></a> cat+EOF的使用</h1>
+<blockquote>
+<p>第一种形式和第二种形式没有什么本质的区别，第一种形式将内容直接输出到标准输出（屏幕），而第二种形式将标准输出进行重定向，将本应输出到屏幕的内容重定向到文件</p>
 </blockquote>
 <ol>
-<li>在私服先创建项目，添加人员并设置人员权限</li>
-<li>在本地webstorm中clone项目</li>
-<li>在clone项目中添加.gitignore文件</li>
-<li>添加.gitignore及相关需要版本控制的文件夹到版本控制（选中项后右键操作）</li>
-<li>提交项目并备注为初始提交</li>
+<li>cat&lt;&lt;EOF</li>
+<li>cat&lt;<eof>filename或者cat&gt;&gt;filename&lt;&lt;EOF</eof></li>
 </ol>
+<p>==说明==：关于“&gt;”、“&gt;&gt;”、“&lt;”、“&lt;&lt;”等的意思，请自行查看bash的介绍</p>
+<h1 id="eof与-eof的区别"><a class="markdownIt-Anchor" href="#eof与-eof的区别"></a> EOF与-EOF的区别</h1>
 <blockquote>
-<p>以下为项目成员需做工作</p>
+<p>如果结束分解符EOF前有制表符或者空格，则EOF不会被当做结束分界符，只会继续被当做stdin来输入。<br>
+而&lt;&lt;-就是为了解决这一问题:</p>
 </blockquote>
-<ol>
-<li>在本地webstorm中clone项目</li>
-<li>创建项目分支（可一人一个，也可通过项目模块进行分支创建），如果直接在master分支，则无法成功push项目提示被rejected</li>
-<li>进行代码编写</li>
-<li>提交需管理分支</li>
-<li>在gitlab私服网页发起合并请求，并添加详细描述</li>
-<li>等待相关人员进行合并</li>
-<li>合并结束后更新master分支</li>
-<li>创建分支继续工作</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/数据库-2018-12-12-oracle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/12/数据库-2018-12-12-oracle/" itemprop="url">oracle</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T23:11:39+08:00">
-                2018-12-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>官网：<a href="https://www.oracle.com/index.html" target="_blank" rel="noopener">https://www.oracle.com/index.html</a><br>
-版本中字母的含义：c（cloud）、g（grid）、i（internet）</p>
-<p>下载：<a href="https://www.oracle.com/downloads/%EF%BC%8C%E9%9C%80%E8%A6%81%E7%99%BB%E5%BD%95oracle%E5%AE%98%E7%BD%91%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD" target="_blank" rel="noopener">https://www.oracle.com/downloads/，需要登录oracle官网，下载的两个文件解压在一个文件夹中</a></p>
-<p>安装：</p>
-<ol>
-<li>安装Oracle11g出现INS-13001环境不满足最低要求 <a href="https://blog.csdn.net/q_sea__/article/details/79012808" target="_blank" rel="noopener">https://blog.csdn.net/q_sea__/article/details/79012808</a></li>
-<li>Environment variable: “PATH”<br>
-安装时确保不要关机或断电；安装过程中复制文件过程比较耗费时间</li>
-</ol>
-<p>完整的Oracle数据库通常由两部分组成：Oracle数据库和数据库实例。</p>
-<ol>
-<li>数据库是一系列物理文件的集合（数据文件，控制文件，联机日志，参数文件等）；</li>
-<li>Oracle数据库实例则是一组Oracle后台进程/线程以及在服务器分配的共享内存区。</li>
-</ol>
-<p>在启动Oracle数据库服务器时，实际上是在服务器的内存中创建一个Oracle实例（即在服务器内存中分配共享内存并创建相关的后台内存），然后由这个Oracle数据库实例来访问和控制磁盘中的数据文件。Oracle有一个很大的内存快，称为全局区（SGA）。</p>
-<p>数据库的创建与监听器的配置54C<br>
-创建数据库:Database Conguration Assistant,可以创建、配置、删除、管理数据库<br>
-全局数据库名称为数据库名称，其至少要有一个Oracle实例引用，该实例由SID唯一标识,如：orcl<br>
-配置Enterprise Manager会占用较大内存，先不配置;注意选择字符集;修改scott和hr的密码<br>
-sys用户为数据库的所有者，system用户为数据库的操作员<br>
-监听器的配置：Net Conguration Assistant，配置完成后在系统服务中查看添加了OracleOraDb11g_home1TNSListener,此服务启动之后就允许外部连接数据库了<br>
-OracleServiceORCL是关于数据库实例的服务，此服务启动之后，数据库才可用</p>
-<p>oracle常用数据库工具<br>
-Oracle Universal Installer：OUI（Oracle全局安装器），用来安装卸载oracle数据库管理系统<br>
-Database Conguration Assistant：(DBCA)创建、配置、删除、管理数据库<br>
-Net Conguration Assistant：(NCA)监听器、命名方法、本地网络服务名、目录使用配置<br>
-SQL Plus：基于命令行的oracle官方操作工具<br>
-SQL Devloper：基于Java的图形化的oracle官方操作工具,需人工关联sqldeveloper.exe文件和配置JDK<br>
-PL/SQL Devloper：第三方工具<br>
-TOAD：第三方工具</p>
-<p>Oracle中的用户、权限与角色<br>
-用户管理：需切换到system用户操作<br>
-创建用户：create user 用户名 identified by 密码 [account lock|unlock] [password expire];（password expire表示密码立即过期，第一次登录后需修改密码）用户创建后还需授权才能操作数据库<br>
-修改用户：alter user 用户名 identified by 密码 [account lock|unlock] [password expire];<br>
-删除用户：drop user 用户名 [cascade];(cascade用来表示删除用户下的所有数据对象)<br>
-权限管理：权限为系统中设置的安全规则或安全策略，分为系统权限（用户能否在数据库上完成某个动作）和对象权限（用户能否在某个数据库对象上完成某种操作）<br>
-系统权限授予：grant 权限 to user|role [with admin option];(表示可以级联授予)<br>
-系统权限回收：revoke 权限 from user|role;<br>
-对象权限授予：grant 权限[(col,…)] on 数据库对象 to user|role [with admin option];<br>
-对象权限回收：revoke 权限[(col,…)] on 数据库对象 from user|role;<br>
-对象权限的回收是级联的，系统权限回收是非级联的<br>
-角色管理：角色是权限的集合，用来简化权限管理<br>
-创建／删除角色：create/drop role 角色;<br>
-角色上系统权限授予：grant 权限 to role [with admin option];(表示可以级联授予)<br>
-角色上系统权限回收：revoke 权限 from 角色;<br>
-角色上对象权限授予：grant 权限[(col,…)] on 数据库对象 to role [with admin option];<br>
-角色上对象权限回收：revoke 权限[(col,…)] on 数据库对象 from role;<br>
-用户角色授予：grant 角色 to 用户;<br>
-用户角色回收：revoke 角色 from 用户;</p>
-<p>Oracle表：由行和列组成的数据库中基本的存储单元，访问其他用户的表需要加用户名作为前缀<br>
-约束：表级别约束和列级别约束，由主键、外键、非空、唯一、检查5种约束<br>
-启用表的只读状态便于备份和导出表：alter table 表名 read only;启用表的读写状态：alter table 表名 read write;</p>
-<p>Oracle事务:有一组DML组成的逻辑工作单元，有原子性、一致性、独立性和持久性</p>
-<p>序列sequence：数值生成器，通常用于生成主键值，</p>
-<p>dual是Oracle提供的最小的工作表，只有一行一列，具有某些特殊功用，只有一条记录:‘X’,习惯上,我们称之为’伪表’,他的存在是为了操作上的方便,因为select都是要有特定对象的.<br>
-select count(*) from dual;</p>
-<p>索引和同义词的使用<br>
-索引：通过关联ROWID和关键值来提升查询速度<br>
-同义词：数据库对象的别名，public同义词对所有用户有用，创建需一定权限<br>
-创建：create [public] synonym 名称 for object;<br>
-删除：drop [public] synonym 名称 for object;</p>
-<p>PL/SQL：是一种程序语言，叫做过程化SQL语言（Procedural Language/SQL）。PL/SQL是Oracle数据库对SQL语句的扩展。在普通SQL语句的使用上增加了编程语言的特点<br>
-官网：<a href="https://www.oracle.com/technetwork/database/features/plsql/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/database/features/plsql/index.html</a><br>
-PL/SQL developer官网：<a href="https://www.allroundautomations.com/" target="_blank" rel="noopener">https://www.allroundautomations.com/</a><br>
-PLSQL Developer 12 注册码<br>
-product code： 4vkjwhfeh3ufnqnmpr9brvcuyujrx3n3le<br>
-serial Number：226959<br>
-password: xs374ca</p>
-<p>配置pl/sql的Database的两种方式：<br>
-确保OracleOraDb11g_home1TNSListener和OracleServiceXXXX服务已启动<br>
-1.登录时直接在Database选项输入数据库信息:在登录时输入数据库信息 ip:端口/数据库名,如：127.0.0.1:1521/ORCL<br>
-2.配置product\11.2.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora文件，添加一下内容到文档最后，登录时输入如ORCL即可登录<br>
-ORCL =<br>
-(DESCRIPTION =<br>
-(ADDRESS_LIST =<br>
-(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))<br>
-)<br>
-(CONNECT_DATA =<br>
-(SERVER = DEDICATED)<br>
-(SERVICE_NAME = ORCL)<br>
-)<br>
-)</p>
-<p><a href="https://www.jikexueyuan.com/course/oracledb/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/</a></p>
-<p><a href="https://www.oracle.com/technetwork/topics/winsoft-085727.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/topics/winsoft-085727.html</a></p>
-<p><a href="https://www.cnblogs.com/xiashiwendao/p/7634240.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiashiwendao/p/7634240.html</a></p>
-<p>严格来讲SQL会分为三种类型:</p>
-<p>1、数据操纵语言（DML）：用来操纵数据库中数据的命令。包括：select、insert、update、delete。</p>
-<p>2、数据定义语言（DDL）：用来建立数据库、数据库对象和定义列的命令。包括：create、alter、drop。</p>
-<p>3、数据控制语言（DCL）：用来控制数据库组件</p>
-<p>用select * from tab;来查询用户下的表<br>
-查看表结构用:DESC 表名称</p>
-<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
-全局数据库名：就是一个数据库的标识，在安装时就要想好，以后一般不修改，修改起来也麻烦，因为数据库一旦安装，数据库名就写进了控制文件，数据库表，很多地方都会用到这个数据库名。<br>
-启动数据库：也叫全局数据库，是数据库系统的入口，它会内置一些高级权限的用户如SYS，SYSTEM等。我们用这些高级权限账号登陆就可以在数据库实例中创建表空间，用户，表了。</p>
-<p>查询当前数据库名：select name from v$database;</p>
-<p>我们访问Oracle都是访问一个实例，但这个实例如果关联了数据库文件，就是可以访问的，如果没有，就会得到实例不可用的错误。<br>
-实例名指的是用于响应某个数据库操作的数据库管理系统的名称。她同时也叫SID。实例名是由参数instance_name决定的<br>
-查询当前数据库实例名：select instance_name from v$instance;</p>
-<p>从oracle9i版本开始，引入了一个新的参数，即数据库服务名。数据库的逻辑表示，它是数据库呈现给客户机的方式。参数名是SERVICE_NAME。如果数据库有域名，则数据库服务名就是全局数据库名；否则，数据库服务名与数据库名相同。</p>
-<p>网络服务名(NET SERVICES NAME)<br>
-         它是“连接描述符”简称，连接描述符是网络连接目标特殊格式的描述，它包括网络协议、主机名称或地址、和目标服务<br>
-         在Oracle7和Oracle8版本,目标服务由Oracle系统标识符(SID)来标识，而Oracle8i、Oracle9i则通过数据库服务名来来标识。保存tnsnames.ora文件中在格式如下：<br>
- myDB =<br>
-   (DESCRIPTION =<br>
-     (ADDRESS_LIST =<br>
-       (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.10.1)(PORT = 1521))<br>
-     )<br>
-     (CONNECT_DATA =<br>
-       (SERVICE_NAME = <a href="http://testDB.ChinaMobile.com" target="_blank" rel="noopener">testDB.ChinaMobile.com</a>)<br>
-     )<br>
-   )</p>
-<p>若要向ORACLE代理商购买ORACLE，是以用户数来算钱的。那么，这个“用户”跟我们在ORACLE中通过</p>
-<p>CREATE USER USERNAME IDENTIFIED BY PASSWORD创建的用户是不同概念，“用户数”指的是并发访问用户数，</p>
-<p>（我理解是同时间访问同一个内存地址的进程数）。要是我买了8个用户的，可以建几十、上百个用户也没问题，只要峰值达不到并发数就可以了。</p>
-<p>打个比方，你的名字叫小明，但是你有很多外号。你父母叫你小明，但是朋友都叫你的外号。<br>
-这里你的父母就是oracle实例，小明就是sid，service name就是你的外号。<br>
-sid用于实例区分各个数据库，service name用于外部链接。</p>
-<p>一个Oracle Server由一个Oracle实例和一个Oracle数据库组成。<br>
-即：Oracle Server = Oracle Instance + Oracle Database</p>
-<p>Oracle实例包括了内存结构(SGA)和一系列后台进程(Background Process),两者合起来称为一个Oracle实例，即：Oracle Instance = SGA + Background Process</p>
-<p>数据库逻辑组织结构<br>
-表空间、段、区、块<br>
-一个数据库由一个或多个表空间组成，一个表空间只能属于一个数据库<br>
-一个表空间由一个或多个多个数据文件组成，一个数据文件只能属于一个表空间<br>
-一个数据文件由一个或多个操作系统块组成，每一个操作系统块只能数以一个数据文件<br>
-一个表空间可以包含一个或多个段，一个段只能属于一个表空间<br>
-一个段由一个或多个区组成，每一个区只能属于一个段<br>
-一个区由一个或多个Oracle 块组成，每一个Oracle块只能属于一个区<br>
-一个区只能属于一个数据文件，数据文件的空间可以分配到一个或多个区<br>
-一个Oracle 块由一个或多个操作系统块组成，一个操作系统块是一个Oracle块的一部分</p>
-<p><a href="https://blog.csdn.net/prince_lintb/article/details/78772999" target="_blank" rel="noopener">https://blog.csdn.net/prince_lintb/article/details/78772999</a></p>
-<p>pl/sql plus： &quot;／&quot;表示执行</p>
-<p>scott库：<a href="https://www.2cto.com/database/201805/742911.html" target="_blank" rel="noopener">https://www.2cto.com/database/201805/742911.html</a></p>
-<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
-<a href="http://www.cnblogs.com/kscnchina/p/4570865.html" target="_blank" rel="noopener">http://www.cnblogs.com/kscnchina/p/4570865.html</a></p>
-<p>声明时，变量以v_开头，常量以c_开头</p>
-<p><a href="https://blog.csdn.net/michaelehome/article/details/79464214" target="_blank" rel="noopener">https://blog.csdn.net/michaelehome/article/details/79464214</a></p>
-<p>select userenv(‘language’) from dual;<br>
-NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
-<p>字符集：<a href="https://www.cnblogs.com/kaishirenshi/p/9018343.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaishirenshi/p/9018343.html</a></p>
-<p>本地动态sql</p>
-<p>SQL环境  begin … end pl/sql环境</p>
-<p>一组SQL语句操作要成为事务，数据库管理系统必须保证这组操作的原子性（Atomicity）、一致性（consistency）、隔离性（Isolation）和持久性（Durability），这就是ACID特性。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/数据库-2018-12-10-MongoDB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/10/数据库-2018-12-10-MongoDB/" itemprop="url">MongoDB</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T20:38:05+08:00">
-                2018-12-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.jikexueyuan.com/course/mongoDB/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/mongoDB/</a></p>
-<p>NoSQL数据库：NoSQL(NoSQL = Not Only SQL )，意即&quot;不仅仅是SQL&quot;，指的是非关系型的数据库</p>
-<p>mongodb官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a><br>
-<a href="https://docs.mongodb.com/manual/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/</a></p>
-<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
-MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
-<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
-<p>NoSQL保证数据的最终一致性，数据由更新延迟</p>
-<p>CAP理论</p>
-<p>适用场景：数据缓存；json格式数据存储；高伸缩性场景；<br>
-MongoDB更多适合大数据量、高并发、弱事务的互联网应用，其内置的水平扩展机制提供了从几百万到十亿级别的数据处理能力，可很好的满足Web2.0和移动互联网应用的s数据存储要求。</p>
-<p>MongoDB由C++编写，支持32位（2G限制）和64位应用，是一个基于分布式文件存储的开源数据库系统。</p>
-<p>MongoDB3.0特性：</p>
-<ol>
-<li>加入WiredTiger存储引擎:<br>
-开源的存储引擎；为现代硬件设计：多核CPU，充分利用内存／芯片级缓存；RAM/SSD/HDD；为大数据设计：高性能，低延迟，高并发稳定性</li>
-<li>MMAPv1:内存映射存储引擎，为默认引擎 ，提供了Collection锁；无缝迁移MMAP</li>
-<li>可插拔引擎API</li>
-<li>基于Web的可视化管理工具：Ops Manager</li>
-</ol>
-<p>MongoDB数据模型<br>
-文档：本质上是一种类JSON的BSON格式的数据，可以理解为在JSON基础上添加了一些新的数据类型，包括Date，正则表达式等。<br>
-BSON官网：<a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>
-BSON是由一组组键值对组成，具有轻量性、可靠性和高效性3个特征。可遍历性是MongoDB将BSON作为数据存储的重要原因<br>
-使用文档时需要注意以下事项：<br>
-MongoDB中写操作的原子性限制在文档级别；<br>
-单个文档占用的存储空间不能超过16MB；<br>
-MongoDB会尽量保持文档被插入时键值对的顺序；<br>
-关于文档命名需要注意的事项：<br>
-_id是系统保留的关键字，他是默认的主键，该值在集合中必须唯一，且不可更改；<br>
-键不能包含空字符或\0，这个字符用于表示键的结尾；<br>
-不能以$开头且不能包含点号.<br>
-键是区分大小写的且不能重复</p>
-<p>集合：把一组相关的文档放到一起组成了集合，MongoDB的集合是模式自由的，一个集合里面的文档可以是各式各样的<br>
-MogoDB提供了一些特殊的集合：capped collection、system.indexes、system.namespaces等<br>
-集合命名需注意：<br>
-集合名不能是空字符串；<br>
-集合名不能包含空字符串或\0，该字符表示集合名的结尾<br>
-集合名不能以&quot;system.&quot;开头，此前缀是系统本身保留的<br>
-集合名不能包含$字符，但是可以包含点号.</p>
-<p>数据库：多个文档组成集合，多个集合组成数据库。一个MongoDB实例可承载多个数据库，每个数据库有独立的权限，在磁盘上，不同的数据库也可放置到不通目录<br>
-数据库命名规则：<br>
-不能是空字符串；不能以$开头；不能包含空字符串和点号.;数据库名称区分大小写；建议数据库名全部使用小写；数据库名最长64字节；不要与系统保留数据库名相同</p>
-<p>命名空间：把数据库名添加到集合名前面，中间用点号连接，得到集合的完全限定，就是命名空间<br>
-因为点号可以出现在集合名字中，如：jike.blog.posts 和 jike.blog.authors，可以将posts和authors看作是blog集合的子集合，blog集合甚至可以不存在<br>
-使用子集合的方式，可以是我们更好的组织数据，使数据结构更加清晰明了</p>
-<p>MongoDB数据类型<br>
-基本数据类型<br>
-null：表示空值或者不存在的字段<br>
-布尔：true／false<br>
-数据类型：32-int,64-int,64-double,注意：JavaScript只支持64位浮点数<br>
-字符串类型：使用UTF-8对字符串进行编码<br>
-二进制数据：可以保存由任意字节组成的字符串，如：图片、视频等<br>
-正则表达式类型：主要用于查询，使用正则表达式作为限定条件<br>
-Date类型：是一个64位整数，它代表距Unix epoch：1970-1-1的毫秒数，MongoDB在存储时间是现转换为UTC时间，北京时间=UTC+8小时，MongoDB Shell会根据本地时间 设置显示日期时间<br>
-Timestap：32bit Unix epoch + 32bit自增序数，只供MongoDB数据库服务内部使用，用于记录操作的详细时间<br>
-ObjectId：由24个16精制字符组成，每个字节存储两位16精制数字，总共需12字节存储空间=4字节时间戳+3字节机器标识+2字节pid+3字节计数器，ObjectId(),getTimestamp(),valueOf()<br>
-数组：使用方括号来表示的一组值，数组中可以包含不通数据类型的元素，针对数组，MongoDB提供了许多操作符，如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pop,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span></span></span></span>push,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pull,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span></span></span></span>slice,$addToSet等；MongoDB可自动为数组元素建立MultiKey索引<br>
-内嵌文档：文档可以作为键的值，这样的文档成为内嵌文档。内嵌文档可以使数据不用保存成扁平结果的键值对，从而使数据组织形式更加自然。</p>
-<p>内嵌文档模式VS引用文档模式<br>
-子文档比较小或变化不频繁，则使用内嵌文档模式，否则使用引用文档模式</p>
-<p>MongoDB自动将_id字段设置为主键</p>
-<p>MongoDB Shell：是MongoDB自带的JavaScript Shell，随MongoDB一起发布 =JavaScript V8解释器+MongoDB客户端</p>
-<p>help查看帮助<br>
-执行脚本<br>
-直接执行：mongo [–quiet] script.js<br>
-交互执行：load(“script.js”)<br>
-执行命令行程序：run(“ls”)<br>
-.mongorc.js文件，默认会加载<br>
-编辑复合变量EDITOR：在.bashrc中添加后source生效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#EDITOR</span><br><span class="line">EDITOR=/usr/bin/vim</span><br></pre></td></tr></table></figure>
-<p>即可使用editor编辑文档</p>
-<p><a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-intro.html</a><br>
-Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。<br>
-GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。<br>
-MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</p>
-<p>MongoDB数据库安装：</p>
-<ol>
-<li>下载安装文件解压缩并添加bin目录到环境变量</li>
-<li>创建一个data目录，然后在data目录里创建db目录、logs目录</li>
-<li>启动服务端</li>
-<li>启动客户端：mongo</li>
-<li>windows下可以将MongoDB做成系统服务</li>
-</ol>
-<p>mac<br>
-临时添加环境变量：export PATH=/usr/local/mongodb/bin:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mi mathvariant="normal">编</mi><mi mathvariant="normal">辑</mi><mtext> </mtext><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>s</mi><msub><mi>h</mi><mi>p</mi></msub><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">：</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">PATH
-编辑~/.bash_profile,添加：export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord cjk_fallback">编</span><span class="mord cjk_fallback">辑</span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:/usr/local/mongodb4/bin/:$PATH 即可永久添加环境变量</p>
-<p>连接MongoDB数据库：./mongo + 服务器IP:端口号/数据库名<br>
-关闭MongoDB服务在 ./mongo 进入控制台后，输入 use admin,然后输入 db.shutdownServer()</p>
-<p>Mongodb可以通过命令行方式和配置文件的方式来启动：<br>
-这两种方式都是在前台启动Mongodb进程，如果Session窗口关闭，Mongodb进程也随之停止。<br>
-不过Mongodb同时还提供了一种后台Daemon方式启动，只需要加上一个&quot;–fork&quot;参数即可，用到了&quot;–fork&quot;参数就必须启用&quot;–logpath&quot;参数<br>
-通过命令行： ./bin/mongod --dbpath=/data/db --fork --logpath=/data/logs/mongodb.log<br>
-配置文件方式：./bin/mongod -f mongodb.conf  或 ./bin/mongod --config mongodb.conf  //-f 后面写要使用的配置文件<br>
-./bin/mongod --shutdown -f mongod.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">dbpath=/usr/local/mongodb/data/</span><br><span class="line">logpath=/usr/local/mongodb/log/mongodb.log  </span><br><span class="line">fork = true</span><br></pre></td></tr></table></figure>
-<p>命令行操作：<br>
-use mytetDB  //数据库如果不存在则创建<br>
-save时如果给定了_ObjectId则更新创建整条记录；如果要更新部分字段则使用update方法使用$set<br>
-db.dropDatabase()<br>
-db//显示当前数据库<br>
-show dbs<br>
-show collections</p>
-<p>有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。<br>
-admin： 从权限的角度来看，这是&quot;root&quot;数据库。要是将一个用户添加到这个数据库，这个用户自动继承所有数据库的权限。一些特定的服务器端命令也只能从这个数据库运行，比如列出所有的数据库或者关闭服务器。<br>
-local: 这个数据永远不会被复制，可以用来存储限于本地单台服务器的任意集合<br>
-config: 当Mongo用于分片设置时，config数据库在内部使用，用于保存分片的相关信息。</p>
-<p>MongoDB GridFS文件系统<br>
-分布式文件系统：将固定存储于单台机器上的文件系统，扩展到多台机器上，每个节点负责存储部分数据，众多的存储节点组成一个文件系统网络，各个节点通过网络进行通信和数据传输</p>
-<p>当存储文档大于16M时，可以考虑使用GridFS<br>
-GridFS：是MongoDB制定的如何在数据库中存储大文件的规范，MongoDB并没有实现GridFS，而是交由客户端驱动程序实现<br>
-GridFS使用两个集合（collection）存储文件。一个集合是chunks, 用于存储文件内容的二进制数据；一个集合是files，用于存储文件的元数据。<br>
-使用fs.files存储文件的元数据，包含字段如下：<br>
-使用fs.chunks存储以255K进行分割的文件块，包含字段如下：<br>
-GridFS适用于如下场景：<br>
-存储用户产生的文件且文件数量比较大；需要文件的自动备份和分布式存储；需要访问文件的部分内容；存储16MB以上的文件<br>
-mongofiles是MongoDB安装包中提供的一个工具，专门用来存取文件，包括查询所有文件、查看文件、上传一个文件、获取一个文件、按照_id来获取文件、按文件名删除文件、按_id删除文件。<br>
-mongofiles --help其实有四个主要命令，分别为：<br>
-put —存储命令<br>
-get —获取命令<br>
-list —列表命令<br>
-delete —删除命令</p>
-<p>MongoDB聚合管道：聚合操作主要用户批量数据处理，往往将记录按条件分组，然后在每组上分别进行一系列操作，如：求和、求最大小值等<br>
-聚合操作能够对记录进行复杂处理，主要为数理统计和数据挖掘。<br>
-MongoDB提供了3种聚合操作方式：<br>
-聚合管道（Aggregation Pipeline）:MongoDB Shell使用db.collection.aggregate([{…}])来构建和使用聚合管道<br>
-$project:用于修改文档的结构，可以重命名、增加或删除文档字段<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">滤</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi></mrow><annotation encoding="application/x-tex">match:用于过滤文档，在</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">滤</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span></span></span></span>match中不能使用$where,尽量出现在管道的前面，方便借助索引加快查询<br>
-$group:将集合中的文档进行分组，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
-$sort:将集合中的文档进行排序，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
-$skip:跳过指定数量的文档<br>
-$unwind:将文档按照数组字段拆分成多条文档，每条文档包含数组的一个元素<br>
-$geoNear:按照由近到远顺序输出接近某一地理位置的文档<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">将</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">储</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">阶</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">键</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">构</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">：</mi><mn>1</mn><mi mathvariant="normal">将</mi></mrow><annotation encoding="application/x-tex">out:将聚合结果存储到集合中，参数为集合名称
-    。。。
-    聚合管道表达式：阶段操作符可以看作是&quot;键&quot;，所对应的&quot;值&quot;称为管道表达式，管道表达式可以看作是管道操作符的操作数，管道表达式是一个文档结构，由字段名、字段值和表达式操作符组成。
-    聚合管道使用优化：
-    1将</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">储</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">阶</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord">&quot;</span><span class="mord cjk_fallback">键</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord">&quot;</span><span class="mord cjk_fallback">值</span><span class="mord">&quot;</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord">1</span><span class="mord cjk_fallback">将</span></span></span></span>match、$sort放到管道开始阶段，有利于利用索引提高文档处理效率<br>
-2提交过滤可减少流经后续阶段的文档数量<br>
-聚合管道的限制：<br>
-1返回文档结果不能超过16M，可通过返回一个游标或存储到集合中跳过此限制<br>
-单目的聚合操作<br>
-count<br>
-distinct<br>
-group<br>
-MapReduce编程模型</p>
-<p>mongoimport可以导入集合</p>
-<p>MongoDB数据更新<br>
-文档插入和删除：insert、update、delete<br>
-Bulk函数：Bulk可将多个数据更新操作放到一个待执行的列表中批量来执行，顺序执行的Bulk（按添加顺序执行，一个有问题则退出）和并执行的Bulk（随机方式并行）<br>
-1初始化Bulk：<br>
-并行：db.集合名.initializeUnorderedBulkOp()<br>
-顺序：db.集合名.initializeOrderedBulkOp()<br>
-2 bulk.inset({…})<br>
-3 bulk.execute()</p>
-<p>MMAPv1的内存分配策略：如果一个更新操作超过了文档在磁盘上预分配的空间，MongoDB会重新在磁盘上为其分配一块更大的连续空间。使用&quot;2的N次方&quot;的方式分配内存，如：32，64，128，256…2M，4M…<br>
-优点：1有利用内存的重用，降低系统碎片的数量；2减少数据移动频率，提高系统数据写效率</p>
-<p>文档修改<br>
-WriteResult = db.集合名.update(query,obj,upsert,multi)<br>
-query:查询条件，相当于where<br>
-obj：更改的内容，相当于SQL中的set语句<br>
-upsert：当query的文档不存在时是否插入一条新文档<br>
-multi：当query返回多个文档时是否一次更新满足条件的所有文档，默认只更新一条</p>
-<p>内嵌文档的修改：</p>
-<ol>
-<li>修改整个内嵌文档：{$set:{field1:新内嵌文档}}</li>
-<li>修改内嵌文档的某个字段：{$某个修改操作符:{field1.field2:value}}</li>
-</ol>
-<p>数组元素：MongoDB提供了大量的特定操作符，使得数组既可以作为栈、队列等有序对象使用，也可当作集合等无序对象来使用</p>
-<p>MongoDB的写安全机制<br>
-写过程：使用update、save等操作数据集合中数据时，只是修改了数据再内存中的映像，数据更新并没有同步地保存到磁盘上，而且更新内存中数据之前，更新操作会被记录到journal日志文件中，<br>
-每隔100ms将内存journal中的日志写到磁盘journal日志文件中 ，每隔60s将内存中修改的数据写会到磁盘上<br>
-写入安全级别：写入安全Write Concern是一种客户端设置的，用于控制写入安全级别的机制，通过写入安全机制可提高数据的可靠性。<br>
-分为四个级别，分别是：<br>
-非确认式写入Unacknowledged：写操作不会返回结果，所以无法知道是否写入成功；但速度快、效率高、无阻塞<br>
-确认式写入Acknowledged：写操作必须得到MongoDB服务器的写入确认，如果失败，会返回异常<br>
-日志写入Journaled：写操作要等到操作记录存储到Journal日志文件后才返回结果<br>
-复制集确认写入Replica Acknowledged：写操作不仅要得到主节点的写入确认，还要得到从节点的写入确认，可以设置写入节点的个数（包含主节点）</p>
-<p>journal日志相当于oracle中的redo日志文件，用户故障恢复和持久。Journal默认100ms刷新一次，所以最多丢失100ms数据<br>
-文件位于journal目录中，只能以追加方式添加数据，文件名以&quot;j._&quot;开头，超过1G会自动创建新的；数据库正常关闭时，数据库服务会自动清空journal目录下所有文件</p>
-<p>设置写安全操作级别，其实就是在写操作的性能和可靠性间取一个权衡；使用的写操作级别越高，时间越长，可靠性越高</p>
-<p>使用writeConcern函数作为更新函数的一个参数来设置写安全级别,如：db.集合名称.insert({name:“joe”},{writeConcern:{j:true}}),writeConcern函数参数如下：<br>
-w选项，可选择0，1，2等整数值及&quot;majority&quot;，0-非确认式写入 1-确认式写入（未启用复制集）／主节点确认式写入（启用了复制集），&gt;1只能用于复制集，2-数据至少写到1个从节点后返回，majority 只能用于复制集，表示更新操作用到大多数从节点<br>
-j选项，设置为true来使用journaled日志安全级别<br>
-wtimeout选项，用于设置超时单位为毫秒<br>
-以上选项可组合使用</p>
-<p>数据MongoDB数据查询<br>
-Cursor = db.集合名称.find(query,fields,limit,skip)<br>
-query:查询条件，相当于where<br>
-fields:用于字段映射，语法格式：{field:0}（0表示返回结果不包含此字段）或{field:1}（1表示返回结果不包含此字段），默认包含_id字段,相当于select中后面需要的字段<br>
-limit：限制查询结果集的数量，指定查询返回结果的数量上限，也可通过limit()实现<br>
-skip:跳过一定数据量的结果，设置第一条返回文档的偏移量，也可通过skip()实现<br>
-find查询只能正对一个集合；返回的集合默认是无序的</p>
-<p>db.集合名称.findOne()只返回第一条数据</p>
-<p>查询操作符<br>
-比较查询操作符<br>
-逻辑查询操作符<br>
-元素查询操作符<br>
-$where查询操作符：可以将JavaScript表达式的字符串或JavaScript函数作为查询语句的一部分，在js表达式和函数中，可使用this或obj来引用当前操作的文档，当js表达式或函数返回true时，才会返回当前文档</p>
-<p>内嵌文档与数组查询<br>
-内嵌文档查询<br>
-1查询整个内嵌文档：当内嵌文档的键值对数量和键值对顺序都相同时，才会匹配<br>
-2查询文档的某个字段：需要使用.号操作符，如:db.user.find({“address.city”:“BeiJing”})<br>
-数组查询<br>
-1查询整个数组：当数组元素内容和数组元素顺序都相同时，才会匹配<br>
-2查询数组中的元素（普通元素）：<br>
-A与位置无关，查询数组中含有某个值的文档，如：db.user.find({score:80})<br>
-B与位置有关，按照指定的数组索引查询数组元素的值，如：db.user.find({‘scores.2’:80})<br>
-3查询数组中的数组元素是文档时，查询数组元素有两种情况<br>
-A与位置无关，查询数组中满足条件的子文档元素，如：db.user.find(‘scores.成绩’：95)<br>
-B与位置有关，按照指定的数组索引查询数组子文档，如： db.user.find(‘scores.2.成绩’：95)</p>
-<p>MongoDB查询结果返回过程：find函数查询结果是以多条文档的形式分批来返回查询结果的，返回的文档会缓存到内存中，Cursor在一批数据回来之后遍历，下一批没来时会自动发起下一批请求，然后继续遍历</p>
-<p>MongoDB游标：用来遍历结果集中的数据。<br>
-游标的生命周期：创建、使用、销毁<br>
-游标可能会返回那些由于体积变大而被移动到集合末尾的文档而重复返回，可通过对查询快照的方式解决此问题，语法为：db.collection.find().snapshot().<br>
-使用快照之后，查询就会在_id索引上来遍历执行，这样就可以保证每个文档只被返回一次，从而保证获取结果的一致性。</p>
-<p>模糊查询：查询条件可以使用正则表达式实现模糊查询，支持正则表达式操作符和正则表达式对象两种。<br>
-正则表达式操作符：$regex</p>
-<p>findAndModify函数使用执行分为find和update两步，但可以保证操作的原子性</p>
-<p>MongoDB是为分布式存储而设计，_id主键默认使用ObjectId类型的值，比自增方式更适合分布式环境，所以MongoDB默认不支持字段自增长功能</p>
-<p>MongoDB索引：数据库索引是对数据表中一列或多列的值进行排序的一种数据结构，使用索引可快速访问数据表中的特定信息。MogonDB索引不仅提高文档查询速度，还有利于排序时节省内存资源。<br>
-MongoDB所有的索引信息被保存在system.indexes集合中，且默认总为_id创建单字段升序具有唯一属性的索引，可通过db.system.indexes.find()查看所有索引<br>
-MongoDB可在单个字段上建立索引，字段可以是普通字段、整个文档以及子文档的某个字段<br>
-对于复合索引，MongoDB支持前缀匹配<br>
-为确保查询只使用复合索引，可以使用映射来指定不要返回_id字段（除非它是复合索引的一部分）<br>
-多键索引：是对数组类型建立的索引，实际上是对数组的每个元素建立索引，而不是数组本身建立索引；当数组元素是文档时，可为文档的某个字段建立多键索引<br>
-哈希索引：只支持等值查询，不支持范围查询，主要用于分片的集合上，可以作为片键来使用，能将数据比较均匀的分散存储在各个分片上，如：db.集合名.createIndex({name:“hashed”})</p>
-<p>MongoDB索引的属性<br>
-唯一索引:可以确保集合的每一个文档的索引字段都有唯一的值，不会出现重复值，如：db.集合名.createIndex({name:1},{unique:true})，在非空集合创建唯一索引可能会因为已有重复值而失败，可添加dropBups:true删除重复文档<br>
-稀疏索引：只会为索引字段存在的文档建立索引，即使索引字段的值为null，但不会为索引字段不存在的文档建立索引<br>
-TTL(Time To Live)索引：为文档设置一个超时时间，当达到预设置的时间后，该文档会被数据库自动删除，但删除可能有延迟。这种类型的索引对缓存问题非常有用。只能建立在单独非_id字段<br>
-创建了TTL索引后，MongoDB会有一个后台线程来管理文档；在复制集上建立的TTL索引，TTL后台线程只会运行在主节点上</p>
-<p>MongoDB索引的管理<br>
-索引的默认命名规则：keyname1_dir1_keyname2_dir2…，其中keynameX是索引字段的名称，dirX是索引方向，1升序-1降序，也可自定义命名<br>
-创建索引：db.集合名.createIndex(keys,options),返回值为一个文档类型。索引一旦创建就不能修改，创建后可通过db.集合名.getIndexes()查看集合所拥有的索引，创建索引有两种方式：<br>
-1foreground:阻塞所有对数据库的读写请求，直到索引创建完成，为默认方式<br>
-2background：创建索引时，如果有新的数据库请求，创建过程会暂停<br>
-删除索引：db.集合.dropIndex(index)<br>
-查询优化器：用来优化查询过程，通过比较返回100条文档速度得到最佳查询计划<br>
-explain函数：能够提供大量与查询有关的信息，可以很好的评估索引性能，帮助优化索引的使用策略。db.集合.find().explain(mode),支持3种模式：<br>
-1queryPlanner：查询计划，默认<br>
-2executionStatus：查询性能统计<br>
-3allPlansExecution：所有计划统计信息（最优与被拒绝的计划）<br>
-explain返回结果使用由多个阶段（Stage）组成的树形结构来表示查询计划，查询计划自下而上执行，树的叶节点用来访问文档或索引，内部节点处理下层节点返回文档或索引，根节点输出查询结果<br>
-hint函数：强制MongoDB使用特定索引</p>
-<p>MongoDB特殊索引<br>
-地理空间索引：对地理位置数据建立索引，MongoDB支持两种2dsphere球面索引和平面2d索引<br>
-2dSphere球面索引<br>
-2d平面索引</p>
-<p>全文索引：又称为倒排索引，用于在大量文本中对每一个词组建立索引，指出该词在整段文本中出现的位置和次数，此技术主要用于搜索引擎和站内搜索等。<br>
-一个集合只能有一个全文索引</p>
-<p>java对mongodb的使用<br>
-集群搭建：mongodb分布式集群搭建手记</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/10/Java-2018-12-10-MyBatis/" itemprop="url">MyBatis</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T13:43:24+08:00">
-                2018-12-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Java持久化框架 瞬态+持久态</p>
-<p>iBatis-MyBatis<br>
-apache-google-github</p>
-<p>SQL语句与代码分离；面向配置编程；良好支持复杂数据映射；动态SQL</p>
-<p><a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">https://github.com/mybatis/mybatis-3</a><br>
-<a href="http://www.mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/index.html</a></p>
-<p>日志配置<br>
-<a href="https://www.cnblogs.com/zhaozihan/p/6371133.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaozihan/p/6371133.html</a></p>
-<p>MyBatisg工作流程</p>
-<ol>
-<li>读取配置文件</li>
-<li>生成SqlSessionFactory,表示和数据库的连接，一般是程序级的生命周期</li>
-<li>简历SqlSession</li>
-<li>调用MyBatist提供的API</li>
-<li>查询Map配置</li>
-<li>返回结果</li>
-<li>关闭SqlSession</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;$&#123;driver&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;$&#123;url&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;$&#123;username&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>map文件引用<br>
-1.相对路径 2.绝对路径 3.包路径</p>
-<p>MyBatis配置文件：基本配置文件+映射配置文件</p>
-<p>typeAliases标记定义别名，需要environments标记之前</p>
-<p>map文件方式+注解方式（接口方式）</p>
-<p>mappers里面3种写法：resource／class／package</p>
-<p>Select配置属性说明<br>
-两者只能有一个成立<br>
-resultType<br>
-resultMap解决复杂查询时的映射问题，如属性为对象</p>
-<p>parameterType封装hashmap，key既是key也是sql形参<br>
-parameterType封装对象如User，对象参数自动匹配属性，如果对象属性和列名不一样用别名</p>
-<p>返回多上记录时MyBatis自动封装成List</p>
-<p>事务处理：<br>
-MyBatis事务处理由两种方式处理：JDBC+MANAGED</p>
-<p>每张表单独的一个配置文件，方便管理</p>
-<p>MyBatis自动id返回，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one.setUserName(&quot;123&quot;);</span><br><span class="line">session.insert(&quot;insertOne&quot;,one);</span><br><span class="line">System.out.println(one.id);  //可以正常获取id</span><br></pre></td></tr></table></figure>
-<p>高级查询<br>
-关联查询<br>
-联合查询：association<br>
-构造查询：POJO添加构造函数，同时确保要有默认构造函数，防止构造函数重新后找不到默认构造函数<br>
-子查询：所有联合查询，都可以通过子查询替换，但是他让查询成了N+1次的查询</p>
-<pre><code>子查询和联合查询的区别：
-联合查询一次查询占用资源大，子查询N+1次查询占用资源可大可小，MyBatis中子查询可能速度比联合查询速度高如果开启了懒加载的话
-懒加载的使用：配置要在配置别名之前
-</code></pre>
-<p>集合查询：Collection标记，适用于查询的对象还有一个集合引用的事后<br>
-鉴别器：discriminator标记<br>
-javaType属性：<br>
-Column属性：<br>
-Case子标记：</p>
-<p>MyBatis动态SQL：动态生成SQL</p>
-<p><a href="https://www.aliyun.com/jiaocheng/811373.html" target="_blank" rel="noopener">https://www.aliyun.com/jiaocheng/811373.html</a></p>
-<p><a href="https://www.jikexueyuan.com/course/oracledb/1-0-0-0/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/1-0-0-0/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-Kotlin/" itemprop="url">Kotlin</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
-                    <span itemprop="name">Kotlin</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://kotlinlang.org/" target="_blank" rel="noopener">http://kotlinlang.org/</a><br>
-<a href="https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt" target="_blank" rel="noopener">https://try.kotlinlang.org/#/Examples/Hello, world!/Simplest version/Simplest version.kt</a></p>
-<p>Kotlin作者Andrey<br>
-Kotlin是一种在 Java 虚拟机上运行的静态类型编程语言,被称之为 Android 世界的Swift,由 JetBrains 设计开发并开源<br>
-Kotlin是一种运行在Java虚拟机、Android、浏览器上的静态语言<br>
-Kotlin可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。<br>
-Android官方语言；100%兼容Java；Kotlin-js前端开发；Kotlin-jvm服务端开发；Kotlin-native本地执行程序；Kotlin是一门全栈语言</p>
-<p>千里之行，始于Hello World</p>
-<p>Kotlin不存在拆箱装箱问题;Kotlin不可隐式转换类型<br>
-var tmp:[类型]=[变量值]</p>
-<p>Boolean类型<br>
-Number数据类型：Byte，Short，Int，Long，Float，Double<br>
-Char数据类型：Char<br>
-String数据类型：String         字符串a==b 比较内容；a===b比较应用  字符串模版$args1  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>1</mn><mo>+</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>2</mn></mrow><mo separator="true">,</mo><mi mathvariant="normal">引</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">中</mi></mrow><annotation encoding="application/x-tex">{args1+args2},引号中</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">2</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">中</span></span></span></span>引用变量 ，多行<br>
-var a:String …<br>
-a1<br>
-a2<br>
-…</p>
-<p>Kotlin中 Any 等于 Java中 Object，是顶级类</p>
-<p>空类型：任意类型都有可空和不可空两种状态，？表示可为空，!!表示强制认定nullable不可为空<br>
-fun main(args:Array<string>){<br>
-var name:String = getName() ?: return<br>
-println(name)</string></p>
-<pre><code>var tmp:String? = &quot;Hello Kotlin&quot;
-println(tmp)
-println(tmp!!.length)
-</code></pre>
-<p>}</p>
-<p>fun getName():String?{<br>
-return null<br>
-}</p>
-<p>智能类型转换<br>
-Java方式的：var sub:Subclass = parent as Subclass   //类似于Java方式，转换异常则会抛异常<br>
-安全类型转换：var sub:Subclass? = parent as? Subclass   //如果转换失败，则返回null，不抛异常</p>
-<p>if(parent is Subclass)</p>
-<p>import com.test as test</p>
-<p>区间Range:一个数学上的概念，表示范围；是ClosedRange的子类，IntRange最常用；i in 0…1024 判断i是否在区间内<br>
-var range:IntRange = 0…1024    //[0,1024]<br>
-var range:IntRange = 0 until 1024    //[0,1024) == [0,1023]</p>
-<p>className::java.class.name<br>
-className::java.class.simpleName</p>
-<p>数组: val array:Array&lt;&gt; = arrayOf(…)<br>
-为了避免不必要的拆箱和装箱，基本类型的数组是定制的<br>
-val arrayOfInt:IntArray = intArrayOf(1,2,4)<br>
-val arrayOfChar:CharArray = charArrayOf(‘H’,‘e’,‘y’)<br>
-val arrayOfString: Array<string> = arrayOf(“Hello”,“Kotlin”)<br>
-val arrayOfOther:Array<other> = arrayOf(Other(1),Other(2))</other></string></p>
-<p>常量：val，常量因为赋值了，编译器可以推导出来类型，所以类型可以不用写，变量：var</p>
-<p>External Tools<br>
-Tools-&gt;Kotlin-&gt;Show Kotlin Bytecode</p>
-<p>函数：Kotlin中没有申明返回值的默认返回值是Unit<br>
-kotlinc安装，使用和javac一样<br>
-变量函数<br>
-var int2Long = fun(x:Int):Long{<br>
-return x.toLong()<br>
-}<br>
-int2Long(123)<br>
-fun sum(arg1:Int,arg2:Int) = arg1+arg2<br>
-Lambda表达式调用使用()或者invoke(),如：sum(1,2) 或 sum.invoke(1,2)<br>
-Lambda表达式–匿名函数</p>
-<p>var = {arg1:Int,arg2:Int -&gt; arg1+arg2}</p>
-<p>arrayOfString.forEach { println(it) }   //如果字面函数只有一个参数,可以省略该参数声明,并用“it”代替<br>
-arrayOfString.forEach(::println)</p>
-<p>Lambda表达式中的return<br>
-<a href="https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app</a></p>
-<p>public inline fun <t> Array<out t="">.forEach(action: (T) -&gt; Unit): Unit {<br>
-for (element in this) action(element)<br>
-}</out></t></p>
-<p>indexes.forEach {<br>
-if (it &gt; 5) {<br>
-return@forEach<br>
-}<br>
-println(it)<br>
-}</p>
-<p>indexes.forEach label@ {<br>
-if (it &gt; 5) {<br>
-return @label<br>
-}<br>
-println(it)<br>
-}</p>
-<p>函数参数调用时最后一个Lambda可以移出去<br>
-函数参数只有一个Lambda，调用时小括号可以省略<br>
-Lambda有一个参数，可默认为it<br>
-入参、返回值与形参一致的函数可以用函数引用的方式作为实参传入</p>
-<p>类成员方法和成员变量<br>
-class B<br>
-class A{<br>
-var b=0;<br>
-lateinit var c:String<br>
-val d:B by lazy{<br>
-B()<br>
-}<br>
-}<br>
-属性初始化</p>
-<ol>
-<li>尽量在构造方法中完成</li>
-<li>无法在构造方法中完成的，尝试降级为局部变量</li>
-<li>var用lateinit延迟初始化，val用lazy</li>
-<li>可空类型慎用null直接初始化</li>
-</ol>
-<p>中缀表达式：只有一个参数，且用infix修饰的函数<br>
-class Book {infix fun on(placeString:String){…}}<br>
-Book() on “My Desk” //使用方式<br>
-分支表达式：<br>
-val mode=if(args.isNotEmpty() &amp;&amp; args[0] ==1){<br>
-0<br>
-}else{<br>
-1<br>
-}</p>
-<p>异常捕捉<br>
-try …catch …finally中的执行完之后，再返回结果，可通过var获取返回值</p>
-<p>具名参数：sum(arg1=2,arg0=3)  //参数就可以不按照顺序传递了<br>
-变长参数：如main方法中的args<br>
-fun test(vararg  args:String){}<br>
-默认参数：给出参数默认值</p>
-<p>导出可执行程序</p>
-<p>kotlin应用场景：</p>
-<p>kotlin-android</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-SpringBoot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-SpringBoot/" itemprop="url">SpringBoot</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T14:41:51+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://spring.io/" target="_blank" rel="noopener">http://spring.io/</a></p>
-<p><a href="https://www.imooc.com/video/16358" target="_blank" rel="noopener">https://www.imooc.com/video/16358</a></p>
-<p>英文文档：<a href="https://docs.spring.io/spring-boot/docs/current/reference/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/</a></p>
-<p>Spring Framework是一种JavaEE的框架<br>
-Spring Boot是一种快速构建的Spring应用<br>
-Spring Cloud是构建SpringBoot的分布式应用</p>
-<p>SpringBoot2.0<br>
-编程语言：Java 8+，Kotlin，底层框架：SpringFramework 5.0.X,支持Web Flux</p>
-<p>Web Flux</p>
-<ol>
-<li>支持函数编程，Java 8 Lambda</li>
-<li>响应式编程,Reactive Streams</li>
-<li>异步编程，Servlet3.1和Asyc NIO</li>
-</ol>
-<p>InteliJ中配置Java和Maven</p>
-<p>构建项目：<br>
-图形化方式<br>
-1 <a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a> ，输入选择Reactive Web<br>
-2 导入项目<br>
-命令行方式（Maven）<br>
-mvn archetype:generate -DinteractiveMode=false -DgroupId=com.test -DartifactId=first-app-by-maven -Dversion=1.0.0-SNAPSHOT<br>
-添加<br>
-<parent><br>
-<groupid>org.springframework.boot</groupid><br>
-<artifactid>spring-boot-starter-parent</artifactid><br>
-<version>1.5.9.RELEASE</version><br>
-<relativepath><br>
-</relativepath></parent></p>
-<dependencies>
-    <dependency>
-        <groupid>org.springframework.boot</groupid>
-        <artifactid>spring-boot-starter-web</artifactid>
-    </dependency>
-</dependencies>
-<p>取消Junit的版本，需要4.1.2以上，取掉之后spring-boot-starter-parent继承版本</p>
+<blockquote>
+<p>如果重定向的操作符是&lt;&lt;-，那么分界符（EOF）所在行的开头部分的制表符（Tab）都将被去除</p>
+</blockquote>
 <hr>
-<p>父Module的packaging设置为pom</p>
-<p>打包方式<br>
-Jar包方式<br>
-War包方式<br>
-指定Main-class方式</p>
-<plugin>
-  <groupid>org.springframework.boot</groupid>
-  <artifactid>spring-boot-maven-plugin</artifactid>
-  <version>1.5.4.RELEASE</version>
-  <configuration>
-    <mainclass>${start-class}</mainclass>
-    <layout>ZIP</layout>
-  </configuration>
-  <executions>
-    <execution>
-      <goals>
-        <goal>repackage</goal>
-      </goals>
-    </execution>
-  </executions>
-</plugin> 
-<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html</a></p>
-<p>jar包形式<br>
-mvn -Dmaven.test.skip -U clean package<br>
-java -jar [jar名称.jar]</p>
-<p>war包形式，需要有webapp-&gt;WEB-INF-&gt;web.xml<br>
-java -jar [war名称.war]</p>
-<p>运行模式<br>
-IDEA方式<br>
-Jar／War方式<br>
-Maven插件方式：<br>
-mvn srping-boot:run//需要在Main方法module，使用前，需要在父Module mvn -Dmaven.test.skip -U clean install<br>
-<a href="https://blog.csdn.net/taiyangdao/article/details/75303181" target="_blank" rel="noopener">https://blog.csdn.net/taiyangdao/article/details/75303181</a></p>
-<p>ConcurrentHashMap  <a href="http://www.importnew.com/28263.html" target="_blank" rel="noopener">http://www.importnew.com/28263.html</a>  <a href="https://www.cnblogs.com/heyonggang/p/9112731.html" target="_blank" rel="noopener">https://www.cnblogs.com/heyonggang/p/9112731.html</a><br>
-AtomicInteger <a href="https://www.cnblogs.com/sharkli/p/5623524.html" target="_blank" rel="noopener">https://www.cnblogs.com/sharkli/p/5623524.html</a><br>
-好的习惯，实体都实现toString()方法</p>
-<p>Flux &amp; Mono<br>
-Flux：0到N个对象的集合<br>
-Mono：0到1个对象的集合<br>
-Reactive中的Flux和Mono是异步处理的，都是Publisher</p>
-<p><a href="https://www.imooc.com/learn/1058" target="_blank" rel="noopener">https://www.imooc.com/learn/1058</a><br>
-组件自动装配：规约大于配置，专注核心业务<br>
-外部化部署：一次构建、按需调配，到处运行<br>
-嵌入式容器：内置容器、无需部署、独立运行<br>
-SpringBoot Starter:简化依赖、按需装配、自我包含<br>
-Production-Ready：一站式运维、生态无缝整合</p>
-<p>Java 能长盛不衰，主要是命好。每当人们觉得 Java 不行了的时候，总会有英雄横刀救美。<br>
-最初 Java 开发出来不知道有什么用的时候，发现可以用 Applet 在网页上做动画。后来企业级软件开发时代 JavaEE 大行其道，开源社区 Spring 桃李满天下。<br>
-等到了移动时代，人们觉得 Java 要完蛋了，Google 拍马救市，收购并开放了 Android 平台，当家语言就是 Java，于是 Java 再次焕发勃勃生机。<br>
-目前大数据领域，Java 同样是当仁不让的好手。</p>
-<p>现在 Spring Framework 那套东西使用了十几年，正当大家被长达几千行的 ApplicationContext 配置文件折磨的死去活来的时候，Spring Boot 诞生了。什么是 Spring Boot？用来简化 Spring 应用程序开发的。</p>
-<p>换句话说就是，当你觉得 Java 不好用的时候，我做了个轻量级的 S，让你好好用 Java。等你觉的 S 也不够轻了，我做了个 SB，让你觉得 S 还是挺轻的。</p>
-<p><a href="https://www.imooc.com/video/16783" target="_blank" rel="noopener">https://www.imooc.com/video/16783</a><br>
-SrpingBoot为微服务框架，与Spring4一起诞生</p>
-<p><a href="https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/02/C-开发-2018-11-02-NuGet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/02/C-开发-2018-11-02-NuGet/" itemprop="url">NuGet</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T10:44:02+08:00">
-                2018-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/nizhenghua/p/6422078.html" target="_blank" rel="noopener">https://www.cnblogs.com/nizhenghua/p/6422078.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-ECMAScript规范/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-ECMAScript规范/" itemprop="url">ECMAScript规范</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>ECMAScript 6（简称ES6）是JavaScript语言的下一代标准，于2015年6月正式发布，也称ECMAScript 2015。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考资料</span><br><span class="line">《ECMAScript 6 入门》： http://es6.ruanyifeng.com/</span><br></pre></td></tr></table></figure>
-<p>ECMA是标准，js是实现</p>
-<p>[toc]</p>
-<h3 id="历史"><a class="markdownIt-Anchor" href="#历史"></a> 历史</h3>
-<ul>
-<li>1996    ES1.0   js稳定，Netscapte将js提交给ECMA组织，ES正式出现</li>
-<li>1998  ES2.0   ES2.0正式发布</li>
-<li>1999  ES3.0   ES3被浏览器广泛支持</li>
-<li>2007  ES4.0   ES4过于激进，被废除了</li>
-<li>2008  ES3.1   4.0退化为严重缩水版3.1，代号Harmony（和谐）</li>
-<li>2009  ES5.0   ES5正式发布了，公布了JS.next，即后来的ES6.0</li>
-<li>2011  ES5.1   ES5.1成为了ISO国际标准</li>
-<li>2013.3  ES6.0   制定草案</li>
-<li>2013.12   ES6.0   ES6.0草案发布</li>
-<li>2015.6    ES6.0   ES6.0预计发布正式版，同时JS.next指向ES7.0</li>
-</ul>
-<h3 id="兼容性"><a class="markdownIt-Anchor" href="#兼容性"></a> 兼容性</h3>
+<h1 id="action-bintrue-的用法"><a class="markdownIt-Anchor" href="#action-bintrue-的用法"></a> action  “” /bin/true 的用法</h1>
 <blockquote>
-<p>目前ES5、ES6支持还可以，凑合；ES5、ES6逐渐沦为后台语言</p>
+<p>action是个bash的函数.true命令啥都不做，只设置退出码为0</p>
 </blockquote>
 <blockquote>
-<p>在浏览器中使用需要用到编译工具，babel／traceur（由google出的编译器，把ES6语法编译成ES5）</p>
+<p>使用举例：==action “操作成功！” /bin/true==</p>
 </blockquote>
-<h3 id="使用的三种方式"><a class="markdownIt-Anchor" href="#使用的三种方式"></a> 使用的三种方式</h3>
-<ol>
-<li>网页内直接使用</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;traceur.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;module&quot;&gt;</span><br><span class="line">    //此出写ES6代码</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>直接在线编译（主要用于测试）</li>
-</ol>
-<ul>
-<li><a href="http://babeljs.io/repl/" target="_blank" rel="noopener">http://babeljs.io/repl/</a></li>
-<li><a href="https://google.github.io/traceur-compiler/demo/repl.html" target="_blank" rel="noopener">https://google.github.io/traceur-compiler/demo/repl.html</a></li>
-</ul>
-<ol start="3">
-<li>直接在node中使用</li>
-</ol>
-<ul>
-<li>直接用，需添加‘use strict’</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//test.js</span><br><span class="line">&apos;use strict&apos;</span><br><span class="line">let a=2;</span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure>
-<p>node test.js</p>
-<ul>
-<li>node --harmony_desctructuring test.js</li>
-</ul>
-<h3 id="新增功能"><a class="markdownIt-Anchor" href="#新增功能"></a> 新增功能</h3>
-<h4 id="定义变量-let"><a class="markdownIt-Anchor" href="#定义变量-let"></a> 定义变量 let</h4>
-<ul>
-<li>let定义的变量只能在代码块中使用，具备块级作用域；var具备函数级作用域；</li>
-<li>块级作用域其实就是匿名函数立即调用</li>
-<li>变量不能重复定义</li>
-<li>可用于封闭空间;封闭空间可解决i问题<br>
-以前：<br>
-(function(i){<br>
-var a=12;<br>
-})(i);<br>
-现在：<br>
-{<br>
-let  a=12;<br>
-}</li>
-</ul>
-<h4 id="定义常量-const"><a class="markdownIt-Anchor" href="#定义常量-const"></a> 定义常量 const</h4>
-<p>定义后则不能修改</p>
-<h4 id="字符串连接"><a class="markdownIt-Anchor" href="#字符串连接"></a> 字符串连接</h4>
-<p>==反单引号==：==``==,内容模版,==${变量名}填充模版==</p>
-<h4 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值"></a> 解构赋值</h4>
-<ul>
-<li>var [a,b,c]=[12,5,101];解析结构，给a、b、c都赋值；</li>
-<li>json格式（通过名称匹配，与顺序无关）也支持</li>
-<li>==模式匹配==：var [a,[b,c],d] =[12,[3,2],101],左侧的样子需要和右侧一样</li>
-<li>可==以给默认值==。var {time=12,date} ={data=123}</li>
-</ul>
-<h4 id="复制数组"><a class="markdownIt-Anchor" href="#复制数组"></a> 复制数组</h4>
-<p>数组赋值为引用赋值，复制以前用for循环🔥 Array.from()函数，现在使用==超引用’…’==, var arr2 = […arr1]; 在函数中通过 …args 接收多个参数</p>
-<h4 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h4>
-<p>以前是for或for in，现在：for of，支持数组、json、map</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//i表示数组或者json的值，for in中i是下标，for of中表示key+value，实质是jsonObj.entrys(),类似的还有jsonObj.keys()、jsonObj.values()</span><br><span class="line">for(var i of arr)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="map操作"><a class="markdownIt-Anchor" href="#map操作"></a> map操作</h4>
-<p>get()\set()\delete()</p>
-<h4 id="箭头函数"><a class="markdownIt-Anchor" href="#箭头函数"></a> 箭头函数  =&gt;</h4>
-<p><strong>注意事项</strong></p>
-<ul>
-<li>this问题  //this指向了window对象</li>
-<li>arguments不能使用，箭头函数没有自己的 arguments</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123; </span><br><span class="line">  var f = (...args) =&gt; args[0]; </span><br><span class="line">  return f(2); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(1); // 2</span><br></pre></td></tr></table></figure>
-<p>更多：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a></p>
-<h4 id="对象语法简洁化"><a class="markdownIt-Anchor" href="#对象语法简洁化"></a> 对象语法简洁化</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//以前</span><br><span class="line">var person=&#123;</span><br><span class="line">    name:&apos;abc&apos;,</span><br><span class="line">    age:100,</span><br><span class="line">    showName:function()&#123;</span><br><span class="line">        alert(this.name);       //this有问题</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">var name=&apos;abc&apos;;</span><br><span class="line">var age =100;</span><br><span class="line">var person=&#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    showName()&#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//以前面向对象</span><br><span class="line">function Person(name,age)&#123;  //类和构造函数一体</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.showName=function()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;</span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//ES6面向对象</span><br><span class="line">class Person&#123;</span><br><span class="line">    constructor(name=&apos;defalut&apos;,age=0)&#123;  //此处可以设置默认值，这是函数的功能，即：函数参数可以给默认值</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    showName()&#123;</span><br><span class="line">        return this.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);     </span><br><span class="line">alert(p1.showName());</span><br></pre></td></tr></table></figure>
-<p>继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//以前  子类.prototype = new 父类();</span><br><span class="line">function Worker(name,age)&#123;</span><br><span class="line">    Person.apply(this,arguments);</span><br><span class="line">&#125;</span><br><span class="line">Worker.prototype=new Person();</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">class Woker extends Person&#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        super();    //调用父级构造</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="es5-thisbind"><a class="markdownIt-Anchor" href="#es5-thisbind"></a> ES5:  this.bind();</h4>
-<h4 id="模块化"><a class="markdownIt-Anchor" href="#模块化"></a> 模块化</h4>
-<blockquote>
-<p>当前使用模块化必须引入traceur和bootstrap，type必须写成module</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//定义</span><br><span class="line">export default &#123;a,b&#125;</span><br><span class="line">//引用</span><br><span class="line">import modA from &apos;./a.js&apos;;</span><br><span class="line">//使用</span><br><span class="line">var sum = modA.a + modA.b</span><br></pre></td></tr></table></figure>
-<h4 id="promise"><a class="markdownIt-Anchor" href="#promise"></a> Promise</h4>
-<blockquote>
-<p>本身为一个对象，用来传递异步操作的数据</p>
-</blockquote>
-<blockquote>
-<p>整体是链式操作</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pending(等待、处理中)  ---&gt; Resolve（完成）   </span><br><span class="line">                     ---&gt; Reject  (拒绝)</span><br></pre></td></tr></table></figure>
-<p>使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var p1 = new Promise(function(resolve,reject)&#123;</span><br><span class="line">    if(异步处理成功了)</span><br><span class="line">        resolve(成功数据)</span><br><span class="line">    else</span><br><span class="line">        reject(失败原因)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>包含方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">所有方法都支持链式编程</span><br><span class="line">*  then(成功(resolve数据),失败（reject数据）)  //此方法可以防止异步编程括号深度太多的的问题</span><br><span class="line">*  catch（function（e）&#123;&#125;）；    // 用来捕获错误</span><br><span class="line">*  all[p1,p2,p3....]  //用于将多个promise对象组合／包装成一个全新的promise对象,数组中的Promise又一个错误则按错误流程走，所有都成功则按成功流程走</span><br><span class="line">*  Promise.race([p1,p2....]).then(function(value)&#123;&#125;); //返回最先执行的Promise的结果</span><br><span class="line">*  Promise.reject()         //生成错误的Promise</span><br><span class="line">*  Promise.resolve()        //生成成功的Promise</span><br></pre></td></tr></table></figure>
-<h4 id="generatoryield"><a class="markdownIt-Anchor" href="#generatoryield"></a> Generator+yield</h4>
-<blockquote>
-<p>Generator:生成器，是一个函数，可以遍历</p>
-</blockquote>
-<ul>
-<li>Generator函数名字前有*</li>
-<li>Generator函数内部使用yield语句</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//普通函数</span><br><span class="line">function show()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">function* show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">*show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var res=show();</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;Hello&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;World&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;undefined&quot;,done:true&#125;</span><br><span class="line">~~~ </span><br><span class="line">* Generator函数调用后的对象有next方法</span><br><span class="line">* next方法每次返回一个value和done结果，value位yield后面的值，done代表是否遍历结束</span><br><span class="line">* yield语句本身没有返回值或每次返回undefined</span><br><span class="line">* next可以带参数，所带参数给了上一个yield</span><br><span class="line">* for ...of循环支持Generator函数</span><br></pre></td></tr></table></figure>
-<p>for (let v of show()){<br>
-document.write(v);<br>
-}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 展开运算符</span><br><span class="line"> 扩展语法允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组文本）或多个变量（用于解构赋值）的位置扩展</span><br><span class="line">1. 用于函数调用</span><br></pre></td></tr></table></figure>
-<p>myFunction(…iterableObj);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 用于数组字面量</span><br></pre></td></tr></table></figure>
-<p>[…iterableObj, 4, 5, 6]</p>
-<pre class="highlight"><code class="">
-ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-CommonJS规范-AMD-CMD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-CommonJS规范-AMD-CMD/" itemprop="url">CommonJS规范&AMD&CMD</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:41:00+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>浏览器端的js和服务器端js都主要做了哪些事</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>服务器端JS</th>
-<th>浏览器端JS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>相同的代码需要多次执行</td>
-<td>代码需要从一个服务器端分发到多个客户端执行</td>
-</tr>
-<tr>
-<td>CPU和内存资源是瓶颈</td>
-<td>带宽是瓶颈</td>
-</tr>
-<tr>
-<td>加载时从磁盘中加载</td>
-<td>加载时需要通过网络加载</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>CommonJS是主要为了JS在==后端的表现制定==的，他是不适合前端的;AMD(异步模块定义)出现了，它就主要==为前端JS的表现制定规范==</p>
-</blockquote>
-<blockquote>
-<p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。</p>
-</blockquote>
-<blockquote>
-<p>AMD规范则是非同步加载模块，允许指定回调函数。</p>
-</blockquote>
-<blockquote>
-<p>由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，所以CommonJS规范比较适用。但是，如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范</p>
-</blockquote>
-<p>[toc]</p>
-<h1 id="commonjs"><a class="markdownIt-Anchor" href="#commonjs"></a> CommonJS</h1>
-<blockquote>
-<p>CommonJS规范: <a href="http://javascript.ruanyifeng.com/nodejs/module.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/nodejs/module.html</a></p>
-</blockquote>
-<blockquote>
-<p>CommonJS模块的特点如下:</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">所有代码都运行在模块作用域，不会污染全局作用域。</span><br><span class="line">模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。</span><br><span class="line">模块加载的顺序，按照其在代码中出现的顺序</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>CommonJS是一种规范，NodeJS是这种规范的实现</p>
-</blockquote>
-<blockquote>
-<p>JavaScript是一个强大面向对象语言，它有很多快速高效的解释器。官方JavaScript标准定义的API是为了构建基于浏览器的应用程序。然而，并没有定于一个用于更广泛的应用程序的标准库。</p>
-</blockquote>
-<blockquote>
-<p>CommonJS API定义很多普通应用程序（主要指非浏览器的应用）使用的API，从而填补了这个空白。它的终极目标是提供一个类似Python，Ruby和Java标准库。这样的话，开发者可以使用CommonJS API编写==应用程序==，然后这些应用可以运行在不同的JavaScript解释器和不同的主机环境中。</p>
-</blockquote>
-<p>CommonJS定义的模块分为:模块引用(require)；模块定义(exports)；模块标识(module)</p>
-<h2 id="require"><a class="markdownIt-Anchor" href="#require"></a> require</h2>
-<blockquote>
-<p>require命令用于加载文件，后缀名默认为.js</p>
-</blockquote>
-<blockquote>
-<p>每个模块中有一个自由变量require，它是一个方法，这个方法接受一个参数，即模块的唯一ID。</p>
-</blockquote>
-<blockquote>
-<p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值</p>
-</blockquote>
-<blockquote>
-<p>require根据外部模块ID，返回该模块输出的API。如果外部模块被required的时候还没有执行完，require至少应改返回该模块的exports（另一个自由变量）。如果必需的模块不存在，require方法应该抛出一个异常。</p>
-</blockquote>
-<blockquote>
-<p>require可以有一个main属性，属性值要么为undefined，要么等于module（另一个自由变量）;可以用来判断模块是直接执行，还是被调用执行。直接执行的时候（node module.js），require.main属性指向模块本身;调用执行的时候（通过require加载该脚本执行），==require.main === module== 返回false</p>
-</blockquote>
-<blockquote>
-<p>require可以有一个paths属性，属性值为由路径字符串组成的数组，路径按优先级从高到低的顺序排列</p>
-</blockquote>
-<p>根据参数的不同格式，require命令去不同路径寻找模块文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 如果参数字符串以“/”开头，则表示加载的是一个位于绝对路径的模块文</span><br><span class="line">* 如果参数字符串以“./”开头，则表示加载的是一个位于相对路径的模块文件</span><br><span class="line">* 如果参数字符串不以“./“或”/“开头，则表示加载的是一个默认提供的核心模块或者一个位于各级node_modules目录的已安装模块</span><br><span class="line">* 如果参数字符串不以“./“或”/“开头，而且是一个路径如果参数字符串不以“./“或”/“开头，而且是一个路径，比如require(&apos;example-module/path/to/file&apos;)，则将先找到example-module的位置，然后再以它为参数，找到后续路径。</span><br><span class="line">* 如果指定的模块文件没有发现，Node会尝试为文件名添加.js、.json、.node后，再去搜索</span><br><span class="line">* 如果想得到require命令加载的确切文件名，使用require.resolve()方法</span><br></pre></td></tr></table></figure>
-<h2 id="exports"><a class="markdownIt-Anchor" href="#exports"></a> exports</h2>
-<p>每个模块中还有一个自由变量exports，它是一个对象，==模块对外输出的API就绑定在这个对象上==。而且==exports是模块对外输出API的唯一途径==。Node为每个模块提供一个exports变量，指向module.exports</p>
-<blockquote>
-<p>不能直接将exports变量指向一个值，因为这样等于切断了exports与module.exports的联系</p>
-</blockquote>
-<h2 id="module"><a class="markdownIt-Anchor" href="#module"></a> module</h2>
-<p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。==加载某个模块，其实是加载该模块的module.exports属性==</p>
-<blockquote>
-<p>每个模块中必须有一个自由变量module，它是对象。这个对象有一个id属性，表示该模块的id，同时应该是只读属性。</p>
-</blockquote>
-<blockquote>
-<p>module对象可以有一个uri属性，表示这个模块被加载的来源。</p>
-</blockquote>
-<p>每个模块内部，都有一个module对象，代表当前模块。它有以下属性:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.id 模块的识别符，通常是带有绝对路径的模块文件名。</span><br><span class="line">module.filename 模块的文件名，带有绝对路径。</span><br><span class="line">module.loaded 返回一个布尔值，表示模块是否已经完成加载。</span><br><span class="line">module.parent 返回一个对象，表示调用该模块的模块。</span><br><span class="line">module.children 返回一个数组，表示该模块要用到的其他模块。</span><br><span class="line">module.exports 表示模块对外输出的值</span><br></pre></td></tr></table></figure>
-<h2 id="目录的加载规则"><a class="markdownIt-Anchor" href="#目录的加载规则"></a> 目录的加载规则</h2>
-<blockquote>
-<p>通常，我们会把相关的文件会放在一个目录里面，便于组织。这时，最好为该目录设置一个入口文件，让require方法可以通过这个入口文件，加载整个目录</p>
-</blockquote>
-<blockquote>
-<p>在目录中放置一个package.json文件，并且将入口文件写入main字段</p>
-</blockquote>
-<blockquote>
-<p>如果package.json文件没有main字段，或者根本就没有package.json文件，则会加载该目录下的index.js文件或index.node文件</p>
-</blockquote>
-<h2 id="模块的缓存"><a class="markdownIt-Anchor" href="#模块的缓存"></a> 模块的缓存</h2>
-<blockquote>
-<p>第一次加载某个模块时，Node会缓存该模块。以后再加载该模块，就直接从缓存取出该模块的module.exports属性</p>
-</blockquote>
-<blockquote>
-<p>所有缓存的模块保存在require.cache之中，如果想删除模块的缓存，可以像下面这样写</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 删除指定模块的缓存</span><br><span class="line">delete require.cache[moduleName];</span><br><span class="line"></span><br><span class="line">// 删除所有模块的缓存</span><br><span class="line">Object.keys(require.cache).forEach(function(key) &#123;</span><br><span class="line">  delete require.cache[key];</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h1 id="amd"><a class="markdownIt-Anchor" href="#amd"></a> AMD</h1>
-<blockquote>
-<p>AMD就只有一个接口：define(id?,dependencies?,factory);</p>
-</blockquote>
-<blockquote>
-<p>RequireJS就是实现了AMD规范</p>
-</blockquote>
-<h1 id="cmd"><a class="markdownIt-Anchor" href="#cmd"></a> CMD</h1>
-<blockquote>
-<p>大名远扬的玉伯写了seajs，就是遵循他提出的CMD规范，与AMD蛮相近的，不过用起来感觉更加方便些，最重要的是中文版</p>
-</blockquote>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Run some action. Log its output.</span><br><span class="line">action() &#123;</span><br><span class="line">  local STRING rc</span><br><span class="line"></span><br><span class="line">  STRING=$1</span><br><span class="line">  echo -n &quot;$STRING &quot;</span><br><span class="line">  shift</span><br><span class="line">  &quot;$@&quot; &amp;&amp; success $&quot;$STRING&quot; || failure $&quot;$STRING&quot;</span><br><span class="line">  rc=$?</span><br><span class="line">  echo</span><br><span class="line">  return $rc</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -2923,7 +2169,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2978,7 +2224,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2989,7 +2235,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -3000,7 +2246,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -3071,7 +2317,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
+ <span id="busuanzi_value_site_uv"></span>
 </span>
 </div>
 
@@ -3094,7 +2340,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共44.0k字</span>
+  <span class="post-count">博客全站共97.8k字</span>
 </div>
 
 

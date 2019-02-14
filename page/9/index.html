@@ -1,0 +1,2934 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/9/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/9/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-Razor使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-Razor使用/" itemprop="url">Razor使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T19:58:54+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
+<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/razor_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/razor_intro.asp，</a> 为个人学习笔记记录。</p>
+<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
+<p>Razor 是一种允许您向网页中嵌入基于服务器的代码的标记语法。Razor 基于 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a>，它为 web 应用程序的创建而设计。</p>
+<blockquote>
+<p>当网页被写入浏览器时，基于服务器的代码能够创建动态内容。在网页加载时，服务器在向浏览器返回页面之前，会执行页面内的基于服务器代码。由于是在服务器上运行，这种代码能执行复杂的任务，比如访问数据库。</p>
+</blockquote>
+<h1 id="c-的主要-razor-语法规则"><a class="markdownIt-Anchor" href="#c-的主要-razor-语法规则"></a> C# 的主要 Razor 语法规则</h1>
+<ul>
+<li>Razor 代码块由 @{ … } 包围</li>
+<li>行内表达式（变量和函数）以 @ 开始</li>
+<li>代码语句以分号结束</li>
+<li>变量通过 var 关键词进行声明</li>
+<li>字符串用引用来包围</li>
+<li>C# 代码对大小写敏感</li>
+<li>C# 文件的扩展名是 .cshtml</li>
+</ul>
+<h1 id="编程"><a class="markdownIt-Anchor" href="#编程"></a> 编程</h1>
+<p>Razor编程支持变量、循环、逻辑。</p>
+<h2 id="变量"><a class="markdownIt-Anchor" href="#变量"></a> 变量</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var myString = &apos;103&apos;;</span><br><span class="line">int counter = 103; </span><br><span class="line"></span><br><span class="line">if (myString.IsInt())</span><br><span class="line">&#123;</span><br><span class="line">    myInt=myString.AsInt();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">@for(var i = 10; i &lt; 21; i++)</span><br><span class="line">    &#123;&lt;p&gt;Line @i&lt;/p&gt;&#125;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">@foreach (var x in Request.ServerVariables)</span><br><span class="line">    &#123;&lt;li&gt;@x&lt;/li&gt;&#125;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">@&#123;</span><br><span class="line">var i = 0;</span><br><span class="line">while (i &lt; 5)</span><br><span class="line">    &#123;</span><br><span class="line">    i += 1;</span><br><span class="line">    &lt;p&gt;Line #@i&lt;/p&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@&#123;var price=25;&#125;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">@if (price&gt;=30)</span><br><span class="line">  &#123;</span><br><span class="line">  &lt;p&gt;The price is high.&lt;/p&gt;</span><br><span class="line">  &#125;</span><br><span class="line">else if (price&gt;20 &amp;&amp; price&lt;30) </span><br><span class="line">  &#123;</span><br><span class="line">  &lt;p&gt;The price is OK.&lt;/p&gt;</span><br><span class="line">  &#125;</span><br><span class="line">else</span><br><span class="line">  &#123;</span><br><span class="line">  &lt;p&gt;The price is low.&lt;/p&gt;</span><br><span class="line">  &#125;    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@&#123;</span><br><span class="line">var weekday=DateTime.Now.DayOfWeek;</span><br><span class="line">var day=weekday.ToString();</span><br><span class="line">var message=&quot;&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">@switch(day)</span><br><span class="line">&#123;</span><br><span class="line">case &quot;Monday&quot;:</span><br><span class="line">    message=&quot;This is the first weekday.&quot;;</span><br><span class="line">    break;</span><br><span class="line">case &quot;Thursday&quot;:</span><br><span class="line">    message=&quot;Only one day before weekend.&quot;;</span><br><span class="line">    break;</span><br><span class="line">case &quot;Friday&quot;:</span><br><span class="line">    message=&quot;Tomorrow is weekend!&quot;;</span><br><span class="line">    break;</span><br><span class="line">default:</span><br><span class="line">    message=&quot;Today is &quot; + day;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;@message&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-WebPages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-WebPages/" itemprop="url">ASP.NET WebPages学习笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T11:37:50+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
+<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/webpages_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/webpages_intro.asp，</a> 为个人学习笔记记录。</p>
+<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
+<p>Web Pages 是三种 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 编程模型中的一种，用于创建 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 网站和 web 应用程序。</p>
+<h1 id="布局"><a class="markdownIt-Anchor" href="#布局"></a> 布局</h1>
+<p>在因特网上，您会发现很多拥有统一外观的网站：</p>
+<ul>
+<li>每页拥有相同的页眉</li>
+<li>每页拥有相同的页脚</li>
+<li>每页拥有相同的样式和布局</li>
+</ul>
+<p>可以通过以下方式实现：</p>
+<ol>
+<li>使用 @RenderPage() 方法从不同的文件导入内容</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">@RenderPage("header.cshtml")</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Web Pages<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line">@RenderPage("footer.cshtml")</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>使用布局页面<br>
+布局网页包含网页的结构，而不是内容。当网页（内容页）链接到布局页时，它会根据布局页（模板）来显示。布局页类似普通的网页，但是会在引用内容页的位置调用 @RenderBody() 方法。每个内容页必须以 Layout 指令开头。</li>
+</ol>
+<p>布局页面：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">@RenderBody() </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>任意网页：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@&#123;Layout="Layout.cshtml";&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to W3Schools<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="防止代码泄露"><a class="markdownIt-Anchor" href="#防止代码泄露"></a> 防止代码泄露</h1>
+<p>在 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 中，名称以下划线开头的文件无法通过 web 来浏览。如果您希望禁止用户查看内容块或布局文件，请对文件重新命名,如：_Layout.cshtml</p>
+<h1 id="~-操作符-与-href-方法"><a class="markdownIt-Anchor" href="#~-操作符-与-href-方法"></a> ~ 操作符 与 Href 方法</h1>
+<ul>
+<li>使用 ~ 操作符在编程代码中规定虚拟根目录,作为项目资源路径根路径，如：var myImagesFolder = “~/images”;</li>
+<li>Href 方法把代码中的路径转换为浏览器能够理解的路径（浏览器无法理解 ~ 操作符），如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@&#123;var myStyleSheet = &quot;~/Shared/Site.css&quot;;&#125;</span><br><span class="line">&lt;!-- 创建指向 CSS 文件的链接 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;@Href(myStyleSheet)&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="page对象"><a class="markdownIt-Anchor" href="#page对象"></a> Page对象</h1>
+<p>Page对象为内置对象，类似与JSP中的Request等对象</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>href</td>
+<td>使用指定的参数构建 URL。</td>
+</tr>
+<tr>
+<td>RenderBody()</td>
+<td>在布局页中，将呈现不在指定部分中的内容页部分。</td>
+</tr>
+<tr>
+<td>RenderPage(page)</td>
+<td>在其他页内呈现某一页的内容。</td>
+</tr>
+<tr>
+<td>RenderSection(section)</td>
+<td>在布局页中，将呈现指定部分的内容。</td>
+</tr>
+<tr>
+<td>Write(object)</td>
+<td>将指定的对象作为 HTML 编码的字符串写入。</td>
+</tr>
+<tr>
+<td>WriteLiteral</td>
+<td>无需先对指定的对象进行 HTML 编码，即可将其写入。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isPost</td>
+<td>返回一个值（true 或 false），指示客户端用来请求网页的 HTTP 数据传输方法是否为 POST 请求。</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>获取或设置布局页的路径。</td>
+</tr>
+<tr>
+<td>Page</td>
+<td>提供对页面、布局页和分页之间共享的页数据的类似属性的访问。</td>
+</tr>
+<tr>
+<td>Request</td>
+<td>获得当前 HTTP 请求的 HttpRequest 对象。</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>获取 HttpServerUtility 对象，该对象所提供的方法能够在网页处理过程中使用。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="web-pages帮助器"><a class="markdownIt-Anchor" href="#web-pages帮助器"></a> Web Pages帮助器</h1>
+<p>Web Helpers 极大地简化了 web 开发和常见的编程任务。其内部实现了表格、图表等内容显示的逻辑及样式，进行了特定封装。</p>
+<h1 id="web-pages参考手册"><a class="markdownIt-Anchor" href="#web-pages参考手册"></a> Web Pages参考手册</h1>
+<p><a href="http://www.w3school.com.cn/aspnet/webpages_ref_classes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/webpages_ref_classes.asp</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-ASP-NET/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-ASP-NET/" itemprop="url">ASP.NET简介</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:22:55+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
+<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/index.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/index.asp，</a> 为个人学习笔记记录。</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 是一个开发框架，用于通过 HTML、CSS、JavaScript 以及服务器脚本来构建网页和网站。<br>
+<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 是新一代的 ASP。它无法兼容经典 ASP，但 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 可以引用 ASP。<br>
+当浏览器请求 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件时，<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 引擎读取该文件，编译并执行文件中的脚本，然后以纯 HTML 向浏览器返回结果。<br>
+<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 支持三种开发模式／服务器技术：</p>
+<ul>
+<li>Web Pages：单页面模型</li>
+<li>MVC：模型视图控制器</li>
+<li>Web Forms：事件驱动模型</li>
+</ul>
+<h1 id="aspnet"><a class="markdownIt-Anchor" href="#aspnet"></a> <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件扩展名</h1>
+<ul>
+<li>ASP 文件的文件扩展名是 .asp</li>
+<li><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件的文件扩展名是 .aspx</li>
+<li><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件使用 C# 语法的文件扩展名是 .cshtml</li>
+<li><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 文件使用 Razor VB 语法的文件扩展名是 .vbhtml</li>
+</ul>
+<h1 id="版本区别"><a class="markdownIt-Anchor" href="#版本区别"></a> 版本区别</h1>
+<ul>
+<li>
+<p><a href="http://xn--2009ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2009年发行ASP.NET</a> MVC 1.0版</p>
+</li>
+<li>
+<p><a href="http://xn--2010ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2010年发行ASP.NET</a> MVC 2.0版，VS2010</p>
+</li>
+<li>
+<p><a href="http://xn--2011ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2011年发行ASP.NET</a> MVC 3.0版+EF4，需要.Net4.0支持，VS2011</p>
+</li>
+<li>
+<p><a href="http://xn--2012ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2012年发行ASP.NET</a> MVC 4.0版+EF5，需要.Net4.0支持，VS2012</p>
+</li>
+<li>
+<p><a href="http://xn--2013ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2013年发行ASP.NET</a> MVC 5.0版+EF6，需要.Net4.5支持，VS2013</p>
+</li>
+<li>
+<p><a href="http://xn--2015ASP-lk3lq40fvu9g.NET" target="_blank" rel="noopener">2015年发行ASP.NET</a> MVC 6.0版+EF7，需要.Net5.0支持，VS2015</p>
+</li>
+<li>
+<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 5.0　　　　　　将改名为　　<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Core 1.0</p>
+</li>
+<li>
+<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> MVC 6　　　　 将改名为　　<a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> MVC Core 1.0</p>
+</li>
+<li>
+<p>Entity Framework 7.0    将改名为　　Entity Framework Core 1.0</p>
+</li>
+<li>
+<p>.NET新的跨平台版本将命名为.NET Core 1.0</p>
+</li>
+</ul>
+<h1 id="推荐文章"><a class="markdownIt-Anchor" href="#推荐文章"></a> 推荐文章</h1>
+<p>WebForms vs. MVC： <a href="http://www.cnblogs.com/heyuquan/p/webForms-vs-mvc.html" target="_blank" rel="noopener">http://www.cnblogs.com/heyuquan/p/webForms-vs-mvc.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-Windows下SVN服务器搭建及VS2015插件安装联动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-Windows下SVN服务器搭建及VS2015插件安装联动/" itemprop="url">Windows下SVN服务器搭建及VS2015插件安装联动</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:06:35+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>SVN服务端软件下载：<a href="https://www.visualsvn.com/server/download/" target="_blank" rel="noopener">https://www.visualsvn.com/server/download/</a><br>
+VisualSVN-Server-3.9.1-x64以管理员权限（有的话）安装,一路默认，选择standard版本,其他都是默认</p>
+<p>SVN客户端软件下载：<a href="https://www.visualsvn.com/visualsvn/download/tortoisesvn/" target="_blank" rel="noopener">https://www.visualsvn.com/visualsvn/download/tortoisesvn/</a><br>
+默认安装</p>
+<p>VS2015插件下载： <a href="https://www.visualsvn.com/visualsvn/download/" target="_blank" rel="noopener">https://www.visualsvn.com/visualsvn/download/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/CI-Jekins/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/CI-Jekins/" itemprop="url">Jenkins</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:04:03+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="jenkins"><a class="markdownIt-Anchor" href="#jenkins"></a> Jenkins</h1>
+<p>官网下载：<a href="https://jenkins.io/download/" target="_blank" rel="noopener">https://jenkins.io/download/</a> ,注意下载的版本要与jdk的版本对应</p>
+<blockquote>
+<p>Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作</p>
+</blockquote>
+<ul>
+<li>持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成到主干，并进程自动化测试</li>
+<li>持续交付：指的是在持续集成的环境基础之上，将代码部署到预生产环境</li>
+<li>持续部署：在持续交付的基础上，把部署到生产环境的过程自动化，持续部署和持续交付的区别就是最终部署到生产环境是自动化的</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/数据库-2018-10-05-MySQL安装-Windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/数据库-2018-10-05-MySQL安装-Windows/" itemprop="url">MySQL安装_Windows</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:04:03+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>下载页面：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p>
+<ul>
+<li>选择&quot;Microsoft Windows&quot;,下载免安装版的zip文件;</li>
+<li>将zip文件解压到本地</li>
+<li>新建一个配置文件（my.ini）用于配置字符集、端口等信息，用以覆盖原始的配置文件（my-default.ini），当然也可以修改这个默认的配置文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"> # 设置mysql客户端默认字符集</span><br><span class="line"> default-character-set=utf8 </span><br><span class="line"> [mysqld]</span><br><span class="line"> #设置3306端口</span><br><span class="line"> port = 3306 </span><br><span class="line"> # 设置mysql的安装目录</span><br><span class="line"></span><br><span class="line"> basedir=D:\\softwares\\mysql-5.7.14-winx64</span><br><span class="line"> # 设置mysql数据库的数据的存放目录</span><br><span class="line"> datadir=D:\\softwares\\mysql-5.7.14-winx64\\data</span><br><span class="line"></span><br><span class="line"> # 允许最大连接数</span><br><span class="line"> max_connections=200</span><br><span class="line"> # 服务端使用的字符集默认为UTF8</span><br><span class="line"> character-set-server=utf8</span><br><span class="line"> # 创建新表时将使用的默认存储引擎</span><br><span class="line"> default-storage-engine=INNODB</span><br></pre></td></tr></table></figure>
+<p>输入cmd，以管理员身份运行控制台</p>
+<p>S C:\Windows\system32&gt; cd<br>
+S C:\Windows\system32&gt; cd …<br>
+S C:\Windows&gt; cd …<br>
+S C:&gt; cd .\mysql-8.0.12-winx64<br>
+S C:\mysql-8.0.12-winx64&gt; cd .\bin\</p>
+<p>S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe -install<br>
+ervice successfully installed.<br>
+S C:\mysql-8.0.12-winx64\bin&gt; net start mysql<br>
+ySQL 服务正在启动 .<br>
+ySQL 服务无法启动。</p>
+<p>服务没有报告任何错误。</p>
+<p>请键入 NET HELPMSG 3534 以获得更多的帮助。</p>
+<p>S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe -remove<br>
+ervice successfully removed.<br>
+S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe --initialize<br>
+S C:\mysql-8.0.12-winx64\bin&gt; .\mysqld.exe -install<br>
+ervice successfully installed.<br>
+S C:\mysql-8.0.12-winx64\bin&gt; net start mysql<br>
+ySQL 服务正在启动 .<br>
+ySQL 服务已经启动成功。</p>
+<p>S C:\mysql-8.0.12-winx64\bin&gt; .\mysqladmin.exe -u root password “axn7Og=ve;+2”<br>
+ysqladmin: connect to server at ‘localhost’ failed</p>
+<p>alter user user() identified by “root”;<br>
+alter user user() identified by “新密码”;</p>
+<p>mysql -u root -p</p>
+<p>ysql&gt; use mysql<br>
+atabase changed<br>
+ysql&gt; ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘root’;<br>
+uery OK, 0 rows affected (0.04 sec)</p>
+<p>ysql&gt; flush privileges;<br>
+uery OK, 0 rows affected (0.00 sec)</p>
+<p>use mysql</p>
+<p>4.ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘root’;</p>
+<p>5.flush privileges;</p>
+<p>6.可以用navicat登陆了</p>
+<p><a href="https://www.cnblogs.com/anstoner/p/6414440.html" target="_blank" rel="noopener">https://www.cnblogs.com/anstoner/p/6414440.html</a></p>
+<p>net stop mysql</p>
+<p><a href="https://blog.csdn.net/czhilovely/article/details/80360146" target="_blank" rel="noopener">https://blog.csdn.net/czhilovely/article/details/80360146</a></p>
+<p><a href="https://blog.csdn.net/qq_42923798/article/details/81540122" target="_blank" rel="noopener">https://blog.csdn.net/qq_42923798/article/details/81540122</a></p>
+<p><a href="https://blog.csdn.net/u012561176/article/details/78557320" target="_blank" rel="noopener">https://blog.csdn.net/u012561176/article/details/78557320</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/数据库-MySQL安装-Windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/数据库-MySQL安装-Windows/" itemprop="url">MySQL安装_Windows</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:04:03+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="软件准备"><a class="markdownIt-Anchor" href="#软件准备"></a> 软件准备</h1>
+<p>mysql从官网下载，包括workbench。<br>
+地址：<br>
+<a href="http://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/mysql/</a></p>
+<p><a href="http://dev.mysql.com/downloads/workbench/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/workbench/</a></p>
+<h1 id="安装mysql"><a class="markdownIt-Anchor" href="#安装mysql"></a> 安装mysql</h1>
+<p>dmg下载后直接打开，安装过程中，会弹窗里边有随机生成的密码。记好了！不然还得卸载重装。</p>
+<h1 id="修改密码方法一"><a class="markdownIt-Anchor" href="#修改密码方法一"></a> 修改密码(方法一)</h1>
+<p>进入终端</p>
+<ol>
+<li>输入：cd /usr/local/mysql/bin/</li>
+<li>su root</li>
+<li>./mysqld_safe --skip-grant-tables &amp;   //禁止mysql验证功能</li>
+<li>在root 模式下</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh-3.2# alias mysql=/usr/local/mysql/bin/mysql</span><br><span class="line">sh-3.2# alias mysqladmin=/usr/local/mysql/bin/mysqladmin</span><br><span class="line">sh-3.2# mysqladmin -u root -p password</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>然后输入临时密码</li>
+<li>然后提示输入新密码</li>
+</ol>
+<h1 id="修改密码方法二"><a class="markdownIt-Anchor" href="#修改密码方法二"></a> 修改密码（方法二）</h1>
+<ol>
+<li>按账号mysql并启动服务</li>
+<li>进入终端输入命令行</li>
+<li>由于刚刚安装好的mysql密码为空，输入命令：mysql -u root -p  按回车即可登录mysql命令行</li>
+<li>显示所有数据库,输入命令：show databases;</li>
+<li>进入到名为mysql的数据库</li>
+<li>显示出mysql数据库里面的表, 有一个user表，里面就存储的是mysql用户名，密码</li>
+<li>打印user表结构</li>
+<li>更新authentication_string（相当于windows里面的password字段）字段，此处要用PASSWORD（）函数修改：update user set authentication_string=PASSWORD(‘root’) where user=‘root’;</li>
+</ol>
+<h1 id="添加用户"><a class="markdownIt-Anchor" href="#添加用户"></a> 添加用户</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -punistolllink;</span><br><span class="line">GRANT USAGE ON  *.* TO 	&apos;ITS_GANSU&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;ITS_GANSU_STI&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">use mysql;</span><br><span class="line">update user set host=&apos;%&apos; where user=&apos;ITS_GANSU&apos; and host=&apos;localhost&apos;; </span><br><span class="line"></span><br><span class="line">grant all privileges on *.* to ITS_GANSU@&quot;%&quot; identified by &apos;ITS_GANSU_STI&apos;;</span><br><span class="line">flush privileges;</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/数据库-SQLServer连接测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/05/数据库-SQLServer连接测试/" itemprop="url">SQLServer连接测试</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T10:04:03+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>windows系统下：</p>
+<ol>
+<li>新建文件 后缀改成.udl</li>
+<li>打开后，输入IP地址、用户名、密码，选择数据库进行连接</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/04/环境搭建-10-hexo安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/04/环境搭建-10-hexo安装配置/" itemprop="url">hexo使用速记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T22:10:23+08:00">
+                2018-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详细学习请参考：<a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs</a> 。<br>
+本文章只是个人使用过程中重点内容记录。</p>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<p>前置安装：node，git<br>
+安装：npm install -g hexo-cli</p>
+<h1 id="初始化项目"><a class="markdownIt-Anchor" href="#初始化项目"></a> 初始化项目</h1>
+<ol>
+<li>mkdir [项目名称, 如：test]</li>
+<li>hexo init [项目名称, 如：test] //此处要求文件夹内为空</li>
+<li>cd [项目名称, 如：test]</li>
+<li>npm install</li>
+</ol>
+<h1 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h1>
+<ul>
+<li>hexo new [layout] ‘【文章名称】’    //创建不通类型文章</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">laytou及路径如下：</span><br><span class="line">post	source/_posts</span><br><span class="line">page	source</span><br><span class="line">draft	source/_drafts</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hexo clean    //清除hexo生成静态网站内容</li>
+<li>hexo g        //生成hexo静态网站</li>
+<li>hexo s        //启用hexo服务</li>
+<li>hexo d        //hexo网站部署，配合hexo-deployer-git插件使用</li>
+<li>hexo version  //hexo相关软件版本</li>
+<li>hexo list [type] //type:post,page等</li>
+</ul>
+<h1 id="front-matter和json-front-matter"><a class="markdownIt-Anchor" href="#front-matter和json-front-matter"></a> Front-matter和JSON Front-matter</h1>
+<p>用来设定文章的一些参数，如是否添加密码、版权、标签、分类等信息。</p>
+<ul>
+<li>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，基于YAML</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>JSON Front-matter 使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;title&quot;: &quot;Hello World&quot;,</span><br><span class="line">&quot;date&quot;: &quot;2013/7/13 20:46:25&quot;</span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
+<p>可配置参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>可以通过直接修改scaffolds内的模版来设定统一的文章额外信息，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">  - </span><br><span class="line">  - </span><br><span class="line">categories: </span><br><span class="line">password: </span><br><span class="line">copyright: true</span><br><span class="line">comments: true</span><br><span class="line">toc: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h1 id="部署"><a class="markdownIt-Anchor" href="#部署"></a> 部署</h1>
+<ul>
+<li>安装 hexo-deployer-git：npm install hexo-deployer-git --save</li>
+<li>配置hexo的_config.yml文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://[XXX]@github.com/[XXX]/[XXX].github.io  //库（Repository）地址,如：https://epaypad@github.com/epaypad/epaypad.github.io</span><br><span class="line">  branch: master    //分支名称</span><br><span class="line">  message: https://github.com/chetaofeng/MyHexoBlogSource 内容部署 &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125; //自定义提交信息</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hexo d //命令执行后，稍等一会查看部署结果</li>
+</ul>
+<h1 id="hexo主题"><a class="markdownIt-Anchor" href="#hexo主题"></a> hexo主题</h1>
+<p>hexo默认主题为landscape，大家可以根据各自需要使用不通主题。<br>
+本人使用的是NexT主题，使用请参考：<a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">http://theme-next.iissnan.com</a> ，NexT更多配置，请参考：<br>
+<a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">https://www.jianshu.com/p/1f8107a8778c</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/04/环境搭建-11-MySQL安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/04/环境搭建-11-MySQL安装配置/" itemprop="url">MySQL安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T22:10:23+08:00">
+                2018-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>下载地址：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a><br>
+官方数据客户端工具： <a href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/workbench/</a><br>
+推荐客户端工具：Navicat Premium- <a href="https://www.navicat.com/en/download/navicat-premium" target="_blank" rel="noopener">https://www.navicat.com/en/download/navicat-premium</a></p>
+<h1 id="安装登陆"><a class="markdownIt-Anchor" href="#安装登陆"></a> 安装登陆</h1>
+<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
+<ol>
+<li>安装dmg安装包，如：mysql-5.7.8-rc-osx10.9-x86_64.dmg，安装过程中会弹出临时的密码，务必截图保存方便后面更改密码，安装过程有时会卡顿，时间会比较长，需耐心等待一会。</li>
+<li>在【系统偏好设置】中启动MySQL服务，如果启动不起来，可选择开机启动，然后重启macOS</li>
+<li>在MySQLWorkBench中，创建连接信息,hostname-127.0.0.1或localhost，端口3307</li>
+<li>点击&quot;Store in Keychain…&quot;输入安装时提示的临时密码后确定</li>
+<li>如果临时密码输入正确，则会弹出修改密码界面，修改密码后重新登陆即可</li>
+</ol>
+<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
+<p>Linux下安装有多种方式：</p>
+<ol>
+<li>直接用软件仓库自动安装（如：ubuntu下，sudo apt-get install mysql-server）</li>
+<li>通过下载deb或rmp安装包，直接双击安装</li>
+<li>下载tar安装包，解压到硬盘，然后自己配置mysql</li>
+<li>通过源码编译安装</li>
+</ol>
+<p>以下以tar包安装记录:参考文章（<a href="http://www.pianshen.com/article/975954037/%EF%BC%89" target="_blank" rel="noopener">http://www.pianshen.com/article/975954037/）</a></p>
+<ol>
+<li>sudo cp mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz /usr</li>
+<li>cd /usr</li>
+<li>sudo tar xvJf mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz</li>
+<li>为MySQL创建专用用户，用户名为mysql，用户组为mysql；<br>
+sudo groupadd mysql //创建组<br>
+sudo useradd -r -g mysql mysql //创建用户并划入mysql组下</li>
+<li>为解压出来的所有文件更改用户和组<br>
+sudo chown -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改拥有者<br>
+sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
+<li>sudo apt-get install libaio1 libaio-dev</li>
+<li>初始化数据库: sudo ./bin/mysqld --initialize --user mysql<br>
+执行过程中会生成一个临时密码，一定要保存好，后面修改密码需要用到，如图：<br>
+<img src="/pub-images/mysql.png" alt="image"></li>
+<li>开启服务: bin/mysqld_safe --user=mysql &amp;</li>
+<li>使用用户root登录: bin/mysql -uroot -p</li>
+<li>更改root用户密码:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;root&apos; PASSWORD EXPIRE NEVER;   //修改root的密码与加密方式</span><br><span class="line">use mysql; #切换到mysql库 </span><br><span class="line">update user set host=&apos;%&apos; where user=&apos;root&apos;; //更改可以登录的IP为任意IP</span><br><span class="line">ALTER user &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;  //再次更改root用户密码，使其可以在任意IP访问</span><br><span class="line">flush privileges; #刷新权限</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>通过客户端测试登陆即可</li>
+</ol>
+<h1 id="navicat安装"><a class="markdownIt-Anchor" href="#navicat安装"></a> Navicat安装</h1>
+<h2 id="linux"><a class="markdownIt-Anchor" href="#linux"></a> Linux</h2>
+<ol>
+<li>进入安装包所在目录下，如：navicat_premium12_cs_x64_for_linux.zip</li>
+<li>sudo cp navicat_premium12_cs_x64_for_linux.zip /usr/</li>
+<li>cd /usr/</li>
+<li>sudo unzip navicat_premium12_cs_x64_for_linux.zip</li>
+<li>cd navicat120_premium_cs_x64</li>
+<li>命令行启动：sudo ./start_navicat，正常的话应该会出现一个Win Mono下载界面，可不下载，跳过即可</li>
+</ol>
+<h2 id="windows-macos"><a class="markdownIt-Anchor" href="#windows-macos"></a> Windows &amp; macOS</h2>
+<p>直接下载安装就行，破解请自行查找</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共97.8k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
