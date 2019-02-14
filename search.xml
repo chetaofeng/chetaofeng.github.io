@@ -4,22 +4,50 @@
     <title><![CDATA[Java并发编程]]></title>
     <url>%2F2019%2F01%2F02%2FJava-2019-01-02-Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[ExecutorService Semaphore 并发实现一个计数器：引入问题 并发与高并发： Java内存模型-写一篇文章 Java内存模型：Java Memory Model（JMM） CPU包括运算逻辑部件、寄存器部件和控制部件等。寄存器在CPU上 Java堆：Heap运行时数据区，有垃圾回收来负责，可以动态分配大小，生存期也不必提前告诉编译器，是在运行时动态分配内存的，由于需要动态分配，所以速度比栈慢 Java栈：Stack速度仅次于寄存器，数据可以共享，缺点是栈中的数据的大小及生存期必须是确定的， 线程之间操作必须通过主内存 https://www.cnblogs.com/zhehan54/p/6130030.html 实现并发的方式有多种：比如多进程、多线程、IO多路复用。 进程是资源（CPU、内存等）分配的基本单位 自定义注解 https://blog.csdn.net/motui/article/details/79012846 线程安全性-原子性 compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果不一样，则重新获取再比较 AtomicLong LongAdder https://blog.csdn.net/jesonjoke/article/list/1 http://www.cnblogs.com/hongten/p/hongten_oracle_plsql.html https://me.csdn.net/jesonjoke]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>并发编程</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[mac系统安装]]></title>
+    <title><![CDATA[linux 配置文件启动顺序]]></title>
     <url>%2F2018%2F12%2F19%2FLinux-01-linux-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F%2F</url>
     <content type="text"><![CDATA[https://www.cnblogs.com/GO-NO-1/p/9084713.html]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
       <tags>
-        <tag>环境搭建</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[aa]]></title>
     <url>%2F2018%2F12%2F19%2FJava-2018-12-19-aa%2F</url>
     <content type="text"><![CDATA[https://www.cnblogs.com/god--love-you/p/6133390.html springboot https://blog.csdn.net/forezp/column/info/15397/1 https://blog.csdn.net/vbirdbest/article/category/7490600/3 https://github.com/lenve/vhr netty https://waylau.com/netty-4-user-guide/ https://github.com/doocs/advanced-java https://blog.csdn.net/qq_38765404/article/details/78615572 http://www.cnblogs.com/felixzh/p/5869212.html oracle https://www.cnblogs.com/kane1990/p/OracleNetManager.html https://blog.csdn.net/u011179993/article/details/51554324 https://www.cnblogs.com/yadongliang/p/5840203.html http://blog.51cto.com/mazongfei/2126876 https://blog.csdn.net/weixin_37480339/article/details/81017214 https://blog.csdn.net/wangjialiang/article/details/7867791 http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[mac系统神器：Homebrew]]></title>
+    <url>%2F2018%2F12%2F19%2F%E5%85%B6%E4%BB%96-02-Homebrew%2F</url>
+    <content type="text"><![CDATA[Homebrew Homebrew是一款Mac OS平台下的软件包管理工具，拥有安装、卸载、更新、查看、搜索等很多实用的功能。简单的一条指令，就可以实现包管理，而不用你关心各种依赖和文件路径的情况，十分方便快捷。 可以类比Homebrew的功能类似于前端技术的npm，RetHat系列的yum，Ubuntu系统的apt-get 安装 参考官网，使用非常简单： https://brew.sh/index_zh-cn 安装完之后可更新源： brew update/brew upgrade Homebrew使用 搜索软件：brew search 软件名，如brew search wget 安装软件：brew install 软件名，如brew install wget 卸载软件：brew remove 软件名，如brew remove wget 在macOS系统上，git、node都推荐通过Homebrew安装]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mac虚拟机安装及设置]]></title>
+    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-03-mac%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%8F%8A%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[简介 Parallels Desktop是一款运行在 Mac 电脑上的极为优秀的虚拟机软件。用户可以在 Mac OS X 下非常方便运行 Windows、Linux 等操作系统及应用。 安装 PD为收费软件，链接: https://pan.baidu.com/s/1CBa7tIghlF7JIiJTtuqdYQ 提取码: es9m，有经济能力的希望支持正版 PD安装操作系统需准备一个系统ISO镜像,虚拟机系统安装过程和普通系统安装过程基本一致。 windows10镜像下载： https://www.microsoft.com/zh-cn/software-download/windows10ISO/ 系统安装完成之后，需安装Parallels Tools，否则使用时鼠标使用等方面会有很多不便，注意安装Parallels Tools时注意PD版本，防止有和系统不兼容。 如下图： PD使用注意事项 虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统内存、硬盘相关参数设置 虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统共享文件夹设置，方便系统间数据共享 虚拟机初试安装后，再进行系统其他重要软件安装前，请先保存快照，再进行操作，操作不成功还可回退 虚拟机系统更新、相关开发环境设置完成之后，建议移动硬盘保存虚拟机，方便后期恢复和循环使用 虚拟机系统文件在右键【显示包内容】后，如下 其中.hdd文件为硬盘文件，可在虚拟机系统故障时优先保存此文件，或者将此文件复制替换到备份的虚拟机系统即可恢复]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[mac系统安装]]></title>
@@ -33,14 +61,26 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[mac系统神奇：Homebrew]]></title>
-    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-02-Homebrew%2F</url>
-    <content type="text"><![CDATA[Homebrew Homebrew是一款Mac OS平台下的软件包管理工具，拥有安装、卸载、更新、查看、搜索等很多实用的功能。简单的一条指令，就可以实现包管理，而不用你关心各种依赖和文件路径的情况，十分方便快捷。 可以类比Homebrew的功能类似于前端技术的npm，RetHat系列的yum，Ubuntu系统的apt-get 安装 参考官网，使用非常简单： https://brew.sh/index_zh-cn 安装完之后可更新源： brew update/brew upgrade Homebrew使用 搜索软件：brew search 软件名，如brew search wget 安装软件：brew install 软件名，如brew install wget 卸载软件：brew remove 软件名，如brew remove wget 在macOS系统上，git、node都推荐通过Homebrew安装]]></content>
+    <title><![CDATA[JDK安装配置]]></title>
+    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-06-Java%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置） CLASS_PATH 保证class文件能够在任意目录下运行 PATH 保证javac可以在任意目录下运行 mac系统 环境变量配置文件执行的顺序： /etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc /etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。 下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过， 配置环境变量的方式： 找到JDK安装目录，如： 1/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home 编辑文件~/.bash_profile 文件 12345JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/HomePATH=$JAVA_HOME/bin:$PATH:.export JAVA_HOMEexport PATH 使配置生效：source .bash_profile 输入 echo $JAVA_HOME 显示刚才配置的路径 验证安装 Linux系统 安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载 下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹 sudo mkdir /usr/java sudo cp -r jdk1.8.0_77/ /usr/java/ 配置环境变量,sudo vim /etc/profile,在前面添加 123export JAVA_HOME=/usr/java/jdk1.8.0_77export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH source /etc/profile 使配置立即生效 检查新安装的jdk:java -version;java;javac]]></content>
       <categories>
         <category>环境搭建</category>
       </categories>
       <tags>
-        <tag>mac工具</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CentOS安装设置]]></title>
+    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-07-CentOS%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[https://blog.csdn.net/ganeshys2017/article/details/81300246 http://www.cnblogs.com/linnuo/p/6257204.html https://blog.csdn.net/lwwl12/article/details/78247307]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -55,39 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[mac虚拟机安装及设置]]></title>
-    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-03-mac%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%8F%8A%E8%AE%BE%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[简介 Parallels Desktop是一款运行在 Mac 电脑上的极为优秀的虚拟机软件。用户可以在 Mac OS X 下非常方便运行 Windows、Linux 等操作系统及应用。 安装 PD为收费软件，链接: https://pan.baidu.com/s/1CBa7tIghlF7JIiJTtuqdYQ 提取码: es9m，有经济能力的希望支持正版 PD安装操作系统需准备一个系统ISO镜像,虚拟机系统安装过程和普通系统安装过程基本一致。 windows10镜像下载： https://www.microsoft.com/zh-cn/software-download/windows10ISO/ 系统安装完成之后，需安装Parallels Tools，否则使用时鼠标使用等方面会有很多不便，注意安装Parallels Tools时注意PD版本，防止有和系统不兼容。 如下图： PD使用注意事项 虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统内存、硬盘相关参数设置 虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统共享文件夹设置，方便系统间数据共享 虚拟机初试安装后，再进行系统其他重要软件安装前，请先保存快照，再进行操作，操作不成功还可回退 虚拟机系统更新、相关开发环境设置完成之后，建议移动硬盘保存虚拟机，方便后期恢复和循环使用 虚拟机系统文件在右键【显示包内容】后，如下 其中.hdd文件为硬盘文件，可在虚拟机系统故障时优先保存此文件，或者将此文件复制替换到备份的虚拟机系统即可恢复]]></content>
-      <categories>
-        <category>环境搭建</category>
-      </categories>
-      <tags>
-        <tag>mac工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[git安装配置]]></title>
-    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-04-git%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[简介 官网：https://git-scm.com/ Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 详细学习，推荐： http://www.runoob.com/git/git-tutorial.html 廖雪峰大神的git教程 https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 git的前世今生： https://blog.csdn.net/csdnprogram/article/details/52155078 工作原理 本地 工作区（Working Directory）：就是你在电脑里能看到的目录 版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库 Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。 我们把文件往Git版本库里添加的时候，是分两步执行的： 第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区； 第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。 远程配合 git安装 参考教程：https://git-scm.com/book/zh/v2/起步-安装-Git 各平台都支持安装包安装方式 mac系统 12&gt; brew install git&gt; git --version //验证安装 git全局设置 config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local,底层配置会覆盖顶层配置 查看git不同级别配置信息 123git config --system --listgit config --global --listgit config --和local --list git安装完成后，还需要最后一步设置，在命令行输入： 12$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot; 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门 git账号关联流程 生成SSHkey ssh-keygen命令用于为“ssh”生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥. ssh-keygen(选项) 12345678910-b：指定密钥长度； -e：读取openssh的私钥或者公钥文件； -C：添加注释； -f：指定用来保存密钥的文件名； -i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥； -l：显示公钥文件的指纹数据； -N：提供一个新密语； -P：提供（旧）密语；-q：静默模式； -t：指定要创建的密钥类型。 登陆git服务器，添加public key信息 测试登陆 1234测试是否成功,第一此输入命令，需输入yes后再次输入测试命令后出现类似&quot;Hi...&quot;，表示配置成功&gt; ssh -T git@github.com&gt; ssh -T git@gitee.com&gt; ssh -T git@gitlab.com git单账号关联 12&gt; ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）&gt; cat ~/.ssh/id_rsa.pub 登陆网站，如github／gitee／gitlab等，在如设置／Settings中有SSH and GPG keys中【add new keys】，将id_rsa.pub内容添加，会自动识别标题,设置完成之后测试登陆 git多账号设置关联 多账号配置是通过.ssh文件夹下config文件实现，操作如下： 123456&gt; touch ~/.ssh/config &gt; chmod 600 ~/.ssh/config &gt; ssh-keygen -f ~/.ssh/id_rsa.github -t rsa -C &quot;chetaofeng@163.com&quot;&gt; ssh-keygen -f ~/.ssh/id_rsa.gitee -t rsa -C &quot;chetaofeng@163.com&quot;&gt; ssh-keygen -f ~/.ssh/id_rsa.gitlab -t rsa -C &quot;chetaofeng@163.com&quot; config文件内容如下： 1234567891011121314151617# githubHost github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/id_rsa.github# giteeHost gitee.com HostName gitee.com PreferredAuthentications publickey IdentityFile ~/.ssh/id_rsa.gitee# gitlabHost gitlab.com HostName gitlab.com PreferredAuthentications publickey IdentityFile ~/.ssh/id_rsa.gitlab Host： 是我们在输入命令的时候的名字 比如我这里是lab 那么我使用ssh命令的时候需要使用 ssh lab HostName： 是目标主机的主机名，也就是平时我们使用ssh后面跟的地址名称。 Port：指定的端口号。 User：指定的登陆用户名。 IdentifyFile：指定的私钥地址。 .gitignore文件 不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件 开发环境中配置 在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可 gitlab／gitee没有配置选项，需先安装相应插件，如下： 以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下： GitLab Server Url: https://gitlab.com/ GitLab API Key： https://gitlab.com/profile/account git项目权限管理 Git项目一般有五种身份权限，分别是： Owner 项目所有者，拥有所有的操作权限 Master 项目的管理者，除更改、删除项目元信息外其它操作均可 Developer 项目的开发人员，做一些开发工作，对受保护内容无权限 Reporter 项目的报告者，只有项目的读权限，可以创建代码片断 Guest 项目的游客，只能提交问题和评论内容 私服项目使用推荐流程 以下为项目owner需进行工作 在私服先创建项目，添加人员并设置人员权限 在本地webstorm中clone项目 在clone项目中添加.gitignore文件 添加.gitignore及相关需要版本控制的文件夹到版本控制（选中项后右键操作） 提交项目并备注为初始提交 以下为项目成员需做工作 在本地webstorm中clone项目 创建项目分支（可一人一个，也可通过项目模块进行分支创建），如果直接在master分支，则无法成功push项目提示被rejected 进行代码编写 提交需管理分支 在gitlab私服网页发起合并请求，并添加详细描述 等待相关人员进行合并 合并结束后更新master分支 创建分支继续工作]]></content>
-      <categories>
-        <category>环境搭建</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[java JDK安装配置]]></title>
-    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-06-Java%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置） CLASS_PATH 保证class文件能够在任意目录下运行 PATH 保证javac可以在任意目录下运行 mac系统 环境变量配置文件执行的顺序： /etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc /etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。 下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过， 配置环境变量的方式： 找到JDK安装目录，如： 1/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home 编辑文件~/.bash_profile 文件 12345JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/HomePATH=$JAVA_HOME/bin:$PATH:.export JAVA_HOMEexport PATH 使配置生效：source .bash_profile 输入 echo $JAVA_HOME 显示刚才配置的路径 验证安装 Linux系统 安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载 下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹 sudo mkdir /usr/java sudo cp -r jdk1.8.0_77/ /usr/java/ 配置环境变量,sudo vim /etc/profile,在前面添加 123export JAVA_HOME=/usr/java/jdk1.8.0_77export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH source /etc/profile 使配置立即生效 检查新安装的jdk:java -version;java;javac]]></content>
-      <categories>
-        <category>环境搭建</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Ubuntu系统安装后的设置]]></title>
     <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-08-Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E8%AE%BE%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[修改默认源为国内源 cd /etc/apt cp /etc/apt/sources.list /etc/apt/sources.list.bak 备份/etc/apt/sources.list 在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源： 1234567891011#添加阿里源deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse 更新源 12sudo apt-get updatesudo apt-get upgrade 系统分辨率设置 安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改： 首先打开终端Terminal，输入: sudo apt-get install xdiagnose sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】 sudo reboot 重启系统 再次打开设置发现分辨率可以设置了,如设置为：1280*800 chrome浏览器安装 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb sudo dpkg -i google-chrome-stable_current_amd64.deb]]></content>
@@ -95,20 +102,8 @@
         <category>环境搭建</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>ubuntu</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[java JDK安装配置]]></title>
-    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-07-CentOS%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E8%AE%BE%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[https://blog.csdn.net/ganeshys2017/article/details/81300246 http://www.cnblogs.com/linnuo/p/6257204.html https://blog.csdn.net/lwwl12/article/details/78247307]]></content>
-      <categories>
-        <category>环境搭建</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -121,6 +116,17 @@
       <tags>
         <tag>工具</tag>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git安装配置]]></title>
+    <url>%2F2018%2F12%2F19%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-04-git%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[简介 官网：https://git-scm.com/ Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 详细学习，推荐： http://www.runoob.com/git/git-tutorial.html 廖雪峰大神的git教程 https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 git的前世今生： https://blog.csdn.net/csdnprogram/article/details/52155078 工作原理 本地 工作区（Working Directory）：就是你在电脑里能看到的目录 版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库 Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。 我们把文件往Git版本库里添加的时候，是分两步执行的： 第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区； 第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。 远程配合 git安装 参考教程：https://git-scm.com/book/zh/v2/起步-安装-Git 各平台都支持安装包安装方式 mac系统 12&gt; brew install git&gt; git --version //验证安装 git全局设置 config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local,底层配置会覆盖顶层配置 查看git不同级别配置信息 123git config --system --listgit config --global --listgit config --和local --list git安装完成后，还需要最后一步设置，在命令行输入： 12$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot; 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门 git账号关联流程 生成SSHkey ssh-keygen命令用于为“ssh”生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥. ssh-keygen(选项) 12345678910-b：指定密钥长度； -e：读取openssh的私钥或者公钥文件； -C：添加注释； -f：指定用来保存密钥的文件名； -i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥； -l：显示公钥文件的指纹数据； -N：提供一个新密语； -P：提供（旧）密语；-q：静默模式； -t：指定要创建的密钥类型。 登陆git服务器，添加public key信息 测试登陆 1234测试是否成功,第一此输入命令，需输入yes后再次输入测试命令后出现类似&quot;Hi...&quot;，表示配置成功&gt; ssh -T git@github.com&gt; ssh -T git@gitee.com&gt; ssh -T git@gitlab.com git单账号关联 12&gt; ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）&gt; cat ~/.ssh/id_rsa.pub 登陆网站，如github／gitee／gitlab等，在如设置／Settings中有SSH and GPG keys中【add new keys】，将id_rsa.pub内容添加，会自动识别标题,设置完成之后测试登陆 git多账号设置关联 多账号配置是通过.ssh文件夹下config文件实现，操作如下： 123456&gt; touch ~/.ssh/config &gt; chmod 600 ~/.ssh/config &gt; ssh-keygen -f ~/.ssh/id_rsa.github -t rsa -C &quot;chetaofeng@163.com&quot;&gt; ssh-keygen -f ~/.ssh/id_rsa.gitee -t rsa -C &quot;chetaofeng@163.com&quot;&gt; ssh-keygen -f ~/.ssh/id_rsa.gitlab -t rsa -C &quot;chetaofeng@163.com&quot; config文件内容如下： 1234567891011121314151617# githubHost github.com HostName github.com PreferredAuthentications publickey IdentityFile ~/.ssh/id_rsa.github# giteeHost gitee.com HostName gitee.com PreferredAuthentications publickey IdentityFile ~/.ssh/id_rsa.gitee# gitlabHost gitlab.com HostName gitlab.com PreferredAuthentications publickey IdentityFile ~/.ssh/id_rsa.gitlab Host： 是我们在输入命令的时候的名字 比如我这里是lab 那么我使用ssh命令的时候需要使用 ssh lab HostName： 是目标主机的主机名，也就是平时我们使用ssh后面跟的地址名称。 Port：指定的端口号。 User：指定的登陆用户名。 IdentifyFile：指定的私钥地址。 .gitignore文件 不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件 开发环境中配置 在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可 gitlab／gitee没有配置选项，需先安装相应插件，如下： 以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下： GitLab Server Url: https://gitlab.com/ GitLab API Key： https://gitlab.com/profile/account git项目权限管理 Git项目一般有五种身份权限，分别是： Owner 项目所有者，拥有所有的操作权限 Master 项目的管理者，除更改、删除项目元信息外其它操作均可 Developer 项目的开发人员，做一些开发工作，对受保护内容无权限 Reporter 项目的报告者，只有项目的读权限，可以创建代码片断 Guest 项目的游客，只能提交问题和评论内容 私服项目使用推荐流程 以下为项目owner需进行工作 在私服先创建项目，添加人员并设置人员权限 在本地webstorm中clone项目 在clone项目中添加.gitignore文件 添加.gitignore及相关需要版本控制的文件夹到版本控制（选中项后右键操作） 提交项目并备注为初始提交 以下为项目成员需做工作 在本地webstorm中clone项目 创建项目分支（可一人一个，也可通过项目模块进行分支创建），如果直接在master分支，则无法成功push项目提示被rejected 进行代码编写 提交需管理分支 在gitlab私服网页发起合并请求，并添加详细描述 等待相关人员进行合并 合并结束后更新master分支 创建分支继续工作]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -164,7 +170,7 @@
         <category>Kotlin</category>
       </categories>
       <tags>
-        <tag>Kotlin入门</tag>
+        <tag>Kotlin</tag>
       </tags>
   </entry>
   <entry>
@@ -175,9 +181,7 @@
         <category>Spring</category>
       </categories>
       <tags>
-        <tag>Spring</tag>
         <tag>Spring Boot</tag>
-        <tag>JavaWeb</tag>
       </tags>
   </entry>
   <entry>
@@ -256,7 +260,6 @@
       </categories>
       <tags>
         <tag>React</tag>
-        <tag>React组件库</tag>
       </tags>
   </entry>
   <entry>
@@ -308,7 +311,7 @@
   </entry>
   <entry>
     <title><![CDATA[docker]]></title>
-    <url>%2F2018%2F10%2F18%2FC-%E5%BC%80%E5%8F%91-2018-10-18-docker%2F</url>
+    <url>%2F2018%2F10%2F18%2F%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-2018-10-18-docker%2F</url>
     <content type="text"><![CDATA[阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术 其中docker服务端是一个服务进程，管理着所有的容器。 docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。 大部分情况下，docker服务端和客户端运行在一台机器上。 Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的 Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write） Docker容器的能力 1文件系统隔离：每个容器都有自己的root文件系统 2进程隔离：每个容器都运行在自己的进程环境中 3网络隔离：容器间的虚拟网络接口和IP地址都是分开的 4资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器 docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作 docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器 docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm） https://www.cnblogs.com/atuotuo/p/6668233.html 安装：下载安装完成之后docker version查看 Kitematic， Vagrant+virtualbox https://www.vagrantup.com/ https://www.virtualbox.org/ https://app.vagrantup.com/boxes/search mkdir centos7 ls vagrant init centos/7 vagrant up vagrant ssh sudo yum update exit vagrant status vagrant halt vagrant destroy Docker Machine docker-machine ls docker-machine ssh demo 远程登录管理deocker和本地管理远程docker https://labs.play-with-docker.com/ docker提供了一个开发，打包，运行app的平台，把app和底层infratructure隔离开来 docker底层技术支持,依赖于Linux内核特性Namespaces和Cgroups Namespaces：做隔离pid，net，ipc，mnt，uts Control Groups：做资源限制 Union file Systems：Container和image的分层 namespace，容器隔离的基础，保证A容器看不到B容器. 6个名空间：User,Mnt,Network,UTS,IPC,Pid cgroups，容器资源统计和隔离。主要用到的cgroups子系统：cpu,blkio,device,freezer,memory unionfs，典型：aufs/overlayfs，分层镜像实现的基础 docker image：是容器的基石，本身为层叠的只读文件系统， docker通过联合加载技术一次加载多个文件系统，从外部看，只能看到一个文件系统，包含所有文件系统的文件和目录。bootfs-rootfs(如：ubuntu)-apache。。。，rootfs称为基础镜像 文件和meta data的集合（root filesystem） 分层的，并且每一层都可以添加改变删除文件，成为一个新的image 不同的image可以共享x相同的layer image本身是read-only的 sudo docker image ls docker history [imageID] image的获取 通过Dockerfile 从Registry获取，如：docker pull ubuntu:14.04，https://hub.docker.com/ 命令行的格式为：docker search 镜像名字 DIY一个Base Image Container docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。 通过Image创建 在Image Layer之上建立一个container layer（可读写） 类比面向对象：类和实例 Image负责app的存储和分发，Container负责运行app container id只要能够区分出来就行，不用全部输入 docker container ls //运行的 docker container ls -a //所有的，包括退出的和正在运行的 docker run命令有两个参数，一个是镜像名，一个是要在镜像中运行的命令。 docker run [name] //运行container docker run -it [name] //交互式运行container 命令简写 docker container ls -a == docker ps -a docker container rm [conatinerID] == docker rm [conatinerID] docker image ls == docker images docker image rm [imageID] == docker rmi [imageID] docker container ls -aq //列出所有conatinerID 构建自己的docker镜像 docker commit [containerName] [dockerhubID/imageNewName] 通过Dockerfile创建 新建空文件夹 创建Dockerfile文件 12FROM [BaseImageName] //如果没有则值为scratchRUN yum install -y vim docker build -t [dockerhubID/imageNewName] . //.表示当前目录中查找Dockerfile docker image ls查看 Dockerfile语法梳理及最佳实践 FROM:尽量使用官方的iamge作为base image LABEL:Metadata不可少，让大家了解到image的信息，相当于image的注释 RUN:为了美观，复杂的RUN请用反斜线换行，避免无用分层，合并多条命令成一行 WORKDIR:设定当前工作目录，如果没有则会自动创建目录；用WORKDIR，不要用RUN cd，尽量使用绝对目录 ADD和COPY：把本地文件（构建目录中的相对地址 ）添加到image里面，同时ADD添加的文件如果是压缩文件的话，会自动解压缩，大部分情况COPY优于ADD，添加远程文件／目录请使用crul或wget；目标路径需指定docker中的绝对路径 ENV：设置环境变量，尽量使用ENV增加可维护性 https://github.com/docker-library/ MAINTAINER：指定容器的相关维护信息，维护人、邮箱等 RUN：执行命令并创建新的Image Layer，是在容器构建时执行 CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数 ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口 VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能 WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去 USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户 ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行 使用中间层镜像进行调试，查找错误 docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像 构建缓存：构建过程中会产生缓存，下次构建直接使用缓存镜像，如果不想使用构建缓存，则可通过：docker build --no-cache,或者通过dockerfile文件的ENV REFRESH_DATE修改日期，则本条语句后就不使用缓存了 docker history 镜像，用来查看镜像的构建过程 12COPY docker-entrypoint.sh /usr/local/bin/ENTRYPOINT [&quot;docker-entrypoint.sh &quot;] shell格式和EXEC格式 123RUN apt-get install -y vimCMD echo &quot;Hello Docker&quot;ENTRYPOINT echo &quot;Hello Docker&quot; 123RUN [&quot;apt-get&quot;,&quot;install&quot;,&quot;-y&quot;,&quot;vim&quot;]CMD [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;] 登录dockerhub docker login: 用户名（非邮箱）／密码 本地push上去，其他人就可以pull 关联github，github管理Dockerfile，有修改后自动build。Create-Create Automated build 通过docker的registry本地自己搭建。https://hub.docker.com/_/registry/,后期学习 Dockerfile实战 Dockerfile是docker构建镜像的基础，也是docker区别于其他容器的重要特征，正是有了Dockerfile，docker的自动化和可移植性才成为可能。 不论是开发还是运维，学会编写Dockerfile几乎是必备的 容器的操作 //对容器执行命令 docker exec docker exec -it [containerID] /bin/bash docker inspect [imageName] //查看 docker logs [containerID] 前3章 Docker常见命令 容器相关操作 docker create # 创建一个容器但是不启动它 docker run # 创建并启动一个容器 docker stop # 停止容器运行，发送信号SIGTERM docker start # 启动一个停止状态的容器 docker restart # 重启一个容器 docker rm # 删除一个容器 docker kill # 发送信号给容器，默认SIGKILL docker attach # 连接(进入)到一个正在运行的容器 docker wait # 阻塞到一个容器，直到容器停止运行 获取容器相关信息 docker ps # 显示状态为运行（Up）的容器 docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited) docker inspect # 深入容器内部获取容器所有信息 docker logs # 查看容器的日志(stdout/stderr) docker events # 得到docker服务器的实时的事件 docker port # 显示容器的端口映射 docker top # 显示容器的进程信息 docker diff # 显示容器文件系统的前后变化 导出容器 docker cp # 从容器里向外拷贝文件或目录 docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息 执行 docker exec # 在容器里执行一个命令，可以执行bash进入交互式 镜像操作 docker images # 显示本地所有的镜像列表 docker import # 从一个tar包创建一个镜像，往往和export结合使用 docker build # 使用Dockerfile创建镜像（推荐） docker commit # 从容器创建镜像 docker rmi # 删除一个镜像 docker load # 从一个tar包创建一个镜像，和save配合使用 docker save # 将一个镜像保存为一个tar包，带layers和tag信息 docker history # 显示生成一个镜像的历史命令 docker tag # 为镜像起一个别名 镜像仓库(registry)操作 docker login # 登录到一个registry docker search # 从registry仓库搜索镜像 docker pull # 从仓库下载镜像到本地 docker push # 将一个镜像push到registry仓库中 docker system df //查看镜像、容器、数据卷所占用的空间 docker commit -m “ubuntu with vim” -a “sgy” aa97ba3292ce sgy/ubuntu:vim 前后端分离部署及运维 高性能高负载高可用 https://www.renren.io renren-fast Swagger: JWT: https://www.ghostcloud.cn/ 服务器虚拟化 （vsphere cas ZStack不通厂家命名）：裸机虚拟化、半裸机虚拟化 网络虚拟化 SDN 存储虚拟化 VSAN 服务器做raid保证系统安全，然后做存储虚拟化 Mac 上的 Docker 背后应该是一个 Linux 虚机，和 Windows 版本的 Docker 是一样的原理 容器一旦被直接推出，之前安装的gcc啊vim啊啥的就会全部gg掉。如果要保存修改，就需要将当前容器封装成一个新的镜像，这样下次启动这个新的镜像后之前作出的修改还都在。 容器不适合构建那种发布周期以周或月为单位的大型单一架构企业软件，容器适合采用微服务的方式，以及探索诸如持续部署这样的技术，使得我们能安全地在一天内多次更新生产环境。 https://blog.csdn.net/xdy3008/article/details/74531125 https://www.missshi.cn/api/view/blog/5a6327c00a745f6335000004 想看到docker容器的ip地址，只需要安装net-tools就可以了：yum install net-tools -y 如果你仅仅是想管理虚拟机，那么你应该使用vagrant。如果你想快速开发和部署应用，那么应该使用docker。 vagrant是一款管理虚拟机的工具，而docker是一款通过将应用打包到轻量级容器，而实现构建和部署的工具。两者适用范围不同。一个容器就是一个包含了应用执行所依赖的数据(包括lib，配置文件等等)。它可以保证应用在一个可重复的环境中随时执行。 数据卷：是经过特殊设计的目录，可以绕过联合文件系统ufs，为一个或多个容其提供访问。让你可以不受容器生命周期影响进行数据持久化。它们表现为容器内的空间，但实际保存在容器之外，从而允许你在不影响数据的情况下销毁、重建、修改、丢弃容器。 Docker允许你定义应用部分和数据部分，并提供工具让你将他们分开。容器是短暂和一次性的。 docker run -v ~/container_data:/data:ro -it centos,映射本地~/container_data到容器/data下,且/data的权限为ro只读，登录进去后ls查看，发现会有data目录 数据卷容器：命名的容器挂载数据卷，其他容器通过挂载这个容器实现数据共享，挂载数据卷的容器，就叫做数据卷容器。 docker run --volumes-from 数据卷容器名称 即使删除了数据卷容器，挂载了数据卷容器的容器，仍然可以访问数据卷容器的目录，数据卷容器起的作用仅仅是将挂载配置传递到待挂载容器 Docker数据卷的备份与还原：通过挂载目录压缩后放到挂载目录 Docker For Mac的Docker Daemon是运行于虚拟机(xhyve)中的, 而不是像Linux上那样作为进程运行于宿主机，因此Docker For Mac没有docker0网桥，不能实现host网络模式，host模式会使Container复用Daemon的网络栈(在xhyve虚拟机中)，而不是与Host主机网络栈，这样虽然其它容器仍然可通过xhyve网络栈进行交互，但却不是用的Host上的端口(在Host上无法访问)。bridge网络模式 -p 参数不受此影响，它能正常打开Host上的端口并映射到Container的对应Port。 docker容器的网络连接 docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡 docker0地址划分：IP127.17.42.1,掩码255.255.0.0,总共提供了65534个地址 网桥操作需安装bridge-utils工具，安装之后brctl show查看网桥信息，可以添加网桥或者配置网桥信息 docker容器的IP地址在重启容器之后会变化，是不可靠的 容器互联：在同一宿主机下，docker容器是通过虚拟网桥互相连接的，默认在同一宿主机下docker允许所有容器互联。让容器之间可以相互连接主要借用了一个link的功能。 在使用纯Docker时，被连接的容器必须在同一个Docker宿主机中。不同宿主机之间的容器如果想要连接，则需要借助Swarm或Kubernetes等编排工具。 –link:链接容器，docker run -it --name cct3 --link=cct1:webtest bitchofgod/testnet （webtest为cct1的别名），然后在cct3中ping webtest即可互联 Docker在父容器中的以下两个地方写入了连接信息： /etc/hosts文件中，–link在此文件中写入了映射信息，当docker重新启动的时候，docker会自动维护此文件中的映射 包含连接信息的环境变量中 如果拒绝所有容器互联，则修改docker配置，在/ect/default/docker文件中添加DOCKER_OPTS=&quot; --icc=false&quot;后重启docker服务即可 如果需要特定容器互联，则通过–link、–icc=false、–iptables=true来实现 docker容器与外部网络的连接 ipforward iptables Ctrl+p，Ctrl+q退出交互界面 docker attach containerName重新打开交互界面 CaaS(Container as a Service):镜像容器托管 从Docker到Caas 容器集群管理工具 容器调度 配置管理 服务发现 日志／监控／报警 LaaS（基础设施） 出租计算、存储、网络、DNS等基础IT服务 PaaS（基础设施+系统平台—应用服务器应用框架 编程语言） 提供应用运行和开发环境 提供应用开发组件（邮件、消息、计费、支付） SaaS （基础设施+系统平台+软件应用）互联网Web2.0应用 企业应用（ERP/CRM等） 通俗点讲 SaaS：软件即服务，简单来说就是把企业想要的功能开发好成应用软件，然后直接卖给用户使用。通俗点讲就是去饭店吃饭一样，什么都是店家的。 PaaS：平台即服务，简单来说就是云计算平台提供硬件、编程语言、开发库等帮助用户更好更快的开发软件。通俗来说就是点外卖，使用时店家的，但是餐桌是自己的。 IaaS：基础设施即服务，简单来说就是云服务商提供企业所需要的服务器、存储、网络给企业用。通俗来说就是买菜买面，回家自己做饭。 https://blog.csdn.net/weixin_38003389/article/details/84025762 Docker Machine：目的是简化 Docker 的安装和远程管理,是官方提供的一个工具。 先创建Docker Machine机器 Docker Compose：Docker Compose 是 Docker 官方编排（Orchestration）项目之一，负责快速在集群中部署分布式应用。 Docker Compose允许用户通过一个单独的 docker-compose.yml 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project） Compose 中有两个重要的概念： 项目 ( project )：由一组关联的应用容器组成的一个完整业务单元，在 dockercompose.yml 文件中定义。 服务 ( service )：一个应用的容器，实际上可以包括若干运行相同镜像的容器实例 运行 compose 项目：docker-compose up Docker Compose命令集 管理镜像：build/pull 管理服务：up/start/stop/kill/rm/scale 服务状态：ps/logs/port 一次性服务：run Docker Swarm:Docker集群管理工具，支持标准的Docker API,其主要作用是把若干台Docker主机抽象为一个整体，并且通过一个入口统一管理这些Docker主机上的各种Docker资源。 Swarm和Kubernetes比较类似，但是更加轻，具有的功能也较kubernetes更少一些。 Docker Compose 是一个在单个服务器或主机上创建多个容器的工具，而 Docker Swarm 则可以在多个服务器或主机上创建容器集群服务，对于微服务的部署，显然 Docker Swarm 会更加适合。 三大主流调度框架：Swarm、Kubernetes和Mesos Kubernetes：交互工具kubectl pods：创建、调度及管理的最小单元，共存的一组容器的集合，同一pods中的容器共享pid、网络、ipc及utf命名空间和共享存储卷]]></content>
       <categories>
         <category>docker</category>
@@ -321,6 +324,9 @@
     <title><![CDATA[C#]]></title>
     <url>%2F2018%2F10%2F17%2FC-%E5%BC%80%E5%8F%91-2018-10-17-C%2F</url>
     <content type="text"><![CDATA[双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的， https://blog.csdn.net/zmh458/article/details/78935172 https://www.cnblogs.com/lanpingwang/p/6596758.html https://www.cnblogs.com/Inspire-Yi/p/6230567.html https://www.jianshu.com/p/c82ef6babf8e https://www.cnblogs.com/caofangsheng/p/5715876.html https://blog.csdn.net/beglorious/article/details/39637475 https://www.cnblogs.com/servicehot/p/6510199.html 首先我觉得action的跳转大致可以这样归一下类，跳转到同一控制器内的action和不同控制器内的action、带有参数的action跳转和不带参数的action跳转。 一、RedirectToAction(“Index”);//一个参数时在本Controller下，不传入参数。 二、RedirectToAction(ActionName,ControllerName) //可以直接跳到别的Controller. 三、RedirectToRoute(new {controller=“Home”,action=“Index”});//可跳到其他controller 四、RedirectToRoute(new {controller=“Home”,action=“Index”， id=param});//可跳到其他controller,带参数。 五、Response.Redirect(“Index?id=1”);//适用于本controller下的方法名称,可带参数。 六、return Redirect(“Index”);//适用于本controller下的方法名称。 七、return View(“Index”); //直接显示对应的页面 不经过执行Controller的方法。 八、return View(&quot;~/Views/Home/Index.aspx&quot;);//这种方法是写全路径,直接显示页面,不经过Controller方法 九、return View();//直接显示页面,不经过Controller方法 https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1 一般情况下我们返回的都是本页面，所以使用return View()就可以解决问题了， https://www.cnblogs.com/Cwj-XFH/p/5956142.html Model验证是ASP.NET MVC中的重要部分，它主要用于判断输入的数据类型及值是否符合我们设定的规则，这篇文章就介绍下ASP.NET MVC中Model验证的几种方式。 后台验证 DataAnnotation ValidationAttribute IValidatableObject IDataErrorInfo 前端验证 ViewData和ViewBag https://blog.csdn.net/pasic/article/details/7093802 https://www.cnblogs.com/webapi/p/9505400.html 系列文章： https://blog.csdn.net/ydm19891101/article/details/43338999 WebForm与MVC的本质区别：请求的url不同 https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1 MVC action 返回javascriptResult 需要引入的文件是 需要引用这个文件 ： jquery.unobtrusive-ajax.min.js 同时 用javascrptResult 作为action的返回结果 的话 ，前台必须用ajax.BeginForm https://www.cnblogs.com/zjf1987/p/ActionResult.html]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[React全家桶]]></title>
@@ -343,13 +349,18 @@
       </categories>
       <tags>
         <tag>git</tag>
-        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Gitblit搭建git服务器]]></title>
     <url>%2F2018%2F10%2F08%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-2018-10-08-Gitblit%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[http://www.gitblit.com/ https://www.cnblogs.com/ucos/p/3924720.html https://blog.csdn.net/llengnuo/article/details/73477355 http://gitblit.com/setup_go.html https://blog.csdn.net/zhangwenjie1105/article/details/81482238 https://www.cnblogs.com/royi123/p/7754235.html]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[微信公众平台使用]]></title>
@@ -454,7 +465,6 @@
       </categories>
       <tags>
         <tag>ASP.NET</tag>
-        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -474,7 +484,7 @@
     <url>%2F2018%2F10%2F05%2FCI-Jekins%2F</url>
     <content type="text"><![CDATA[Jenkins 官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应 Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作 持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成到主干，并进程自动化测试 持续交付：指的是在持续集成的环境基础之上，将代码部署到预生产环境 持续部署：在持续交付的基础上，把部署到生产环境的过程自动化，持续部署和持续交付的区别就是最终部署到生产环境是自动化的]]></content>
       <categories>
-        <category>数据库</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>持续集成</tag>
@@ -493,17 +503,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[VirtualBox安装]]></title>
-    <url>%2F2018%2F10%2F04%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-11-VirturalBox%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[https://jingyan.baidu.com/article/36d6ed1f821ca21bcf4883da.html]]></content>
-      <categories>
-        <category>环境搭建</category>
-      </categories>
-      <tags>
-        <tag>容器技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[hexo使用速记]]></title>
     <url>%2F2018%2F10%2F04%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-10-hexo%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[说明 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详细学习请参考：https://hexo.io/zh-cn/docs 。 本文章只是个人使用过程中重点内容记录。 安装 前置安装：node，git 安装：npm install -g hexo-cli 初始化项目 mkdir [项目名称, 如：test] hexo init [项目名称, 如：test] //此处要求文件夹内为空 cd [项目名称, 如：test] npm install 常用命令 hexo new [layout] ‘【文章名称】’ //创建不通类型文章 1234laytou及路径如下：post source/_postspage sourcedraft source/_drafts hexo clean //清除hexo生成静态网站内容 hexo g //生成hexo静态网站 hexo s //启用hexo服务 hexo d //hexo网站部署，配合hexo-deployer-git插件使用 hexo version //hexo相关软件版本 hexo list [type] //type:post,page等 Front-matter和JSON Front-matter 用来设定文章的一些参数，如是否添加密码、版权、标签、分类等信息。 Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，基于YAML 123title: Hello Worlddate: 2013/7/13 20:46:25--- JSON Front-matter 使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可 123&quot;title&quot;: &quot;Hello World&quot;,&quot;date&quot;: &quot;2013/7/13 20:46:25&quot;;;; 可配置参数如下： 参数 描述 默认值 layout 布局 title 标题 date 建立日期 文件建立日期 updated 更新日期 文件更新日期 comments 开启文章的评论功能 true tags 标签（不适用于分页） categories 分类（不适用于分页） permalink 覆盖文章网址 可以通过直接修改scaffolds内的模版来设定统一的文章额外信息，如： 123456789101112---title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;tags: - - categories: password: copyright: truecomments: truetoc: true--- 部署 安装 hexo-deployer-git：npm install hexo-deployer-git --save 配置hexo的_config.yml文件 1234567# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://[XXX]@github.com/[XXX]/[XXX].github.io //库（Repository）地址,如：https://epaypad@github.com/epaypad/epaypad.github.io branch: master //分支名称 message: https://github.com/chetaofeng/MyHexoBlogSource 内容部署 &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125; //自定义提交信息 hexo d //命令执行后，稍等一会查看部署结果 hexo主题 hexo默认主题为landscape，大家可以根据各自需要使用不通主题。 本人使用的是NexT主题，使用请参考：http://theme-next.iissnan.com ，NexT更多配置，请参考： https://www.jianshu.com/p/1f8107a8778c]]></content>
@@ -513,6 +512,17 @@
       <tags>
         <tag>node</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[VirtualBox安装]]></title>
+    <url>%2F2018%2F10%2F04%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-11-VirturalBox%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[https://jingyan.baidu.com/article/36d6ed1f821ca21bcf4883da.html]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>容器技术</tag>
       </tags>
   </entry>
   <entry>
@@ -531,6 +541,9 @@
     <title><![CDATA[RxJava从源码到应用移动端开发效率秒提速]]></title>
     <url>%2F2018%2F10%2F02%2Fandroid-RxJava%2F</url>
     <content type="text"><![CDATA[响应式编程思想概述 响应式编程：是一种面向数据流和变化传播的编程范式 数据流：只能以事先规定好的顺序被读取一次的数据的一个序列 变化传播：类似观察者模式，变化了要通知别人 RxJava源码分析 基本元素 RxJava是一个基于回调的异步的库，是一个基于事件分发和消息传递的库 Operator操作符变换原理 Scheduler线程变换原理 整体变换compose和transformer原理]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
       <tags>
         <tag>andrioid</tag>
         <tag>RxJava</tag>
@@ -541,19 +554,23 @@
     <url>%2F2018%2F10%2F02%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-2018-10-02-GithubPages%2F</url>
     <content type="text"><![CDATA[Github Pages介绍 官网：https://pages.github.com/ GitHub Pages 是一个静态网站托管服务，使用github.io域名和HTTPS来提供服务。一个github账号只能有一个Github Pages网站。 GitHub Pages 网站是在网络上公开使用的，即使他们的库是私有的。如果你敏感的数据在你的Page库中，你可能需要在发布之前删除它。 Github Pages创建 申请邮箱 申请github账号 1前两步是为了准备没有进行Github Pages服务开通的github账号，如果已经有，可以跳过 创建repository。和普通创建一样，但是名称要以&quot;.github.io&quot;结尾，如：test.github.io，这样创建完之后才在这个项目的settings中有github pages选项 访问：https://test.github.io/,即可以看见Github Pages网站 Github Pages网站内容编辑 创建源码repository，用来存放Github Pages网站源码 此处选用Hexo作为网站模版，在本地初始化hexo项目，参考： 在hexo中安装配置hexo-deployer-git进行github项目管理 下载【1】中github代码到本地，本人是通过webstorm进行编辑操作的 拷贝【2】中代码到【1】中的repository中，在本地运行查看hexo效果 编辑.gitignore文件,忽略操作系统文件、编辑器临时文件、node临时文件等，提交 提交repository到github hexo部署本地代码到Github Pages，查看效果]]></content>
       <categories>
-        <category>搭建博客</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>git</tag>
-        <tag>github pages</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Gradle3.0自动化项目构建技术]]></title>
     <url>%2F2018%2F10%2F02%2Fandroid-Gradle3-0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E6%8A%80%E6%9C%AF%2F</url>
     <content type="text"><![CDATA[Groovy快速入门 领域特定语言DSL（Domain Specific Language）：其核心思想为&quot;求专不求全，解决特定问题&quot;， Groovy： http://www.groovy-lang.org/ Groovy：是一种基于JVM的敏捷开发语言，结合了Python、Ruby等脚本语言的许多强大特性，可以与Java完美结合，使用Java的所有库； 语法上支持动态类型，闭包等新一代语言特性 无缝继承所有Java的库（可以完全用Java写，但是不推荐） 即支持面向对象编程，也支持面向过程编程 优势：一种更加敏捷的编程语言；入门非常容易，但是功能非常强大；既可以作为编程语言也可以作为脚本语言；熟练掌握Java的人会非常容易掌握Groovy Groovy开发环境搭建： java平台上有各种语言的翻版，例如kotlin对c#,scala对haskell,Clojure对lisp，groovy对ruby macOS/Linux 安装配置好JDK 下载Groovy SDK并解压到合适未知 配置bin目录到/.bash_profile中，如添加如下内容到/.bash_profile 1export PATH=$PATH:/usr/groovy-2.5.5/bin groovy -version InteliJ IDEA配置 确保已安装Groovy插件 配置Groovy SDK未知 编写Groovy版本HelloWorld，注意查看编译后文件 123456//Java版本class Test &#123; public static void main(String[] args)&#123; System.out.println(&quot;Hello world&quot;); &#125;&#125; 12//Groovy版本print &quot;Hello world&quot; Groovy基础语法 变量 变量的类型：基本类型+对象类型，Groovy中没有基本类型，所有的基本类型都会被编译器包装成对象类型，如：int-&gt;Integer 变量的定义：强类型定义方式+弱类型def定义方式，Groovy中如果变量的值可以推断除其类型，则可通过def声明为弱类型，区别于java中的强类型定义方式，如：int i=1； 推荐在自有使用模块使用def方式定义，如果有其他模块或其他类使用推荐强类型定义方式 字符串：String + GString String的使用和Java中一致，GString定义方式如下： def name = ‘Hello name’ //不支持可扩展字符串 def doubleName = “Hello doubleName” //可扩展字符串，如：def doubleName = “Hello doubleName and ${name}”,结果为： Hello doubleName and Hello name，此时doubleName是org.codehaus.groovy.runtime.GStringImpl的子类 def thupleName = ‘’‘Hello thupleName’’’ //支持多行方式 无可扩展字符串时以上3种方式的String都是java.lang.String的子类，编码过程中String和GString是可以通用的，更多从方便使用角度考虑即可 Groovy字符串方法介绍 java中String原有的方法 DefalutGroovyMethods StringGroovyMethods：普通类型的参数+闭包类型的参数 12345678910def str = &quot;Groovy&quot;，str2 = &quot;Hello&quot;,str3= &quot;Hello minus&quot;//字符串填充:center(),paddingLeft(),paddingRight()println str.center(8,&apos;a&apos;) //aGroovya//字符串比较：类似于数字比较；compareTo()println str &gt; str2 //false//获取字符串索引:类似于数组下标；charAt()println str[0..1] //Gr//减法运算:类似于数字减法；minus()println str3.minus(str2) // minus//其他方法自己摸索 逻辑控制：单步顺序执行|if／else|switch-case|while|for，基本和Java操作一致，针对Groovy扩展介绍如下： 123456789101112131415161718192021//switch-casedef x=1.23,resultswitch(x)&#123; //switch(x.class) case &quot;name&quot;: result = &quot;name&quot; break case Integer: result = &quot;Integer&quot; break case BigDecimal: result = &quot;BigDecimal&quot; break case [1,2,3]: //列表 result = &quot;list&quot; break case 1..10: //范围 result = &quot;range&quot; default: result=&quot;defalut&quot;&#125;println result //BigDecimal for循环控制 1234567891011121314//对范围的for循环def sum =0for(i in 0..9)&#123; sum += i&#125;println sum //45//对list的for循环for(i in [1,2,3,4,5])&#123; sum += i&#125;//对map的for循环for(i in [&quot;lili&quot;:1,&quot;lucy&quot;:2])&#123; println i.key + &quot;:&quot; +i.value&#125; 闭包 闭包就是一个代码块，所以需要通过{}括起来，def clouser = { println “Hello Groovy!”};clouser.call();clouser(); //推荐call()方式调用来区分是闭包 def clouser = {String name -&gt; println “Hello Groovy ${name}!”};clouser.call(“a”);clouser(“b”); 隐式参数it：def clouser = {println “Hello Groovy ${it}!”};clouser.call(“a”);clouser(“b”); 闭包返回值：总是有返回值的，当闭包体没有明确返回值的时候，返回结果就是null 如果最后一个参数是闭包，闭包可以写在外面 闭包的使用 与基本类型的结合使用 123456789101112131415161718192021int fab1(int number)&#123; int result = 1 1.upto(number,&#123;num -&gt; result *= num &#125;) return result&#125;int fab2(int number)&#123; int result = 1 number.downto(1) &#123; num -&gt; result *= num &#125; return result&#125;int cal(int number)&#123; int result = 0 number.times &#123; num -&gt; result += num &#125; return result&#125; 与String结合使用 123456def str = &quot;the 2 and 3 is 5&quot;str.each &#123;String tmp -&gt; print tmp.multiply(2)&#125; //tthhee 22 aanndd 33 iiss 55println str.find &#123;String tmp -&gt; tmp.isNumber()&#125; //2println str.any &#123;String tmp -&gt; tmp.isNumber()&#125; //trueprintln str.every &#123;String tmp -&gt; tmp.isNumber()&#125; //falsedef list = str.collect &#123;it.toUpperCase()&#125;;println list.toListString() //[T, H, E, , 2, , A, N, D, , 3, , I, S, , 5] 与数据结构结合使用 与文件等结合使用 闭包进阶：闭包关键字（this，owner，delegate）+闭包委托策略 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465def scriptClosure = &#123; println &quot;scriptClosure this:&quot;+this //代表闭包定义处的类 println &quot;scriptClosure owner:&quot;+owner //代表闭包定义处的类或对象 println &quot;scriptClosure delegate:&quot;+delegate //代表任意对象，默认值为owner&#125;scriptClosure.call()//scriptClosure this:Test@3c130745//scriptClosure owner:Test@3c130745//scriptClosure delegate:Test@3c130745class Person&#123; def static classClosure = &#123; println &quot;classClosure this:&quot;+this println &quot;classClosure owner:&quot;+owner println &quot;classClosure delegate:&quot;+delegate &#125; def static say()&#123; def methodClosure = &#123; println &quot;methodClosure this:&quot;+this println &quot;methodClosure owner:&quot;+owner println &quot;methodClosure delegate:&quot;+delegate &#125; methodClosure.call() &#125;&#125;//静态方法调用Person.classClosure()Person.say()//全部指向Person类,闭包指向离他最近的封闭类//classClosure this:class Person//classClosure owner:class Person//classClosure delegate:class Person//methodClosure this:class Person//methodClosure owner:class Person//methodClosure delegate:class Person//修改Person类中方法，取消static限定符调用Person p = new Person()p.classClosure()p.say()//全部指向Person类对象，闭包指向离他最近的封闭类对象classClosure this:Person@a9cd3b1classClosure owner:Person@a9cd3b1classClosure delegate:Person@a9cd3b1methodClosure this:Person@a9cd3b1methodClosure owner:Person@a9cd3b1methodClosure delegate:Person@a9cd3b1//嵌套闭包def outerClosure = &#123; def innerClosure = &#123; println &quot;innerClosure this:&quot;+this println &quot;innerClosure owner:&quot;+owner println &quot;innerClosure delegate:&quot;+delegate &#125; innerClosure.call()&#125;outerClosure.call()//innerClosure this:Test@3c130745//innerClosure owner:Test$_run_closure7@9353778 //指向outerClosure//innerClosure delegate:Test$_run_closure7@9353778 总结：this、owner、delegate的值在大多数情况都是一样的，在嵌套闭包中this的值和owner、delegate的值不一致，只有在给delegate赋值后owner和delegate的值才不一致 闭包的委托策略 123456789101112131415161718192021222324class Student&#123; String name def sayName = &#123; &quot;My name is $&#123;name&#125;&quot;&#125; String toString()&#123; sayName.call() &#125;&#125;class Teacher&#123; String name&#125;def stu = new Student(name: &quot;XingFeng&quot;)println stu.toString()def tea = new Teacher(name: &quot;Lily&quot;)stu.sayName.delegate = teaprintln stu.toString()stu.sayName.resolveStrategy = Closure.DELEGATE_FIRST //先从delegate中查找name属性，没有了再从owner中查找println stu.toString()//My name is XingFeng//My name is XingFeng//My name is Lily 数据结构 列表的定义：def list = [1,2,3,4] 此为一个ArrayList； 数组的定义：def list = [1,2,3,4] as int[]; int[] arr=[1,2,3] 列表的排序：def list = [1,12,3,444]; Collections.sort(list);list.sort() map的定义：def colors=[“red”:1,“blue”:2];def colors=[red:1,blue:2] 索引map：println colors.red;println colors[“red”]; 添加map：colors.yellow=3 //Groovy中map可以添加不同类型的数据：colors.complex =[a:1,b:2] 遍历map： list.each{def tmp,int index -&gt; …} list.eachWithIndex{ key,value,index -&gt; …} 查找map： any find findAll every 分组map： groupBy{} 排序map：sort 范围Range：定义 def range = 1…10;println range[0];range.contains(10);println range.from;println range.to Range继承自java.util.List 1234switch(number)&#123; case 0..&lt;60 ...&#125; 面向对象 类、接口等的定义和使用 Groovy中默认类、方法等都是public类型 Groovy中无论是直接调用属性还是通过get／set方法其实质都是通过getter／setter方法调用的属性，getter／setter方法默认自动继承 接口实现需实现接口的所有方法；trait中可以有默认方法实现，没有实现的方法需添加abstract关键字，实现时只需实现abstract的方法即可 元编程（Metaprogramming）是指某类计算机程序的编写，这类计算机程序编写或者操纵其他程序（或者自身）作为它们的数据，或者在运行时完成部分本应在编译时完成的工作。很多情况下与手工编写全部代码相比工作效率更高。编写元程序的语言称之为元语言，被操作的语言称之为目标语言。一门语言同时也是自身的元语言的能力称之为反射 元编程通常有两种方式起作用。一种方式是通过应用程序接口（API）来暴露运行时引擎的内部信息。另一种方法是动态执行包含编程命令的字符串。因此，“程序能编写程序”。虽然两种方法都能用，但大多数方法主要靠其中一种。 123456789101112class Baby &#123; def invokeMethod(String name,Object args)&#123; return &quot;the method is $&#123;name&#125;,the args is $&#123;args&#125;&quot; &#125; def methodMissing(String name,Object args)&#123; return &quot;the method $&#123;name&#125; is missing&#125;&quot; &#125;&#125;def baby = new Baby()println baby.cry() 结合上图理解：Java中对象方法的调用没有上图否流程分支，在Groovy中对象方法调用有否分支调用，上例中通过注释invokeMethod、methodMissing方法查看运行效果，通过以下代码可动态添加对象属性和方法： 123Baby.metaClass.sex = &quot;male&quot;Baby.metaClass.play = &#123; ... &#125;Baby.metaClass.static.play = &#123; ... &#125; //静态方法 通过ExpandoMetaClass.enableGlobally()设置让动态添加方法全局启用 Json操作 对象转换成JSON字符串：JsonOutput.toJson() Json格式化打印：JsonOutput.prettyPrint(jsonObject) Json字符串转对象：def jsonSlurper = new JsonSlurper();jsonSlurper.parse() xml操作 Java对xml的处理：DOM文档驱动处理方式+SAX事件驱动处理方式 Groovy解析xml数据：def xmlSlurper = new XmlSlurper();def response = xmlSlurper.parse(xml); ／／response对象可以逐级访问节点，节点的属性添加@符号，如：response.books.@id，也可以通过闭包过滤信息 Groovy深度遍历xml：可以通过逐级遍历解析后的response数据，也可通过response.depFirst().find{ …}遍历或 response.’’.find{ …}遍历（’'代表深度遍历） Groovy深度遍历xml：response.books.children().find{…}或response.books.’’.find{…}（’'代表深度遍历） Groovy创建xml数据： 12345678910111213141516171819202122&apos;&apos;&apos;&lt;langs type=&apos;current&apos; count=&apos;3&apos;&gt; &lt;language flavor=&apos;static&apos; version=&apos;1.5&apos; /&gt; &lt;language flavor=&apos;public&apos; version=&apos;2.5&apos; /&gt;&lt;/langs&gt;&apos;&apos;&apos;def sw = new StringWriter()def xmlBuilder = new MarkupBuilder(sw)xmlBuilder.langs(type:&apos;current&apos;,count:3)&#123; language(flavor:&apos;static&apos;,version:&apos;1.5&apos;) language(flavor:&apos;public&apos;,version:&apos;2.5&apos;)&#125;println swdef langs = new Langs()xmlBuilder.langs(type:langs.type,count:langs.count)&#123; langs.languages.each &#123; language(flavor:it.flavor,version:it.version) &#125;&#125;println sw 文件操作 Java文件处理：节点流（InputStream、OutputStream及其子类）+处理流（Reader、Writer及其子类），所有Java对文件的操作Groovy都支持 遍历文件内容：def file = new File(“Test.iml”);file.eachLine { println it } 或 def text = file.getText() 或 def text = file.readLines() … gradle Gradle是一款最新的，功能强大的构建工具，使用程序代替传统的xml配置，项目构建更加灵活，有丰富的第三方库 gradle组成：groovy核心语法+build script block+gradle api gradle生命周期 执行./gradlew clean 观察执行过程，其生命周期包括：初始化、配置、执行 gradle生命周期的监听 在项目的build.gradle中添加如下 12345678//在配置阶段开始之前的回调this.beforeEvaluate &#123;&#125;//配置阶段完成以后的回调this.afterEvaluate &#123;&#125;//gradle生命周期执行完以后的回调this.gradle.buildFinished &#123;&#125; Gradle Project ./gradlew projects //查看工程Project数量，学会区分Project与module及根Project与子Project，每个Project必须有一个build.gradle文件 Project API组成： Project相关API：如何管理父Project及如何操作子Project this.getAllProjects()，this.getSubProjects(),this.getParent()，在gradl文件中，对应allprojects、project、subprojects进行操作 ./gradlew projects可实现显示所有项目，自我实现如下： 12345678910111213141516def getProjects()&#123; println &quot;------------------------&quot; this.getAllprojects().eachWithIndex&#123; Project project, int index -&gt; if(index == 0)&#123; println &quot;Root project:$&#123;project.name&#125;&quot; &#125;else&#123; println &quot;+--- project:$&#123;project.name&#125;&quot; &#125; &#125;&#125;this.getProjects()//------------------------//Root project:MyApplication//+--- project:app task相关API 属性相关API 父Project的属性在子项目中会被继承，可直接使用 可以在项目中通过common.gradle文件来定义扩展属性ext，然后在根Project中通过apply from:this.file(‘common.gradle’)引入后，按rootProject.ext.定义属性的方式使用 在gradle.properties中定义key-value属性，如：isLoadTest=false，然后在settings.gradle中就可以编码控制是否加载Test项目 123if(hasProperty(&apos;isLoadTest&apos;)? isLoadTest.toBoolean() : false)&#123; include &apos;:Test&apos;&#125; 自定义属性的两种方式：ext方式+gradle.properties中定义 4. file相关API 路径获取API：getRootdir()、getBuildDir()、getProjectDir() 文件操作相关API：都是基于根工程操作的，不支持跨工程操作 123456789//文件／文件夹拷贝copy &#123; from file(&apos;test.txt&apos;) into getRootProject().getBuildDir()&#125;//文件树遍历fileTree(&apos;build/&apos;)&#123; FileTree fileTree -&gt; fileTree.visit&#123; FileTreeElement element -&gt; ... &#125;&#125; gradle生命周期API 其他API 依赖相关API 12345678910111213141516171819buildscript &#123; repositories &#123; google() jcenter() &#125; dependencies &#123; classpath &apos;com.android.tools.build:gradle:3.2.1&apos; &#125;&#125;//等价于以下操作：buildscript &#123; ScriptHandler scriptHandler -&gt; scriptHandler.repositories &#123; RepositoryHandler repositoryHandler -&gt; repositoryHandler.google() repositoryHandler.jcenter() &#125; scriptHandler.dependencies &#123; classpath &apos;com.android.tools.build:gradle:3.2.1&apos; &#125;&#125; 依赖传递：A模块依赖B模块，B模块依赖C模块，如果A模块也需要C模块功能，不需依赖使用，防止B修改后去掉C依赖而导致错误，可在A中引入C模块，通过exclude排除依赖，transitive禁止依赖传递 占位编译provided：A.类库只在编译阶段起作用 B.父项目已引入类库，子项目直接使用父项目类库，但为了子项目编译通过使用占位编译 外部命令执行 1234567891011121314task abc() &#123; doLast&#123; def command = &apos;ls&apos; exec&#123; try&#123; executable &apos;bash&apos; args &apos;-c&apos;,command println &apos;command is execute success.&apos; &#125;catch(GradleException ex)&#123; println &quot;Excepiotn....&quot; &#125; &#125; &#125;&#125; 执行：./gradlew abc Task Task定义及配置 直接通过task函数去创建 1234567891011121314task(&quot;abcd&quot;) &#123; doLast&#123; def command = &apos;ls -al&apos; exec&#123; try&#123; executable &apos;bash&apos; args &apos;-c&apos;,command println &apos;command is execute success.&apos; &#125;catch(GradleException ex)&#123; println &quot;Excepiotn....&quot; &#125; &#125; &#125;&#125; 通过TaskContainer创建 123this.tasks.create(&quot;aa&quot;)&#123; println &apos;Hello task&apos;&#125; Task创建之后可在开发工具的gradle插件重查找到task，如果没有设置group，则默认在other分组中，更多配置可通过task源码查看 2. Task执行详解 doFirst/doLast执行阶段执行，否则在配置阶段执行 1234567891011task aa&#123; doFirst&#123; println &apos;Hello 2&apos; &#125;&#125;task.doFirst&#123; println &apos;Hello 1&apos;&#125;//Hello 1//Hello 2 编写一个统计build时长的task app.gradle中编写： 12345678910111213def startBuilderTime,endBuilderTimethis.afterEvaluate &#123; Project project -&gt; def preBuildTask = this.tasks.getByName(&quot;preBuild&quot;) preBuildTask.doFirst &#123; startBuilderTime = System.currentTimeMillis() println &apos;------开始计时...&apos; &#125; def buildTask = this.tasks.getByName(&quot;build&quot;) buildTask.doLast &#123; endBuilderTime = System.currentTimeMillis() println &apos;------计时结束,耗时：&apos;+(endBuilderTime - startBuilderTime) &#125;&#125; ./gradlew build执行查看结果 3. Task的依赖及执行顺序 dependsOn强依赖方式 12345678910111213task t1() &#123; doLast&#123;println &apos;task t1&apos;&#125; &#125;task t2() &lt;&lt; &#123; println &apos;task t2&apos; &#125; //此处&quot;&lt;&lt;&quot;等同于doLasttask t3(dependsOn:[t1,t2]) &#123; doLast&#123;println &apos;task t3&apos;&#125; &#125;task t4() &#123; dependsOn this.tasks.findAll &#123; task -&gt; return task.name.equals(&quot;t2&quot;)&#125;;doLast&#123;println &apos;task t4&apos;&#125; &#125;//./gradlew t3: (t1和t2执行顺序是随机的)//task t1//task t2//task t3//./gradlew t4//task t2//task t4 通过Task输入输出指定 TaskInputs:参数为任意对象及文件、文件夹；TaskOutputs:只输出文件 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374ext&#123; println &apos;------配置中...&apos; versionCode = 100 versionName = &quot;V2.0.0&quot; versionInfo = &quot;第一个版本&quot; destFile = file(&quot;release.xml&quot;) if(destFile != null &amp;&amp; !destFile.exists())&#123; destFile.createNewFile() &#125;&#125;class VersionMsg&#123; Integer versionCode String versionName String versionInfo&#125;task writerTask&#123; //为task指定输入 inputs.property(&quot;versionCode&quot;,this.versionCode) inputs.property(&quot;versionName&quot;,this.versionName) inputs.property(&quot;versionInfo&quot;,this.versionInfo) //为task指定输出 outputs.file destFile doLast&#123; def data = inputs.getProperties() File file = outputs.getFiles().getSingleFile() def versionMsg = new VersionMsg(data) def sw = new StringWriter() def xmlBuilder = new groovy.xml.MarkupBuilder(sw) if(file.text != null &amp;&amp; file.text.size() &lt;=0)&#123; xmlBuilder.releases&#123; release&#123; versionCode(versionMsg.versionCode) versionName(versionMsg.versionName) versionInfo(versionMsg.versionInfo) &#125; &#125; file.withWriter &#123; writer -&gt; writer.append(sw.toString()) &#125; &#125;else&#123; def lines = file.readLines() def lengths = lines.size() - 1 file.withWriter &#123; writer -&gt; lines.eachWithIndex&#123; String line, int index -&gt; if(index != lengths)&#123; writer.append(line +&quot;\r\n&quot;) &#125;else if(index == lengths)&#123; writer.append(&quot;\r\n&quot; + sw.toString()+&quot;\r\n&quot;) writer.append(lines.get(lengths)) &#125; &#125; &#125; &#125; &#125;&#125;task readTask&#123; inputs.file destFile doLast&#123; def file = inputs.files.singleFile println file.text &#125;&#125;task taskTest&#123; dependsOn readTask,writerTask doLast&#123; println &quot;输入输出任务结束&quot; &#125;&#125; destFile作为writerTask输出结果输入到readTask 通过API指定执行顺序：mustRunAfter／shouldRunAfter 12task t1() &#123; doLast&#123;println &apos;task t1&apos;&#125; &#125;task t2() &#123; mustRunAfter t1 doLast &#123;println &apos;task t2&apos;&#125; &#125; 通过./gradlew t2 t1查看执行结果 4. Task类型 详见官方文档：https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Delete.html#org.gradle.api.tasks.Delete 5. 构建到生命周期 12345678this.project.afterEvaluate &#123;project -&gt; println &quot;开始挂接...&quot; def buildTask = project.tasks.getByName(&quot;build&quot;) if(buildTask == null) throw GradleException(&quot;build Task not found&quot;) buildTask.doLast &#123; writerTask.execute() &#125;&#125; Gradle其他模块 Settings类：对应Settings.gradle 123if(hasProperty(&apos;isLoadTest&apos;)? isLoadTest.toBoolean() : false)&#123; include &apos;:Test&apos;&#125; SourceSet类:AndroidSourceSet/JavaSourceSet,决定了代码、资源、第三方库要存放的位置 123456789//修改.so等jnilibs的存放位置android&#123; sourceSets &#123; main&#123; jniLibs.srcDirs = [&apos;libs&apos;] res.srcDirs = [&apos;src/main/res&apos;,&apos;src/main/res-ad&apos;] //对res文件夹内容进行分类，但是只能在Project视图查看到效果 &#125; &#125;&#125; Gradle的Plugin Gradle没有提供创建自定义Gradle插件工程的模板，需要开发者手动创建Gradle插件工程 使用Groovy开发，其Gradle插件工程必须遵循如下的目录结构： groovy代码必须位于xxxProject/src/main/groovy/目录下 提供插件属性声明文件，该文件必须位于xxxProject/src/main/resources/META-INF/gradle-plugins/xxx.properties android插件对gradle的扩展 android具体能配置那些属性，可查看源码通过BaseExtension查看 gradle插件： https://avatarqing.gitbooks.io/gradlepluginuserguidechineseverision/content/introduction/README.html varints变体]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
       <tags>
         <tag>andrioid</tag>
+        <tag>Gradle</tag>
       </tags>
   </entry>
   <entry>
