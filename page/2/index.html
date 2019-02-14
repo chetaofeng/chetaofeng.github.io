@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-07-CentOS系统初始设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" itemprop="url">Ubuntu系统安装后的设置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" itemprop="url">java JDK安装配置</a></h2>
         
 
         <div class="post-meta">
@@ -365,6 +365,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -395,30 +417,9 @@
       
         
           
-            <h1 id="修改默认源为国内源"><a class="markdownIt-Anchor" href="#修改默认源为国内源"></a> 修改默认源为国内源</h1>
-<ol>
-<li>cd /etc/apt</li>
-<li>cp /etc/apt/sources.list /etc/apt/sources.list.bak   备份/etc/apt/sources.list</li>
-<li>在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#添加阿里源</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>更新源</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-<h1 id="系统分辨率设置"><a class="markdownIt-Anchor" href="#系统分辨率设置"></a> 系统分辨率设置</h1>
-<p>安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改：</p>
-<ol>
-<li>首先打开终端Terminal，输入: sudo apt-get install xdiagnose</li>
-<li>sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】</li>
-<li>sudo reboot 重启系统</li>
-<li>再次打开设置发现分辨率可以设置了,如设置为：1280*800</li>
-</ol>
-<h1 id="chrome浏览器安装"><a class="markdownIt-Anchor" href="#chrome浏览器安装"></a> chrome浏览器安装</h1>
-<ul>
-<li>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="noopener">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></li>
-<li>sudo dpkg -i google-chrome-stable_current_amd64.deb</li>
-</ul>
+            <p><a href="https://blog.csdn.net/ganeshys2017/article/details/81300246" target="_blank" rel="noopener">https://blog.csdn.net/ganeshys2017/article/details/81300246</a></p>
+<p><a href="http://www.cnblogs.com/linnuo/p/6257204.html" target="_blank" rel="noopener">http://www.cnblogs.com/linnuo/p/6257204.html</a></p>
+<p><a href="https://blog.csdn.net/lwwl12/article/details/78247307" target="_blank" rel="noopener">https://blog.csdn.net/lwwl12/article/details/78247307</a></p>
 
           
         
@@ -517,6 +518,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -686,7 +709,7 @@ android Studio安装Genymotion插件使用</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/oracle/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/数据库-2018-12-12-oracle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -705,7 +728,7 @@ android Studio安装Genymotion插件使用</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/12/oracle/" itemprop="url">oracle</a></h2>
+                <a class="post-title-link" href="/2018/12/12/数据库-2018-12-12-oracle/" itemprop="url">oracle</a></h2>
         
 
         <div class="post-meta">
@@ -979,7 +1002,7 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/MongoDB/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/数据库-2018-12-10-MongoDB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -998,7 +1021,7 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/10/MongoDB/" itemprop="url">MongoDB</a></h2>
+                <a class="post-title-link" href="/2018/12/10/数据库-2018-12-10-MongoDB/" itemprop="url">MongoDB</a></h2>
         
 
         <div class="post-meta">
@@ -1382,7 +1405,7 @@ hint函数：强制MongoDB使用特定索引</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/MyBatis/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1401,7 +1424,7 @@ hint函数：强制MongoDB使用特定索引</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/10/MyBatis/" itemprop="url">MyBatis</a></h2>
+                <a class="post-title-link" href="/2018/12/10/Java-2018-12-10-MyBatis/" itemprop="url">MyBatis</a></h2>
         
 
         <div class="post-meta">
@@ -1586,7 +1609,7 @@ Case子标记：</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Kotlin/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1605,7 +1628,7 @@ Case子标记：</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/26/Kotlin/" itemprop="url">Kotlin</a></h2>
+                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-Kotlin/" itemprop="url">Kotlin</a></h2>
         
 
         <div class="post-meta">
@@ -1854,7 +1877,7 @@ fun test(vararg  args:String){}<br>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/SpringBoot/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-SpringBoot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1873,7 +1896,7 @@ fun test(vararg  args:String){}<br>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/26/SpringBoot/" itemprop="url">SpringBoot</a></h2>
+                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-SpringBoot/" itemprop="url">SpringBoot</a></h2>
         
 
         <div class="post-meta">
@@ -2095,7 +2118,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/02/NuGet/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/02/C-开发-2018-11-02-NuGet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -2114,7 +2137,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/02/NuGet/" itemprop="url">NuGet</a></h2>
+                <a class="post-title-link" href="/2018/11/02/C-开发-2018-11-02-NuGet/" itemprop="url">NuGet</a></h2>
         
 
         <div class="post-meta">
@@ -2246,7 +2269,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/ECMAScript规范/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-ECMAScript规范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -2265,7 +2288,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/26/ECMAScript规范/" itemprop="url">ECMAScript规范</a></h2>
+                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-ECMAScript规范/" itemprop="url">ECMAScript规范</a></h2>
         
 
         <div class="post-meta">
@@ -2530,7 +2553,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/CommonJS规范-AMD-CMD/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-CommonJS规范-AMD-CMD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -2549,7 +2572,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/26/CommonJS规范-AMD-CMD/" itemprop="url">CommonJS规范&AMD&CMD</a></h2>
+                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-CommonJS规范-AMD-CMD/" itemprop="url">CommonJS规范&AMD&CMD</a></h2>
         
 
         <div class="post-meta">
@@ -2847,7 +2870,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2858,7 +2881,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2869,7 +2892,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2963,7 +2986,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共43.9k字</span>
+  <span class="post-count">博客全站共44.0k字</span>
 </div>
 
 

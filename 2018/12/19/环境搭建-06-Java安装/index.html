@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="环境搭建," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -106,14 +106,14 @@
 
 
 <meta name="description" content="JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置cla">
-<meta name="keywords" content="环境搭建">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java JDK安装配置">
 <meta property="og:url" content="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/index.html">
 <meta property="og:site_name" content="行锋">
 <meta property="og:description" content="JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置cla">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-29T06:59:45.000Z">
+<meta property="og:updated_time" content="2019-02-14T02:08:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java JDK安装配置">
 <meta name="twitter:description" content="JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置cla">
@@ -365,6 +365,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -418,7 +440,10 @@
 <p>下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过，</p>
 <p>配置环境变量的方式：</p>
 <ol>
-<li>找到JDK安装目录，如：/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</li>
+<li>找到JDK安装目录，如：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
+<ol start="2">
 <li>编辑文件~/.bash_profile 文件</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line"></span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
@@ -460,7 +485,7 @@
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-06-Java安装/">java JDK安装配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年01月29日 - 14:01</p>
+  <p><span>最后更新:</span>2019年02月14日 - 10:02</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-06-Java安装/" title="java JDK安装配置">https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/"  aria-label="复制成功！"></i></span>
   </p>
@@ -536,7 +561,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/环境搭建/" rel="tag"><i class="fa fa-tag"></i> 环境搭建</a>
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
         </div>
       
@@ -549,8 +574,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" rel="next" title="java JDK安装配置">
-                <i class="fa fa-chevron-left"></i> java JDK安装配置
+              <a href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" rel="next" title="Ubuntu系统安装后的设置">
+                <i class="fa fa-chevron-left"></i> Ubuntu系统安装后的设置
               </a>
             
           </div>
@@ -559,8 +584,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-05-node安装/" rel="prev" title="node安装配置">
-                node安装配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/19/环境搭建-04-git安装配置/" rel="prev" title="git安装配置">
+                git安装配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -655,7 +680,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,7 +691,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -677,7 +702,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -787,7 +812,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共43.9k字</span>
+  <span class="post-count">博客全站共44.0k字</span>
 </div>
 
 
