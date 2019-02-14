@@ -889,6 +889,434 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/node-NW-js入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/node-NW-js入门/" itemprop="url">NW.js入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>NW.js （原名 node-webkit）是一个基于 Chromium 和 node.js 的应用运行时，通过它可以用 HTML 和 JavaScript 编写原生应用程序。它还允许您从 DOM 调用 Node.js 的模块 ，实现了一个用所有 Web 技术来写原生应用程序的新的开发模式。</p>
+<ul>
+<li>官网：<a href="https://nwjs.io/" target="_blank" rel="noopener">https://nwjs.io/</a></li>
+<li>中文文档：<a href="https://www.gitbook.com/book/wizardforcel/nwjs-doc/details" target="_blank" rel="noopener">https://www.gitbook.com/book/wizardforcel/nwjs-doc/details</a></li>
+</ul>
+<h1 id="功能特性"><a class="markdownIt-Anchor" href="#功能特性"></a> 功能特性</h1>
+<ul>
+<li>用现代 HTML5,CSS3,JS 和 WebGL 来编写应用程序</li>
+<li>完全支持 Node.js APIs 和所有其 第三方模块</li>
+<li>良好的性能:Node 和 WebKit</li>
+<li>运行在相同的线程:函数调用是更简洁;对象在同一堆可以互相引用</li>
+<li>容易打包和分发应用程序</li>
+<li>支持 Linux、Mac OS X 和 Windows</li>
+</ul>
+<h1 id="窗口外观常用属性"><a class="markdownIt-Anchor" href="#窗口外观常用属性"></a> 窗口外观常用属性</h1>
+<p>在package.json文件中设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">title : 字符串，设置默认 title。</span><br><span class="line">width/height : 主窗口的大小。</span><br><span class="line">toolbar : bool 值。是否显示导航栏。</span><br><span class="line">icon : 窗口的 icon。</span><br><span class="line">position :字符串。窗口打开时的位置，可以设置为“null”、“center”或者“mouse”。</span><br><span class="line">min_width/min_height : 窗口的最小值。</span><br><span class="line">max_width/max_height : 窗口显示的最大值。</span><br><span class="line">resizable : bool 值。是否允许调整窗口大小。</span><br><span class="line">always-on-top : bool 值。窗口置顶。</span><br><span class="line">fullscreen : bool 值。是否全屏显示。</span><br><span class="line">show_in_taskbar : 是否在任务栏显示图标。</span><br><span class="line">frame : bool 值。如果设置为 false，程序将无边框显示。</span><br></pre></td></tr></table></figure>
+<h1 id="webstorm项目创建及调试"><a class="markdownIt-Anchor" href="#webstorm项目创建及调试"></a> webstorm项目创建及调试</h1>
+<h2 id="下载三个不同-os-平台的-nwjs"><a class="markdownIt-Anchor" href="#下载三个不同-os-平台的-nwjs"></a> 下载三个不同 OS 平台的 NW.js</h2>
+<h2 id="创建项目并运行"><a class="markdownIt-Anchor" href="#创建项目并运行"></a> 创建项目并运行</h2>
+<ol>
+<li>创建空项目</li>
+<li>创建package.json,编辑起内容，最简为:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;helloworld&quot;, </span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.html&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在webstorm 中添加一个nw.js：run – edit configurations – + nw.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NW.js app : 可以是当前项目目录，但要包含package.json文件. 或者是一个.nw的文件</span><br><span class="line">NW.js interpreter 指定可执行的 nw(官网下的包中的) (mac下是nwjs),如：/MyDeveloper/nwjs-v0.22.1-osx-x64/nwjs.app</span><br><span class="line">working direction ： 项目目录</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>运行查看效果</li>
+</ol>
+<h2 id="调试"><a class="markdownIt-Anchor" href="#调试"></a> 调试</h2>
+<p><a href="https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html</a></p>
+<h1 id="打包到各个平台"><a class="markdownIt-Anchor" href="#打包到各个平台"></a> 打包到各个平台</h1>
+<p><a href="https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps" target="_blank" rel="noopener">https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps</a></p>
+<h2 id="mac下打包"><a class="markdownIt-Anchor" href="#mac下打包"></a> mac下打包</h2>
+<ol>
+<li>拷贝下载的nwjs-sdk-v0.22.1-osx-x64.zip中的nwjs.app文件到项目的根目录的同级目录</li>
+<li>修改nwjs.app目录名称为你想要的名称，如：MyNW.app</li>
+<li>在项目根目录执行如下命令：zip -r …/MyNW.app/Contents/Resources/app.nw *,将当前目录下所有文件打包到MyNW.app中</li>
+<li>open MyNW.app可以打开项目</li>
+<li>制作成dmg文件</li>
+</ol>
+<ul>
+<li>
+<ul>
+<li>在应用程序-&gt;实用工具下打开磁盘工具</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>新建一个磁盘映像，放在桌面上(可随意)，名称设置为temp.dmg(可随意)，存储为mytemp</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>拷贝4中的文件到mytemp中</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>执行：ln -s /Applications /Volumes/temp.dmg/Applications</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>成功</li>
+</ol>
+<p>问题：4中制作的文件太大</p>
+<h2 id="代码加密保护"><a class="markdownIt-Anchor" href="#代码加密保护"></a> 代码加密保护</h2>
+<blockquote>
+<p>有些情况下，代码还是不能直接暴露给用户的；我们可以使用V8 Snapshot 的方式来达到代码加密保护的目的</p>
+</blockquote>
+<p>具体的方式是:</p>
+<ol>
+<li>使用 /nwjs.exe 来运行 nwjc source.js core.bin命令</li>
+<li>在index.html里使用require(‘nw.gui’).Window.get().evalNWBin(null, ‘./app/v0.0.1/core.bin’);(注意这里的路径，是相对于nw.exe的位置)将代码引入到项目中；</li>
+<li>加密的代码里不要使用 let、const这些关键字，可能因为这个始终编译不通过</li>
+</ol>
+<h2 id="自动更新"><a class="markdownIt-Anchor" href="#自动更新"></a> 自动更新</h2>
+<h3 id="项目代码需要更新"><a class="markdownIt-Anchor" href="#项目代码需要更新"></a> 项目代码需要更新</h3>
+<p>前面介绍项目接口就提到 /app/v0.0.1/ 就是放置V0.0.1的所有代码的位置；<br>
+那么如果要更新到V0.0.2，那我们新建一个文件夹 /app/V0.0.2,然后把V0.0.2的代码都放到这个文件下，然后把/package.json替换成新版本的package.json；这样重启客户端之后，然会读取v0.0.2的代码了。具体的更新代码就不写了，可以把新版本的代码打包成zip包，然后客户端下载好，解压就行。</p>
+<h3 id="nwjs本身需要更新"><a class="markdownIt-Anchor" href="#nwjs本身需要更新"></a> nw.js本身需要更新</h3>
+<p>通常情况下，不会遇到需要更新nw.js 本身的情况，因为当选定一个版本的NW.js后，就认定它了，除非遇到了什么无法解决的BUG</p>
+<h2 id="系列教程"><a class="markdownIt-Anchor" href="#系列教程"></a> 系列教程</h2>
+<p><a href="https://blog.csdn.net/zeping891103/column/info/19257" target="_blank" rel="noopener">https://blog.csdn.net/zeping891103/column/info/19257</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Ant-Design-of-React-dva入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-Ant-Design-of-React-dva入门/" itemprop="url">Ant Design of React+dva入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>是 Ant Design 的 React 实现，开发和服务于企业级后台产品</p>
+<h1 id="安装使用antd"><a class="markdownIt-Anchor" href="#安装使用antd"></a> 安装使用Antd</h1>
+<ol>
+<li>npm install antd --save</li>
+<li>浏览器引入</li>
+</ol>
+<ul>
+<li>在浏览器中使用 script 和 link 标签直接引入文件，并使用全局变量 antd</li>
+<li>在 npm 发布包内的 antd/dist 目录下提供了 antd.js antd.css 以及 antd.min.js antd.min.css</li>
+<li>也可以通过 CDNJS <a href="https://cdnjs.com/libraries/antd" target="_blank" rel="noopener">https://cdnjs.com/libraries/antd</a> 或 UNPKG <a href="https://unpkg.com/antd@3.0.2/dist/" target="_blank" rel="noopener">https://unpkg.com/antd@3.0.2/dist/</a> 进行下载</li>
+<li>强烈不推荐使用已构建文件，这样无法按需加载，而且难以获得底层依赖模块的 bug 快速修复支持</li>
+</ul>
+<h1 id="安装使用dva"><a class="markdownIt-Anchor" href="#安装使用dva"></a> 安装使用dva</h1>
+<p>dva 是一个基于 React 和 Redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install dva-cli -g</span><br><span class="line">dva -v</span><br><span class="line">dva new dva-quickstart</span><br><span class="line">cd dva-quickstart</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<p>在浏览器里打开 <a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a> ，你会看到 dva 的欢迎界面</p>
+<h1 id="dva项目中使用antd"><a class="markdownIt-Anchor" href="#dva项目中使用antd"></a> dva项目中使用Antd</h1>
+<ol>
+<li>npm install antd babel-plugin-import --save</li>
+<li>编辑 .roadhogrc，使 babel-plugin-import 插件生效</li>
+</ol>
+<h1 id="按需加载antd"><a class="markdownIt-Anchor" href="#按需加载antd"></a> 按需加载Antd</h1>
+<p>使用 babel-plugin-import</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// .babelrc or babel-loader option</span><br><span class="line">&#123;</span><br><span class="line">  &quot;plugins&quot;: [</span><br><span class="line">    [&quot;import&quot;, &#123; &quot;libraryName&quot;: &quot;antd&quot;, &quot;libraryDirectory&quot;: &quot;es&quot;, &quot;style&quot;: &quot;css&quot; &#125;] // `style: true` 会加载 less 文件</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后只需从 antd 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。</p>
+<p>// babel-plugin-import 会帮助你加载 JS 和 CSS<br>
+import { DatePicker } from ‘antd’;</p>
+<h1 id="在-create-react-app-中使用"><a class="markdownIt-Anchor" href="#在-create-react-app-中使用"></a> 在 create-react-app 中使用</h1>
+<blockquote>
+<p>create-react-app 是业界最优秀的 React 应用开发工具之一</p>
+</blockquote>
+<blockquote>
+<p>使用create-react-app只是创建出了react应用的基本架构，类似于dva-cli创建的架构，antd还是需要自己添加</p>
+</blockquote>
+<h1 id="dva的出现背景"><a class="markdownIt-Anchor" href="#dva的出现背景"></a> dva的出现背景</h1>
+<p><a href="https://github.com/sorrycc/blog/issues/1" target="_blank" rel="noopener">https://github.com/sorrycc/blog/issues/1</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-ECMAScript规范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1173,194 +1601,6 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Ant-Design-of-React-dva入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-Ant-Design-of-React-dva入门/" itemprop="url">Ant Design of React+dva入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>是 Ant Design 的 React 实现，开发和服务于企业级后台产品</p>
-<h1 id="安装使用antd"><a class="markdownIt-Anchor" href="#安装使用antd"></a> 安装使用Antd</h1>
-<ol>
-<li>npm install antd --save</li>
-<li>浏览器引入</li>
-</ol>
-<ul>
-<li>在浏览器中使用 script 和 link 标签直接引入文件，并使用全局变量 antd</li>
-<li>在 npm 发布包内的 antd/dist 目录下提供了 antd.js antd.css 以及 antd.min.js antd.min.css</li>
-<li>也可以通过 CDNJS <a href="https://cdnjs.com/libraries/antd" target="_blank" rel="noopener">https://cdnjs.com/libraries/antd</a> 或 UNPKG <a href="https://unpkg.com/antd@3.0.2/dist/" target="_blank" rel="noopener">https://unpkg.com/antd@3.0.2/dist/</a> 进行下载</li>
-<li>强烈不推荐使用已构建文件，这样无法按需加载，而且难以获得底层依赖模块的 bug 快速修复支持</li>
-</ul>
-<h1 id="安装使用dva"><a class="markdownIt-Anchor" href="#安装使用dva"></a> 安装使用dva</h1>
-<p>dva 是一个基于 React 和 Redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install dva-cli -g</span><br><span class="line">dva -v</span><br><span class="line">dva new dva-quickstart</span><br><span class="line">cd dva-quickstart</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
-<p>在浏览器里打开 <a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a> ，你会看到 dva 的欢迎界面</p>
-<h1 id="dva项目中使用antd"><a class="markdownIt-Anchor" href="#dva项目中使用antd"></a> dva项目中使用Antd</h1>
-<ol>
-<li>npm install antd babel-plugin-import --save</li>
-<li>编辑 .roadhogrc，使 babel-plugin-import 插件生效</li>
-</ol>
-<h1 id="按需加载antd"><a class="markdownIt-Anchor" href="#按需加载antd"></a> 按需加载Antd</h1>
-<p>使用 babel-plugin-import</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// .babelrc or babel-loader option</span><br><span class="line">&#123;</span><br><span class="line">  &quot;plugins&quot;: [</span><br><span class="line">    [&quot;import&quot;, &#123; &quot;libraryName&quot;: &quot;antd&quot;, &quot;libraryDirectory&quot;: &quot;es&quot;, &quot;style&quot;: &quot;css&quot; &#125;] // `style: true` 会加载 less 文件</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后只需从 antd 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。</p>
-<p>// babel-plugin-import 会帮助你加载 JS 和 CSS<br>
-import { DatePicker } from ‘antd’;</p>
-<h1 id="在-create-react-app-中使用"><a class="markdownIt-Anchor" href="#在-create-react-app-中使用"></a> 在 create-react-app 中使用</h1>
-<blockquote>
-<p>create-react-app 是业界最优秀的 React 应用开发工具之一</p>
-</blockquote>
-<blockquote>
-<p>使用create-react-app只是创建出了react应用的基本架构，类似于dva-cli创建的架构，antd还是需要自己添加</p>
-</blockquote>
-<h1 id="dva的出现背景"><a class="markdownIt-Anchor" href="#dva的出现背景"></a> dva的出现背景</h1>
-<p><a href="https://github.com/sorrycc/blog/issues/1" target="_blank" rel="noopener">https://github.com/sorrycc/blog/issues/1</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Antd-PRO入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1479,6 +1719,282 @@ import { DatePicker } from ‘antd’;</p>
 <li>UserLayout：抽离出用于登陆注册页面的通用布局</li>
 </ul>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Angular入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-Angular入门/" itemprop="url">Angular入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://angular.io/</span><br><span class="line">https://www.angular.cn/</span><br><span class="line">http://www.angularjs.cn/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. Angular和JavaScript不互通（函数、变量、事件都不互通）</span><br><span class="line">2. Angular的开发模式和传统开发模式完全不通：只需盯住数据，数据是核心</span><br></pre></td></tr></table></figure>
+<h1 id="简介及入门"><a class="markdownIt-Anchor" href="#简介及入门"></a> 简介及入门</h1>
+<p>Angular2是面向未来的科技，要求浏览器支持ES6+</p>
+<p>Angular 应用是由组件组成的。 组件由 HTML 模板和组件类组成，组件类控制视图</p>
+<p>每个组件都以@Component装饰器函数开始，它接受一个元数据对象参数。该元素对象描述了 HTML 模板和组件类是如何一起工作的</p>
+<p>selector属性为 Angular 指定了在index.html中的自定义<my-app>标签里显示该组件</my-app></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  selector: &apos;my-app&apos;,</span><br><span class="line">  template: `&lt;h1&gt;Hello &#123;&#123;name&#125;&#125;&lt;/h1&gt;`</span><br><span class="line">&#125;)</span><br><span class="line">export class AppComponent &#123; name = &apos;Angular&apos;; &#125;</span><br><span class="line"></span><br><span class="line">注️：template后面不是单引号</span><br></pre></td></tr></table></figure>
+<h2 id="网页版使用示例"><a class="markdownIt-Anchor" href="#网页版使用示例"></a> 网页版使用示例</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;网页版使用示例&lt;/title&gt;</span><br><span class="line">    &lt;script src=&quot;angular.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div ng-app=&quot;&quot; ng-init=&quot;str=123&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; ng-model=&quot;str&quot;/&gt;</span><br><span class="line">        &lt;div ng-bing=&quot;str&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li>ng-app:表示此区域内由angular控制</li>
+</ul>
+<h1 id="angular-cli"><a class="markdownIt-Anchor" href="#angular-cli"></a> Angular CLI</h1>
+<p><a href="http://www.itnose.net/detail/6694827.html" target="_blank" rel="noopener">http://www.itnose.net/detail/6694827.html</a></p>
+<p>Angular CLI是一个命令行界面工具，它可以创建项目、添加文件以及执行一大堆开发任务，比如测试、打包和发布</p>
+<ol start="0">
+<li>因为angular-cli是用typescript写的，所以要先装这两个:npm install -g typescript typings</li>
+<li>全局安装 :npm install -g @angular/cli</li>
+<li>创建新项目:ng new my-app</li>
+<li>启动开发服务器:cd my-app;ng serve --open</li>
+</ol>
+<ul>
+<li>问题1：/usr/local/lib/node_modules/angular-cli/node_modules/_@ngtools_json-schema@1.0.9@@ngtools/json-schema/src/schema-class-factory.js:34</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决：node版本太低</span><br></pre></td></tr></table></figure>
+<ul>
+<li>问题2:Installing packages for tooling via npm.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">太耗时，强制停止后，通过cnpm下载依赖</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>使用说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组件Component</td>
+<td>ng generate component my-new-component</td>
+</tr>
+<tr>
+<td>指令Directive</td>
+<td>ng generate directive my-new-directive</td>
+</tr>
+<tr>
+<td>服务Service</td>
+<td>ng generate pipe my-new-service</td>
+</tr>
+<tr>
+<td>管道Pipe</td>
+<td>ng generate pipe my-new-pipe</td>
+</tr>
+<tr>
+<td>类Class</td>
+<td>ng generate class my-new-class</td>
+</tr>
+<tr>
+<td>接口Interface</td>
+<td>ng generate interface my-new-interface</td>
+</tr>
+<tr>
+<td>枚举对象Enum</td>
+<td>ng generate enum my-new-enum</td>
+</tr>
+<tr>
+<td>模块Module</td>
+<td>ng generate module my-module</td>
+</tr>
+</tbody>
+</table>
+<h1 id="架构"><a class="markdownIt-Anchor" href="#架构"></a> 架构</h1>
+<p>Angular 应用使用方法：用 Angular 扩展语法编写 HTML 模板， 用组件类管理这些模板，用服务添加应用逻辑， 用模块打包发布组件与服务</p>
+<p>通过引导根模块来启动该应用。 Angular 在浏览器中接管、展现应用的内容，并根据我们提供的操作指令响应用户的交互</p>
+<p><img src="http://note.youdao.com/yws/api/personal/file/WEBbb5e44b6400e1044b8304cd17df748bc?method=download&amp;shareKey=1fb157c2334799e7329bcbb28240114b" alt="image"></p>
+<h2 id="模块-module"><a class="markdownIt-Anchor" href="#模块-module"></a> 模块 (module)</h2>
+<h3 id="模块简介"><a class="markdownIt-Anchor" href="#模块简介"></a> 模块简介</h3>
+<p>Angular 应用是模块化的，并且 Angular 有自己的模块系统，它被称为 Angular 模块或 NgModules</p>
+<p>每个 Angular 应用至少有一个模块（根模块），习惯上命名为AppModule。</p>
+<p>Angular 模块都是一个带有@NgModule装饰器的类。</p>
+<p>NgModule是一个装饰器函数，它接收一个用来描述模块属性的元数据对象。其中最重要的属性是：</p>
+<ul>
+<li>declarations - 声明本模块中拥有的视图类。Angular 有三种视图类：组件、指令和管道。</li>
+<li>exports - declarations 的子集，可用于其它模块的组件模板。</li>
+<li>imports - 本模块声明的组件模板需要的类所在的其它模块。</li>
+<li>providers - 服务的创建者，并加入到全局服务列表中，可用于应用任何部分。</li>
+<li>bootstrap - 指定应用的主视图（称为根组件），它是所有其它视图的宿主。只有根模块才能设置bootstrap属性。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// src/app/app.module.ts</span><br><span class="line">import &#123; NgModule &#125;      from &apos;@angular/core&apos;;</span><br><span class="line">import &#123; BrowserModule &#125; from &apos;@angular/platform-browser&apos;;</span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  imports:      [ BrowserModule ],</span><br><span class="line">  providers:    [ Logger ],</span><br><span class="line">  declarations: [ AppComponent ],</span><br><span class="line">  exports:      [ AppComponent ],</span><br><span class="line">  bootstrap:    [ AppComponent ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="angular-模块库"><a class="markdownIt-Anchor" href="#angular-模块库"></a> Angular 模块库</h3>
+<p>Angular 提供了一组 JavaScript 模块。可以把它们看做库模块。每个 Angular 库的名字都带有@angular前缀</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</span><br></pre></td></tr></table></figure>
+<h2 id="组件-component"><a class="markdownIt-Anchor" href="#组件-component"></a> 组件 (component)</h2>
+<p>组件负责控制屏幕上的一小块区域，我们称之为视图; 组件通过一些由属性和方法组成的 API 与视图交互</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">export class HeroListComponent implements OnInit &#123;</span><br><span class="line">  heroes: Hero[];</span><br><span class="line">  selectedHero: Hero;</span><br><span class="line"></span><br><span class="line">  constructor(private service: HeroService) &#123; &#125;</span><br><span class="line"></span><br><span class="line">  ngOnInit() &#123;</span><br><span class="line">    this.heroes = this.service.getHeroes();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  selectHero(hero: Hero) &#123; this.selectedHero = hero; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="模板-template"><a class="markdownIt-Anchor" href="#模板-template"></a> 模板 (template)</h2>
+<p>通过组件的自带的模板来定义组件视图。模板以 HTML 形式存在，告诉 Angular 如何渲染组件</p>
+<h2 id="元数据-metadata"><a class="markdownIt-Anchor" href="#元数据-metadata"></a> 元数据 (metadata)</h2>
+<p>元数据告诉 Angular 如何处理一个类;要告诉 Angular HeroListComponent是个组件，只要把元数据附加到这个类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Component(&#123;</span><br><span class="line">  selector:    &apos;hero-list&apos;,</span><br><span class="line">  templateUrl: &apos;./hero-list.component.html&apos;,</span><br><span class="line">  providers:  [ HeroService ]</span><br><span class="line">&#125;)</span><br><span class="line">export class HeroListComponent implements OnInit &#123;</span><br><span class="line">/* . . . */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数据绑定-data-binding"><a class="markdownIt-Anchor" href="#数据绑定-data-binding"></a> 数据绑定 (data binding)</h2>
+<p>数据绑定的语法有四种形式：<br>
+<img src="http://note.youdao.com/yws/api/personal/file/WEBa57b03e91f6bd4ed38e8c6b1e8caa70a?method=download&amp;shareKey=b3b585887d1a4e10af48b2acbd8367f2" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;&#123;&#123;hero.name&#125;&#125;&lt;/li&gt;</span><br><span class="line">&lt;hero-detail [hero]=&quot;selectedHero&quot;&gt;&lt;/hero-detail&gt;</span><br><span class="line">&lt;li (click)=&quot;selectHero(hero)&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;input [(ngModel)]=&quot;hero.name&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>每种形式都有一个方向 —— 绑定到 DOM 、绑定自 DOM 以及双向绑定。</p>
+<h2 id="指令-directive"><a class="markdownIt-Anchor" href="#指令-directive"></a> 指令 (directive)</h2>
+<p>Angular 模板是动态的。当 Angular 渲染它们时，它会根据指令提供的操作对 DOM 进行转换</p>
+<h2 id="服务-service"><a class="markdownIt-Anchor" href="#服务-service"></a> 服务 (service)</h2>
+<p>组件是最大的服务消费者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//src/app/logger.service.ts</span><br><span class="line">export class Logger &#123;</span><br><span class="line">  log(msg: any)   &#123; console.log(msg); &#125;</span><br><span class="line">  error(msg: any) &#123; console.error(msg); &#125;</span><br><span class="line">  warn(msg: any)  &#123; console.warn(msg); &#125;</span><br><span class="line">&#125;</span><br><span class="line">//src/app/hero.service.ts</span><br><span class="line">export class HeroService &#123;</span><br><span class="line">  private heroes: Hero[] = [];</span><br><span class="line"></span><br><span class="line">  constructor(</span><br><span class="line">    private backend: BackendService,</span><br><span class="line">    private logger: Logger) &#123; &#125;</span><br><span class="line"></span><br><span class="line">  getHeroes() &#123;</span><br><span class="line">    this.backend.getAll(Hero).then( (heroes: Hero[]) =&gt; &#123;</span><br><span class="line">      this.logger.log(`Fetched $&#123;heroes.length&#125; heroes.`);</span><br><span class="line">      this.heroes.push(...heroes); // fill cache</span><br><span class="line">    &#125;);</span><br><span class="line">    return this.heroes;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="依赖注入-dependency-injection"><a class="markdownIt-Anchor" href="#依赖注入-dependency-injection"></a> 依赖注入 (dependency injection)</h2>
+<p>Angular 使用依赖注入来提供新组件以及组件所需的服务</p>
+<ol>
+<li>当 Angular 创建组件时，会首先为组件所需的服务请求一个注入器 (injector)。</li>
+<li>注入器维护了一个服务实例的容器，存放着以前创建的实例。 如果所请求的服务实例不在容器中，注入器就会创建一个服务实例，并且添加到容器中，然后把这个服务返回给 Angular。</li>
+<li>当所有请求的服务都被解析完并返回时，Angular 会以这些服务为参数去调用组件的构造函数。</li>
+</ol>
+<p>这就是依赖注入</p>
+<p><img src="http://note.youdao.com/yws/api/personal/file/WEB74722e9c03ab05fe303782eb6e27172b?method=download&amp;shareKey=d698cb66bf2c3035e7b1ada6c2e255e0" alt="image"></p>
+<ul>
+<li>函数：参数由调用方决定</li>
+<li>依赖注入：参数由定于方决定</li>
+</ul>
+<h1 id="模版"><a class="markdownIt-Anchor" href="#模版"></a> 模版</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* &#123;&#123;msg&#125;&#125;  </span><br><span class="line"></span><br><span class="line">*  $scope  Controller</span><br><span class="line"></span><br><span class="line">* filter    &#123;&#123;123|currency&#125;&#125; &#123;&#123;12321213|date:&quot;yyyy-MM-dd&quot;&#125;&#125;</span><br><span class="line"></span><br><span class="line">* ng-clack</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1826,447 +2342,6 @@ LESS 中单行注释 (// 单行注释 ) 是不能显示在编译后的 CSS 中�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-NW-js入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-NW-js入门/" itemprop="url">NW.js入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>NW.js （原名 node-webkit）是一个基于 Chromium 和 node.js 的应用运行时，通过它可以用 HTML 和 JavaScript 编写原生应用程序。它还允许您从 DOM 调用 Node.js 的模块 ，实现了一个用所有 Web 技术来写原生应用程序的新的开发模式。</p>
-<ul>
-<li>官网：<a href="https://nwjs.io/" target="_blank" rel="noopener">https://nwjs.io/</a></li>
-<li>中文文档：<a href="https://www.gitbook.com/book/wizardforcel/nwjs-doc/details" target="_blank" rel="noopener">https://www.gitbook.com/book/wizardforcel/nwjs-doc/details</a></li>
-</ul>
-<h1 id="功能特性"><a class="markdownIt-Anchor" href="#功能特性"></a> 功能特性</h1>
-<ul>
-<li>用现代 HTML5,CSS3,JS 和 WebGL 来编写应用程序</li>
-<li>完全支持 Node.js APIs 和所有其 第三方模块</li>
-<li>良好的性能:Node 和 WebKit</li>
-<li>运行在相同的线程:函数调用是更简洁;对象在同一堆可以互相引用</li>
-<li>容易打包和分发应用程序</li>
-<li>支持 Linux、Mac OS X 和 Windows</li>
-</ul>
-<h1 id="窗口外观常用属性"><a class="markdownIt-Anchor" href="#窗口外观常用属性"></a> 窗口外观常用属性</h1>
-<p>在package.json文件中设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">title : 字符串，设置默认 title。</span><br><span class="line">width/height : 主窗口的大小。</span><br><span class="line">toolbar : bool 值。是否显示导航栏。</span><br><span class="line">icon : 窗口的 icon。</span><br><span class="line">position :字符串。窗口打开时的位置，可以设置为“null”、“center”或者“mouse”。</span><br><span class="line">min_width/min_height : 窗口的最小值。</span><br><span class="line">max_width/max_height : 窗口显示的最大值。</span><br><span class="line">resizable : bool 值。是否允许调整窗口大小。</span><br><span class="line">always-on-top : bool 值。窗口置顶。</span><br><span class="line">fullscreen : bool 值。是否全屏显示。</span><br><span class="line">show_in_taskbar : 是否在任务栏显示图标。</span><br><span class="line">frame : bool 值。如果设置为 false，程序将无边框显示。</span><br></pre></td></tr></table></figure>
-<h1 id="webstorm项目创建及调试"><a class="markdownIt-Anchor" href="#webstorm项目创建及调试"></a> webstorm项目创建及调试</h1>
-<h2 id="下载三个不同-os-平台的-nwjs"><a class="markdownIt-Anchor" href="#下载三个不同-os-平台的-nwjs"></a> 下载三个不同 OS 平台的 NW.js</h2>
-<h2 id="创建项目并运行"><a class="markdownIt-Anchor" href="#创建项目并运行"></a> 创建项目并运行</h2>
-<ol>
-<li>创建空项目</li>
-<li>创建package.json,编辑起内容，最简为:</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;helloworld&quot;, </span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.html&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在webstorm 中添加一个nw.js：run – edit configurations – + nw.js</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NW.js app : 可以是当前项目目录，但要包含package.json文件. 或者是一个.nw的文件</span><br><span class="line">NW.js interpreter 指定可执行的 nw(官网下的包中的) (mac下是nwjs),如：/MyDeveloper/nwjs-v0.22.1-osx-x64/nwjs.app</span><br><span class="line">working direction ： 项目目录</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>运行查看效果</li>
-</ol>
-<h2 id="调试"><a class="markdownIt-Anchor" href="#调试"></a> 调试</h2>
-<p><a href="https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html</a></p>
-<h1 id="打包到各个平台"><a class="markdownIt-Anchor" href="#打包到各个平台"></a> 打包到各个平台</h1>
-<p><a href="https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps" target="_blank" rel="noopener">https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps</a></p>
-<h2 id="mac下打包"><a class="markdownIt-Anchor" href="#mac下打包"></a> mac下打包</h2>
-<ol>
-<li>拷贝下载的nwjs-sdk-v0.22.1-osx-x64.zip中的nwjs.app文件到项目的根目录的同级目录</li>
-<li>修改nwjs.app目录名称为你想要的名称，如：MyNW.app</li>
-<li>在项目根目录执行如下命令：zip -r …/MyNW.app/Contents/Resources/app.nw *,将当前目录下所有文件打包到MyNW.app中</li>
-<li>open MyNW.app可以打开项目</li>
-<li>制作成dmg文件</li>
-</ol>
-<ul>
-<li>
-<ul>
-<li>在应用程序-&gt;实用工具下打开磁盘工具</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>新建一个磁盘映像，放在桌面上(可随意)，名称设置为temp.dmg(可随意)，存储为mytemp</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>拷贝4中的文件到mytemp中</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>执行：ln -s /Applications /Volumes/temp.dmg/Applications</li>
-</ul>
-</li>
-</ul>
-<ol start="6">
-<li>成功</li>
-</ol>
-<p>问题：4中制作的文件太大</p>
-<h2 id="代码加密保护"><a class="markdownIt-Anchor" href="#代码加密保护"></a> 代码加密保护</h2>
-<blockquote>
-<p>有些情况下，代码还是不能直接暴露给用户的；我们可以使用V8 Snapshot 的方式来达到代码加密保护的目的</p>
-</blockquote>
-<p>具体的方式是:</p>
-<ol>
-<li>使用 /nwjs.exe 来运行 nwjc source.js core.bin命令</li>
-<li>在index.html里使用require(‘nw.gui’).Window.get().evalNWBin(null, ‘./app/v0.0.1/core.bin’);(注意这里的路径，是相对于nw.exe的位置)将代码引入到项目中；</li>
-<li>加密的代码里不要使用 let、const这些关键字，可能因为这个始终编译不通过</li>
-</ol>
-<h2 id="自动更新"><a class="markdownIt-Anchor" href="#自动更新"></a> 自动更新</h2>
-<h3 id="项目代码需要更新"><a class="markdownIt-Anchor" href="#项目代码需要更新"></a> 项目代码需要更新</h3>
-<p>前面介绍项目接口就提到 /app/v0.0.1/ 就是放置V0.0.1的所有代码的位置；<br>
-那么如果要更新到V0.0.2，那我们新建一个文件夹 /app/V0.0.2,然后把V0.0.2的代码都放到这个文件下，然后把/package.json替换成新版本的package.json；这样重启客户端之后，然会读取v0.0.2的代码了。具体的更新代码就不写了，可以把新版本的代码打包成zip包，然后客户端下载好，解压就行。</p>
-<h3 id="nwjs本身需要更新"><a class="markdownIt-Anchor" href="#nwjs本身需要更新"></a> nw.js本身需要更新</h3>
-<p>通常情况下，不会遇到需要更新nw.js 本身的情况，因为当选定一个版本的NW.js后，就认定它了，除非遇到了什么无法解决的BUG</p>
-<h2 id="系列教程"><a class="markdownIt-Anchor" href="#系列教程"></a> 系列教程</h2>
-<p><a href="https://blog.csdn.net/zeping891103/column/info/19257" target="_blank" rel="noopener">https://blog.csdn.net/zeping891103/column/info/19257</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-TypeScript入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-TypeScript入门/" itemprop="url">TypeScript入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.tslang.cn/</span><br><span class="line">http://www.typescriptlang.org/</span><br></pre></td></tr></table></figure>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>微软出品，2012</p>
-<ol>
-<li>编译型语言</li>
-<li>强类型语言</li>
-<li>真面向对象</li>
-<li>AMD方式</li>
-</ol>
-<p>cnpm install -g typescript</p>
-<p>扩展名：.ts／.tsx/.d.ts<br>
-编译： tsc 1.ts <a href="//1.js">//1.js</a></p>
-<p>number\string\boolean\symbol\void\null\undefined\enum\any</p>
-<p>any:变体变量</p>
-<p>var a:any;<br>
-a=12;<br>
-a=“abc”;</p>
-<p>var a:any; 等同于 var a;//类型推测（隐式类型声明）</p>
-<p>冲突检测：编译器会自动排除掉无用的选项</p>
-<p>联合类型：<br>
-var a:number|string;<br>
-a=12;<br>
-a=‘abc’;<br>
-a=false;//报错</p>
-<p>数组也有类型</p>
-<p>外部声明declare，window等都内部声明过了<br>
-declare var 名字；</p>
-<p>function sum(a:number,b:number):number{<br>
-return  a+b;<br>
-}</p>
-<p>function ajax(url:string,success:(res:string,code:number)=&gt;void,error:(code:number)=&gt;void){</p>
-<p>}</p>
-<p>对象类型：ObjectType<br>
-var a:{x:number,y:number}<br>
-可选声明：var a:{x:number,y:number,z?:number},调用或赋值的时候，z可有可无</p>
-<p>接口：约定、限制<br>
-interface Point{<br>
-x:number,<br>
-y:number,<br>
-z?:number<br>
-}</p>
-<p>泛型：</p>
-<p>class  Calc<t>{<br>
-a:T;<br>
-b:T;<br>
-}</t></p>
-<p>var obj=new Calc<number>();<br>
-obj.a=12;<br>
-obj.b=‘123’;//报错</number></p>
-<p>tsconfig.json</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-ejs模版引擎基本使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2500,7 +2575,7 @@ obj.b=‘123’;//报错</number></p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">99</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2522,7 +2597,7 @@ obj.b=‘123’;//报错</number></p>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2616,7 +2691,7 @@ obj.b=‘123’;//报错</number></p>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共97.8k字</span>
+  <span class="post-count">博客全站共102.4k字</span>
 </div>
 
 

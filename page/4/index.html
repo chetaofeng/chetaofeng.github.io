@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-05-node安装/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-XShell使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-05-node安装/" itemprop="url">node安装配置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Linux-XShell使用/" itemprop="url">XShell使用</a></h2>
         
 
         <div class="post-meta">
@@ -378,8 +378,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -417,261 +417,28 @@
       
         
           
-            <h1 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h1>
-<p>nodejs：在项目开发时的所需要的代码库<br>
-nvm：nodejs 版本管理工具。<br>
-npm：nodejs包管理工具，在安装的 nodejs 的时候，npm也会跟着一起安装，它是包管理工具，管理nodejs中的第三方插件<br>
-yarn：Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ， 是为了弥补 npm 的一些缺陷而出现的<br>
-即：一个nvm可以管理多个node版本和npm版本</p>
-<h1 id="nvm安装"><a class="markdownIt-Anchor" href="#nvm安装"></a> nvm安装</h1>
-<p>官网： <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a><br>
-安装：curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh</a> | bash<br>
-安装完成后的提示界面会有类似一下的提示信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br></pre></td></tr></table></figure>
-<p>在~/.bash_profile中添加以上内容(如果没有这个文件则创建)后保存；通过source ~/.bash_profile使设置生效。<br>
-安装完成后关闭终端，重新打开终端输入 nvm 验证一下是否安装成功</p>
-<p>注：curl看系统是否已安装，如果没有安装则：sudo apt-get install curl</p>
-<h1 id="nvm常用命令"><a class="markdownIt-Anchor" href="#nvm常用命令"></a> nvm常用命令</h1>
-<p>nvm install stable ## 安装最新稳定版 node，当前是node v9.5.0 (npm v5.6.0)<br>
-nvm install <version> ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4<br>
-nvm uninstall <version> ## 删除已安装的指定版本，语法与install类似<br>
-nvm use <version> ## 切换使用指定的版本node<br>
-nvm ls ## 列出所有安装的版本<br>
-nvm ls-remote ## 列出所有远程服务器的版本（官方node version list）<br>
-nvm current ## 显示当前的版本<br>
-nvm alias <name> <version> ## 给不同的版本号添加别名<br>
-nvm unalias <name> ## 删除已定义的别名<br>
-nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包</version></name></version></name></version></version></version></p>
-<h1 id="nvm安装node"><a class="markdownIt-Anchor" href="#nvm安装node"></a> nvm安装node</h1>
-<p>nvm install stable</p>
-<h1 id="yarn"><a class="markdownIt-Anchor" href="#yarn"></a> yarn</h1>
-<p>快速、可靠、安全的依赖管理工具</p>
-<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
-<p>brew install yarn<br>
-brew install yarn --without-node</p>
-<h1 id="yarn和npm命令对比"><a class="markdownIt-Anchor" href="#yarn和npm命令对比"></a> Yarn和npm命令对比</h1>
-<table>
-<thead>
-<tr>
-<th>npm</th>
-<th>yarn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>npm install</td>
-<td>yarn install</td>
-</tr>
-<tr>
-<td>npm install react --save</td>
-<td>yarn add react</td>
-</tr>
-<tr>
-<td>npm uninstall react --save</td>
-<td>yarn remove react</td>
-</tr>
-<tr>
-<td>npm install react --save-dev</td>
-<td>yarn add react --dev</td>
-</tr>
-<tr>
-<td>npm update --save</td>
-<td>yarn upgrade</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/环境搭建-06-Java安装/" itemprop="url">JDK安装配置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!-- oracle官网账号：  chetaofeng@163.com / Chetaofeng123./ --> 
-<h1 id="jdk下载"><a class="markdownIt-Anchor" href="#jdk下载"></a> JDK下载</h1>
-<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>
-<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
-<h1 id="环境变量设置说明"><a class="markdownIt-Anchor" href="#环境变量设置说明"></a> 环境变量设置说明</h1>
-<p>（jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置）</p>
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<blockquote>
+<p>Xshell是一款服务器终端模拟软件，用户可以使用Xshell软件在Windows、Mac OS电脑上访问不同系统的服务器主机，让你可以方便对其进行控制管理。</p>
+</blockquote>
+<blockquote>
+<p>创新的设计和优良的体验，让用户以最高效率对服务器进行管理</p>
+</blockquote>
+<h1 id="功能特色"><a class="markdownIt-Anchor" href="#功能特色"></a> 功能特色</h1>
 <ul>
-<li>CLASS_PATH 保证class文件能够在任意目录下运行</li>
-<li>PATH 保证javac可以在任意目录下运行</li>
+<li>可以保存多个vps登陆信息，免去每次输入的烦恼</li>
+<li>设置命令快捷按钮</li>
+<li>通过代理登陆vps</li>
+<li>鼠标右键粘贴可将本地粘贴板内容复制到vps</li>
 </ul>
-<h1 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h1>
-<p>环境变量配置文件执行的顺序：<br>
-/etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc<br>
-/etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。</p>
-<p>下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过，</p>
-<p>配置环境变量的方式：</p>
+<h1 id="xshell-注册说明"><a class="markdownIt-Anchor" href="#xshell-注册说明"></a> Xshell 注册说明</h1>
 <ol>
-<li>找到JDK安装目录，如：</li>
+<li>公司名字随便填</li>
+<li>注册码 690313-111999-999313</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>编辑文件~/.bash_profile 文件</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line"></span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>使配置生效：source .bash_profile</li>
-<li>输入 echo $JAVA_HOME 显示刚才配置的路径</li>
-<li>验证安装</li>
-</ol>
-<h1 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h1>
-<p>安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载</p>
-<ol>
-<li>下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹</li>
-<li>sudo mkdir /usr/java</li>
-<li>sudo cp -r jdk1.8.0_77/ /usr/java/</li>
-<li>配置环境变量,sudo vim /etc/profile,在前面添加</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_77</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>source /etc/profile 使配置立即生效</li>
-<li>检查新安装的jdk:java -version;java;javac</li>
-</ol>
+<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
+<p>安装完成之后键盘输入无反应，解决方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件--属性--终端--编码 改成Unicode(UTF-8)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -729,7 +496,7 @@ brew install yarn --without-node</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-07-CentOS系统初始设置/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-cat和EOF的使用-action用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -748,7 +515,7 @@ brew install yarn --without-node</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" itemprop="url">CentOS安装设置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Linux-cat和EOF的使用-action用法/" itemprop="url">cat和EOF的使用+action用法</a></h2>
         
 
         <div class="post-meta">
@@ -783,8 +550,8 @@ brew install yarn --without-node</p>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -822,183 +589,201 @@ brew install yarn --without-node</p>
       
         
           
-            <p><a href="https://blog.csdn.net/ganeshys2017/article/details/81300246" target="_blank" rel="noopener">https://blog.csdn.net/ganeshys2017/article/details/81300246</a></p>
-<p><a href="http://www.cnblogs.com/linnuo/p/6257204.html" target="_blank" rel="noopener">http://www.cnblogs.com/linnuo/p/6257204.html</a></p>
-<p><a href="https://blog.csdn.net/lwwl12/article/details/78247307" target="_blank" rel="noopener">https://blog.csdn.net/lwwl12/article/details/78247307</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" itemprop="url">Ubuntu系统安装后的设置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="修改默认源为国内源"><a class="markdownIt-Anchor" href="#修改默认源为国内源"></a> 修改默认源为国内源</h1>
-<ol>
-<li>cd /etc/apt</li>
-<li>cp /etc/apt/sources.list /etc/apt/sources.list.bak   备份/etc/apt/sources.list</li>
-<li>在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#添加阿里源</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>更新源</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-<h1 id="系统分辨率设置"><a class="markdownIt-Anchor" href="#系统分辨率设置"></a> 系统分辨率设置</h1>
-<p>安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改：</p>
-<ol>
-<li>首先打开终端Terminal，输入: sudo apt-get install xdiagnose</li>
-<li>sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】</li>
-<li>sudo reboot 重启系统</li>
-<li>再次打开设置发现分辨率可以设置了,如设置为：1280*800</li>
-</ol>
-<h1 id="chrome浏览器安装"><a class="markdownIt-Anchor" href="#chrome浏览器安装"></a> chrome浏览器安装</h1>
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
 <ul>
-<li>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="noopener">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></li>
-<li>sudo dpkg -i google-chrome-stable_current_amd64.deb</li>
+<li>cat：用于显示文本文件内容，全部输出</li>
+<li>EOF： “end of file”，表示文本结束符</li>
 </ul>
+<blockquote>
+<p>EOF“通常与”&lt;&lt;“结合使用，“&lt;&lt;EOF“表示后续的输入作为子命令或子shell的输入，直到遇到”EOF“，再次返回到主调shell，可将其理解为分界符（delimiter）</p>
+</blockquote>
+<blockquote>
+<p>当shell看到”&lt;&lt;“知道其后面输入的分界符，当shell再次看到分界符时，两个分界符中间的部分将作为标准输入,其使用形式如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">交互式程序(命令)&lt;&lt;EOF</span><br><span class="line">command1</span><br><span class="line">command2</span><br><span class="line">...</span><br><span class="line">EOF     //最后的”EOF“必须单独占一行，必须顶行写，前面不能用制表符或者空格</span><br></pre></td></tr></table></figure>
+<h1 id="cateof的使用"><a class="markdownIt-Anchor" href="#cateof的使用"></a> cat+EOF的使用</h1>
+<blockquote>
+<p>第一种形式和第二种形式没有什么本质的区别，第一种形式将内容直接输出到标准输出（屏幕），而第二种形式将标准输出进行重定向，将本应输出到屏幕的内容重定向到文件</p>
+</blockquote>
+<ol>
+<li>cat&lt;&lt;EOF</li>
+<li>cat&lt;<eof>filename或者cat&gt;&gt;filename&lt;&lt;EOF</eof></li>
+</ol>
+<p>==说明==：关于“&gt;”、“&gt;&gt;”、“&lt;”、“&lt;&lt;”等的意思，请自行查看bash的介绍</p>
+<h1 id="eof与-eof的区别"><a class="markdownIt-Anchor" href="#eof与-eof的区别"></a> EOF与-EOF的区别</h1>
+<blockquote>
+<p>如果结束分解符EOF前有制表符或者空格，则EOF不会被当做结束分界符，只会继续被当做stdin来输入。<br>
+而&lt;&lt;-就是为了解决这一问题:</p>
+</blockquote>
+<blockquote>
+<p>如果重定向的操作符是&lt;&lt;-，那么分界符（EOF）所在行的开头部分的制表符（Tab）都将被去除</p>
+</blockquote>
+<hr>
+<h1 id="action-bintrue-的用法"><a class="markdownIt-Anchor" href="#action-bintrue-的用法"></a> action  “” /bin/true 的用法</h1>
+<blockquote>
+<p>action是个bash的函数.true命令啥都不做，只设置退出码为0</p>
+</blockquote>
+<blockquote>
+<p>使用举例：==action “操作成功！” /bin/true==</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Run some action. Log its output.</span><br><span class="line">action() &#123;</span><br><span class="line">  local STRING rc</span><br><span class="line"></span><br><span class="line">  STRING=$1</span><br><span class="line">  echo -n &quot;$STRING &quot;</span><br><span class="line">  shift</span><br><span class="line">  &quot;$@&quot; &amp;&amp; success $&quot;$STRING&quot; || failure $&quot;$STRING&quot;</span><br><span class="line">  rc=$?</span><br><span class="line">  echo</span><br><span class="line">  return $rc</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-linux-磁盘分区工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-linux-磁盘分区工具/" itemprop="url">linux 磁盘分区工具</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>GParted是一款linux下的功能非常强大的分区工具，和windows下的‘分区魔术师’类似，操作和显示上也很相似。GParted可以方便的创建、删除分区，也可以调整分区的大小和移动分区的位置。GParted支持多种linux下常见的分区格式，包括ext2、ext4、fat、hfs、jfs、reiser4、reiserfs、xfs，甚至ntfs。另外官方还提供了 LiveCD 和 LiveUSB 版本的 GParted，方便在没有主系统的情况下对硬盘进行分区！<br>
+GParted可以用于创建、删除、移动分区，调整分区大小，检查、复制分区等操作。可以用于调整分区已安装新操作系统、备份特定分区到另一块硬盘等。 　　<br>
+GParted使用libparted来识别、调整分区表，并有各个文件系统工具来处理分区上的文件系统。这些文件系统工具并不是必须的，但要处理一中文件系统就必须先安装相应的工具。 　　<br>
+GParted使用C++写成，使用gtkmm提供GTK+界面。 　　<br>
+GParted项目还提供了一个包含GParted和全部文件系统工具的Live CD，也可以制作成Live USB或使用其他介质。这个Live CD系统基于Debian GNU/Linux。其它Linux Live CD版本也大多包含GParted，如Knoppix等。</p>
+<p>运行环境：Win2003,WinXP,Win2000,Win9X软件大小：140.3 MB</p>
+<p>下载地址：<br>
+<a href="http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b" target="_blank" rel="noopener">http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b</a></p>
 
           
         
@@ -1056,7 +841,7 @@ brew install yarn --without-node</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-修改Root密码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1075,7 +860,7 @@ brew install yarn --without-node</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/" itemprop="url">JetBrains系列软件安装配置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Linux-修改Root密码/" itemprop="url">CentOS修改Root密码</a></h2>
         
 
         <div class="post-meta">
@@ -1110,8 +895,8 @@ brew install yarn --without-node</p>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -1149,89 +934,216 @@ brew install yarn --without-node</p>
       
         
           
-            <h1 id="软件破解"><a class="markdownIt-Anchor" href="#软件破解"></a> 软件破解</h1>
-<p>软件破解请参考： <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+            <ol>
+<li>进入单用户模式<br>
+开机按ESC，选择内核后按e，后选择Kernerl再按e，在“&lt;rhgb quiet”后输入空格1或s或S或Single回车，按b键重启进入命令行模式</li>
+<li>修改密码：passwd root</li>
+<li>重启：init 5</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/" itemprop="url">使用Vundle管理配置Vim基本插件</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
+<p>官网：<a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim</a></p>
+<blockquote>
+<p>Vundle是基于Git仓库的插件管理软件。Vundle将插件的安装简化为类似yum软件安装的过程</p>
+</blockquote>
+<blockquote>
+<p>其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下</p>
+</blockquote>
+<h1 id="配置说明"><a class="markdownIt-Anchor" href="#配置说明"></a> 配置说明</h1>
 <ol>
-<li>使用前请将“0.0.0.0 <a href="http://account.jetbrains.com" target="_blank" rel="noopener">account.jetbrains.com</a>”添加到hosts文件中</li>
-<li>在网页获取注册码，在注册页面填入注册码即可</li>
+<li>在Github vim-scripts 用户下的repos,只需要写出repos名称</li>
+<li>在Github其他用户下的repos, 需要写出”用户名/repos名”</li>
+<li>不在Github上的插件，需要写出git全路径</li>
 </ol>
-<h1 id="android-studio安装"><a class="markdownIt-Anchor" href="#android-studio安装"></a> Android Studio安装</h1>
-<p>以下为相关软件下载，2／3中软件为采用第三方模拟器的时候需要下载，利用自带模拟器则可跳过下载</p>
+<p>具体步骤：</p>
 <ol>
-<li>下载Android Studio安装软件： <a href="https://developer.android.google.cn/studio/#downloads" target="_blank" rel="noopener">https://developer.android.google.cn/studio/#downloads</a></li>
-<li>下载virtualbox： <a href="https://www.virtualbox.org/wiki/Linux_Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Linux_Downloads</a></li>
-<li>下载Genymotion： <a href="https://www.genymotion.com/download" target="_blank" rel="noopener">https://www.genymotion.com/download</a></li>
+<li>需要有git环境，CentOS7自带，可通过git命令查看</li>
+<li>安装Vundle：git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim.git</a> ~/.vim/bundle/Vundle.vim</li>
+<li>修改.vimrc／vimrc文件，在CentOS7中是vimrc文件，修改前先备份.</li>
 </ol>
-<p>安装前请确保网络状态良好，现在安装Android Studio，所需Android SDK、自带模拟器镜像、gradle等都可以在线直接通过开发工具下载安装</p>
-<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
-<p>直接安装dmg安装包即可</p>
-<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
+<ul>
+<li>将以下内容放置到文件最开头，最小配置如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">set nocompatibl </span><br><span class="line">filetype off</span><br><span class="line"></span><br><span class="line">set rtp+=~/.vim/bundle/Vundle.vim</span><br><span class="line"></span><br><span class="line">call vundle#begin()</span><br><span class="line"></span><br><span class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</span><br><span class="line"></span><br><span class="line">call vundle#end()</span><br><span class="line"></span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
+<p>在Plugin之后，添加自己想要安装的插件<br>
+4. 插件安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在vim中</span><br><span class="line">:PluginInstall</span><br><span class="line"></span><br><span class="line"># 在终端</span><br><span class="line">vim +PluginInstall +qall</span><br></pre></td></tr></table></figure>
+<h1 id="命令说明"><a class="markdownIt-Anchor" href="#命令说明"></a> 命令说明</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:PluginList -列举出列表中(.vimrc中)配置的所有插件</span><br><span class="line">:PluginInstall -安装列表中全部插件</span><br><span class="line">:PluginInstall! -更新列表中全部插件</span><br><span class="line">:PluginSearch foo -查找foo插件</span><br><span class="line">:PluginSearch! foo -刷新foo插件缓存</span><br><span class="line">:PluginClean -清除列表中没有的插件</span><br><span class="line">:PluginClean! -清除列表中没有的插件</span><br></pre></td></tr></table></figure>
+<h1 id="常用插件说明"><a class="markdownIt-Anchor" href="#常用插件说明"></a> 常用插件说明</h1>
+<ul>
+<li>rename.vim：在Vim中为文件重命名。</li>
+<li>vim-coffee-script：在Vim中舒心 的编写、编译Coffeescript。</li>
+<li>vim-mkdir：当你在Vim中新建文件的时候， 自动帮你创建不存在的目录。</li>
+<li>vim-surround：快速的删除、修改和添加 括号、引号、XML标签等等。</li>
+<li>matchit：用%去在两个对应的字符间跳转。</li>
+<li>tComment：快速注释、反注释代码。</li>
+<li>emmet-vim：Emmet的Vim版。</li>
+<li>tabular：快速对齐。</li>
+<li>snipmate.vim：快速的代码片段。</li>
+<li>vim-easymotion：在文件中快速定位。</li>
+<li>vim-instant-markdown：Vim中对</li>
+<li>Markdown文档的实时预览。</li>
+<li>NERDTree:一个用于浏览文件系统的树形资源管理外挂,它可以让你像使用Windows档案总管一样在VIM中浏览文件系统并且打开文件或目录</li>
+<li>MiniBufExplorer:提供多文件同时编辑功能，并在编辑器上方显示文件的标签</li>
+<li>一款状态栏增强插件，可以让你的Vim状态栏非常的美观，同时包括了buffer显示条扩展smart tab line以及集成了一些插件</li>
+<li></li>
+</ul>
+<h1 id="网络上配置收藏"><a class="markdownIt-Anchor" href="#网络上配置收藏"></a> 网络上配置收藏</h1>
 <ol>
-<li>进入安装包所在目录下，如：android-studio-ide-181.5056338-linux.zip</li>
-<li>sudo mkdir /usr/JetBrains</li>
-<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains</li>
-<li>cd /usr/JetBrains</li>
-<li>sudo unzip  android-studio-ide-181.5056338-linux.zip</li>
-<li>cd android-studio/bin</li>
-<li>命令行启动AndroidStuido： ./studio.sh，正常的话应该会出现软件的配置设置</li>
-<li>软件启动，因为没有Android SDK，会弹出提示界面，点击cancle之后会自动下载Android SDK，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+<li><a href="https://github.com/deepzz0/dotfiles/blob/master/.vimrc" target="_blank" rel="noopener">https://github.com/deepzz0/dotfiles/blob/master/.vimrc</a></li>
+<li></li>
 </ol>
-<p>设置启动图标启动Android Studio</p>
-<ol>
-<li>sudo vim /usr/share/applications/android-studio.desktop</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=Android Studio</span><br><span class="line">Comment=Android Studio Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/android-studio/bin/studio.png</span><br><span class="line">Exec=/usr/JetBrains/android-studio/bin/studio.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在启动器别表即可找到Android Studio启动图标，点击启动即可</li>
-</ol>
-<h1 id="模拟器"><a class="markdownIt-Anchor" href="#模拟器"></a> 模拟器</h1>
-<p>Android程序调试可通过真机、自带模拟器、第三方模拟器调试</p>
-<p>第三方模拟器大多使用Genymotion，官网下载：<a href="https://www.genymotion.com/download/" target="_blank" rel="noopener">https://www.genymotion.com/download/</a><br>
-android Studio安装Genymotion插件使用</p>
-<h2 id="安装过程遇到的问题"><a class="markdownIt-Anchor" href="#安装过程遇到的问题"></a> 安装过程遇到的问题</h2>
-<ol>
-<li>
-<p>linux中启动模拟器出现grant current user access to /dev/kvm错误<br>
-解决方法：打开terminal,输入代码who／whoami查找当前用户名；sudo chown username -R /dev/kvm 注意username是你用的用户名</p>
-</li>
-<li>
-<p>无法修改模拟器创建时的选项 emulated performance<br>
-解决方法： Nexus 5X和Nexus 5镜像不支持，换成其他镜像即可</p>
-</li>
-</ol>
-<p><a href="https://blog.csdn.net/wshish920907/article/details/78249528" target="_blank" rel="noopener">https://blog.csdn.net/wshish920907/article/details/78249528</a></p>
-<h1 id="intelij-idea安装"><a class="markdownIt-Anchor" href="#intelij-idea安装"></a> InteliJ IDEA安装</h1>
-<p>下载地址：<a href="http://www.jetbrains.com/idea/?fromMenu" target="_blank" rel="noopener">http://www.jetbrains.com/idea/?fromMenu</a></p>
-<h2 id="linux系统-2"><a class="markdownIt-Anchor" href="#linux系统-2"></a> Linux系统</h2>
-<ol>
-<li>进入安装包所在目录下，如：ideaIU-2016.1.2.tar.gz</li>
-<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains，如果没有JetBrains则自己创建</li>
-<li>cd /usr/JetBrains</li>
-<li>sudo tar -zxvf ideaIU-2016.1.2.tar.gz</li>
-<li>sudo mv idea-IU-145.971.21 idea</li>
-<li>cd idea/bin</li>
-<li>命令行启动Idea： ./idea.sh，正常的话应该会出现软件的配置设置</li>
-<li>软件启动，创建任意Java程序，配置JDK路径，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
-</ol>
-<p>设置启动图标启动Idea</p>
-<ol>
-<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=InteliJ IDEA</span><br><span class="line">Comment=InteliJ IDEA Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/idea/bin/idea.png</span><br><span class="line">Exec=/usr/JetBrains/idea/bin/idea.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在启动器别表即可找到InteliJ IDEA启动图标，点击启动即可</li>
-</ol>
-<h1 id="webstorm安装"><a class="markdownIt-Anchor" href="#webstorm安装"></a> WebStorm安装</h1>
-<p>下载地址：<a href="http://www.jetbrains.com/webstorm/download/#section=linux" target="_blank" rel="noopener">http://www.jetbrains.com/webstorm/download/#section=linux</a></p>
-<p>webstorm安装请参考AndroidStudio和IDEA</p>
-<p>设置启动图标启动Idea</p>
-<ol>
-<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
-<li>编辑文件内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=WebStorm</span><br><span class="line">Comment=WebStorm Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/WebStorm/bin/webstorm.png</span><br><span class="line">Exec=/usr/JetBrains/WebStorm/bin/webstorm.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">if &amp;compatible</span><br><span class="line">  set nocompatible</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">filetype off</span><br><span class="line">set rtp+=~/.vim/bundle/vundle/</span><br><span class="line">call vundle#rc()</span><br><span class="line"></span><br><span class="line">&quot; Let Vundle manage Vundle</span><br><span class="line">Bundle &apos;gmarik/vundle&apos;</span><br><span class="line"></span><br><span class="line">&quot; Define bundles via Github repos</span><br><span class="line">Bundle &apos;christoomey/vim-run-interactive&apos;</span><br><span class="line">Bundle &apos;croaky/vim-colors-github&apos;</span><br><span class="line">Bundle &apos;danro/rename.vim&apos;</span><br><span class="line">Bundle &apos;kchmck/vim-coffee-script&apos;</span><br><span class="line">Bundle &apos;kien/ctrlp.vim&apos;</span><br><span class="line">Bundle &apos;pbrisbin/vim-mkdir&apos;</span><br><span class="line">Bundle &apos;scrooloose/syntastic&apos;</span><br><span class="line">Bundle &apos;slim-template/vim-slim&apos;</span><br><span class="line">Bundle &apos;thoughtbot/vim-rspec&apos;</span><br><span class="line">Bundle &apos;tpope/vim-bundler&apos;</span><br><span class="line">Bundle &apos;tpope/vim-endwise&apos;</span><br><span class="line">Bundle &apos;tpope/vim-fugitive&apos;</span><br><span class="line">Bundle &apos;tpope/vim-rails&apos;</span><br><span class="line">Bundle &apos;tpope/vim-surround&apos;</span><br><span class="line">Bundle &apos;vim-ruby/vim-ruby&apos;</span><br><span class="line">Bundle &apos;vim-scripts/ctags.vim&apos;</span><br><span class="line">Bundle &apos;vim-scripts/matchit.zip&apos;</span><br><span class="line">Bundle &apos;vim-scripts/tComment&apos;</span><br><span class="line">Bundle &quot;mattn/emmet-vim&quot;</span><br><span class="line">Bundle &quot;scrooloose/nerdtree&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-powerline&quot;</span><br><span class="line">Bundle &quot;godlygeek/tabular&quot;</span><br><span class="line">Bundle &quot;msanders/snipmate.vim&quot;</span><br><span class="line">Bundle &quot;jelera/vim-javascript-syntax&quot;</span><br><span class="line">Bundle &quot;altercation/vim-colors-solarized&quot;</span><br><span class="line">Bundle &quot;othree/html5.vim&quot;</span><br><span class="line">Bundle &quot;xsbeats/vim-blade&quot;</span><br><span class="line">Bundle &quot;Raimondi/delimitMate&quot;</span><br><span class="line">Bundle &quot;groenewege/vim-less&quot;</span><br><span class="line">Bundle &quot;evanmiller/nginx-vim-syntax&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-easymotion&quot;</span><br><span class="line">Bundle &quot;tomasr/molokai&quot;</span><br><span class="line"></span><br><span class="line">if filereadable(expand(&quot;~/.vimrc.bundles.local&quot;))</span><br><span class="line">  source ~/.vimrc.bundles.local</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">filetype on</span><br></pre></td></tr></table></figure>
           
         
       
@@ -2803,7 +2715,7 @@ fun test(vararg  args:String){}<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">99</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2825,7 +2737,7 @@ fun test(vararg  args:String){}<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2919,7 +2831,7 @@ fun test(vararg  args:String){}<br>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共97.8k字</span>
+  <span class="post-count">博客全站共102.4k字</span>
 </div>
 
 
