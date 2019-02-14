@@ -463,14 +463,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MySQL安装配置]]></title>
-    <url>%2F2018%2F10%2F04%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-11-MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium 安装登陆 mac系统 安装dmg安装包，如：mysql-5.7.8-rc-osx10.9-x86_64.dmg，安装过程中会弹出临时的密码，务必截图保存方便后面更改密码，安装过程有时会卡顿，时间会比较长，需耐心等待一会。 在【系统偏好设置】中启动MySQL服务，如果启动不起来，可选择开机启动，然后重启macOS 在MySQLWorkBench中，创建连接信息,hostname-127.0.0.1或localhost，端口3307 点击&quot;Store in Keychain…&quot;输入安装时提示的临时密码后确定 如果临时密码输入正确，则会弹出修改密码界面，修改密码后重新登陆即可 Linux系统 Linux下安装有多种方式： 直接用软件仓库自动安装（如：ubuntu下，sudo apt-get install mysql-server） 通过下载deb或rmp安装包，直接双击安装 下载tar安装包，解压到硬盘，然后自己配置mysql 通过源码编译安装 以下以tar包安装记录:参考文章（http://www.pianshen.com/article/975954037/） sudo cp mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz /usr cd /usr sudo tar xvJf mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz 为MySQL创建专用用户，用户名为mysql，用户组为mysql； sudo groupadd mysql //创建组 sudo useradd -r -g mysql mysql //创建用户并划入mysql组下 为解压出来的所有文件更改用户和组 sudo chown -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改拥有者 sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组 sudo apt-get install libaio1 libaio-dev 初始化数据库: sudo ./bin/mysqld --initialize --user mysql 执行过程中会生成一个临时密码，一定要保存好，后面修改密码需要用到，如图： 开启服务: bin/mysqld_safe --user=mysql &amp; 使用用户root登录: bin/mysql -uroot -p 更改root用户密码: 12345ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;root&apos; PASSWORD EXPIRE NEVER; //修改root的密码与加密方式use mysql; #切换到mysql库 update user set host=&apos;%&apos; where user=&apos;root&apos;; //更改可以登录的IP为任意IPALTER user &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;; //再次更改root用户密码，使其可以在任意IP访问flush privileges; #刷新权限 通过客户端测试登陆即可 Navicat安装 Linux 进入安装包所在目录下，如：navicat_premium12_cs_x64_for_linux.zip sudo cp navicat_premium12_cs_x64_for_linux.zip /usr/ cd /usr/ sudo unzip navicat_premium12_cs_x64_for_linux.zip cd navicat120_premium_cs_x64 命令行启动：sudo ./start_navicat，正常的话应该会出现一个Win Mono下载界面，可不下载，跳过即可 Windows &amp; macOS 直接下载安装就行，破解请自行查找]]></content>
-      <tags>
-        <tag>环境搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[hexo使用速记]]></title>
     <url>%2F2018%2F10%2F04%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-10-hexo%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[说明 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详细学习请参考：https://hexo.io/zh-cn/docs 。 本文章只是个人使用过程中重点内容记录。 安装 前置安装：node，git 安装：npm install -g hexo-cli 初始化项目 mkdir [项目名称, 如：test] hexo init [项目名称, 如：test] //此处要求文件夹内为空 cd [项目名称, 如：test] npm install 常用命令 hexo new [layout] ‘【文章名称】’ //创建不通类型文章 1234laytou及路径如下：post source/_postspage sourcedraft source/_drafts hexo clean //清除hexo生成静态网站内容 hexo g //生成hexo静态网站 hexo s //启用hexo服务 hexo d //hexo网站部署，配合hexo-deployer-git插件使用 hexo version //hexo相关软件版本 hexo list [type] //type:post,page等 Front-matter和JSON Front-matter 用来设定文章的一些参数，如是否添加密码、版权、标签、分类等信息。 Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，基于YAML 123title: Hello Worlddate: 2013/7/13 20:46:25--- JSON Front-matter 使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可 123&quot;title&quot;: &quot;Hello World&quot;,&quot;date&quot;: &quot;2013/7/13 20:46:25&quot;;;; 可配置参数如下： 参数 描述 默认值 layout 布局 title 标题 date 建立日期 文件建立日期 updated 更新日期 文件更新日期 comments 开启文章的评论功能 true tags 标签（不适用于分页） categories 分类（不适用于分页） permalink 覆盖文章网址 可以通过直接修改scaffolds内的模版来设定统一的文章额外信息，如： 123456789101112---title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;tags: - - categories: password: copyright: truecomments: truetoc: true--- 部署 安装 hexo-deployer-git：npm install hexo-deployer-git --save 配置hexo的_config.yml文件 1234567# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://[XXX]@github.com/[XXX]/[XXX].github.io //库（Repository）地址,如：https://epaypad@github.com/epaypad/epaypad.github.io branch: master //分支名称 message: https://github.com/chetaofeng/MyHexoBlogSource 内容部署 &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125; //自定义提交信息 hexo d //命令执行后，稍等一会查看部署结果 hexo主题 hexo默认主题为landscape，大家可以根据各自需要使用不通主题。 本人使用的是NexT主题，使用请参考：http://theme-next.iissnan.com ，NexT更多配置，请参考： https://www.jianshu.com/p/1f8107a8778c]]></content>
@@ -480,6 +472,14 @@
       <tags>
         <tag>node</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL安装配置]]></title>
+    <url>%2F2018%2F10%2F04%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-11-MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium 安装登陆 mac系统 安装dmg安装包，如：mysql-5.7.8-rc-osx10.9-x86_64.dmg，安装过程中会弹出临时的密码，务必截图保存方便后面更改密码，安装过程有时会卡顿，时间会比较长，需耐心等待一会。 在【系统偏好设置】中启动MySQL服务，如果启动不起来，可选择开机启动，然后重启macOS 在MySQLWorkBench中，创建连接信息,hostname-127.0.0.1或localhost，端口3307 点击&quot;Store in Keychain…&quot;输入安装时提示的临时密码后确定 如果临时密码输入正确，则会弹出修改密码界面，修改密码后重新登陆即可 Linux系统 Linux下安装有多种方式： 直接用软件仓库自动安装（如：ubuntu下，sudo apt-get install mysql-server） 通过下载deb或rmp安装包，直接双击安装 下载tar安装包，解压到硬盘，然后自己配置mysql 通过源码编译安装 以下以tar包安装记录:参考文章（http://www.pianshen.com/article/975954037/） sudo cp mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz /usr cd /usr sudo tar xvJf mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz 为MySQL创建专用用户，用户名为mysql，用户组为mysql； sudo groupadd mysql //创建组 sudo useradd -r -g mysql mysql //创建用户并划入mysql组下 为解压出来的所有文件更改用户和组 sudo chown -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改拥有者 sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组 sudo apt-get install libaio1 libaio-dev 初始化数据库: sudo ./bin/mysqld --initialize --user mysql 执行过程中会生成一个临时密码，一定要保存好，后面修改密码需要用到，如图： 开启服务: bin/mysqld_safe --user=mysql &amp; 使用用户root登录: bin/mysql -uroot -p 更改root用户密码: 12345ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;root&apos; PASSWORD EXPIRE NEVER; //修改root的密码与加密方式use mysql; #切换到mysql库 update user set host=&apos;%&apos; where user=&apos;root&apos;; //更改可以登录的IP为任意IPALTER user &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;; //再次更改root用户密码，使其可以在任意IP访问flush privileges; #刷新权限 通过客户端测试登陆即可 Navicat安装 Linux 进入安装包所在目录下，如：navicat_premium12_cs_x64_for_linux.zip sudo cp navicat_premium12_cs_x64_for_linux.zip /usr/ cd /usr/ sudo unzip navicat_premium12_cs_x64_for_linux.zip cd navicat120_premium_cs_x64 命令行启动：sudo ./start_navicat，正常的话应该会出现一个Win Mono下载界面，可不下载，跳过即可 Windows &amp; macOS 直接下载安装就行，破解请自行查找]]></content>
+      <tags>
+        <tag>环境搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -521,23 +521,23 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[归档]]></title>
-    <url>%2Farchives%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[关于]]></title>
     <url>%2Fabout%2Findex.html</url>
     <content type="text"><![CDATA[关于我]]></content>
   </entry>
   <entry>
-    <title><![CDATA[分类]]></title>
-    <url>%2Fcategories%2Findex.html</url>
+    <title><![CDATA[归档]]></title>
+    <url>%2Farchives%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[schedule]]></title>
     <url>%2Fschedule%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[分类]]></title>
+    <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>

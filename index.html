@@ -829,7 +829,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</span><br></pre></td></tr></table></figure>
 <p>回车并执行该命令，这时会提示让你输入管理员密码，便会开始制作过程了：<br>
-<img src="/2018/12/19/环境搭建-01-mac系统安装/../pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png" alt="image"></p>
+<img src="/pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png" alt="image"></p>
 <p>如上图，这时系统已经在制作中了，请耐心等待直到屏幕最后出现 Done. 字样即表示大功告成了</p>
 <h1 id="mac系统u盘安装"><a class="markdownIt-Anchor" href="#mac系统u盘安装"></a> mac系统U盘安装</h1>
 <ol start="0">
@@ -1161,7 +1161,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 windows10镜像下载： <a href="https://www.microsoft.com/zh-cn/software-download/windows10ISO/" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/software-download/windows10ISO/</a></p>
 <p>系统安装完成之后，需安装Parallels Tools，否则使用时鼠标使用等方面会有很多不便，注意安装Parallels Tools时注意PD版本，防止有和系统不兼容。<br>
 如下图：<br>
-<img src="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/../pub-images/Parallels%20Tools.png" alt="image"></p>
+<img src="/pub-images/Parallels%20Tools.png" alt="image"></p>
 <h1 id="pd使用注意事项"><a class="markdownIt-Anchor" href="#pd使用注意事项"></a> PD使用注意事项</h1>
 <ol>
 <li>虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统内存、硬盘相关参数设置</li>
@@ -1169,7 +1169,7 @@ windows10镜像下载： <a href="https://www.microsoft.com/zh-cn/software-downl
 <li>虚拟机初试安装后，再进行系统其他重要软件安装前，请先保存快照，再进行操作，操作不成功还可回退</li>
 <li>虚拟机系统更新、相关开发环境设置完成之后，建议移动硬盘保存虚拟机，方便后期恢复和循环使用</li>
 <li>虚拟机系统文件在右键【显示包内容】后，如下<br>
-<img src="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/../pub-images/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" alt="image"><br>
+<img src="/pub-images/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" alt="image"><br>
 其中.hdd文件为硬盘文件，可在虚拟机系统故障时优先保存此文件，或者将此文件复制替换到备份的虚拟机系统即可恢复</li>
 </ol>
 
@@ -1319,14 +1319,14 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
 <li>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库<br>
 Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
 </ul>
-<p><img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/git.png" alt="image"><br>
+<p><img src="/pub-images/git.png" alt="image"><br>
 我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
 <ul>
 <li>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
 <li>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</li>
 </ul>
 <h2 id="远程配合"><a class="markdownIt-Anchor" href="#远程配合"></a> 远程配合</h2>
-<p><img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/git2.png" alt="image"></p>
+<p><img src="/pub-images/git2.png" alt="image"></p>
 <h1 id="git安装"><a class="markdownIt-Anchor" href="#git安装"></a> git安装</h1>
 <p>参考教程：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">https://git-scm.com/book/zh/v2/起步-安装-Git</a></p>
 <p>各平台都支持安装包安装方式</p>
@@ -1370,9 +1370,9 @@ ssh-keygen(选项)</li>
 <p>不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件</p>
 <h1 id="开发环境中配置"><a class="markdownIt-Anchor" href="#开发环境中配置"></a> 开发环境中配置</h1>
 <p>在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可<br>
-<img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
+<img src="/pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
 gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
-<img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
+<img src="/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
 <p>以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下：</p>
 <ul>
 <li>GitLab Server Url: <a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></li>

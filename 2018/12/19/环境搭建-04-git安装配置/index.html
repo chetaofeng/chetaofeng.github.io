@@ -113,15 +113,15 @@
 <meta property="og:site_name" content="行锋">
 <meta property="og:description" content="简介 官网：https://git-scm.com/ Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 详细学习，推荐：  http:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://chetaofeng.github.io/2018/12/19/pub-images/git.png">
-<meta property="og:image" content="https://chetaofeng.github.io/2018/12/19/pub-images/git2.png">
-<meta property="og:image" content="https://chetaofeng.github.io/2018/12/19/pub-images/github%E8%AE%BE%E7%BD%AE.png">
-<meta property="og:image" content="https://chetaofeng.github.io/2018/12/19/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png">
-<meta property="og:updated_time" content="2019-01-29T00:30:26.000Z">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/git.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/git2.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/github%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png">
+<meta property="og:updated_time" content="2019-02-14T01:41:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git安装配置">
 <meta name="twitter:description" content="简介 官网：https://git-scm.com/ Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 详细学习，推荐：  http:">
-<meta name="twitter:image" content="https://chetaofeng.github.io/2018/12/19/pub-images/git.png">
+<meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/git.png">
 
 
 
@@ -426,14 +426,14 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
 <li>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库<br>
 Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
 </ul>
-<p><img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/git.png" alt="image"><br>
+<p><img src="/pub-images/git.png" alt="image"><br>
 我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
 <ul>
 <li>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
 <li>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</li>
 </ul>
 <h2 id="远程配合"><a class="markdownIt-Anchor" href="#远程配合"></a> 远程配合</h2>
-<p><img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/git2.png" alt="image"></p>
+<p><img src="/pub-images/git2.png" alt="image"></p>
 <h1 id="git安装"><a class="markdownIt-Anchor" href="#git安装"></a> git安装</h1>
 <p>参考教程：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">https://git-scm.com/book/zh/v2/起步-安装-Git</a></p>
 <p>各平台都支持安装包安装方式</p>
@@ -477,9 +477,9 @@ ssh-keygen(选项)</li>
 <p>不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件</p>
 <h1 id="开发环境中配置"><a class="markdownIt-Anchor" href="#开发环境中配置"></a> 开发环境中配置</h1>
 <p>在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可<br>
-<img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
+<img src="/pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
 gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
-<img src="/2018/12/19/环境搭建-04-git安装配置/../pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
+<img src="/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
 <p>以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下：</p>
 <ul>
 <li>GitLab Server Url: <a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></li>
@@ -538,7 +538,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-04-git安装配置/">git安装配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年01月29日 - 08:01</p>
+  <p><span>最后更新:</span>2019年02月14日 - 09:02</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-04-git安装配置/" title="git安装配置">https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/"  aria-label="复制成功！"></i></span>
   </p>
