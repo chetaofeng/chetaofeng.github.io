@@ -30,8 +30,8 @@
 
 <script>
     (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
+        if('oracle官网账号：  chetaofeng@163.com / Chetaofeng123./'){
+            if (prompt('请输入文章密码') !== 'oracle官网账号：  chetaofeng@163.com / Chetaofeng123./'){
                 alert('密码错误！');
                 history.back();
             }
@@ -105,18 +105,18 @@
 
 
 
-<meta name="description" content="https://www.cnblogs.com/zjx2711904647/p/7735556.html">
+<meta name="description" content="JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置cla">
 <meta name="keywords" content="环境搭建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java JDK安装配置">
 <meta property="og:url" content="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/index.html">
 <meta property="og:site_name" content="行锋">
-<meta property="og:description" content="https://www.cnblogs.com/zjx2711904647/p/7735556.html">
+<meta property="og:description" content="JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置cla">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-10T17:59:21.000Z">
+<meta property="og:updated_time" content="2019-01-29T06:59:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java JDK安装配置">
-<meta name="twitter:description" content="https://www.cnblogs.com/zjx2711904647/p/7735556.html">
+<meta name="twitter:description" content="JDK下载 http://www.oracle.com/technetwork/java/javase/downloads/index.html https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  环境变量设置说明 （jdk 需要配置三个环境变量； 1.5之后可以不再设置cla">
 
 
 
@@ -402,7 +402,44 @@
       
 
       
-        <p><a href="https://www.cnblogs.com/zjx2711904647/p/7735556.html" target="_blank" rel="noopener">https://www.cnblogs.com/zjx2711904647/p/7735556.html</a></p>
+        <h1 id="jdk下载"><a class="markdownIt-Anchor" href="#jdk下载"></a> JDK下载</h1>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<h1 id="环境变量设置说明"><a class="markdownIt-Anchor" href="#环境变量设置说明"></a> 环境变量设置说明</h1>
+<p>（jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置）</p>
+<ul>
+<li>CLASS_PATH 保证class文件能够在任意目录下运行</li>
+<li>PATH 保证javac可以在任意目录下运行</li>
+</ul>
+<h1 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h1>
+<p>环境变量配置文件执行的顺序：<br>
+/etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc<br>
+/etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。</p>
+<p>下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过，</p>
+<p>配置环境变量的方式：</p>
+<ol>
+<li>找到JDK安装目录，如：/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</li>
+<li>编辑文件~/.bash_profile 文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line"></span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使配置生效：source .bash_profile</li>
+<li>输入 echo $JAVA_HOME 显示刚才配置的路径</li>
+<li>验证安装</li>
+</ol>
+<h1 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h1>
+<p>安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载</p>
+<ol>
+<li>下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹</li>
+<li>sudo mkdir /usr/java</li>
+<li>sudo cp -r jdk1.8.0_77/ /usr/java/</li>
+<li>配置环境变量,sudo vim /etc/profile,在前面添加</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_77</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>source /etc/profile 使配置立即生效</li>
+<li>检查新安装的jdk:java -version;java;javac</li>
+</ol>
 
       
     </div>
@@ -423,7 +460,7 @@
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-06-Java安装/">java JDK安装配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年01月11日 - 01:01</p>
+  <p><span>最后更新:</span>2019年01月29日 - 14:01</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-06-Java安装/" title="java JDK安装配置">https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/"  aria-label="复制成功！"></i></span>
   </p>
@@ -512,8 +549,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-05-node安装/" rel="next" title="node安装配置">
-                <i class="fa fa-chevron-left"></i> node安装配置
+              <a href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" rel="next" title="java JDK安装配置">
+                <i class="fa fa-chevron-left"></i> java JDK安装配置
               </a>
             
           </div>
@@ -522,8 +559,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-04-git安装配置/" rel="prev" title="git安装配置">
-                git安装配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/19/环境搭建-05-node安装/" rel="prev" title="node安装配置">
+                node安装配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,8 +626,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -609,7 +655,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -631,7 +677,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -670,6 +716,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jdk下载"><span class="nav-number">1.</span> <span class="nav-text"> JDK下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境变量设置说明"><span class="nav-number">2.</span> <span class="nav-text"> 环境变量设置说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mac系统"><span class="nav-number">3.</span> <span class="nav-text"> mac系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux系统"><span class="nav-number">4.</span> <span class="nav-text"> Linux系统</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -725,7 +787,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.7k字</span>
+  <span class="post-count">博客全站共43.9k字</span>
 </div>
 
 

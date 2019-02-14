@@ -114,7 +114,7 @@
 <meta property="og:description" content="U盘启动 U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。  mac系统安装启动盘制作  准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料 下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。 打开">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/2018/12/19/pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png">
-<meta property="og:updated_time" content="2019-01-10T17:00:25.000Z">
+<meta property="og:updated_time" content="2019-01-10T18:40:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac系统安装">
 <meta name="twitter:description" content="U盘启动 U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。  mac系统安装启动盘制作  准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料 下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。 打开">
@@ -411,15 +411,15 @@
 <li>准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料</li>
 <li>下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。</li>
 <li>打开 “应用程序 → 实用工具 → 磁盘工具”，将U盘「抹掉」(格式化) 成「Mac OS X 扩展（日志式）」格式、GUID 分区图，并将U盘命名为「Sierra」。(注意：这个盘符名称将会与后面的命令一一对应，如果你改了这盘符的名字，必须保证后面的命令里的名称也要一致)</li>
-<li>打开 “应用程序→实用工具→终端”，将下面的一段命令复制并粘贴进去：<br>
-sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</li>
+<li>打开 “应用程序→实用工具→终端”，将下面的一段命令复制并粘贴进去：</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</span><br></pre></td></tr></table></figure>
 <p>回车并执行该命令，这时会提示让你输入管理员密码，便会开始制作过程了：<br>
 <img src="/2018/12/19/环境搭建-01-mac系统安装/../pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png" alt="image"></p>
 <p>如上图，这时系统已经在制作中了，请耐心等待直到屏幕最后出现 Done. 字样即表示大功告成了</p>
 <h1 id="mac系统u盘安装"><a class="markdownIt-Anchor" href="#mac系统u盘安装"></a> mac系统U盘安装</h1>
-<p>0.（此步骤可选：如果想格式化磁盘则进行此操作）启动时按住[command + r]，进入磁盘管理工具抹掉磁盘即可</p>
-<ol>
+<ol start="0">
+<li>（此步骤可选：如果想格式化磁盘则进行此操作）启动时按住[command + r]，进入磁盘管理工具抹掉磁盘即可</li>
 <li>先在目标电脑上插上 U 盘，然后重启你的 Mac，然后一直按住[option」(alt)] 按键不放，直到屏幕显示多出一个 USB 启动盘的选项。</li>
 <li>选择 U 盘的图标回车，即可通过 U 盘来安装 macOS Sierra 了！这时，你可以直接覆盖安装系统(升级)，也可以在磁盘工具里面格式化抹掉整个硬盘，或者重新分区等实现全新的干净的安装</li>
 <li>启动过程中电脑会重启，重启的时候，拔掉U盘</li>
@@ -467,9 +467,11 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
 <p>重置 Mac 上的系统管理控制器 (SMC)       Shift-Control-Option<br>
 <a href="https://support.apple.com/zh-cn/HT201295" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201295</a></p>
 </li>
-</ol>
-<p>8.如何识别 MacBook Pro 机型<br>
+<li>
+<p>如何识别 MacBook Pro 机型<br>
 <a href="https://support.apple.com/zh-cn/HT201300" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201300</a></p>
+</li>
+</ol>
 
       
     </div>
@@ -490,7 +492,7 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-01-mac系统安装/">mac系统安装</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年01月11日 - 01:01</p>
+  <p><span>最后更新:</span>2019年01月11日 - 02:01</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-01-mac系统安装/" title="mac系统安装">https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/"  aria-label="复制成功！"></i></span>
   </p>
@@ -589,8 +591,8 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/aa/" rel="prev" title="aa">
-                aa <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/19/Linux-01-linux-配置文件启动顺序/" rel="prev" title="mac系统安装">
+                mac系统安装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -685,7 +687,7 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -707,7 +709,7 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -817,7 +819,7 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.7k字</span>
+  <span class="post-count">博客全站共43.9k字</span>
 </div>
 
 

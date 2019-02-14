@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件破解/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件破解/" itemprop="url">java JDK安装配置</a></h2>
+                <a class="post-title-link" href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" itemprop="url">Ubuntu系统安装后的设置</a></h2>
         
 
         <div class="post-meta">
@@ -395,8 +395,241 @@
       
         
           
-            <p><a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+            <h1 id="修改默认源为国内源"><a class="markdownIt-Anchor" href="#修改默认源为国内源"></a> 修改默认源为国内源</h1>
+<ol>
+<li>cd /etc/apt</li>
+<li>cp /etc/apt/sources.list /etc/apt/sources.list.bak   备份/etc/apt/sources.list</li>
+<li>在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#添加阿里源</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>更新源</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+<h1 id="系统分辨率设置"><a class="markdownIt-Anchor" href="#系统分辨率设置"></a> 系统分辨率设置</h1>
+<p>安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改：</p>
+<ol>
+<li>首先打开终端Terminal，输入: sudo apt-get install xdiagnose</li>
+<li>sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】</li>
+<li>sudo reboot 重启系统</li>
+<li>再次打开设置发现分辨率可以设置了,如设置为：1280*800</li>
+</ol>
+<h1 id="chrome浏览器安装"><a class="markdownIt-Anchor" href="#chrome浏览器安装"></a> chrome浏览器安装</h1>
+<ul>
+<li>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="noopener">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></li>
+<li>sudo dpkg -i google-chrome-stable_current_amd64.deb</li>
+</ul>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/" itemprop="url">JetBrains系列软件安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="软件破解"><a class="markdownIt-Anchor" href="#软件破解"></a> 软件破解</h1>
+<p>软件破解请参考： <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+<ol>
+<li>使用前请将“0.0.0.0 <a href="http://account.jetbrains.com" target="_blank" rel="noopener">account.jetbrains.com</a>”添加到hosts文件中</li>
+<li>在网页获取注册码，在注册页面填入注册码即可</li>
+</ol>
+<h1 id="android-studio安装"><a class="markdownIt-Anchor" href="#android-studio安装"></a> Android Studio安装</h1>
+<p>以下为相关软件下载，2／3中软件为采用第三方模拟器的时候需要下载，利用自带模拟器则可跳过下载</p>
+<ol>
+<li>下载Android Studio安装软件： <a href="https://developer.android.google.cn/studio/#downloads" target="_blank" rel="noopener">https://developer.android.google.cn/studio/#downloads</a></li>
+<li>下载virtualbox： <a href="https://www.virtualbox.org/wiki/Linux_Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Linux_Downloads</a></li>
+<li>下载Genymotion： <a href="https://www.genymotion.com/download" target="_blank" rel="noopener">https://www.genymotion.com/download</a></li>
+</ol>
+<p>安装前请确保网络状态良好，现在安装Android Studio，所需Android SDK、自带模拟器镜像、gradle等都可以在线直接通过开发工具下载安装</p>
+<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
+<p>直接安装dmg安装包即可</p>
+<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
+<ol>
+<li>进入安装包所在目录下，如：android-studio-ide-181.5056338-linux.zip</li>
+<li>sudo mkdir /usr/JetBrains</li>
+<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains</li>
+<li>cd /usr/JetBrains</li>
+<li>sudo unzip  android-studio-ide-181.5056338-linux.zip</li>
+<li>cd android-studio/bin</li>
+<li>命令行启动AndroidStuido： ./studio.sh，正常的话应该会出现软件的配置设置</li>
+<li>软件启动，因为没有Android SDK，会弹出提示界面，点击cancle之后会自动下载Android SDK，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+</ol>
+<p>设置启动图标启动Android Studio</p>
+<ol>
+<li>sudo vim /usr/share/applications/android-studio.desktop</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=Android Studio</span><br><span class="line">Comment=Android Studio Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/android-studio/bin/studio.png</span><br><span class="line">Exec=/usr/JetBrains/android-studio/bin/studio.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在启动器别表即可找到Android Studio启动图标，点击启动即可</li>
+</ol>
+<h1 id="模拟器"><a class="markdownIt-Anchor" href="#模拟器"></a> 模拟器</h1>
+<p>Android程序调试可通过真机、自带模拟器、第三方模拟器调试</p>
+<p>第三方模拟器大多使用Genymotion，官网下载：<a href="https://www.genymotion.com/download/" target="_blank" rel="noopener">https://www.genymotion.com/download/</a><br>
+android Studio安装Genymotion插件使用</p>
+<h2 id="安装过程遇到的问题"><a class="markdownIt-Anchor" href="#安装过程遇到的问题"></a> 安装过程遇到的问题</h2>
+<ol>
+<li>
+<p>linux中启动模拟器出现grant current user access to /dev/kvm错误<br>
+解决方法：打开terminal,输入代码who／whoami查找当前用户名；sudo chown username -R /dev/kvm 注意username是你用的用户名</p>
+</li>
+<li>
+<p>无法修改模拟器创建时的选项 emulated performance<br>
+解决方法： Nexus 5X和Nexus 5镜像不支持，换成其他镜像即可</p>
+</li>
+</ol>
+<p><a href="https://blog.csdn.net/wshish920907/article/details/78249528" target="_blank" rel="noopener">https://blog.csdn.net/wshish920907/article/details/78249528</a></p>
+<h1 id="intelij-idea安装"><a class="markdownIt-Anchor" href="#intelij-idea安装"></a> InteliJ IDEA安装</h1>
+<p>下载地址：<a href="http://www.jetbrains.com/idea/?fromMenu" target="_blank" rel="noopener">http://www.jetbrains.com/idea/?fromMenu</a></p>
+<h2 id="linux系统-2"><a class="markdownIt-Anchor" href="#linux系统-2"></a> Linux系统</h2>
+<ol>
+<li>进入安装包所在目录下，如：ideaIU-2016.1.2.tar.gz</li>
+<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains，如果没有JetBrains则自己创建</li>
+<li>cd /usr/JetBrains</li>
+<li>sudo tar -zxvf ideaIU-2016.1.2.tar.gz</li>
+<li>sudo mv idea-IU-145.971.21 idea</li>
+<li>cd idea/bin</li>
+<li>命令行启动Idea： ./idea.sh，正常的话应该会出现软件的配置设置</li>
+<li>软件启动，创建任意Java程序，配置JDK路径，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+</ol>
+<p>设置启动图标启动Idea</p>
+<ol>
+<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=InteliJ IDEA</span><br><span class="line">Comment=InteliJ IDEA Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/idea/bin/idea.png</span><br><span class="line">Exec=/usr/JetBrains/idea/bin/idea.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在启动器别表即可找到InteliJ IDEA启动图标，点击启动即可</li>
+</ol>
+<h1 id="webstorm安装"><a class="markdownIt-Anchor" href="#webstorm安装"></a> WebStorm安装</h1>
+<p>下载地址：<a href="http://www.jetbrains.com/webstorm/download/#section=linux" target="_blank" rel="noopener">http://www.jetbrains.com/webstorm/download/#section=linux</a></p>
+<p>webstorm安装请参考AndroidStudio和IDEA</p>
+<p>设置启动图标启动Idea</p>
+<ol>
+<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=WebStorm</span><br><span class="line">Comment=WebStorm Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/WebStorm/bin/webstorm.png</span><br><span class="line">Exec=/usr/JetBrains/WebStorm/bin/webstorm.sh</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1804,6 +2037,7 @@ Production-Ready：一站式运维、生态无缝整合</p>
 <p>换句话说就是，当你觉得 Java 不好用的时候，我做了个轻量级的 S，让你好好用 Java。等你觉的 S 也不够轻了，我做了个 SB，让你觉得 S 还是挺轻的。</p>
 <p><a href="https://www.imooc.com/video/16783" target="_blank" rel="noopener">https://www.imooc.com/video/16783</a><br>
 SrpingBoot为微服务框架，与Spring4一起诞生</p>
+<p><a href="https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/</a></p>
 
           
         
@@ -2554,188 +2788,11 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/middleware/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/middleware/" itemprop="url">middleware</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:32:09+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/React/" itemprop="url" rel="index">
-                    <span itemprop="name">React</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://zhuanlan.zhihu.com/p/20597452" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/20597452</a></p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<ul>
-<li>middleware 提供了一个分类处理 action 的机会，在 middleware 中你可以检阅每一个流过的 action，挑选出特定类型的 action 进行相应操作，给你一次改变 action 的机会</li>
-<li>redux 的 middleware 是为了增强 dispatch 而出现的</li>
-<li>redux 提供了 applyMiddleware 这个 api 来加载 middleware</li>
-</ul>
-<p><img src="/pub-images/redux-middleware1.png" alt="image"><br>
-<img src="/pub-images/redux-middleware2.png" alt="image"></p>
-<h1 id="四步理解-middleware-机制"><a class="markdownIt-Anchor" href="#四步理解-middleware-机制"></a> 四步理解 middleware 机制</h1>
-<p><img src="/pub-images/middleware%E6%9C%BA%E5%88%B6%E7%A4%BA%E4%BE%8B.png" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var middlewareAPI = &#123;</span><br><span class="line">  getState: store.getState,</span><br><span class="line">  dispatch: (action) =&gt; dispatch(action)</span><br><span class="line">&#125;;</span><br><span class="line">chain = middlewares.map(middleware =&gt; middleware(middlewareAPI));</span><br></pre></td></tr></table></figure>
-<h2 id="函数式编程思想设计-middleware"><a class="markdownIt-Anchor" href="#函数式编程思想设计-middleware"></a> 函数式编程思想设计 middleware</h2>
-<p>middleware 的设计有点特殊，是一个层层包裹的匿名函数，这其实是函数式编程中的柯里化 curry，一种使用匿名单参数函数来实现多参数函数的方法。applyMiddleware 会对 logger 这个 middleware 进行层层调用，动态地对 store 和 next 参数赋值</p>
-<p>柯里化的 middleware 结构好处在于：</p>
-<ol>
-<li>易串联，柯里化函数具有延迟执行的特性，通过不断柯里化形成的 middleware 可以累积参数，配合组合（ compose，函数式编程的概念，Step. 2 中会介绍）的方式，很容易形成 pipeline 来处理数据流</li>
-<li>共享store，在 applyMiddleware 执行过程中，store 还是旧的，但是因为闭包的存在，applyMiddleware 完成后，所有的 middlewares 内部拿到的 store 是最新且相同的</li>
-</ol>
-<h2 id="给-middleware-分发-store"><a class="markdownIt-Anchor" href="#给-middleware-分发-store"></a> 给 middleware 分发 store</h2>
-<p>创建一个普通的 store 通过如下方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//applyMiddleware 函数陆续获得了三个参数</span><br><span class="line">//第一个是 middlewares 数组，[mid1, mid2, mid3, ...]</span><br><span class="line">//第二个 next 是 Redux 原生的 createStore</span><br><span class="line">//最后一个是 reducer</span><br><span class="line">let newStore = applyMiddleware(mid1, mid2, mid3, ...)(createStore)(reducer, null);</span><br></pre></td></tr></table></figure>
-<h2 id="组合串联-middlewares"><a class="markdownIt-Anchor" href="#组合串联-middlewares"></a> 组合串联 middlewares</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch = compose(...chain)(store.dispatch);</span><br></pre></td></tr></table></figure>
-<p>compose 是函数式编程中的组合，compose 将 chain 中的所有匿名函数，[f1, f2, … , fx, …, fn]，组装成一个新的函数，即新的 dispatch，当新 dispatch 执行时，[f1, f2, … , fx, …, fn]，从右到左依次执行（ 所以顺序很重要）</p>
-<h2 id="在-middleware-中调用-dispatch"><a class="markdownIt-Anchor" href="#在-middleware-中调用-dispatch"></a> 在 middleware 中调用 dispatch</h2>
-<p>在middleware 中调用 store.dispatch() 和在其他任何地方调用效果是一样的，而在 middleware 中调用 next()，效果是进入下一个 middleware</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2790,7 +2847,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2812,7 +2869,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2906,7 +2963,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.7k字</span>
+  <span class="post-count">博客全站共43.9k字</span>
 </div>
 
 

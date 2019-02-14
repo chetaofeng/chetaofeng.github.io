@@ -324,6 +324,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/15/React全家桶/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/15/React全家桶/" itemprop="url">React全家桶</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T08:16:00+08:00">
+                2018-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>React全家桶+Antd共享单车后台管理系统</p>
+<h1 id="react基础知识"><a class="markdownIt-Anchor" href="#react基础知识"></a> react基础知识</h1>
+<p>Vue生态：Vue+Vue-Router+Vuex+Axios+Babel+Webpack<br>
+React生态：React+React-Router+Redux+Axios+Babel+Webpack</p>
+<p>编程式实现：需要以具体代码表达在哪里做什么，如何实现<br>
+声明式实现：只需声明在哪里做什么，无需关心如何实现</p>
+<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">https://react.docschina.org/</a><br>
+<a href="https://reactjs.org.cn/" target="_blank" rel="noopener">https://reactjs.org.cn/</a><br>
+<a href="http://facebook.github.io/react/" target="_blank" rel="noopener">http://facebook.github.io/react/</a></p>
+<p>yarn： <a href="https://yarnpkg.com/zh-Hans/" target="_blank" rel="noopener">https://yarnpkg.com/zh-Hans/</a></p>
+<ul>
+<li>yarn init</li>
+<li>yarn add</li>
+<li>yarn remove</li>
+<li>yarn install</li>
+</ul>
+<p>react生命周期</p>
+<p>react-router ／react-router-dom</p>
+<p>按需加载：<br>
+Antd中less样式<br>
+yarn eject:暴露webpack配置，</p>
+<p>less-loader安装<br>
+webpack.config.xxx.js</p>
+<p>修改完之后，重启项目</p>
+<p><a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">https://ant.design/docs/react/use-with-create-react-app-cn</a></p>
+<p>babel-plugin-import</p>
+<p>css3  calc属性<br>
+height:calc(100vh)</p>
+<p>jsonp：<a href="https://www.npmjs.com/package/jsonp" target="_blank" rel="noopener">https://www.npmjs.com/package/jsonp</a></p>
+<p>浏览器添加debugger</p>
+<p>伪类方式</p>
+<p>项目中前端路由用的是 React-Router V4。</p>
+<p>官方文档：<a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
+<p>中文文档：<a href="http://reacttraining.cn/" target="_blank" rel="noopener">http://reacttraining.cn/</a></p>
+<p>React-Router 4.0<br>
+React-Router：基础包<br>
+React-Router-DOM：浏览器端实现</p>
+<p><a href="https://segmentfault.com/a/1190000011399153" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011399153</a></p>
+<p>箭头函数不加{}表示直接返回结果<br>
+<a href="http://this.props.match.params.XXX" target="_blank" rel="noopener">this.props.match.params.XXX</a><br>
+处理404则不设置path，只设置component即可<br>
+路由外面添加Switch</p>
+<p>详情页面、登录页面、主页面是同层级页面，还有其他自页面嵌套路由</p>
+<p>App.js设置为{this.props.children}代表可以接受任何组件，APP组件作为HashRouter的根组件</p>
+<p>子路由、子组件模式</p>
+<p>传参数需要箭头函数</p>
+<p>Modal.confirm()  等价于  Modal[‘confirm’]</p>
+<p>{}里面必须是一个根对象</p>
+<p><a href="https://blog.csdn.net/little_blue_ljy/article/details/80281803" target="_blank" rel="noopener">https://blog.csdn.net/little_blue_ljy/article/details/80281803</a><br>
+<a href="https://www.cnblogs.com/guolintao/p/9019504.html" target="_blank" rel="noopener">https://www.cnblogs.com/guolintao/p/9019504.html</a><br>
+<a href="https://www.cnblogs.com/xuyuntao/articles/6391728.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyuntao/articles/6391728.html</a><br>
+<a href="https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md" target="_blank" rel="noopener">https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md</a></p>
+<p>ES6模版语法:</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/windows-git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1788,263 +1991,11 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/05/C-开发-2018-10-05-WebPages/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/C-开发-2018-10-05-WebPages/" itemprop="url">ASP.NET WebPages学习笔记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T11:37:50+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="申明"><a class="markdownIt-Anchor" href="#申明"></a> 申明</h1>
-<p>文章内容记录自：<a href="http://www.w3school.com.cn/aspnet/webpages_intro.asp%EF%BC%8C" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/webpages_intro.asp，</a> 为个人学习笔记记录。</p>
-<h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>Web Pages 是三种 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 编程模型中的一种，用于创建 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 网站和 web 应用程序。</p>
-<h1 id="布局"><a class="markdownIt-Anchor" href="#布局"></a> 布局</h1>
-<p>在因特网上，您会发现很多拥有统一外观的网站：</p>
-<ul>
-<li>每页拥有相同的页眉</li>
-<li>每页拥有相同的页脚</li>
-<li>每页拥有相同的样式和布局</li>
-</ul>
-<p>可以通过以下方式实现：</p>
-<ol>
-<li>使用 @RenderPage() 方法从不同的文件导入内容</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">@RenderPage("header.cshtml")</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello Web Pages<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line">@RenderPage("footer.cshtml")</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>使用布局页面<br>
-布局网页包含网页的结构，而不是内容。当网页（内容页）链接到布局页时，它会根据布局页（模板）来显示。布局页类似普通的网页，但是会在引用内容页的位置调用 @RenderBody() 方法。每个内容页必须以 Layout 指令开头。</li>
-</ol>
-<p>布局页面：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">@RenderBody() </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>任意网页：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@&#123;Layout="Layout.cshtml";&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to W3Schools<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="防止代码泄露"><a class="markdownIt-Anchor" href="#防止代码泄露"></a> 防止代码泄露</h1>
-<p>在 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> 中，名称以下划线开头的文件无法通过 web 来浏览。如果您希望禁止用户查看内容块或布局文件，请对文件重新命名,如：_Layout.cshtml</p>
-<h1 id="~-操作符-与-href-方法"><a class="markdownIt-Anchor" href="#~-操作符-与-href-方法"></a> ~ 操作符 与 Href 方法</h1>
-<ul>
-<li>使用 ~ 操作符在编程代码中规定虚拟根目录,作为项目资源路径根路径，如：var myImagesFolder = “~/images”;</li>
-<li>Href 方法把代码中的路径转换为浏览器能够理解的路径（浏览器无法理解 ~ 操作符），如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@&#123;var myStyleSheet = &quot;~/Shared/Site.css&quot;;&#125;</span><br><span class="line">&lt;!-- 创建指向 CSS 文件的链接 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;@Href(myStyleSheet)&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="page对象"><a class="markdownIt-Anchor" href="#page对象"></a> Page对象</h1>
-<p>Page对象为内置对象，类似与JSP中的Request等对象</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>href</td>
-<td>使用指定的参数构建 URL。</td>
-</tr>
-<tr>
-<td>RenderBody()</td>
-<td>在布局页中，将呈现不在指定部分中的内容页部分。</td>
-</tr>
-<tr>
-<td>RenderPage(page)</td>
-<td>在其他页内呈现某一页的内容。</td>
-</tr>
-<tr>
-<td>RenderSection(section)</td>
-<td>在布局页中，将呈现指定部分的内容。</td>
-</tr>
-<tr>
-<td>Write(object)</td>
-<td>将指定的对象作为 HTML 编码的字符串写入。</td>
-</tr>
-<tr>
-<td>WriteLiteral</td>
-<td>无需先对指定的对象进行 HTML 编码，即可将其写入。</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>isPost</td>
-<td>返回一个值（true 或 false），指示客户端用来请求网页的 HTTP 数据传输方法是否为 POST 请求。</td>
-</tr>
-<tr>
-<td>Layout</td>
-<td>获取或设置布局页的路径。</td>
-</tr>
-<tr>
-<td>Page</td>
-<td>提供对页面、布局页和分页之间共享的页数据的类似属性的访问。</td>
-</tr>
-<tr>
-<td>Request</td>
-<td>获得当前 HTTP 请求的 HttpRequest 对象。</td>
-</tr>
-<tr>
-<td>Server</td>
-<td>获取 HttpServerUtility 对象，该对象所提供的方法能够在网页处理过程中使用。</td>
-</tr>
-</tbody>
-</table>
-<h1 id="web-pages帮助器"><a class="markdownIt-Anchor" href="#web-pages帮助器"></a> Web Pages帮助器</h1>
-<p>Web Helpers 极大地简化了 web 开发和常见的编程任务。其内部实现了表格、图表等内容显示的逻辑及样式，进行了特定封装。</p>
-<h1 id="web-pages参考手册"><a class="markdownIt-Anchor" href="#web-pages参考手册"></a> Web Pages参考手册</h1>
-<p><a href="http://www.w3school.com.cn/aspnet/webpages_ref_classes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/aspnet/webpages_ref_classes.asp</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2099,7 +2050,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2121,7 +2072,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2215,7 +2166,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.7k字</span>
+  <span class="post-count">博客全站共43.9k字</span>
 </div>
 
 
