@@ -2,6 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chetaofeng.github.io/2018/10/02/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91-android%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    
+    <lastmod>2019-02-15T02:54:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-04-git%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2019-02-15T02:50:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React%E5%85%A8%E5%AE%B6%E6%A1%B6/</loc>
+    
+    <lastmod>2019-02-14T09:20:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8%E6%A8%A1%E6%8B%9F%E5%99%A8/</loc>
+    
+    <lastmod>2019-02-14T09:07:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-android%E6%9D%83%E9%99%90%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2019-02-14T09:06:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-AndroidStudio%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E5%8F%8AJavadoc%E7%94%9F%E6%88%90/</loc>
+    
+    <lastmod>2019-02-14T09:05:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-Android%E5%BA%94%E7%94%A8%E5%9D%90%E6%A0%87%E7%B3%BB%E5%8F%8A%E6%A0%8F%E7%9B%AE/</loc>
+    
+    <lastmod>2019-02-14T09:05:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-Android%E4%B8%AD%E4%B8%BB%E9%A2%98-Theme-%E5%92%8C%E6%A0%B7%E5%BC%8F-Style-%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2019-02-14T09:04:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-Android-res%E6%96%87%E4%BB%B6%E5%A4%B9%E8%A7%A3%E6%9E%90/</loc>
+    
+    <lastmod>2019-02-14T09:04:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-android%E4%B8%ADMVP%E6%A8%A1%E5%BC%8F%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2019-02-14T08:58:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-Retrofit/</loc>
+    
+    <lastmod>2019-02-14T08:57:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-Rxjava%E5%92%8Clambda%E8%AF%AD%E6%B3%95/</loc>
+    
+    <lastmod>2019-02-14T08:57:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-android%E4%B8%ADhandler%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2019-02-14T08:50:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/%E5%85%B6%E4%BB%96-svn%E8%BF%81%E7%A7%BB/</loc>
+    
+    <lastmod>2019-02-14T08:24:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-12-10-MongoDB%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2019-02-14T08:23:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-12-10-MongoDB%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2019-02-14T08:23:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL%E4%B8%8EMariaDB%E5%AF%B9%E6%AF%94/</loc>
+    
+    <lastmod>2019-02-14T08:22:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-12-10-MongoDB/</loc>
+    
+    <lastmod>2019-02-14T08:22:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/Linux-%E7%A6%81%E7%94%A8SELinux%E6%97%B6%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E7%B3%BB%E7%BB%9F%E4%B8%8D%E8%83%BD%E5%A4%9F%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-02-14T08:21:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/Linux-RHEL-7-%E4%B8%AD-systemctl-%E7%9A%84%E7%94%A8%E6%B3%95%EF%BC%88%E6%9B%BF%E4%BB%A3service-%E5%92%8C-chkconfig%EF%BC%89/</loc>
+    
+    <lastmod>2019-02-14T08:20:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/Linux-%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</loc>
+    
+    <lastmod>2019-02-14T08:20:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2019/02/14/Linux-CentOS%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2019-02-14T08:19:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/11/26/Linux-CentOS%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/</loc>
+    
+    <lastmod>2019-02-14T08:16:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/12/19/Linux-Shell%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2019-02-14T08:08:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-vue%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2019-02-14T07:58:16.000Z</lastmod>
@@ -12,13 +180,6 @@
     <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-Angular%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2019-02-14T07:36:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/Linux-CentOS%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E/</loc>
-    
-    <lastmod>2019-02-14T06:50:41.000Z</lastmod>
     
   </url>
   
@@ -191,34 +352,6 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/Linux-Shell%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2019-02-14T05:41:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/Linux-RHEL-7-%E4%B8%AD-systemctl-%E7%9A%84%E7%94%A8%E6%B3%95%EF%BC%88%E6%9B%BF%E4%BB%A3service-%E5%92%8C-chkconfig%EF%BC%89/</loc>
-    
-    <lastmod>2019-02-14T05:40:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/Linux-%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</loc>
-    
-    <lastmod>2019-02-14T05:40:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/Linux-%E7%A6%81%E7%94%A8SELinux%E6%97%B6%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E7%B3%BB%E7%BB%9F%E4%B8%8D%E8%83%BD%E5%A4%9F%E5%90%AF%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2019-02-14T05:39:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chetaofeng.github.io/2018/12/19/Linux-%E4%BF%AE%E6%94%B9Root%E5%AF%86%E7%A0%81/</loc>
     
     <lastmod>2019-02-14T05:37:16.000Z</lastmod>
@@ -247,44 +380,9 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/12/19/Linux-CentOS%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF/</loc>
-    
-    <lastmod>2019-02-14T05:34:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chetaofeng.github.io/2018/12/19/Linux-01-linux-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/</loc>
     
     <lastmod>2019-02-14T05:23:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-MySQL%E4%B8%8EMariaDB%E5%AF%B9%E6%AF%94/</loc>
-    
-    <lastmod>2019-02-14T05:22:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-12-10-MongoDB%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2019-02-14T03:05:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-12-10-MongoDB%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2019-02-14T03:04:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2018/12/10/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-12-10-MongoDB/</loc>
-    
-    <lastmod>2019-02-14T03:03:27.000Z</lastmod>
     
   </url>
   
@@ -306,13 +404,6 @@
     <loc>https://chetaofeng.github.io/2018/12/19/%E5%85%B6%E4%BB%96-UML%E7%B1%BB%E5%9B%BE%E5%A4%A7%E5%85%A8/</loc>
     
     <lastmod>2019-02-14T03:00:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2019/02/14/%E5%85%B6%E4%BB%96-svn%E8%BF%81%E7%A7%BB/</loc>
-    
-    <lastmod>2019-02-14T02:56:09.000Z</lastmod>
     
   </url>
   
@@ -387,14 +478,14 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-SpringBoot/</loc>
+    <loc>https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/</loc>
     
     <lastmod>2019-02-14T02:26:41.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/</loc>
+    <loc>https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-SpringBoot/</loc>
     
     <lastmod>2019-02-14T02:26:41.000Z</lastmod>
     
@@ -499,13 +590,6 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-04-git%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2019-02-14T02:07:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chetaofeng.github.io/2018/01/02/%E5%85%B6%E4%BB%96-2019-1-02-iphone8p%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</loc>
     
     <lastmod>2019-02-14T01:57:50.000Z</lastmod>
@@ -548,14 +632,14 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-Razor%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-ASP-NET-WebForms%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-ASP-NET-WebForms%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-Razor%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
     
@@ -590,28 +674,7 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/10/06/%E5%85%B6%E4%BB%96-2018-10-06-ngrok%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-2018-10-26-CommonJS%E8%A7%84%E8%8C%83-AMD-CMD/</loc>
-    
-    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-2018-10-26-ECMAScript%E8%A7%84%E8%8C%83/</loc>
-    
-    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React%E5%85%A8%E5%AE%B6%E6%A1%B6/</loc>
+    <loc>https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
     
@@ -653,7 +716,21 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-2018-10-06-%E5%BE%AE%E4%BF%A1%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%85%B6%E4%BB%96-2018-10-06-ngrok%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-2018-10-26-CommonJS%E8%A7%84%E8%8C%83-AMD-CMD/</loc>
+    
+    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-2018-10-26-ECMAScript%E8%A7%84%E8%8C%83/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
     
@@ -667,6 +744,13 @@
   </url>
   
   <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-2018-10-06-%E5%BE%AE%E4%BF%A1%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</loc>
+    
+    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chetaofeng.github.io/2018/10/05/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-10-05-MySQL%E5%AE%89%E8%A3%85-Windows/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
@@ -674,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
     
@@ -682,13 +766,6 @@
   
   <url>
     <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-Redux%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2019-01-10T16:04:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2019-01-10T16:04:42.000Z</lastmod>
     

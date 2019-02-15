@@ -117,7 +117,7 @@
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/git2.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/github%E8%AE%BE%E7%BD%AE.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png">
-<meta property="og:updated_time" content="2019-02-14T02:07:34.000Z">
+<meta property="og:updated_time" content="2019-02-15T02:50:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git安装配置">
 <meta name="twitter:description" content="简介 官网：https://git-scm.com/ Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 详细学习，推荐：  http:">
@@ -487,7 +487,7 @@ ssh-keygen(选项)</li>
 <p>多账号配置是通过.ssh文件夹下config文件实现，操作如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; touch ~/.ssh/config </span><br><span class="line">&gt; chmod 600 ~/.ssh/config </span><br><span class="line"></span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.github -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitee -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitlab -t rsa -C &quot;chetaofeng@163.com&quot;</span><br></pre></td></tr></table></figure>
 <p>config文件内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa.github</span><br><span class="line"></span><br><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">     HostName gitee.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitee</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.com</span><br><span class="line">     HostName gitlab.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitlab</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa.github</span><br><span class="line"></span><br><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">     HostName gitee.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitee</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.com</span><br><span class="line">     HostName gitlab.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitlab</span><br><span class="line">     </span><br><span class="line"># gitlab-公司内网</span><br><span class="line">Host gsunis.net</span><br><span class="line">  HostName 47.94.*.*</span><br><span class="line">  PreferredAuthentications publickey</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa.gitlab_local</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Host： 是我们在输入命令的时候的名字 比如我这里是lab  那么我使用ssh命令的时候需要使用 ssh lab</li>
 <li>HostName： 是目标主机的主机名，也就是平时我们使用ssh后面跟的地址名称。</li>
@@ -560,7 +560,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-04-git安装配置/">git安装配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年02月14日 - 10:02</p>
+  <p><span>最后更新:</span>2019年02月15日 - 10:02</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-04-git安装配置/" title="git安装配置">https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/"  aria-label="复制成功！"></i></span>
   </p>
@@ -755,7 +755,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -766,7 +766,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -777,7 +777,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -887,7 +887,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.4k字</span>
+  <span class="post-count">博客全站共109.0k字</span>
 </div>
 
 

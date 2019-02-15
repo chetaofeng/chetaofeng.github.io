@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-XShell使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-05-node安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/Linux-XShell使用/" itemprop="url">XShell使用</a></h2>
+                <a class="post-title-link" href="/2018/12/19/环境搭建-05-node安装/" itemprop="url">node安装配置</a></h2>
         
 
         <div class="post-meta">
@@ -378,8 +378,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
                   </a>
                 </span>
 
@@ -417,528 +417,260 @@
       
         
           
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<blockquote>
-<p>Xshell是一款服务器终端模拟软件，用户可以使用Xshell软件在Windows、Mac OS电脑上访问不同系统的服务器主机，让你可以方便对其进行控制管理。</p>
-</blockquote>
-<blockquote>
-<p>创新的设计和优良的体验，让用户以最高效率对服务器进行管理</p>
-</blockquote>
-<h1 id="功能特色"><a class="markdownIt-Anchor" href="#功能特色"></a> 功能特色</h1>
+            <h1 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h1>
+<p>nodejs：在项目开发时的所需要的代码库<br>
+nvm：nodejs 版本管理工具。<br>
+npm：nodejs包管理工具，在安装的 nodejs 的时候，npm也会跟着一起安装，它是包管理工具，管理nodejs中的第三方插件<br>
+yarn：Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ， 是为了弥补 npm 的一些缺陷而出现的<br>
+即：一个nvm可以管理多个node版本和npm版本</p>
+<h1 id="nvm安装"><a class="markdownIt-Anchor" href="#nvm安装"></a> nvm安装</h1>
+<p>官网： <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a><br>
+安装：curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh</a> | bash<br>
+安装完成后的提示界面会有类似一下的提示信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br></pre></td></tr></table></figure>
+<p>在~/.bash_profile中添加以上内容(如果没有这个文件则创建)后保存；通过source ~/.bash_profile使设置生效。<br>
+安装完成后关闭终端，重新打开终端输入 nvm 验证一下是否安装成功</p>
+<p>注：curl看系统是否已安装，如果没有安装则：sudo apt-get install curl</p>
+<h1 id="nvm常用命令"><a class="markdownIt-Anchor" href="#nvm常用命令"></a> nvm常用命令</h1>
+<p>nvm install stable ## 安装最新稳定版 node，当前是node v9.5.0 (npm v5.6.0)<br>
+nvm install <version> ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4<br>
+nvm uninstall <version> ## 删除已安装的指定版本，语法与install类似<br>
+nvm use <version> ## 切换使用指定的版本node<br>
+nvm ls ## 列出所有安装的版本<br>
+nvm ls-remote ## 列出所有远程服务器的版本（官方node version list）<br>
+nvm current ## 显示当前的版本<br>
+nvm alias <name> <version> ## 给不同的版本号添加别名<br>
+nvm unalias <name> ## 删除已定义的别名<br>
+nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包</version></name></version></name></version></version></version></p>
+<h1 id="nvm安装node"><a class="markdownIt-Anchor" href="#nvm安装node"></a> nvm安装node</h1>
+<p>nvm install stable</p>
+<h1 id="yarn"><a class="markdownIt-Anchor" href="#yarn"></a> yarn</h1>
+<p>快速、可靠、安全的依赖管理工具</p>
+<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
+<p>brew install yarn<br>
+brew install yarn --without-node</p>
+<h1 id="yarn和npm命令对比"><a class="markdownIt-Anchor" href="#yarn和npm命令对比"></a> Yarn和npm命令对比</h1>
+<table>
+<thead>
+<tr>
+<th>npm</th>
+<th>yarn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm install</td>
+<td>yarn install</td>
+</tr>
+<tr>
+<td>npm install react --save</td>
+<td>yarn add react</td>
+</tr>
+<tr>
+<td>npm uninstall react --save</td>
+<td>yarn remove react</td>
+</tr>
+<tr>
+<td>npm install react --save-dev</td>
+<td>yarn add react --dev</td>
+</tr>
+<tr>
+<td>npm update --save</td>
+<td>yarn upgrade</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-06-Java安装/" itemprop="url">JDK安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- oracle官网账号：  chetaofeng@163.com / Chetaofeng123./ --> 
+<h1 id="jdk下载"><a class="markdownIt-Anchor" href="#jdk下载"></a> JDK下载</h1>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<h1 id="环境变量设置说明"><a class="markdownIt-Anchor" href="#环境变量设置说明"></a> 环境变量设置说明</h1>
+<p>（jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置）</p>
 <ul>
-<li>可以保存多个vps登陆信息，免去每次输入的烦恼</li>
-<li>设置命令快捷按钮</li>
-<li>通过代理登陆vps</li>
-<li>鼠标右键粘贴可将本地粘贴板内容复制到vps</li>
+<li>CLASS_PATH 保证class文件能够在任意目录下运行</li>
+<li>PATH 保证javac可以在任意目录下运行</li>
 </ul>
-<h1 id="xshell-注册说明"><a class="markdownIt-Anchor" href="#xshell-注册说明"></a> Xshell 注册说明</h1>
+<h1 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h1>
+<p>环境变量配置文件执行的顺序：<br>
+/etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc<br>
+/etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。</p>
+<p>下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过，</p>
+<p>配置环境变量的方式：</p>
 <ol>
-<li>公司名字随便填</li>
-<li>注册码 690313-111999-999313</li>
+<li>找到JDK安装目录，如：</li>
 </ol>
-<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
-<p>安装完成之后键盘输入无反应，解决方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件--属性--终端--编码 改成Unicode(UTF-8)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-cat和EOF的使用-action用法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-cat和EOF的使用-action用法/" itemprop="url">cat和EOF的使用+action用法</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<ul>
-<li>cat：用于显示文本文件内容，全部输出</li>
-<li>EOF： “end of file”，表示文本结束符</li>
-</ul>
-<blockquote>
-<p>EOF“通常与”&lt;&lt;“结合使用，“&lt;&lt;EOF“表示后续的输入作为子命令或子shell的输入，直到遇到”EOF“，再次返回到主调shell，可将其理解为分界符（delimiter）</p>
-</blockquote>
-<blockquote>
-<p>当shell看到”&lt;&lt;“知道其后面输入的分界符，当shell再次看到分界符时，两个分界符中间的部分将作为标准输入,其使用形式如下：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">交互式程序(命令)&lt;&lt;EOF</span><br><span class="line">command1</span><br><span class="line">command2</span><br><span class="line">...</span><br><span class="line">EOF     //最后的”EOF“必须单独占一行，必须顶行写，前面不能用制表符或者空格</span><br></pre></td></tr></table></figure>
-<h1 id="cateof的使用"><a class="markdownIt-Anchor" href="#cateof的使用"></a> cat+EOF的使用</h1>
-<blockquote>
-<p>第一种形式和第二种形式没有什么本质的区别，第一种形式将内容直接输出到标准输出（屏幕），而第二种形式将标准输出进行重定向，将本应输出到屏幕的内容重定向到文件</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>编辑文件~/.bash_profile 文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line"></span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使配置生效：source .bash_profile</li>
+<li>输入 echo $JAVA_HOME 显示刚才配置的路径</li>
+<li>验证安装</li>
+</ol>
+<h1 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h1>
+<p>安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载</p>
 <ol>
-<li>cat&lt;&lt;EOF</li>
-<li>cat&lt;<eof>filename或者cat&gt;&gt;filename&lt;&lt;EOF</eof></li>
+<li>下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹</li>
+<li>sudo mkdir /usr/java</li>
+<li>sudo cp -r jdk1.8.0_77/ /usr/java/</li>
+<li>配置环境变量,sudo vim /etc/profile,在前面添加</li>
 </ol>
-<p>==说明==：关于“&gt;”、“&gt;&gt;”、“&lt;”、“&lt;&lt;”等的意思，请自行查看bash的介绍</p>
-<h1 id="eof与-eof的区别"><a class="markdownIt-Anchor" href="#eof与-eof的区别"></a> EOF与-EOF的区别</h1>
-<blockquote>
-<p>如果结束分解符EOF前有制表符或者空格，则EOF不会被当做结束分界符，只会继续被当做stdin来输入。<br>
-而&lt;&lt;-就是为了解决这一问题:</p>
-</blockquote>
-<blockquote>
-<p>如果重定向的操作符是&lt;&lt;-，那么分界符（EOF）所在行的开头部分的制表符（Tab）都将被去除</p>
-</blockquote>
-<hr>
-<h1 id="action-bintrue-的用法"><a class="markdownIt-Anchor" href="#action-bintrue-的用法"></a> action  “” /bin/true 的用法</h1>
-<blockquote>
-<p>action是个bash的函数.true命令啥都不做，只设置退出码为0</p>
-</blockquote>
-<blockquote>
-<p>使用举例：==action “操作成功！” /bin/true==</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Run some action. Log its output.</span><br><span class="line">action() &#123;</span><br><span class="line">  local STRING rc</span><br><span class="line"></span><br><span class="line">  STRING=$1</span><br><span class="line">  echo -n &quot;$STRING &quot;</span><br><span class="line">  shift</span><br><span class="line">  &quot;$@&quot; &amp;&amp; success $&quot;$STRING&quot; || failure $&quot;$STRING&quot;</span><br><span class="line">  rc=$?</span><br><span class="line">  echo</span><br><span class="line">  return $rc</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-linux-磁盘分区工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-linux-磁盘分区工具/" itemprop="url">linux 磁盘分区工具</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>GParted是一款linux下的功能非常强大的分区工具，和windows下的‘分区魔术师’类似，操作和显示上也很相似。GParted可以方便的创建、删除分区，也可以调整分区的大小和移动分区的位置。GParted支持多种linux下常见的分区格式，包括ext2、ext4、fat、hfs、jfs、reiser4、reiserfs、xfs，甚至ntfs。另外官方还提供了 LiveCD 和 LiveUSB 版本的 GParted，方便在没有主系统的情况下对硬盘进行分区！<br>
-GParted可以用于创建、删除、移动分区，调整分区大小，检查、复制分区等操作。可以用于调整分区已安装新操作系统、备份特定分区到另一块硬盘等。 　　<br>
-GParted使用libparted来识别、调整分区表，并有各个文件系统工具来处理分区上的文件系统。这些文件系统工具并不是必须的，但要处理一中文件系统就必须先安装相应的工具。 　　<br>
-GParted使用C++写成，使用gtkmm提供GTK+界面。 　　<br>
-GParted项目还提供了一个包含GParted和全部文件系统工具的Live CD，也可以制作成Live USB或使用其他介质。这个Live CD系统基于Debian GNU/Linux。其它Linux Live CD版本也大多包含GParted，如Knoppix等。</p>
-<p>运行环境：Win2003,WinXP,Win2000,Win9X软件大小：140.3 MB</p>
-<p>下载地址：<br>
-<a href="http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b" target="_blank" rel="noopener">http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-修改Root密码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-修改Root密码/" itemprop="url">CentOS修改Root密码</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>进入单用户模式<br>
-开机按ESC，选择内核后按e，后选择Kernerl再按e，在“&lt;rhgb quiet”后输入空格1或s或S或Single回车，按b键重启进入命令行模式</li>
-<li>修改密码：passwd root</li>
-<li>重启：init 5</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_77</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>source /etc/profile 使配置立即生效</li>
+<li>检查新安装的jdk:java -version;java;javac</li>
 </ol>
 
           
@@ -997,7 +729,7 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-07-CentOS系统初始设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1016,7 +748,7 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/" itemprop="url">使用Vundle管理配置Vim基本插件</a></h2>
+                <a class="post-title-link" href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" itemprop="url">CentOS安装设置</a></h2>
         
 
         <div class="post-meta">
@@ -1051,8 +783,8 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
                   </a>
                 </span>
 
@@ -1090,60 +822,416 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
       
         
           
-            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>官网：<a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim</a></p>
-<blockquote>
-<p>Vundle是基于Git仓库的插件管理软件。Vundle将插件的安装简化为类似yum软件安装的过程</p>
-</blockquote>
-<blockquote>
-<p>其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下</p>
-</blockquote>
-<h1 id="配置说明"><a class="markdownIt-Anchor" href="#配置说明"></a> 配置说明</h1>
+            <p><a href="https://blog.csdn.net/ganeshys2017/article/details/81300246" target="_blank" rel="noopener">https://blog.csdn.net/ganeshys2017/article/details/81300246</a></p>
+<p><a href="http://www.cnblogs.com/linnuo/p/6257204.html" target="_blank" rel="noopener">http://www.cnblogs.com/linnuo/p/6257204.html</a></p>
+<p><a href="https://blog.csdn.net/lwwl12/article/details/78247307" target="_blank" rel="noopener">https://blog.csdn.net/lwwl12/article/details/78247307</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" itemprop="url">Ubuntu系统安装后的设置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="修改默认源为国内源"><a class="markdownIt-Anchor" href="#修改默认源为国内源"></a> 修改默认源为国内源</h1>
 <ol>
-<li>在Github vim-scripts 用户下的repos,只需要写出repos名称</li>
-<li>在Github其他用户下的repos, 需要写出”用户名/repos名”</li>
-<li>不在Github上的插件，需要写出git全路径</li>
+<li>cd /etc/apt</li>
+<li>cp /etc/apt/sources.list /etc/apt/sources.list.bak   备份/etc/apt/sources.list</li>
+<li>在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源：</li>
 </ol>
-<p>具体步骤：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#添加阿里源</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>更新源</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+<h1 id="系统分辨率设置"><a class="markdownIt-Anchor" href="#系统分辨率设置"></a> 系统分辨率设置</h1>
+<p>安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改：</p>
 <ol>
-<li>需要有git环境，CentOS7自带，可通过git命令查看</li>
-<li>安装Vundle：git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim.git</a> ~/.vim/bundle/Vundle.vim</li>
-<li>修改.vimrc／vimrc文件，在CentOS7中是vimrc文件，修改前先备份.</li>
+<li>首先打开终端Terminal，输入: sudo apt-get install xdiagnose</li>
+<li>sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】</li>
+<li>sudo reboot 重启系统</li>
+<li>再次打开设置发现分辨率可以设置了,如设置为：1280*800</li>
 </ol>
+<h1 id="chrome浏览器安装"><a class="markdownIt-Anchor" href="#chrome浏览器安装"></a> chrome浏览器安装</h1>
 <ul>
-<li>将以下内容放置到文件最开头，最小配置如下：</li>
+<li>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="noopener">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></li>
+<li>sudo dpkg -i google-chrome-stable_current_amd64.deb</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">set nocompatibl </span><br><span class="line">filetype off</span><br><span class="line"></span><br><span class="line">set rtp+=~/.vim/bundle/Vundle.vim</span><br><span class="line"></span><br><span class="line">call vundle#begin()</span><br><span class="line"></span><br><span class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</span><br><span class="line"></span><br><span class="line">call vundle#end()</span><br><span class="line"></span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
-<p>在Plugin之后，添加自己想要安装的插件<br>
-4. 插件安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在vim中</span><br><span class="line">:PluginInstall</span><br><span class="line"></span><br><span class="line"># 在终端</span><br><span class="line">vim +PluginInstall +qall</span><br></pre></td></tr></table></figure>
-<h1 id="命令说明"><a class="markdownIt-Anchor" href="#命令说明"></a> 命令说明</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:PluginList -列举出列表中(.vimrc中)配置的所有插件</span><br><span class="line">:PluginInstall -安装列表中全部插件</span><br><span class="line">:PluginInstall! -更新列表中全部插件</span><br><span class="line">:PluginSearch foo -查找foo插件</span><br><span class="line">:PluginSearch! foo -刷新foo插件缓存</span><br><span class="line">:PluginClean -清除列表中没有的插件</span><br><span class="line">:PluginClean! -清除列表中没有的插件</span><br></pre></td></tr></table></figure>
-<h1 id="常用插件说明"><a class="markdownIt-Anchor" href="#常用插件说明"></a> 常用插件说明</h1>
-<ul>
-<li>rename.vim：在Vim中为文件重命名。</li>
-<li>vim-coffee-script：在Vim中舒心 的编写、编译Coffeescript。</li>
-<li>vim-mkdir：当你在Vim中新建文件的时候， 自动帮你创建不存在的目录。</li>
-<li>vim-surround：快速的删除、修改和添加 括号、引号、XML标签等等。</li>
-<li>matchit：用%去在两个对应的字符间跳转。</li>
-<li>tComment：快速注释、反注释代码。</li>
-<li>emmet-vim：Emmet的Vim版。</li>
-<li>tabular：快速对齐。</li>
-<li>snipmate.vim：快速的代码片段。</li>
-<li>vim-easymotion：在文件中快速定位。</li>
-<li>vim-instant-markdown：Vim中对</li>
-<li>Markdown文档的实时预览。</li>
-<li>NERDTree:一个用于浏览文件系统的树形资源管理外挂,它可以让你像使用Windows档案总管一样在VIM中浏览文件系统并且打开文件或目录</li>
-<li>MiniBufExplorer:提供多文件同时编辑功能，并在编辑器上方显示文件的标签</li>
-<li>一款状态栏增强插件，可以让你的Vim状态栏非常的美观，同时包括了buffer显示条扩展smart tab line以及集成了一些插件</li>
-<li></li>
-</ul>
-<h1 id="网络上配置收藏"><a class="markdownIt-Anchor" href="#网络上配置收藏"></a> 网络上配置收藏</h1>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-09-JetBrains系列软件安装使用/" itemprop="url">JetBrains系列软件安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="软件破解"><a class="markdownIt-Anchor" href="#软件破解"></a> 软件破解</h1>
+<p>软件破解请参考： <a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
 <ol>
-<li><a href="https://github.com/deepzz0/dotfiles/blob/master/.vimrc" target="_blank" rel="noopener">https://github.com/deepzz0/dotfiles/blob/master/.vimrc</a></li>
-<li></li>
+<li>使用前请将“0.0.0.0 <a href="http://account.jetbrains.com" target="_blank" rel="noopener">account.jetbrains.com</a>”添加到hosts文件中</li>
+<li>在网页获取注册码，在注册页面填入注册码即可</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">if &amp;compatible</span><br><span class="line">  set nocompatible</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">filetype off</span><br><span class="line">set rtp+=~/.vim/bundle/vundle/</span><br><span class="line">call vundle#rc()</span><br><span class="line"></span><br><span class="line">&quot; Let Vundle manage Vundle</span><br><span class="line">Bundle &apos;gmarik/vundle&apos;</span><br><span class="line"></span><br><span class="line">&quot; Define bundles via Github repos</span><br><span class="line">Bundle &apos;christoomey/vim-run-interactive&apos;</span><br><span class="line">Bundle &apos;croaky/vim-colors-github&apos;</span><br><span class="line">Bundle &apos;danro/rename.vim&apos;</span><br><span class="line">Bundle &apos;kchmck/vim-coffee-script&apos;</span><br><span class="line">Bundle &apos;kien/ctrlp.vim&apos;</span><br><span class="line">Bundle &apos;pbrisbin/vim-mkdir&apos;</span><br><span class="line">Bundle &apos;scrooloose/syntastic&apos;</span><br><span class="line">Bundle &apos;slim-template/vim-slim&apos;</span><br><span class="line">Bundle &apos;thoughtbot/vim-rspec&apos;</span><br><span class="line">Bundle &apos;tpope/vim-bundler&apos;</span><br><span class="line">Bundle &apos;tpope/vim-endwise&apos;</span><br><span class="line">Bundle &apos;tpope/vim-fugitive&apos;</span><br><span class="line">Bundle &apos;tpope/vim-rails&apos;</span><br><span class="line">Bundle &apos;tpope/vim-surround&apos;</span><br><span class="line">Bundle &apos;vim-ruby/vim-ruby&apos;</span><br><span class="line">Bundle &apos;vim-scripts/ctags.vim&apos;</span><br><span class="line">Bundle &apos;vim-scripts/matchit.zip&apos;</span><br><span class="line">Bundle &apos;vim-scripts/tComment&apos;</span><br><span class="line">Bundle &quot;mattn/emmet-vim&quot;</span><br><span class="line">Bundle &quot;scrooloose/nerdtree&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-powerline&quot;</span><br><span class="line">Bundle &quot;godlygeek/tabular&quot;</span><br><span class="line">Bundle &quot;msanders/snipmate.vim&quot;</span><br><span class="line">Bundle &quot;jelera/vim-javascript-syntax&quot;</span><br><span class="line">Bundle &quot;altercation/vim-colors-solarized&quot;</span><br><span class="line">Bundle &quot;othree/html5.vim&quot;</span><br><span class="line">Bundle &quot;xsbeats/vim-blade&quot;</span><br><span class="line">Bundle &quot;Raimondi/delimitMate&quot;</span><br><span class="line">Bundle &quot;groenewege/vim-less&quot;</span><br><span class="line">Bundle &quot;evanmiller/nginx-vim-syntax&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-easymotion&quot;</span><br><span class="line">Bundle &quot;tomasr/molokai&quot;</span><br><span class="line"></span><br><span class="line">if filereadable(expand(&quot;~/.vimrc.bundles.local&quot;))</span><br><span class="line">  source ~/.vimrc.bundles.local</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">filetype on</span><br></pre></td></tr></table></figure>
+<h1 id="android-studio安装"><a class="markdownIt-Anchor" href="#android-studio安装"></a> Android Studio安装</h1>
+<p>以下为相关软件下载，2／3中软件为采用第三方模拟器的时候需要下载，利用自带模拟器则可跳过下载</p>
+<ol>
+<li>下载Android Studio安装软件： <a href="https://developer.android.google.cn/studio/#downloads" target="_blank" rel="noopener">https://developer.android.google.cn/studio/#downloads</a></li>
+<li>下载virtualbox： <a href="https://www.virtualbox.org/wiki/Linux_Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Linux_Downloads</a></li>
+<li>下载Genymotion： <a href="https://www.genymotion.com/download" target="_blank" rel="noopener">https://www.genymotion.com/download</a></li>
+</ol>
+<p>安装前请确保网络状态良好，现在安装Android Studio，所需Android SDK、自带模拟器镜像、gradle等都可以在线直接通过开发工具下载安装</p>
+<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
+<p>直接安装dmg安装包即可</p>
+<h2 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h2>
+<ol>
+<li>进入安装包所在目录下，如：android-studio-ide-181.5056338-linux.zip</li>
+<li>sudo mkdir /usr/JetBrains</li>
+<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains</li>
+<li>cd /usr/JetBrains</li>
+<li>sudo unzip  android-studio-ide-181.5056338-linux.zip</li>
+<li>cd android-studio/bin</li>
+<li>命令行启动AndroidStuido： ./studio.sh，正常的话应该会出现软件的配置设置</li>
+<li>软件启动，因为没有Android SDK，会弹出提示界面，点击cancle之后会自动下载Android SDK，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+</ol>
+<p>设置启动图标启动Android Studio</p>
+<ol>
+<li>sudo vim /usr/share/applications/android-studio.desktop</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=Android Studio</span><br><span class="line">Comment=Android Studio Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/android-studio/bin/studio.png</span><br><span class="line">Exec=/usr/JetBrains/android-studio/bin/studio.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在启动器别表即可找到Android Studio启动图标，点击启动即可</li>
+</ol>
+<h1 id="模拟器"><a class="markdownIt-Anchor" href="#模拟器"></a> 模拟器</h1>
+<p>Android程序调试可通过真机、自带模拟器、第三方模拟器调试</p>
+<p>第三方模拟器大多使用Genymotion，官网下载：<a href="https://www.genymotion.com/download/" target="_blank" rel="noopener">https://www.genymotion.com/download/</a><br>
+android Studio安装Genymotion插件使用</p>
+<h2 id="安装过程遇到的问题"><a class="markdownIt-Anchor" href="#安装过程遇到的问题"></a> 安装过程遇到的问题</h2>
+<ol>
+<li>
+<p>linux中启动模拟器出现grant current user access to /dev/kvm错误<br>
+解决方法：打开terminal,输入代码who／whoami查找当前用户名；sudo chown username -R /dev/kvm 注意username是你用的用户名</p>
+</li>
+<li>
+<p>无法修改模拟器创建时的选项 emulated performance<br>
+解决方法： Nexus 5X和Nexus 5镜像不支持，换成其他镜像即可</p>
+</li>
+</ol>
+<p><a href="https://blog.csdn.net/wshish920907/article/details/78249528" target="_blank" rel="noopener">https://blog.csdn.net/wshish920907/article/details/78249528</a></p>
+<h1 id="intelij-idea安装"><a class="markdownIt-Anchor" href="#intelij-idea安装"></a> InteliJ IDEA安装</h1>
+<p>下载地址：<a href="http://www.jetbrains.com/idea/?fromMenu" target="_blank" rel="noopener">http://www.jetbrains.com/idea/?fromMenu</a></p>
+<h2 id="linux系统-2"><a class="markdownIt-Anchor" href="#linux系统-2"></a> Linux系统</h2>
+<ol>
+<li>进入安装包所在目录下，如：ideaIU-2016.1.2.tar.gz</li>
+<li>sudo cp android-studio-ide-181.5056338-linux.zip /usr/JetBrains，如果没有JetBrains则自己创建</li>
+<li>cd /usr/JetBrains</li>
+<li>sudo tar -zxvf ideaIU-2016.1.2.tar.gz</li>
+<li>sudo mv idea-IU-145.971.21 idea</li>
+<li>cd idea/bin</li>
+<li>命令行启动Idea： ./idea.sh，正常的话应该会出现软件的配置设置</li>
+<li>软件启动，创建任意Java程序，配置JDK路径，然后创建测试项目，过程中运行所需资源都会自动下载，耐心等待即可</li>
+</ol>
+<p>设置启动图标启动Idea</p>
+<ol>
+<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=InteliJ IDEA</span><br><span class="line">Comment=InteliJ IDEA Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/idea/bin/idea.png</span><br><span class="line">Exec=/usr/JetBrains/idea/bin/idea.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在启动器别表即可找到InteliJ IDEA启动图标，点击启动即可</li>
+</ol>
+<h1 id="webstorm安装"><a class="markdownIt-Anchor" href="#webstorm安装"></a> WebStorm安装</h1>
+<p>下载地址：<a href="http://www.jetbrains.com/webstorm/download/#section=linux" target="_blank" rel="noopener">http://www.jetbrains.com/webstorm/download/#section=linux</a></p>
+<p>webstorm安装请参考AndroidStudio和IDEA</p>
+<p>设置启动图标启动Idea</p>
+<ol>
+<li>sudo vim /usr/share/applications/idea.desktop，当然软件启动后也会提示是否创建快捷访问链接，可通过IDEA创建启动图标</li>
+<li>编辑文件内容：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=WebStorm</span><br><span class="line">Comment=WebStorm Integrated Development Environment</span><br><span class="line">Icon=/usr/JetBrains/WebStorm/bin/webstorm.png</span><br><span class="line">Exec=/usr/JetBrains/WebStorm/bin/webstorm.sh</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1488,6 +1576,1127 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-Shell编程入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-Shell编程入门/" itemprop="url">Shell编程入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="认识shell环境"><a class="markdownIt-Anchor" href="#认识shell环境"></a> 认识Shell环境</h1>
+<ul>
+<li>Shell是工作在Linux内核与用户之间的==解释程序==，相当于操作系统的“外壳”，是向Linux内核传达用户指令的“翻译官”，通常指BASH（/bin/bash）,常见的还有zsh、tcsh，用于和操作系统内核交互，操作系统内核控制底层硬件</li>
+<li>windows下的Shell为cmd.exe</li>
+<li>查看当前的Shell的命令为：echo $SHELL</li>
+<li>可以手动选择Shell环境，直接在Shell中输入shell如：tcsh，相当于新建了一个子环境（父–子进程）</li>
+<li>shell操作有交互式和非交互式两种</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>交互式</th>
+<th>非交互式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人工干预、智能化程度低</td>
+<td>需提前设计、智能化难度大</td>
+</tr>
+<tr>
+<td>逐条解释执行、效率低</td>
+<td>批量执行、效率高</td>
+</tr>
+<tr>
+<td></td>
+<td>方便在后台静悄悄地运行</td>
+</tr>
+</tbody>
+</table>
+<h1 id="shell脚本"><a class="markdownIt-Anchor" href="#shell脚本"></a> shell脚本</h1>
+<ul>
+<li>shell脚本指提前写好的可执行代码，用来完成特定任务的文件，特点为：顺序、批处理，解释型程序</li>
+<li>shell脚本编写步骤：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>1. 理清任务</th>
+<th>自然语言：步骤拆分、顺序化整理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2. 编写可执行语句</td>
+<td>脚本语言：各步骤如何实现</td>
+</tr>
+<tr>
+<td>3. 完善脚本</td>
+<td>界面友好／结构规范／代码优化</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>shell脚本一般以.sh结尾，==第一行 #!/bin/bash== 用来申明Shell环境</p>
+</li>
+<li>
+<p>shell脚本的免交互及输出处理</p>
+<ul>
+<li>免交互：通过选项 ==–stdin== 可以从标准输入读取字串；也可以从键盘或由另一个命令给出</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 修改root密码</span><br><span class="line">passwd --stdin root     //从键盘读入</span><br><span class="line">echo 1234567 | passwd --stdin root  //由echo命令给出</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>输出处理：</p>
+<ul>
+<li>忽略无关输出:黑洞设备/dev/null</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相当于只能写入、不能读出的单向文件；存放到其中的数据都会丢失，用法：可执行语句 &amp;&gt; /dev/null，如：</span><br><span class="line">echo 1234567 | passwd --stdin root &amp;&gt; /dev/null</span><br></pre></td></tr></table></figure>
+<ul>
+<li>记录错误输出：根据需要，将出错信息保存到指定文件</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">是针对后台脚本的有效排错手段，适用于不便交互但又需要查看报错的情况，用法：可执行语句 2&gt;/路径／文件，如：</span><br><span class="line">useradd root 2&gt;/tmp/err.log</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>命令的组合运用</p>
+<ul>
+<li>顺序分割–==使用分号==，格式：命令1；命令2；命令3…,依次执行，只有先后，没有逻辑关系</li>
+<li>逻辑“与”分割–==使用&amp;&amp;==，格式：命令1 &amp;&amp; 命令2 &amp;&amp; 命令3…,逻辑关系为“而且”（and），期望所有命令都能执行成功，一旦出现失败，后续命令不再执行</li>
+<li>逻辑“或”分割–==使用||==，格式：命令1 || 命令2 || 命令3…,逻辑关系为“或者”（or），任何一条成功都符合期望，只在前面的命令失败时，后续命令才执行</li>
+<li>管道–==使用|==，格式：命令1|命令2，后续命令要能正确处理传来的文本，否则无意义，如：</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /etc -type f | wc -l   //计算／etc下文件数量，将结果交给wc统计行数</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>shell脚本的运行方式</p>
+<ul>
+<li>作为指定shell解释程序的参数</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-sh 代码文件路径    ===     bash 代码文件路径</span><br><span class="line">-.  代码文件路径    ===     source  代码文件路径</span><br></pre></td></tr></table></figure>
+<ul>
+<li>作为可独立运行的脚本程序</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">为shell代码文件添加x权限，指定脚本路径即可运行.如：</span><br><span class="line">chmod +x ／root／first.sh；/root/first.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="标准输入输出和重定向"><a class="markdownIt-Anchor" href="#标准输入输出和重定向"></a> 标准输入输出和重定向</h1>
+<blockquote>
+<p>Unix/Linux基本思想：普通文件、目录、鼠标、键盘…都是以文件形式存在；要访问硬件设备，必须找对应的设备文件</p>
+</blockquote>
+<p>I/O交互设备</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>设备文件</th>
+<th>文件描述号</th>
+<th>默认设备</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准输入</td>
+<td>/dev/stdin</td>
+<td>0</td>
+<td>键盘</td>
+<td>从此设备接收用户输入的数据</td>
+</tr>
+<tr>
+<td>标准输出</td>
+<td>/dev/stdout</td>
+<td>1</td>
+<td>显示器</td>
+<td>通过此设备向用户报告正常的命令输出结果</td>
+</tr>
+<tr>
+<td>标准错误输出</td>
+<td>/dev/stderr</td>
+<td>2</td>
+<td>显示器</td>
+<td>通过此设备报告执行中的错误信息</td>
+</tr>
+</tbody>
+</table>
+<p>重定向：重新指定命令执行是I/O设备的方向</p>
+<p>根据I／O方向和类型区分</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>操作符</th>
+<th>用途</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重定向输入</td>
+<td>&lt;</td>
+<td>将文本输入来源由键盘改为指定的文件</td>
+<td>mial -s ‘A Test Mail’ root@localhost &lt; /root/mail.txt</td>
+</tr>
+<tr>
+<td>重定向输出</td>
+<td>&gt;</td>
+<td>将命令行的正常输出保存到文件，而非显示器</td>
+<td>echo ‘nameserver 8.8.8.8’ &gt; /etc/resolv.conf</td>
+</tr>
+<tr>
+<td>重定向输出</td>
+<td>&gt;&gt;</td>
+<td>与“&gt;”类似，但操作是追加而不是覆盖</td>
+<td></td>
+</tr>
+<tr>
+<td>重定向错误</td>
+<td>2&gt;</td>
+<td>将命令行的错误输出保存到文件，而非显示器</td>
+<td></td>
+</tr>
+<tr>
+<td>重定向错误</td>
+<td>2&gt;&gt;</td>
+<td>与“2&gt;”类似，但操作是追加而不是覆盖</td>
+<td></td>
+</tr>
+<tr>
+<td>混合重定向</td>
+<td>&amp;&gt;</td>
+<td>相当于“&gt;”和“2&gt;”</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="脚本逻辑"><a class="markdownIt-Anchor" href="#脚本逻辑"></a> 脚本逻辑</h1>
+<h2 id="变量值及范围控制"><a class="markdownIt-Anchor" href="#变量值及范围控制"></a> 变量值及范围控制</h2>
+<ol>
+<li>引号在赋值中的应用</li>
+</ol>
+<ul>
+<li>双引号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 在双引号内允许$扩展，可调用其他变量的值</span><br><span class="line">- 出现特殊字符时，可采用\符号转义</span><br><span class="line">- 当变量值不包括空格、制表符时，双引号通常被省略，如：A=CentOS7</span><br></pre></td></tr></table></figure>
+<ul>
+<li>单引号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 所有字符均视为该字符本身（无特殊含义）</span><br><span class="line">- 不允许\转义</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>read读入变量值</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 基本格式</span><br><span class="line"> - read 变量名.. ..</span><br><span class="line"> - read -p &quot;提示信息&quot; 变量名 .. ..  //read -p &quot;svr5 login&quot; YOUR_NAME</span><br><span class="line"> - 启用read命令的 -s 选项，可关闭输入回显，适合敏感信息，提高安全性，如密码</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>变量的作用范围</li>
+</ol>
+<ul>
+<li>局部变量：只在定义此变量的shell环境有效；自定义变量默认都是局部变量</li>
+<li>全局变量：在当前shell及所有子shell环境下有效；子shell中若赋值同名变量，与父shell中变量无关</li>
+</ul>
+<p>发布全局变量</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export 局部变量名[=变量值] .. ..</span><br><span class="line"> - 直接定义／赋值指定的变量，作为全局变量发布</span><br><span class="line"> - 对已有的局部变量，只需发布不需赋值</span><br></pre></td></tr></table></figure>
+<h2 id="数值运算及处理"><a class="markdownIt-Anchor" href="#数值运算及处理"></a> 数值运算及处理</h2>
+<blockquote>
+<p>bash内置机制仅支持整数运算</p>
+</blockquote>
+<h3 id="基本运算类别"><a class="markdownIt-Anchor" href="#基本运算类别"></a> 基本运算类别</h3>
+<p>加减乘除求模  ±*／%</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. expr工具：==expr 数值1 运算符 数值2==  </span><br><span class="line">乘法操作需转义</span><br><span class="line">2. 使用$[]表达式： ==$[数值1 运算符 数值2]==  </span><br><span class="line">* 乘法操作无需转义，运算符两侧可以无空格，引用变量可省略$符号，如：echo $[x+100-Y*2/7]</span><br><span class="line">* 支持混合运算，乘除优先</span><br><span class="line">* 支持乘方运算,如：echo $[10**3]</span><br></pre></td></tr></table></figure>
+<p>自增表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 加减乘除求模自增，如：i+=2 或 i=i+2 或 $[i+=2]</span><br><span class="line">2. 如果步长为1，则支持如： --i，++i/i--，i++</span><br></pre></td></tr></table></figure>
+<p>let命令操作变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作变量值运算，并保存新结果，适用于不需要输出的情况，如：let  x++</span><br></pre></td></tr></table></figure>
+<h3 id="使用随机整数"><a class="markdownIt-Anchor" href="#使用随机整数"></a> 使用随机整数</h3>
+<ol>
+<li>环境变量RANDOM:随机生成0～32767之间的一个整数</li>
+<li>扩大随机数范围：多个随机数相乘</li>
+<li>缩小随机数范围：取余数，如：$[RANDOM%1000]取0～999的整数</li>
+</ol>
+<h3 id="整数序列"><a class="markdownIt-Anchor" href="#整数序列"></a> 整数序列</h3>
+<p>使用seq命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用格式：默认分隔符为\n</span><br><span class="line">- seq 末数  ;默认从1开始，步长为1</span><br><span class="line">- seq 首数 末数</span><br><span class="line">- seq 首数 步长 末数</span><br><span class="line">参数选项：</span><br><span class="line">  -s：定义分隔符，如：seq -s&apos; &apos; 3,结果“1  2  3”</span><br><span class="line">  -w：等宽显示,不足前面补0</span><br></pre></td></tr></table></figure>
+<h3 id="bc计算器"><a class="markdownIt-Anchor" href="#bc计算器"></a> bc计算器</h3>
+<blockquote>
+<p>bc运算器支持高精度的数值运算，输入bc进入交互式预算界面，quit退出，设置scale=n可约束小数位，也支持小数值的比较，大多数Linux系统已内置</p>
+</blockquote>
+<p>使用举例：</p>
+<ol>
+<li>echo “scale=4;123.4*2.5” | bc</li>
+<li>echo “<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">A&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span>B” | bc</li>
+</ol>
+<h2 id="shell变量"><a class="markdownIt-Anchor" href="#shell变量"></a> Shell变量</h2>
+<ul>
+<li>变量：以固定名称存放的可能会变化的值</li>
+<li>定义／赋值变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">变量名=变量值</span><br><span class="line">1. 如果变量名已存在，则相当于赋值</span><br><span class="line">2. 等号两边不能有空格</span><br><span class="line">3. 变量区分大小写</span><br><span class="line">4. 变量名不能以数字开头，不要使用关键字和特殊字符</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看／引用变量：$变量名  或  ${变量名}</li>
+<li>取消变量：退出shell变量自动失效 或  ==unset 变量名==  方式手动取消</li>
+</ul>
+<p>变量的分类</p>
+<ol>
+<li>存储类型：shell不作为高级编程语言，对存储类型的要求比较松散</li>
+<li>使用类型</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>环境变量</td>
+<td>变量名通常大写，由系统维护，用来设置工作环境，其中只有个别变量用户可以直接修改</td>
+<td>配置文件：/etc/profile,~/.bash_profile</td>
+</tr>
+<tr>
+<td>位置变量</td>
+<td>由bash内置，用来存储在执行脚本时提供的命令行参数</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi mathvariant="normal">从</mi><mn>1</mn><mi mathvariant="normal">开</mi><mi mathvariant="normal">始</mi><mo separator="true">,</mo><mi mathvariant="normal">当</mi><mi>n</mi><mo>&gt;</mo><mn>10</mn><mi mathvariant="normal">，</mi><mi mathvariant="normal">格</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">为</mi><mo>=</mo><mo>=</mo></mrow><annotation encoding="application/x-tex">n,从1开始,当n&gt;10，格式为 ==</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">从</span><span class="mord">1</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">始</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">当</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">为</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span></span></span></span>{n}==</td>
+</tr>
+<tr>
+<td>预定义变量</td>
+<td>由bash内置，一类有特殊用途的变量，可以直接调用，但不能直接赋值或修改</td>
+<td>参见下表与定义变量定义</td>
+</tr>
+<tr>
+<td>自定义变量</td>
+<td>用户自主设置、修改及使用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>env-列出所有环境变量；<br>
+set-列出所有变量</p>
+<p>常见环境变量：PWD,PATH,USER,LOGNAME,UID,SHELL,HOME,PS1,PS2…</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0</td>
+<td>当前所在进程或脚本名</td>
+<td></td>
+</tr>
+<tr>
+<td>$$</td>
+<td>当前运行进程PID</td>
+<td></td>
+</tr>
+<tr>
+<td>$?</td>
+<td>命令执行后的状态值，0-正常   1或其他-异常</td>
+<td></td>
+</tr>
+<tr>
+<td>$#</td>
+<td>已加载位置变量个数</td>
+<td>如传入参数个数判断: if[ $# -ne 2 ]</td>
+</tr>
+<tr>
+<td>$*</td>
+<td>所有位置变量的值</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="条件测试"><a class="markdownIt-Anchor" href="#条件测试"></a> 条件测试</h2>
+<h3 id="返回状态值"><a class="markdownIt-Anchor" href="#返回状态值"></a> 返回状态值：$?</h3>
+<h3 id="专用测试工具test"><a class="markdownIt-Anchor" href="#专用测试工具test"></a> 专用测试工具test</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* test 选项  参数...</span><br><span class="line">* [ 选项 参数... ]</span><br></pre></td></tr></table></figure>
+<h3 id="文件状态检测test的参数则为文件或目录"><a class="markdownIt-Anchor" href="#文件状态检测test的参数则为文件或目录"></a> 文件状态检测：test的参数则为文件或目录</h3>
+<table>
+<thead>
+<tr>
+<th>测试选项</th>
+<th>含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-e</td>
+<td>检测对象是否存在Exist</td>
+<td>[ -e /etc/test ];echo $?</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>检测对象是否为目录Directory</td>
+<td></td>
+</tr>
+<tr>
+<td>-f</td>
+<td>检测对象是否为文件File</td>
+<td></td>
+</tr>
+<tr>
+<td>-r</td>
+<td>检测对象是否有可读权限Read</td>
+<td></td>
+</tr>
+<tr>
+<td>-w</td>
+<td>检测对象是否有可写权限Write</td>
+<td></td>
+</tr>
+<tr>
+<td>-x</td>
+<td>检测对象是否有可执行权限eXcute</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="整数值比较"><a class="markdownIt-Anchor" href="#整数值比较"></a> 整数值比较</h3>
+<table>
+<thead>
+<tr>
+<th>测试选项</th>
+<th>含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-eq</td>
+<td>等于Equal</td>
+<td>[ $(who|wc -l) -eq 10 ]//判断登陆用户数等于10</td>
+</tr>
+<tr>
+<td>-ne</td>
+<td>不等于Not Equal</td>
+<td></td>
+</tr>
+<tr>
+<td>-ge</td>
+<td>大于或等于 Greater or Equal</td>
+<td></td>
+</tr>
+<tr>
+<td>-le</td>
+<td>小于或等于 Lesser or Equal</td>
+<td></td>
+</tr>
+<tr>
+<td>-gt</td>
+<td>大于 Greater Than</td>
+<td></td>
+</tr>
+<tr>
+<td>-lt</td>
+<td>小于 Lesser Than</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="组合多个条件"><a class="markdownIt-Anchor" href="#组合多个条件"></a> 组合多个条件</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* test 测试条件1 -a或-o 测试条件2...</span><br><span class="line">* [[ 测试条件1 &amp;&amp;或|| 测试条件2...]]</span><br></pre></td></tr></table></figure>
+<h3 id="字符串比较"><a class="markdownIt-Anchor" href="#字符串比较"></a> 字符串比较</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* [ 字符串1 选项  字符串2 ]</span><br><span class="line">* [ 选项 字符串 ]</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>测试选项</th>
+<th>含义</th>
+<th>举例/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>两字符串相同</td>
+<td>[ $USER = ‘root’ ] &amp;&amp; echo $USER</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>两字符串不同</td>
+<td></td>
+</tr>
+<tr>
+<td>-z</td>
+<td>字符串值为空</td>
+<td>Zero</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>字符串值不为空</td>
+<td>Not zero</td>
+</tr>
+</tbody>
+</table>
+<h3 id="将条件取反"><a class="markdownIt-Anchor" href="#将条件取反"></a> 将条件取反</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">[ ! 测试条件 ]</span><br><span class="line">举例：</span><br><span class="line">[ ! 100 -gt 200] &amp;&amp; echo YES</span><br></pre></td></tr></table></figure>
+<h2 id="字符串处理"><a class="markdownIt-Anchor" href="#字符串处理"></a> 字符串处理</h2>
+<h3 id="截取字符串"><a class="markdownIt-Anchor" href="#截取字符串"></a> 截取字符串</h3>
+<ol>
+<li>使用expr命令，==expr substr $var1 起始位置 截取长度==</li>
+<li>使用cut命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 命令输出|cut -c 起始位置-结束位置，echo $var1|cut -c 5-6</span><br><span class="line">* 命令输出|cut -d &apos;分隔符&apos; -f 字段编号....,echo &quot;CentOS6.5&quot; |cut -d &apos;t&apos; -f2 //OS6.5，相当于java中的split[2]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用${}</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* $&#123;var1:起始位置:截取长度&#125;</span><br><span class="line">* $&#123;var1::截取长度&#125; //默认从头开始</span><br></pre></td></tr></table></figure>
+<h3 id="字符串替换"><a class="markdownIt-Anchor" href="#字符串替换"></a> 字符串替换</h3>
+<p>使用${}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* $&#123;var1/old/new&#125;   //只替换一个</span><br><span class="line">* $&#123;var1//old/new&#125;  //替换全部</span><br></pre></td></tr></table></figure>
+<h3 id="tr单字替换工具"><a class="markdownIt-Anchor" href="#tr单字替换工具"></a> tr单字替换工具</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">* 命令输出|tr &apos;abc&apos; &apos;ABC&apos;  //abc替换为大写ABC</span><br><span class="line">* 命令输出|tr -d &apos;abc&apos;     //删除所有的abc</span><br></pre></td></tr></table></figure>
+<h3 id="路径分割"><a class="markdownIt-Anchor" href="#路径分割"></a> 路径分割</h3>
+<ul>
+<li>dirname “路径字符串”:取目录位置</li>
+<li>basename “路径字符串”:取基本名称</li>
+</ul>
+<h3 id="使用随机字符串"><a class="markdownIt-Anchor" href="#使用随机字符串"></a> 使用随机字符串</h3>
+<ul>
+<li>随机数变量：RANDOM</li>
+<li>特殊设备文件：/dev/urandom</li>
+<li>UUID生成命令：uuidgen</li>
+</ul>
+<p>随机信息的转换：md5sum</p>
+<blockquote>
+<p>依据输入文本计算出256位(32字符)的MD5编码值</p>
+</blockquote>
+<ul>
+<li>echo $RANDOM |md5sum</li>
+<li>head -1 /dev/urandom|md5sum</li>
+</ul>
+<h3 id="命令替换"><a class="markdownIt-Anchor" href="#命令替换"></a> 命令替换</h3>
+<ol>
+<li>反撇号`</li>
+</ol>
+<ul>
+<li>适用场景：在命令行潜入另一个命令的输出结果；将命令的输出保存到指定变量</li>
+<li>优先执行反撇号内的命令，并将执行结果作为输入</li>
+<li>举例：rpm -qf <code>which tr</code></li>
+</ul>
+<ol start="2">
+<li>$(可执行命令)，优点为==可嵌套使用==，举例：rpm -qf $(which tr)</li>
+</ol>
+<h2 id="流程控制"><a class="markdownIt-Anchor" href="#流程控制"></a> 流程控制</h2>
+<h3 id="if语句"><a class="markdownIt-Anchor" href="#if语句"></a> if语句</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//单分支</span><br><span class="line">if 条件测试</span><br><span class="line">    then 命令序列</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">//双分支</span><br><span class="line">if 条件测试</span><br><span class="line">    then 命令序列1</span><br><span class="line">    else 命令序列2</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">//多分支（嵌套）</span><br><span class="line">if 条件测试1</span><br><span class="line">    then 命令序列1</span><br><span class="line">elif 条件测试2 ;then</span><br><span class="line">    命令序列2</span><br><span class="line">else </span><br><span class="line">    命令序列n</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>说明：如果then要跟着条件测试写在一行，则需在then前加封号，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if 条件测试 ;then</span><br><span class="line">    命令序列</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h3 id="for循环"><a class="markdownIt-Anchor" href="#for循环"></a> for循环</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for 变量名 in 值列表</span><br><span class="line">do</span><br><span class="line">    命令序列</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h3 id="while循环"><a class="markdownIt-Anchor" href="#while循环"></a> while循环</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while 条件测试</span><br><span class="line">do</span><br><span class="line">    命令序列</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h3 id="case分支"><a class="markdownIt-Anchor" href="#case分支"></a> case分支</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">case 变量值  in</span><br><span class="line">模式1)</span><br><span class="line">    命令序列1;;</span><br><span class="line">模式2)</span><br><span class="line">    命令序列2;;</span><br><span class="line">    .. ..</span><br><span class="line">*)</span><br><span class="line">    默认命令序列</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<h3 id="中断及退出控制"><a class="markdownIt-Anchor" href="#中断及退出控制"></a> 中断及退出控制</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>跳出当前所在循环体，执行循环体后的语句块</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>跳过循环体内余下的语句，重新判断条件以便执行下一次循环</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>退出脚本，可以指定返回的状态值，默认返回0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="编写服务脚本"><a class="markdownIt-Anchor" href="#编写服务脚本"></a> 编写服务脚本</h2>
+<h3 id="shell函数"><a class="markdownIt-Anchor" href="#shell函数"></a> shell函数</h3>
+<p>type 名称  //查看名称对应类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">基本格式:</span><br><span class="line">function 函数名()&#123;</span><br><span class="line">    命令序列</span><br><span class="line">    .. ..</span><br><span class="line">&#125;</span><br><span class="line">或🔥</span><br><span class="line">函数名()&#123;</span><br><span class="line">    命令序列</span><br><span class="line">    .. ..</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">调用： 函数名</span><br><span class="line">传参： 函数名  参数1  参数2 .. ..  //传递的值作为函数的位置参数</span><br></pre></td></tr></table></figure>
+<h3 id="系统服务管理"><a class="markdownIt-Anchor" href="#系统服务管理"></a> 系统服务管理</h3>
+<ul>
+<li>查看服务列表、自启状态</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>chkconfig --list [服务名]</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>chkconfig 服务名  on/off</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>启动／停止／重启服务</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>service 服务名 start/stop/restart</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>/etc/init.d/服务名 start/stop/restart</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>ntsysv:可视化设置自启动状态</li>
+</ul>
+<ol>
+<li>shell脚本直接交给service控制，则将脚本或者脚本的快捷方式放到/etc/init.d／下即可</li>
+<li>shell脚本交给chkconfig工具管理,需设置适用级别、启动／停止顺序、服务说明</li>
+</ol>
+<ul>
+<li>添加设置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#</span><br><span class="line"># chkconfig:2345 10 95</span><br><span class="line"># description:服务相关说明</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加服务：chkconfig --add 服务名</li>
+</ul>
+<h2 id="文件的排序集统计"><a class="markdownIt-Anchor" href="#文件的排序集统计"></a> 文件的排序集统计</h2>
+<h3 id="ls列表排序"><a class="markdownIt-Anchor" href="#ls列表排序"></a> ls列表排序</h3>
+<ul>
+<li>-S:按文档大小降序排列</li>
+<li>-t:按文档的修改时间降序排列</li>
+<li>-r:反序排列</li>
+</ul>
+<h3 id="uniq去重工具"><a class="markdownIt-Anchor" href="#uniq去重工具"></a> uniq去重工具</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用法1：uniq 文件</span><br><span class="line">用法2: 命令|uniq</span><br></pre></td></tr></table></figure>
+<p>缺点：==未排序的文本会出现重复现象==，需配合其他方式先排序，再去重<br>
+方法：sort 文件名|uniq -c</p>
+<h3 id="sort工具"><a class="markdownIt-Anchor" href="#sort工具"></a> sort工具</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">用法1:sort 文件</span><br><span class="line">用法2:命令|sort</span><br><span class="line"></span><br><span class="line">常用选项：</span><br><span class="line">* -u: 去除重复行</span><br><span class="line">* -n：按数字升序排列</span><br><span class="line">* -r：反向排序</span><br><span class="line">* -k：优先对第几列内容排序，即优先对哪个字段排序，只是字段是通过显示顺序编号的</span><br></pre></td></tr></table></figure>
+<h2 id="文本处理的的特殊应用"><a class="markdownIt-Anchor" href="#文本处理的的特殊应用"></a> 文本处理的的特殊应用</h2>
+<h3 id="tac-rev反序输出"><a class="markdownIt-Anchor" href="#tac-rev反序输出"></a> tac、rev反序输出</h3>
+<ul>
+<li>tac：以行为单位反序，与cat命令效果相反</li>
+<li>rev: 以字符为单位反序，与echo命令效果相反</li>
+</ul>
+<h3 id="tee整合重定向"><a class="markdownIt-Anchor" href="#tee整合重定向"></a> tee整合重定向</h3>
+<p>举例：uname -r|tee un.txt</p>
+<h3 id="unix2dos与dos2unix转换"><a class="markdownIt-Anchor" href="#unix2dos与dos2unix转换"></a> unix2dos与dos2unix转换</h3>
+<p>windows和linux系统文本格式转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装：yum -y install unix2dos dos2unix</span><br><span class="line">基本用法：</span><br><span class="line">* unix2dos Linux文件</span><br><span class="line">* dos2unix Windows文件</span><br></pre></td></tr></table></figure>
+<h2 id="xargs多参数处理"><a class="markdownIt-Anchor" href="#xargs多参数处理"></a> xargs多参数处理</h2>
+<p>背景：ls、mv、rm、cp等命令给出的参数长度不能超过2.5M，基于*匹配、find等方式处理大量文件时容易出错</p>
+<h3 id="多参数的分散处理"><a class="markdownIt-Anchor" href="#多参数的分散处理"></a> 多参数的分散处理</h3>
+<ul>
+<li>利用find… … -exec… … 查找处理  //仅适用于处理文件或目录参数，如：find / -exec ls -lh {} ;</li>
+<li>xargs工具:根据给定的参数组（以行为单位）分次执行目标命令行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">用法1：提供参数的命令 | xargs 目标命令，如：find /|args ls -lh</span><br><span class="line">用法2: xargs --arg-file=提供参数的文件  目标命令</span><br><span class="line">选项：</span><br><span class="line">* -I：定义标记，如：ls txt.log* | xargs -I&#123;&#125; cp &#123;&#125; &#123;&#125;.new</span><br><span class="line">* -d: 制定分割符，默认按行分割，如：head -1 /etc/passwd |xargs -d: -I&#123;&#125; echo &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="expect预期交互控制"><a class="markdownIt-Anchor" href="#expect预期交互控制"></a> expect预期交互控制</h2>
+<blockquote>
+<p>基于TCL编写的自动化交互式程序，可以用在Shell脚本中，为FTP、SSH等交互过程自动输送预先准备的文本或指令，而无需人工干预，出发的依据是预期会出现的特征提示文本</p>
+</blockquote>
+<ul>
+<li>安装：yum -y install expect</li>
+</ul>
+<ol>
+<li>手动交互</li>
+<li>自动交互</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cat mike-ftp.sh</span><br><span class="line">--------------------</span><br><span class="line">spawn ftp 192.168.4.5</span><br><span class="line">expect &quot;):&quot;</span><br><span class="line">send &quot;mike\r&quot;</span><br><span class="line">expect &quot;Password:&quot;</span><br><span class="line">send &quot;123456\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;put install.log\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;quit\r&quot;</span><br><span class="line">---------------------</span><br><span class="line">epxect mike-ftp.sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调整执行环境：添加Sha-Bang环境声明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cat mike-ftp.sh</span><br><span class="line">-----------------------</span><br><span class="line">#!/usr/bin/expect</span><br><span class="line">spawn ftp 192.168.4.5</span><br><span class="line">expect &quot;):&quot;</span><br><span class="line">send &quot;mike\r&quot;</span><br><span class="line">expect &quot;Password:&quot;</span><br><span class="line">send &quot;123456\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;put install.log\r&quot;</span><br><span class="line">expect &quot;ftp&gt;&quot;</span><br><span class="line">send &quot;quit\r&quot;</span><br><span class="line">------------------------</span><br><span class="line">sh mike-ftp.sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li>SSH登陆免交互举例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/expect</span><br><span class="line">set host 192.168.4.5</span><br><span class="line">set user mike</span><br><span class="line">set password &quot;1234567&quot;</span><br><span class="line">spawn ssh $user@$host</span><br><span class="line">expect &quot;password:&quot;&#123;send &quot;$password\r&quot;&#125;</span><br><span class="line">expect &quot;\[$user\@&quot;&#123;send &quot;pwd&gt;/tmp/$user.txt;exit\r&quot;&#125;</span><br><span class="line">expect eof</span><br></pre></td></tr></table></figure>
+<h1 id="应用技巧"><a class="markdownIt-Anchor" href="#应用技巧"></a> 应用技巧</h1>
+<h2 id="正则表达式"><a class="markdownIt-Anchor" href="#正则表达式"></a> 正则表达式</h2>
+<blockquote>
+<p>使用“一串符号”来描述有共同属性的数据</p>
+</blockquote>
+<h3 id="egrep测试工具"><a class="markdownIt-Anchor" href="#egrep测试工具"></a> egrep测试工具</h3>
+<ul>
+<li>用法1:egrep [选项] ‘正则表达式’ 文件</li>
+<li>用法2:前置命令|egrep [选项] ‘正则表达式’</li>
+</ul>
+<p>选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-i：忽略大小写</span><br><span class="line">-v: 取反</span><br><span class="line">-c：统计匹配行数</span><br><span class="line">-q：静默、无任何输出</span><br><span class="line">-n：显示出所匹配结果所在的行号</span><br></pre></td></tr></table></figure>
+<h3 id="基本元字符"><a class="markdownIt-Anchor" href="#基本元字符"></a> 基本元字符</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>匹配行首</td>
+<td>^abc 或 ^#</td>
+<td>以abc开头的行  或  以#开头的行（比如注释行）</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配行尾</td>
+<td>abc$ 或 ^$</td>
+<td>以abc结尾的行  或  空行</td>
+</tr>
+<tr>
+<td>.</td>
+<td>单个字符</td>
+<td>.</td>
+<td>除换行符\n以外的任意单个字符</td>
+</tr>
+<tr>
+<td>+</td>
+<td>最少匹配一次</td>
+<td>a+ 或 (abc)+</td>
+<td>一个或多个连续的a 或  一个或多个连续的abc</td>
+</tr>
+<tr>
+<td>?</td>
+<td>最多匹配一次</td>
+<td>a? 或 (abc)?</td>
+<td>0个或1个a 或  0或1个abc</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配任意次数</td>
+<td>a* 或 (abc)* 或 .*</td>
+<td>0个或多个连续的a 或 0个或多个连续的abc 或 任意长度的任意字符串</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>匹配n次</td>
+<td>(ab){3}</td>
+<td>匹配ababab</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>匹配n～m次</td>
+<td>(ab){1,3}</td>
+<td>匹配ab、abab、ababab</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>匹配至少n次</td>
+<td>(ab){2,}</td>
+<td>匹配2个及以上连续的ab</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>匹配范围内的单个字符</td>
+<td>[a-z]</td>
+<td>匹配任意小写字母</td>
+</tr>
+<tr>
+<td>[]内加^</td>
+<td>可取反</td>
+<td>[^a-z]</td>
+<td>匹配任意非小写字母</td>
+</tr>
+<tr>
+<td>()</td>
+<td>组合为整体</td>
+<td>(ab)</td>
+<td>连续的ab</td>
+</tr>
+<tr>
+<td></td>
+<td>或者</td>
+<td>root|bin</td>
+<td>匹配root、bin</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>单词边界</td>
+<td>\broot\b</td>
+<td>匹配root，不匹配keroot、rooty、brooty等字符串</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>单词的开头</td>
+<td>&lt;th</td>
+<td>匹配以th开头的单词</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>单词的结尾</td>
+<td>th&gt;</td>
+<td>匹配以th结尾的单词</td>
+</tr>
+</tbody>
+</table>
+<h2 id="awk文本过滤"><a class="markdownIt-Anchor" href="#awk文本过滤"></a> awk文本过滤</h2>
+<blockquote>
+<p>awk:模式扫描及处理语言，创始人Aho、Weinberger、Kernighan，基于模式匹配检查输入的文本，逐行处理并print结果，目前最常用的实际是GNU版本的gawk</p>
+</blockquote>
+<ul>
+<li>用法1:前置命令|awk [选项] ‘[条件]{编辑指令}’</li>
+<li>用法2:awk [选项] ‘[条件]{编辑指令}’ 文件，如：awk -F “:” ‘{print $1,$2} /etc/passwd’</li>
+</ul>
+<p>条件的表现形式</p>
+<ul>
+<li>正则表达式，/正则表达式/ 🔥 ~匹配、!~不匹配,如：awk -F: ‘/^ro/{print}’ /etc/passwd</li>
+<li>数值／字符串比较</li>
+<li>逻辑比较</li>
+<li>运算符</li>
+</ul>
+<p>选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-F:指定分隔符，可省略，默认空格或Tab位，如：awk -F: &apos;$1==ENVIRON[&quot;USER&quot;]&#123;print $3&#125;&apos; /etc/passwd  //输出当前用户的UID信息</span><br><span class="line">-f:调用awk脚本进行处理</span><br></pre></td></tr></table></figure>
+<p>awk内置变量</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS</td>
+<td>保存或设置字段分隔符，如 FS=“：”</td>
+</tr>
+<tr>
+<td>$n</td>
+<td>指定分隔符的第n个字段，如$1、$3分别表示第1、第3列</td>
+</tr>
+<tr>
+<td>$0</td>
+<td>当前读入的整行文本内容</td>
+</tr>
+<tr>
+<td>NF</td>
+<td>记录当前处理的字段个数（列数）</td>
+</tr>
+<tr>
+<td>NR</td>
+<td>记录当前已读入行的数量（行数）</td>
+</tr>
+<tr>
+<td>FNR</td>
+<td>保存当前处理行在元文本内的序号（行号）</td>
+</tr>
+<tr>
+<td>FILENAME</td>
+<td>当前处理的文件名</td>
+</tr>
+<tr>
+<td>ENVIRON</td>
+<td>调用Shell环境变量，格式：ENVIRON[“变量名”]</td>
+</tr>
+</tbody>
+</table>
+<p>awk处理的时机：可单独使用，也可以同时一起使用，具体如下：</p>
+<ul>
+<li>行前处理,BEGIN{}:读入第一行文本之前执行，一般用来初始化操作</li>
+<li>逐行处理,{}：逐行读入文本执行相应的处理，是最常见的编辑指令块</li>
+<li>行后处理，END{}：处理完最后一行文本之后执行，一般用来输出处理结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;BEGIN&#123;print NR&#125;END&#123;print NR&#125;&apos; m.txt</span><br></pre></td></tr></table></figure>
+<p>awk的流程控制</p>
+<ul>
+<li>if分支，如：if(条件){编辑指令1}else if(条件){编辑指令12}…else{编辑指令n}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -F: &apos;BEGIN&#123;i=0;j=0&#125;&#123;if($3&lt;500)&#123;i++&#125;else&#123;j++&#125;&#125;END&#123;print i,j&#125;&apos;     /etc/passwd</span><br></pre></td></tr></table></figure>
+<ul>
+<li>while循环，如：while(条件){编辑指令}</li>
+<li>do while循环，如：do {编辑指令}while(条件)</li>
+<li>for循环,如：for(初值；条件；步长){编辑指令}</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>结束当前的循环体</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>中止本次循环，转入下一次循环</td>
+</tr>
+<tr>
+<td>next</td>
+<td>跳过当前行，读入下一行文本开始处理</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>结束文本读入，转入END{}执行，没有则直接退出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sed文本流处理"><a class="markdownIt-Anchor" href="#sed文本流处理"></a> sed文本流处理</h2>
+<blockquote>
+<p>sed:Stream EDitor，流式编辑器，基于模式匹配过滤及修改文本，逐行处理并将结果输出到屏幕，可实现文本过滤／删除／替换／复制／剪切，以及导入／导出等各种操作</p>
+</blockquote>
+<ul>
+<li>用法1:前置命令|sed [选项] ‘编辑指令’，如：se -n /etc/inittab |sed -n ‘4,7p’</li>
+<li>用法2:sed [选项] ‘编辑指令’ 文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">编辑指令由“[定址符]处理动作”组成，[定址符]的格式为“[地址1，[地址2]]”</span><br></pre></td></tr></table></figure>
+<p>选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-n:屏蔽默认输出</span><br><span class="line">-i:直接修改文件内容</span><br><span class="line">-f:使用sed脚本</span><br><span class="line">-e:可指定多个处理动作</span><br><span class="line">-r:启用扩展的正则表达式，若与其他选项一起使用，应作为首个选项</span><br><span class="line">&#123;&#125;:可组合多个命令，以分号分隔</span><br></pre></td></tr></table></figure>
+<p>处理动作：替换操作的分隔符“／”可用其他字符，如#、&amp;等以便于修改文件路径</p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>用途</th>
+<th>指令示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>打印行</td>
+<td>2,4p 输出2，3，4行 🔥 2p；4p输出第2行、4行</td>
+</tr>
+<tr>
+<td>d</td>
+<td>删除行</td>
+<td>2,4d 删除第2，3，4行</td>
+</tr>
+<tr>
+<td>s</td>
+<td>字符串替换</td>
+<td>s/old/new/ 将每行第1个old替换为new</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>s/old/new/3 将每行第3个old替换为new</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>s/old/new/g 将所有的old替换为new</td>
+</tr>
+<tr>
+<td>4,+10p</td>
+<td>加10行</td>
+<td>输出第4行及其后10行内容</td>
+</tr>
+<tr>
+<td>n</td>
+<td>表示下一行</td>
+<td>p:n输出奇数行</td>
+</tr>
+<tr>
+<td></td>
+<td>n:p输出偶数行</td>
+<td></td>
+</tr>
+<tr>
+<td>$=</td>
+<td>输出文件的行数</td>
+<td>sed -n ‘$=’ a.txxt</td>
+</tr>
+<tr>
+<td>i</td>
+<td>行前插入文本</td>
+<td>2iYY 在第2行前添加文本行YY</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>4，7iYY 在第4-7行每一行钱添加文本行YY</td>
+</tr>
+<tr>
+<td>a</td>
+<td>行后插入文本</td>
+<td>2aYY 在第2行后插入YY</td>
+</tr>
+<tr>
+<td>c</td>
+<td>替换当前行</td>
+<td>2cYY 将第2行内容修改为YY</td>
+</tr>
+<tr>
+<td>r</td>
+<td>读取文件，结合-i选项才会存入，否则只输出</td>
+<td>3r b.txt 在第3行下发插入文本b.txt</td>
+</tr>
+<tr>
+<td>w</td>
+<td>保存到文件，以覆盖方式</td>
+<td>3w b.txt 将第3行保存到b.txt</td>
+</tr>
+</tbody>
+</table>
+<p>sed复制剪切</p>
+<ul>
+<li>模式空间:存放当前处理的行，将处理结果输出；若当前行不符合处理条件则原样输出；处理完当前行再读入下一行来处理</li>
+<li>保存空间:作用类似剪贴板，默认存放一个空行\n<br>
+选项：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-H：模式空间 追加 到 保持空间 ，即复制</span><br><span class="line">-h：模式空间 覆盖 到 保持空间 ，即复制</span><br><span class="line">-G：保持空间 追加 到 模式空间 ，即粘贴</span><br><span class="line">-g：保持空间 覆盖 到 模式空间 ，即粘贴</span><br><span class="line"></span><br><span class="line">sed &apos;1,3H;$G&apos; reg.txt //把第1～3行复制到文件末尾</span><br></pre></td></tr></table></figure>
+<h1 id="实战脚本"><a class="markdownIt-Anchor" href="#实战脚本"></a> 实战脚本</h1>
+<h2 id="基本知识"><a class="markdownIt-Anchor" href="#基本知识"></a> 基本知识</h2>
+<ol>
+<li>查看用户信息：id gsuis</li>
+<li></li>
+</ol>
+<h2 id="awksed应用实战"><a class="markdownIt-Anchor" href="#awksed应用实战"></a> awk&amp;sed应用实战</h2>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/数据库-2018-12-12-oracle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1724,422 +2933,6 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
 <p>本地动态sql</p>
 <p>SQL环境  begin … end pl/sql环境</p>
 <p>一组SQL语句操作要成为事务，数据库管理系统必须保证这组操作的原子性（Atomicity）、一致性（consistency）、隔离性（Isolation）和持久性（Durability），这就是ACID特性。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/数据库-2018-12-10-MongoDB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/10/数据库-2018-12-10-MongoDB/" itemprop="url">MongoDB</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T20:38:05+08:00">
-                2018-12-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.jikexueyuan.com/course/mongoDB/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/mongoDB/</a></p>
-<p>NoSQL数据库：NoSQL(NoSQL = Not Only SQL )，意即&quot;不仅仅是SQL&quot;，指的是非关系型的数据库</p>
-<p>mongodb官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a><br>
-<a href="https://docs.mongodb.com/manual/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/</a></p>
-<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
-MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
-<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
-<p>NoSQL保证数据的最终一致性，数据由更新延迟</p>
-<p>CAP理论</p>
-<p>适用场景：数据缓存；json格式数据存储；高伸缩性场景；<br>
-MongoDB更多适合大数据量、高并发、弱事务的互联网应用，其内置的水平扩展机制提供了从几百万到十亿级别的数据处理能力，可很好的满足Web2.0和移动互联网应用的s数据存储要求。</p>
-<p>MongoDB由C++编写，支持32位（2G限制）和64位应用，是一个基于分布式文件存储的开源数据库系统。</p>
-<p>MongoDB3.0特性：</p>
-<ol>
-<li>加入WiredTiger存储引擎:<br>
-开源的存储引擎；为现代硬件设计：多核CPU，充分利用内存／芯片级缓存；RAM/SSD/HDD；为大数据设计：高性能，低延迟，高并发稳定性</li>
-<li>MMAPv1:内存映射存储引擎，为默认引擎 ，提供了Collection锁；无缝迁移MMAP</li>
-<li>可插拔引擎API</li>
-<li>基于Web的可视化管理工具：Ops Manager</li>
-</ol>
-<p>MongoDB数据模型<br>
-文档：本质上是一种类JSON的BSON格式的数据，可以理解为在JSON基础上添加了一些新的数据类型，包括Date，正则表达式等。<br>
-BSON官网：<a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>
-BSON是由一组组键值对组成，具有轻量性、可靠性和高效性3个特征。可遍历性是MongoDB将BSON作为数据存储的重要原因<br>
-使用文档时需要注意以下事项：<br>
-MongoDB中写操作的原子性限制在文档级别；<br>
-单个文档占用的存储空间不能超过16MB；<br>
-MongoDB会尽量保持文档被插入时键值对的顺序；<br>
-关于文档命名需要注意的事项：<br>
-_id是系统保留的关键字，他是默认的主键，该值在集合中必须唯一，且不可更改；<br>
-键不能包含空字符或\0，这个字符用于表示键的结尾；<br>
-不能以$开头且不能包含点号.<br>
-键是区分大小写的且不能重复</p>
-<p>集合：把一组相关的文档放到一起组成了集合，MongoDB的集合是模式自由的，一个集合里面的文档可以是各式各样的<br>
-MogoDB提供了一些特殊的集合：capped collection、system.indexes、system.namespaces等<br>
-集合命名需注意：<br>
-集合名不能是空字符串；<br>
-集合名不能包含空字符串或\0，该字符表示集合名的结尾<br>
-集合名不能以&quot;system.&quot;开头，此前缀是系统本身保留的<br>
-集合名不能包含$字符，但是可以包含点号.</p>
-<p>数据库：多个文档组成集合，多个集合组成数据库。一个MongoDB实例可承载多个数据库，每个数据库有独立的权限，在磁盘上，不同的数据库也可放置到不通目录<br>
-数据库命名规则：<br>
-不能是空字符串；不能以$开头；不能包含空字符串和点号.;数据库名称区分大小写；建议数据库名全部使用小写；数据库名最长64字节；不要与系统保留数据库名相同</p>
-<p>命名空间：把数据库名添加到集合名前面，中间用点号连接，得到集合的完全限定，就是命名空间<br>
-因为点号可以出现在集合名字中，如：jike.blog.posts 和 jike.blog.authors，可以将posts和authors看作是blog集合的子集合，blog集合甚至可以不存在<br>
-使用子集合的方式，可以是我们更好的组织数据，使数据结构更加清晰明了</p>
-<p>MongoDB数据类型<br>
-基本数据类型<br>
-null：表示空值或者不存在的字段<br>
-布尔：true／false<br>
-数据类型：32-int,64-int,64-double,注意：JavaScript只支持64位浮点数<br>
-字符串类型：使用UTF-8对字符串进行编码<br>
-二进制数据：可以保存由任意字节组成的字符串，如：图片、视频等<br>
-正则表达式类型：主要用于查询，使用正则表达式作为限定条件<br>
-Date类型：是一个64位整数，它代表距Unix epoch：1970-1-1的毫秒数，MongoDB在存储时间是现转换为UTC时间，北京时间=UTC+8小时，MongoDB Shell会根据本地时间 设置显示日期时间<br>
-Timestap：32bit Unix epoch + 32bit自增序数，只供MongoDB数据库服务内部使用，用于记录操作的详细时间<br>
-ObjectId：由24个16精制字符组成，每个字节存储两位16精制数字，总共需12字节存储空间=4字节时间戳+3字节机器标识+2字节pid+3字节计数器，ObjectId(),getTimestamp(),valueOf()<br>
-数组：使用方括号来表示的一组值，数组中可以包含不通数据类型的元素，针对数组，MongoDB提供了许多操作符，如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pop,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span></span></span></span>push,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pull,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span></span></span></span>slice,$addToSet等；MongoDB可自动为数组元素建立MultiKey索引<br>
-内嵌文档：文档可以作为键的值，这样的文档成为内嵌文档。内嵌文档可以使数据不用保存成扁平结果的键值对，从而使数据组织形式更加自然。</p>
-<p>内嵌文档模式VS引用文档模式<br>
-子文档比较小或变化不频繁，则使用内嵌文档模式，否则使用引用文档模式</p>
-<p>MongoDB自动将_id字段设置为主键</p>
-<p>MongoDB Shell：是MongoDB自带的JavaScript Shell，随MongoDB一起发布 =JavaScript V8解释器+MongoDB客户端</p>
-<p>help查看帮助<br>
-执行脚本<br>
-直接执行：mongo [–quiet] script.js<br>
-交互执行：load(“script.js”)<br>
-执行命令行程序：run(“ls”)<br>
-.mongorc.js文件，默认会加载<br>
-编辑复合变量EDITOR：在.bashrc中添加后source生效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#EDITOR</span><br><span class="line">EDITOR=/usr/bin/vim</span><br></pre></td></tr></table></figure>
-<p>即可使用editor编辑文档</p>
-<p><a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-intro.html</a><br>
-Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。<br>
-GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。<br>
-MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</p>
-<p>MongoDB数据库安装：</p>
-<ol>
-<li>下载安装文件解压缩并添加bin目录到环境变量</li>
-<li>创建一个data目录，然后在data目录里创建db目录、logs目录</li>
-<li>启动服务端</li>
-<li>启动客户端：mongo</li>
-<li>windows下可以将MongoDB做成系统服务</li>
-</ol>
-<p>mac<br>
-临时添加环境变量：export PATH=/usr/local/mongodb/bin:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mi mathvariant="normal">编</mi><mi mathvariant="normal">辑</mi><mtext> </mtext><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>s</mi><msub><mi>h</mi><mi>p</mi></msub><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">：</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">PATH
-编辑~/.bash_profile,添加：export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord cjk_fallback">编</span><span class="mord cjk_fallback">辑</span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:/usr/local/mongodb4/bin/:$PATH 即可永久添加环境变量</p>
-<p>连接MongoDB数据库：./mongo + 服务器IP:端口号/数据库名<br>
-关闭MongoDB服务在 ./mongo 进入控制台后，输入 use admin,然后输入 db.shutdownServer()</p>
-<p>Mongodb可以通过命令行方式和配置文件的方式来启动：<br>
-这两种方式都是在前台启动Mongodb进程，如果Session窗口关闭，Mongodb进程也随之停止。<br>
-不过Mongodb同时还提供了一种后台Daemon方式启动，只需要加上一个&quot;–fork&quot;参数即可，用到了&quot;–fork&quot;参数就必须启用&quot;–logpath&quot;参数<br>
-通过命令行： ./bin/mongod --dbpath=/data/db --fork --logpath=/data/logs/mongodb.log<br>
-配置文件方式：./bin/mongod -f mongodb.conf  或 ./bin/mongod --config mongodb.conf  //-f 后面写要使用的配置文件<br>
-./bin/mongod --shutdown -f mongod.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">dbpath=/usr/local/mongodb/data/</span><br><span class="line">logpath=/usr/local/mongodb/log/mongodb.log  </span><br><span class="line">fork = true</span><br></pre></td></tr></table></figure>
-<p>命令行操作：<br>
-use mytetDB  //数据库如果不存在则创建<br>
-save时如果给定了_ObjectId则更新创建整条记录；如果要更新部分字段则使用update方法使用$set<br>
-db.dropDatabase()<br>
-db//显示当前数据库<br>
-show dbs<br>
-show collections</p>
-<p>有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。<br>
-admin： 从权限的角度来看，这是&quot;root&quot;数据库。要是将一个用户添加到这个数据库，这个用户自动继承所有数据库的权限。一些特定的服务器端命令也只能从这个数据库运行，比如列出所有的数据库或者关闭服务器。<br>
-local: 这个数据永远不会被复制，可以用来存储限于本地单台服务器的任意集合<br>
-config: 当Mongo用于分片设置时，config数据库在内部使用，用于保存分片的相关信息。</p>
-<p>MongoDB GridFS文件系统<br>
-分布式文件系统：将固定存储于单台机器上的文件系统，扩展到多台机器上，每个节点负责存储部分数据，众多的存储节点组成一个文件系统网络，各个节点通过网络进行通信和数据传输</p>
-<p>当存储文档大于16M时，可以考虑使用GridFS<br>
-GridFS：是MongoDB制定的如何在数据库中存储大文件的规范，MongoDB并没有实现GridFS，而是交由客户端驱动程序实现<br>
-GridFS使用两个集合（collection）存储文件。一个集合是chunks, 用于存储文件内容的二进制数据；一个集合是files，用于存储文件的元数据。<br>
-使用fs.files存储文件的元数据，包含字段如下：<br>
-使用fs.chunks存储以255K进行分割的文件块，包含字段如下：<br>
-GridFS适用于如下场景：<br>
-存储用户产生的文件且文件数量比较大；需要文件的自动备份和分布式存储；需要访问文件的部分内容；存储16MB以上的文件<br>
-mongofiles是MongoDB安装包中提供的一个工具，专门用来存取文件，包括查询所有文件、查看文件、上传一个文件、获取一个文件、按照_id来获取文件、按文件名删除文件、按_id删除文件。<br>
-mongofiles --help其实有四个主要命令，分别为：<br>
-put —存储命令<br>
-get —获取命令<br>
-list —列表命令<br>
-delete —删除命令</p>
-<p>MongoDB聚合管道：聚合操作主要用户批量数据处理，往往将记录按条件分组，然后在每组上分别进行一系列操作，如：求和、求最大小值等<br>
-聚合操作能够对记录进行复杂处理，主要为数理统计和数据挖掘。<br>
-MongoDB提供了3种聚合操作方式：<br>
-聚合管道（Aggregation Pipeline）:MongoDB Shell使用db.collection.aggregate([{…}])来构建和使用聚合管道<br>
-$project:用于修改文档的结构，可以重命名、增加或删除文档字段<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">滤</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi></mrow><annotation encoding="application/x-tex">match:用于过滤文档，在</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">滤</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span></span></span></span>match中不能使用$where,尽量出现在管道的前面，方便借助索引加快查询<br>
-$group:将集合中的文档进行分组，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
-$sort:将集合中的文档进行排序，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
-$skip:跳过指定数量的文档<br>
-$unwind:将文档按照数组字段拆分成多条文档，每条文档包含数组的一个元素<br>
-$geoNear:按照由近到远顺序输出接近某一地理位置的文档<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">将</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">储</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">阶</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">键</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">构</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">：</mi><mn>1</mn><mi mathvariant="normal">将</mi></mrow><annotation encoding="application/x-tex">out:将聚合结果存储到集合中，参数为集合名称
-    。。。
-    聚合管道表达式：阶段操作符可以看作是&quot;键&quot;，所对应的&quot;值&quot;称为管道表达式，管道表达式可以看作是管道操作符的操作数，管道表达式是一个文档结构，由字段名、字段值和表达式操作符组成。
-    聚合管道使用优化：
-    1将</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">储</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">阶</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord">&quot;</span><span class="mord cjk_fallback">键</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord">&quot;</span><span class="mord cjk_fallback">值</span><span class="mord">&quot;</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord">1</span><span class="mord cjk_fallback">将</span></span></span></span>match、$sort放到管道开始阶段，有利于利用索引提高文档处理效率<br>
-2提交过滤可减少流经后续阶段的文档数量<br>
-聚合管道的限制：<br>
-1返回文档结果不能超过16M，可通过返回一个游标或存储到集合中跳过此限制<br>
-单目的聚合操作<br>
-count<br>
-distinct<br>
-group<br>
-MapReduce编程模型</p>
-<p>mongoimport可以导入集合</p>
-<p>MongoDB数据更新<br>
-文档插入和删除：insert、update、delete<br>
-Bulk函数：Bulk可将多个数据更新操作放到一个待执行的列表中批量来执行，顺序执行的Bulk（按添加顺序执行，一个有问题则退出）和并执行的Bulk（随机方式并行）<br>
-1初始化Bulk：<br>
-并行：db.集合名.initializeUnorderedBulkOp()<br>
-顺序：db.集合名.initializeOrderedBulkOp()<br>
-2 bulk.inset({…})<br>
-3 bulk.execute()</p>
-<p>MMAPv1的内存分配策略：如果一个更新操作超过了文档在磁盘上预分配的空间，MongoDB会重新在磁盘上为其分配一块更大的连续空间。使用&quot;2的N次方&quot;的方式分配内存，如：32，64，128，256…2M，4M…<br>
-优点：1有利用内存的重用，降低系统碎片的数量；2减少数据移动频率，提高系统数据写效率</p>
-<p>文档修改<br>
-WriteResult = db.集合名.update(query,obj,upsert,multi)<br>
-query:查询条件，相当于where<br>
-obj：更改的内容，相当于SQL中的set语句<br>
-upsert：当query的文档不存在时是否插入一条新文档<br>
-multi：当query返回多个文档时是否一次更新满足条件的所有文档，默认只更新一条</p>
-<p>内嵌文档的修改：</p>
-<ol>
-<li>修改整个内嵌文档：{$set:{field1:新内嵌文档}}</li>
-<li>修改内嵌文档的某个字段：{$某个修改操作符:{field1.field2:value}}</li>
-</ol>
-<p>数组元素：MongoDB提供了大量的特定操作符，使得数组既可以作为栈、队列等有序对象使用，也可当作集合等无序对象来使用</p>
-<p>MongoDB的写安全机制<br>
-写过程：使用update、save等操作数据集合中数据时，只是修改了数据再内存中的映像，数据更新并没有同步地保存到磁盘上，而且更新内存中数据之前，更新操作会被记录到journal日志文件中，<br>
-每隔100ms将内存journal中的日志写到磁盘journal日志文件中 ，每隔60s将内存中修改的数据写会到磁盘上<br>
-写入安全级别：写入安全Write Concern是一种客户端设置的，用于控制写入安全级别的机制，通过写入安全机制可提高数据的可靠性。<br>
-分为四个级别，分别是：<br>
-非确认式写入Unacknowledged：写操作不会返回结果，所以无法知道是否写入成功；但速度快、效率高、无阻塞<br>
-确认式写入Acknowledged：写操作必须得到MongoDB服务器的写入确认，如果失败，会返回异常<br>
-日志写入Journaled：写操作要等到操作记录存储到Journal日志文件后才返回结果<br>
-复制集确认写入Replica Acknowledged：写操作不仅要得到主节点的写入确认，还要得到从节点的写入确认，可以设置写入节点的个数（包含主节点）</p>
-<p>journal日志相当于oracle中的redo日志文件，用户故障恢复和持久。Journal默认100ms刷新一次，所以最多丢失100ms数据<br>
-文件位于journal目录中，只能以追加方式添加数据，文件名以&quot;j._&quot;开头，超过1G会自动创建新的；数据库正常关闭时，数据库服务会自动清空journal目录下所有文件</p>
-<p>设置写安全操作级别，其实就是在写操作的性能和可靠性间取一个权衡；使用的写操作级别越高，时间越长，可靠性越高</p>
-<p>使用writeConcern函数作为更新函数的一个参数来设置写安全级别,如：db.集合名称.insert({name:“joe”},{writeConcern:{j:true}}),writeConcern函数参数如下：<br>
-w选项，可选择0，1，2等整数值及&quot;majority&quot;，0-非确认式写入 1-确认式写入（未启用复制集）／主节点确认式写入（启用了复制集），&gt;1只能用于复制集，2-数据至少写到1个从节点后返回，majority 只能用于复制集，表示更新操作用到大多数从节点<br>
-j选项，设置为true来使用journaled日志安全级别<br>
-wtimeout选项，用于设置超时单位为毫秒<br>
-以上选项可组合使用</p>
-<p>数据MongoDB数据查询<br>
-Cursor = db.集合名称.find(query,fields,limit,skip)<br>
-query:查询条件，相当于where<br>
-fields:用于字段映射，语法格式：{field:0}（0表示返回结果不包含此字段）或{field:1}（1表示返回结果不包含此字段），默认包含_id字段,相当于select中后面需要的字段<br>
-limit：限制查询结果集的数量，指定查询返回结果的数量上限，也可通过limit()实现<br>
-skip:跳过一定数据量的结果，设置第一条返回文档的偏移量，也可通过skip()实现<br>
-find查询只能正对一个集合；返回的集合默认是无序的</p>
-<p>db.集合名称.findOne()只返回第一条数据</p>
-<p>查询操作符<br>
-比较查询操作符<br>
-逻辑查询操作符<br>
-元素查询操作符<br>
-$where查询操作符：可以将JavaScript表达式的字符串或JavaScript函数作为查询语句的一部分，在js表达式和函数中，可使用this或obj来引用当前操作的文档，当js表达式或函数返回true时，才会返回当前文档</p>
-<p>内嵌文档与数组查询<br>
-内嵌文档查询<br>
-1查询整个内嵌文档：当内嵌文档的键值对数量和键值对顺序都相同时，才会匹配<br>
-2查询文档的某个字段：需要使用.号操作符，如:db.user.find({“address.city”:“BeiJing”})<br>
-数组查询<br>
-1查询整个数组：当数组元素内容和数组元素顺序都相同时，才会匹配<br>
-2查询数组中的元素（普通元素）：<br>
-A与位置无关，查询数组中含有某个值的文档，如：db.user.find({score:80})<br>
-B与位置有关，按照指定的数组索引查询数组元素的值，如：db.user.find({‘scores.2’:80})<br>
-3查询数组中的数组元素是文档时，查询数组元素有两种情况<br>
-A与位置无关，查询数组中满足条件的子文档元素，如：db.user.find(‘scores.成绩’：95)<br>
-B与位置有关，按照指定的数组索引查询数组子文档，如： db.user.find(‘scores.2.成绩’：95)</p>
-<p>MongoDB查询结果返回过程：find函数查询结果是以多条文档的形式分批来返回查询结果的，返回的文档会缓存到内存中，Cursor在一批数据回来之后遍历，下一批没来时会自动发起下一批请求，然后继续遍历</p>
-<p>MongoDB游标：用来遍历结果集中的数据。<br>
-游标的生命周期：创建、使用、销毁<br>
-游标可能会返回那些由于体积变大而被移动到集合末尾的文档而重复返回，可通过对查询快照的方式解决此问题，语法为：db.collection.find().snapshot().<br>
-使用快照之后，查询就会在_id索引上来遍历执行，这样就可以保证每个文档只被返回一次，从而保证获取结果的一致性。</p>
-<p>模糊查询：查询条件可以使用正则表达式实现模糊查询，支持正则表达式操作符和正则表达式对象两种。<br>
-正则表达式操作符：$regex</p>
-<p>findAndModify函数使用执行分为find和update两步，但可以保证操作的原子性</p>
-<p>MongoDB是为分布式存储而设计，_id主键默认使用ObjectId类型的值，比自增方式更适合分布式环境，所以MongoDB默认不支持字段自增长功能</p>
-<p>MongoDB索引：数据库索引是对数据表中一列或多列的值进行排序的一种数据结构，使用索引可快速访问数据表中的特定信息。MogonDB索引不仅提高文档查询速度，还有利于排序时节省内存资源。<br>
-MongoDB所有的索引信息被保存在system.indexes集合中，且默认总为_id创建单字段升序具有唯一属性的索引，可通过db.system.indexes.find()查看所有索引<br>
-MongoDB可在单个字段上建立索引，字段可以是普通字段、整个文档以及子文档的某个字段<br>
-对于复合索引，MongoDB支持前缀匹配<br>
-为确保查询只使用复合索引，可以使用映射来指定不要返回_id字段（除非它是复合索引的一部分）<br>
-多键索引：是对数组类型建立的索引，实际上是对数组的每个元素建立索引，而不是数组本身建立索引；当数组元素是文档时，可为文档的某个字段建立多键索引<br>
-哈希索引：只支持等值查询，不支持范围查询，主要用于分片的集合上，可以作为片键来使用，能将数据比较均匀的分散存储在各个分片上，如：db.集合名.createIndex({name:“hashed”})</p>
-<p>MongoDB索引的属性<br>
-唯一索引:可以确保集合的每一个文档的索引字段都有唯一的值，不会出现重复值，如：db.集合名.createIndex({name:1},{unique:true})，在非空集合创建唯一索引可能会因为已有重复值而失败，可添加dropBups:true删除重复文档<br>
-稀疏索引：只会为索引字段存在的文档建立索引，即使索引字段的值为null，但不会为索引字段不存在的文档建立索引<br>
-TTL(Time To Live)索引：为文档设置一个超时时间，当达到预设置的时间后，该文档会被数据库自动删除，但删除可能有延迟。这种类型的索引对缓存问题非常有用。只能建立在单独非_id字段<br>
-创建了TTL索引后，MongoDB会有一个后台线程来管理文档；在复制集上建立的TTL索引，TTL后台线程只会运行在主节点上</p>
-<p>MongoDB索引的管理<br>
-索引的默认命名规则：keyname1_dir1_keyname2_dir2…，其中keynameX是索引字段的名称，dirX是索引方向，1升序-1降序，也可自定义命名<br>
-创建索引：db.集合名.createIndex(keys,options),返回值为一个文档类型。索引一旦创建就不能修改，创建后可通过db.集合名.getIndexes()查看集合所拥有的索引，创建索引有两种方式：<br>
-1foreground:阻塞所有对数据库的读写请求，直到索引创建完成，为默认方式<br>
-2background：创建索引时，如果有新的数据库请求，创建过程会暂停<br>
-删除索引：db.集合.dropIndex(index)<br>
-查询优化器：用来优化查询过程，通过比较返回100条文档速度得到最佳查询计划<br>
-explain函数：能够提供大量与查询有关的信息，可以很好的评估索引性能，帮助优化索引的使用策略。db.集合.find().explain(mode),支持3种模式：<br>
-1queryPlanner：查询计划，默认<br>
-2executionStatus：查询性能统计<br>
-3allPlansExecution：所有计划统计信息（最优与被拒绝的计划）<br>
-explain返回结果使用由多个阶段（Stage）组成的树形结构来表示查询计划，查询计划自下而上执行，树的叶节点用来访问文档或索引，内部节点处理下层节点返回文档或索引，根节点输出查询结果<br>
-hint函数：强制MongoDB使用特定索引</p>
-<p>MongoDB特殊索引<br>
-地理空间索引：对地理位置数据建立索引，MongoDB支持两种2dsphere球面索引和平面2d索引<br>
-2dSphere球面索引<br>
-2d平面索引</p>
-<p>全文索引：又称为倒排索引，用于在大量文本中对每一个词组建立索引，指出该词在整段文本中出现的位置和次数，此技术主要用于搜索引擎和站内搜索等。<br>
-一个集合只能有一个全文索引</p>
-<p>java对mongodb的使用<br>
-集群搭建：mongodb分布式集群搭建手记</p>
-<p>学习：<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html" target="_blank" rel="noopener">http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html</a></p>
-<p>分析没有默认的，因为你还没给root设置密码，第一个 user 是在 admin 组 ，所以他可以给 root 设置密码 , so<br>
-sudo passwd root</p>
-<p>Language Support</p>
-<p><a href="http://blog.csdn.net/sinat_35418761/article/details/53241481" target="_blank" rel="noopener">http://blog.csdn.net/sinat_35418761/article/details/53241481</a></p>
-<p><a href="http://www.2cto.com/database/201504/395442.html" target="_blank" rel="noopener">http://www.2cto.com/database/201504/395442.html</a><br>
-<a href="http://www.myexception.cn/operating-system/1685604.html" target="_blank" rel="noopener">http://www.myexception.cn/operating-system/1685604.html</a></p>
-<p><a href="https://my.oschina.net/chinacaptain/blog/465723" target="_blank" rel="noopener">https://my.oschina.net/chinacaptain/blog/465723</a></p>
-<p><a href="http://api.mongodb.com/java/current/" target="_blank" rel="noopener">http://api.mongodb.com/java/current/</a></p>
-<p>MongoDB是什么<br>
-MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
-他的特点:高性能、易部署、易使用，存储数据非常方便。</p>
-<p>Bson：Binary Serialized Document Format，是一种类json的一种二进制形式的存储格式，简称Binary JSON，它和JSON一样，支持内嵌的文档对象和数组对象，但是BSON有JSON没有的一些数据类型，如Date和BinData类型</p>
 
           
         
@@ -2660,7 +3453,7 @@ fun test(vararg  args:String){}<br>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2715,7 +3508,7 @@ fun test(vararg  args:String){}<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2726,7 +3519,7 @@ fun test(vararg  args:String){}<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2737,7 +3530,7 @@ fun test(vararg  args:String){}<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2831,7 +3624,7 @@ fun test(vararg  args:String){}<br>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.4k字</span>
+  <span class="post-count">博客全站共109.0k字</span>
 </div>
 
 

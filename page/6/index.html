@@ -525,6 +525,365 @@ obj.b=‘123’;//报错</number></p>
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-ejs模版引擎基本使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-ejs模版引擎基本使用/" itemprop="url">ejs模版引擎基本使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.360doc.com/content/16/0115/10/597197_528136785.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/16/0115/10/597197_528136785.shtml</a></p>
+<h1 id="express中使用ejs"><a class="markdownIt-Anchor" href="#express中使用ejs"></a> express中使用ejs</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var express = require(&apos;express&apos;);//需要安装 express</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">app.set(&quot;view engine&quot;,&quot;ejs&quot;);//模版引擎设置为 ejs</span><br></pre></td></tr></table></figure>
+<h1 id="文件组织"><a class="markdownIt-Anchor" href="#文件组织"></a> 文件组织</h1>
+<p>在express中使用ejs，文件组织遵循express。</p>
+<ul>
+<li>views-------放置动态模版</li>
+<li>public------放置静态网页</li>
+<li>layouts-----放置布局文件</li>
+</ul>
+<h1 id="ejs成员函数"><a class="markdownIt-Anchor" href="#ejs成员函数"></a> EJS成员函数：</h1>
+<ul>
+<li>Render(str,data,[option]):直接渲染字符串并生成html</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str：需要解析的字符串模板</span><br><span class="line">data：数据</span><br><span class="line">option：配置选项</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Compile(str,[option]):编译字符串得到模板函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str：需要解析的字符串模板</span><br><span class="line">option：配置选项</span><br></pre></td></tr></table></figure>
+<h1 id="基本语法"><a class="markdownIt-Anchor" href="#基本语法"></a> 基本语法</h1>
+<ol>
+<li>&lt;% code %&gt;:无缓冲的条件语句元素</li>
+<li>&lt;%= code %&gt;:转义HTML，该code并且会打印出来</li>
+<li>&lt;%- code %&gt;:非转义的buffering，该code并且会打印出来</li>
+<li>&lt;% include file %&gt;:内嵌别的文件</li>
+<li>&lt;% layout(file) -%&gt;:指定布局文件</li>
+<li>&lt;% script(file) -%&gt;:包含js脚本文件</li>
+<li>&lt;% stylesheet(file) -%&gt;:包含css文件</li>
+<li>&lt;% block(code, code) -%&gt;:指定块内容</li>
+<li>&lt;%# %&gt;:注释标签</li>
+</ol>
+<h1 id="基本对象"><a class="markdownIt-Anchor" href="#基本对象"></a> 基本对象</h1>
+<ol>
+<li>scripts:包含的脚本</li>
+<li>stylesheets:包含的css</li>
+<li>blocks:包含的块</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-js测试分类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/前端开发-js测试分类/" itemprop="url">js测试分类</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.cnblogs.com/wangshenhe/archive/2013/02/16/2913431.html" target="_blank" rel="noopener">http://www.cnblogs.com/wangshenhe/archive/2013/02/16/2913431.html</a></p>
+<p>在实际的项目中，我们可能随时面对各种不同的需求，它的各个方面的要素决定了我们所采用的开发模式。<br>
+比如，它的复杂度如何？所有的需求是否足够清晰？开发人员对相关的业务是否足够了解？项目的工期是否合理？种种问题，不一而足。这也决定了我们可能面对不同的需求可能需要采用不同的开发模式。下面大概说几种：</p>
+<ol>
+<li>TDD<br>
+TDD指的是Test Drive Development，很明显的意思是测试驱动开发，也就是说我们可以从测试的角度来检验整个项目。大概的流程是先针对每个功能点抽象出接口代码，然后编写单元测试代码，接下来实现接口，运行单元测试代码，循环此过程，直到整个单元测试都通过。这一点和敏捷开发有类似之处。</li>
+</ol>
+<p>TDD的好处自然不用多说，它能让你减少程序逻辑方面的错误，尽可能的减少项目中的bug，开始接触编程的时候我们大都有过这样的体验，可能你觉得完成得很完美，自我感觉良好，但是实际测试或者应用的时候才发现里面可能存在一堆bug，或者存在设计问题，或者更严重的逻辑问题，而TDD正好可以帮助我们尽量减少类似事件的发生。而且现在大行其道的一些模式对TDD的支持都非常不错，比如MVC和MVP等。</p>
+<p>但是并不是所有的项目都适合TDD这种模式的，我觉得必须具备以下几个条件：<br>
+首先，项目的需求必须足够清晰，而且程序员对整个需求有足够的了解，如果这个条件不满足，那么执行的过程中难免失控。当然，要达到这个目标也是需要做一定功课的，这要求我们前期的需求分析以及HLD和LLD都要做得足够的细致和完善。</p>
+<p>其次，取决于项目的复杂度和依赖性，对于一个业务模型及其复杂、内部模块之间的相互依赖性非常强的项目，采用TDD反而会得不尝失，这会导致程序员在拆分接口和写测试代码的时候工作量非常大。另外，由于模块之间的依赖性太强，我们在写测试代码的时候可能不采取一些桥接模式来实现，这样势必加大了程序员的工作量。</p>
+<ol start="2">
+<li>
+<p>BDD<br>
+BDD指的是Behavior Drive Development，也就是行为驱动开发。这里的B并非指的是Business，实际上BDD可以看作是对TDD的一种补充，当然你也可以把它看作TDD的一个分支。因为在TDD中，我们并不能完全保证根据设计所编写的测试就是用户所期望的功能。BDD将这一部分简单和自然化，用自然语言来描述，让开发、测试、BA以及客户都能在这个基础上达成一致。因为测试优先的概念并不是每个人都能接受的，可能有人觉得系统太复杂而难以测试，有人认为不存在的东西无法测试。所以，我们在这里试图转换一种观念，那便是考虑它的行为，也就是说它应该如何运行，然后抽象出能达成共识的规范。如果你用过JBehave之类的BDD框架，你将会更好的理解其中具体的流程。这里我推荐一篇具体阐述的文章。亲身体验行为驱动开发。<br>
+另外，关于TDD和BDD之间的关系，还可以参考这篇文章: 虚拟座谈会：代码测试比率、测试驱动开发及行为驱动开发</p>
+</li>
+<li>
+<p>DDD<br>
+DDD指的是Domain Drive Design，也就是领域驱动开发。这是一种非常好的思想，在我们刚开始学习程序，甚至刚开始学习三层架构的时候，我们曾经面临过很多疑惑，比如如何来实现我们的数据层？后来我们开始学习MVC，MVP等架构，如何设计Model层又成了我们的新问题。我们见过太多这种情况，Model变成了单纯的数据容器，也就是我们经常说的贫血模式。DDD实际上也是建立在这个基础之上，因为它关注的是Service层的设计，着重于业务的实现，因此不可避免的以贫血模式为基础而存在。但是它最大的特别是将分析和设计结合起来，不再使他们处于分裂的状态，这对于我们正确完整的实现客户的需求，以及建立一个具有业务伸缩性的模型，是有很大帮助的。</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-pug模版引擎基本使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -717,178 +1076,6 @@ obj.b=‘123’;//报错</number></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//- extends 拓展调用 layout.jade</span><br><span class="line">extends ../layout</span><br><span class="line">block content</span><br><span class="line">  h1 文章列表</span><br><span class="line">  p 习近平忆贾大山 李克强:将启动新核电项目</span><br></pre></td></tr></table></figure>
 <p>res.render(‘article’) 的结果：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;我的网站&lt;/title&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;/head&gt;</span><br><span class="line">    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot;&gt;&lt;/head&gt;</span><br><span class="line">    &lt;script src=&quot;/js/lib/jquery-1.8.0.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;h1&gt;文章列表&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;习近平忆贾大山 李克强:将启动新核电项目&lt;/p&gt; </span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-js测试分类/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-js测试分类/" itemprop="url">js测试分类</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://www.cnblogs.com/wangshenhe/archive/2013/02/16/2913431.html" target="_blank" rel="noopener">http://www.cnblogs.com/wangshenhe/archive/2013/02/16/2913431.html</a></p>
-<p>在实际的项目中，我们可能随时面对各种不同的需求，它的各个方面的要素决定了我们所采用的开发模式。<br>
-比如，它的复杂度如何？所有的需求是否足够清晰？开发人员对相关的业务是否足够了解？项目的工期是否合理？种种问题，不一而足。这也决定了我们可能面对不同的需求可能需要采用不同的开发模式。下面大概说几种：</p>
-<ol>
-<li>TDD<br>
-TDD指的是Test Drive Development，很明显的意思是测试驱动开发，也就是说我们可以从测试的角度来检验整个项目。大概的流程是先针对每个功能点抽象出接口代码，然后编写单元测试代码，接下来实现接口，运行单元测试代码，循环此过程，直到整个单元测试都通过。这一点和敏捷开发有类似之处。</li>
-</ol>
-<p>TDD的好处自然不用多说，它能让你减少程序逻辑方面的错误，尽可能的减少项目中的bug，开始接触编程的时候我们大都有过这样的体验，可能你觉得完成得很完美，自我感觉良好，但是实际测试或者应用的时候才发现里面可能存在一堆bug，或者存在设计问题，或者更严重的逻辑问题，而TDD正好可以帮助我们尽量减少类似事件的发生。而且现在大行其道的一些模式对TDD的支持都非常不错，比如MVC和MVP等。</p>
-<p>但是并不是所有的项目都适合TDD这种模式的，我觉得必须具备以下几个条件：<br>
-首先，项目的需求必须足够清晰，而且程序员对整个需求有足够的了解，如果这个条件不满足，那么执行的过程中难免失控。当然，要达到这个目标也是需要做一定功课的，这要求我们前期的需求分析以及HLD和LLD都要做得足够的细致和完善。</p>
-<p>其次，取决于项目的复杂度和依赖性，对于一个业务模型及其复杂、内部模块之间的相互依赖性非常强的项目，采用TDD反而会得不尝失，这会导致程序员在拆分接口和写测试代码的时候工作量非常大。另外，由于模块之间的依赖性太强，我们在写测试代码的时候可能不采取一些桥接模式来实现，这样势必加大了程序员的工作量。</p>
-<ol start="2">
-<li>
-<p>BDD<br>
-BDD指的是Behavior Drive Development，也就是行为驱动开发。这里的B并非指的是Business，实际上BDD可以看作是对TDD的一种补充，当然你也可以把它看作TDD的一个分支。因为在TDD中，我们并不能完全保证根据设计所编写的测试就是用户所期望的功能。BDD将这一部分简单和自然化，用自然语言来描述，让开发、测试、BA以及客户都能在这个基础上达成一致。因为测试优先的概念并不是每个人都能接受的，可能有人觉得系统太复杂而难以测试，有人认为不存在的东西无法测试。所以，我们在这里试图转换一种观念，那便是考虑它的行为，也就是说它应该如何运行，然后抽象出能达成共识的规范。如果你用过JBehave之类的BDD框架，你将会更好的理解其中具体的流程。这里我推荐一篇具体阐述的文章。亲身体验行为驱动开发。<br>
-另外，关于TDD和BDD之间的关系，还可以参考这篇文章: 虚拟座谈会：代码测试比率、测试驱动开发及行为驱动开发</p>
-</li>
-<li>
-<p>DDD<br>
-DDD指的是Domain Drive Design，也就是领域驱动开发。这是一种非常好的思想，在我们刚开始学习程序，甚至刚开始学习三层架构的时候，我们曾经面临过很多疑惑，比如如何来实现我们的数据层？后来我们开始学习MVC，MVP等架构，如何设计Model层又成了我们的新问题。我们见过太多这种情况，Model变成了单纯的数据容器，也就是我们经常说的贫血模式。DDD实际上也是建立在这个基础之上，因为它关注的是Service层的设计，着重于业务的实现，因此不可避免的以贫血模式为基础而存在。但是它最大的特别是将分析和设计结合起来，不再使他们处于分裂的状态，这对于我们正确完整的实现客户的需求，以及建立一个具有业务伸缩性的模型，是有很大帮助的。</p>
-</li>
-</ol>
-
           
         
       
@@ -2711,275 +2898,11 @@ Node.js 的包管理器 npm，是全球最大的开源库生态系统。</p>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-gulp入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-gulp入门/" itemprop="url">gulp入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>gulpjs是一个前端构建工具，与gruntjs相比，gulpjs无需写一大堆繁杂的配置参数，API也非常简单，学习起来很容易，而且gulpjs使用的是nodejs中stream来读取和操作数据，其速度更快</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Gulp官网 http://gulpjs.com/</span><br><span class="line">Gulp中文网 http://www.gulpjs.com.cn/</span><br><span class="line">Gulp中文文档 https://github.com/lisposter/gulp-docs-zh-cn</span><br><span class="line">Gulp插件网 http://gulpjs.com/plugins/</span><br><span class="line">Awesome Gulp https://github.com/alferov/awesome-gulp</span><br><span class="line">StuQ-Gulp实战和原理解析 http://i5ting.github.io/stuq-gulp/</span><br></pre></td></tr></table></figure>
-<h1 id="工作流程"><a class="markdownIt-Anchor" href="#工作流程"></a> 工作流程</h1>
-<p>gulp的使用流程一般是这样子的：</p>
-<ol>
-<li>通过gulp.src()方法获取到我们想要处理的文件流，22. 把文件流通过pipe方法导入到gulp的插件中</li>
-<li>把经过插件处理后的流再通过pipe方法导入到gulp.dest()中</li>
-<li>gulp.dest()方法则把流中的内容写入到文件中</li>
-</ol>
-<p>==注意：== 给gulp.dest()传入的路径参数，只能用来指定要生成的文件的目录，而不能指定生成文件的文件名，它生成文件的文件名使用的是导入到它的文件流自身的文件名。==生成的文件名是由导入到它的文件流决定的==</p>
-<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
-<p>gulp基于node.js，要通过nodejs的npm安装gulp，所以先要安装nodejs环境</p>
-<ul>
-<li>全局方式：npm install -g gulp</li>
-<li>gulp的项目中单独安装一次：npm install gulp</li>
-<li>安装的时候把gulp写进项目package.json文件的依赖中：npm install --save-dev gulp</li>
-</ul>
-<p>在全局安装gulp后，还需要在项目中本地安装一次，是为了版本的灵活性，仅供参考</p>
-<h1 id="开始使用gulp"><a class="markdownIt-Anchor" href="#开始使用gulp"></a> 开始使用gulp</h1>
-<ol>
-<li>建立gulpfile.js文件<br>
-此时我们的目录结构是这样子的：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">├── gulpfile.js</span><br><span class="line">├── node_modules</span><br><span class="line">│ └── gulp</span><br><span class="line">└── package.json</span><br><span class="line">~</span><br></pre></td></tr></table></figure>
-<p>最简gulpfile.js:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">gulp.task(&apos;default&apos;,function()&#123;</span><br><span class="line">    console.log(&apos;hello world&apos;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>运行gulp任务<br>
-切换到存放gulpfile.js文件的目录</li>
-</ol>
-<ul>
-<li>执行gulp命令:会执行任务名为default的默认任务</li>
-<li>gulp task1:执行task1任务</li>
-</ul>
-<h1 id="gulpfilejs文件"><a class="markdownIt-Anchor" href="#gulpfilejs文件"></a> gulpfile.js文件</h1>
-<p>全局配置config：当gulpfile.js太大时就不好维护了，此时可以将需要在gulpfile中引用的参数，放到这里，包括一些路径，功能的开关等，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    name : &apos;.....&apos;,</span><br><span class="line">    devPath : &apos;.....&apos;,    //项目根路径，根路径下可以包含多个项目</span><br><span class="line">    prodPath : &apos;....&apos;, //生产路径根路径</span><br><span class="line">    sassPath : &apos;.....&apos;, //SASS包含文件路径</span><br><span class="line">    rmHtmlWhitespace : false,//html中是否去除空格</span><br><span class="line">    webpackEntry : &#123;</span><br><span class="line">        index : &apos;index.js&apos;//js合并</span><br><span class="line">    &#125;,</span><br><span class="line">    server : &#123;</span><br><span class="line">        port : 8088</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>意下这里使用了module.exports，这是nodejs的语法。在gulpfile中将会用require引用config。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var config = require(&apos;./config&apos;);//加载项目配置</span><br></pre></td></tr></table></figure>
-<p>使用举例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//引入gulp，项目文件中安装的gulp的引入方式</span><br><span class="line">var gulp =require(&apos;gulp&apos;);</span><br><span class="line"></span><br><span class="line">//引入组件</span><br><span class="line">var jshint = require(&quot;gulp-jshint&quot;);</span><br><span class="line">var gutil = require(&quot;gulp-util&quot;);</span><br><span class="line">var sass= require(&quot;gulp-sass&quot;);</span><br><span class="line">var concat = require(&quot;gulp-concat&quot;);</span><br><span class="line">var uglify = require(&quot;gulp-uglify&quot;);</span><br><span class="line">var rename = require(&quot;gulp-rename&quot;);</span><br><span class="line"></span><br><span class="line">var path = require(&quot;path&quot;);</span><br><span class="line">var del = require(&quot;del&quot;);</span><br><span class="line"></span><br><span class="line">//你也许会想要在编译文件之前删除一些文件</span><br><span class="line">gulp.task(&apos;clean&apos;, function(cb) &#123;</span><br><span class="line">    return del([&apos;build/**/*&apos;], cb);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//检查脚本</span><br><span class="line">gulp.task(&apos;lint&apos;,function () &#123;</span><br><span class="line">    gulp.src(&apos;./src/javascript/**/*.js&apos;)</span><br><span class="line">        .pipe(jshint())</span><br><span class="line">        .pipe(jshint.reporter(&apos;default&apos;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//编译sass</span><br><span class="line">//sass 任务会编译scss/目录下的scss文件，并把编译完成的css文件保存到/css目录中</span><br><span class="line">gulp.task(&apos;sass&apos;,function () &#123;</span><br><span class="line">    gulp.src(&quot;./src/scss/**/*.scss&quot;)</span><br><span class="line">        .pipe(sass(&#123;outputStyle: &apos;compact&apos;&#125;))</span><br><span class="line">        .pipe(gulp.dest(&quot;./build/css&quot;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//合并，压缩文件</span><br><span class="line">//scipts 任务会合并js 目录下的所有js文件并输出到dist目录中，然后gulp会重命名。压缩合并的文件，也输出到dist/目录</span><br><span class="line">gulp.task(&apos;scripts&apos;,function () &#123;</span><br><span class="line">    gulp.src(&apos;./src/javascript/**/*.js&apos;)</span><br><span class="line">        .pipe(concat(&apos;all.js&apos;))</span><br><span class="line">        .pipe(gulp.dest(&apos;./dest&apos;))</span><br><span class="line">        .pipe(rename(&quot;all.min.js&quot;))</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(&quot;./build&quot;))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//这时，我们创建了一个基于其他任务的default任务。</span><br><span class="line">//使用.run()方法关联和运行我们上面定义的任务，使用.watch() 方法去坚挺制定目录的文件变化,当有文件变化时，会运行回调定义的其他任务。</span><br><span class="line">gulp.task(&apos;default&apos;,function()&#123;</span><br><span class="line">    //将你的默认的任务代码放在这里</span><br><span class="line">    gulp.run(&apos;lint&apos;,&apos;sass&apos;,&apos;scripts&apos;);</span><br><span class="line">    //监听文件变化</span><br><span class="line">    gulp.watch(&quot;&quot;,function () &#123;</span><br><span class="line">        gulp.run(&apos;lint&apos;,&apos;sass&apos;,&apos;scripts&apos;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="gulp的api介绍"><a class="markdownIt-Anchor" href="#gulp的api介绍"></a> gulp的API介绍</h1>
-<p>更多API介绍： <a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="noopener">http://www.gulpjs.com.cn/docs/api/</a></p>
-<h2 id="gulpsrc"><a class="markdownIt-Anchor" href="#gulpsrc"></a> gulp.src()</h2>
-<p>gulp.src()方法正是用来获取流的，但要注意这个流里的内容不是原始的文件流，而是一个虚拟文件对象流(Vinyl files)，这个虚拟文件对象中存储着原始文件的路径、文件名、内容等信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.src(globs[, options])</span><br><span class="line"></span><br><span class="line">* globs参数是文件匹配模式(类似正则表达式)，用来匹配文件路径(包括文件名)，当然这里也可以直接指定某个具体的文件路径。当有多个匹配模式时，该参数可以为一个数组</span><br><span class="line">* options为可选参数</span><br></pre></td></tr></table></figure>
-<ul>
-<li>当我们没有在gulp.src()方法中配置base属性时，base的默认值为通配符开始出现之前那部分路径，例如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.src(&apos;app/src/**/*.css&apos;) //此时base的值为 app/src</span><br></pre></td></tr></table></figure>
-<p>Gulp内部使用了node-glob模块来实现其文件匹配功能。我们可以使用下面这些特殊的字符来匹配我们想要的文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 匹配文件路径中的0个或多个字符，但不会匹配路径分隔符，除非路径分隔符出现在末尾</span><br><span class="line">** 匹配路径中的0个或多个目录及其子目录,需要单独出现，即它左右不能有其他东西了。如果出现在末尾，也能匹配文件。</span><br><span class="line">? 匹配文件路径中的一个字符(不会匹配路径分隔符)</span><br><span class="line">[...] 匹配方括号中出现的字符中的任意一个，当方括号中第一个字符为^或!时，则表示不匹配方括号中出现的其他字符中的任意一个，类似js正则表达式中的用法</span><br><span class="line">!(pattern|pattern|pattern) 匹配任何与括号中给定的任一模式都不匹配的</span><br><span class="line">?(pattern|pattern|pattern) 匹配括号中给定的任一模式0次或1次，类似于js正则中的(pattern|pattern|pattern)?</span><br><span class="line">+(pattern|pattern|pattern) 匹配括号中给定的任一模式至少1次，类似于js正则中的(pattern|pattern|pattern)+</span><br><span class="line">*(pattern|pattern|pattern) 匹配括号中给定的任一模式0次或多次，类似于js正则中的(pattern|pattern|pattern)*</span><br><span class="line">@(pattern|pattern|pattern) 匹配括号中给定的任一模式1次，类似于js正则中的(pattern|pattern|pattern)</span><br></pre></td></tr></table></figure>
-<p>==注意：== 不能在数组中的第一个元素中使用排除模式</p>
-<p>使用举例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//使用数组的方式来匹配多种文件</span><br><span class="line">gulp.src([&apos;js/*.js&apos;,&apos;css/*.css&apos;,&apos;*.html&apos;])</span><br><span class="line"></span><br><span class="line">gulp.src([*.js,&apos;!b*.js&apos;]) //匹配所有js文件，但排除掉以b开头的js文件</span><br><span class="line">gulp.src([&apos;!b*.js&apos;,*.js]) //不会排除任何文件，因为排除模式不能出现在数组的第一个元素中</span><br></pre></td></tr></table></figure>
-<h2 id="gulpdest"><a class="markdownIt-Anchor" href="#gulpdest"></a> gulp.dest()</h2>
-<p>gulp.dest()方法是用来写文件的，其语法为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.dest(path[,options])</span><br><span class="line"></span><br><span class="line">* path为写入文件的路径</span><br><span class="line">* options为一个可选的参数对象，通常我们不需要用到</span><br></pre></td></tr></table></figure>
-<ul>
-<li>生成的文件路径是我们传入的path参数后面再加上gulp.src()中有通配符开始出现的那部分路径</li>
-</ul>
-<h2 id="gulptask"><a class="markdownIt-Anchor" href="#gulptask"></a> gulp.task()</h2>
-<p>gulp.task方法用来定义任务，内部使用的是Orchestrator，其语法为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(name[, deps], fn)</span><br><span class="line">* name 为任务名</span><br><span class="line">* deps 是当前定义的任务需要依赖的其他任务，为一个数组。当前定义的任务会在所有依赖的任务执行完毕后才开始执行。如果没有依赖，则可省略这个参数</span><br><span class="line">* fn 为任务函数，我们把任务要执行的代码都写在里面。该参数也是可选的。</span><br></pre></td></tr></table></figure>
-<p>使用举例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(&apos;mytask&apos;, [&apos;array&apos;, &apos;of&apos;, &apos;task&apos;, &apos;names&apos;], function() &#123; //定义一个有依赖的任务</span><br><span class="line">  // Do something</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<ol>
-<li>如果任务相互之间没有依赖，任务会按你书写的顺序来执行</li>
-<li>如果有依赖的话则会先执行依赖的任务</li>
-<li>如果某个任务所依赖的任务是异步的，就要注意了，gulp并不会等待那个所依赖的异步任务完成，而是会接着执行后续的任务</li>
-</ol>
-<h2 id="gulpwatch"><a class="markdownIt-Anchor" href="#gulpwatch"></a> gulp.watch()</h2>
-<p>gulp.watch()用来监视文件的变化，当文件发生变化后，我们可以利用它来执行相应的任务，例如文件压缩等。其语法为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.watch(glob[, opts], tasks)</span><br><span class="line">* glob 为要监视的文件匹配模式，规则和用法与gulp.src()方法中的glob相同。</span><br><span class="line">* opts 为一个可选的配置对象，通常不需要用到</span><br><span class="line">* tasks 为文件变化后要执行的任务，为一个数组</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(&apos;uglify&apos;,function()&#123;</span><br><span class="line">  //do something</span><br><span class="line">&#125;);</span><br><span class="line">gulp.task(&apos;reload&apos;,function()&#123;</span><br><span class="line">  //do something</span><br><span class="line">&#125;);</span><br><span class="line">gulp.watch(&apos;js/**/*.js&apos;, [&apos;uglify&apos;,&apos;reload&apos;]);</span><br></pre></td></tr></table></figure>
-<h1 id="一些常用的gulp插件"><a class="markdownIt-Anchor" href="#一些常用的gulp插件"></a> 一些常用的gulp插件</h1>
-<h2 id="自动加载插件pulp-load-plugins"><a class="markdownIt-Anchor" href="#自动加载插件pulp-load-plugins"></a> 自动加载插件pulp-load-plugins</h2>
-<ul>
-<li>这个插件能自动帮你加载package.json文件里的gulp插件</li>
-<li>gulp-load-plugins是通过package.json文件来加载插件</li>
-<li>gulp-load-plugins并不会一开始就加载所有package.json里的gulp插件，而是在我们需要用到某个插件的时候，才去加载那个插件</li>
-<li>定义及启用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">//加载gulp-load-plugins插件，并马上运行它</span><br><span class="line">var plugins = require(&apos;gulp-load-plugins&apos;)();</span><br></pre></td></tr></table></figure>
-<ul>
-<li>使用举例：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins.rename          //gulp-rename插件的使用</span><br></pre></td></tr></table></figure>
-<h2 id="重命名插件gulp-rename"><a class="markdownIt-Anchor" href="#重命名插件gulp-rename"></a> 重命名插件gulp-rename</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(&apos;rename&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;js/jquery.js&apos;)</span><br><span class="line">    .pipe(uglify())  //压缩</span><br><span class="line">    .pipe(rename(&apos;jquery.min.js&apos;)) //会将jquery.js重命名为jquery.min.js</span><br><span class="line">    .pipe(gulp.dest(&apos;js&apos;)); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="js文件压缩插件gulp-uglify"><a class="markdownIt-Anchor" href="#js文件压缩插件gulp-uglify"></a> js文件压缩插件gulp-uglify</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    uglify = require(&quot;gulp-uglify&quot;);</span><br><span class="line"> </span><br><span class="line">gulp.task(&apos;minify-js&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;js/*.js&apos;) // 要压缩的js文件</span><br><span class="line">    .pipe(uglify())  //使用uglify进行压缩,更多配置请参考：</span><br><span class="line">    .pipe(gulp.dest(&apos;dist/js&apos;)); //压缩后的路径</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="css文件压缩插件gulp-minify-css"><a class="markdownIt-Anchor" href="#css文件压缩插件gulp-minify-css"></a> css文件压缩插件gulp-minify-css</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    minifyCss = require(&quot;gulp-minify-css&quot;);</span><br><span class="line"> </span><br><span class="line">gulp.task(&apos;minify-css&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;css/*.css&apos;) // 要压缩的css文件</span><br><span class="line">    .pipe(minifyCss()) //压缩css</span><br><span class="line">    .pipe(gulp.dest(&apos;dist/css&apos;));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="html文件压缩插件gulp-minify-html"><a class="markdownIt-Anchor" href="#html文件压缩插件gulp-minify-html"></a> html文件压缩插件gulp-minify-html</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    minifyHtml = require(&quot;gulp-minify-html&quot;);</span><br><span class="line"> </span><br><span class="line">gulp.task(&apos;minify-html&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;html/*.html&apos;) // 要压缩的html文件</span><br><span class="line">    .pipe(minifyHtml()) //压缩</span><br><span class="line">    .pipe(gulp.dest(&apos;dist/html&apos;));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="js代码检查插件"><a class="markdownIt-Anchor" href="#js代码检查插件"></a> js代码检查插件</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    jshint = require(&quot;gulp-jshint&quot;);</span><br><span class="line"> </span><br><span class="line">gulp.task(&apos;jsLint&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;js/*.js&apos;)</span><br><span class="line">    .pipe(jshint())</span><br><span class="line">    .pipe(jshint.reporter()); // 输出检查结果</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="文件合并插件gulp-concat"><a class="markdownIt-Anchor" href="#文件合并插件gulp-concat"></a> 文件合并插件gulp-concat</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    concat = require(&quot;gulp-concat&quot;);</span><br><span class="line"> </span><br><span class="line">gulp.task(&apos;concat&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;js/*.js&apos;)  //要合并的文件</span><br><span class="line">    .pipe(concat(&apos;all.js&apos;))  // 合并匹配到的js文件并命名为 &quot;all.js&quot;</span><br><span class="line">    .pipe(gulp.dest(&apos;dist/js&apos;));</span><br><span class="line">&#125;);</span><br><span class="line">~~~ </span><br><span class="line"></span><br><span class="line">## 图片压缩插件</span><br></pre></td></tr></table></figure>
-<p>var gulp = require(‘gulp’);<br>
-var imagemin = require(‘gulp-imagemin’);<br>
-var pngquant = require(‘imagemin-pngquant’); //png图片压缩插件</p>
-<p>gulp.task(‘default’, function () {<br>
-return gulp.src(‘src/images/*’)<br>
-.pipe(imagemin({<br>
-progressive: true,<br>
-use: [pngquant()] //使用pngquant来压缩png图片<br>
-}))<br>
-.pipe(gulp.dest(‘dist’));<br>
-});</p>
-<pre class="highlight"><code class=""></code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -3034,7 +2957,7 @@ use: [pngquant()] //使用pngquant来压缩png图片<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -3045,7 +2968,7 @@ use: [pngquant()] //使用pngquant来压缩png图片<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -3056,7 +2979,7 @@ use: [pngquant()] //使用pngquant来压缩png图片<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -3150,7 +3073,7 @@ use: [pngquant()] //使用pngquant来压缩png图片<br>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.4k字</span>
+  <span class="post-count">博客全站共109.0k字</span>
 </div>
 
 
