@@ -324,6 +324,323 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-设置网络自动启动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/Linux-设置网络自动启动/" itemprop="url">CentOS设置网络自动启动</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:20:08+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="设置网络自启动"><a class="markdownIt-Anchor" href="#设置网络自启动"></a> 设置网络自启动</h1>
+<p>修改/etc/sysconfig/network-scripts/ifcfg-ethX文件，修改其中ONBOOT===no==的值为yes即可</p>
+<p>如果想要自己设置静态ip，需要在上边文件的最后添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IPADDR=192.168.7.106 #静态IP  </span><br><span class="line">GATEWAY=192.168.7.1 #默认网关  </span><br><span class="line">NETMASK=255.255.255.0 #子网掩码  </span><br><span class="line">DNS1=192.168.7.1 #DNS 配置</span><br></pre></td></tr></table></figure>
+<p>重启服务即可</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-CentOS版本说明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/Linux-CentOS版本说明/" itemprop="url">CentOS版本说明</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:19:51+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>CentOS-7.0-1406-x86_64-DVD.iso             标准安装版，一般下载这个就可以了</li>
+<li>CentOS-7.0-1406-x86_64-NetInstall.iso       网络安装镜像</li>
+<li>CentOS-7.0-1406-x86_64-Everything.iso     对完整版安装盘的软件进行补充，集成所有软件。</li>
+<li>CentOS-7.0-1406-x86_64-GnomeLive.iso   GNOME桌面版</li>
+<li>CentOS-7.0-1406-x86_64-KdeLive.iso         KDE桌面版</li>
+<li>CentOS-7.0-1406-x86_64-livecd.iso            光盘上运行的系统，类拟于winpe</li>
+</ul>
+<ol>
+<li>CentOS-xxxx-LiveCD.ios 和CentOS-xxxx-bin-DVD.iso有什么区别？前者只有700M，后者有3.8G。其差别不仅仅在大小上，其更本质的差别是，CentOS-xxxx-LiveCD.ios只能加载到内存里运行，不能安装。CentOS-xxx-bin-DVD1.iso才可以安装到硬盘上。</li>
+<li>CentOS-xxx-bin-DVD1.iso，CentOS-xxx-bin-DVD2.iso分别是干什么的？前者是3.8G，后者是500M。其差别是DVD1是CentOS的安装文件，DVD2是CentOS的一些软件（就简单实用CentOS来说是不需要的）。</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/01/02/Java-2019-01-02-Java并发编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -640,168 +957,6 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
-</blockquote>
-<blockquote>
-<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
-</blockquote>
-<blockquote>
-<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
-<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
-<p>Centos7解决图形界面卡死问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS下yum源的搭建与使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -949,6 +1104,168 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 <p>yum源的搭建可分为三步：①搭建Apache服务器②挂载ISO镜像，将镜像中的包放至Apache服务器目录下③ISO镜像的包比较老旧，可以定时同步其他源中的包到本地</p>
 <h1 id="客户端访问yum源服务器"><a class="markdownIt-Anchor" href="#客户端访问yum源服务器"></a> 客户端访问yum源服务器</h1>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
+</blockquote>
+<blockquote>
+<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
+</blockquote>
+<blockquote>
+<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
+<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
+<p>Centos7解决图形界面卡死问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1229,6 +1546,183 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS时钟同步设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS时钟同步设置/" itemprop="url">CentOS时钟同步设置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>网络时间协议NTP（Network Time Protocol）是用于互联网中时间同步的标准互联网协议</li>
+<li>NTP的用途是把计算机的时间同步到某些时间标准。目前采用的时间标准是世界协调时UTC（Universal Time Coordinated）</li>
+<li>NTP的主要开发者是美国特拉华大学的David L. Mills教授</li>
+</ul>
+<h1 id="ntp在linux下有两种时钟同步方式"><a class="markdownIt-Anchor" href="#ntp在linux下有两种时钟同步方式"></a> NTP在linux下有两种时钟同步方式</h1>
+<ol>
+<li>直接同步:使用ntpdate命令进行同步，直接进行时间变更。如果服务器上存在一个12点运行的任务，当前服务器时间是13点，但标准时间时11点，使用此命令可能会造成任务重复执行。因此使用ntpdate同步可能会引发风险，因此该命令也多用于配置时钟同步服务时第一次同步时间时使用。</li>
+<li>平滑同步:使用ntpd进行时钟同步，可以保证一个时间不经历两次，它每次同步时间的偏移量不会太陡，是慢慢来的，这正因为这样，ntpd平滑同步可能耗费的时间比较长。</li>
+</ol>
+<h1 id="标准时钟同步服务"><a class="markdownIt-Anchor" href="#标准时钟同步服务"></a> 标准时钟同步服务</h1>
+<blockquote>
+<p><a href="http://www.pool.ntp.org/zone/cn" target="_blank" rel="noopener">http://www.pool.ntp.org/zone/cn</a> 网站包含全球的标准时间同步服务，也包括对中国时间的同步，<a href="http://xn--URLcn-gq1h343fqye1p9d.pool.ntp.org" target="_blank" rel="noopener">对应的URL为cn.pool.ntp.org</a></p>
+</blockquote>
+<p>国内常用的时间服务器列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">210.72.145.44  (国家授时中心服务器IP地址) </span><br><span class="line">ntp.sjtu.edu.cn 202.120.2.101 (上海交通大学网络中心NTP服务器地址）</span><br><span class="line">s1a.time.edu.cn	北京邮电大学</span><br><span class="line">s1b.time.edu.cn	清华大学</span><br><span class="line">s1c.time.edu.cn	北京大学</span><br><span class="line">s1d.time.edu.cn	东南大学</span><br><span class="line">s1e.time.edu.cn	清华大学</span><br><span class="line">s2a.time.edu.cn	清华大学</span><br><span class="line">s2b.time.edu.cn	清华大学</span><br><span class="line">s2c.time.edu.cn	北京邮电大学</span><br><span class="line">s2d.time.edu.cn	西南地区网络中心</span><br><span class="line">s2e.time.edu.cn	西北地区网络中心</span><br><span class="line">s2f.time.edu.cn	东北地区网络中心</span><br><span class="line">s2g.time.edu.cn	华东南地区网络中心</span><br><span class="line">s2h.time.edu.cn	四川大学网络管理中心</span><br><span class="line">s2j.time.edu.cn	大连理工大学网络中心</span><br><span class="line">s2k.time.edu.cn CERNET桂林主节点</span><br><span class="line">s2m.time.edu.cn 北京大学</span><br></pre></td></tr></table></figure>
+<h2 id="具体设置步骤如下"><a class="markdownIt-Anchor" href="#具体设置步骤如下"></a> 具体设置步骤如下：</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* rpm -q ntp    //使用rpm检查ntp包是否安装,有则显示如：ntp-4.2.6p5-19.el7.centos.3.x86_64</span><br><span class="line">* 如果已经安装则略过此步，否则使用yum进行安装，并设置系统开机自动启动并启动服务</span><br><span class="line"> 1. yum -y install ntp</span><br><span class="line"> 2. systemctl enable ntpd</span><br><span class="line"> 3. systemctl start ntpd</span><br><span class="line">* 设置ntp服务器: 192.168.11.212</span><br><span class="line">  配置前先使用命令：ntpdate -u cn.pool.ntp.org，同步服务器</span><br><span class="line">* 修改/etc/ntp.conf文件，修改内容如下：</span><br><span class="line"> 1. ntp服务器设置</span><br><span class="line"> </span><br><span class="line"> 2. ntp客户端设置</span><br><span class="line"> </span><br><span class="line">* systemctl restart ntpd    //修改完成后重启ntpd服务</span><br><span class="line">* 启动后，查看同步情况</span><br><span class="line"> 1. ntpq -p //查看网络中的NTP服务器，同时显示客户端和每个服务器的关系</span><br><span class="line"> 2. ntpstat //查看时间同步状态，这个一般需要5-10分钟后才能成功连接和同步</span><br></pre></td></tr></table></figure>
+<h2 id="参数说明"><a class="markdownIt-Anchor" href="#参数说明"></a> 参数说明</h2>
+<blockquote>
+<p>用restrict控管权限</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nomodify - 用户端不能更改ntp服务器的时间参数 </span><br><span class="line">noquery - 用户端不能使用ntpq，ntpc等命令来查询ntp服务器 </span><br><span class="line">notrap - 不提供trap远端登陆</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ntpq -p 查看网络中的NTP服务器,每项说明如下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 响应的NTP服务器和最精确的服务器</span><br><span class="line">+ 响应这个查询请求的NTP服务器</span><br><span class="line">blank(空格) 没有响应的NTP服务器</span><br><span class="line">remote  响应这个请求的NTP服务器的名称</span><br><span class="line">refid   NTP服务器使用的更高一级服务器的名称</span><br><span class="line">st  正在响应请求的NTP服务器的级别</span><br><span class="line">when    上一次成功请求之后到现在的秒数</span><br><span class="line">poll    本地和远程服务器多少时间进行一次同步，单位秒，在一开始运行NTP的时候这个poll值会比较小，服务器同步的频率大，可以尽快调整到正确的时间范围，之后poll值会逐渐增大，同步的频率也就会相应减小</span><br><span class="line">reach   用来测试能否和服务器连接，是一个八进制值，每成功连接一次它的值就会增加</span><br><span class="line">delay   从本地机发送同步要求到ntp服务器的往返时间</span><br><span class="line">offset  主机通过NTP时钟同步与所同步时间源的时间偏移量，单位为毫秒，offset越接近于0，主机和ntp服务器的时间越接近</span><br><span class="line">jitter  统计了在特定个连续的连接数里offset的分布情况。简单地说这个数值的绝对值越小，主机的时间就越精确</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-Linux下scp命令详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1342,222 +1836,6 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 <li>-6 强行使用 IPV6 地址</li>
 </ul>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-VI编辑器使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-VI编辑器使用/" itemprop="url">VI编辑器使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>vi编辑器是所有Unix及Linux系统下标准的编辑器，它的强大不逊色于任何最新的文本编辑器，对Unix及Linux系统的任何版本，vi编辑器是完全相同的。</p>
-</blockquote>
-<h1 id="vi的基本概念"><a class="markdownIt-Anchor" href="#vi的基本概念"></a> vi的基本概念</h1>
-<ol>
-<li>命令行模式command mode</li>
-</ol>
-<blockquote>
-<p>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段及进入Insert mode下，或者到 last line mode；</p>
-</blockquote>
-<ol start="2">
-<li>插入模式（Insert mode）</li>
-</ol>
-<blockquote>
-<p>只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令行模式</p>
-</blockquote>
-<ol start="3">
-<li>底行模式（last line mode）</li>
-</ol>
-<blockquote>
-<p>将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……</p>
-</blockquote>
-<p>不过一般我们在使用时把vi简化成两个模式，就是将底行模式（last line mode）也算入命令行模式command mode）</p>
-<h1 id="vi的基本操作"><a class="markdownIt-Anchor" href="#vi的基本操作"></a> vi的基本操作</h1>
-<ol>
-<li>进入vi的命令</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi filename:打开或新建文件，并将光标置于第一行首</span><br><span class="line">vi +n filename：打开文件，并将光标置于第n行首</span><br><span class="line">vi + filename ：打开文件，并将光标置于最后一行首</span><br><span class="line">vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处</span><br><span class="line">vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename</span><br><span class="line">vi filename....filename ：打开多个文件，依次编辑</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>退出vi及保存文件</li>
-</ol>
-<blockquote>
-<p>在「命令行模式（command mode）」下，按一下「：」冒号键进入「Last line mode」</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">: w filename （输入 「w filename」将文章以指定的文件名filename保存）</span><br><span class="line">: wq (输入「wq」，存盘并退出vi)</span><br><span class="line">: q! (输入q!， 不存盘强制退出vi)</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>移动光标</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">按「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格。</span><br><span class="line">按「ctrl」+「b」：屏幕往&quot;后&quot;移动一页</span><br><span class="line">按「ctrl」+「f」：屏幕往&quot;前&quot;移动一页</span><br><span class="line">按「ctrl」+「u」：屏幕往&quot;后&quot;移动半页</span><br><span class="line">按「ctrl」+「d」：屏幕往&quot;前&quot;移动半页</span><br><span class="line">按数字「0」：移到文章的开头</span><br><span class="line">按「G」：移动到文章的最后</span><br><span class="line">按「$」：移动到光标所在行的&quot;行尾&quot;</span><br><span class="line">按「^」：移动到光标所在行的&quot;行首&quot;</span><br><span class="line">按「w」：光标跳到下个字的开头</span><br><span class="line">按「e」：光标跳到下个字的字尾</span><br><span class="line">按「b」：光标回到上个字的开头</span><br><span class="line">按「#l」：光标移到该行的第#个位置，如：5l,56l</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>删除文字</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">「x」：每按一次，删除光标所在位置的&quot;后面&quot;一个字符</span><br><span class="line">「#x」：例如，「6x」表示删除光标所在位置的&quot;后面&quot;6个字符</span><br><span class="line">「X」：大写的X，每按一次，删除光标所在位置的&quot;前面&quot;一个字符</span><br><span class="line">「#X」：例如，「20X」表示删除光标所在位置的&quot;前面&quot;20个字符</span><br><span class="line">「dd」：删除光标所在行</span><br><span class="line">「#dd」：从光标所在行开始删除#行</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>复制</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">「yw」：将光标所在之处到字尾的字符复制到缓冲区中</span><br><span class="line">「#yw」：复制#个字到缓冲区</span><br><span class="line">「yy」：复制光标所在行到缓冲区</span><br><span class="line">「#yy」：例如，「6yy」表示拷贝从光标所在的该行&quot;往下数&quot;6行文字</span><br><span class="line">「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与&quot;y&quot;有关的复制命令都必须与&quot;p&quot;配合才能完成复制与粘贴功能</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li>恢复上一次操作</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">「u」：如果您误执行一个命令，可以马上按下「u」，回到上一个操作。按多次&quot;u&quot;可以执行多次恢复</span><br></pre></td></tr></table></figure>
-<ol start="7">
-<li>跳至指定的行</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">「ctrl」+「g」列出光标所在行的行号</span><br><span class="line">「#G」：例如，「15G」，表示移动光标至文章的第15行行首</span><br></pre></td></tr></table></figure>
-<ol start="8">
-<li>列出行号</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行模式：输入「set nu」后，会在文件中的每一行前面列出行号</span><br></pre></td></tr></table></figure>
-<ol start="9">
-<li>跳到文件中的某一行</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行模式：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行</span><br></pre></td></tr></table></figure>
-<ol start="10">
-<li>查找字符</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止;</span><br><span class="line">* 「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1819,386 +2097,11 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-XShell使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-XShell使用/" itemprop="url">XShell使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<blockquote>
-<p>Xshell是一款服务器终端模拟软件，用户可以使用Xshell软件在Windows、Mac OS电脑上访问不同系统的服务器主机，让你可以方便对其进行控制管理。</p>
-</blockquote>
-<blockquote>
-<p>创新的设计和优良的体验，让用户以最高效率对服务器进行管理</p>
-</blockquote>
-<h1 id="功能特色"><a class="markdownIt-Anchor" href="#功能特色"></a> 功能特色</h1>
-<ul>
-<li>可以保存多个vps登陆信息，免去每次输入的烦恼</li>
-<li>设置命令快捷按钮</li>
-<li>通过代理登陆vps</li>
-<li>鼠标右键粘贴可将本地粘贴板内容复制到vps</li>
-</ul>
-<h1 id="xshell-注册说明"><a class="markdownIt-Anchor" href="#xshell-注册说明"></a> Xshell 注册说明</h1>
-<ol>
-<li>公司名字随便填</li>
-<li>注册码 690313-111999-999313</li>
-</ol>
-<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
-<p>安装完成之后键盘输入无反应，解决方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件--属性--终端--编码 改成Unicode(UTF-8)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/" itemprop="url">使用Vundle管理配置Vim基本插件</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>官网：<a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim</a></p>
-<blockquote>
-<p>Vundle是基于Git仓库的插件管理软件。Vundle将插件的安装简化为类似yum软件安装的过程</p>
-</blockquote>
-<blockquote>
-<p>其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下</p>
-</blockquote>
-<h1 id="配置说明"><a class="markdownIt-Anchor" href="#配置说明"></a> 配置说明</h1>
-<ol>
-<li>在Github vim-scripts 用户下的repos,只需要写出repos名称</li>
-<li>在Github其他用户下的repos, 需要写出”用户名/repos名”</li>
-<li>不在Github上的插件，需要写出git全路径</li>
-</ol>
-<p>具体步骤：</p>
-<ol>
-<li>需要有git环境，CentOS7自带，可通过git命令查看</li>
-<li>安装Vundle：git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim.git</a> ~/.vim/bundle/Vundle.vim</li>
-<li>修改.vimrc／vimrc文件，在CentOS7中是vimrc文件，修改前先备份.</li>
-</ol>
-<ul>
-<li>将以下内容放置到文件最开头，最小配置如下：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">set nocompatibl </span><br><span class="line">filetype off</span><br><span class="line"></span><br><span class="line">set rtp+=~/.vim/bundle/Vundle.vim</span><br><span class="line"></span><br><span class="line">call vundle#begin()</span><br><span class="line"></span><br><span class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</span><br><span class="line"></span><br><span class="line">call vundle#end()</span><br><span class="line"></span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
-<p>在Plugin之后，添加自己想要安装的插件<br>
-4. 插件安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在vim中</span><br><span class="line">:PluginInstall</span><br><span class="line"></span><br><span class="line"># 在终端</span><br><span class="line">vim +PluginInstall +qall</span><br></pre></td></tr></table></figure>
-<h1 id="命令说明"><a class="markdownIt-Anchor" href="#命令说明"></a> 命令说明</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:PluginList -列举出列表中(.vimrc中)配置的所有插件</span><br><span class="line">:PluginInstall -安装列表中全部插件</span><br><span class="line">:PluginInstall! -更新列表中全部插件</span><br><span class="line">:PluginSearch foo -查找foo插件</span><br><span class="line">:PluginSearch! foo -刷新foo插件缓存</span><br><span class="line">:PluginClean -清除列表中没有的插件</span><br><span class="line">:PluginClean! -清除列表中没有的插件</span><br></pre></td></tr></table></figure>
-<h1 id="常用插件说明"><a class="markdownIt-Anchor" href="#常用插件说明"></a> 常用插件说明</h1>
-<ul>
-<li>rename.vim：在Vim中为文件重命名。</li>
-<li>vim-coffee-script：在Vim中舒心 的编写、编译Coffeescript。</li>
-<li>vim-mkdir：当你在Vim中新建文件的时候， 自动帮你创建不存在的目录。</li>
-<li>vim-surround：快速的删除、修改和添加 括号、引号、XML标签等等。</li>
-<li>matchit：用%去在两个对应的字符间跳转。</li>
-<li>tComment：快速注释、反注释代码。</li>
-<li>emmet-vim：Emmet的Vim版。</li>
-<li>tabular：快速对齐。</li>
-<li>snipmate.vim：快速的代码片段。</li>
-<li>vim-easymotion：在文件中快速定位。</li>
-<li>vim-instant-markdown：Vim中对</li>
-<li>Markdown文档的实时预览。</li>
-<li>NERDTree:一个用于浏览文件系统的树形资源管理外挂,它可以让你像使用Windows档案总管一样在VIM中浏览文件系统并且打开文件或目录</li>
-<li>MiniBufExplorer:提供多文件同时编辑功能，并在编辑器上方显示文件的标签</li>
-<li>一款状态栏增强插件，可以让你的Vim状态栏非常的美观，同时包括了buffer显示条扩展smart tab line以及集成了一些插件</li>
-<li></li>
-</ul>
-<h1 id="网络上配置收藏"><a class="markdownIt-Anchor" href="#网络上配置收藏"></a> 网络上配置收藏</h1>
-<ol>
-<li><a href="https://github.com/deepzz0/dotfiles/blob/master/.vimrc" target="_blank" rel="noopener">https://github.com/deepzz0/dotfiles/blob/master/.vimrc</a></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">if &amp;compatible</span><br><span class="line">  set nocompatible</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">filetype off</span><br><span class="line">set rtp+=~/.vim/bundle/vundle/</span><br><span class="line">call vundle#rc()</span><br><span class="line"></span><br><span class="line">&quot; Let Vundle manage Vundle</span><br><span class="line">Bundle &apos;gmarik/vundle&apos;</span><br><span class="line"></span><br><span class="line">&quot; Define bundles via Github repos</span><br><span class="line">Bundle &apos;christoomey/vim-run-interactive&apos;</span><br><span class="line">Bundle &apos;croaky/vim-colors-github&apos;</span><br><span class="line">Bundle &apos;danro/rename.vim&apos;</span><br><span class="line">Bundle &apos;kchmck/vim-coffee-script&apos;</span><br><span class="line">Bundle &apos;kien/ctrlp.vim&apos;</span><br><span class="line">Bundle &apos;pbrisbin/vim-mkdir&apos;</span><br><span class="line">Bundle &apos;scrooloose/syntastic&apos;</span><br><span class="line">Bundle &apos;slim-template/vim-slim&apos;</span><br><span class="line">Bundle &apos;thoughtbot/vim-rspec&apos;</span><br><span class="line">Bundle &apos;tpope/vim-bundler&apos;</span><br><span class="line">Bundle &apos;tpope/vim-endwise&apos;</span><br><span class="line">Bundle &apos;tpope/vim-fugitive&apos;</span><br><span class="line">Bundle &apos;tpope/vim-rails&apos;</span><br><span class="line">Bundle &apos;tpope/vim-surround&apos;</span><br><span class="line">Bundle &apos;vim-ruby/vim-ruby&apos;</span><br><span class="line">Bundle &apos;vim-scripts/ctags.vim&apos;</span><br><span class="line">Bundle &apos;vim-scripts/matchit.zip&apos;</span><br><span class="line">Bundle &apos;vim-scripts/tComment&apos;</span><br><span class="line">Bundle &quot;mattn/emmet-vim&quot;</span><br><span class="line">Bundle &quot;scrooloose/nerdtree&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-powerline&quot;</span><br><span class="line">Bundle &quot;godlygeek/tabular&quot;</span><br><span class="line">Bundle &quot;msanders/snipmate.vim&quot;</span><br><span class="line">Bundle &quot;jelera/vim-javascript-syntax&quot;</span><br><span class="line">Bundle &quot;altercation/vim-colors-solarized&quot;</span><br><span class="line">Bundle &quot;othree/html5.vim&quot;</span><br><span class="line">Bundle &quot;xsbeats/vim-blade&quot;</span><br><span class="line">Bundle &quot;Raimondi/delimitMate&quot;</span><br><span class="line">Bundle &quot;groenewege/vim-less&quot;</span><br><span class="line">Bundle &quot;evanmiller/nginx-vim-syntax&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-easymotion&quot;</span><br><span class="line">Bundle &quot;tomasr/molokai&quot;</span><br><span class="line"></span><br><span class="line">if filereadable(expand(&quot;~/.vimrc.bundles.local&quot;))</span><br><span class="line">  source ~/.vimrc.bundles.local</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">filetype on</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2253,7 +2156,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2275,7 +2178,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2369,7 +2272,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共109.0k字</span>
+  <span class="post-count">博客全站共121.8k字</span>
 </div>
 
 

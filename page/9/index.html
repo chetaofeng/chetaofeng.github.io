@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-Android应用坐标系及栏目/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/06/微信开发-Android应用坐标系及栏目/" itemprop="url">Android应用坐标系及栏目</a></h2>
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-React入门/" itemprop="url">React入门</a></h2>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:04:22+08:00">
+                2018-10-26
               </time>
             
 
@@ -378,8 +378,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
                   </a>
                 </span>
 
@@ -417,38 +417,160 @@
       
         
           
-            <p>[toc]</p>
-<p><a href="http://www.jb51.net/article/96226.htm" target="_blank" rel="noopener">http://www.jb51.net/article/96226.htm</a></p>
-<h1 id="android应用坐标系"><a class="markdownIt-Anchor" href="#android应用坐标系"></a> Android应用坐标系</h1>
-<p>Android坐标系其实就是一个三维坐标，Z轴向上，X轴向右，Y轴向下。这三维坐标的点处理就能构成Android丰富的界面或者动画等效果，所以Android坐标系在整个Android界面中算是盖楼房的尺寸草图</p>
-<h1 id="屏幕区域划分"><a class="markdownIt-Anchor" href="#屏幕区域划分"></a> 屏幕区域划分</h1>
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
 <ul>
-<li>状态栏：是指手机左上最顶上，显示中国移动、安全卫士、电量、网速等等，在手机的顶部</li>
-<li>通知栏：下拉就会出现通知栏，4G、蓝牙等设置界面</li>
-<li>标题栏：是指一个APP程序最上部的titleBar，从名字就知道它显然就是一个应用程序一个页面的标题了，例如打开QQ消息主页，最上面显示消息那一栏就是标题栏。</li>
-<li>导航栏：是手机最下面的返回，HOME，主页三个键，有些是一个按钮。</li>
+<li>React 是一个用于构建用户界面的 JAVASCRIPT 库</li>
+<li>React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）</li>
+<li>React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源</li>
+<li>React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它</li>
+<li>React 拥有一个强大的组合模型，我们建议使用组合而不是继承以实现代码的重用</li>
+<li>react有 函数式组件和类组件，现在的使用都以类组件为主，函数式组件不考虑</li>
+<li>angualr霸道，用了之后原生定时器、jquery等都不能用，而react没有这个限制</li>
+<li>react中对事件的大小写敏感，因为有一个编译过程</li>
+<li>相关有用网址</li>
 </ul>
-<p><img src="https://note.youdao.com/yws/api/personal/file/WEBa36cd0e5d359381bcdd1f8624252f98a?method=download&amp;shareKey=f445f246913291c3d0bba4be4f64ee40" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//获取屏幕区域的宽高等尺寸获取</span><br><span class="line">DisplayMetrics metrics = new DisplayMetrics();</span><br><span class="line">getWindowManager().getDefaultDisplay().getMetrics(metrics);</span><br><span class="line">int widthPixels = metrics.widthPixels;</span><br><span class="line">int heightPixels = metrics.heightPixels;</span><br><span class="line">//应用程序App区域宽高等尺寸获取</span><br><span class="line">Rect rect = new Rect();</span><br><span class="line">getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);</span><br><span class="line">//获取状态栏高度</span><br><span class="line">Rect rect= new Rect();</span><br><span class="line">getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);</span><br><span class="line">int statusBarHeight = rectangle.top;</span><br><span class="line">//View布局区域宽高等尺寸获取</span><br><span class="line">Rect rect = new Rect(); </span><br><span class="line">getWindow().findViewById(Window.ID_ANDROID_CONTENT).getDrawingRect(rect);</span><br></pre></td></tr></table></figure>
-<h1 id="actionbartoolbar"><a class="markdownIt-Anchor" href="#actionbartoolbar"></a> ActionBar／ToolBar</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">官网：https://facebook.github.io/react/</span><br><span class="line">中文网站：http://www.css88.com/react/</span><br><span class="line">中文论坛:http://react-china.org/</span><br></pre></td></tr></table></figure>
+<h1 id="react特点"><a class="markdownIt-Anchor" href="#react特点"></a> react特点</h1>
+<ol>
+<li>声明式设计 −React采用声明范式，可以轻松描述应用。</li>
+<li>高效 −虚拟DOM,React通过对DOM的模拟，最大限度地减少与DOM的交互。React DOM 会将元素及其子元素与之前版本逐一对比, 并只对有必要更新的 DOM 进行更新, 以达到 DOM 所需的状态</li>
+<li>灵活 −React可以与已知的库或框架很好地配合。</li>
+<li>JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单</li>
+</ol>
+<h1 id="react全家桶技术栈"><a class="markdownIt-Anchor" href="#react全家桶技术栈"></a> react全家桶（技术栈）</h1>
+<blockquote>
+<p>如果一个技术你不知道，那说明你还用不上</p>
+</blockquote>
+<ol>
+<li>react：主体</li>
+<li>webpack、grunt、gulp自动化构建工具</li>
+<li>Flex：布局</li>
+<li>react-route：路由</li>
+<li>redux：view层</li>
+<li>Mocha：测试</li>
+<li>Istanbul：覆盖率</li>
+</ol>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<h2 id="网页使用"><a class="markdownIt-Anchor" href="#网页使用"></a> 网页使用</h2>
+<p>网页中用babel会页面加载会有编译过程，比较缓慢，babel也可以后台编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/react/15.4.2/react.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/react/15.4.2/react-dom.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/babel&quot;&gt;</span><br><span class="line">  ReactDOM.render(</span><br><span class="line">    &lt;h1&gt;Hello, world!&lt;/h1&gt;,</span><br><span class="line">    document.getElementById(&apos;example&apos;)</span><br><span class="line">  );</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>引入了三个库： react.min.js 、react-dom.min.js 和 babel.min.js：</p>
+<ol>
+<li>react.min.js - React 的核心库</li>
+<li>react-dom.min.js - 提供与 DOM 相关的功能</li>
+<li>babel.min.js - Babel 可以将 ES6 代码转为 ES5 代码，这样我们就能在目前不支持 ES6 浏览器上执行 React 代码。Babel 内嵌了对 JSX 的支持。通过将 Babel 和 babel-sublime 包（package）一同使用可以让源码的语法渲染上升到一个全新的水平</li>
+</ol>
+<h2 id="使用-create-react-app-快速构建"><a class="markdownIt-Anchor" href="#使用-create-react-app-快速构建"></a> 使用 create-react-app 快速构建</h2>
 <ul>
-<li>ActionBar：Action Bar取代了传统的tittle bar和menu</li>
-<li>ToolBar是替代ActionBar的控件</li>
-<li>由于ActionBar在各个安卓版本和定制Rom中的效果表现不一，导致严重的碎片化问题，ToolBar应运而生</li>
-<li>ToolBar与ActionBar区别显示效果并没有区别</li>
-<li>ToolBar优点：自定义视图的操作更加简单，状态栏的颜色可以调（Android 4.4以上）</li>
-<li>ToolBar在 material design 也对之做了名称的定义：App bar</li>
+<li>create-react-app 是来自于 Facebook，通过该命令我们无需配置就能快速构建 React 开发环境。</li>
+<li>create-react-app 自动创建的项目是基于 Webpack + ES6</li>
+<li>create-react-app网址：<a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app</a></li>
+<li>create-react-app说明：<a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases</a></li>
 </ul>
-<p><a href="https://blog.csdn.net/guolin_blog/article/details/18234477" target="_blank" rel="noopener">https://blog.csdn.net/guolin_blog/article/details/18234477</a><br>
-<a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1118/2006.html" target="_blank" rel="noopener">http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1118/2006.html</a></p>
-<h1 id="titlebar"><a class="markdownIt-Anchor" href="#titlebar"></a> TitleBar</h1>
-<p><a href="https://www.jianshu.com/p/3474a4cc7108" target="_blank" rel="noopener">https://www.jianshu.com/p/3474a4cc7108</a></p>
-<h1 id="statusbar"><a class="markdownIt-Anchor" href="#statusbar"></a> StatusBar</h1>
-<p><a href="https://blog.csdn.net/qq_33689414/article/details/73330643" target="_blank" rel="noopener">https://blog.csdn.net/qq_33689414/article/details/73330643</a><br>
-<a href="https://blog.csdn.net/u012102504/article/details/53406646" target="_blank" rel="noopener">https://blog.csdn.net/u012102504/article/details/53406646</a></p>
-<h1 id="navigation-bar"><a class="markdownIt-Anchor" href="#navigation-bar"></a> Navigation Bar</h1>
-<p><a href="https://blog.csdn.net/weixin_37077539/article/details/59110273" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37077539/article/details/59110273</a></p>
-<p>Android手机可分为有导航栏以及没导航栏两种，一般有物理按键的机器不会带有导航栏，而没有物理按键的机器则基本会带，比如华为的手机基本都是带导航栏的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install -g create-react-app</span><br><span class="line">$ create-react-app my-app</span><br><span class="line">$ cd my-app/</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<p>在浏览器中打开 <a href="http://localhost:3000/,%E6%9F%A5%E7%9C%8B%E7%BB%93%E6%9E%9C" target="_blank" rel="noopener">http://localhost:3000/,查看结果</a></p>
+<h1 id="jsx"><a class="markdownIt-Anchor" href="#jsx"></a> JSX</h1>
+<blockquote>
+<p>JSX是可选的，对于使用 React而言不需要</p>
+</blockquote>
+<p>React 使用 JSX 来替代常规的 JavaScript，JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。</p>
+<p>优点：</p>
+<ul>
+<li>JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化，需babel编译后才能运行，bower babel install,官网：<a href="http://babeljs.io/" target="_blank" rel="noopener">http://babeljs.io/</a></li>
+<li>它是类型安全的，在编译过程中就能发现错误</li>
+<li>使用 JSX 编写模板更加简单快速</li>
+</ul>
+<p>使用过程中的注意事项：</p>
+<ol>
+<li>组件必须返回一个单独的根元素。render的内容必须有且仅有一个父元</li>
+<li>网页中使用：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;js/react.js&quot; charset=&quot;utf-8&quot;/&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;js/react-dom.js&quot; charset=&quot;utf-8&quot;/&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;js/browser.js&quot; charset=&quot;utf-8&quot;/&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/babel&quot;&gt;</span><br><span class="line">    window.onload=function()&#123;</span><br><span class="line">        var oDiv = document.getElementById(&quot;div1&quot;); </span><br><span class="line">        ReactDom.render(</span><br><span class="line">            &lt;span&gt;111&lt;/span&gt;,//内容</span><br><span class="line">            oDiv//到哪</span><br><span class="line">        ); </span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;div1&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>添加自定义属性需要使用 data- 前缀，因为jsx对html标签有识别，如果符合则不显示，而在自定义属性前面加data-可以保证显示显示</li>
+<li>自定义组件可以单独文件存储</li>
+<li>可以在 JSX 中使用 JavaScript 表达式。表达式写在花括号 {} 中；在 JSX 中不能使用 if else 语句，但可以使用 conditional (三元运算) 表达式来替代</li>
+<li>React 推荐使用内联样式。我们可以使用 camelCase 语法来设置内联样式. React 会在指定元素数字后自动添加 px</li>
+<li>JSX 允许在模板中插入数组，数组会自动展开所有成员</li>
+<li>注释:在标签内部的注释需要花括号;在标签外的的注释不能使用花括号</li>
+<li>可以使用双引号来指定字符串字面量作为属性值</li>
+<li>class 在JSX中变为className，tabindex 变为 tabIndex</li>
+<li>React DOM 使用驼峰(camelCase)属性命名约定, 而不是HTML属性名称</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(</span><br><span class="line">    /*注释 */</span><br><span class="line">    &lt;h1&gt;孙朝阳 &#123;/*注释*/&#125;&lt;/h1&gt;,</span><br><span class="line">    document.getElementById(&apos;example&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ol start="12">
+<li>如果你有一个单一模块(module) ，但却 导出(exports) 多个 React 组件时十分有用</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line"></span><br><span class="line">const MyComponents = &#123;</span><br><span class="line">  DatePicker: function DatePicker(props) &#123;</span><br><span class="line">    return &lt;div&gt;Imagine a &#123;props.color&#125; datepicker here.&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function BlueDatePicker() &#123;</span><br><span class="line">  return &lt;MyComponents.DatePicker color=&quot;blue&quot; /&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>JSX 中的 Children：在 JSX 表达式中可以包含开放标签和闭合标签，标签中的内容会被传递一个特殊的 props(属性) ： props.children</li>
+</ol>
+<h1 id="组件"><a class="markdownIt-Anchor" href="#组件"></a> 组件</h1>
+<ul>
+<li>组件名称总是以大写字母开始</li>
+<li>组件有构造函数，构造函数的第一行应该是调用super函数，其参数为…args参数，在constructor方法中进行一些初始</li>
+<li>绑定事件的方式：onChange={this.函数名称.bind(this)}</li>
+<li>有狗那年，定时器中的this就不合适，在使用前通过_this=this保存一份，然后在定时中用_this代替</li>
+<li>react处理了this，原生中如果要用this，最好也处理一下</li>
+<li>react中阻止事件冒泡：ev.nativeEvent.stopImmediatePropergation</li>
+<li>父级属性传递给子级直接通过属性，子级属性传递给父级需要通过在父级绑定回调函数如cb()，在子级中通过this.props.cb(传递的参数)的方式把参数传递到父级</li>
+<li>react中设置样式style需要通过双大括号}}来设置</li>
+<li>键(Keys) 帮助 React 标识哪个项被修改、添加或者移除了。数组中的每一个元素都应该有一个唯一不变的键(Keys)来标识。keys 只在数组的上下文中存在意义； keys 必须在它们的同辈之间唯一。然而它们并不需要全局唯一</li>
+<li>自定义组件的方式如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class 组件名称 extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        retrun &lt;span&gt;我的年龄是：&#123;this.props.age&#125;&lt;/span&gt;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//定义</span><br><span class="line">class Comp extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;span&gt;111&lt;/span&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>组件使用：类似于标签的使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReactDom.render(</span><br><span class="line">    &lt;Comp age=&quot;18&quot;/&gt;,//内容,类名</span><br><span class="line">    document.body//到哪</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">window.onload=function()&#123; </span><br><span class="line">    ReactDom.render(</span><br><span class="line">        &lt;Comp/&gt;,//内容,类名</span><br><span class="line">        document.body//到哪</span><br><span class="line">    ); </span><br><span class="line">&#125;;</span><br><span class="line">~~~ </span><br><span class="line"></span><br><span class="line"># 状态state</span><br><span class="line">* React 把组件看成是一个状态机（State Machines）。通过与用户的交互，实现不同状态，然后渲染 UI，让用户界面和数据保持一致。</span><br><span class="line">* React 里，只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。</span><br><span class="line">* this.setState(&#123;属性：&apos;值&apos;&#125;);  </span><br><span class="line">* state(状态) 更新可能是异步的。React 为了优化性能，有可能会将多个 setState() 调用合并为一次更新。因为 this.props 和 this.state 可能是异步更新的，你不能依赖他们的值计算下一个state(状态)。</span><br><span class="line"></span><br><span class="line"># 属性props</span><br><span class="line">state 和 props 主要的区别在于 props 是不可变的，而 state 可以根据与用户交互来改变。这就是为什么有些容器组件需要定义 state 来更新和修改数据。 而子组件只能通过 props 来传递数据</span><br><span class="line"></span><br><span class="line">* 如果你没给 prop(属性) 传值，那么他默认为 true</span><br><span class="line">* 控制表单的value，如果用props设置了默认值，由于props是死的，不能修改，修改为defaultValue即可</span><br><span class="line">* 控制checkbox的默认值，修改为defalultChecked</span><br><span class="line">* 属性扩展:如果你已经有一个 object 类型的 props，并且希望在 JSX 中传入，你可以使用扩展操作符 ... 传入整个 props 对象。以上两种方法等效：</span><br></pre></td></tr></table></figure>
+<p>function App1() {<br>
+return <greeting firstname="Ben" lastname="Hector">;<br>
+}</greeting></p>
+<p>function App2() {<br>
+const props = {firstName: ‘Ben’, lastName: ‘Hector’};<br>
+return &lt;Greeting {…props} /&gt;;<br>
+}</p>
+<pre class="highlight"><code class="">
+# 组件生命周期
+组件的生命周期可分成三个状态：
+1. Mounting：已插入真实 DOM
+2. Updating：正在被重新渲染
+3. Unmounting：已移出真实 DOM
+
+生命周期的方法有：
+* componentWillMount 在渲染前调用,在客户端也在服务端
+* componentDidMount : 在第一次渲染后调用，只在客户端。之后组件已经生成了对应的DOM结构，可以通过this.getDOMNode()来进行访问。 如果你想和其他JavaScript框架一起使用，可以在这个方法中调用setTimeout, setInterval或者发送AJAX请求等操作(防止异部操作阻塞UI)
+* componentWillReceiveProps 在组件接收到一个新的prop时被调用。这个方法在初始化render时不会被调用
+* shouldComponentUpdate 返回一个布尔值。在组件接收到新的props或者state时被调用。在初始化时或者使用forceUpdate时不被调用
+* componentWillUpdate在组件接收到新的props或者state但还没有render时被调用。在初始化时不会被调用
+* componentDidUpdate 在组件完成更新后立即调用。在初始化时不会被调用
+* componentWillUnmount在组件从 DOM 中移除的时候立刻被调用。==当使用异步加载数据时，在组件卸载前使用 componentWillUnmount 来取消未完成的请求==
+
+# React Refs
+* React 支持一种非常特殊的属性 Ref ，可以用来绑定到 render() 输出的任何组件上。
+这个特殊的属性允许你引用 render() 返回的相应的支撑实例（ backing instance ）。这样就可以确保在任何时间总是拿到正确的实例
+* 可以通过使用 this 来获取当前 React 组件，或使用 ref 来获取组件的引用
+* ref 标示组件内的node，可以原生操作节点，在this.refs['ref名字']=原生
+* React 支持给任何组件添加特殊属性。ref 属性接受回调函数，并且当组件 装载(mounted) 或者 卸载(unmounted) 之后，回调函数会立即执行
+* 不能在函数式组件上使用 ref 属性，因为它们没有实例
+
+# 使用 Chrome Timeline 分析组件性能
+在 开发模式 中，你可以在支持相关功能的浏览器中使用性能工具来可视化组件 装载(mount) ，更新(update) 和 卸载(unmount) 的各个过程。在 Chrome 中具体操作如下： 
+1. 通过添加 ?react_perf 查询字段加载你的应用(例如：http://localhost:3000/?react_perf)
+2. 打开 Chrome DevTools Timeline 并点击 Record
+3. 执行你想要分析的操作，不要超过20秒，否则 Chrome 可能会挂起
+4. 停止记录
+5. 在 User Timing 标签下，React事件将会分组列出
+
+注意：上述数字是相对的，组件会在生产环境中会更快
+
+
+# route
+react-router + react-router-redux: 前者是业界标准，后者可以同步 route 信息到 state，这样你可以在 view 根据 route 信息调整展现，以及通过 action 来修改 route 。</code></pre>
 
           
         
@@ -506,7 +628,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-Rxjava和lambda语法/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-Docker环境下的前后端分离项目部署与运维/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -525,7 +647,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/06/微信开发-Rxjava和lambda语法/" itemprop="url">Rxjava和lambda语法</a></h2>
+                <a class="post-title-link" href="/2018/10/18/容器技术-Docker环境下的前后端分离项目部署与运维/" itemprop="url">Docker环境下的前后端分离项目部署与运维</a></h2>
         
 
         <div class="post-meta">
@@ -537,8 +659,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-18T09:38:59+08:00">
+                2018-10-18
               </time>
             
 
@@ -560,8 +682,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
                   </a>
                 </span>
 
@@ -599,446 +721,1225 @@
       
         
           
-            <p>[toc]</p>
+            <p><a href="https://coding.imooc.com/learn/list/219.html" target="_blank" rel="noopener">https://coding.imooc.com/learn/list/219.html</a></p>
+<p><a href="https://www.renren.io/" target="_blank" rel="noopener">https://www.renren.io/</a></p>
 <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>Java8 lambda表达式官网：<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html</a></p>
-<p>翻译：<a href="https://blog.csdn.net/future234/article/details/51919545" target="_blank" rel="noopener">https://blog.csdn.net/future234/article/details/51919545</a></p>
-<p>语法糖：也译为糖衣语法，指计算机语言中添加的某种语法，这种语法对语言的功能并没有影响，但是更方便程序员使用。通常来说使用语法糖能够增加程序的可读性，从而减少程序代码出错的机会。</p>
-<p>lambda表达式其实就是实现SAM接口的语法糖。lambda写的好可以极大的减少代码冗余，同时可读性也好过冗长的内部类，匿名类</p>
-<p>可以把Lambda表达式理解为简洁地表示可传递的匿名函数的一种方式：它没有名称，但它有参数列表、函数主体、返回类型，可能还有一个可以抛出的异常列表</p>
-<p>参考文章：<br>
-<a href="https://www.cnblogs.com/aoeiuv/p/5911692.html" target="_blank" rel="noopener">https://www.cnblogs.com/aoeiuv/p/5911692.html</a></p>
-<h1 id="androidstudio配置使用lambda"><a class="markdownIt-Anchor" href="#androidstudio配置使用lambda"></a> AndroidStudio配置使用lambda</h1>
-<ol>
-<li>更新 Android 插件到 3.0.0（或更高版本）</li>
-<li>针对使用（包括在源代码中或通过依赖项使用）Java 8 语言功能的每个模块，在其 build.gradle 文件中添加以下代码：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">  ...</span><br><span class="line">  // Configure only for each module that uses Java 8</span><br><span class="line">  // language features (either in its source code or</span><br><span class="line">  // through dependencies).</span><br><span class="line">  compileOptions &#123;</span><br><span class="line">    sourceCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">    targetCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="lambda表达式语法"><a class="markdownIt-Anchor" href="#lambda表达式语法"></a> lambda表达式语法</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(Type1 param1, Type2 param2, ..., TypeN paramN) -&gt; &#123;</span><br><span class="line">  statment1;</span><br><span class="line">  statment2;</span><br><span class="line">  //.............</span><br><span class="line">  return statmentM;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>当lambda表达式的参数个数只有一个，可以省略小括号</li>
-<li>当lambda表达式只包含一条语句时，可以省略大括号、return和语句结尾的分号</li>
-<li>lambda表达式可以访问给它传递的变量，访问自己内部定义的变量，同时也能访问它外部的变量。<br>
-不过lambda表达式访问外部变量有一个非常重要的限制：变量不可变（只是引用不可变，而不是真正的不可变）</li>
-<li>在lambda中，this不是指向lambda表达式产生的那个SAM对象，而是声明它的外部对象</li>
-</ol>
-<h1 id="函数式接口"><a class="markdownIt-Anchor" href="#函数式接口"></a> 函数式接口</h1>
+<p><img src="/pub-images/renrenfast%E6%9E%B6%E6%9E%84.png" alt="image"><br>
+<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%9B%86%E7%BE%A4.png" alt="image"><br>
+<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%9B%BE.png" alt="image"></p>
+<h1 id="前后端分离项目下载配置"><a class="markdownIt-Anchor" href="#前后端分离项目下载配置"></a> 前后端分离项目下载配置</h1>
+<h1 id="linux基础加强"><a class="markdownIt-Anchor" href="#linux基础加强"></a> Linux基础加强</h1>
+<h1 id="docker虚拟机架构"><a class="markdownIt-Anchor" href="#docker虚拟机架构"></a> docker虚拟机架构</h1>
+<h1 id="源码解析"><a class="markdownIt-Anchor" href="#源码解析"></a> 源码解析</h1>
+<p><a href="https://www.jianshu.com/p/259d35eef3f1" target="_blank" rel="noopener">https://www.jianshu.com/p/259d35eef3f1</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-docker-和vagrant比较/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/容器技术-docker-和vagrant比较/" itemprop="url">docker 和vagrant比较</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-18T09:38:59+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.csdn.net/carolzhang8406/article/details/80153869" target="_blank" rel="noopener">https://blog.csdn.net/carolzhang8406/article/details/80153869</a></p>
+<p>Vagrant就是你的开发环境的部署工具；而docker是你的运行环境部署工具。</p>
+<p><a href="https://blog.csdn.net/terry_water/article/details/51813020" target="_blank" rel="noopener">https://blog.csdn.net/terry_water/article/details/51813020</a><br>
+Vagrant 适合用来管理虚拟机，而docker适合用来管理应用环境。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-vagrant/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/容器技术-vagrant/" itemprop="url">docker</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-18T09:38:59+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>Vagrant是一个基于Ruby的工具，用于创建和部署虚拟化开发环境。它使用Oracle的开源VirtualBox虚拟化系统，使用 Chef创建自动化虚拟环境。</p>
 <ul>
-<li>函数式接口：Functional Interface.</li>
-<li>定义的一个接口，接口里面必须 有且只有一个抽象方法 ，这样的接口就成为函数式接口</li>
-<li>在可以使用lambda表达式的地方，方法声明时必须包含一个函数式的接口</li>
-<li>lambda表达式只能出现在目标类型为函数式接口的上下文中,意味着如果我们提供的这个接口包含一个以上的Abstract Method，那么使用lambda表达式则会报错</li>
+<li>
+<p><a href="https://www.vagrantup.com/" target="_blank" rel="noopener">https://www.vagrantup.com/</a></p>
+</li>
+<li>
+<p><a href="https://www.virtualbox.org/" target="_blank" rel="noopener">https://www.virtualbox.org/</a></p>
+</li>
+<li>
+<p><a href="https://app.vagrantup.com/boxes/search" target="_blank" rel="noopener">https://app.vagrantup.com/boxes/search</a></p>
+</li>
+<li>
+<p>入门：<a href="https://www.vagrantup.com/intro/getting-started/index.html" target="_blank" rel="noopener">https://www.vagrantup.com/intro/getting-started/index.html</a></p>
+</li>
+<li>
+<p>官方文档：<a href="https://www.vagrantup.com/docs/index.html" target="_blank" rel="noopener">https://www.vagrantup.com/docs/index.html</a></p>
+</li>
 </ul>
-<h1 id="常见写法"><a class="markdownIt-Anchor" href="#常见写法"></a> 常见写法</h1>
-<h2 id="替代匿名内部类"><a class="markdownIt-Anchor" href="#替代匿名内部类"></a> 替代匿名内部类</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public void oldRunable() &#123;</span><br><span class="line">    new Thread(new Runnable() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            System.out.println(&quot;The old runable now is using!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">public void runable() &#123;</span><br><span class="line">    new Thread(() -&gt; System.out.println(&quot;It&apos;s a lambda function!&quot;)).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="对集合进行迭代"><a class="markdownIt-Anchor" href="#对集合进行迭代"></a> 对集合进行迭代</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public void iterTest() &#123;</span><br><span class="line">    List&lt;String&gt; languages = Arrays.asList(&quot;java&quot;,&quot;scala&quot;,&quot;python&quot;);</span><br><span class="line">    //before java8</span><br><span class="line">    for(String each:languages) &#123;</span><br><span class="line">        System.out.println(each);</span><br><span class="line">    &#125;</span><br><span class="line">    //after java8</span><br><span class="line">    languages.forEach(x -&gt; System.out.println(x));</span><br><span class="line">    languages.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="用lambda表达式实现map"><a class="markdownIt-Anchor" href="#用lambda表达式实现map"></a> 用lambda表达式实现map</h2>
-<p>map函数可以说是函数式编程里最重要的一个方法了,map的作用是将一个对象变换为另外一个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public void mapTest() &#123;</span><br><span class="line">    List&lt;Double&gt; cost = Arrays.asList(10.0, 20.0,30.0);</span><br><span class="line">    cost.stream().map(x -&gt; x + x*0.05).forEach(x -&gt; System.out.println(x));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="用lambda表达式实现map与reduce"><a class="markdownIt-Anchor" href="#用lambda表达式实现map与reduce"></a> 用lambda表达式实现map与reduce</h2>
-<p>educe与map一样，也是函数式编程里最重要的几个方法之一。。。map的作用是将一个对象变为另外一个，而reduce实现的则是将所有值合并为一个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public void mapReduceTest() &#123;</span><br><span class="line">    List&lt;Double&gt; cost = Arrays.asList(10.0, 20.0,30.0);</span><br><span class="line">    double allCost = cost.stream().map(x -&gt; x+x*0.05).reduce((sum,x) -&gt; sum + x).get();</span><br><span class="line">    System.out.println(allCost);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-Retrofit/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-Retrofit/" itemprop="url">Retrofit</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<p>官网说明：<a href="http://square.github.io/retrofit/" target="_blank" rel="noopener">http://square.github.io/retrofit/</a></p>
-<p>推荐教程1：<a href="https://www.jianshu.com/p/86e5cddcc753" target="_blank" rel="noopener">https://www.jianshu.com/p/86e5cddcc753</a></p>
-<p>推荐教程2：<a href="https://www.jianshu.com/p/308f3c54abdd" target="_blank" rel="noopener">https://www.jianshu.com/p/308f3c54abdd</a></p>
-<p>大名鼎鼎的Retrofit库内置了对RxJava的支持</p>
-<h1 id="创建retrofit实例"><a class="markdownIt-Anchor" href="#创建retrofit实例"></a> 创建Retrofit实例</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Retrofit retrofit = new Retrofit.Builder()</span><br><span class="line">        .baseUrl(&quot;http://localhost:8080/&quot;)</span><br><span class="line">        .build();</span><br></pre></td></tr></table></figure>
-<p>URL注意事件:</p>
-<ol>
-<li>Base Ulr 必须以 /（斜线） 结束，不然会抛出一个IllegalArgumentException</li>
-<li>@Url（@GET,@POST）: 不要在开始位置加 /</li>
-<li>URL类似 <a href="https://www.baidu.com?key=value" target="_blank" rel="noopener">https://www.baidu.com?key=value</a> 用来作为baseUrl其实是可行的，因为这个URL隐含的路径就是 /（斜线，代表根目录） ，而后面的?key=value在拼装请求时会被丢掉所以写上也没用</li>
-</ol>
-<h1 id="接口定义"><a class="markdownIt-Anchor" href="#接口定义"></a> 接口定义</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface BlogService &#123;</span><br><span class="line">    @GET(&quot;blog/&#123;id&#125;&quot;)</span><br><span class="line">    Call&lt;ResponseBody&gt; getBlog(@Path(&quot;id&quot;) int id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意，这里是interface不是class，所以我们是无法直接调用该方法，我们需要用Retrofit创建一个BlogService的代理对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BlogService service = retrofit.create(BlogService.class);</span><br></pre></td></tr></table></figure>
-<h1 id="接口调用"><a class="markdownIt-Anchor" href="#接口调用"></a> 接口调用</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Call&lt;ResponseBody&gt; call = service.getBlog(2);</span><br><span class="line">// 用法和OkHttp的call如出一辙,</span><br><span class="line">// 不同的是如果是Android系统回调方法执行在主线程</span><br><span class="line">call.enqueue(new Callback&lt;ResponseBody&gt;() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onResponse(Call&lt;ResponseBody&gt; call, Response&lt;ResponseBody&gt; response) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            System.out.println(response.body().string());</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onFailure(Call&lt;ResponseBody&gt; call, Throwable t) &#123;</span><br><span class="line">        t.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="converter"><a class="markdownIt-Anchor" href="#converter"></a> Converter</h1>
-<p>在默认情况下Retrofit只支持将HTTP的响应体转换换为ResponseBody,<br>
-即返回值都是 Call<responsebody>,而Converter就是Retrofit为我们提供用于将ResponseBody转换为我们想要的类型，如：</responsebody></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface BlogService &#123;</span><br><span class="line">  @GET(&quot;blog/&#123;id&#125;&quot;)</span><br><span class="line">  Call&lt;Result&lt;Blog&gt;&gt; getBlog(@Path(&quot;id&quot;) int id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="引入gson支持"><a class="markdownIt-Anchor" href="#引入gson支持"></a> 引入Gson支持</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.squareup.retrofit2:converter-gson:2.0.2&apos;</span><br></pre></td></tr></table></figure>
-<p>通过GsonConverterFactory为Retrofit添加Gson支持</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Gson gson = new GsonBuilder()</span><br><span class="line">      //配置你的Gson</span><br><span class="line">      .setDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;)</span><br><span class="line">      .create();</span><br><span class="line"></span><br><span class="line">Retrofit retrofit = new Retrofit.Builder()</span><br><span class="line">      .baseUrl(&quot;http://localhost:4567/&quot;)</span><br><span class="line">      //可以接收自定义的Gson，当然也可以不传</span><br><span class="line">      .addConverterFactory(GsonConverterFactory.create(gson))</span><br><span class="line">      .build();</span><br></pre></td></tr></table></figure>
-<p>这样Retrofit就会使用Gson将ResponseBody转换我们想要的类型。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@POST(&quot;blog&quot;)</span><br><span class="line">Call&lt;Result&lt;Blog&gt;&gt; createBlog(@Body Blog blog);</span><br></pre></td></tr></table></figure>
-<p>被@Body注解的的Blog将会被Gson转换成RequestBody发送到服务器。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BlogService service = retrofit.create(BlogService.class);</span><br><span class="line">Blog blog = new Blog();</span><br><span class="line">blog.content = &quot;新建的Blog&quot;;</span><br><span class="line">blog.title = &quot;测试&quot;;</span><br><span class="line">blog.author = &quot;怪盗kidou&quot;;</span><br><span class="line">Call&lt;Result&lt;Blog&gt;&gt; call = service.createBlog(blog);</span><br></pre></td></tr></table></figure>
-<h1 id="rxjava与calladapter"><a class="markdownIt-Anchor" href="#rxjava与calladapter"></a> RxJava与CallAdapter</h1>
-<p>Converter是对于Call<t>中T的转换，而CallAdapter则可以对Call转换，这样的话Call<t>中的Call也是可以被替换的，而返回值的类型就决定你后续的处理程序逻辑，同样Retrofit提供了多个CallAdapter，这里以RxJava的为例，用Observable代替Call：</t></t></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">引入RxJava支持:</span><br><span class="line">compile &apos;com.squareup.retrofit2:adapter-rxjava2:2.3.0&apos;</span><br></pre></td></tr></table></figure>
-<p>通过RxJavaCallAdapterFactory为Retrofit添加RxJava支持：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Retrofit retrofit = new Retrofit.Builder()</span><br><span class="line">      .baseUrl(&quot;http://localhost:4567/&quot;)</span><br><span class="line">      .addConverterFactory(GsonConverterFactory.create())</span><br><span class="line">      .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</span><br><span class="line">      // 针对rxjava2.x</span><br><span class="line">      .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) </span><br><span class="line">      .build();</span><br></pre></td></tr></table></figure>
-<p>接口设计：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface BlogService &#123;</span><br><span class="line">  @POST(&quot;/blog&quot;)</span><br><span class="line">  Observable&lt;Result&lt;List&lt;Blog&gt;&gt;&gt; getBlogs();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">BlogService service = retrofit.create(BlogService.class);</span><br><span class="line">service.getBlogs(1)</span><br><span class="line">  .subscribeOn(Schedulers.io())</span><br><span class="line">  .subscribe(new Subscriber&lt;Result&lt;List&lt;Blog&gt;&gt;&gt;() &#123;</span><br><span class="line">      @Override</span><br><span class="line">      public void onCompleted() &#123;</span><br><span class="line">        System.out.println(&quot;onCompleted&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      @Override</span><br><span class="line">      public void onError(Throwable e) &#123;</span><br><span class="line">        System.err.println(&quot;onError&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      @Override</span><br><span class="line">      public void onNext(Result&lt;List&lt;Blog&gt;&gt; blogsResult) &#123;</span><br><span class="line">        System.out.println(blogsResult);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-<p>像上面的这种情况最后我们无法获取到返回的Header和响应码的，如果我们需要这两者，提供两种方案：</p>
-<ol>
-<li>用Observable&lt;Response<t>&gt; 代替 Observable<t> ,这里的Response指retrofit2.Response</t></t></li>
-<li>用Observable&lt;Result<t>&gt; 代替 Observable<t>，这里的Result是指retrofit2.adapter.rxjava.Result,这个Result中包含了Response的实例</t></t></li>
-</ol>
-<pre class="highlight"><code class=""></code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-android中MVP模式简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-android中MVP模式简介/" itemprop="url">android中MVP模式简介</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<p><a href="https://github.com/googlesamples" target="_blank" rel="noopener">https://github.com/googlesamples</a></p>
-<p><a href="https://github.com/googlesamples/android-architecture" target="_blank" rel="noopener">https://github.com/googlesamples/android-architecture</a></p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>(1)开发环境快速部署 (2)开发环境更迭</p>
+<p>#Vagrant的主要概念</p>
 <ul>
-<li>MVP作为MVC的演化版本，那么类似的MVP所对应的意义：M-Model-模型、V-View-视图、P-Presenter-表示器</li>
-<li>Android本身就采用的是MVC（Model View Controllor）模式、其中Model指的是数据逻辑和实体模型；View指的是布局文件、Controllor指的是Activity</li>
-<li>从MVC和MVP两者结合来看，Controlller/Presenter在MVC/MVP中都起着逻辑控制处理的角色，起着控制各业务流程的作用</li>
-<li>MVP与MVC最不同的一点是M与V是不直接关联的也是就Model与View不存在直接关系，这两者之间间隔着的是Presenter层，其负责调控 View与Model之间的间接交互</li>
-<li>在 Android中很重要的一点就是对UI的操作基本上需要异步进行也就是在MainThread中才能操作UI，所以对View与Model的切断分离是 合理的</li>
-<li>Presenter与View、Model的交互使用接口定义交互操作可以进一步达到松耦合也可以通过接口更加方便地进行单元测试</li>
+<li>Provider:指的是为Vagrant提供虚拟化支持的具体软件，比如vmware或virtual box。</li>
+<li>Box:代表虚拟机镜像。Vagrant根据Porvider的不同提供了很多的基础镜像（通过url从s3上获取），用户可以根据自己的需求使用vagrant package制作属于自己的box。</li>
+<li>Project:一个目录和目录中的Vagrantfile就组成了vagrant的一个项目，项目下可以有子项目，子项目中的Vagrantfile配置将继承和重写父项目的配置。项目的虚拟机实例并不会存储在这个目录（存储在~/.vagrant.d/box下），所以可以通过git等版本管理工具来管理项目。</li>
+<li>Vagrantfile:Vagrant的配置文件，使用Ruby的语法描述。里面定义了项目所使用的box，网络，共享目录，provision脚本等。当vagrant up命令运行时，将读取当前目录的Vagrantfile。</li>
+<li>Provisioning:指的是虚拟机实例启动后，所需要完成的基础配置工作，比如说安装LAMP服务等。Vagrant支持使用shell，puppet，chef来完成provisioning工作。</li>
+<li>Plugin:Vagrant提供了插件机制，可以很好的扩展对宿主机OS, GuestOS，Provider，Provisioner的支持，比如vagrant的aws和openstack支持都是通过plugin来实现的。</li>
 </ul>
-<h1 id="具体使用"><a class="markdownIt-Anchor" href="#具体使用"></a> 具体使用</h1>
-<p>参考：</p>
+<h1 id="初始化第一个系统"><a class="markdownIt-Anchor" href="#初始化第一个系统"></a> 初始化第一个系统</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mkdir centos7</span><br><span class="line">cd centos7</span><br><span class="line">vagrant init centos/7</span><br><span class="line">vagrant up</span><br><span class="line">vagrant ssh</span><br><span class="line">sudo yum update</span><br><span class="line">exit</span><br><span class="line">vagrant status</span><br><span class="line">vagrant halt</span><br><span class="line">vagrant destroy</span><br></pre></td></tr></table></figure>
+<p>centos7默认账号／密码：vagrant/vagrant root/vagrant</p>
+<h1 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Usage: vagrant [options] &lt;command&gt; [&lt;args&gt;]</span><br><span class="line"></span><br><span class="line">    -v, --version                    Print the version and exit.</span><br><span class="line">    -h, --help                       Print this help.</span><br><span class="line"></span><br><span class="line">Common commands:</span><br><span class="line">     box             manages boxes: installation, removal, etc.</span><br><span class="line">     cloud           manages everything related to Vagrant Cloud</span><br><span class="line">     destroy         stops and deletes all traces of the vagrant machine</span><br><span class="line">     global-status   outputs status Vagrant environments for this user</span><br><span class="line">     halt            stops the vagrant machine</span><br><span class="line">     help            shows the help for a subcommand</span><br><span class="line">     init            initializes a new Vagrant environment by creating a Vagrantfile</span><br><span class="line">     login           </span><br><span class="line">     package         packages a running vagrant environment into a box</span><br><span class="line">     plugin          manages plugins: install, uninstall, update, etc.</span><br><span class="line">     port            displays information about guest port mappings</span><br><span class="line">     powershell      connects to machine via powershell remoting</span><br><span class="line">     provision       provisions the vagrant machine</span><br><span class="line">     push            deploys code in this environment to a configured destination</span><br><span class="line">     rdp             connects to machine via RDP</span><br><span class="line">     reload          restarts vagrant machine, loads new Vagrantfile configuration</span><br><span class="line">     resume          resume a suspended vagrant machine</span><br><span class="line">     snapshot        manages snapshots: saving, restoring, etc.</span><br><span class="line">     ssh             connects to machine via SSH</span><br><span class="line">     ssh-config      outputs OpenSSH valid configuration to connect to the machine</span><br><span class="line">     status          outputs status of the vagrant machine</span><br><span class="line">     suspend         suspends the machine</span><br><span class="line">     up              starts and provisions the vagrant environment</span><br><span class="line">     upload          upload to machine via communicator</span><br><span class="line">     validate        validates the Vagrantfile</span><br><span class="line">     version         prints current and latest Vagrant version</span><br><span class="line">     winrm           executes commands on a machine via WinRM</span><br><span class="line">     winrm-config    outputs WinRM configuration to connect to the machine</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">vagrant box add &quot;boxIdentity&quot; remoteUrlorLocalFile 添加box</span><br><span class="line">vagrant init &quot;boxIdentity&quot; 初始化box</span><br><span class="line">vagrant up 启动虚拟机</span><br><span class="line">vagrant ssh 登录虚拟机</span><br><span class="line">vagrant box list 显示当前已添加的box列表</span><br><span class="line">vagrant box remove &quot;boxIdentity&quot; 删除box</span><br><span class="line">vagrant destroy 停止当前正在运行的虚拟机并销毁所有创建的资源</span><br><span class="line">vagrant halt 关闭虚拟机</span><br><span class="line">vagrant package 打包当前运行的虚拟机的环境</span><br><span class="line">vagrant plugin 用于安装卸载插件</span><br><span class="line">vagrant reload 重启虚拟机，主要用于重新载入配置文件</span><br><span class="line">vagrant suspend 挂起虚拟机</span><br><span class="line">vagrant resume 恢复挂起状态</span><br><span class="line">vagrant ssh-config 输出ssh连接信息</span><br><span class="line">vagrant status 输出当前虚拟机的状态</span><br><span class="line">~~~ </span><br><span class="line"></span><br><span class="line"># Vagrantfile配置文件详解</span><br><span class="line">* Vagrantfile 主要包括三个方面的配置，虚拟机的配置、SSH配置、Vagrant 的一些基础配置</span><br><span class="line">* Vagrant 是使用 Ruby 开发的，所以它的配置语法也是 Ruby 的</span><br><span class="line">* 修改完配置后需要执行 vagrant reload 重启 VM 使其配置生效</span><br><span class="line"></span><br><span class="line">## 配置基本说明</span><br></pre></td></tr></table></figure>
+<p>Vagrant.configure(“2”) do |config|<br>
+# …<br>
+end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">configure(&quot;2&quot;)描述的是使用Vagrant 2.0.x配置方式。</span><br><span class="line"></span><br><span class="line">## box设置</span><br></pre></td></tr></table></figure>
+<p>config.vm.box = “centos/7”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">配置Vagrant要去启用哪个box作为系统,默认名称为base</span><br><span class="line"></span><br><span class="line">## 网络设置</span><br><span class="line">Vagrant有两种方式进行网络连接.</span><br><span class="line">* host-only主机模式，意思是主机与虚拟机之间的网络互访。其他人访问不到你的虚拟机。</span><br><span class="line">* bridge桥接模式，此模式下VM如同局域网中的一台独立的直接虚拟机，可以被其他机器访问。</span><br></pre></td></tr></table></figure>
+<p>config.vm.network: private_network, ip: “11.11.11.11”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这里设置为host-only模式，且虚拟机ip设置为&quot;11.11.11.11&quot; </span><br><span class="line"></span><br><span class="line">## hostname设置</span><br></pre></td></tr></table></figure>
+<p>config.vm.hostname = “go-app”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">host用于识别虚拟主机。特别在有多台虚拟机时，务必进行设置</span><br><span class="line"></span><br><span class="line">## 同步目录</span><br><span class="line">默认下，vagrant 共享的是你的项目目录（就是有vagrantfile文件的）,除了默认的/vagrant同步目录外，还可以设置额外的同步目录:</span><br></pre></td></tr></table></figure>
+<p>config.vm.synced_folder “d:/local/dir”, “/vm/dir/”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一个参数是本地目录，第二个参数为虚拟机目录。</span><br><span class="line"></span><br><span class="line">## 端口转发</span><br></pre></td></tr></table></figure>
+<p>config.vm.network: forwarded_port, guest: 80, host: 8080</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设置将主机上的8080端口forward到虚拟机的80端口上</span><br><span class="line"></span><br><span class="line"># 单机配置</span><br><span class="line">* 新建bootstrap.sh 文件</span><br></pre></td></tr></table></figure>
+<p>#!/usr/bin/env bash<br>
+apt-get update<br>
+apt-get install -y apache2<br>
+if ! [ -L /var/www ]; then<br>
+rm -rf /var/www<br>
+ln -fs /vagrant /var/www<br>
+fi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 在Vagrantfile 中添加配置</span><br></pre></td></tr></table></figure>
+<p>Vagrant.configure(“2”) do |config|<br>
+config.vm.box = “hashicorp/precise64”<br>
+config.vm.provision :shell, path: “<a href="http://bootstrap.sh" target="_blank" rel="noopener">bootstrap.sh</a>”<br>
+config.vm.network :forwarded_port, guest: 80, host: 4567<br>
+end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 启动：vagrant up</span><br><span class="line">* 验证：在浏览器上：http://127.0.0.1:4567</span><br><span class="line"></span><br><span class="line"># 配置多台虚拟机</span><br><span class="line">Vagrant支持单机启动多台虚拟机，支持一个配置文件启动多台。</span><br></pre></td></tr></table></figure>
+<p>Vagrant.configure(“2”) do |config|<br>
+config.vm.define :web do |web|<br>
+web.vm.provider “virtualbox” do |v|<br>
+v.customize [“modifyvm”, :id, “–name”, “web”, “–memory”, “512”]<br>
+end<br>
+web.vm.box = “base”<br>
+web.vm.hostname = “web”<br>
+web.vm.network :private_network, ip : “11.11.11.1”<br>
+end</p>
+<pre><code>config.vm.define :db do |db|
+    db.vm.provider &quot;virtualbox&quot; do |v|
+        v.customize [&quot;modifyvm&quot;, :id, &quot;--name&quot;, &quot;db&quot;, &quot;--memory&quot;, &quot;512&quot;]
+    end
+    db.vm.box = &quot;base&quot;
+    db.vm.hostname = &quot;db&quot;
+    db.vm.network :private_network, ip : &quot;11.11.11.2&quot;
+end
+</code></pre>
+<p>end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">这里使用了:web和:db定义了两个VM，设置完后再使用vagrant up启动。可以通过vagrant ssh web和vagrant ss db分别登录指定虚拟机上。</span><br><span class="line">验证两台虚拟机间的通信: (验证方法: 在web虚拟机上通过ssh登录到db虚拟机)</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/xiang__liu/article/details/80878571</span><br><span class="line">https://max.book118.com/html/2017/0817/128451852.shtm</span><br><span class="line"></span><br><span class="line"># 打包分发</span><br><span class="line">当你配置好开发环境后，退出并关闭虚拟机。在终端里对开发环境进行打包：vagrant package</span><br><span class="line"></span><br><span class="line">打包完成后会在当前目录生成一个 package.box 的文件，将这个文件传给其他用户，其他用户只要添加这个 box 并用其初始化自己的开发目录就能得到一个一模一样的开发环境了。</span><br></pre></td></tr></table></figure>
+<p>$ vagrant box add hahaha ~/box/package.box  # 添加 package.box 镜像并命名为 hahaha<br>
+$ cd ~/dev  # 切换到项目目录<br>
+$ vagrant init hahaha  # 用 hahaha 镜像初始化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 集成预安装</span><br></pre></td></tr></table></figure>
+<p>上面这条看下来，你会发现每次都修改了一点点内容，再打包分发给其他用户其实很麻烦。为此 Vagrant 还提供了更为便捷的预安装定制。打开 Vagrantfile 文件末尾处有下面被注释的代码：</p>
+<p>config.vm.provision “shell”, inline: &lt;&lt;-SHELL<br>
+apt-get update<br>
+apt-get install -y apache2<br>
+SHELL<br>
+没错，这段代码就是让你在初次运行 vagrant up 后，虚拟机创建过程众自动运行的初始化命令。 取消注释，把要预先安装的 php/mysql/redis 和配置之类的通通都写进去。初始化时这些程序都会根据你写好的方法安装并配置。</p>
+<p>如果你不是初次运行，同时又修改了这里的命令，想让系统再次运行这里面的命令，你可以使用 vagrant reload --provision 进行重载。所以在这种情况下，你只要将 Vagrantfile 共享给团队的其他成员就可以了，其他成员运行相同的命令即可，是不是比打包分发要方便许多。</p>
+<p>你还可以把要运行的命令单独写在一个文件里存放在相同的目录下，比如 <a href="http://bootstrap.sh" target="_blank" rel="noopener">bootstrap.sh</a>：</p>
+<p>#!/usr/bin/env bash</p>
+<p>apt-get update<br>
+apt-get install -y apache2<br>
+if ! [ -L /var/www ]; then<br>
+rm -rf /var/www<br>
+ln -fs /vagrant /var/www<br>
+fi<br>
+然后在 Vagrantfile 里这样添加：</p>
+<p>Vagrant.configure(“2”) do |config|<br>
+config.vm.box = “hashicorp/precise64”<br>
+…</p>
+<p>config.vm.provision “shell”, path: “<a href="http://bootstrap.sh" target="_blank" rel="noopener">bootstrap.sh</a>”  # 添加这行<br>
+end<br>
+效果和直接写在 Vagrantfile 是一样的。</p>
+<pre class="highlight"><code class="">
+# 用 vagrant 快速部署 docker 虚拟机集群
+https://blog.csdn.net/pmlpml/article/details/53925542
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/容器技术-docker/" itemprop="url">docker</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-18T09:38:59+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>阿里云服务器购买<br>
+<a href="http://www.runoob.com/docker/docker-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/docker/docker-tutorial.html</a></p>
+<p>官网：<a href="https://www.docker.com/" target="_blank" rel="noopener">https://www.docker.com/</a><br>
+中文社区：<a href="http://www.docker.org.cn/" target="_blank" rel="noopener">http://www.docker.org.cn/</a></p>
+<p><a href="http://www.cnblogs.com/SzeCheng/p/6822905.html" target="_blank" rel="noopener">http://www.cnblogs.com/SzeCheng/p/6822905.html</a></p>
+<p><img src="/pub-images/docker%E6%9E%B6%E6%9E%84.png" alt="image"></p>
+<p><img src="/pub-images/docker%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86%E6%8C%87%E4%BB%A4.png" alt="image"></p>
+<p>Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术<br>
+其中docker服务端是一个服务进程，管理着所有的容器。<br>
+docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。<br>
+大部分情况下，docker服务端和客户端运行在一台机器上。</p>
+<p>Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的<br>
+Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write）</p>
+<p>Docker容器的能力<br>
+1文件系统隔离：每个容器都有自己的root文件系统<br>
+2进程隔离：每个容器都运行在自己的进程环境中<br>
+3网络隔离：容器间的虚拟网络接口和IP地址都是分开的<br>
+4资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器</p>
+<p>docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作<br>
+docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器<br>
+docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm）</p>
+<p><a href="https://www.cnblogs.com/atuotuo/p/6668233.html" target="_blank" rel="noopener">https://www.cnblogs.com/atuotuo/p/6668233.html</a></p>
+<p>安装：下载安装完成之后docker version查看</p>
+<p>Kitematic，</p>
+<p>yum -y update<br>
+yum -y install docker<br>
+service docker start|stop|restart</p>
+<p>Docker Machine<br>
+docker-machine ls<br>
+docker-machine ssh demo</p>
+<p>远程登录管理deocker和本地管理远程docker<br>
+<a href="https://labs.play-with-docker.com/" target="_blank" rel="noopener">https://labs.play-with-docker.com/</a></p>
+<p>docker国内镜像仓库设置：<a href="https://www.daocloud.io/" target="_blank" rel="noopener">https://www.daocloud.io/</a><br>
+<a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></p>
+<p>docker提供了一个开发，打包，运行app的平台，把app和底层infratructure隔离开来</p>
+<p>docker底层技术支持,依赖于Linux内核特性Namespaces和Cgroups<br>
+Namespaces：做隔离pid，net，ipc，mnt，uts<br>
+Control Groups：做资源限制<br>
+Union file Systems：Container和image的分层</p>
+<p>namespace，容器隔离的基础，保证A容器看不到B容器. 6个名空间：User,Mnt,Network,UTS,IPC,Pid<br>
+cgroups，容器资源统计和隔离。主要用到的cgroups子系统：cpu,blkio,device,freezer,memory<br>
+unionfs，典型：aufs/overlayfs，分层镜像实现的基础</p>
+<p>docker image：是容器的基石，本身为层叠的只读文件系统，<br>
+docker通过联合加载技术一次加载多个文件系统，从外部看，只能看到一个文件系统，包含所有文件系统的文件和目录。bootfs-rootfs(如：ubuntu)-apache。。。，rootfs称为基础镜像<br>
+文件和meta data的集合（root filesystem）<br>
+分层的，并且每一层都可以添加改变删除文件，成为一个新的image<br>
+不同的image可以共享x相同的layer<br>
+image本身是read-only的<br>
+sudo docker image ls<br>
+docker history [imageID]</p>
+<p>image的获取</p>
 <ol>
-<li><a href="https://www.jianshu.com/p/1f91cfd68d48" target="_blank" rel="noopener">https://www.jianshu.com/p/1f91cfd68d48</a></li>
-<li><a href="https://github.com/LJYcoder/DevRing" target="_blank" rel="noopener">https://github.com/LJYcoder/DevRing</a></li>
-<li><a href="http://www.jcodecraeer.com/a/anzhuokaifa/2017/1020/8625.html?1508484926" target="_blank" rel="noopener">http://www.jcodecraeer.com/a/anzhuokaifa/2017/1020/8625.html?1508484926</a></li>
-<li><a href="https://www.jianshu.com/p/364f14c76874" target="_blank" rel="noopener">https://www.jianshu.com/p/364f14c76874</a></li>
+<li>通过Dockerfile</li>
+<li>从Registry获取，如：docker pull ubuntu:14.04，<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></li>
+<li>命令行的格式为：docker search 镜像名字</li>
 </ol>
-<p>需要写四个部分：Model层，View层，Presenter层，接口</p>
-<h2 id="接口"><a class="markdownIt-Anchor" href="#接口"></a> 接口</h2>
-<p>负责“连接”MVP三层，以便方法调用、数据流动。同时也便于进行单元测试。</p>
-<h3 id="iview"><a class="markdownIt-Anchor" href="#iview"></a> IView</h3>
-<p>View层接口，定义View层需实现的方法，P层通过该接口回调通知View层</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface IMovieView &#123;</span><br><span class="line">    //成功获取到电影数据</span><br><span class="line">    void getMovieSuccess(List&lt;MovieRes&gt; list, int type);</span><br><span class="line">    //获取电影数据失败</span><br><span class="line">    void getMovieFail(int status, String desc, int type);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="imodeliservice"><a class="markdownIt-Anchor" href="#imodeliservice"></a> IModel/IService</h3>
-<p>Model层接口，定义Model层需实现的方法，P层通过该接口调用M层获取/处理数据的方法;有些项目把这块也拆分未Service层，叫法不同而已</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface IMovieMoel&#123;</span><br><span class="line">    //请求正在上映的电影数据</span><br><span class="line">    Observable getPlayingMovie(int start, int count);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="model层service"><a class="markdownIt-Anchor" href="#model层service"></a> Model层／Service</h2>
-<p>实现IModel／IService接口中的方法，负责数据的获取/处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class MovieModel implements IMovieMoel&#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Observable getPlayingMovie(int start,int count) &#123;</span><br><span class="line">        //提供数据源</span><br><span class="line">        return DevRing.httpManager().getService(MovieApiService.class).getPlayingMovie(start, count);</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="presenter层"><a class="markdownIt-Anchor" href="#presenter层"></a> Presenter层</h2>
+<p>DIY一个Base Image</p>
+<p>Container<br>
+docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
+<p>通过Image创建<br>
+在Image Layer之上建立一个container layer（可读写）<br>
+类比面向对象：类和实例<br>
+Image负责app的存储和分发，Container负责运行app<br>
+container id只要能够区分出来就行，不用全部输入<br>
+docker container ls //运行的<br>
+docker container ls -a  //所有的，包括退出的和正在运行的</p>
+<p>docker run命令有两个参数，一个是镜像名，一个是要在镜像中运行的命令。</p>
+<p>docker run [name]   //运行container<br>
+docker run -it [name]   //交互式运行container</p>
+<p>命令简写<br>
+docker container ls -a  == docker ps -a<br>
+docker container rm [conatinerID] == docker rm [conatinerID]<br>
+docker image ls == docker images<br>
+docker image rm [imageID] == docker rmi [imageID]</p>
+<p>docker container ls -aq //列出所有conatinerID</p>
+<p>构建自己的docker镜像<br>
+docker commit [containerName] [dockerhubID/imageNewName]</p>
+<p>通过Dockerfile创建</p>
+<ol>
+<li>新建空文件夹</li>
+<li>创建Dockerfile文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM [BaseImageName]    //如果没有则值为scratch</span><br><span class="line">RUN yum install -y vim</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>docker build -t [dockerhubID/imageNewName] .   //.表示当前目录中查找Dockerfile</li>
+<li>docker image ls查看</li>
+</ol>
+<p>Dockerfile语法梳理及最佳实践</p>
+<ol>
+<li>FROM:尽量使用官方的iamge作为base image</li>
+<li>LABEL:Metadata不可少，让大家了解到image的信息，相当于image的注释</li>
+<li>RUN:为了美观，复杂的RUN请用反斜线换行，避免无用分层，合并多条命令成一行</li>
+<li>WORKDIR:设定当前工作目录，如果没有则会自动创建目录；用WORKDIR，不要用RUN cd，尽量使用绝对目录</li>
+<li>ADD和COPY：把本地文件（构建目录中的相对地址 ）添加到image里面，同时ADD添加的文件如果是压缩文件的话，会自动解压缩，大部分情况COPY优于ADD，添加远程文件／目录请使用crul或wget；目标路径需指定docker中的绝对路径</li>
+<li>ENV：设置环境变量，尽量使用ENV增加可维护性</li>
+</ol>
+<p><a href="https://github.com/docker-library/" target="_blank" rel="noopener">https://github.com/docker-library/</a></p>
+<p>MAINTAINER：指定容器的相关维护信息，维护人、邮箱等<br>
+RUN：执行命令并创建新的Image Layer，是在容器构建时执行<br>
+CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数<br>
+ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint<br>
+EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口<br>
+VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能<br>
+WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去<br>
+USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户<br>
+ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行</p>
+<p>使用中间层镜像进行调试，查找错误<br>
+docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像</p>
+<p>构建缓存：构建过程中会产生缓存，下次构建直接使用缓存镜像，如果不想使用构建缓存，则可通过：docker build --no-cache,或者通过dockerfile文件的ENV REFRESH_DATE修改日期，则本条语句后就不使用缓存了</p>
+<p>docker history 镜像，用来查看镜像的构建过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPY docker-entrypoint.sh /usr/local/bin/</span><br><span class="line">ENTRYPOINT [&quot;docker-entrypoint.sh &quot;]</span><br></pre></td></tr></table></figure>
+<p>shell格式和EXEC格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get install -y vim</span><br><span class="line">CMD echo &quot;Hello Docker&quot;</span><br><span class="line">ENTRYPOINT echo &quot;Hello Docker&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN [&quot;apt-get&quot;,&quot;install&quot;,&quot;-y&quot;,&quot;vim&quot;]</span><br><span class="line">CMD [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br><span class="line">ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br></pre></td></tr></table></figure>
+<p>登录dockerhub<br>
+docker login:  用户名（非邮箱）／密码</p>
+<ol>
+<li>本地push上去，其他人就可以pull</li>
+<li>关联github，github管理Dockerfile，有修改后自动build。Create-Create Automated build</li>
+<li>通过docker的registry本地自己搭建。<a href="https://hub.docker.com/_/registry/,%E5%90%8E%E6%9C%9F%E5%AD%A6%E4%B9%A0" target="_blank" rel="noopener">https://hub.docker.com/_/registry/,后期学习</a></li>
+</ol>
+<p>Dockerfile实战<br>
+Dockerfile是docker构建镜像的基础，也是docker区别于其他容器的重要特征，正是有了Dockerfile，docker的自动化和可移植性才成为可能。<br>
+不论是开发还是运维，学会编写Dockerfile几乎是必备的</p>
+<p>容器的操作<br>
+//对容器执行命令<br>
+docker exec<br>
+docker exec -it [containerID] /bin/bash<br>
+docker inspect [imageName] //查看<br>
+docker logs [containerID]</p>
+<p>前3章</p>
+<p>Docker常见命令<br>
+容器相关操作<br>
+docker create # 创建一个容器但是不启动它<br>
+docker run # 创建并启动一个容器<br>
+docker stop # 停止容器运行，发送信号SIGTERM<br>
+docker start # 启动一个停止状态的容器<br>
+docker restart # 重启一个容器<br>
+docker rm # 删除一个容器<br>
+docker kill # 发送信号给容器，默认SIGKILL<br>
+docker attach # 连接(进入)到一个正在运行的容器<br>
+docker wait # 阻塞到一个容器，直到容器停止运行<br>
+获取容器相关信息<br>
+docker ps # 显示状态为运行（Up）的容器<br>
+docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited)<br>
+docker inspect # 深入容器内部获取容器所有信息<br>
+docker logs # 查看容器的日志(stdout/stderr)<br>
+docker events # 得到docker服务器的实时的事件<br>
+docker port # 显示容器的端口映射<br>
+docker top # 显示容器的进程信息<br>
+docker diff # 显示容器文件系统的前后变化<br>
+导出容器<br>
+docker cp # 从容器里向外拷贝文件或目录<br>
+docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息<br>
+执行<br>
+docker exec # 在容器里执行一个命令，可以执行bash进入交互式<br>
+镜像操作<br>
+docker images # 显示本地所有的镜像列表<br>
+docker import # 从一个tar包创建一个镜像，往往和export结合使用<br>
+docker build # 使用Dockerfile创建镜像（推荐）<br>
+docker commit # 从容器创建镜像<br>
+docker rmi # 删除一个镜像<br>
+docker load # 从一个tar包创建一个镜像，和save配合使用<br>
+docker save # 将一个镜像保存为一个tar包，带layers和tag信息<br>
+docker history # 显示生成一个镜像的历史命令<br>
+docker tag # 为镜像起一个别名<br>
+镜像仓库(registry)操作<br>
+docker login # 登录到一个registry<br>
+docker search # 从registry仓库搜索镜像<br>
+docker pull # 从仓库下载镜像到本地<br>
+docker push # 将一个镜像push到registry仓库中</p>
+<p>docker system df    //查看镜像、容器、数据卷所占用的空间<br>
+docker commit -m “ubuntu with vim” -a “sgy” aa97ba3292ce sgy/ubuntu:vim</p>
+<p>前后端分离部署及运维<br>
+高性能高负载高可用</p>
+<p><a href="https://www.renren.io" target="_blank" rel="noopener">https://www.renren.io</a>  renren-fast</p>
+<p>Swagger:<br>
+JWT:</p>
+<p><a href="https://www.ghostcloud.cn/" target="_blank" rel="noopener">https://www.ghostcloud.cn/</a></p>
+<p>服务器虚拟化 （vsphere  cas  ZStack不通厂家命名）：裸机虚拟化、半裸机虚拟化<br>
+网络虚拟化 SDN<br>
+存储虚拟化 VSAN   服务器做raid保证系统安全，然后做存储虚拟化</p>
+<p>Mac 上的 Docker 背后应该是一个 Linux 虚机，和 Windows 版本的 Docker 是一样的原理</p>
+<p>容器一旦被直接推出，之前安装的gcc啊vim啊啥的就会全部gg掉。如果要保存修改，就需要将当前容器封装成一个新的镜像，这样下次启动这个新的镜像后之前作出的修改还都在。</p>
+<p>容器不适合构建那种发布周期以周或月为单位的大型单一架构企业软件，容器适合采用微服务的方式，以及探索诸如持续部署这样的技术，使得我们能安全地在一天内多次更新生产环境。</p>
+<p><a href="https://blog.csdn.net/xdy3008/article/details/74531125" target="_blank" rel="noopener">https://blog.csdn.net/xdy3008/article/details/74531125</a></p>
+<p><a href="https://www.missshi.cn/api/view/blog/5a6327c00a745f6335000004" target="_blank" rel="noopener">https://www.missshi.cn/api/view/blog/5a6327c00a745f6335000004</a></p>
+<p>想看到docker容器的ip地址，只需要安装net-tools就可以了：yum install net-tools -y</p>
+<p>如果你仅仅是想管理虚拟机，那么你应该使用vagrant。如果你想快速开发和部署应用，那么应该使用docker。<br>
+vagrant是一款管理虚拟机的工具，而docker是一款通过将应用打包到轻量级容器，而实现构建和部署的工具。两者适用范围不同。一个容器就是一个包含了应用执行所依赖的数据(包括lib，配置文件等等)。它可以保证应用在一个可重复的环境中随时执行。</p>
+<p>数据卷：是经过特殊设计的目录，可以绕过联合文件系统ufs，为一个或多个容其提供访问。让你可以不受容器生命周期影响进行数据持久化。它们表现为容器内的空间，但实际保存在容器之外，从而允许你在不影响数据的情况下销毁、重建、修改、丢弃容器。<br>
+Docker允许你定义应用部分和数据部分，并提供工具让你将他们分开。容器是短暂和一次性的。<br>
+docker run -v ~/container_data:/data:ro -it centos,映射本地~/container_data到容器/data下,且/data的权限为ro只读，登录进去后ls查看，发现会有data目录</p>
+<p>数据卷容器：命名的容器挂载数据卷，其他容器通过挂载这个容器实现数据共享，挂载数据卷的容器，就叫做数据卷容器。<br>
+docker run --volumes-from 数据卷容器名称<br>
+即使删除了数据卷容器，挂载了数据卷容器的容器，仍然可以访问数据卷容器的目录，数据卷容器起的作用仅仅是将挂载配置传递到待挂载容器</p>
+<p>Docker数据卷的备份与还原：通过挂载目录压缩后放到挂载目录</p>
+<p>Docker For Mac的Docker Daemon是运行于虚拟机(xhyve)中的, 而不是像Linux上那样作为进程运行于宿主机，因此Docker For Mac没有docker0网桥，不能实现host网络模式，host模式会使Container复用Daemon的网络栈(在xhyve虚拟机中)，而不是与Host主机网络栈，这样虽然其它容器仍然可通过xhyve网络栈进行交互，但却不是用的Host上的端口(在Host上无法访问)。bridge网络模式 -p 参数不受此影响，它能正常打开Host上的端口并映射到Container的对应Port。</p>
+<p>docker容器的网络连接<br>
+docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡<br>
+docker0地址划分：IP127.17.42.1,掩码255.255.0.0,总共提供了65534个地址<br>
+网桥操作需安装bridge-utils工具，安装之后brctl show查看网桥信息，可以添加网桥或者配置网桥信息<br>
+docker容器的IP地址在重启容器之后会变化，是不可靠的</p>
+<p>容器互联：在同一宿主机下，docker容器是通过虚拟网桥互相连接的，默认在同一宿主机下docker允许所有容器互联。让容器之间可以相互连接主要借用了一个link的功能。 在使用纯Docker时，被连接的容器必须在同一个Docker宿主机中。不同宿主机之间的容器如果想要连接，则需要借助Swarm或Kubernetes等编排工具。<br>
+–link:链接容器，docker run -it --name cct3 --link=cct1:webtest bitchofgod/testnet （webtest为cct1的别名），然后在cct3中ping webtest即可互联<br>
+Docker在父容器中的以下两个地方写入了连接信息：<br>
+/etc/hosts文件中，–link在此文件中写入了映射信息，当docker重新启动的时候，docker会自动维护此文件中的映射<br>
+包含连接信息的环境变量中<br>
+如果拒绝所有容器互联，则修改docker配置，在/ect/default/docker文件中添加DOCKER_OPTS=&quot; --icc=false&quot;后重启docker服务即可<br>
+如果需要特定容器互联，则通过–link、–icc=false、–iptables=true来实现</p>
+<p>docker容器与外部网络的连接<br>
+ipforward<br>
+iptables</p>
+<p>Ctrl+p，Ctrl+q退出交互界面<br>
+docker attach containerName重新打开交互界面</p>
+<p>CaaS(Container as a Service):镜像容器托管<br>
+从Docker到Caas<br>
+容器集群管理工具<br>
+容器调度<br>
+配置管理<br>
+服务发现<br>
+日志／监控／报警</p>
+<p>LaaS（基础设施） 出租计算、存储、网络、DNS等基础IT服务<br>
+PaaS（基础设施+系统平台—应用服务器应用框架 编程语言） 提供应用运行和开发环境 提供应用开发组件（邮件、消息、计费、支付）<br>
+SaaS （基础设施+系统平台+软件应用）互联网Web2.0应用 企业应用（ERP/CRM等）</p>
+<p>通俗点讲<br>
+SaaS：软件即服务，简单来说就是把企业想要的功能开发好成应用软件，然后直接卖给用户使用。通俗点讲就是去饭店吃饭一样，什么都是店家的。<br>
+PaaS：平台即服务，简单来说就是云计算平台提供硬件、编程语言、开发库等帮助用户更好更快的开发软件。通俗来说就是点外卖，使用时店家的，但是餐桌是自己的。<br>
+IaaS：基础设施即服务，简单来说就是云服务商提供企业所需要的服务器、存储、网络给企业用。通俗来说就是买菜买面，回家自己做饭。</p>
+<p><a href="https://blog.csdn.net/weixin_38003389/article/details/84025762" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38003389/article/details/84025762</a></p>
+<p>Docker Machine：目的是简化 Docker 的安装和远程管理,是官方提供的一个工具。<br>
+先创建Docker Machine机器</p>
+<p>Docker Compose：Docker Compose 是 Docker 官方编排（Orchestration）项目之一，负责快速在集群中部署分布式应用。<br>
+Docker Compose允许用户通过一个单独的 docker-compose.yml 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）<br>
+Compose 中有两个重要的概念：<br>
+项目 ( project )：由一组关联的应用容器组成的一个完整业务单元，在 dockercompose.yml 文件中定义。<br>
+服务 ( service )：一个应用的容器，实际上可以包括若干运行相同镜像的容器实例<br>
+运行 compose 项目：docker-compose up</p>
+<p>Docker Compose命令集<br>
+管理镜像：build/pull<br>
+管理服务：up/start/stop/kill/rm/scale<br>
+服务状态：ps/logs/port<br>
+一次性服务：run</p>
+<p>Docker Swarm:Docker集群管理工具，支持标准的Docker API,其主要作用是把若干台Docker主机抽象为一个整体，并且通过一个入口统一管理这些Docker主机上的各种Docker资源。<br>
+Swarm和Kubernetes比较类似，但是更加轻，具有的功能也较kubernetes更少一些。</p>
+<p>Docker Compose 是一个在单个服务器或主机上创建多个容器的工具，而 Docker Swarm 则可以在多个服务器或主机上创建容器集群服务，对于微服务的部署，显然 Docker Swarm 会更加适合。</p>
+<p>三大主流调度框架：Swarm、Kubernetes和Mesos</p>
+<p>Kubernetes：交互工具kubectl<br>
+pods：创建、调度及管理的最小单元，共存的一组容器的集合，同一pods中的容器共享pid、网络、ipc及utf命名空间和共享存储卷</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/17/C-开发-2018-10-17-C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/17/C-开发-2018-10-17-C/" itemprop="url">C#</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-17T15:03:28+08:00">
+                2018-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，</p>
+<p><a href="https://blog.csdn.net/zmh458/article/details/78935172" target="_blank" rel="noopener">https://blog.csdn.net/zmh458/article/details/78935172</a><br>
+<a href="https://www.cnblogs.com/lanpingwang/p/6596758.html" target="_blank" rel="noopener">https://www.cnblogs.com/lanpingwang/p/6596758.html</a><br>
+<a href="https://www.cnblogs.com/Inspire-Yi/p/6230567.html" target="_blank" rel="noopener">https://www.cnblogs.com/Inspire-Yi/p/6230567.html</a></p>
+<p><a href="https://www.jianshu.com/p/c82ef6babf8e" target="_blank" rel="noopener">https://www.jianshu.com/p/c82ef6babf8e</a></p>
+<p><a href="https://www.cnblogs.com/caofangsheng/p/5715876.html" target="_blank" rel="noopener">https://www.cnblogs.com/caofangsheng/p/5715876.html</a><br>
+<a href="https://blog.csdn.net/beglorious/article/details/39637475" target="_blank" rel="noopener">https://blog.csdn.net/beglorious/article/details/39637475</a></p>
+<p><a href="https://www.cnblogs.com/servicehot/p/6510199.html" target="_blank" rel="noopener">https://www.cnblogs.com/servicehot/p/6510199.html</a></p>
+<p>首先我觉得action的跳转大致可以这样归一下类，跳转到同一控制器内的action和不同控制器内的action、带有参数的action跳转和不带参数的action跳转。</p>
+<p>一、RedirectToAction(“Index”);//一个参数时在本Controller下，不传入参数。</p>
+<p>二、RedirectToAction(ActionName,ControllerName) //可以直接跳到别的Controller.</p>
+<p>三、RedirectToRoute(new {controller=“Home”,action=“Index”});//可跳到其他controller</p>
+<p>四、RedirectToRoute(new {controller=“Home”,action=“Index”， id=param});//可跳到其他controller,带参数。</p>
+<p>五、Response.Redirect(“Index?id=1”);//适用于本controller下的方法名称,可带参数。<br>
+六、return Redirect(“Index”);//适用于本controller下的方法名称。</p>
+<p>七、return View(“Index”); //直接显示对应的页面 不经过执行Controller的方法。<br>
+八、return View(&quot;~/Views/Home/Index.aspx&quot;);//这种方法是写全路径,直接显示页面,不经过Controller方法<br>
+九、return View();//直接显示页面,不经过Controller方法</p>
+<p><a href="https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1" target="_blank" rel="noopener">https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1</a><br>
+一般情况下我们返回的都是本页面，所以使用return View()就可以解决问题了，</p>
+<p><a href="https://www.cnblogs.com/Cwj-XFH/p/5956142.html" target="_blank" rel="noopener">https://www.cnblogs.com/Cwj-XFH/p/5956142.html</a><br>
+<a href="http://xn--ModelASP-3i5qt911ag97a.NET" target="_blank" rel="noopener">Model验证是ASP.NET</a> MVC中的重要部分，它主要用于判断输入的数据类型及值是否符合我们设定的规则，<a href="http://xn--ASP-y28d97a810d83ofj4bmybj3mnv4c.NET" target="_blank" rel="noopener">这篇文章就介绍下ASP.NET</a> MVC中Model验证的几种方式。</p>
+<p>后台验证<br>
+DataAnnotation<br>
+ValidationAttribute<br>
+IValidatableObject<br>
+IDataErrorInfo<br>
+前端验证</p>
+<p>ViewData和ViewBag</p>
+<p><a href="https://blog.csdn.net/pasic/article/details/7093802" target="_blank" rel="noopener">https://blog.csdn.net/pasic/article/details/7093802</a></p>
+<p><a href="https://www.cnblogs.com/webapi/p/9505400.html" target="_blank" rel="noopener">https://www.cnblogs.com/webapi/p/9505400.html</a></p>
+<p>系列文章：<br>
+<a href="https://blog.csdn.net/ydm19891101/article/details/43338999" target="_blank" rel="noopener">https://blog.csdn.net/ydm19891101/article/details/43338999</a></p>
+<p>WebForm与MVC的本质区别：请求的url不同</p>
+<p><a href="https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1" target="_blank" rel="noopener">https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1</a></p>
+<p>MVC action 返回javascriptResult 需要引入的文件是<br>
+需要引用这个文件 ：   jquery.unobtrusive-ajax.min.js</p>
+<p>同时 用javascrptResult  作为action的返回结果 的话 ，前台必须用ajax.BeginForm</p>
+<p><a href="https://www.cnblogs.com/zjf1987/p/ActionResult.html" target="_blank" rel="noopener">https://www.cnblogs.com/zjf1987/p/ActionResult.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React全家桶/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/15/react-rn-2018-10-15-React全家桶/" itemprop="url">React全家桶</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T08:16:00+08:00">
+                2018-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>React全家桶+Antd共享单车后台管理系统</p>
+<h1 id="react基础知识"><a class="markdownIt-Anchor" href="#react基础知识"></a> react基础知识</h1>
+<p>Vue生态：Vue+Vue-Router+Vuex+Axios+Babel+Webpack<br>
+React生态：React+React-Router+Redux+Axios+Babel+Webpack</p>
+<p>编程式实现：需要以具体代码表达在哪里做什么，如何实现<br>
+声明式实现：只需声明在哪里做什么，无需关心如何实现</p>
+<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">https://react.docschina.org/</a><br>
+<a href="https://reactjs.org.cn/" target="_blank" rel="noopener">https://reactjs.org.cn/</a><br>
+<a href="http://facebook.github.io/react/" target="_blank" rel="noopener">http://facebook.github.io/react/</a></p>
+<p>yarn： <a href="https://yarnpkg.com/zh-Hans/" target="_blank" rel="noopener">https://yarnpkg.com/zh-Hans/</a></p>
 <ul>
-<li>Presenter处理业务逻辑，调用M层获取数据，调用V层传递展示数据</li>
-<li>Presenter持有一个IView接口，是为了能够通过View接口通知Activity进行更新界面等操作</li>
+<li>yarn init</li>
+<li>yarn add</li>
+<li>yarn remove</li>
+<li>yarn install</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">public class MoviePresenter &#123;</span><br><span class="line">    private IMovieView mIView;</span><br><span class="line">    private IMovieModel mIModel;</span><br><span class="line"></span><br><span class="line">    public MoviePresenter(IMovieView iMovieView, IMovieMoel iMovieMoel) &#123;</span><br><span class="line">        mIView = iMovieView;</span><br><span class="line">        mIModel = iMovieModel;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取正在上映的电影</span><br><span class="line">     *</span><br><span class="line">     * @param start 请求电影的起始位置</span><br><span class="line">     * @param count 获取的电影数量</span><br><span class="line">     * @param type  类型：初始化数据INIT、刷新数据REFRESH、加载更多数据LOADMORE</span><br><span class="line">     */</span><br><span class="line">    public void getPlayingMovie(int start, int count, final int type) &#123;</span><br><span class="line">        DevRing.httpManager().commonRequest( mIModel.getPlayingMovie(start, count),</span><br><span class="line">         new CommonObserver&lt;HttpResult&lt;List&lt;MovieRes&gt;&gt;&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onResult(HttpResult&lt;List&lt;MovieRes&gt;&gt; result) &#123;</span><br><span class="line">                if (mIView != null) &#123;</span><br><span class="line">                    mIView.getMovieSuccess(result.getSubjects(), type);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onError(int errType, String errMessage) &#123;</span><br><span class="line">                if (mIView != null) &#123;</span><br><span class="line">                    mIView.getMovieFail(errType, errMessage, type);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, RxLifecycleUtil.bindUntilDestroy(mIView)); </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">     /**</span><br><span class="line">     * 释放引用，防止内存泄露</span><br><span class="line">     */</span><br><span class="line">    public void destroy() &#123;</span><br><span class="line">        mIView = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="view层"><a class="markdownIt-Anchor" href="#view层"></a> View层</h2>
-<p>实现IView接口中的方法，对获取到的数据进行展示。对应日常的Activity／Fragement类，实现Iview接口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class MovieActivity extends Activity implements IMovieView &#123;</span><br><span class="line">    //获取电影数据成功的网络请求回调</span><br><span class="line">    @Override</span><br><span class="line">    public void getMovieSuccess(List&lt;MovieRes&gt; list, int type) &#123;</span><br><span class="line">        //成功，对数据进行展示</span><br><span class="line">        ....</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //获取电影数据失败的网络请求回调</span><br><span class="line">    @Override</span><br><span class="line">    public void getMovieFail(int status, String desc, int type) &#123;</span><br><span class="line">        //失败，界面上做出相应提示</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>或者匿名类对象关联：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        ...</span><br><span class="line">        mBookPresenter.onCreate();</span><br><span class="line">        mBookPresenter.attachView(mBookView);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">private BookView mBookView = new BookView() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onSuccess(Book mBook) &#123;</span><br><span class="line">        text.setText(mBook.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onError(String result) &#123;</span><br><span class="line">        Toast.makeText(MainActivity.this,result, Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="调用"><a class="markdownIt-Anchor" href="#调用"></a> 调用</h2>
-<ol>
-<li>在View层初始化时，调用Presenter层方法即可</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void onCreate(Bundle saveInstanceState) &#123;</span><br><span class="line">      ...</span><br><span class="line">      mPresenter = new MoviePresenter(this, new MovieModel());</span><br><span class="line">      mPresenter.getPlayingMovie(start, mCount, type);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>如果Presenter层持有了View层的引用，那么记得在V层销毁时，把Presenter层中对View层的引用置null，避免View层回收失败导致内存泄漏</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onDestroy() &#123;</span><br><span class="line">     super.onDestroy();</span><br><span class="line">     if (mPresenter != null) &#123;</span><br><span class="line">          mPresenter.destroy();</span><br><span class="line">          mPresenter = null;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>react生命周期</p>
+<p>react-router ／react-router-dom</p>
+<p>按需加载：<br>
+Antd中less样式<br>
+yarn eject:暴露webpack配置，</p>
+<p>less-loader安装<br>
+webpack.config.xxx.js</p>
+<p>修改完之后，重启项目</p>
+<p><a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">https://ant.design/docs/react/use-with-create-react-app-cn</a></p>
+<p>babel-plugin-import</p>
+<p>css3  calc属性<br>
+height:calc(100vh)</p>
+<p>jsonp：<a href="https://www.npmjs.com/package/jsonp" target="_blank" rel="noopener">https://www.npmjs.com/package/jsonp</a></p>
+<p>浏览器添加debugger</p>
+<p>伪类方式</p>
+<p>项目中前端路由用的是 React-Router V4。</p>
+<p>官方文档：<a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
+<p>中文文档：<a href="http://reacttraining.cn/" target="_blank" rel="noopener">http://reacttraining.cn/</a></p>
+<p>React-Router 4.0<br>
+React-Router：基础包<br>
+React-Router-DOM：浏览器端实现</p>
+<p><a href="https://segmentfault.com/a/1190000011399153" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011399153</a></p>
+<p>箭头函数不加{}表示直接返回结果<br>
+<a href="http://this.props.match.params.XXX" target="_blank" rel="noopener">this.props.match.params.XXX</a><br>
+处理404则不设置path，只设置component即可<br>
+路由外面添加Switch</p>
+<p>详情页面、登录页面、主页面是同层级页面，还有其他自页面嵌套路由</p>
+<p>App.js设置为{this.props.children}代表可以接受任何组件，APP组件作为HashRouter的根组件</p>
+<p>子路由、子组件模式</p>
+<p>传参数需要箭头函数</p>
+<p>Modal.confirm()  等价于  Modal[‘confirm’]</p>
+<p>{}里面必须是一个根对象</p>
+<p><a href="https://blog.csdn.net/little_blue_ljy/article/details/80281803" target="_blank" rel="noopener">https://blog.csdn.net/little_blue_ljy/article/details/80281803</a><br>
+<a href="https://www.cnblogs.com/guolintao/p/9019504.html" target="_blank" rel="noopener">https://www.cnblogs.com/guolintao/p/9019504.html</a><br>
+<a href="https://www.cnblogs.com/xuyuntao/articles/6391728.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyuntao/articles/6391728.html</a><br>
+<a href="https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md" target="_blank" rel="noopener">https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md</a></p>
+<p>ES6模版语法:</p>
 
           
         
@@ -1096,7 +1997,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-android中handler的使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-windows-git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1115,7 +2016,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/06/微信开发-android中handler的使用/" itemprop="url">android中handler的使用</a></h2>
+                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-windows-git/" itemprop="url">windows git</a></h2>
         
 
         <div class="post-meta">
@@ -1127,501 +2028,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>handler是android提供的用来更新UI的一套机制，也是一套消息处理机制，我们可以发送消息，也可以通过它处理消息</p>
-<p>android在设计的时候，就封装了一套消息创建、传递、处理机制，如果不遵循这样的机制就没有办法更新UI信息</p>
-<h1 id="使用"><a class="markdownIt-Anchor" href="#使用"></a> 使用</h1>
-<ul>
-<li>sendMessage</li>
-<li>sendMessageDelayed</li>
-<li>post(Runnable)</li>
-<li>postDelayed(Runable,long)</li>
-</ul>
-<p>handler.obtainMessage();<br>
-SendToTarget<br>
-拦截MEssage</p>
-<h1 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h1>
-<ol>
-<li>Handler分装了消息的发送（主要包括消息发送给谁）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Looper</span><br><span class="line">* 内部包含一个消息队列也就是MessageQueue，所有的Handler发送的消息都走向这个消息队列</span><br><span class="line">* Looper.Looper方法，就是一个死循环，不断的从MessageQueue去消息，如果有消息就处理消息，没有消息就阻塞</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>MessageQueue，就是一个消息队列，可以添加消息，并处理消息</li>
-<li>Handler很简单，内部会跟Looper进行关联，也就说在Handler的内部可以找到Looper，找到了Looper也就找到了MessageQueue，在Handler中发送消息，其实就是想MessageQueue队列中发送消息</li>
-</ol>
-<p>总结：Handler负责发送消息，Looper负责接收Handler发送的消息，并直接把消息回传给Handler自己，MessageQueue就是一个存储消息的容器</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-android权限介绍/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-android权限介绍/" itemprop="url">android权限介绍</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<p><a href="https://blog.csdn.net/u013553529/article/details/68948971" target="_blank" rel="noopener">https://blog.csdn.net/u013553529/article/details/68948971</a></p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>Android 6.0 （API level 23）中，将权限分成了两类。一类是Install权限（称之为安装时权限），另一类是Runtime权限（称之为运行时权限）</p>
-<p>Install权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 在安装app时，就赋予该app的权限，即安装后立即获取到的权限</span><br><span class="line">* normal和signature级别的权限都是安装时权限</span><br><span class="line">* 赋予app normal和signature权限时，不会给用户提示界面，系统自动决定权限的赋予</span><br><span class="line">* 对于signature权限，如果使用权限的app与声明权限的app的签名不一致，则系统拒绝赋予该signature权限</span><br></pre></td></tr></table></figure>
-<p>Runtime权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 指在app运行过程中，赋予app的权限,会显示明显的权限授予界面，让用户决定是否授予权限</span><br><span class="line">* 如果一个app的targetSdkVersion是23及以上，那么该app所申请的所有dangerous权限都是运行时权限</span><br><span class="line">* Android 6及以上的环境中，该app在运行时必须主动申请这些dangerous权限（调用requestPermissions()），否则该app没有获取到dangerous权限</span><br></pre></td></tr></table></figure>
-<p>RxPermissions是帮助开发者简化requestPermissions()相关的处理</p>
-<p>官网：<a href="https://github.com/tbruyelle/RxPermissions" target="_blank" rel="noopener">https://github.com/tbruyelle/RxPermissions</a></p>
-<ol>
-<li>如果系统是Android 6之前的版本，RxPermissions返回的结果是，app请求的每个权限都被允许（granted）</li>
-<li>使用RxPermissions申请权限，必须在Activity.onCreate()或者View.onFinishInflate()中处理</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-命令行启动模拟器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-命令行启动模拟器/" itemprop="url">命令行启动模拟器</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>emulator -avd MyNexusAPI24，其中MyNexusAPI24为模拟器名称</li>
-<li>需在PATH中配置：<br>
-export PATH=“<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>:</mo><mtext> </mtext><mi mathvariant="normal">/</mi><mi>L</mi><mi>i</mi><mi>b</mi><mi>r</mi><mi>a</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">/</mi><mi>A</mi><mi>n</mi><mi>d</mi><mi>r</mi><mi>o</mi><mi>i</mi><mi>d</mi><mi mathvariant="normal">/</mi><mi>s</mi><mi>d</mi><mi>k</mi><mi mathvariant="normal">/</mi><mi>e</mi><mi>m</mi><mi>u</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>o</mi><mi>r</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">前</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">置</mi><mi mathvariant="normal">为</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">PATH:~/Library/Android/sdk/emulator&quot;，以前配置为export PATH=&quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord mathdefault">L</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">/</span><span class="mord mathdefault">A</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord">/</span><span class="mord mathdefault">s</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord">/</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">置</span><span class="mord cjk_fallback">为</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span>PATH:~/Library/Android/sdk/tools”，新版中添加了emulator文件夹</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/其他-2018-10-06-ngrok的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/其他-2018-10-06-ngrok的使用/" itemprop="url">ngrok的使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T11:50:40+08:00">
-                2018-10-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:15:47+08:00">
+                2018-10-08
               </time>
             
 
@@ -1682,8 +2090,8 @@ export PATH=“<span class="katex"><span class="katex-mathml"><math><semantics><
       
         
           
-            <p><a href="https://ngrok.com/" target="_blank" rel="noopener">https://ngrok.com/</a></p>
-<p><a href="https://blog.csdn.net/liu_005/article/details/79557818" target="_blank" rel="noopener">https://blog.csdn.net/liu_005/article/details/79557818</a></p>
+            <p><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+<p><a href="https://www.cnblogs.com/vitah/p/3612473.html" target="_blank" rel="noopener">https://www.cnblogs.com/vitah/p/3612473.html</a></p>
 
           
         
@@ -1741,7 +2149,7 @@ export PATH=“<span class="katex"><span class="katex-mathml"><math><semantics><
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信第三方登录/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1760,7 +2168,7 @@ export PATH=“<span class="katex"><span class="katex-mathml"><math><semantics><
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信第三方登录/" itemprop="url">微信第三方登录</a></h2>
+                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/" itemprop="url">Gitblit搭建git服务器</a></h2>
         
 
         <div class="post-meta">
@@ -1772,7 +2180,163 @@ export PATH=“<span class="katex"><span class="katex-mathml"><math><semantics><
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T11:08:33+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:00:14+08:00">
+                2018-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.gitblit.com/" target="_blank" rel="noopener">http://www.gitblit.com/</a><br>
+<a href="https://www.cnblogs.com/ucos/p/3924720.html" target="_blank" rel="noopener">https://www.cnblogs.com/ucos/p/3924720.html</a></p>
+<p><a href="https://blog.csdn.net/llengnuo/article/details/73477355" target="_blank" rel="noopener">https://blog.csdn.net/llengnuo/article/details/73477355</a></p>
+<p><a href="http://gitblit.com/setup_go.html" target="_blank" rel="noopener">http://gitblit.com/setup_go.html</a></p>
+<p><a href="https://blog.csdn.net/zhangwenjie1105/article/details/81482238" target="_blank" rel="noopener">https://blog.csdn.net/zhangwenjie1105/article/details/81482238</a></p>
+<p><a href="https://www.cnblogs.com/royi123/p/7754235.html" target="_blank" rel="noopener">https://www.cnblogs.com/royi123/p/7754235.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信公众平台/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信公众平台/" itemprop="url">微信公众平台使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
                 2018-10-06
               </time>
             
@@ -1834,164 +2398,55 @@ export PATH=“<span class="katex"><span class="katex-mathml"><math><semantics><
       
         
           
-            <p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842</a></p>
-<p>用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。</p>
-<p>open id：在关注者与公众号产生消息交互后，公众号可获得关注者的open id， 同一个用户，在不同公众号或移动应用下对应有不同open id标识；<br>
-union id：同一个用户，在不同公众号或移动应用下unionID相同；前提是，如若需要做多个公众号以及移动应用账户互通，得到唯一身份标识union id，则需要将多个公众号或移动应用在微信开放平台进行绑定，然后我们才能给拿到union id；</p>
-<p>微信联合登录；也就是我们常用的微信移动端/PC端之间的扫码登录，PC端用微信扫码登录，微信移动端确认授权登录后，应用可以从微信拿到用户的open id或union id，将微信获取的用户信息与自己账户体系中的用户身份进行关联；<br>
-授权登录：需要用户确认登录，这样可以通过用户的个人确认，获取用户全面的信息，无论是否关注相关微信公众号等都可以获取。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/C-开发-2018-10-06-ASP-NET-HTML表单元素/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/C-开发-2018-10-06-ASP-NET-HTML表单元素/" itemprop="url">ASP.NET HTML表单元素</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T10:30:42+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="beginform"><a class="markdownIt-Anchor" href="#beginform"></a> BeginForm</h1>
-<p><a href="https://www.cnblogs.com/sheng-jie/p/6305385.html" target="_blank" rel="noopener">https://www.cnblogs.com/sheng-jie/p/6305385.html</a></p>
+            <h1 id="官方文档"><a class="markdownIt-Anchor" href="#官方文档"></a> 官方文档</h1>
+<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432</a></p>
+<h1 id="接口整体介绍"><a class="markdownIt-Anchor" href="#接口整体介绍"></a> 接口整体介绍</h1>
+<p>微信接口请求返回格式介绍：</p>
+<p>微信接口是通过GET方式请求<br>
+返回数据格式为JSON</p>
+<h1 id="测试号配置"><a class="markdownIt-Anchor" href="#测试号配置"></a> 测试号配置</h1>
+<p>无需公众账号，可直接体验和测试公众平台所有高级接口。</p>
+<p>配置：</p>
+<ol>
+<li>登录公众账号</li>
+<li>开发&gt;开发者工具&gt;公众平台测试账号</li>
+<li>微信扫一扫登录</li>
+<li>配置URL、TOKEN、JS接口安全域名</li>
+</ol>
+<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
+<ol>
+<li>接口频率限制说明</li>
+<li>全局返回码说明</li>
+</ol>
+<p>网页授权登录：<br>
+如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息。</p>
+<p>两种scope模式：</p>
+<ol>
+<li>snsapi_base时只能获取到openid，静默授权，</li>
+<li>snsapi_userinfo时可获取到其他信息，需要用户手动同意授权的</li>
+</ol>
+<p>微信公众平台（互斥）</p>
+<ol>
+<li>编辑模式</li>
+<li>开发者模式-openid</li>
+</ol>
+<p>接入开发者模式步骤</p>
+<p>为了识别用户，每个用户针对每个公众号会产生一个安全的OpenID<br>
+如果需要在多公众号、移动应用之间做用户共通，则需前往微信开放平台，将这些公众号和应用绑定到一个开放平台账号下，绑定后，一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID</p>
+<p>公众平台以access_token为接口调用凭据，来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储<br>
+公众平台接口调用仅支持80端口。</p>
+<p>网页授权获取用户基本信息：通过该接口，可以获取用户的基本信息（获取用户的OpenID是无需用户同意的，获取用户的基本信息则需用户同意）</p>
+<p>微信JS-SDK：是开发者在网页上通过JavaScript代码使用微信原生功能的工具包，开发者可以使用它在网页上录制和播放微信语音、监听微信分享、上传手机本地图片、拍照等许多能力。</p>
+<p>调试接口可能需要取消关注之后才能看到最新的效果</p>
+<p><a href="https://blog.csdn.net/z496007165/article/details/73239971" target="_blank" rel="noopener">https://blog.csdn.net/z496007165/article/details/73239971</a><br>
+<a href="http://www.php.cn/xiaochengxu-405121.html" target="_blank" rel="noopener">http://www.php.cn/xiaochengxu-405121.html</a></p>
+<p>网页授权接口：<br>
+授权回调页面域名：没有http，如：<a href="http://89495c4f.ngrok.xn--io-k07di11djizfrl" target="_blank" rel="noopener">http://89495c4f.ngrok.io是错误的</a>，应该是： <a href="http://89495c4f.ngrok.io" target="_blank" rel="noopener">89495c4f.ngrok.io</a></p>
+<p><a href="http://www.106jiekou.com/" target="_blank" rel="noopener">http://www.106jiekou.com/</a></p>
+<p><a href="https://blog.csdn.net/kingmax54212008/article/details/50811885" target="_blank" rel="noopener">https://blog.csdn.net/kingmax54212008/article/details/50811885</a></p>
+<p><a href="https://www.cnblogs.com/hoobey/p/6078584.html" target="_blank" rel="noopener">https://www.cnblogs.com/hoobey/p/6078584.html</a></p>
+<p><a href="https://blog.csdn.net/qianxing111/article/details/79884527" target="_blank" rel="noopener">https://blog.csdn.net/qianxing111/article/details/79884527</a></p>
+<p><a href="http://www.it165.net/pro/html/201606/70831.html" target="_blank" rel="noopener">http://www.it165.net/pro/html/201606/70831.html</a></p>
 
           
         
@@ -2040,7 +2495,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2095,7 +2550,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2117,7 +2572,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2211,7 +2666,7 @@ union id：同一个用户，在不同公众号或移动应用下unionID相同�
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共109.0k字</span>
+  <span class="post-count">博客全站共121.8k字</span>
 </div>
 
 

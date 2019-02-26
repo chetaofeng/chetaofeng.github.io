@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/13/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/13/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/02/移动开发-Gradle3-0自动化项目构建技术/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/02/移动开发-Gradle3-0自动化项目构建技术/" itemprop="url">Gradle3.0自动化项目构建技术</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-02T22:10:23+08:00">
+                2018-10-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="groovy快速入门"><a class="markdownIt-Anchor" href="#groovy快速入门"></a> Groovy快速入门</h1>
+<p>领域特定语言DSL（Domain  Specific Language）：其核心思想为&quot;求专不求全，解决特定问题&quot;，</p>
+<p>Groovy： <a href="http://www.groovy-lang.org/" target="_blank" rel="noopener">http://www.groovy-lang.org/</a><br>
+Groovy：是一种基于JVM的敏捷开发语言，结合了Python、Ruby等脚本语言的许多强大特性，可以与Java完美结合，使用Java的所有库；</p>
+<ol>
+<li>语法上支持动态类型，闭包等新一代语言特性</li>
+<li>无缝继承所有Java的库（可以完全用Java写，但是不推荐）</li>
+<li>即支持面向对象编程，也支持面向过程编程</li>
+</ol>
+<p>优势：一种更加敏捷的编程语言；入门非常容易，但是功能非常强大；既可以作为编程语言也可以作为脚本语言；熟练掌握Java的人会非常容易掌握Groovy</p>
+<p>Groovy开发环境搭建：</p>
+<blockquote>
+<p>java平台上有各种语言的翻版，例如kotlin对c#,scala对haskell,Clojure对lisp，groovy对ruby</p>
+</blockquote>
+<h2 id="macoslinux"><a class="markdownIt-Anchor" href="#macoslinux"></a> macOS/Linux</h2>
+<ol>
+<li>安装配置好JDK</li>
+<li>下载Groovy SDK并解压到合适未知</li>
+<li>配置bin目录到<sub>/.bash_profile中，如添加如下内容到</sub>/.bash_profile</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/usr/groovy-2.5.5/bin</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>groovy -version</li>
+</ol>
+<h2 id="intelij-idea配置"><a class="markdownIt-Anchor" href="#intelij-idea配置"></a> InteliJ IDEA配置</h2>
+<ol>
+<li>确保已安装Groovy插件</li>
+<li>配置Groovy SDK未知<br>
+<img src="/pub-images/Intelij%20Groovy.png" alt="image"></li>
+<li>编写Groovy版本HelloWorld，注意查看编译后文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Java版本</span><br><span class="line">class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        System.out.println(&quot;Hello world&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//Groovy版本</span><br><span class="line">print &quot;Hello world&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="groovy基础语法"><a class="markdownIt-Anchor" href="#groovy基础语法"></a> Groovy基础语法</h1>
+<ol>
+<li>变量</li>
+</ol>
+<ul>
+<li>变量的类型：基本类型+对象类型，Groovy中没有基本类型，所有的基本类型都会被编译器包装成对象类型，如：int-&gt;Integer</li>
+<li>变量的定义：强类型定义方式+弱类型def定义方式，Groovy中如果变量的值可以推断除其类型，则可通过def声明为弱类型，区别于java中的强类型定义方式，如：int i=1；</li>
+<li>推荐在自有使用模块使用def方式定义，如果有其他模块或其他类使用推荐强类型定义方式</li>
+</ul>
+<ol start="2">
+<li>字符串：String + GString<br>
+String的使用和Java中一致，GString定义方式如下：</li>
+</ol>
+<ul>
+<li>def name = ‘Hello name’ //不支持可扩展字符串</li>
+<li>def doubleName = “Hello doubleName” //可扩展字符串，如：def doubleName = “Hello doubleName and ${name}”,结果为： Hello doubleName and Hello name，此时doubleName是org.codehaus.groovy.runtime.GStringImpl的子类</li>
+<li>def thupleName  = ‘’‘Hello thupleName’’’  //支持多行方式</li>
+</ul>
+<p>无可扩展字符串时以上3种方式的String都是java.lang.String的子类，编码过程中String和GString是可以通用的，更多从方便使用角度考虑即可</p>
+<p>Groovy字符串方法介绍</p>
+<ul>
+<li>java中String原有的方法</li>
+<li>DefalutGroovyMethods</li>
+<li>StringGroovyMethods：普通类型的参数+闭包类型的参数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def str = &quot;Groovy&quot;，str2 = &quot;Hello&quot;,str3= &quot;Hello minus&quot;</span><br><span class="line">//字符串填充:center(),paddingLeft(),paddingRight()</span><br><span class="line">println str.center(8,&apos;a&apos;)       //aGroovya</span><br><span class="line">//字符串比较：类似于数字比较；compareTo()</span><br><span class="line">println str &gt; str2  //false</span><br><span class="line">//获取字符串索引:类似于数组下标；charAt()</span><br><span class="line">println str[0..1]   //Gr</span><br><span class="line">//减法运算:类似于数字减法；minus()</span><br><span class="line">println str3.minus(str2)    // minus</span><br><span class="line">//其他方法自己摸索</span><br></pre></td></tr></table></figure>
+<p>逻辑控制：单步顺序执行|if／else|switch-case|while|for，基本和Java操作一致，针对Groovy扩展介绍如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//switch-case</span><br><span class="line">def x=1.23,result</span><br><span class="line">switch(x)&#123;  //switch(x.class)</span><br><span class="line">    case &quot;name&quot;:</span><br><span class="line">        result = &quot;name&quot;</span><br><span class="line">        break</span><br><span class="line">    case Integer:</span><br><span class="line">        result = &quot;Integer&quot;</span><br><span class="line">        break</span><br><span class="line">    case BigDecimal:</span><br><span class="line">        result = &quot;BigDecimal&quot;</span><br><span class="line">        break</span><br><span class="line">    case [1,2,3]:       //列表</span><br><span class="line">        result = &quot;list&quot;</span><br><span class="line">        break</span><br><span class="line">    case 1..10:         //范围</span><br><span class="line">        result = &quot;range&quot;    </span><br><span class="line">    default:</span><br><span class="line">        result=&quot;defalut&quot;</span><br><span class="line">&#125;</span><br><span class="line">println result  //BigDecimal</span><br></pre></td></tr></table></figure>
+<p>for循环控制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//对范围的for循环</span><br><span class="line">def sum =0</span><br><span class="line">for(i in 0..9)&#123;</span><br><span class="line">    sum += i</span><br><span class="line">&#125;</span><br><span class="line">println sum //45</span><br><span class="line">//对list的for循环</span><br><span class="line">for(i in [1,2,3,4,5])&#123;</span><br><span class="line">    sum += i</span><br><span class="line">&#125;</span><br><span class="line">//对map的for循环</span><br><span class="line">for(i in [&quot;lili&quot;:1,&quot;lucy&quot;:2])&#123;</span><br><span class="line">    println i.key + &quot;:&quot; +i.value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>闭包</li>
+</ol>
+<ul>
+<li>闭包就是一个代码块，所以需要通过{}括起来，def clouser = { println “Hello Groovy!”};clouser.call();clouser();  //推荐call()方式调用来区分是闭包</li>
+<li>def clouser = {String name -&gt; println “Hello Groovy ${name}!”};clouser.call(“a”);clouser(“b”);</li>
+<li>隐式参数it：def clouser = {println “Hello Groovy ${it}!”};clouser.call(“a”);clouser(“b”);</li>
+<li>闭包返回值：总是有返回值的，当闭包体没有明确返回值的时候，返回结果就是null</li>
+<li>如果最后一个参数是闭包，闭包可以写在外面</li>
+</ul>
+<p>闭包的使用</p>
+<ul>
+<li>与基本类型的结合使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int fab1(int number)&#123;</span><br><span class="line">    int result = 1</span><br><span class="line">    1.upto(number,&#123;num -&gt; result *= num  &#125;)</span><br><span class="line">    return  result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int fab2(int number)&#123;</span><br><span class="line">    int result = 1</span><br><span class="line">    number.downto(1) &#123;</span><br><span class="line">        num -&gt; result *= num</span><br><span class="line">    &#125;</span><br><span class="line">    return  result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int cal(int number)&#123;</span><br><span class="line">    int result = 0</span><br><span class="line">    number.times &#123;</span><br><span class="line">        num -&gt; result += num</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>与String结合使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def str = &quot;the 2 and 3 is 5&quot;</span><br><span class="line">str.each &#123;String tmp -&gt; print tmp.multiply(2)&#125;  //tthhee  22  aanndd  33  iiss  55</span><br><span class="line">println str.find &#123;String tmp -&gt; tmp.isNumber()&#125; //2</span><br><span class="line">println str.any &#123;String tmp -&gt; tmp.isNumber()&#125;  //true</span><br><span class="line">println str.every &#123;String tmp -&gt; tmp.isNumber()&#125; //false</span><br><span class="line">def list = str.collect &#123;it.toUpperCase()&#125;;println list.toListString()   //[T, H, E,  , 2,  , A, N, D,  , 3,  , I, S,  , 5]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>与数据结构结合使用</li>
+<li>与文件等结合使用</li>
+<li>闭包进阶：闭包关键字（this，owner，delegate）+闭包委托策略</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">def scriptClosure = &#123;</span><br><span class="line">    println &quot;scriptClosure this:&quot;+this          //代表闭包定义处的类</span><br><span class="line">    println &quot;scriptClosure owner:&quot;+owner        //代表闭包定义处的类或对象</span><br><span class="line">    println &quot;scriptClosure delegate:&quot;+delegate  //代表任意对象，默认值为owner</span><br><span class="line">&#125;</span><br><span class="line">scriptClosure.call()</span><br><span class="line"></span><br><span class="line">//scriptClosure this:Test@3c130745</span><br><span class="line">//scriptClosure owner:Test@3c130745</span><br><span class="line">//scriptClosure delegate:Test@3c130745</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    def static classClosure = &#123;</span><br><span class="line">        println &quot;classClosure this:&quot;+this</span><br><span class="line">        println &quot;classClosure owner:&quot;+owner</span><br><span class="line">        println &quot;classClosure delegate:&quot;+delegate</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    def static say()&#123;</span><br><span class="line">        def methodClosure = &#123;</span><br><span class="line">            println &quot;methodClosure this:&quot;+this</span><br><span class="line">            println &quot;methodClosure owner:&quot;+owner</span><br><span class="line">            println &quot;methodClosure delegate:&quot;+delegate</span><br><span class="line">        &#125;</span><br><span class="line">        methodClosure.call()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//静态方法调用</span><br><span class="line">Person.classClosure()</span><br><span class="line">Person.say()</span><br><span class="line">//全部指向Person类,闭包指向离他最近的封闭类</span><br><span class="line">//classClosure this:class Person</span><br><span class="line">//classClosure owner:class Person</span><br><span class="line">//classClosure delegate:class Person</span><br><span class="line">//methodClosure this:class Person</span><br><span class="line">//methodClosure owner:class Person</span><br><span class="line">//methodClosure delegate:class Person</span><br><span class="line"></span><br><span class="line">//修改Person类中方法，取消static限定符调用</span><br><span class="line">Person p = new Person()</span><br><span class="line">p.classClosure()</span><br><span class="line">p.say()</span><br><span class="line">//全部指向Person类对象，闭包指向离他最近的封闭类对象</span><br><span class="line">classClosure this:Person@a9cd3b1</span><br><span class="line">classClosure owner:Person@a9cd3b1</span><br><span class="line">classClosure delegate:Person@a9cd3b1</span><br><span class="line">methodClosure this:Person@a9cd3b1</span><br><span class="line">methodClosure owner:Person@a9cd3b1</span><br><span class="line">methodClosure delegate:Person@a9cd3b1</span><br><span class="line"></span><br><span class="line">//嵌套闭包</span><br><span class="line">def outerClosure = &#123;</span><br><span class="line">    def innerClosure = &#123;</span><br><span class="line">        println &quot;innerClosure this:&quot;+this</span><br><span class="line">        println &quot;innerClosure owner:&quot;+owner</span><br><span class="line">        println &quot;innerClosure delegate:&quot;+delegate</span><br><span class="line">    &#125;</span><br><span class="line">    innerClosure.call()</span><br><span class="line">&#125;</span><br><span class="line">outerClosure.call()</span><br><span class="line"></span><br><span class="line">//innerClosure this:Test@3c130745</span><br><span class="line">//innerClosure owner:Test$_run_closure7@9353778 //指向outerClosure</span><br><span class="line">//innerClosure delegate:Test$_run_closure7@9353778</span><br></pre></td></tr></table></figure>
+<p>总结：this、owner、delegate的值在大多数情况都是一样的，在嵌套闭包中this的值和owner、delegate的值不一致，只有在给delegate赋值后owner和delegate的值才不一致</p>
+<p>闭包的委托策略</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Student&#123;</span><br><span class="line">    String name</span><br><span class="line">    def sayName = &#123; &quot;My name is $&#123;name&#125;&quot;&#125;</span><br><span class="line">    String toString()&#123;</span><br><span class="line">        sayName.call()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Teacher&#123;</span><br><span class="line">    String name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def stu = new Student(name: &quot;XingFeng&quot;)</span><br><span class="line">println stu.toString()</span><br><span class="line"></span><br><span class="line">def tea = new Teacher(name: &quot;Lily&quot;)</span><br><span class="line">stu.sayName.delegate = tea</span><br><span class="line">println stu.toString()</span><br><span class="line">stu.sayName.resolveStrategy = Closure.DELEGATE_FIRST    //先从delegate中查找name属性，没有了再从owner中查找</span><br><span class="line">println stu.toString()</span><br><span class="line"></span><br><span class="line">//My name is XingFeng</span><br><span class="line">//My name is XingFeng</span><br><span class="line">//My name is Lily</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>数据结构<br>
+列表的定义：def list = [1,2,3,4] 此为一个ArrayList；<br>
+数组的定义：def list = [1,2,3,4] as int[]; int[] arr=[1,2,3]<br>
+列表的排序：def list = [1,12,3,444]; Collections.sort(list);list.sort()</li>
+</ol>
+<p>map的定义：def colors=[“red”:1,“blue”:2];def colors=[red:1,blue:2]<br>
+索引map：println colors.red;println colors[“red”];<br>
+添加map：colors.yellow=3 //Groovy中map可以添加不同类型的数据：colors.complex =[a:1,b:2]<br>
+遍历map： list.each{def tmp,int index -&gt; …}  list.eachWithIndex{ key,value,index -&gt; …}<br>
+查找map： any  find  findAll every<br>
+分组map： groupBy{}<br>
+排序map：sort</p>
+<p>范围Range：定义 def range = 1…10;println range[0];range.contains(10);println range.from;println <a href="http://range.to" target="_blank" rel="noopener">range.to</a><br>
+Range继承自java.util.List</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">switch(number)&#123;</span><br><span class="line">    case 0..&lt;60</span><br><span class="line">        ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>面向对象<br>
+类、接口等的定义和使用</li>
+</ol>
+<ul>
+<li>Groovy中默认类、方法等都是public类型</li>
+<li>Groovy中无论是直接调用属性还是通过get／set方法其实质都是通过getter／setter方法调用的属性，getter／setter方法默认自动继承</li>
+<li>接口实现需实现接口的所有方法；trait中可以有默认方法实现，没有实现的方法需添加abstract关键字，实现时只需实现abstract的方法即可</li>
+</ul>
+<blockquote>
+<p>元编程（Metaprogramming）是指某类计算机程序的编写，这类计算机程序编写或者操纵其他程序（或者自身）作为它们的数据，或者在运行时完成部分本应在编译时完成的工作。很多情况下与手工编写全部代码相比工作效率更高。编写元程序的语言称之为元语言，被操作的语言称之为目标语言。一门语言同时也是自身的元语言的能力称之为反射</p>
+</blockquote>
+<blockquote>
+<p>元编程通常有两种方式起作用。一种方式是通过应用程序接口（API）来暴露运行时引擎的内部信息。另一种方法是动态执行包含编程命令的字符串。因此，“程序能编写程序”。虽然两种方法都能用，但大多数方法主要靠其中一种。</p>
+</blockquote>
+<p><img src="/pub-images/Groovy%E5%85%83%E7%BC%96%E7%A8%8B.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Baby &#123;</span><br><span class="line">    def invokeMethod(String name,Object args)&#123;</span><br><span class="line">        return &quot;the method is $&#123;name&#125;,the args is $&#123;args&#125;&quot;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    def methodMissing(String name,Object args)&#123;</span><br><span class="line">        return &quot;the method  $&#123;name&#125; is missing&#125;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def baby = new Baby()</span><br><span class="line">println baby.cry()</span><br></pre></td></tr></table></figure>
+<p>结合上图理解：Java中对象方法的调用没有上图否流程分支，在Groovy中对象方法调用有否分支调用，上例中通过注释invokeMethod、methodMissing方法查看运行效果，通过以下代码可动态添加对象属性和方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Baby.metaClass.sex = &quot;male&quot;</span><br><span class="line">Baby.metaClass.play = &#123; ... &#125;</span><br><span class="line">Baby.metaClass.static.play = &#123; ... &#125;    //静态方法</span><br></pre></td></tr></table></figure>
+<p>通过ExpandoMetaClass.enableGlobally()设置让动态添加方法全局启用</p>
+<ol start="6">
+<li>Json操作</li>
+</ol>
+<ul>
+<li>对象转换成JSON字符串：JsonOutput.toJson()</li>
+<li>Json格式化打印：JsonOutput.prettyPrint(jsonObject)</li>
+<li>Json字符串转对象：def jsonSlurper = new JsonSlurper();jsonSlurper.parse()</li>
+</ul>
+<ol start="7">
+<li>xml操作</li>
+</ol>
+<ul>
+<li>Java对xml的处理：DOM文档驱动处理方式+SAX事件驱动处理方式</li>
+<li>Groovy解析xml数据：def xmlSlurper = new XmlSlurper();def response = xmlSlurper.parse(xml); ／／response对象可以逐级访问节点，节点的属性添加@符号，如：response.books.@id，也可以通过闭包过滤信息</li>
+<li>Groovy深度遍历xml：可以通过逐级遍历解析后的response数据，也可通过response.depFirst().find{ …}遍历或 response.’<strong>’.find{ …}遍历（’</strong>'代表深度遍历）</li>
+<li>Groovy深度遍历xml：response.books.children().find{…}或response.books.’<em>’.find{…}（’</em>'代表深度遍历）</li>
+<li>Groovy创建xml数据：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;</span><br><span class="line">&lt;langs type=&apos;current&apos; count=&apos;3&apos;&gt;</span><br><span class="line">    &lt;language flavor=&apos;static&apos; version=&apos;1.5&apos; /&gt;</span><br><span class="line">    &lt;language flavor=&apos;public&apos; version=&apos;2.5&apos; /&gt;</span><br><span class="line">&lt;/langs&gt;</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">def sw = new StringWriter()</span><br><span class="line">def xmlBuilder = new MarkupBuilder(sw)</span><br><span class="line">xmlBuilder.langs(type:&apos;current&apos;,count:3)&#123;</span><br><span class="line">    language(flavor:&apos;static&apos;,version:&apos;1.5&apos;)</span><br><span class="line">    language(flavor:&apos;public&apos;,version:&apos;2.5&apos;)</span><br><span class="line">&#125;</span><br><span class="line">println sw</span><br><span class="line"></span><br><span class="line">def langs = new Langs()</span><br><span class="line">xmlBuilder.langs(type:langs.type,count:langs.count)&#123;</span><br><span class="line">     langs.languages.each &#123;</span><br><span class="line">         language(flavor:it.flavor,version:it.version)</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line">println sw</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>文件操作</li>
+</ol>
+<ul>
+<li>Java文件处理：节点流（InputStream、OutputStream及其子类）+处理流（Reader、Writer及其子类），所有Java对文件的操作Groovy都支持</li>
+<li>遍历文件内容：def file = new File(“Test.iml”);file.eachLine { println it } 或 def text = file.getText() 或 def text = file.readLines() …</li>
+</ul>
+<h1 id="gradle"><a class="markdownIt-Anchor" href="#gradle"></a> gradle</h1>
+<p>Gradle是一款最新的，功能强大的构建工具，使用程序代替传统的xml配置，项目构建更加灵活，有丰富的第三方库</p>
+<p>gradle组成：groovy核心语法+build script block+gradle api</p>
+<h2 id="gradle生命周期"><a class="markdownIt-Anchor" href="#gradle生命周期"></a> gradle生命周期</h2>
+<p>执行./gradlew clean 观察执行过程，其生命周期包括：初始化、配置、执行<br>
+<img src="/pub-images/gradle%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="image"></p>
+<h2 id="gradle生命周期的监听"><a class="markdownIt-Anchor" href="#gradle生命周期的监听"></a> gradle生命周期的监听</h2>
+<p>在项目的build.gradle中添加如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//在配置阶段开始之前的回调</span><br><span class="line">this.beforeEvaluate &#123;&#125;</span><br><span class="line"></span><br><span class="line">//配置阶段完成以后的回调</span><br><span class="line">this.afterEvaluate &#123;&#125;</span><br><span class="line"></span><br><span class="line">//gradle生命周期执行完以后的回调</span><br><span class="line">this.gradle.buildFinished &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="gradle-project"><a class="markdownIt-Anchor" href="#gradle-project"></a> Gradle Project</h1>
+<p>./gradlew projects //查看工程Project数量，学会区分Project与module及根Project与子Project，每个Project必须有一个build.gradle文件</p>
+<p>Project API组成：</p>
+<ol>
+<li>Project相关API：如何管理父Project及如何操作子Project</li>
+</ol>
+<ul>
+<li>this.getAllProjects()，this.getSubProjects(),this.getParent()，在gradl文件中，对应allprojects、project、subprojects进行操作</li>
+</ul>
+<p>./gradlew projects可实现显示所有项目，自我实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">def getProjects()&#123;</span><br><span class="line">    println &quot;------------------------&quot;</span><br><span class="line">    this.getAllprojects().eachWithIndex&#123; Project project, int index -&gt;</span><br><span class="line">        if(index == 0)&#123;</span><br><span class="line">            println &quot;Root project:$&#123;project.name&#125;&quot;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            println &quot;+--- project:$&#123;project.name&#125;&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">this.getProjects()</span><br><span class="line"></span><br><span class="line">//------------------------</span><br><span class="line">//Root project:MyApplication</span><br><span class="line">//+--- project:app</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>
+<p>task相关API</p>
+</li>
+<li>
+<p>属性相关API</p>
+</li>
+</ol>
+<ul>
+<li>父Project的属性在子项目中会被继承，可直接使用</li>
+<li>可以在项目中通过common.gradle文件来定义扩展属性ext，然后在根Project中通过apply from:this.file(‘common.gradle’)引入后，按rootProject.ext.定义属性的方式使用</li>
+<li>在gradle.properties中定义key-value属性，如：isLoadTest=false，然后在settings.gradle中就可以编码控制是否加载Test项目</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(hasProperty(&apos;isLoadTest&apos;)? isLoadTest.toBoolean() : false)&#123;</span><br><span class="line">    include &apos;:Test&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>自定义属性的两种方式：ext方式+gradle.properties中定义<br>
+4. file相关API</p>
+<ul>
+<li>路径获取API：getRootdir()、getBuildDir()、getProjectDir()</li>
+<li>文件操作相关API：都是基于根工程操作的，不支持跨工程操作</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//文件／文件夹拷贝</span><br><span class="line">copy &#123;</span><br><span class="line">   from file(&apos;test.txt&apos;)</span><br><span class="line">   into getRootProject().getBuildDir()</span><br><span class="line">&#125;</span><br><span class="line">//文件树遍历</span><br><span class="line">fileTree(&apos;build/&apos;)&#123;</span><br><span class="line">    FileTree fileTree -&gt; fileTree.visit&#123; FileTreeElement element -&gt; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>
+<p>gradle生命周期API</p>
+</li>
+<li>
+<p>其他API</p>
+</li>
+</ol>
+<ul>
+<li>依赖相关API</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        google()</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:3.2.1&apos; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//等价于以下操作：</span><br><span class="line">buildscript &#123; ScriptHandler scriptHandler -&gt;</span><br><span class="line">    scriptHandler.repositories &#123;  RepositoryHandler repositoryHandler -&gt;</span><br><span class="line">        repositoryHandler.google()</span><br><span class="line">        repositoryHandler.jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    scriptHandler.dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:3.2.1&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>依赖传递：A模块依赖B模块，B模块依赖C模块，如果A模块也需要C模块功能，不需依赖使用，防止B修改后去掉C依赖而导致错误，可在A中引入C模块，通过exclude排除依赖，transitive禁止依赖传递</p>
+<p>占位编译provided：A.类库只在编译阶段起作用 B.父项目已引入类库，子项目直接使用父项目类库，但为了子项目编译通过使用占位编译</p>
+<ul>
+<li>外部命令执行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">task abc() &#123;</span><br><span class="line">    doLast&#123;</span><br><span class="line">        def command = &apos;ls&apos;</span><br><span class="line">        exec&#123;</span><br><span class="line">            try&#123;</span><br><span class="line">                executable &apos;bash&apos;</span><br><span class="line">                args &apos;-c&apos;,command</span><br><span class="line">                println &apos;command is execute success.&apos;</span><br><span class="line">            &#125;catch(GradleException ex)&#123;</span><br><span class="line">                println &quot;Excepiotn....&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行：./gradlew abc</p>
+<h1 id="task"><a class="markdownIt-Anchor" href="#task"></a> Task</h1>
+<ol>
+<li>Task定义及配置<br>
+直接通过task函数去创建</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">task(&quot;abcd&quot;) &#123;</span><br><span class="line">    doLast&#123;</span><br><span class="line">        def command = &apos;ls -al&apos;</span><br><span class="line">        exec&#123;</span><br><span class="line">            try&#123;</span><br><span class="line">                executable &apos;bash&apos;</span><br><span class="line">                args &apos;-c&apos;,command</span><br><span class="line">                println &apos;command is execute success.&apos;</span><br><span class="line">            &#125;catch(GradleException ex)&#123;</span><br><span class="line">                println &quot;Excepiotn....&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过TaskContainer创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.tasks.create(&quot;aa&quot;)&#123;</span><br><span class="line">    println &apos;Hello task&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Task创建之后可在开发工具的gradle插件重查找到task，如果没有设置group，则默认在other分组中，更多配置可通过task源码查看<br>
+2. Task执行详解<br>
+doFirst/doLast执行阶段执行，否则在配置阶段执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">task aa&#123;</span><br><span class="line">    doFirst&#123;</span><br><span class="line">        println &apos;Hello  2&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">task.doFirst&#123;</span><br><span class="line">    println &apos;Hello  1&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//Hello  1</span><br><span class="line">//Hello  2</span><br></pre></td></tr></table></figure>
+<p>编写一个统计build时长的task<br>
+app.gradle中编写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def startBuilderTime,endBuilderTime</span><br><span class="line">this.afterEvaluate &#123; Project project -&gt;</span><br><span class="line">    def preBuildTask = this.tasks.getByName(&quot;preBuild&quot;)</span><br><span class="line">    preBuildTask.doFirst &#123;</span><br><span class="line">        startBuilderTime = System.currentTimeMillis()</span><br><span class="line">        println &apos;------开始计时...&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    def buildTask = this.tasks.getByName(&quot;build&quot;)</span><br><span class="line">    buildTask.doLast &#123;</span><br><span class="line">        endBuilderTime = System.currentTimeMillis()</span><br><span class="line">        println &apos;------计时结束,耗时：&apos;+(endBuilderTime - startBuilderTime)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>./gradlew build执行查看结果<br>
+3. Task的依赖及执行顺序</p>
+<ul>
+<li>dependsOn强依赖方式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">task t1() &#123; doLast&#123;println &apos;task t1&apos;&#125; &#125;</span><br><span class="line">task t2() &lt;&lt; &#123; println &apos;task t2&apos; &#125;      //此处&quot;&lt;&lt;&quot;等同于doLast</span><br><span class="line">task t3(dependsOn:[t1,t2]) &#123; doLast&#123;println &apos;task t3&apos;&#125; &#125;</span><br><span class="line">task t4() &#123; dependsOn this.tasks.findAll &#123; task -&gt; return task.name.equals(&quot;t2&quot;)&#125;;doLast&#123;println &apos;task t4&apos;&#125; &#125;</span><br><span class="line"></span><br><span class="line">//./gradlew t3: (t1和t2执行顺序是随机的)</span><br><span class="line">//task t1</span><br><span class="line">//task t2</span><br><span class="line">//task t3</span><br><span class="line"></span><br><span class="line">//./gradlew t4</span><br><span class="line">//task t2</span><br><span class="line">//task t4</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过Task输入输出指定<br>
+TaskInputs:参数为任意对象及文件、文件夹；TaskOutputs:只输出文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">ext&#123;</span><br><span class="line">    println &apos;------配置中...&apos;</span><br><span class="line">    versionCode = 100</span><br><span class="line">    versionName = &quot;V2.0.0&quot;</span><br><span class="line">    versionInfo = &quot;第一个版本&quot;</span><br><span class="line">    destFile = file(&quot;release.xml&quot;)</span><br><span class="line">    if(destFile != null &amp;&amp; !destFile.exists())&#123;</span><br><span class="line">        destFile.createNewFile()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class VersionMsg&#123;</span><br><span class="line">    Integer versionCode</span><br><span class="line">    String versionName</span><br><span class="line">    String versionInfo</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">task writerTask&#123;</span><br><span class="line">    //为task指定输入</span><br><span class="line">    inputs.property(&quot;versionCode&quot;,this.versionCode)</span><br><span class="line">    inputs.property(&quot;versionName&quot;,this.versionName)</span><br><span class="line">    inputs.property(&quot;versionInfo&quot;,this.versionInfo)</span><br><span class="line">    //为task指定输出</span><br><span class="line">    outputs.file destFile</span><br><span class="line"></span><br><span class="line">    doLast&#123;</span><br><span class="line">        def data = inputs.getProperties()</span><br><span class="line">        File file = outputs.getFiles().getSingleFile()</span><br><span class="line">        def versionMsg = new VersionMsg(data)</span><br><span class="line">        def sw = new StringWriter()</span><br><span class="line">        def xmlBuilder = new groovy.xml.MarkupBuilder(sw)</span><br><span class="line">        if(file.text != null &amp;&amp; file.text.size() &lt;=0)&#123;</span><br><span class="line">            xmlBuilder.releases&#123;</span><br><span class="line">                release&#123;</span><br><span class="line">                    versionCode(versionMsg.versionCode)</span><br><span class="line">                    versionName(versionMsg.versionName)</span><br><span class="line">                    versionInfo(versionMsg.versionInfo)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            file.withWriter &#123; writer -&gt;</span><br><span class="line">                writer.append(sw.toString())</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            def lines = file.readLines()</span><br><span class="line">            def lengths = lines.size() - 1</span><br><span class="line">            file.withWriter &#123; writer -&gt;</span><br><span class="line">                lines.eachWithIndex&#123; String line, int index -&gt;</span><br><span class="line">                    if(index != lengths)&#123;</span><br><span class="line">                        writer.append(line +&quot;\r\n&quot;)</span><br><span class="line">                    &#125;else if(index == lengths)&#123;</span><br><span class="line">                        writer.append(&quot;\r\n&quot; + sw.toString()+&quot;\r\n&quot;)</span><br><span class="line">                        writer.append(lines.get(lengths))</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">task readTask&#123;</span><br><span class="line">    inputs.file destFile</span><br><span class="line">    doLast&#123;</span><br><span class="line">        def file = inputs.files.singleFile</span><br><span class="line">        println file.text</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">task taskTest&#123;</span><br><span class="line">    dependsOn readTask,writerTask</span><br><span class="line">    doLast&#123;</span><br><span class="line">        println &quot;输入输出任务结束&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>destFile作为writerTask输出结果输入到readTask</p>
+<ul>
+<li>通过API指定执行顺序：mustRunAfter／shouldRunAfter</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task t1() &#123; doLast&#123;println &apos;task t1&apos;&#125; &#125;</span><br><span class="line">task t2() &#123; mustRunAfter t1 doLast &#123;println &apos;task t2&apos;&#125; &#125;</span><br></pre></td></tr></table></figure>
+<p>通过./gradlew t2 t1查看执行结果<br>
+4. Task类型<br>
+详见官方文档：<a href="https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Delete.html#org.gradle.api.tasks.Delete" target="_blank" rel="noopener">https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Delete.html#org.gradle.api.tasks.Delete</a><br>
+5. 构建到生命周期</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">this.project.afterEvaluate &#123;project -&gt;</span><br><span class="line">    println &quot;开始挂接...&quot;</span><br><span class="line">    def buildTask = project.tasks.getByName(&quot;build&quot;)</span><br><span class="line">    if(buildTask == null) throw GradleException(&quot;build Task not found&quot;)</span><br><span class="line">    buildTask.doLast &#123;</span><br><span class="line">        writerTask.execute()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="gradle其他模块"><a class="markdownIt-Anchor" href="#gradle其他模块"></a> Gradle其他模块</h1>
+<ol>
+<li>Settings类：对应Settings.gradle</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(hasProperty(&apos;isLoadTest&apos;)? isLoadTest.toBoolean() : false)&#123;</span><br><span class="line">    include &apos;:Test&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>SourceSet类:AndroidSourceSet/JavaSourceSet,决定了代码、资源、第三方库要存放的位置</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//修改.so等jnilibs的存放位置</span><br><span class="line">android&#123;</span><br><span class="line">    sourceSets &#123;</span><br><span class="line">        main&#123;</span><br><span class="line">            jniLibs.srcDirs = [&apos;libs&apos;]</span><br><span class="line">            res.srcDirs = [&apos;src/main/res&apos;,&apos;src/main/res-ad&apos;]    //对res文件夹内容进行分类，但是只能在Project视图查看到效果</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Gradle的Plugin</li>
+</ol>
+<ul>
+<li>Gradle没有提供创建自定义Gradle插件工程的模板，需要开发者手动创建Gradle插件工程</li>
+<li>使用Groovy开发，其Gradle插件工程必须遵循如下的目录结构：<br>
+groovy代码必须位于xxxProject/src/main/groovy/目录下<br>
+提供插件属性声明文件，该文件必须位于xxxProject/src/main/resources/META-INF/gradle-plugins/xxx.properties</li>
+</ul>
+<ol start="4">
+<li>android插件对gradle的扩展<br>
+android具体能配置那些属性，可查看源码通过BaseExtension查看</li>
+</ol>
+<p>gradle插件： <a href="https://avatarqing.gitbooks.io/gradlepluginuserguidechineseverision/content/introduction/README.html" target="_blank" rel="noopener">https://avatarqing.gitbooks.io/gradlepluginuserguidechineseverision/content/introduction/README.html</a></p>
+<p>varints变体</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/01/02/其他-2019-1-02-iphone8p重装系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/02/其他-2019-1-02-iphone8p重装系统/" itemprop="url">iphone8p重装系统</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T22:10:23+08:00">
+                2018-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="github-pages介绍"><a class="markdownIt-Anchor" href="#github-pages介绍"></a> Github Pages介绍</h1>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共121.8k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/微信开发-Android中主题-Theme-和样式-Style-使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/21/环境搭建-Java程序开发其他配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/14/微信开发-Android中主题-Theme-和样式-Style-使用/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2019/02/21/环境搭建-Java程序开发其他配置/" itemprop="url">Java开发其他配置</a></h2>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T17:04:41+08:00">
-                2019-02-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-21T22:10:23+08:00">
+                2019-02-21
               </time>
             
 
@@ -365,6 +365,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -395,21 +417,544 @@
       
         
           
-            <hr>
-<p>title: Android中主题(Theme)和样式(Style)使用<br>
-tags:</p>
+            <h1 id="maven配置"><a class="markdownIt-Anchor" href="#maven配置"></a> maven配置</h1>
+<p>官网：<a href="http://maven.apache.org/" target="_blank" rel="noopener">http://maven.apache.org/</a><br>
+下载：<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a></p>
+<ol>
+<li>下载解压安装包:tar zvxf apache-maven-3.5.0-bin.tar.gz</li>
+<li>配置maven环境变量:sudo vim /etc/profile,编辑系统配置文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#set Maven environment</span><br><span class="line">export MAVEN_HOME=/usr/local/software/dir-maven/apache-maven-3.5.0</span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>source /etc/profile<br>
+3. 执行mvn -v查看是否安装完成</p>
+<p>配置maven的镜像仓库</p>
 <ul>
-<li>android<br>
-copyright: true<br>
-comments: true<br>
-toc: true<br>
-date: 2018-10-06 12:13:04<br>
-categories: 移动开发<br>
-password:</li>
+<li>在conf目录中找到settings.xml 文件，配置mirrors的子节点，添加如下mirror</li>
 </ul>
-<hr>
-<p>[toc]</p>
-<h1 id="theme和style说明"><a class="markdownIt-Anchor" href="#theme和style说明"></a> Theme和Style说明</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//阿里云Maven镜像：</span><br><span class="line">&lt;mirror&gt;  </span><br><span class="line">    &lt;id&gt;nexus-aliyun&lt;/id&gt;  </span><br><span class="line">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;    </span><br><span class="line">    &lt;name&gt;Nexus aliyun&lt;/name&gt;  </span><br><span class="line">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;  </span><br><span class="line">&lt;/mirror&gt;</span><br><span class="line">或开源中国maven镜像</span><br><span class="line">&lt;mirror&gt;  </span><br><span class="line">  &lt;id&gt;nexus-osc&lt;/id&gt;  </span><br><span class="line">  &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;  </span><br><span class="line">  &lt;name&gt;Nexus osc&lt;/name&gt;  </span><br><span class="line">  &lt;url&gt;http://maven.oschina.net/content/groups/public/&lt;/url&gt;  </span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/20/Java-zookeeper入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/20/Java-zookeeper入门/" itemprop="url">zookeeper入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T21:25:33+08:00">
+                2019-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/pub-images/zookeeper.png" alt="image"></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>中间件，提供协调服务</li>
+<li>作用于分布式系统，发挥其优势，可以为大数据服务</li>
+<li>支持java，提供java和c语言对客户端api</li>
+</ul>
+<p>zookeeper=文件系统+监听通知机制</p>
+<h1 id="分布式系统"><a class="markdownIt-Anchor" href="#分布式系统"></a> 分布式系统</h1>
+<ul>
+<li>很多台计算机组成一个整体，一个整体一致对外并且处理同一请求</li>
+<li>内部的每台计算机都可以相互通信（rest／rpc）</li>
+<li>客户端到服务端的一次请求到响应结束会历经多台计算机</li>
+</ul>
+<p>自行搜索图解</p>
+<h1 id="分布式系统的瓶颈"><a class="markdownIt-Anchor" href="#分布式系统的瓶颈"></a> 分布式系统的瓶颈</h1>
+<h1 id="zookeeper的特性"><a class="markdownIt-Anchor" href="#zookeeper的特性"></a> zookeeper的特性</h1>
+<ul>
+<li>一致性：数据一致性，数据按顺序分批入库</li>
+<li>原子性：事物要么成功要么失败，不会局部化</li>
+<li>单一视图：客户端连接集群中任一zk节点，数据都是一致的</li>
+<li>可靠性：每次对zk的操作状态都会保存在服务端</li>
+<li>实时性：客户端可以读取到zk服务端的最新数据</li>
+</ul>
+<h1 id="安装配置"><a class="markdownIt-Anchor" href="#安装配置"></a> 安装配置</h1>
+<p>官网： <a href="http://zookeeper.apache.org/" target="_blank" rel="noopener">http://zookeeper.apache.org/</a><br>
+下载： <a href="https://archive.apache.org/dist/zookeeper/" target="_blank" rel="noopener">https://archive.apache.org/dist/zookeeper/</a><br>
+解压文件到/usr／local/后配置环境：vim ／etc/profile,添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ZOOKEEPER_HOME=/usr/local/zookeeper</span><br><span class="line">export PATH=$PATH:$ZOOKEEPER_HOME/bin</span><br></pre></td></tr></table></figure>
+<p>安装启动遇到问题及解决：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/5cd618ad381e" target="_blank" rel="noopener">https://www.jianshu.com/p/5cd618ad381e</a></li>
+<li><a href="https://flyer0126.iteye.com/blog/2230958" target="_blank" rel="noopener">https://flyer0126.iteye.com/blog/2230958</a></li>
+</ul>
+<h1 id="zookeeper主要目录结构"><a class="markdownIt-Anchor" href="#zookeeper主要目录结构"></a> zookeeper主要目录结构</h1>
+<p><img src="/pub-images/zookeeper%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt="image"></p>
+<h1 id="zookeeper配置文件介绍"><a class="markdownIt-Anchor" href="#zookeeper配置文件介绍"></a> zookeeper配置文件介绍</h1>
+<ul>
+<li>
+<p>cp conf/zoo_sample.cfg conf/zoo.cfg</p>
+</li>
+<li>
+<p>tickTime</p>
+</li>
+<li>
+<p>dataDir必须配置</p>
+</li>
+<li>
+<p>dataLogDir建议配置，否则和dataDir公用</p>
+</li>
+<li>
+<p>clientPort</p>
+</li>
+</ul>
+<h1 id="zookeeper数据模型"><a class="markdownIt-Anchor" href="#zookeeper数据模型"></a> zookeeper数据模型</h1>
+<ul>
+<li>是一个树形结构，类似于前端开发中的tree.js组件</li>
+<li>zk的数据模型也可以理解为unix／linux的文件目录</li>
+<li>每一个节点都成为znode，他可以有自节点，也可以有数据</li>
+<li>每个节点分为临时节点和永久节点，临时节点在客户端断开后消失</li>
+<li>每个zk节点都有各自的版本号，可以通过命令行来显示节点信息</li>
+<li>每当节点数据发生变化，那么该节点的版本号会累加（乐观锁）</li>
+<li>删除／修改过时的节点，版本号不匹配则会报错</li>
+<li>每个zk节点存储的数据不宜过大，几k即可</li>
+<li>节点可以设置权限acl，可以通过权限来限制用户的访问</li>
+</ul>
+<p>基本操作：</p>
+<ul>
+<li>客户端连接：bin/zkCli.sh  可以输入help回车查看支持的命令</li>
+<li>查看znode结构： ls命令，一层层查看</li>
+<li>关闭客户端连接： ctrl+c</li>
+</ul>
+<h1 id="zookeeper作用体现"><a class="markdownIt-Anchor" href="#zookeeper作用体现"></a> zookeeper作用体现</h1>
+<ul>
+<li>master节点选举，主节点挂了之后，从节点就会接手工作，并且保证这个节点是唯一的，这也是所谓的首脑模式，从而保证我们集群是高可用的</li>
+<li>统一配置文件管理，即只需部署一台服务器，则可以把相同的配置文件同步更新到其他所有服务器，此操作在云计算中用的特别多（假设修改了redis统一配置）</li>
+<li>发布与订阅，类似于消息队列MQ（amq，rmq…），dubbo发布者把数据存在znode上，订阅者会读取这个数据</li>
+<li>提供分布式锁，分布式环境中不通进程之间争夺资源，类似于多线程中的锁</li>
+<li>集群管理，集群中保证数据的强一致性</li>
+</ul>
+<h1 id="四种类型的znode"><a class="markdownIt-Anchor" href="#四种类型的znode"></a> 四种类型的znode</h1>
+<ul>
+<li>PERSISTENT-持久化目录节点：客户端与zookeeper断开连接后，该节点依旧存在</li>
+<li>PERSISTENT_SEQUENTIAL-持久化顺序编号目录节点：客户端与zookeeper断开连接后，该节点依旧存在，只是Zookeeper给该节点名称进行顺序编号</li>
+<li>EPHEMERAL-临时目录节点：客户端与zookeeper断开连接后，该节点被删除</li>
+<li>EPHEMERAL_SEQUENTIAL-临时顺序编号目录节点：客户端与zookeeper断开连接后，该节点被删除，只是Zookeeper给该节点名称进行顺序编号</li>
+</ul>
+<h1 id="监听通知机制"><a class="markdownIt-Anchor" href="#监听通知机制"></a> 监听通知机制</h1>
+<p>客户端注册监听它关心的目录节点，当目录节点发生变化（数据改变、被删除、子目录节点增加删除）时，zookeeper会通知客户端。</p>
+<h1 id="zookeeper客户端的使用"><a class="markdownIt-Anchor" href="#zookeeper客户端的使用"></a> Zookeeper客户端的使用</h1>
+<ul>
+<li><a href="http://zkCli.sh" target="_blank" rel="noopener">zkCli.sh</a>：可使用./zkCli.sh -server localhost来连接到Zookeeper服务上</li>
+<li>Java客户端：可创建org.apache.zookeeper.ZooKeeper对象来作为zk的客户端，注意，java api里创建zk客户端是异步的，为防止在客户端还未完成创建就被使用的情况，这里可以使用同步计时器，确保zk对象创建完成再被使用</li>
+<li>C客户端</li>
+</ul>
+<h1 id="zookeeper常用命令行操作"><a class="markdownIt-Anchor" href="#zookeeper常用命令行操作"></a> zookeeper常用命令行操作</h1>
+<p><img src="/pub-images/zk%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.png" alt="image"></p>
+<p>启动服务：./zkServer.sh，连接客户端进入命令行后台：./zkCli.sh</p>
+<ul>
+<li>ls与ls2</li>
+<li>get与stat</li>
+</ul>
+<p>zk特性-session的基本原理：客户端与服务端之间的连接存在会话；每个会话都可以设置一个超时时间；心跳结束，session则过期；session过期则临时节点znode会被抛弃</p>
+<p>心跳机制：客户端向服务端的ping包请求</p>
+<p>zk特性-watcher机制：针对每个节点的操作，都会有一个监督者watcher；当监控的某个znode发生了变化则出发watcher事件；zk中的watcher是一次性的，触发后立即销毁；父节点、子节点增删改都能触发其watcher</p>
+<p>事件触发的类型及分类</p>
+<h1 id="aclaccess-control-lists权限控制"><a class="markdownIt-Anchor" href="#aclaccess-control-lists权限控制"></a> ACL(access control lists)权限控制</h1>
+<ul>
+<li>针对节点可以设置相关读写等权限，目的为了保障数据安全性</li>
+<li>权限permissions可以指定不同的权限范围以及角色</li>
+</ul>
+<p>登录： addauth digest imooc:imooc</p>
+<p>acl命令行</p>
+<ul>
+<li>getAcl：获取某个节点的acl权限信息</li>
+<li>setAcl：设置某个节点的acl权限信息</li>
+<li>addauth：输入认证授权信息，注册时输入明文密码(登录),但在zk的系统里，密码是以加密的形式存在的</li>
+</ul>
+<p>zk的acl通过[scheme🆔permissions]来构成权限列表：</p>
+<ol>
+<li>scheme：代表采用的某种权限机制</li>
+</ol>
+<ul>
+<li>world：它下面只有一个id, 叫anyone, world:anyone代表任何人，zookeeper中对所有人有权限的结点就是属于world:anyone的</li>
+<li>auth: 它不需要id, 只要是通过authentication的user都有权限（zookeeper支持通过kerberos来进行authencation, 也支持username/password形式的authentication)</li>
+<li>digest：它对应的id为username:BASE64(SHA1(password))，它需要先通过username:password形式的authentication</li>
+<li>ip：: 它对应的id为客户机的IP地址，设置的时候可以设置一个ip段，比如ip:192.168.1.0/16, 表示匹配前16个bit的IP段</li>
+<li>super:代表超级管理员，拥有所有的权限</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//修改zkServer.sh增加super管理员</span><br><span class="line">![image](/pub-images/super设置.png)</span><br><span class="line"></span><br><span class="line">//重启zkServer.sh</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>id：代表允许访问的用户</li>
+<li>permissions：权限组合字符串（crdwa）</li>
+</ol>
+<ul>
+<li>create：创建子节点</li>
+<li>read：获取节点／子节点</li>
+<li>write：设置节点数据</li>
+<li>delete：删除子节点</li>
+<li>admin：设置权限</li>
+</ul>
+<h1 id="acl常用使用场景"><a class="markdownIt-Anchor" href="#acl常用使用场景"></a> acl常用使用场景</h1>
+<ul>
+<li>开发／测试环境分离，开发者无权限操作测试库的节点，只能看</li>
+<li>生产环境上控制指定ip的服务可以访问相关节点，防止混乱</li>
+</ul>
+<h1 id="zookeeper四字命令"><a class="markdownIt-Anchor" href="#zookeeper四字命令"></a> zookeeper四字命令</h1>
+<ul>
+<li>zk可以通过他自身提供的简写命令来和服务器进行交互</li>
+<li>需要使用到nc命令，安装：yum install nc</li>
+<li>echo [command] | nc [ip] [port]，如：echo ruok | nc localhost 2181</li>
+<li>stat:查看zk的状态信息，以及是否mode</li>
+<li>ruok：查看当前zkServer是否启动，返回imok</li>
+<li>dump: 列出未经处理的会话和临时节点</li>
+<li>conf：查看服务器配置</li>
+<li>cons：展示连接到服务器的客户端信息</li>
+<li>envi：展示环境变量</li>
+<li>mntr：监控zk健康信息</li>
+<li>wchs：展示watcher信息</li>
+</ul>
+<p>白名单设置</p>
+<h1 id="zookeeper集群搭建"><a class="markdownIt-Anchor" href="#zookeeper集群搭建"></a> zookeeper集群搭建</h1>
+<ul>
+<li>zk集群，主从节点，心跳机制（选举模式），服务器数：2n+1</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li>配置数据文件 myid 1／2／3 对应server.1/2/3</li>
+<li>通过./zkCli.sh -server [ip]:[port]检测集群是否配置成功</li>
+<li>通过./zkServer.sh status查看zk节点在集群中的状态</li>
+</ul>
+<h2 id="集群搭建前置"><a class="markdownIt-Anchor" href="#集群搭建前置"></a> 集群搭建前置</h2>
+<p>在本地单机配置zk启动及一般操作正常，假设本地zk目录为:/usr/zookeeper</p>
+<h2 id="单机伪分布式zk集群搭建"><a class="markdownIt-Anchor" href="#单机伪分布式zk集群搭建"></a> 单机伪分布式zk集群搭建</h2>
+<ol>
+<li>准备zk单个节点</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/zookerperGroup</span><br><span class="line">sudo cp /usr/zookeeper /usr/zookerperGroup/zk1</span><br><span class="line">sudo cp /usr/zookeeper /usr/zookerperGroup/zk2</span><br><span class="line">sudo cp /usr/zookeeper /usr/zookerperGroup/zk3</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>修改相关配置<br>
+依次进入zk1、zk2、zk3的conf目录，编辑zoo.cfg文件:</li>
+</ol>
+<ul>
+<li>修改clientPort依次为：2191，2192，2193</li>
+<li>修改dataDir、dataLogDir路径为：usr/zookerperGroup/zk{X}/data和usr/zookerperGroup/zk{X}/dataLog</li>
+<li>在文件末添加如下内容：（此处IP地址也可改为实际地址）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server.1=127.0.0.1:2888:3888</span><br><span class="line">server.2=127.0.0.1:2889:3889</span><br><span class="line">server.3=127.0.0.1:2890:3890</span><br></pre></td></tr></table></figure>
+<p>此配置需细心，切不可漏配、少配，我的配置如下图：<br>
+<img src="/pub-images/zk%E5%8D%95%E6%9C%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE.png" alt="image"></p>
+<ol start="3">
+<li>创建myid文件</li>
+</ol>
+<ul>
+<li>依次进入zk1、zk2、zk3的data目录，sudo vim myid，输入内容依次为：1，2，3保存</li>
+</ul>
+<ol start="4">
+<li>依次启动zk服务</li>
+</ol>
+<ul>
+<li>依次进入zk1、zk2、zk3的bin目录，启动zk服务：sudo ./zkServer.sh start</li>
+</ul>
+<ol start="5">
+<li>测试集群</li>
+</ol>
+<ul>
+<li>进入zk1的bin，连接zk服务器，如：sudo <a href="http://zkCli.sh" target="_blank" rel="noopener">zkCli.sh</a> -server 127.0.0.1:2191</li>
+<li>在zk1中创建节点：create /test Hello</li>
+<li>进入zk2的bin，连接zk服务器，如：sudo <a href="http://zkCli.sh" target="_blank" rel="noopener">zkCli.sh</a> -server 127.0.0.1:2192</li>
+<li>获取test节点信息，如：ls /;get /test</li>
+<li>通过sudo ./zkServer status查看集群节点信息</li>
+</ul>
+<h2 id="真实环境zk集群搭建"><a class="markdownIt-Anchor" href="#真实环境zk集群搭建"></a> 真实环境zk集群搭建</h2>
+<p>需注意：环境变量的配置，ip配置不同，端口号可以相同</p>
+<h2 id="集群测试-选举测试"><a class="markdownIt-Anchor" href="#集群测试-选举测试"></a> 集群测试、选举测试</h2>
+<h1 id="api操作相关代码"><a class="markdownIt-Anchor" href="#api操作相关代码"></a> API操作相关代码</h1>
+<blockquote>
+<p>ZooKeeper的api支持多种语言，在操作时可以选择使用同步api还是异步api。同步api一般是直接返回结果，异步api一般是通过回调来传送执行结果的，一般方法中有某参数是类AsyncCallback的内部接口，那么该方法应该就是异步调用，回调方法名为processResult。</p>
+</blockquote>
+<p><a href="https://www.cnblogs.com/leocook/p/zk_0.html" target="_blank" rel="noopener">https://www.cnblogs.com/leocook/p/zk_0.html</a></p>
+<p><a href="https://www.cnblogs.com/gaojy/p/6635026.html" target="_blank" rel="noopener">https://www.cnblogs.com/gaojy/p/6635026.html</a></p>
+<p><a href="https://www.cnblogs.com/niechen/p/8597344.html" target="_blank" rel="noopener">https://www.cnblogs.com/niechen/p/8597344.html</a></p>
+<p>入门：<a href="https://blog.csdn.net/java_66666/article/details/81015302" target="_blank" rel="noopener">https://blog.csdn.net/java_66666/article/details/81015302</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/" itemprop="url">Android中主题(Theme)和样式(Style)使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-15T11:00:40+08:00">
+                2019-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/移动开发/" itemprop="url" rel="index">
+                    <span itemprop="name">移动开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="theme和style说明"><a class="markdownIt-Anchor" href="#theme和style说明"></a> Theme和Style说明</h1>
 <ul>
 <li>Theme是全局的设计风格。style是局部的设计风格</li>
 <li>Theme是一套UI控件和Activity的样式。可以给Application 和 activity 设置主题。来设置显示界面的样式</li>
@@ -2453,328 +2998,11 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-设置网络自动启动/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/Linux-设置网络自动启动/" itemprop="url">CentOS设置网络自动启动</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:20:08+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="设置网络自启动"><a class="markdownIt-Anchor" href="#设置网络自启动"></a> 设置网络自启动</h1>
-<p>修改/etc/sysconfig/network-scripts/ifcfg-ethX文件，修改其中ONBOOT===no==的值为yes即可</p>
-<p>如果想要自己设置静态ip，需要在上边文件的最后添加以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IPADDR=192.168.7.106 #静态IP  </span><br><span class="line">GATEWAY=192.168.7.1 #默认网关  </span><br><span class="line">NETMASK=255.255.255.0 #子网掩码  </span><br><span class="line">DNS1=192.168.7.1 #DNS 配置</span><br></pre></td></tr></table></figure>
-<p>重启服务即可</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-CentOS版本说明/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/Linux-CentOS版本说明/" itemprop="url">CentOS版本说明</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:19:51+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>CentOS-7.0-1406-x86_64-DVD.iso             标准安装版，一般下载这个就可以了</li>
-<li>CentOS-7.0-1406-x86_64-NetInstall.iso       网络安装镜像</li>
-<li>CentOS-7.0-1406-x86_64-Everything.iso     对完整版安装盘的软件进行补充，集成所有软件。</li>
-<li>CentOS-7.0-1406-x86_64-GnomeLive.iso   GNOME桌面版</li>
-<li>CentOS-7.0-1406-x86_64-KdeLive.iso         KDE桌面版</li>
-<li>CentOS-7.0-1406-x86_64-livecd.iso            光盘上运行的系统，类拟于winpe</li>
-</ul>
-<ol>
-<li>CentOS-xxxx-LiveCD.ios 和CentOS-xxxx-bin-DVD.iso有什么区别？前者只有700M，后者有3.8G。其差别不仅仅在大小上，其更本质的差别是，CentOS-xxxx-LiveCD.ios只能加载到内存里运行，不能安装。CentOS-xxx-bin-DVD1.iso才可以安装到硬盘上。</li>
-<li>CentOS-xxx-bin-DVD1.iso，CentOS-xxx-bin-DVD2.iso分别是干什么的？前者是3.8G，后者是500M。其差别是DVD1是CentOS的安装文件，DVD2是CentOS的一些软件（就简单实用CentOS来说是不需要的）。</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2829,7 +3057,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2851,7 +3079,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2945,7 +3173,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共109.0k字</span>
+  <span class="post-count">博客全站共121.8k字</span>
 </div>
 
 

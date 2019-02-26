@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-linux-磁盘分区工具/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-VI编辑器使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/Linux-linux-磁盘分区工具/" itemprop="url">linux 磁盘分区工具</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Linux-VI编辑器使用/" itemprop="url">VI编辑器使用</a></h2>
         
 
         <div class="post-meta">
@@ -417,14 +417,244 @@
       
         
           
-            <p>GParted是一款linux下的功能非常强大的分区工具，和windows下的‘分区魔术师’类似，操作和显示上也很相似。GParted可以方便的创建、删除分区，也可以调整分区的大小和移动分区的位置。GParted支持多种linux下常见的分区格式，包括ext2、ext4、fat、hfs、jfs、reiser4、reiserfs、xfs，甚至ntfs。另外官方还提供了 LiveCD 和 LiveUSB 版本的 GParted，方便在没有主系统的情况下对硬盘进行分区！<br>
-GParted可以用于创建、删除、移动分区，调整分区大小，检查、复制分区等操作。可以用于调整分区已安装新操作系统、备份特定分区到另一块硬盘等。 　　<br>
-GParted使用libparted来识别、调整分区表，并有各个文件系统工具来处理分区上的文件系统。这些文件系统工具并不是必须的，但要处理一中文件系统就必须先安装相应的工具。 　　<br>
-GParted使用C++写成，使用gtkmm提供GTK+界面。 　　<br>
-GParted项目还提供了一个包含GParted和全部文件系统工具的Live CD，也可以制作成Live USB或使用其他介质。这个Live CD系统基于Debian GNU/Linux。其它Linux Live CD版本也大多包含GParted，如Knoppix等。</p>
-<p>运行环境：Win2003,WinXP,Win2000,Win9X软件大小：140.3 MB</p>
-<p>下载地址：<br>
-<a href="http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b" target="_blank" rel="noopener">http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b</a></p>
+            <blockquote>
+<p>vi编辑器是所有Unix及Linux系统下标准的编辑器，它的强大不逊色于任何最新的文本编辑器，对Unix及Linux系统的任何版本，vi编辑器是完全相同的。</p>
+</blockquote>
+<h1 id="vi的基本概念"><a class="markdownIt-Anchor" href="#vi的基本概念"></a> vi的基本概念</h1>
+<ol>
+<li>命令行模式command mode</li>
+</ol>
+<blockquote>
+<p>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段及进入Insert mode下，或者到 last line mode；</p>
+</blockquote>
+<ol start="2">
+<li>插入模式（Insert mode）</li>
+</ol>
+<blockquote>
+<p>只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令行模式</p>
+</blockquote>
+<ol start="3">
+<li>底行模式（last line mode）</li>
+</ol>
+<blockquote>
+<p>将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……</p>
+</blockquote>
+<p>不过一般我们在使用时把vi简化成两个模式，就是将底行模式（last line mode）也算入命令行模式command mode）</p>
+<h1 id="vi的基本操作"><a class="markdownIt-Anchor" href="#vi的基本操作"></a> vi的基本操作</h1>
+<ol>
+<li>进入vi的命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi filename:打开或新建文件，并将光标置于第一行首</span><br><span class="line">vi +n filename：打开文件，并将光标置于第n行首</span><br><span class="line">vi + filename ：打开文件，并将光标置于最后一行首</span><br><span class="line">vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处</span><br><span class="line">vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename</span><br><span class="line">vi filename....filename ：打开多个文件，依次编辑</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>退出vi及保存文件</li>
+</ol>
+<blockquote>
+<p>在「命令行模式（command mode）」下，按一下「：」冒号键进入「Last line mode」</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">: w filename （输入 「w filename」将文章以指定的文件名filename保存）</span><br><span class="line">: wq (输入「wq」，存盘并退出vi)</span><br><span class="line">: q! (输入q!， 不存盘强制退出vi)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>移动光标</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">按「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格。</span><br><span class="line">按「ctrl」+「b」：屏幕往&quot;后&quot;移动一页</span><br><span class="line">按「ctrl」+「f」：屏幕往&quot;前&quot;移动一页</span><br><span class="line">按「ctrl」+「u」：屏幕往&quot;后&quot;移动半页</span><br><span class="line">按「ctrl」+「d」：屏幕往&quot;前&quot;移动半页</span><br><span class="line">按数字「0」：移到文章的开头</span><br><span class="line">按「G」：移动到文章的最后</span><br><span class="line">按「$」：移动到光标所在行的&quot;行尾&quot;</span><br><span class="line">按「^」：移动到光标所在行的&quot;行首&quot;</span><br><span class="line">按「w」：光标跳到下个字的开头</span><br><span class="line">按「e」：光标跳到下个字的字尾</span><br><span class="line">按「b」：光标回到上个字的开头</span><br><span class="line">按「#l」：光标移到该行的第#个位置，如：5l,56l</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>删除文字</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">「x」：每按一次，删除光标所在位置的&quot;后面&quot;一个字符</span><br><span class="line">「#x」：例如，「6x」表示删除光标所在位置的&quot;后面&quot;6个字符</span><br><span class="line">「X」：大写的X，每按一次，删除光标所在位置的&quot;前面&quot;一个字符</span><br><span class="line">「#X」：例如，「20X」表示删除光标所在位置的&quot;前面&quot;20个字符</span><br><span class="line">「dd」：删除光标所在行</span><br><span class="line">「#dd」：从光标所在行开始删除#行</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>复制</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">「yw」：将光标所在之处到字尾的字符复制到缓冲区中</span><br><span class="line">「#yw」：复制#个字到缓冲区</span><br><span class="line">「yy」：复制光标所在行到缓冲区</span><br><span class="line">「#yy」：例如，「6yy」表示拷贝从光标所在的该行&quot;往下数&quot;6行文字</span><br><span class="line">「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与&quot;y&quot;有关的复制命令都必须与&quot;p&quot;配合才能完成复制与粘贴功能</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>恢复上一次操作</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">「u」：如果您误执行一个命令，可以马上按下「u」，回到上一个操作。按多次&quot;u&quot;可以执行多次恢复</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>跳至指定的行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">「ctrl」+「g」列出光标所在行的行号</span><br><span class="line">「#G」：例如，「15G」，表示移动光标至文章的第15行行首</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>列出行号</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行模式：输入「set nu」后，会在文件中的每一行前面列出行号</span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li>跳到文件中的某一行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令行模式：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行</span><br></pre></td></tr></table></figure>
+<ol start="10">
+<li>查找字符</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止;</span><br><span class="line">* 「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-XShell使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-XShell使用/" itemprop="url">XShell使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<blockquote>
+<p>Xshell是一款服务器终端模拟软件，用户可以使用Xshell软件在Windows、Mac OS电脑上访问不同系统的服务器主机，让你可以方便对其进行控制管理。</p>
+</blockquote>
+<blockquote>
+<p>创新的设计和优良的体验，让用户以最高效率对服务器进行管理</p>
+</blockquote>
+<h1 id="功能特色"><a class="markdownIt-Anchor" href="#功能特色"></a> 功能特色</h1>
+<ul>
+<li>可以保存多个vps登陆信息，免去每次输入的烦恼</li>
+<li>设置命令快捷按钮</li>
+<li>通过代理登陆vps</li>
+<li>鼠标右键粘贴可将本地粘贴板内容复制到vps</li>
+</ul>
+<h1 id="xshell-注册说明"><a class="markdownIt-Anchor" href="#xshell-注册说明"></a> Xshell 注册说明</h1>
+<ol>
+<li>公司名字随便填</li>
+<li>注册码 690313-111999-999313</li>
+</ol>
+<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
+<p>安装完成之后键盘输入无反应，解决方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件--属性--终端--编码 改成Unicode(UTF-8)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -825,6 +1055,367 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-linux-磁盘分区工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-linux-磁盘分区工具/" itemprop="url">linux 磁盘分区工具</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>GParted是一款linux下的功能非常强大的分区工具，和windows下的‘分区魔术师’类似，操作和显示上也很相似。GParted可以方便的创建、删除分区，也可以调整分区的大小和移动分区的位置。GParted支持多种linux下常见的分区格式，包括ext2、ext4、fat、hfs、jfs、reiser4、reiserfs、xfs，甚至ntfs。另外官方还提供了 LiveCD 和 LiveUSB 版本的 GParted，方便在没有主系统的情况下对硬盘进行分区！<br>
+GParted可以用于创建、删除、移动分区，调整分区大小，检查、复制分区等操作。可以用于调整分区已安装新操作系统、备份特定分区到另一块硬盘等。 　　<br>
+GParted使用libparted来识别、调整分区表，并有各个文件系统工具来处理分区上的文件系统。这些文件系统工具并不是必须的，但要处理一中文件系统就必须先安装相应的工具。 　　<br>
+GParted使用C++写成，使用gtkmm提供GTK+界面。 　　<br>
+GParted项目还提供了一个包含GParted和全部文件系统工具的Live CD，也可以制作成Live USB或使用其他介质。这个Live CD系统基于Debian GNU/Linux。其它Linux Live CD版本也大多包含GParted，如Knoppix等。</p>
+<p>运行环境：Win2003,WinXP,Win2000,Win9X软件大小：140.3 MB</p>
+<p>下载地址：<br>
+<a href="http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b" target="_blank" rel="noopener">http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/" itemprop="url">使用Vundle管理配置Vim基本插件</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
+<p>官网：<a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim</a></p>
+<blockquote>
+<p>Vundle是基于Git仓库的插件管理软件。Vundle将插件的安装简化为类似yum软件安装的过程</p>
+</blockquote>
+<blockquote>
+<p>其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下</p>
+</blockquote>
+<h1 id="配置说明"><a class="markdownIt-Anchor" href="#配置说明"></a> 配置说明</h1>
+<ol>
+<li>在Github vim-scripts 用户下的repos,只需要写出repos名称</li>
+<li>在Github其他用户下的repos, 需要写出”用户名/repos名”</li>
+<li>不在Github上的插件，需要写出git全路径</li>
+</ol>
+<p>具体步骤：</p>
+<ol>
+<li>需要有git环境，CentOS7自带，可通过git命令查看</li>
+<li>安装Vundle：git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim.git</a> ~/.vim/bundle/Vundle.vim</li>
+<li>修改.vimrc／vimrc文件，在CentOS7中是vimrc文件，修改前先备份.</li>
+</ol>
+<ul>
+<li>将以下内容放置到文件最开头，最小配置如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">set nocompatibl </span><br><span class="line">filetype off</span><br><span class="line"></span><br><span class="line">set rtp+=~/.vim/bundle/Vundle.vim</span><br><span class="line"></span><br><span class="line">call vundle#begin()</span><br><span class="line"></span><br><span class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</span><br><span class="line"></span><br><span class="line">call vundle#end()</span><br><span class="line"></span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
+<p>在Plugin之后，添加自己想要安装的插件<br>
+4. 插件安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在vim中</span><br><span class="line">:PluginInstall</span><br><span class="line"></span><br><span class="line"># 在终端</span><br><span class="line">vim +PluginInstall +qall</span><br></pre></td></tr></table></figure>
+<h1 id="命令说明"><a class="markdownIt-Anchor" href="#命令说明"></a> 命令说明</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:PluginList -列举出列表中(.vimrc中)配置的所有插件</span><br><span class="line">:PluginInstall -安装列表中全部插件</span><br><span class="line">:PluginInstall! -更新列表中全部插件</span><br><span class="line">:PluginSearch foo -查找foo插件</span><br><span class="line">:PluginSearch! foo -刷新foo插件缓存</span><br><span class="line">:PluginClean -清除列表中没有的插件</span><br><span class="line">:PluginClean! -清除列表中没有的插件</span><br></pre></td></tr></table></figure>
+<h1 id="常用插件说明"><a class="markdownIt-Anchor" href="#常用插件说明"></a> 常用插件说明</h1>
+<ul>
+<li>rename.vim：在Vim中为文件重命名。</li>
+<li>vim-coffee-script：在Vim中舒心 的编写、编译Coffeescript。</li>
+<li>vim-mkdir：当你在Vim中新建文件的时候， 自动帮你创建不存在的目录。</li>
+<li>vim-surround：快速的删除、修改和添加 括号、引号、XML标签等等。</li>
+<li>matchit：用%去在两个对应的字符间跳转。</li>
+<li>tComment：快速注释、反注释代码。</li>
+<li>emmet-vim：Emmet的Vim版。</li>
+<li>tabular：快速对齐。</li>
+<li>snipmate.vim：快速的代码片段。</li>
+<li>vim-easymotion：在文件中快速定位。</li>
+<li>vim-instant-markdown：Vim中对</li>
+<li>Markdown文档的实时预览。</li>
+<li>NERDTree:一个用于浏览文件系统的树形资源管理外挂,它可以让你像使用Windows档案总管一样在VIM中浏览文件系统并且打开文件或目录</li>
+<li>MiniBufExplorer:提供多文件同时编辑功能，并在编辑器上方显示文件的标签</li>
+<li>一款状态栏增强插件，可以让你的Vim状态栏非常的美观，同时包括了buffer显示条扩展smart tab line以及集成了一些插件</li>
+<li></li>
+</ul>
+<h1 id="网络上配置收藏"><a class="markdownIt-Anchor" href="#网络上配置收藏"></a> 网络上配置收藏</h1>
+<ol>
+<li><a href="https://github.com/deepzz0/dotfiles/blob/master/.vimrc" target="_blank" rel="noopener">https://github.com/deepzz0/dotfiles/blob/master/.vimrc</a></li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">if &amp;compatible</span><br><span class="line">  set nocompatible</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">filetype off</span><br><span class="line">set rtp+=~/.vim/bundle/vundle/</span><br><span class="line">call vundle#rc()</span><br><span class="line"></span><br><span class="line">&quot; Let Vundle manage Vundle</span><br><span class="line">Bundle &apos;gmarik/vundle&apos;</span><br><span class="line"></span><br><span class="line">&quot; Define bundles via Github repos</span><br><span class="line">Bundle &apos;christoomey/vim-run-interactive&apos;</span><br><span class="line">Bundle &apos;croaky/vim-colors-github&apos;</span><br><span class="line">Bundle &apos;danro/rename.vim&apos;</span><br><span class="line">Bundle &apos;kchmck/vim-coffee-script&apos;</span><br><span class="line">Bundle &apos;kien/ctrlp.vim&apos;</span><br><span class="line">Bundle &apos;pbrisbin/vim-mkdir&apos;</span><br><span class="line">Bundle &apos;scrooloose/syntastic&apos;</span><br><span class="line">Bundle &apos;slim-template/vim-slim&apos;</span><br><span class="line">Bundle &apos;thoughtbot/vim-rspec&apos;</span><br><span class="line">Bundle &apos;tpope/vim-bundler&apos;</span><br><span class="line">Bundle &apos;tpope/vim-endwise&apos;</span><br><span class="line">Bundle &apos;tpope/vim-fugitive&apos;</span><br><span class="line">Bundle &apos;tpope/vim-rails&apos;</span><br><span class="line">Bundle &apos;tpope/vim-surround&apos;</span><br><span class="line">Bundle &apos;vim-ruby/vim-ruby&apos;</span><br><span class="line">Bundle &apos;vim-scripts/ctags.vim&apos;</span><br><span class="line">Bundle &apos;vim-scripts/matchit.zip&apos;</span><br><span class="line">Bundle &apos;vim-scripts/tComment&apos;</span><br><span class="line">Bundle &quot;mattn/emmet-vim&quot;</span><br><span class="line">Bundle &quot;scrooloose/nerdtree&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-powerline&quot;</span><br><span class="line">Bundle &quot;godlygeek/tabular&quot;</span><br><span class="line">Bundle &quot;msanders/snipmate.vim&quot;</span><br><span class="line">Bundle &quot;jelera/vim-javascript-syntax&quot;</span><br><span class="line">Bundle &quot;altercation/vim-colors-solarized&quot;</span><br><span class="line">Bundle &quot;othree/html5.vim&quot;</span><br><span class="line">Bundle &quot;xsbeats/vim-blade&quot;</span><br><span class="line">Bundle &quot;Raimondi/delimitMate&quot;</span><br><span class="line">Bundle &quot;groenewege/vim-less&quot;</span><br><span class="line">Bundle &quot;evanmiller/nginx-vim-syntax&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-easymotion&quot;</span><br><span class="line">Bundle &quot;tomasr/molokai&quot;</span><br><span class="line"></span><br><span class="line">if filereadable(expand(&quot;~/.vimrc.bundles.local&quot;))</span><br><span class="line">  source ~/.vimrc.bundles.local</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">filetype on</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-02-Homebrew/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1169,6 +1760,202 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-面试题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/其他-面试题/" itemprop="url">UML类图大全</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="java多线程并发原理"><a class="markdownIt-Anchor" href="#java多线程并发原理"></a> java多线程并发原理</h1>
+<p><a href="https://baijiahao.baidu.com/s?id=1611283938372470841&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">https://baijiahao.baidu.com/s?id=1611283938372470841&amp;wfr=spider&amp;for=pc</a><br>
+<a href="https://www.cnblogs.com/lyz0925/p/6734839.html" target="_blank" rel="noopener">https://www.cnblogs.com/lyz0925/p/6734839.html</a></p>
+<h1 id="hashmap实现原理及源码分析"><a class="markdownIt-Anchor" href="#hashmap实现原理及源码分析"></a> HashMap实现原理及源码分析</h1>
+<p><a href="https://www.cnblogs.com/chengxiao/p/6059914.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengxiao/p/6059914.html</a></p>
+<h1 id="java并发编程"><a class="markdownIt-Anchor" href="#java并发编程"></a> java并发编程</h1>
+<h2 id="jvm实现synchronized的底层机制"><a class="markdownIt-Anchor" href="#jvm实现synchronized的底层机制"></a> JVM实现synchronized的底层机制</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5354340.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5354340.html</a></p>
+<h2 id="闭锁"><a class="markdownIt-Anchor" href="#闭锁"></a> 闭锁</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5359684.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5359684.html</a></p>
+<p><a href="https://blog.csdn.net/yujin753/article/details/46125283" target="_blank" rel="noopener">https://blog.csdn.net/yujin753/article/details/46125283</a></p>
+<h2 id="栅栏"><a class="markdownIt-Anchor" href="#栅栏"></a> 栅栏</h2>
+<p><a href="https://blog.csdn.net/u012572955/article/details/54971072" target="_blank" rel="noopener">https://blog.csdn.net/u012572955/article/details/54971072</a></p>
+<ul>
+<li>栅栏类似于闭锁，它能阻塞一组线程直到某个事件发生。</li>
+<li>栅栏与闭锁的关键区别在于，所有线程必须同时到达栅栏位置，才能继续执行。闭锁用于等待事件，而栅栏用于等待其他线程，且能够重复执行</li>
+</ul>
+<h2 id="关卡"><a class="markdownIt-Anchor" href="#关卡"></a> 关卡</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5363759.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5363759.html</a></p>
+<h2 id="信号量"><a class="markdownIt-Anchor" href="#信号量"></a> 信号量</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5367078.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5367078.html</a></p>
+<h2 id="线程池"><a class="markdownIt-Anchor" href="#线程池"></a> 线程池</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5319828.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5319828.html</a></p>
+<h1 id="java中的cas实现原理"><a class="markdownIt-Anchor" href="#java中的cas实现原理"></a> Java中的CAS实现原理</h1>
+<p><a href="https://www.cnblogs.com/javalyy/p/8882172.html" target="_blank" rel="noopener">https://www.cnblogs.com/javalyy/p/8882172.html</a></p>
+<p>Spring Cloud由众多子项目组成，如Spring Cloud Config、Spring Cloud Netflix、Spring Cloud Consul 等，提供了搭建分布式系统及微服务常用的工具，</p>
+<p>分布式领域著名的CAP理论（C——数据一致性，A——服务可用性，P——服务对网络分区故障的容错性）</p>
+<p>一个java应用程序至少有两个线程，一个是主线程，负责main方法的执行，一个是垃圾回收器线程，负责回收垃圾。</p>
+<h1 id="springboot和springcloud对比"><a class="markdownIt-Anchor" href="#springboot和springcloud对比"></a> SpringBoot和SpringCloud对比</h1>
+<p><a href="https://blog.csdn.net/u010664947/article/details/80007767" target="_blank" rel="noopener">https://blog.csdn.net/u010664947/article/details/80007767</a></p>
+<h1 id="java-executorservice四种线程池的例子与说明"><a class="markdownIt-Anchor" href="#java-executorservice四种线程池的例子与说明"></a> Java ExecutorService四种线程池的例子与说明</h1>
+<p><a href="https://www.cnblogs.com/zhaoyan001/p/7049627.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaoyan001/p/7049627.html</a><br>
+<a href="https://blog.csdn.net/fwt336/article/details/81530581" target="_blank" rel="noopener">https://blog.csdn.net/fwt336/article/details/81530581</a></p>
+<h1 id="java多线程"><a class="markdownIt-Anchor" href="#java多线程"></a> Java多线程</h1>
+<p>多线程实现和安全问题： <a href="https://www.cnblogs.com/love-Stefanie/p/6706507.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6706507.html</a><br>
+Executor,Executors,ExecutorService比较： <a href="https://www.cnblogs.com/love-Stefanie/p/6728228.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6728228.html</a><br>
+Future和FutureTask： <a href="https://www.cnblogs.com/love-Stefanie/p/6729346.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6729346.html</a></p>
+<h1 id="待学习视频"><a class="markdownIt-Anchor" href="#待学习视频"></a> 待学习视频</h1>
+<p>基于 SpringCloud 微服务架构下广告系统设计与实现：<a href="https://coding.imooc.com/class/310.html" target="_blank" rel="noopener">https://coding.imooc.com/class/310.html</a><br>
+RocketMQ核心技术精讲与高并发抗压实战： <a href="https://coding.imooc.com/class/292.html" target="_blank" rel="noopener">https://coding.imooc.com/class/292.html</a><br>
+ZooKeeper分布式专题与Dubbo微服务入门： <a href="https://coding.imooc.com/class/201.html" target="_blank" rel="noopener">https://coding.imooc.com/class/201.html</a><br>
+打造仿猫眼项目 以Dubbo为核心解锁微服务： <a href="https://coding.imooc.com/class/273.html" target="_blank" rel="noopener">https://coding.imooc.com/class/273.html</a><br>
+Spring Cloud微服务实战： <a href="https://coding.imooc.com/class/package/187.html#Anchor" target="_blank" rel="noopener">https://coding.imooc.com/class/package/187.html#Anchor</a><br>
+Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/6732816.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6732816.html</a></p>
+<h1 id="并发编程网-httpifevecom"><a class="markdownIt-Anchor" href="#并发编程网-httpifevecom"></a> 并发编程网 <a href="http://ifeve.com/" target="_blank" rel="noopener">http://ifeve.com/</a></h1>
+<p>JVM性能优化系列： <a href="http://ifeve.com/jvm-optimize/" target="_blank" rel="noopener">http://ifeve.com/jvm-optimize/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-gitbook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1418,821 +2205,11 @@ GParted项目还提供了一个包含GParted和全部文件系统工具的Live C
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-postman/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/其他-postman/" itemprop="url">postman</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/haoduoyu/p/5864775.html" target="_blank" rel="noopener">https://www.cnblogs.com/haoduoyu/p/5864775.html</a><br>
-插件网<br>
-<a href="http://www.cnplugins.com/tool/specify-postman-methods.html" target="_blank" rel="noopener">http://www.cnplugins.com/tool/specify-postman-methods.html</a><br>
-<a href="http://www.cnplugins.com/tool/specify-postman-methods.html" target="_blank" rel="noopener">http://www.cnplugins.com/tool/specify-postman-methods.html</a><br>
-<a href="https://www.cnblogs.com/s380774061/p/4624326.html" target="_blank" rel="noopener">https://www.cnblogs.com/s380774061/p/4624326.html</a>   推荐<br>
-<a href="https://blog.csdn.net/five3/article/details/53021084" target="_blank" rel="noopener">https://blog.csdn.net/five3/article/details/53021084</a>   推荐<br>
-<a href="https://blog.csdn.net/u013613428/article/details/51557804" target="_blank" rel="noopener">https://blog.csdn.net/u013613428/article/details/51557804</a>   推荐<br>
-<a href="https://blog.csdn.net/xiaosongbk/article/details/52801207" target="_blank" rel="noopener">https://blog.csdn.net/xiaosongbk/article/details/52801207</a>  token问题<br>
-<a href="https://blog.csdn.net/u011320646/article/details/77141876" target="_blank" rel="noopener">https://blog.csdn.net/u011320646/article/details/77141876</a> token问题</p>
-<p><a href="http://www.graphicsmagick.org/" target="_blank" rel="noopener">http://www.graphicsmagick.org/</a><br>
-<a href="http://baijiahao.baidu.com/s?id=1574259218782197&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">http://baijiahao.baidu.com/s?id=1574259218782197&amp;wfr=spider&amp;for=pc</a></p>
-<p><a href="https://github.com/dmytrodanylyk/folding-plugin" target="_blank" rel="noopener">https://github.com/dmytrodanylyk/folding-plugin</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/环境搭建-01-mac系统安装/" itemprop="url">mac系统安装</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="u盘启动"><a class="markdownIt-Anchor" href="#u盘启动"></a> U盘启动</h1>
-<p>U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。</p>
-<h1 id="mac系统安装启动盘制作"><a class="markdownIt-Anchor" href="#mac系统安装启动盘制作"></a> mac系统安装启动盘制作</h1>
-<ol>
-<li>准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料</li>
-<li>下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。</li>
-<li>打开 “应用程序 → 实用工具 → 磁盘工具”，将U盘「抹掉」(格式化) 成「Mac OS X 扩展（日志式）」格式、GUID 分区图，并将U盘命名为「Sierra」。(注意：这个盘符名称将会与后面的命令一一对应，如果你改了这盘符的名字，必须保证后面的命令里的名称也要一致)</li>
-<li>打开 “应用程序→实用工具→终端”，将下面的一段命令复制并粘贴进去：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</span><br></pre></td></tr></table></figure>
-<p>回车并执行该命令，这时会提示让你输入管理员密码，便会开始制作过程了：<br>
-<img src="/pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png" alt="image"></p>
-<p>如上图，这时系统已经在制作中了，请耐心等待直到屏幕最后出现 Done. 字样即表示大功告成了</p>
-<h1 id="mac系统u盘安装"><a class="markdownIt-Anchor" href="#mac系统u盘安装"></a> mac系统U盘安装</h1>
-<ol start="0">
-<li>（此步骤可选：如果想格式化磁盘则进行此操作）启动时按住[command + r]，进入磁盘管理工具抹掉磁盘即可</li>
-<li>先在目标电脑上插上 U 盘，然后重启你的 Mac，然后一直按住[option」(alt)] 按键不放，直到屏幕显示多出一个 USB 启动盘的选项。</li>
-<li>选择 U 盘的图标回车，即可通过 U 盘来安装 macOS Sierra 了！这时，你可以直接覆盖安装系统(升级)，也可以在磁盘工具里面格式化抹掉整个硬盘，或者重新分区等实现全新的干净的安装</li>
-<li>启动过程中电脑会重启，重启的时候，拔掉U盘</li>
-</ol>
-<h1 id="安装软件"><a class="markdownIt-Anchor" href="#安装软件"></a> 安装软件</h1>
-<ul>
-<li>在登陆App Store之后，往常安装过的软件在&quot;已购项目&quot;列表中有，不用每次安装系统后再一一去查找安装过的程序。</li>
-</ul>
-<p>非App Store安装的程序，在安装时，又是会提示app出现某些安装包已损坏、显示未激活、打开崩溃等的提示！！这种多是因为新系统屏蔽了任何来源的设置，所以需要大家打开“允许任何来源”方可安装，可按如下方式操作</p>
-<ul>
-<li>步骤1：Spotlight搜索(快捷键：command+空格或右上角搜索的符号)：搜索 “终端”</li>
-<li>步骤2：直接复制粘贴 sudo spctl --master-disable   回车</li>
-<li>步骤3：输入你的 开机密码</li>
-<li>步骤4：回到系统偏好设置 的“安全与隐私”，勾选 “允许任何来源”完成安装.</li>
-</ul>
-<h1 id="macos一些其他维护相关知识"><a class="markdownIt-Anchor" href="#macos一些其他维护相关知识"></a> macOS一些其他维护相关知识</h1>
-<p>官方技术支持网址：<a href="https://support.apple.com/zh-cn" target="_blank" rel="noopener">https://support.apple.com/zh-cn</a></p>
-<ol>
-<li>
-<p>关于 Mac 启动时您看到的屏幕：在从 OS X 启动 Mac 时，系统会显示不同的屏幕，以让您了解 Mac 的启动方式，或是启动可能未完成的原因。<br>
-<a href="https://support.apple.com/zh-cn/HT204156" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204156</a></p>
-</li>
-<li>
-<p>启动 Mac 时显示闪烁的问号<br>
-如果启动时在 Mac 屏幕上看到闪烁的问号，这意味着您的 Mac 无法找到自身的系统软件。<br>
-<a href="https://support.apple.com/zh-cn/HT204323" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204323</a></p>
-</li>
-<li>
-<p>如何重新安装 macOS<br>
-<a href="https://support.apple.com/zh-cn/HT204904" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204904</a></p>
-</li>
-<li>
-<p>关于 macOS 恢复功能<br>
-<a href="https://support.apple.com/zh-cn/HT201314" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201314</a></p>
-</li>
-<li>
-<p>使用 Time Machine 备份或恢复 Mac<br>
-<a href="https://support.apple.com/zh-cn/HT201250" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201250</a></p>
-</li>
-<li>
-<p>如何重置 Mac 上的 NVRAM        Command-Option-P-R<br>
-<a href="https://support.apple.com/zh-cn/HT204063" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204063</a></p>
-</li>
-<li>
-<p>重置 Mac 上的系统管理控制器 (SMC)       Shift-Control-Option<br>
-<a href="https://support.apple.com/zh-cn/HT201295" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201295</a></p>
-</li>
-<li>
-<p>如何识别 MacBook Pro 机型<br>
-<a href="https://support.apple.com/zh-cn/HT201300" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201300</a></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/" itemprop="url">mac虚拟机安装及设置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>Parallels Desktop是一款运行在 Mac 电脑上的极为优秀的虚拟机软件。用户可以在 Mac OS X 下非常方便运行 Windows、Linux 等操作系统及应用。</p>
-<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
-<p>PD为收费软件，链接: <a href="https://pan.baidu.com/s/1CBa7tIghlF7JIiJTtuqdYQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1CBa7tIghlF7JIiJTtuqdYQ</a> 提取码: es9m，有经济能力的希望支持正版</p>
-<p>PD安装操作系统需准备一个系统ISO镜像,虚拟机系统安装过程和普通系统安装过程基本一致。<br>
-windows10镜像下载： <a href="https://www.microsoft.com/zh-cn/software-download/windows10ISO/" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/software-download/windows10ISO/</a></p>
-<p>系统安装完成之后，需安装Parallels Tools，否则使用时鼠标使用等方面会有很多不便，注意安装Parallels Tools时注意PD版本，防止有和系统不兼容。<br>
-如下图：<br>
-<img src="/pub-images/Parallels%20Tools.png" alt="image"></p>
-<h1 id="pd使用注意事项"><a class="markdownIt-Anchor" href="#pd使用注意事项"></a> PD使用注意事项</h1>
-<ol>
-<li>虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统内存、硬盘相关参数设置</li>
-<li>虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统共享文件夹设置，方便系统间数据共享</li>
-<li>虚拟机初试安装后，再进行系统其他重要软件安装前，请先保存快照，再进行操作，操作不成功还可回退</li>
-<li>虚拟机系统更新、相关开发环境设置完成之后，建议移动硬盘保存虚拟机，方便后期恢复和循环使用</li>
-<li>虚拟机系统文件在右键【显示包内容】后，如下<br>
-<img src="/pub-images/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" alt="image"><br>
-其中.hdd文件为硬盘文件，可在虚拟机系统故障时优先保存此文件，或者将此文件复制替换到备份的虚拟机系统即可恢复</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/环境搭建-04-git安装配置/" itemprop="url">git安装配置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>
-Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。<br>
-Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
-<p>详细学习，推荐：</p>
-<ul>
-<li><a href="http://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/git/git-tutorial.html</a></li>
-<li>廖雪峰大神的git教程<br>
-<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
-<li>git的前世今生： <a href="https://blog.csdn.net/csdnprogram/article/details/52155078" target="_blank" rel="noopener">https://blog.csdn.net/csdnprogram/article/details/52155078</a></li>
-</ul>
-<h1 id="工作原理"><a class="markdownIt-Anchor" href="#工作原理"></a> 工作原理</h1>
-<h2 id="本地"><a class="markdownIt-Anchor" href="#本地"></a> 本地</h2>
-<ul>
-<li>工作区（Working Directory）：就是你在电脑里能看到的目录</li>
-<li>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库<br>
-Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
-</ul>
-<p><img src="/pub-images/git.png" alt="image"><br>
-我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
-<ul>
-<li>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
-<li>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</li>
-</ul>
-<h2 id="远程配合"><a class="markdownIt-Anchor" href="#远程配合"></a> 远程配合</h2>
-<p><img src="/pub-images/git2.png" alt="image"></p>
-<h1 id="git安装"><a class="markdownIt-Anchor" href="#git安装"></a> git安装</h1>
-<p>参考教程：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">https://git-scm.com/book/zh/v2/起步-安装-Git</a></p>
-<p>各平台都支持安装包安装方式</p>
-<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; brew install git</span><br><span class="line">&gt; git --version //验证安装</span><br></pre></td></tr></table></figure>
-<h1 id="git全局设置"><a class="markdownIt-Anchor" href="#git全局设置"></a> git全局设置</h1>
-<p>config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local,底层配置会覆盖顶层配置<br>
-查看git不同级别配置信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list</span><br><span class="line">git config --global --list</span><br><span class="line">git config --和local --list</span><br></pre></td></tr></table></figure>
-<p>git安装完成后，还需要最后一步设置，在命令行输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</p>
-<h1 id="git账号关联流程"><a class="markdownIt-Anchor" href="#git账号关联流程"></a> git账号关联流程</h1>
-<ol>
-<li>生成SSHkey<br>
-ssh-keygen命令用于为“ssh”生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥.<br>
-ssh-keygen(选项)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：指定密钥长度； </span><br><span class="line">-e：读取openssh的私钥或者公钥文件； </span><br><span class="line">-C：添加注释； </span><br><span class="line">-f：指定用来保存密钥的文件名； </span><br><span class="line">-i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥； </span><br><span class="line">-l：显示公钥文件的指纹数据； </span><br><span class="line">-N：提供一个新密语； </span><br><span class="line">-P：提供（旧）密语；</span><br><span class="line">-q：静默模式； </span><br><span class="line">-t：指定要创建的密钥类型。</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>登陆git服务器，添加public key信息</li>
-<li>测试登陆</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">测试是否成功,第一此输入命令，需输入yes后再次输入测试命令后出现类似&quot;Hi...&quot;，表示配置成功</span><br><span class="line">&gt; ssh -T git@github.com</span><br><span class="line">&gt; ssh -T git@gitee.com</span><br><span class="line">&gt; ssh -T git@gitlab.com</span><br></pre></td></tr></table></figure>
-<h1 id="git单账号关联"><a class="markdownIt-Anchor" href="#git单账号关联"></a> git单账号关联</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）</span><br><span class="line">&gt; cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>登陆网站，如github／gitee／gitlab等，在如设置／Settings中有SSH and GPG keys中【add new keys】，将id_rsa.pub内容添加，会自动识别标题,设置完成之后测试登陆</p>
-<h1 id="git多账号设置关联"><a class="markdownIt-Anchor" href="#git多账号设置关联"></a> git多账号设置关联</h1>
-<p>多账号配置是通过.ssh文件夹下config文件实现，操作如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; touch ~/.ssh/config </span><br><span class="line">&gt; chmod 600 ~/.ssh/config </span><br><span class="line"></span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.github -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitee -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitlab -t rsa -C &quot;chetaofeng@163.com&quot;</span><br></pre></td></tr></table></figure>
-<p>config文件内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa.github</span><br><span class="line"></span><br><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">     HostName gitee.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitee</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.com</span><br><span class="line">     HostName gitlab.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitlab</span><br><span class="line">     </span><br><span class="line"># gitlab-公司内网</span><br><span class="line">Host gsunis.net</span><br><span class="line">  HostName 47.94.*.*</span><br><span class="line">  PreferredAuthentications publickey</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa.gitlab_local</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Host： 是我们在输入命令的时候的名字 比如我这里是lab  那么我使用ssh命令的时候需要使用 ssh lab</li>
-<li>HostName： 是目标主机的主机名，也就是平时我们使用ssh后面跟的地址名称。</li>
-<li>Port：指定的端口号。</li>
-<li>User：指定的登陆用户名。</li>
-<li>IdentifyFile：指定的私钥地址。</li>
-</ul>
-<h1 id="gitignore文件"><a class="markdownIt-Anchor" href="#gitignore文件"></a> .gitignore文件</h1>
-<p>不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件</p>
-<h1 id="开发环境中配置"><a class="markdownIt-Anchor" href="#开发环境中配置"></a> 开发环境中配置</h1>
-<p>在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可<br>
-<img src="/pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
-gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
-<img src="/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
-<p>以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下：</p>
-<ul>
-<li>GitLab Server Url: <a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></li>
-<li>GitLab API Key： <a href="https://gitlab.com/profile/account" target="_blank" rel="noopener">https://gitlab.com/profile/account</a></li>
-</ul>
-<h1 id="git项目权限管理"><a class="markdownIt-Anchor" href="#git项目权限管理"></a> git项目权限管理</h1>
-<p>Git项目一般有五种身份权限，分别是：</p>
-<ul>
-<li>Owner 项目所有者，拥有所有的操作权限</li>
-<li>Master 项目的管理者，除更改、删除项目元信息外其它操作均可</li>
-<li>Developer 项目的开发人员，做一些开发工作，对受保护内容无权限</li>
-<li>Reporter 项目的报告者，只有项目的读权限，可以创建代码片断</li>
-<li>Guest 项目的游客，只能提交问题和评论内容</li>
-</ul>
-<h1 id="私服项目使用推荐流程"><a class="markdownIt-Anchor" href="#私服项目使用推荐流程"></a> 私服项目使用推荐流程</h1>
-<blockquote>
-<p>以下为项目owner需进行工作</p>
-</blockquote>
-<ol>
-<li>在私服先创建项目，添加人员并设置人员权限</li>
-<li>在本地webstorm中clone项目</li>
-<li>在clone项目中添加.gitignore文件</li>
-<li>添加.gitignore及相关需要版本控制的文件夹到版本控制（选中项后右键操作）</li>
-<li>提交项目并备注为初始提交</li>
-</ol>
-<blockquote>
-<p>以下为项目成员需做工作</p>
-</blockquote>
-<ol>
-<li>在本地webstorm中clone项目</li>
-<li>创建项目分支（可一人一个，也可通过项目模块进行分支创建），如果直接在master分支，则无法成功push项目提示被rejected</li>
-<li>进行代码编写</li>
-<li>提交需管理分支</li>
-<li>在gitlab私服网页发起合并请求，并添加详细描述</li>
-<li>等待相关人员进行合并</li>
-<li>合并结束后更新master分支</li>
-<li>创建分支继续工作</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2287,7 +2264,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2309,7 +2286,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2403,7 +2380,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共109.0k字</span>
+  <span class="post-count">博客全站共121.8k字</span>
 </div>
 
 
