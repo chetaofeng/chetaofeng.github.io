@@ -324,6 +324,1042 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-redux-thunk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-redux-thunk/" itemprop="url">redux-thunk</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:30:47+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<ul>
+<li>redux-thunk 是一个比较流行的 redux 异步 action 中间件，比如 action 中有 setTimeout 或者通过  fetch 通用远程 API 这些场景，那么久应该使用 redux-thunk 了</li>
+<li>redux-thunk 帮助你统一了异步和同步 action 的调用方式，把异步过程放在 action 级别解决，对 component 没有影响</li>
+<li>redux-thunk中间件可以让action创建函数先不返回一个action对象，而是返回一个函数，函数传递两个参数(dispatch,getState),在函数体内进行业务逻辑的封装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function add() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        type: &apos;ADD&apos;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function addIfOdd() &#123;</span><br><span class="line">    return (dispatch, getState) =&gt; &#123;</span><br><span class="line">        const currentValue = getState();</span><br><span class="line">        if (currentValue % 2 == 0) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        //分发一个任务</span><br><span class="line">        dispatch(add())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="使用方式"><a class="markdownIt-Anchor" href="#使用方式"></a> 使用方式</h1>
+<ol>
+<li>安装:npm install redux-thunk --save-dev</li>
+<li>导入thunk： import thunk from ‘redux-thunk’</li>
+<li>导入中间件: import {createStore,applyMiddleware} from ‘redux’</li>
+<li>创建store：let store = createStore(reducer函数，applyMiddleware(thunk))</li>
+<li>激活redux-thunk中间件，只需要在createStore中加入applyMiddleware(thunk)就可以</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React相关需学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-React相关需学习/" itemprop="url">React相关需学习</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:28:57+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="immutablejs简介"><a class="markdownIt-Anchor" href="#immutablejs简介"></a> ImmutableJS简介</h1>
+<p>ImmutableJS是FaceBook开发的一个JS库，能够在JS种实现不可变对象</p>
+<p>不可变对象可以大大提高对象的比较性能，用于状态和属性判断非常有效</p>
+<p>实际上，提高比较性能的代价是降低修改性能，只不过收益更大</p>
+<h1 id="flux简介"><a class="markdownIt-Anchor" href="#flux简介"></a> Flux简介</h1>
+<p>Flux不是一个具体的框架，而是Facebook提出的一种代码架构</p>
+<p>React只是一个视图库，Fulx是在React基础上对于前端整体的组织方案</p>
+<p>Fulx目的是保证逻辑清晰、数据流向清晰、依赖关系清晰</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-Jest/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-Jest/" itemprop="url">Jest</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:27:45+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>Jest是一个JS的单元测试工具</p>
+<p>单元测试可以保证函数或者模块完成我们想要的功能，测试具体功能是否正常</p>
+<p>使用Jest需要配置NodeJS环境</p>
+<h1 id="入门"><a class="markdownIt-Anchor" href="#入门"></a> 入门</h1>
+<ol>
+<li>npm install jest-cli</li>
+<li>sum.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sum(a,b)&#123;</span><br><span class="line">    return a+b;</span><br><span class="line">&#125;</span><br><span class="line">module.exports=sum;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>test.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jest.dontMock(&apos;../sum&apos;);</span><br><span class="line"></span><br><span class="line">describe(&apos;sum&apos;,function()&#123;</span><br><span class="line">    it(&apos;adds 1 + 2 to equal 3&apos;,function()&#123;</span><br><span class="line">        var sum = require(&apos;../sum&apos;);</span><br><span class="line">        expect(sum(1,2)).toBe(3);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-react-router-redux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-react-router-redux/" itemprop="url">react-router-redux</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:24:49+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h1>
+<blockquote>
+<p>用Redux去管理你的应用状态（state），使用React Router去管理路由，但是，这两个库不能协同工作，react-router-redux库可以协调这两个库</p>
+</blockquote>
+<blockquote>
+<p>react-router-redux允许你使用React Router库中的api，使用Redux库像平常一样去管理应用的状态state。 本库只是简单的加强了React Router库中history这个实例，以允许将history中接受到的变化反应到stae中去。</p>
+</blockquote>
+<h1 id="原理示例"><a class="markdownIt-Anchor" href="#原理示例"></a> 原理示例</h1>
+<p><img src="/pub-images/react-router-redux%E7%A4%BA%E4%BE%8B.png" alt="image"><br>
+现在，你进行的所有页面导航和App导航，加强版的history会首先将新的路径通过Redux store传递，然后再通过React Router去更新组件树</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-Redux入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-Redux入门/" itemprop="url">Redux入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:20:26+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://redux.js.org/</span><br><span class="line">http://www.redux.org.cn/</span><br><span class="line">http://www.imooc.com/learn/744  视频教程</span><br></pre></td></tr></table></figure>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>Redux 由 Flux 演变而来，但受 Elm 的启发，避开了 Flux 的复杂性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createStore &#125; from &apos;redux&apos;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 这是一个 reducer，形式为 (state, action) =&gt; state 的纯函数。</span><br><span class="line"> * 描述了 action 如何把 state 转变成下一个 state。</span><br><span class="line"> *</span><br><span class="line"> * state 的形式取决于你，可以是基本类型、数组、对象、</span><br><span class="line"> * 甚至是 Immutable.js 生成的数据结构。惟一的要点是</span><br><span class="line"> * 当 state 变化时需要返回全新的对象，而不是修改传入的参数。</span><br><span class="line"> *</span><br><span class="line"> * 下面例子使用 `switch` 语句和字符串来做判断，但你可以写帮助类(helper)</span><br><span class="line"> * 根据不同的约定（如方法映射）来判断，只要适用你的项目即可。</span><br><span class="line"> */</span><br><span class="line">function counter(state = 0, action) &#123;</span><br><span class="line">  switch (action.type) &#123;</span><br><span class="line">  case &apos;INCREMENT&apos;:</span><br><span class="line">    return state + 1;</span><br><span class="line">  case &apos;DECREMENT&apos;:</span><br><span class="line">    return state - 1;</span><br><span class="line">  default:</span><br><span class="line">    return state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建 Redux store 来存放应用的状态。</span><br><span class="line">// API 是 &#123; subscribe, dispatch, getState &#125;。</span><br><span class="line">let store = createStore(counter);</span><br><span class="line"></span><br><span class="line">// 可以手动订阅更新，也可以事件绑定到视图层。</span><br><span class="line">store.subscribe(() =&gt;</span><br><span class="line">  console.log(store.getState())</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">// 改变内部 state 惟一方法是 dispatch 一个 action。</span><br><span class="line">// action 可以被序列化，用日记记录和储存下来，后期还可以以回放的方式执行</span><br><span class="line">store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;);</span><br><span class="line">// 1</span><br><span class="line">store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;);</span><br><span class="line">// 2</span><br><span class="line">store.dispatch(&#123; type: &apos;DECREMENT&apos; &#125;);</span><br><span class="line">// 1</span><br></pre></td></tr></table></figure>
+<p>Redux 没有 Dispatcher 且不支持多个 store。相反，只有一个单一的 store 和一个根级的 reduce 函数（reducer）</p>
+<p><img src="http://note.youdao.com/yws/api/personal/file/WEBe992302275f8c8d667e0a308299fd566?method=download&amp;shareKey=f1d0d83b8281356a94bc605858349a2d" alt="image"></p>
+<h2 id="中间件"><a class="markdownIt-Anchor" href="#中间件"></a> 中间件</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">redux-thunk — 用最简单的方式搭建异步 action 构造器</span><br><span class="line">redux-promise — 遵从 FSA 标准的 promise 中间件</span><br><span class="line">redux-axios-middleware — 使用 axios HTTP 客户端获取数据的 Redux 中间件</span><br><span class="line">redux-observable — Redux 的 RxJS 中间件</span><br><span class="line">redux-rx — 给 Redux 用的 RxJS 工具，包括观察变量的中间件</span><br><span class="line">redux-logger — 记录所有 Redux action 和下一次 state 的日志</span><br><span class="line">redux-immutable-state-invariant — 开发中的状态变更提醒</span><br><span class="line">redux-unhandled-action — 开发过程中，若 Action 未使 State 发生变化则发出警告</span><br><span class="line">redux-analytics — Redux middleware 分析</span><br><span class="line">redux-gen — Redux middleware 生成器</span><br><span class="line">redux-saga — Redux 应用的另一种副作用 model</span><br><span class="line">redux-action-tree — Redux 的可组合性 Cerebral-style 信号</span><br><span class="line">apollo-client — 针对 GraphQL 服务器及基于 Redux 的 UI 框架的缓存客户端</span><br></pre></td></tr></table></figure>
+<h1 id="三大原则"><a class="markdownIt-Anchor" href="#三大原则"></a> 三大原则</h1>
+<p>Redux 可以用这三个基本原则来描述：</p>
+<h2 id="单一数据源"><a class="markdownIt-Anchor" href="#单一数据源"></a> 单一数据源</h2>
+<p>整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中</p>
+<h2 id="state-是只读的"><a class="markdownIt-Anchor" href="#state-是只读的"></a> State 是只读的</h2>
+<p>惟一改变 state 的方法就是触发 action，action 是一个用于描述已发生事件的普通对象</p>
+<h2 id="使用纯函数来执行修改"><a class="markdownIt-Anchor" href="#使用纯函数来执行修改"></a> 使用纯函数来执行修改</h2>
+<p>为了描述 action 如何改变 state tree ，你需要编写 reducers；Reducer 只是一些纯函数，它接收先前的 state 和 action，并返回新的 state</p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<ol>
+<li>应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中</li>
+<li>惟一改变 state 的办法是触发 action，一个描述发生什么的对象</li>
+<li>为了描述 action 如何改变 state 树，你需要编写 reducers</li>
+<li>编写专门的函数来决定每个 action 如何改变应用的 state，这个函数被叫做 reducer</li>
+</ol>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<ol>
+<li>安装redux：npm install redux --save</li>
+<li>使用 React 绑定库和开发者工具：npm install  react-redux --save；npm install redux-devtools --save-dev</li>
+</ol>
+<h1 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h1>
+<p><img src="/pub-images/redux%E7%BB%84%E4%BB%B6%E9%85%8D%E5%90%88%E5%8E%9F%E7%90%86.png" alt="image"></p>
+<h1 id="action"><a class="markdownIt-Anchor" href="#action"></a> Action</h1>
+<p>Action 是把数据从应用传到 store 的有效载荷,它是 store 数据的唯一来源。一般来说会通过 store.dispatch() 将 action 传到 store。</p>
+<p>action 内必须使用一个字符串类型的 type 字段来表示将要执行的动作.多数情况下，type 会被定义成字符串常量,建议使用单独的模块或文件来存放 action。除了 type 字段外，action 对象的结构完全由自己决定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ADD_TODO, REMOVE_TODO &#125; from &apos;../actionTypes&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="action-创建函数"><a class="markdownIt-Anchor" href="#action-创建函数"></a> Action 创建函数</h2>
+<p>Action 创建函数 就是生成 action 的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function addTodo(text) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    type: ADD_TODO,</span><br><span class="line">    text</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>bindActionCreators() 可以自动把多个 action 创建函数 绑定到 dispatch() 方法上。</p>
+<h1 id="reducer"><a class="markdownIt-Anchor" href="#reducer"></a> Reducer</h1>
+<p>永远不要在 reducer 里做这些操作：</p>
+<ol>
+<li>修改传入参数；</li>
+<li>执行有副作用的操作，如 API 请求和路由跳转；</li>
+<li>调用非纯函数，如 Date.now() 或 Math.random()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function todoApp(state = initialState, action) &#123;</span><br><span class="line">  switch (action.type) &#123;</span><br><span class="line">    case SET_VISIBILITY_FILTER:</span><br><span class="line">      return Object.assign(&#123;&#125;, state, &#123;</span><br><span class="line">        visibilityFilter: action.filter</span><br><span class="line">      &#125;)</span><br><span class="line">    case ADD_TODO:</span><br><span class="line">      return Object.assign(&#123;&#125;, state, &#123;</span><br><span class="line">        todos: [</span><br><span class="line">          ...state.todos,</span><br><span class="line">          &#123;</span><br><span class="line">            text: action.text,</span><br><span class="line">            completed: false</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;)</span><br><span class="line">    default:</span><br><span class="line">      return state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>不要修改 state。 使用 Object.assign() 新建了一个副本。不能这样使用 Object.assign(state, { visibilityFilter: action.filter })，因为它会改变第一个参数的值。你必须把第一个参数设置为空对象。你也可以开启对ES7提案对象展开运算符的支持, 从而使用 { …state, …newState } 达到相同的目的。</li>
+<li>在 default 情况下返回旧的 state</li>
+<li>Object.assign() 是 ES6 特性，但多数浏览器并不支持。你要么使用 polyfill，Babel 插件，或者使用其它库如 _.assign() 提供的帮助方法。</li>
+<li>新的 todos 对象就相当于旧的 todos 在末尾加上新建的 todo。而这个新的 todo 又是基于 action 中的数据创建的</li>
+</ol>
+<h1 id="store"><a class="markdownIt-Anchor" href="#store"></a> Store</h1>
+<p>Store 有以下职责：</p>
+<ol>
+<li>维持应用的 state；</li>
+<li>提供 getState() 方法获取 state；</li>
+<li>提供 dispatch(action) 方法更新 state；</li>
+<li>通过 subscribe(listener) 注册监听器;</li>
+<li>通过 subscribe(listener) 返回的函数注销监听器</li>
+</ol>
+<h1 id="搭配react"><a class="markdownIt-Anchor" href="#搭配react"></a> 搭配react</h1>
+<p>Redux 和 React 之间没有关系。Redux 支持 React、Angular、Ember、jQuery 甚至纯 JavaScript。</p>
+<p>连接到 Redux：我们需要做出两个变化，将 App 组件连接到 Redux 并且让它能够 dispatch actions 以及从 Redux store 读取到 state</p>
+<ol>
+<li>获取从之前安装好的 react-redux 提供的 Provider，并且在渲染之前将根组件包装进 <provider></provider></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//index.js</span><br><span class="line">import React from &apos;react&apos;</span><br><span class="line">import &#123; render &#125; from &apos;react-dom&apos;</span><br><span class="line">import &#123; createStore &#125; from &apos;redux&apos;</span><br><span class="line">import &#123; Provider &#125; from &apos;react-redux&apos;</span><br><span class="line">import App from &apos;./containers/App&apos;</span><br><span class="line">import todoApp from &apos;./reducers&apos;</span><br><span class="line"></span><br><span class="line">let store = createStore(todoApp);</span><br><span class="line"></span><br><span class="line">let rootElement = document.getElementById(&apos;root&apos;)</span><br><span class="line">render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &lt;App /&gt;</span><br><span class="line">  &lt;/Provider&gt;,</span><br><span class="line">  rootElement</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过 react-redux 提供的 connect() 方法将包装好的组件连接到Redux</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component, PropTypes &#125; from &apos;react&apos;;</span><br><span class="line">import &#123; connect &#125; from &apos;react-redux&apos;;</span><br><span class="line">import &#123; addTodo, completeTodo, setVisibilityFilter, VisibilityFilters &#125; from &apos;../actions&apos;;</span><br><span class="line">import AddTodo from &apos;../components/AddTodo&apos;;</span><br><span class="line">import TodoList from &apos;../components/TodoList&apos;;</span><br><span class="line">import Footer from &apos;../components/Footer&apos;;</span><br><span class="line"></span><br><span class="line">class App extends Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    // 通过调用 connect() 注入:</span><br><span class="line">    const &#123; dispatch, visibleTodos, visibilityFilter &#125; = this.props</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;AddTodo</span><br><span class="line">          onAddClick=&#123;text =&gt;</span><br><span class="line">            dispatch(addTodo(text))</span><br><span class="line">          &#125; /&gt;</span><br><span class="line">        &lt;TodoList</span><br><span class="line">          todos=&#123;this.props.visibleTodos&#125;</span><br><span class="line">          onTodoClick=&#123;index =&gt;</span><br><span class="line">            dispatch(completeTodo(index))</span><br><span class="line">          &#125; /&gt;</span><br><span class="line">        &lt;Footer</span><br><span class="line">          filter=&#123;visibilityFilter&#125;</span><br><span class="line">          onFilterChange=&#123;nextFilter =&gt;</span><br><span class="line">            dispatch(setVisibilityFilter(nextFilter))</span><br><span class="line">          &#125; /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">App.propTypes = &#123;</span><br><span class="line">  visibleTodos: PropTypes.arrayOf(PropTypes.shape(&#123;</span><br><span class="line">    text: PropTypes.string.isRequired,</span><br><span class="line">    completed: PropTypes.bool.isRequired</span><br><span class="line">  &#125;)),</span><br><span class="line">  visibilityFilter: PropTypes.oneOf([</span><br><span class="line">    &apos;SHOW_ALL&apos;,</span><br><span class="line">    &apos;SHOW_COMPLETED&apos;,</span><br><span class="line">    &apos;SHOW_ACTIVE&apos;</span><br><span class="line">  ]).isRequired</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function selectTodos(todos, filter) &#123;</span><br><span class="line">  switch (filter) &#123;</span><br><span class="line">  case VisibilityFilters.SHOW_ALL:</span><br><span class="line">    return todos;</span><br><span class="line">  case VisibilityFilters.SHOW_COMPLETED:</span><br><span class="line">    return todos.filter(todo =&gt; todo.completed);</span><br><span class="line">  case VisibilityFilters.SHOW_ACTIVE:</span><br><span class="line">    return todos.filter(todo =&gt; !todo.completed);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 基于全局 state ，哪些是我们想注入的 props ?</span><br><span class="line">// 注意：使用 https://github.com/reactjs/reselect 效果更佳。</span><br><span class="line">function select(state) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    visibleTodos: selectTodos(state.todos, state.visibilityFilter),</span><br><span class="line">    visibilityFilter: state.visibilityFilter</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；</span><br><span class="line">export default connect(select)(App);</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React-Router/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/react-rn-2018-10-26-React-Router/" itemprop="url">React Router</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T15:18:27+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://reacttraining.com/react-router/" target="_blank" rel="noopener">https://reacttraining.com/react-router/</a></p>
+<h1 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h1>
+<p>React Router 4.0 （以下简称 RR4）</p>
+<p>RR4 本次采用单代码仓库模型架构（monorepo），这意味者这个仓库里面有若干相互独立的包，分别是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">react-router React Router 核心</span><br><span class="line">react-router-dom 用于 DOM 绑定的 React Router</span><br><span class="line">react-router-native 用于 React Native 的 React Router</span><br><span class="line">react-router-redux React Router 和 Redux 的集成</span><br><span class="line">react-router-config 静态路由配置的小助手</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>它是官方维护的，事实上也是唯一可选的路由库。</p>
+</blockquote>
+<h1 id="react-router-还是-react-router-dom"><a class="markdownIt-Anchor" href="#react-router-还是-react-router-dom"></a> react-router 还是 react-router-dom</h1>
+<ol>
+<li>在 React 的使用中，我们一般要引入两个包，react 和 react-dom</li>
+<li>react-router 和 react-router-dom 两个只要引用一个就行了，不同之处就是后者比前者多出了 <link> <browserrouter> 这样的 DOM 类组件</browserrouter></li>
+</ol>
+<h1 id="学习"><a class="markdownIt-Anchor" href="#学习"></a> 学习</h1>
+<ul>
+<li>（阮一峰）<a href="http://www.ruanyifeng.com/blog/2016/05/react_router.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/05/react_router.html</a></li>
+<li>（gitbook）<a href="http://react-guide.github.io/react-router-cn/docs/API.html" target="_blank" rel="noopener">http://react-guide.github.io/react-router-cn/docs/API.html</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -628,167 +1664,6 @@ react-router + react-router-redux: 前者是业界标准，后者可以同步 ro
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-Docker环境下的前后端分离项目部署与运维/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/18/容器技术-Docker环境下的前后端分离项目部署与运维/" itemprop="url">Docker环境下的前后端分离项目部署与运维</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-18T09:38:59+08:00">
-                2018-10-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://coding.imooc.com/learn/list/219.html" target="_blank" rel="noopener">https://coding.imooc.com/learn/list/219.html</a></p>
-<p><a href="https://www.renren.io/" target="_blank" rel="noopener">https://www.renren.io/</a></p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p><img src="/pub-images/renrenfast%E6%9E%B6%E6%9E%84.png" alt="image"><br>
-<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%9B%86%E7%BE%A4.png" alt="image"><br>
-<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%9B%BE.png" alt="image"></p>
-<h1 id="前后端分离项目下载配置"><a class="markdownIt-Anchor" href="#前后端分离项目下载配置"></a> 前后端分离项目下载配置</h1>
-<h1 id="linux基础加强"><a class="markdownIt-Anchor" href="#linux基础加强"></a> Linux基础加强</h1>
-<h1 id="docker虚拟机架构"><a class="markdownIt-Anchor" href="#docker虚拟机架构"></a> docker虚拟机架构</h1>
-<h1 id="源码解析"><a class="markdownIt-Anchor" href="#源码解析"></a> 源码解析</h1>
-<p><a href="https://www.jianshu.com/p/259d35eef3f1" target="_blank" rel="noopener">https://www.jianshu.com/p/259d35eef3f1</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/18/容器技术-docker-和vagrant比较/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -962,7 +1837,7 @@ Vagrant 适合用来管理虚拟机，而docker适合用来管理应用环境。
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/18/容器技术-vagrant/" itemprop="url">docker</a></h2>
+                <a class="post-title-link" href="/2018/10/18/容器技术-vagrant/" itemprop="url">vagrant</a></h2>
         
 
         <div class="post-meta">
@@ -1148,7 +2023,9 @@ end<br>
 <pre class="highlight"><code class="">
 # 用 vagrant 快速部署 docker 虚拟机集群
 https://blog.csdn.net/pmlpml/article/details/53925542
-</code></pre>
+
+
+https://blog.csdn.net/u011781521/article/details/80291765</code></pre>
 
           
         
@@ -1304,35 +2181,61 @@ https://blog.csdn.net/pmlpml/article/details/53925542
 <p>官网：<a href="https://www.docker.com/" target="_blank" rel="noopener">https://www.docker.com/</a><br>
 中文社区：<a href="http://www.docker.org.cn/" target="_blank" rel="noopener">http://www.docker.org.cn/</a></p>
 <p><a href="http://www.cnblogs.com/SzeCheng/p/6822905.html" target="_blank" rel="noopener">http://www.cnblogs.com/SzeCheng/p/6822905.html</a></p>
-<p><img src="/pub-images/docker%E6%9E%B6%E6%9E%84.png" alt="image"></p>
-<p><img src="/pub-images/docker%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86%E6%8C%87%E4%BB%A4.png" alt="image"></p>
-<p>Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术<br>
-其中docker服务端是一个服务进程，管理着所有的容器。<br>
-docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。<br>
-大部分情况下，docker服务端和客户端运行在一台机器上。</p>
-<p>Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的<br>
-Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write）</p>
-<p>Docker容器的能力<br>
-1文件系统隔离：每个容器都有自己的root文件系统<br>
-2进程隔离：每个容器都运行在自己的进程环境中<br>
-3网络隔离：容器间的虚拟网络接口和IP地址都是分开的<br>
-4资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器</p>
-<p>docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作<br>
-docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器<br>
-docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm）</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>docker虚拟机架构<br>
+<img src="/pub-images/docker%E6%9E%B6%E6%9E%84.png" alt="image"></p>
+<p>docker管理常用指令<br>
+<img src="/pub-images/docker%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86%E6%8C%87%E4%BB%A4.png" alt="image"></p>
+<ul>
+<li>Docker版本分为两个：Docker Community Edition (CE)和 Docker Enterprise Edition (EE)。</li>
+<li>Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术</li>
+<li>docker服务端是一个服务进程，管理着所有的容器;docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。</li>
+<li>大部分情况下，docker服务端和客户端运行在一台机器上。</li>
+<li>Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的</li>
+<li>Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write）</li>
+</ul>
+<p>云计算中的Docker虚拟机<br>
+<img src="/pub-images/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%AD%E7%9A%84Docker%E8%99%9A%E6%8B%9F%E6%9C%BA.png" alt="image"></p>
+<h1 id="docker容器的能力"><a class="markdownIt-Anchor" href="#docker容器的能力"></a> Docker容器的能力</h1>
+<ol>
+<li>文件系统隔离：每个容器都有自己的root文件系统</li>
+<li>进程隔离：每个容器都运行在自己的进程环境中</li>
+<li>网络隔离：容器间的虚拟网络接口和IP地址都是分开的</li>
+<li>资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器</li>
+</ol>
+<ul>
+<li>docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作</li>
+<li>docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器</li>
+<li>docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm）</li>
+</ul>
 <p><a href="https://www.cnblogs.com/atuotuo/p/6668233.html" target="_blank" rel="noopener">https://www.cnblogs.com/atuotuo/p/6668233.html</a></p>
-<p>安装：下载安装完成之后docker version查看</p>
-<p>Kitematic，</p>
-<p>yum -y update<br>
-yum -y install docker<br>
-service docker start|stop|restart</p>
+<h1 id="docker安装"><a class="markdownIt-Anchor" href="#docker安装"></a> docker安装</h1>
+<p><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank" rel="noopener">https://docs.docker.com/install/linux/docker-ce/ubuntu/</a></p>
+<p>CentOS系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br><span class="line">yum -y install docker</span><br><span class="line">service docker start|stop|restart</span><br></pre></td></tr></table></figure>
+<p>Ubuntu系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install docker.io</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
+<p>下载安装完成之后docker version查看</p>
+<h1 id="免sudo使用docker命令"><a class="markdownIt-Anchor" href="#免sudo使用docker命令"></a> 免sudo使用docker命令</h1>
+<p>参考自网络：<a href="https://www.jianshu.com/p/95e397570896" target="_blank" rel="noopener">https://www.jianshu.com/p/95e397570896</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd docker</span><br><span class="line">sudo gpasswd -a $&#123;USER&#125; docker</span><br><span class="line">sudo service docker restart</span><br><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
+<h1 id="docker加速器配置"><a class="markdownIt-Anchor" href="#docker加速器配置"></a> docker加速器配置</h1>
+<p>docker国内镜像仓库设置，官网：<a href="https://www.daocloud.io/" target="_blank" rel="noopener">https://www.daocloud.io/</a><br>
+配置加速：<a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io</span><br></pre></td></tr></table></figure>
+<p>检查文件cat /etc/docker/daemon.json ，确保格式正确，无多余逗号，有则删除,如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;registry-mirrors&quot;: [&quot;http://f1361db2.m.daocloud.io&quot;]&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="docker虚拟机安装java"><a class="markdownIt-Anchor" href="#docker虚拟机安装java"></a> docker虚拟机安装java</h1>
+<p>docker search java  #查找java镜像，如选择使用name为java的镜像<br>
+docker pull java</p>
+<p>导出导入镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker save java &gt; /home/java.tar.gz    //save后面跟的是镜像的名称</span><br><span class="line">docker load &lt; /home/java.tar.gz</span><br><span class="line">docker images</span><br><span class="line">docker rmi</span><br></pre></td></tr></table></figure>
+<p>exit推出交互界面后也停止了容器，重新进入：docker start -i java</p>
 <p>Docker Machine<br>
 docker-machine ls<br>
 docker-machine ssh demo</p>
 <p>远程登录管理deocker和本地管理远程docker<br>
 <a href="https://labs.play-with-docker.com/" target="_blank" rel="noopener">https://labs.play-with-docker.com/</a></p>
-<p>docker国内镜像仓库设置：<a href="https://www.daocloud.io/" target="_blank" rel="noopener">https://www.daocloud.io/</a><br>
-<a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></p>
 <p>docker提供了一个开发，打包，运行app的平台，把app和底层infratructure隔离开来</p>
 <p>docker底层技术支持,依赖于Linux内核特性Namespaces和Cgroups<br>
 Namespaces：做隔离pid，net，ipc，mnt，uts<br>
@@ -1349,15 +2252,17 @@ docker通过联合加载技术一次加载多个文件系统，从外部看，�
 image本身是read-only的<br>
 sudo docker image ls<br>
 docker history [imageID]</p>
-<p>image的获取</p>
+<h1 id="docker容器与镜像"><a class="markdownIt-Anchor" href="#docker容器与镜像"></a> docker容器与镜像</h1>
+<p><img src="/pub-images/%E5%AE%B9%E5%99%A8%E4%B8%8E%E9%95%9C%E5%83%8F.png" alt="image"></p>
+<h2 id="image的获取"><a class="markdownIt-Anchor" href="#image的获取"></a> image的获取</h2>
 <ol>
 <li>通过Dockerfile</li>
 <li>从Registry获取，如：docker pull ubuntu:14.04，<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></li>
 <li>命令行的格式为：docker search 镜像名字</li>
 </ol>
 <p>DIY一个Base Image</p>
-<p>Container<br>
-docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
+<h2 id="container"><a class="markdownIt-Anchor" href="#container"></a> Container</h2>
+<p>docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
 <p>通过Image创建<br>
 在Image Layer之上建立一个container layer（可读写）<br>
 类比面向对象：类和实例<br>
@@ -1386,7 +2291,7 @@ docker commit [containerName] [dockerhubID/imageNewName]</p>
 <li>docker build -t [dockerhubID/imageNewName] .   //.表示当前目录中查找Dockerfile</li>
 <li>docker image ls查看</li>
 </ol>
-<p>Dockerfile语法梳理及最佳实践</p>
+<h1 id="dockerfile语法梳理及最佳实践"><a class="markdownIt-Anchor" href="#dockerfile语法梳理及最佳实践"></a> Dockerfile语法梳理及最佳实践</h1>
 <ol>
 <li>FROM:尽量使用官方的iamge作为base image</li>
 <li>LABEL:Metadata不可少，让大家了解到image的信息，相当于image的注释</li>
@@ -1396,25 +2301,17 @@ docker commit [containerName] [dockerhubID/imageNewName]</p>
 <li>ENV：设置环境变量，尽量使用ENV增加可维护性</li>
 </ol>
 <p><a href="https://github.com/docker-library/" target="_blank" rel="noopener">https://github.com/docker-library/</a></p>
-<p>MAINTAINER：指定容器的相关维护信息，维护人、邮箱等<br>
-RUN：执行命令并创建新的Image Layer，是在容器构建时执行<br>
-CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数<br>
-ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint<br>
-EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口<br>
-VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能<br>
-WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去<br>
-USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户<br>
-ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行</p>
-<p>使用中间层镜像进行调试，查找错误<br>
-docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER：指定容器的相关维护信息，维护人、邮箱等</span><br><span class="line">RUN：执行命令并创建新的Image Layer，是在容器构建时执行</span><br><span class="line">CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数</span><br><span class="line">ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint</span><br><span class="line">EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口 </span><br><span class="line">VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能</span><br><span class="line">WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去</span><br><span class="line">USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户</span><br><span class="line">ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行</span><br></pre></td></tr></table></figure>
+<h1 id="使用中间层镜像进行调试查找错误"><a class="markdownIt-Anchor" href="#使用中间层镜像进行调试查找错误"></a> 使用中间层镜像进行调试，查找错误</h1>
+<p>docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像</p>
 <p>构建缓存：构建过程中会产生缓存，下次构建直接使用缓存镜像，如果不想使用构建缓存，则可通过：docker build --no-cache,或者通过dockerfile文件的ENV REFRESH_DATE修改日期，则本条语句后就不使用缓存了</p>
 <p>docker history 镜像，用来查看镜像的构建过程</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPY docker-entrypoint.sh /usr/local/bin/</span><br><span class="line">ENTRYPOINT [&quot;docker-entrypoint.sh &quot;]</span><br></pre></td></tr></table></figure>
 <p>shell格式和EXEC格式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get install -y vim</span><br><span class="line">CMD echo &quot;Hello Docker&quot;</span><br><span class="line">ENTRYPOINT echo &quot;Hello Docker&quot;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN [&quot;apt-get&quot;,&quot;install&quot;,&quot;-y&quot;,&quot;vim&quot;]</span><br><span class="line">CMD [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br><span class="line">ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br></pre></td></tr></table></figure>
-<p>登录dockerhub<br>
-docker login:  用户名（非邮箱）／密码</p>
+<h1 id="登录dockerhub"><a class="markdownIt-Anchor" href="#登录dockerhub"></a> 登录dockerhub</h1>
+<p>docker login:  用户名（非邮箱）／密码</p>
 <ol>
 <li>本地push上去，其他人就可以pull</li>
 <li>关联github，github管理Dockerfile，有修改后自动build。Create-Create Automated build</li>
@@ -1429,49 +2326,8 @@ docker exec<br>
 docker exec -it [containerID] /bin/bash<br>
 docker inspect [imageName] //查看<br>
 docker logs [containerID]</p>
-<p>前3章</p>
-<p>Docker常见命令<br>
-容器相关操作<br>
-docker create # 创建一个容器但是不启动它<br>
-docker run # 创建并启动一个容器<br>
-docker stop # 停止容器运行，发送信号SIGTERM<br>
-docker start # 启动一个停止状态的容器<br>
-docker restart # 重启一个容器<br>
-docker rm # 删除一个容器<br>
-docker kill # 发送信号给容器，默认SIGKILL<br>
-docker attach # 连接(进入)到一个正在运行的容器<br>
-docker wait # 阻塞到一个容器，直到容器停止运行<br>
-获取容器相关信息<br>
-docker ps # 显示状态为运行（Up）的容器<br>
-docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited)<br>
-docker inspect # 深入容器内部获取容器所有信息<br>
-docker logs # 查看容器的日志(stdout/stderr)<br>
-docker events # 得到docker服务器的实时的事件<br>
-docker port # 显示容器的端口映射<br>
-docker top # 显示容器的进程信息<br>
-docker diff # 显示容器文件系统的前后变化<br>
-导出容器<br>
-docker cp # 从容器里向外拷贝文件或目录<br>
-docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息<br>
-执行<br>
-docker exec # 在容器里执行一个命令，可以执行bash进入交互式<br>
-镜像操作<br>
-docker images # 显示本地所有的镜像列表<br>
-docker import # 从一个tar包创建一个镜像，往往和export结合使用<br>
-docker build # 使用Dockerfile创建镜像（推荐）<br>
-docker commit # 从容器创建镜像<br>
-docker rmi # 删除一个镜像<br>
-docker load # 从一个tar包创建一个镜像，和save配合使用<br>
-docker save # 将一个镜像保存为一个tar包，带layers和tag信息<br>
-docker history # 显示生成一个镜像的历史命令<br>
-docker tag # 为镜像起一个别名<br>
-镜像仓库(registry)操作<br>
-docker login # 登录到一个registry<br>
-docker search # 从registry仓库搜索镜像<br>
-docker pull # 从仓库下载镜像到本地<br>
-docker push # 将一个镜像push到registry仓库中</p>
-<p>docker system df    //查看镜像、容器、数据卷所占用的空间<br>
-docker commit -m “ubuntu with vim” -a “sgy” aa97ba3292ce sgy/ubuntu:vim</p>
+<h1 id="docker常见命令"><a class="markdownIt-Anchor" href="#docker常见命令"></a> Docker常见命令</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">容器相关操作</span><br><span class="line">docker create # 创建一个容器但是不启动它</span><br><span class="line">docker run # 创建并启动一个容器</span><br><span class="line">docker stop # 停止容器运行，发送信号SIGTERM</span><br><span class="line">docker start # 启动一个停止状态的容器</span><br><span class="line">docker restart # 重启一个容器</span><br><span class="line">docker rm # 删除一个容器</span><br><span class="line">docker kill # 发送信号给容器，默认SIGKILL</span><br><span class="line">docker attach # 连接(进入)到一个正在运行的容器</span><br><span class="line">docker wait # 阻塞到一个容器，直到容器停止运行</span><br><span class="line">获取容器相关信息</span><br><span class="line">docker ps # 显示状态为运行（Up）的容器</span><br><span class="line">docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited)</span><br><span class="line">docker inspect # 深入容器内部获取容器所有信息</span><br><span class="line">docker logs # 查看容器的日志(stdout/stderr)</span><br><span class="line">docker events # 得到docker服务器的实时的事件</span><br><span class="line">docker port # 显示容器的端口映射</span><br><span class="line">docker top # 显示容器的进程信息</span><br><span class="line">docker diff # 显示容器文件系统的前后变化</span><br><span class="line">导出容器</span><br><span class="line">docker cp # 从容器里向外拷贝文件或目录</span><br><span class="line">docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息</span><br><span class="line">执行</span><br><span class="line">docker exec # 在容器里执行一个命令，可以执行bash进入交互式</span><br><span class="line">镜像操作</span><br><span class="line">docker images # 显示本地所有的镜像列表</span><br><span class="line">docker import # 从一个tar包创建一个镜像，往往和export结合使用</span><br><span class="line">docker build # 使用Dockerfile创建镜像（推荐）</span><br><span class="line">docker commit # 从容器创建镜像</span><br><span class="line">docker rmi # 删除一个镜像</span><br><span class="line">docker load # 从一个tar包创建一个镜像，和save配合使用</span><br><span class="line">docker save # 将一个镜像保存为一个tar包，带layers和tag信息</span><br><span class="line">docker history # 显示生成一个镜像的历史命令</span><br><span class="line">docker tag # 为镜像起一个别名</span><br><span class="line">镜像仓库(registry)操作</span><br><span class="line">docker login # 登录到一个registry</span><br><span class="line">docker search # 从registry仓库搜索镜像</span><br><span class="line">docker pull # 从仓库下载镜像到本地</span><br><span class="line">docker push # 将一个镜像push到registry仓库中  </span><br><span class="line"></span><br><span class="line">docker system df    //查看镜像、容器、数据卷所占用的空间</span><br><span class="line">docker commit -m &quot;ubuntu with vim&quot; -a &quot;sgy&quot; aa97ba3292ce sgy/ubuntu:vim</span><br></pre></td></tr></table></figure>
 <p>前后端分离部署及运维<br>
 高性能高负载高可用</p>
 <p><a href="https://www.renren.io" target="_blank" rel="noopener">https://www.renren.io</a>  renren-fast</p>
@@ -1497,8 +2353,8 @@ docker run --volumes-from 数据卷容器名称<br>
 即使删除了数据卷容器，挂载了数据卷容器的容器，仍然可以访问数据卷容器的目录，数据卷容器起的作用仅仅是将挂载配置传递到待挂载容器</p>
 <p>Docker数据卷的备份与还原：通过挂载目录压缩后放到挂载目录</p>
 <p>Docker For Mac的Docker Daemon是运行于虚拟机(xhyve)中的, 而不是像Linux上那样作为进程运行于宿主机，因此Docker For Mac没有docker0网桥，不能实现host网络模式，host模式会使Container复用Daemon的网络栈(在xhyve虚拟机中)，而不是与Host主机网络栈，这样虽然其它容器仍然可通过xhyve网络栈进行交互，但却不是用的Host上的端口(在Host上无法访问)。bridge网络模式 -p 参数不受此影响，它能正常打开Host上的端口并映射到Container的对应Port。</p>
-<p>docker容器的网络连接<br>
-docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡<br>
+<h1 id="docker容器的网络连接"><a class="markdownIt-Anchor" href="#docker容器的网络连接"></a> docker容器的网络连接</h1>
+<p>docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡<br>
 docker0地址划分：IP127.17.42.1,掩码255.255.0.0,总共提供了65534个地址<br>
 网桥操作需安装bridge-utils工具，安装之后brctl show查看网桥信息，可以添加网桥或者配置网桥信息<br>
 docker容器的IP地址在重启容器之后会变化，是不可靠的</p>
@@ -1545,908 +2401,11 @@ Compose 中有两个重要的概念：<br>
 <p>Docker Swarm:Docker集群管理工具，支持标准的Docker API,其主要作用是把若干台Docker主机抽象为一个整体，并且通过一个入口统一管理这些Docker主机上的各种Docker资源。<br>
 Swarm和Kubernetes比较类似，但是更加轻，具有的功能也较kubernetes更少一些。</p>
 <p>Docker Compose 是一个在单个服务器或主机上创建多个容器的工具，而 Docker Swarm 则可以在多个服务器或主机上创建容器集群服务，对于微服务的部署，显然 Docker Swarm 会更加适合。</p>
-<p>三大主流调度框架：Swarm、Kubernetes和Mesos</p>
+<h1 id="三大主流调度框架"><a class="markdownIt-Anchor" href="#三大主流调度框架"></a> 三大主流调度框架</h1>
+<p>Swarm、Kubernetes和Mesos</p>
 <p>Kubernetes：交互工具kubectl<br>
 pods：创建、调度及管理的最小单元，共存的一组容器的集合，同一pods中的容器共享pid、网络、ipc及utf命名空间和共享存储卷</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/17/C-开发-2018-10-17-C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/17/C-开发-2018-10-17-C/" itemprop="url">C#</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-17T15:03:28+08:00">
-                2018-10-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，双问号操作符意思是取所赋值??左边的，如果左边为null，取所赋值??右边的，</p>
-<p><a href="https://blog.csdn.net/zmh458/article/details/78935172" target="_blank" rel="noopener">https://blog.csdn.net/zmh458/article/details/78935172</a><br>
-<a href="https://www.cnblogs.com/lanpingwang/p/6596758.html" target="_blank" rel="noopener">https://www.cnblogs.com/lanpingwang/p/6596758.html</a><br>
-<a href="https://www.cnblogs.com/Inspire-Yi/p/6230567.html" target="_blank" rel="noopener">https://www.cnblogs.com/Inspire-Yi/p/6230567.html</a></p>
-<p><a href="https://www.jianshu.com/p/c82ef6babf8e" target="_blank" rel="noopener">https://www.jianshu.com/p/c82ef6babf8e</a></p>
-<p><a href="https://www.cnblogs.com/caofangsheng/p/5715876.html" target="_blank" rel="noopener">https://www.cnblogs.com/caofangsheng/p/5715876.html</a><br>
-<a href="https://blog.csdn.net/beglorious/article/details/39637475" target="_blank" rel="noopener">https://blog.csdn.net/beglorious/article/details/39637475</a></p>
-<p><a href="https://www.cnblogs.com/servicehot/p/6510199.html" target="_blank" rel="noopener">https://www.cnblogs.com/servicehot/p/6510199.html</a></p>
-<p>首先我觉得action的跳转大致可以这样归一下类，跳转到同一控制器内的action和不同控制器内的action、带有参数的action跳转和不带参数的action跳转。</p>
-<p>一、RedirectToAction(“Index”);//一个参数时在本Controller下，不传入参数。</p>
-<p>二、RedirectToAction(ActionName,ControllerName) //可以直接跳到别的Controller.</p>
-<p>三、RedirectToRoute(new {controller=“Home”,action=“Index”});//可跳到其他controller</p>
-<p>四、RedirectToRoute(new {controller=“Home”,action=“Index”， id=param});//可跳到其他controller,带参数。</p>
-<p>五、Response.Redirect(“Index?id=1”);//适用于本controller下的方法名称,可带参数。<br>
-六、return Redirect(“Index”);//适用于本controller下的方法名称。</p>
-<p>七、return View(“Index”); //直接显示对应的页面 不经过执行Controller的方法。<br>
-八、return View(&quot;~/Views/Home/Index.aspx&quot;);//这种方法是写全路径,直接显示页面,不经过Controller方法<br>
-九、return View();//直接显示页面,不经过Controller方法</p>
-<p><a href="https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1" target="_blank" rel="noopener">https://blog.csdn.net/zhensoft163/article/details/7174661?utm_source=blogxgwz1</a><br>
-一般情况下我们返回的都是本页面，所以使用return View()就可以解决问题了，</p>
-<p><a href="https://www.cnblogs.com/Cwj-XFH/p/5956142.html" target="_blank" rel="noopener">https://www.cnblogs.com/Cwj-XFH/p/5956142.html</a><br>
-<a href="http://xn--ModelASP-3i5qt911ag97a.NET" target="_blank" rel="noopener">Model验证是ASP.NET</a> MVC中的重要部分，它主要用于判断输入的数据类型及值是否符合我们设定的规则，<a href="http://xn--ASP-y28d97a810d83ofj4bmybj3mnv4c.NET" target="_blank" rel="noopener">这篇文章就介绍下ASP.NET</a> MVC中Model验证的几种方式。</p>
-<p>后台验证<br>
-DataAnnotation<br>
-ValidationAttribute<br>
-IValidatableObject<br>
-IDataErrorInfo<br>
-前端验证</p>
-<p>ViewData和ViewBag</p>
-<p><a href="https://blog.csdn.net/pasic/article/details/7093802" target="_blank" rel="noopener">https://blog.csdn.net/pasic/article/details/7093802</a></p>
-<p><a href="https://www.cnblogs.com/webapi/p/9505400.html" target="_blank" rel="noopener">https://www.cnblogs.com/webapi/p/9505400.html</a></p>
-<p>系列文章：<br>
-<a href="https://blog.csdn.net/ydm19891101/article/details/43338999" target="_blank" rel="noopener">https://blog.csdn.net/ydm19891101/article/details/43338999</a></p>
-<p>WebForm与MVC的本质区别：请求的url不同</p>
-<p><a href="https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1" target="_blank" rel="noopener">https://blog.csdn.net/liupantao/article/details/78582078?locationNum=3&amp;fps=1</a></p>
-<p>MVC action 返回javascriptResult 需要引入的文件是<br>
-需要引用这个文件 ：   jquery.unobtrusive-ajax.min.js</p>
-<p>同时 用javascrptResult  作为action的返回结果 的话 ，前台必须用ajax.BeginForm</p>
-<p><a href="https://www.cnblogs.com/zjf1987/p/ActionResult.html" target="_blank" rel="noopener">https://www.cnblogs.com/zjf1987/p/ActionResult.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React全家桶/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/15/react-rn-2018-10-15-React全家桶/" itemprop="url">React全家桶</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T08:16:00+08:00">
-                2018-10-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/React/" itemprop="url" rel="index">
-                    <span itemprop="name">React</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>React全家桶+Antd共享单车后台管理系统</p>
-<h1 id="react基础知识"><a class="markdownIt-Anchor" href="#react基础知识"></a> react基础知识</h1>
-<p>Vue生态：Vue+Vue-Router+Vuex+Axios+Babel+Webpack<br>
-React生态：React+React-Router+Redux+Axios+Babel+Webpack</p>
-<p>编程式实现：需要以具体代码表达在哪里做什么，如何实现<br>
-声明式实现：只需声明在哪里做什么，无需关心如何实现</p>
-<p><a href="https://react.docschina.org/" target="_blank" rel="noopener">https://react.docschina.org/</a><br>
-<a href="https://reactjs.org.cn/" target="_blank" rel="noopener">https://reactjs.org.cn/</a><br>
-<a href="http://facebook.github.io/react/" target="_blank" rel="noopener">http://facebook.github.io/react/</a></p>
-<p>yarn： <a href="https://yarnpkg.com/zh-Hans/" target="_blank" rel="noopener">https://yarnpkg.com/zh-Hans/</a></p>
-<ul>
-<li>yarn init</li>
-<li>yarn add</li>
-<li>yarn remove</li>
-<li>yarn install</li>
-</ul>
-<p>react生命周期</p>
-<p>react-router ／react-router-dom</p>
-<p>按需加载：<br>
-Antd中less样式<br>
-yarn eject:暴露webpack配置，</p>
-<p>less-loader安装<br>
-webpack.config.xxx.js</p>
-<p>修改完之后，重启项目</p>
-<p><a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">https://ant.design/docs/react/use-with-create-react-app-cn</a></p>
-<p>babel-plugin-import</p>
-<p>css3  calc属性<br>
-height:calc(100vh)</p>
-<p>jsonp：<a href="https://www.npmjs.com/package/jsonp" target="_blank" rel="noopener">https://www.npmjs.com/package/jsonp</a></p>
-<p>浏览器添加debugger</p>
-<p>伪类方式</p>
-<p>项目中前端路由用的是 React-Router V4。</p>
-<p>官方文档：<a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/guides/quick-start</a></p>
-<p>中文文档：<a href="http://reacttraining.cn/" target="_blank" rel="noopener">http://reacttraining.cn/</a></p>
-<p>React-Router 4.0<br>
-React-Router：基础包<br>
-React-Router-DOM：浏览器端实现</p>
-<p><a href="https://segmentfault.com/a/1190000011399153" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011399153</a></p>
-<p>箭头函数不加{}表示直接返回结果<br>
-<a href="http://this.props.match.params.XXX" target="_blank" rel="noopener">this.props.match.params.XXX</a><br>
-处理404则不设置path，只设置component即可<br>
-路由外面添加Switch</p>
-<p>详情页面、登录页面、主页面是同层级页面，还有其他自页面嵌套路由</p>
-<p>App.js设置为{this.props.children}代表可以接受任何组件，APP组件作为HashRouter的根组件</p>
-<p>子路由、子组件模式</p>
-<p>传参数需要箭头函数</p>
-<p>Modal.confirm()  等价于  Modal[‘confirm’]</p>
-<p>{}里面必须是一个根对象</p>
-<p><a href="https://blog.csdn.net/little_blue_ljy/article/details/80281803" target="_blank" rel="noopener">https://blog.csdn.net/little_blue_ljy/article/details/80281803</a><br>
-<a href="https://www.cnblogs.com/guolintao/p/9019504.html" target="_blank" rel="noopener">https://www.cnblogs.com/guolintao/p/9019504.html</a><br>
-<a href="https://www.cnblogs.com/xuyuntao/articles/6391728.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyuntao/articles/6391728.html</a><br>
-<a href="https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md" target="_blank" rel="noopener">https://github.com/fomenyesu/egg-restapi-module-tool/blob/master/README.cn.md</a></p>
-<p>ES6模版语法:</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-windows-git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-windows-git/" itemprop="url">windows git</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:15:47+08:00">
-                2018-10-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-<p><a href="https://www.cnblogs.com/vitah/p/3612473.html" target="_blank" rel="noopener">https://www.cnblogs.com/vitah/p/3612473.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/环境搭建-2018-10-08-Gitblit搭建git服务器/" itemprop="url">Gitblit搭建git服务器</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:00:14+08:00">
-                2018-10-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://www.gitblit.com/" target="_blank" rel="noopener">http://www.gitblit.com/</a><br>
-<a href="https://www.cnblogs.com/ucos/p/3924720.html" target="_blank" rel="noopener">https://www.cnblogs.com/ucos/p/3924720.html</a></p>
-<p><a href="https://blog.csdn.net/llengnuo/article/details/73477355" target="_blank" rel="noopener">https://blog.csdn.net/llengnuo/article/details/73477355</a></p>
-<p><a href="http://gitblit.com/setup_go.html" target="_blank" rel="noopener">http://gitblit.com/setup_go.html</a></p>
-<p><a href="https://blog.csdn.net/zhangwenjie1105/article/details/81482238" target="_blank" rel="noopener">https://blog.csdn.net/zhangwenjie1105/article/details/81482238</a></p>
-<p><a href="https://www.cnblogs.com/royi123/p/7754235.html" target="_blank" rel="noopener">https://www.cnblogs.com/royi123/p/7754235.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/06/微信开发-2018-10-06-微信公众平台/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/06/微信开发-2018-10-06-微信公众平台/" itemprop="url">微信公众平台使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T12:13:04+08:00">
-                2018-10-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/微信/" itemprop="url" rel="index">
-                    <span itemprop="name">微信</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="官方文档"><a class="markdownIt-Anchor" href="#官方文档"></a> 官方文档</h1>
-<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432</a></p>
-<h1 id="接口整体介绍"><a class="markdownIt-Anchor" href="#接口整体介绍"></a> 接口整体介绍</h1>
-<p>微信接口请求返回格式介绍：</p>
-<p>微信接口是通过GET方式请求<br>
-返回数据格式为JSON</p>
-<h1 id="测试号配置"><a class="markdownIt-Anchor" href="#测试号配置"></a> 测试号配置</h1>
-<p>无需公众账号，可直接体验和测试公众平台所有高级接口。</p>
-<p>配置：</p>
-<ol>
-<li>登录公众账号</li>
-<li>开发&gt;开发者工具&gt;公众平台测试账号</li>
-<li>微信扫一扫登录</li>
-<li>配置URL、TOKEN、JS接口安全域名</li>
-</ol>
-<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
-<ol>
-<li>接口频率限制说明</li>
-<li>全局返回码说明</li>
-</ol>
-<p>网页授权登录：<br>
-如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息。</p>
-<p>两种scope模式：</p>
-<ol>
-<li>snsapi_base时只能获取到openid，静默授权，</li>
-<li>snsapi_userinfo时可获取到其他信息，需要用户手动同意授权的</li>
-</ol>
-<p>微信公众平台（互斥）</p>
-<ol>
-<li>编辑模式</li>
-<li>开发者模式-openid</li>
-</ol>
-<p>接入开发者模式步骤</p>
-<p>为了识别用户，每个用户针对每个公众号会产生一个安全的OpenID<br>
-如果需要在多公众号、移动应用之间做用户共通，则需前往微信开放平台，将这些公众号和应用绑定到一个开放平台账号下，绑定后，一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID</p>
-<p>公众平台以access_token为接口调用凭据，来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储<br>
-公众平台接口调用仅支持80端口。</p>
-<p>网页授权获取用户基本信息：通过该接口，可以获取用户的基本信息（获取用户的OpenID是无需用户同意的，获取用户的基本信息则需用户同意）</p>
-<p>微信JS-SDK：是开发者在网页上通过JavaScript代码使用微信原生功能的工具包，开发者可以使用它在网页上录制和播放微信语音、监听微信分享、上传手机本地图片、拍照等许多能力。</p>
-<p>调试接口可能需要取消关注之后才能看到最新的效果</p>
-<p><a href="https://blog.csdn.net/z496007165/article/details/73239971" target="_blank" rel="noopener">https://blog.csdn.net/z496007165/article/details/73239971</a><br>
-<a href="http://www.php.cn/xiaochengxu-405121.html" target="_blank" rel="noopener">http://www.php.cn/xiaochengxu-405121.html</a></p>
-<p>网页授权接口：<br>
-授权回调页面域名：没有http，如：<a href="http://89495c4f.ngrok.xn--io-k07di11djizfrl" target="_blank" rel="noopener">http://89495c4f.ngrok.io是错误的</a>，应该是： <a href="http://89495c4f.ngrok.io" target="_blank" rel="noopener">89495c4f.ngrok.io</a></p>
-<p><a href="http://www.106jiekou.com/" target="_blank" rel="noopener">http://www.106jiekou.com/</a></p>
-<p><a href="https://blog.csdn.net/kingmax54212008/article/details/50811885" target="_blank" rel="noopener">https://blog.csdn.net/kingmax54212008/article/details/50811885</a></p>
-<p><a href="https://www.cnblogs.com/hoobey/p/6078584.html" target="_blank" rel="noopener">https://www.cnblogs.com/hoobey/p/6078584.html</a></p>
-<p><a href="https://blog.csdn.net/qianxing111/article/details/79884527" target="_blank" rel="noopener">https://blog.csdn.net/qianxing111/article/details/79884527</a></p>
-<p><a href="http://www.it165.net/pro/html/201606/70831.html" target="_blank" rel="noopener">http://www.it165.net/pro/html/201606/70831.html</a></p>
+<p><a href="https://www.cnblogs.com/zuxing/articles/8745816.html" target="_blank" rel="noopener">https://www.cnblogs.com/zuxing/articles/8745816.html</a></p>
 
           
         
@@ -2550,7 +2509,7 @@ React-Router-DOM：浏览器端实现</p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2666,7 +2625,7 @@ React-Router-DOM：浏览器端实现</p>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共121.8k字</span>
+  <span class="post-count">博客全站共128.1k字</span>
 </div>
 
 

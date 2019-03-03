@@ -105,19 +105,19 @@
 
 
 
-<meta name="description" content="简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium  安装登陆  mac系统  安装dmg安装">
+<meta name="description" content="简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium  安装  mac系统  安装dmg安装包，">
 <meta name="keywords" content="MySQL,数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL安装配置">
 <meta property="og:url" content="https://chetaofeng.github.io/2018/10/04/环境搭建-11-MySQL安装配置/index.html">
 <meta property="og:site_name" content="行锋">
-<meta property="og:description" content="简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium  安装登陆  mac系统  安装dmg安装">
+<meta property="og:description" content="简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium  安装  mac系统  安装dmg安装包，">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/mysql.png">
-<meta property="og:updated_time" content="2019-02-14T02:09:24.000Z">
+<meta property="og:updated_time" content="2019-02-28T07:55:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL安装配置">
-<meta name="twitter:description" content="简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium  安装登陆  mac系统  安装dmg安装">
+<meta name="twitter:description" content="简介 下载地址：https://dev.mysql.com/downloads/mysql/ 官方数据客户端工具： https://dev.mysql.com/downloads/workbench/ 推荐客户端工具：Navicat Premium- https://www.navicat.com/en/download/navicat-premium  安装  mac系统  安装dmg安装包，">
 <meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/mysql.png">
 
 
@@ -430,7 +430,7 @@
 <p>下载地址：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a><br>
 官方数据客户端工具： <a href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/workbench/</a><br>
 推荐客户端工具：Navicat Premium- <a href="https://www.navicat.com/en/download/navicat-premium" target="_blank" rel="noopener">https://www.navicat.com/en/download/navicat-premium</a></p>
-<h1 id="安装登陆"><a class="markdownIt-Anchor" href="#安装登陆"></a> 安装登陆</h1>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
 <h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
 <ol>
 <li>安装dmg安装包，如：mysql-5.7.8-rc-osx10.9-x86_64.dmg，安装过程中会弹出临时的密码，务必截图保存方便后面更改密码，安装过程有时会卡顿，时间会比较长，需耐心等待一会。</li>
@@ -447,29 +447,40 @@
 <li>下载tar安装包，解压到硬盘，然后自己配置mysql</li>
 <li>通过源码编译安装</li>
 </ol>
-<p>以下以tar包安装记录:参考文章（<a href="http://www.pianshen.com/article/975954037/%EF%BC%89" target="_blank" rel="noopener">http://www.pianshen.com/article/975954037/）</a></p>
+<h3 id="centos系统"><a class="markdownIt-Anchor" href="#centos系统"></a> CentOS系统</h3>
+<p>在 centos7 自带的是 mariaDb 数据库，所以第一步是卸载数据库，所以先检查卸载：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#查看mariadb数据库：rpm -qa | grep mariadb</span><br><span class="line">#卸载mariadb数据库：sudo rpm -e --nodeps  mariadb文件名</span><br><span class="line">#查看 mysql 数据库：rpm -qa | grep -i mysql</span><br><span class="line">#卸载 mysql 数据库：rpm -e mysql文件名 # 如果有关联文件，不能直接卸载。可以用一下命令强制卸载：rpm -e --nodeps mysql文件名） </span><br><span class="line">#删除etc目录下的my.cnf文件：rm /etc/my.cnf</span><br></pre></td></tr></table></figure>
+<p>下载、解压：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解压命令：sudo tar -xvf mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz -C /usr/local/</span><br><span class="line">重命名命令：sudo mv mysql-8.0.13-linux-glibc2.12-x86_64/ mysql</span><br></pre></td></tr></table></figure>
+<p>添加mysql用户组和用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/group | grep mysql     </span><br><span class="line">cat /etc/group | grep mysql     </span><br><span class="line">//如果没有则添加mysql用户和组  </span><br><span class="line">sudo groupadd mysql          </span><br><span class="line">sudo useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure>
+<p>初始化mysql配置表,注意中initialize成功会生成一个临时密码，一定要保存好，后面修改密码需要用到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/mysql</span><br><span class="line">sudo chown -R mysql:mysql ./  修改当前目录为mysql用户</span><br><span class="line">sudo yum -y install numactl</span><br><span class="line">sudo ./bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data  //执行会自动创建data目录</span><br><span class="line">sudo chown -R root:root ./   #修改当前目录用户为root用户 </span><br><span class="line">sudo chown -R mysql:mysql data/  #修改当前的data目录为mysql用户</span><br></pre></td></tr></table></figure>
+<p>配置mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir tmp</span><br><span class="line">sudo chmod 777 ./tmp/</span><br><span class="line">cd support-files/</span><br><span class="line">sudo vim my-defalut.cnf</span><br></pre></td></tr></table></figure>
+<p>//编辑其内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">basedir=/usr/local/mysql</span><br><span class="line">datadir=/usr/local/mysql/data</span><br><span class="line">port=3306</span><br><span class="line">socket=/usr/local/mysql/tmp/mysql.sock</span><br><span class="line"># 必填项</span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp my-defalut.cnf /etc/my.cnf  //复制配置文件到系统配置目录</span><br></pre></td></tr></table></figure>
+<p>加入开机启动项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo cp ./mysql.server /etc/init.d/mysqld</span><br><span class="line">sudo chmod 755 /etc/init.d/mysqld</span><br><span class="line">sudo chkconfig --add mysqld</span><br><span class="line">sudo chkconfig --list mysqld</span><br><span class="line">sudo ./mysql.server start --user=mysql      //启动服务，看见success字样说明启动成功</span><br></pre></td></tr></table></figure>
+<p>配置环境变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile   //添加如下内容</span><br><span class="line">export PATH=$PATH:/usr/local/mysql/bin:/usr/local/mysql/lib</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>登录并初始化密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/mysql/tmp/mysql.sock /tmp/mysql.sock</span><br><span class="line">mysql -uroot -p     //输入默认生成的随机密码</span><br></pre></td></tr></table></figure>
+<p>更改root密码为root：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;root&apos; PASSWORD EXPIRE NEVER;   //修改root的密码与加密方式</span><br><span class="line">use mysql; #切换到mysql库 </span><br><span class="line">update user set host=&apos;%&apos; where user=&apos;root&apos;; //更改可以登录的IP为任意IP</span><br><span class="line">ALTER USER &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;; #再次更改root用户密码，使其可以在任意IP访问</span><br><span class="line">flush privileges; #刷新权限</span><br></pre></td></tr></table></figure>
+<p>安装客户端测试即可</p>
+<h3 id="ubuntu系统安装"><a class="markdownIt-Anchor" href="#ubuntu系统安装"></a> ubuntu系统安装</h3>
+<p>ubutnu系统安装和CentOS系统安装类似，不同点在于：</p>
 <ol>
-<li>sudo cp mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz /usr</li>
-<li>cd /usr</li>
-<li>sudo tar xvJf mysql-8.0.13-linux-glibc2.12-x86_64.tar.xz</li>
-<li>为MySQL创建专用用户，用户名为mysql，用户组为mysql；<br>
-sudo groupadd mysql //创建组<br>
-sudo useradd -r -g mysql mysql //创建用户并划入mysql组下</li>
-<li>为解压出来的所有文件更改用户和组<br>
-sudo chown -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改拥有者<br>
-sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
-<li>sudo apt-get install libaio1 libaio-dev</li>
-<li>初始化数据库: sudo ./bin/mysqld --initialize --user mysql<br>
-执行过程中会生成一个临时密码，一定要保存好，后面修改密码需要用到，如图：<br>
+<li>安装依赖库：sudo apt-get install libaio1 libaio-dev</li>
+<li>初始化数据库: sudo ./bin/mysqld --initialize --user mysql ;执行过程中会生成一个临时密码，一定要保存好，后面修改密码需要用到，此处再次强调如图：<br>
 <img src="/pub-images/mysql.png" alt="image"></li>
-<li>开启服务: bin/mysqld_safe --user=mysql &amp;</li>
-<li>使用用户root登录: bin/mysql -uroot -p</li>
-<li>更改root用户密码:</li>
+<li>设置服务开机自启动：sudo systemctl enable mysqld.service</li>
+<li>安装客户端mysql-workbench测试</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;root&apos; PASSWORD EXPIRE NEVER;   //修改root的密码与加密方式</span><br><span class="line">use mysql; #切换到mysql库 </span><br><span class="line">update user set host=&apos;%&apos; where user=&apos;root&apos;; //更改可以登录的IP为任意IP</span><br><span class="line">ALTER user &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;  //再次更改root用户密码，使其可以在任意IP访问</span><br><span class="line">flush privileges; #刷新权限</span><br></pre></td></tr></table></figure>
-<ol start="11">
-<li>通过客户端测试登陆即可</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-workbench mysql-client</span><br></pre></td></tr></table></figure>
+<p><a href="https://dev.mysql.com/downloads/file/?id=412155" target="_blank" rel="noopener">https://dev.mysql.com/downloads/file/?id=412155</a></p>
 <h1 id="navicat安装"><a class="markdownIt-Anchor" href="#navicat安装"></a> Navicat安装</h1>
 <h2 id="linux"><a class="markdownIt-Anchor" href="#linux"></a> Linux</h2>
 <ol>
@@ -502,7 +513,7 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
   <p><span>本文标题:</span><a href="/2018/10/04/环境搭建-11-MySQL安装配置/">MySQL安装配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年10月04日 - 22:10</p>
-  <p><span>最后更新:</span>2019年02月14日 - 10:02</p>
+  <p><span>最后更新:</span>2019年02月28日 - 15:02</p>
   <p><span>原始链接:</span><a href="/2018/10/04/环境搭建-11-MySQL安装配置/" title="MySQL安装配置">https://chetaofeng.github.io/2018/10/04/环境搭建-11-MySQL安装配置/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/10/04/环境搭建-11-MySQL安装配置/"  aria-label="复制成功！"></i></span>
   </p>
@@ -593,8 +604,8 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/04/环境搭建-11-VirturalBox安装/" rel="next" title="VirtualBox安装">
-                <i class="fa fa-chevron-left"></i> VirtualBox安装
+              <a href="/2018/10/02/环境搭建-2018-10-02-GithubPages/" rel="next" title="使用Github Pages进行个人博客搭建">
+                <i class="fa fa-chevron-left"></i> 使用Github Pages进行个人博客搭建
               </a>
             
           </div>
@@ -603,8 +614,8 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/04/环境搭建-10-hexo安装配置/" rel="prev" title="hexo使用速记">
-                hexo使用速记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/04/环境搭建-11-VirturalBox安装/" rel="prev" title="VirtualBox安装">
+                VirtualBox安装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -699,7 +710,7 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -770,7 +781,7 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装登陆"><span class="nav-number">2.</span> <span class="nav-text"> 安装登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac系统"><span class="nav-number">2.1.</span> <span class="nav-text"> mac系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux系统"><span class="nav-number">2.2.</span> <span class="nav-text"> Linux系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#navicat安装"><span class="nav-number">3.</span> <span class="nav-text"> Navicat安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-number">3.1.</span> <span class="nav-text"> Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows-macos"><span class="nav-number">3.2.</span> <span class="nav-text"> Windows &amp; macOS</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text"> 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac系统"><span class="nav-number">2.1.</span> <span class="nav-text"> mac系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux系统"><span class="nav-number">2.2.</span> <span class="nav-text"> Linux系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#centos系统"><span class="nav-number">2.2.1.</span> <span class="nav-text"> CentOS系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu系统安装"><span class="nav-number">2.2.2.</span> <span class="nav-text"> ubuntu系统安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#navicat安装"><span class="nav-number">3.</span> <span class="nav-text"> Navicat安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-number">3.1.</span> <span class="nav-text"> Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows-macos"><span class="nav-number">3.2.</span> <span class="nav-text"> Windows &amp; macOS</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -831,7 +842,7 @@ sudo chgrp -R mysql mysql-8.0.13-linux-glibc2.12-x86_64 //更改组</li>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共121.8k字</span>
+  <span class="post-count">博客全站共128.1k字</span>
 </div>
 
 

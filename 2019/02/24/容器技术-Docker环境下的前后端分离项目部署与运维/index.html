@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="docker," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学习视频：https://coding.imooc.com/learn/list/219.html  简介 人人开源项目：https://www.renren.io/ 项目部署图解：     开发环境要求 软件：宿主机-Vmware虚拟机（CentOS／Ubuntu）-Docker虚拟机 JWT Swagger  renren-fast前后端分离项目下载配置  MySQL集群 单节点数据库无法满足">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker环境下的前后端分离项目部署与运维">
+<meta property="og:url" content="https://chetaofeng.github.io/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="学习视频：https://coding.imooc.com/learn/list/219.html  简介 人人开源项目：https://www.renren.io/ 项目部署图解：     开发环境要求 软件：宿主机-Vmware虚拟机（CentOS／Ubuntu）-Docker虚拟机 JWT Swagger  renren-fast前后端分离项目下载配置  MySQL集群 单节点数据库无法满足">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/renrenfast%E6%9E%B6%E6%9E%84.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%9B%86%E7%BE%A4.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%9B%BE.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/mysql%E5%B8%B8%E8%A7%81%E9%9B%86%E7%BE%A4%E6%96%B9%E6%A1%88.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/pxc%E6%96%B9%E6%A1%88%E5%8E%9F%E7%90%86.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AF%B9%E6%AF%94.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/pxc%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/haproxy%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E6%96%B9%E6%A1%88.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/replication%E6%96%B9%E6%A1%88.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/redis%E4%B8%BB%E4%BB%8E.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/rediscluster.png">
+<meta property="og:updated_time" content="2019-03-02T03:13:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker环境下的前后端分离项目部署与运维">
+<meta name="twitter:description" content="学习视频：https://coding.imooc.com/learn/list/219.html  简介 人人开源项目：https://www.renren.io/ 项目部署图解：     开发环境要求 软件：宿主机-Vmware虚拟机（CentOS／Ubuntu）-Docker虚拟机 JWT Swagger  renren-fast前后端分离项目下载配置  MySQL集群 单节点数据库无法满足">
+<meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/renrenfast%E6%9E%B6%E6%9E%84.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/"/>
+
+
+
+
+
+  <title>Docker环境下的前后端分离项目部署与运维 | 行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Docker环境下的前后端分离项目部署与运维</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T09:38:59+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>学习视频：<a href="https://coding.imooc.com/learn/list/219.html" target="_blank" rel="noopener">https://coding.imooc.com/learn/list/219.html</a></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>人人开源项目：<a href="https://www.renren.io/" target="_blank" rel="noopener">https://www.renren.io/</a><br>
+项目部署图解：<br>
+<img src="/pub-images/renrenfast%E6%9E%B6%E6%9E%84.png" alt="image"><br>
+<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%9B%86%E7%BE%A4.png" alt="image"><br>
+<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%9B%BE.png" alt="image"></p>
+<h1 id="开发环境要求"><a class="markdownIt-Anchor" href="#开发环境要求"></a> 开发环境要求</h1>
+<p>软件：宿主机-Vmware虚拟机（CentOS／Ubuntu）-Docker虚拟机</p>
+<p>JWT Swagger</p>
+<h1 id="renren-fast前后端分离项目下载配置"><a class="markdownIt-Anchor" href="#renren-fast前后端分离项目下载配置"></a> renren-fast前后端分离项目下载配置</h1>
+<h1 id="mysql集群"><a class="markdownIt-Anchor" href="#mysql集群"></a> MySQL集群</h1>
+<p>单节点数据库无法满足性能上的要求及高可用冗余设计，大型互联网程序用户群体庞大，架构必须特殊设计，mysql常见集群方案：<br>
+<img src="/pub-images/mysql%E5%B8%B8%E8%A7%81%E9%9B%86%E7%BE%A4%E6%96%B9%E6%A1%88.png" alt="image"></p>
+<h2 id="pxc方案原理"><a class="markdownIt-Anchor" href="#pxc方案原理"></a> PXC方案原理</h2>
+<p>PXC（Percona XtraDB Cluster）：建议PXC使用PerconaServer（MySQL改进版，性能提升很大）<br>
+<img src="/pub-images/pxc%E6%96%B9%E6%A1%88%E5%8E%9F%E7%90%86.png" alt="image"><br>
+PXC数据强一致性：同步复制，事物在所有集群节点要么同时提交，要么不提交</p>
+<h2 id="pxc集群搭建"><a class="markdownIt-Anchor" href="#pxc集群搭建"></a> PXC集群搭建</h2>
+<p>网络准备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker network create --subnet=172.18.0.0/24 net1</span><br><span class="line">docker network inspect net1 //查看网络详细信息</span><br></pre></td></tr></table></figure>
+<p>准备数据卷：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker volume create --name v1</span><br><span class="line">docker inspect v1   //查看volume在宿主机上的实际路径，方便后期做容器卷映射</span><br><span class="line">docker volume create v2</span><br><span class="line">docker volume create v3</span><br><span class="line">docker volume create v4</span><br><span class="line">docker volume create v5</span><br><span class="line">docker volume create ‐‐name backup  //创建备份数据卷用于热备份数据</span><br></pre></td></tr></table></figure>
+<p>创建pxc容器：每个MySQL容器创建之后，因为要执行PXC的初始化和加入集群等工作，耐心等待1分钟左右再用客户 端连接MySQL。另外，必须第1个MySQL节点启动成功，用MySQL客户端能连接上之后，再去创建其他 MySQL节点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker pull percona/percona-xtradb-cluster</span><br><span class="line">//创建第一个节点</span><br><span class="line">docker run -d -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -v v1:/var/lib/mysql -v backup:/data --privileged --name=node1 --net=net1 --ip 172.18.0.2 percona/percona-xtradb-cluster</span><br><span class="line">//创建第二个节点</span><br><span class="line">docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v2:/var/lib/mysql -v backup:/data --privileged --name=node2 --net=net1 --ip 172.18.0.3 percona/percona-xtradb-cluster</span><br><span class="line">//创建第三个节点</span><br><span class="line">docker run -d -p 3309:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v3:/var/lib/mysql -v backup:/data --privileged --name=node3 --net=net1 --ip 172.18.0.4 percona/percona-xtradb-cluster</span><br><span class="line">//创建第四个节点</span><br><span class="line">docker run -d -p 3310:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v4:/var/lib/mysql -v backup:/data --privileged --name=node4 --net=net1 --ip 172.18.0.5 percona/percona-xtradb-cluster</span><br><span class="line">//创建第五个节点</span><br><span class="line">docker run -d -p 3311:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v5:/var/lib/mysql -v backup:/data --privileged --name=node5 --net=net1 --ip 172.18.0.6 percona/percona-xtradb-cluster</span><br></pre></td></tr></table></figure>
+<p>通过客户端测试数据库集群：</p>
+<ul>
+<li>输入数据库ip为宿主机ip，端口为映射ip，如：3307、3308等连接不同节点</li>
+<li>任意节点建库、建表测试是否同步</li>
+</ul>
+<h2 id="数据库集群的负载均衡"><a class="markdownIt-Anchor" href="#数据库集群的负载均衡"></a> 数据库集群的负载均衡</h2>
+<p><img src="/pub-images/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AF%B9%E6%AF%94.png" alt="image"><br>
+使用Haproxy做负载均衡，请求被均匀分发给每个节点，单节点负载低，性能好<br>
+<img src="/pub-images/pxc%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.png" alt="image"></p>
+<h3 id="haproxy使用"><a class="markdownIt-Anchor" href="#haproxy使用"></a> haproxy使用</h3>
+<ol>
+<li>docker pull haproxy //获取haproxy系统镜像</li>
+<li>创建haproxy配置文件: sudo vim /media/psf/LinuxShare/data/conf/haproxy.cfg，更多配置查看：<a href="https://zhang.ge/5125.html" target="_blank" rel="noopener">https://zhang.ge/5125.html</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">global</span><br><span class="line">	#工作目录</span><br><span class="line">	chroot /usr/local/etc/haproxy</span><br><span class="line">	#日志文件，使用rsyslog服务中local5日志设备（/var/log/local5），等级info</span><br><span class="line">	log 127.0.0.1 local5 info</span><br><span class="line">	#守护进程运行</span><br><span class="line">	daemon</span><br><span class="line"></span><br><span class="line">defaults</span><br><span class="line">	log	global</span><br><span class="line">	mode	http</span><br><span class="line">	#日志格式</span><br><span class="line">	option	httplog</span><br><span class="line">	#日志中不记录负载均衡的心跳检测记录</span><br><span class="line">	option	dontlognull</span><br><span class="line">    #连接超时（毫秒）</span><br><span class="line">	timeout connect 5000</span><br><span class="line">    #客户端超时（毫秒）</span><br><span class="line">	timeout client  50000</span><br><span class="line">	#服务器超时（毫秒）</span><br><span class="line">    timeout server  50000</span><br><span class="line"></span><br><span class="line">#监控界面	</span><br><span class="line">listen  admin_stats</span><br><span class="line">	#监控界面的访问的IP和端口</span><br><span class="line">	bind  0.0.0.0:8888</span><br><span class="line">	#访问协议</span><br><span class="line">    mode        http</span><br><span class="line">	#URI相对地址</span><br><span class="line">    stats uri   /dbs</span><br><span class="line">	#统计报告格式</span><br><span class="line">    stats realm     Global\ statistics</span><br><span class="line">	#登陆帐户信息</span><br><span class="line">    stats auth  admin:admin</span><br><span class="line">#数据库负载均衡</span><br><span class="line">listen  proxy-mysql</span><br><span class="line">	#访问的IP和端口</span><br><span class="line">	bind  0.0.0.0:3306  </span><br><span class="line">    #网络协议</span><br><span class="line">	mode  tcp</span><br><span class="line">	#负载均衡算法（轮询算法）</span><br><span class="line">	#轮询算法：roundrobin</span><br><span class="line">	#权重算法：static-rr</span><br><span class="line">	#最少连接算法：leastconn</span><br><span class="line">	#请求源IP算法：source </span><br><span class="line">    balance  roundrobin</span><br><span class="line">	#日志格式</span><br><span class="line">    option  tcplog</span><br><span class="line">	#在MySQL中创建一个没有权限的haproxy用户，密码为空。Haproxy使用这个账户对MySQL数据库心跳检测</span><br><span class="line">    option  mysql-check user haproxy</span><br><span class="line">    server  MySQL_1 172.18.0.2:3306 check weight 1 maxconn 2000  </span><br><span class="line">    server  MySQL_2 172.18.0.3:3306 check weight 1 maxconn 2000  </span><br><span class="line">	server  MySQL_3 172.18.0.4:3306 check weight 1 maxconn 2000 </span><br><span class="line">	server  MySQL_4 172.18.0.5:3306 check weight 1 maxconn 2000</span><br><span class="line">	server  MySQL_5 172.18.0.6:3306 check weight 1 maxconn 2000</span><br><span class="line">	#使用keepalive检测死链</span><br><span class="line">    option  tcpka</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>创建haproxy容器</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#创建第1个Haproxy负载均衡服务器</span><br><span class="line">docker run -it -d -p 4001:8888 -p 4002:3306 -v /media/psf/LinuxShare/data/conf:/usr/local/etc/haproxy --name h1 --privileged --net=net1 --ip 172.18.0.10 haproxy</span><br><span class="line"></span><br><span class="line">#创建第2个Haproxy负载均衡服务器</span><br><span class="line">docker run -it -d -p 4003:8888 -p 4004:3306 -v /media/psf/LinuxShare/data/conf:/usr/local/etc/haproxy --name h2 --privileged --net=net1 --ip 172.18.0.11 haproxy</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>创建数据库haproxy用户：create user ‘haproxy’@’%’ identified by ‘’;</li>
+<li>启动haproxy</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it h1 bash</span><br><span class="line">haproxy -f /usr/local/etc/haproxy/haproxy.cfg</span><br><span class="line"></span><br><span class="line">docker exec -it h2 bash</span><br><span class="line">haproxy -f /usr/local/etc/haproxy/haproxy.cfg</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>浏览器访问：<br>
+浏览器访问地址：<a href="http://xn--ip-wz2c754c5qn:4001/dbs" target="_blank" rel="noopener">http://宿主机ip:4001/dbs</a></li>
+<li>数据库访问：<br>
+ip为宿主机ip，端口4002，见第三步</li>
+<li>测试节点宕机</li>
+</ol>
+<ul>
+<li>docker stop node1;查看浏览器，node1节点是否宕机</li>
+<li>恢复node1节点:删除node1节点，重新以从节点方式创建node1即可</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm node1</span><br><span class="line">docker run -d -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node2 -v v1:/var/lib/mysql -v backup:/data --privileged --name=node1 --net=net1 --ip 172.18.0.2 percona/percona-xtradb-cluster</span><br></pre></td></tr></table></figure>
+<p>虚拟IP地址技术</p>
+<h3 id="keepalived实现双机热备"><a class="markdownIt-Anchor" href="#keepalived实现双机热备"></a> keepalived实现双机热备</h3>
+<p><img src="/pub-images/haproxy%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E6%96%B9%E6%A1%88.png" alt="image"></p>
+<ul>
+<li>Keepalived必须安装在haproxy容器内</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it h1 bash</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install vim</span><br><span class="line">apt-get install keepalived</span><br><span class="line">vim /etc/keepalived/keepalived.conf</span><br></pre></td></tr></table></figure>
+<p>配置文件内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vrrp_instance  VI_1 &#123;</span><br><span class="line">   state  MASTER</span><br><span class="line">   interface  eth0</span><br><span class="line">   virtual_router_id  51</span><br><span class="line">   priority  100</span><br><span class="line">   advert_int  1</span><br><span class="line">   authentication &#123;</span><br><span class="line">       auth_type  PASS</span><br><span class="line">       auth_pass  123456</span><br><span class="line">   &#125;</span><br><span class="line">   virtual_ipaddress &#123;</span><br><span class="line">       172.18.0.201</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">virtual_server 192.168.99.150 8888 &#123;</span><br><span class="line">  delay_loop 3</span><br><span class="line">  lb_algo rr</span><br><span class="line">  lb_kind NAT</span><br><span class="line">  persistence_timeout 50</span><br><span class="line">  protocol TCP</span><br><span class="line">  real_server 172.18.0.201 8888 &#123;</span><br><span class="line">    weight 1</span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br><span class="line">virtual_server 192.168.99.150 3306 &#123;</span><br><span class="line">  delay_loop 3</span><br><span class="line">  lb_algo rr</span><br><span class="line">  lb_kind NAT</span><br><span class="line">  persistence_timeout 50</span><br><span class="line">  protocol TCP</span><br><span class="line">  real_server 172.18.0.201 3306 &#123;</span><br><span class="line">    weight 1</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>暂停PXC集群的办法</p>
+<ul>
+<li>在/etc/sysctl.conf文件末尾添加：net.ipv4.ip_forward=1;重启网络服务：systectl restart network</li>
+</ul>
+<h2 id="replication方案原理"><a class="markdownIt-Anchor" href="#replication方案原理"></a> Replication方案原理</h2>
+<p><img src="/pub-images/replication%E6%96%B9%E6%A1%88.png" alt="image"><br>
+Replication采用异步复制，单向同步，无法保证数据的一致性</p>
+<p>参考文章：</p>
+<ul>
+<li><a href="https://www.cnblogs.com/zhenyuyaodidiao/p/4635458.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhenyuyaodidiao/p/4635458.html</a></li>
+<li><a href="https://www.cnblogs.com/clsn/p/8150036.html" target="_blank" rel="noopener">https://www.cnblogs.com/clsn/p/8150036.html</a></li>
+</ul>
+<p>–sql<br>
+stop slave;<br>
+show slave status;</p>
+<h2 id="pxc集群安装"><a class="markdownIt-Anchor" href="#pxc集群安装"></a> PXC集群安装</h2>
+<p>MySQL集群（PXC）入门：<a href="https://www.imooc.com/learn/993" target="_blank" rel="noopener">https://www.imooc.com/learn/993</a></p>
+<h1 id="redis集群"><a class="markdownIt-Anchor" href="#redis集群"></a> Redis集群</h1>
+<p>高速缓存：利用内存保存数据，读写速度远超硬盘；减少I／O操作</p>
+<h2 id="redis集群方案"><a class="markdownIt-Anchor" href="#redis集群方案"></a> Redis集群方案</h2>
+<ul>
+<li>RedisCluster：官方推荐，没有中心节点，客户端与redis节点直连，不需要中间代理层；数据可被分片存储；管理方便，后续可自行增删节点</li>
+<li>Codis：中间件产品，存在中心节点，360公司产品</li>
+<li>Twemproxy：中间件产品，存在中心节点</li>
+<li>Redis集群中应该包含奇数个Master，至少应该有3个Master</li>
+<li>Redis集群中每个Master都应该有Slave<br>
+<img src="/pub-images/redis%E4%B8%BB%E4%BB%8E.png" alt="image"></li>
+<li>redis集群不配置负载均衡是因为在前后端分离项目中Spring程序实现了负载均衡</li>
+</ul>
+<h2 id="rediscluster架构"><a class="markdownIt-Anchor" href="#rediscluster架构"></a> RedisCluster架构</h2>
+<p><img src="/pub-images/rediscluster.png" alt="image"></p>
+<h2 id="redis主从同步"><a class="markdownIt-Anchor" href="#redis主从同步"></a> Redis主从同步</h2>
+<ul>
+<li>Redis集群中的数据库复制是通过主从同步来实现的</li>
+<li>主节点（Master）把数据分发给从节点（Slave）</li>
+<li>主从同步的好处在于高可用，Redis节点有冗余设计</li>
+</ul>
+<h2 id="rediscluster集群搭建"><a class="markdownIt-Anchor" href="#rediscluster集群搭建"></a> RedisCluster集群搭建</h2>
+<p>网络准备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create --subnet=172.19.0.0/16 net2</span><br></pre></td></tr></table></figure>
+<p>镜像准备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull grokzen/redis-cluster</span><br><span class="line">docker pull yyyyttttwwww/redis  //课程使用</span><br></pre></td></tr></table></figure>
+<p>容器创建：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -d --name r1 -p 5001:6379 --net=net2 --ip 172.19.0.2 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r2 -p 5002:6379 --net=net2 --ip 172.19.0.3 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r3 -p 5003:6379 --net=net2 --ip 172.19.0.4 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r4 -p 5004:6379 --net=net2 --ip 172.19.0.5 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r5 -p 5005:6379 --net=net2 --ip 172.19.0.6 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r6 -p 5006:6379 --net=net2 --ip 172.19.0.7 yyyyttttwwww/redis bash</span><br></pre></td></tr></table></figure>
+<p>配置redis配置文件：(默认关闭了redis集群功能)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//逐个进入容器，如：</span><br><span class="line">docker exec -it  r1  bash</span><br><span class="line">//逐个配置</span><br><span class="line">daemonize yes   </span><br><span class="line">bind 0.0.0.0</span><br><span class="line">cluster-enabled yes</span><br><span class="line">cluster-config-file nodes.conf</span><br><span class="line">cluster-node-timeout 15000</span><br><span class="line">appendonly yes  //开启AOF日志模式</span><br></pre></td></tr></table></figure>
+<p>逐个启动redis服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/redis/src/redis-server /usr/redis/redis.conf</span><br><span class="line">//客户端连接测试,如：</span><br><span class="line">./redis-cli -h 172.19.0.3 -p 6379 -c</span><br></pre></td></tr></table></figure>
+<p>通过redis-trib.rb(redis自带,需要ruby环境)创建集群</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//进入任一容器，如：</span><br><span class="line">docker exec -it  r1  bash</span><br><span class="line">cd /usr/redis/</span><br><span class="line">mkdir cluster</span><br><span class="line">cp src/redis-trib.rb cluster/</span><br><span class="line">cd cluster/</span><br><span class="line">//创建集群，过程中确认请输入&quot;yes&quot;</span><br><span class="line">./redis-trib.rb create --replicas 1 172.19.0.2:6379 172.19.0.3:6379 172.19.0.4:6379 172.19.0.5:6379 172.19.0.6:6379 172.19.0.7:6379</span><br></pre></td></tr></table></figure>
+<p>测试集群效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//逐个任一容器，如：</span><br><span class="line">docker exec -it  r1  bash</span><br><span class="line">./redis-cli -c</span><br><span class="line">cluster nodes   //查看集群节点信息</span><br></pre></td></tr></table></figure>
+<h1 id="源码解析"><a class="markdownIt-Anchor" href="#源码解析"></a> 源码解析</h1>
+<p><a href="https://www.jianshu.com/p/259d35eef3f1" target="_blank" rel="noopener">https://www.jianshu.com/p/259d35eef3f1</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/">Docker环境下的前后端分离项目部署与运维</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
+  <p><span>发布时间:</span>2019年02月24日 - 09:02</p>
+  <p><span>最后更新:</span>2019年03月02日 - 11:03</p>
+  <p><span>原始链接:</span><a href="/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/" title="Docker环境下的前后端分离项目部署与运维">https://chetaofeng.github.io/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用</a> 转载请保留原文链接及作者</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/pub-images/wechatpay.png" alt="行锋 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/pub-images/alipay.png" alt="行锋 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/21/环境搭建-Java程序开发其他配置/" rel="next" title="Java开发其他配置">
+                <i class="fa fa-chevron-left"></i> Java开发其他配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/26/Java-JDBC链接MySQL8的注意事项/" rel="prev" title="JDBC链接MySQL8的注意事项">
+                JDBC链接MySQL8的注意事项 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">127</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发环境要求"><span class="nav-number">2.</span> <span class="nav-text"> 开发环境要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#renren-fast前后端分离项目下载配置"><span class="nav-number">3.</span> <span class="nav-text"> renren-fast前后端分离项目下载配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql集群"><span class="nav-number">4.</span> <span class="nav-text"> MySQL集群</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pxc方案原理"><span class="nav-number">4.1.</span> <span class="nav-text"> PXC方案原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pxc集群搭建"><span class="nav-number">4.2.</span> <span class="nav-text"> PXC集群搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库集群的负载均衡"><span class="nav-number">4.3.</span> <span class="nav-text"> 数据库集群的负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#haproxy使用"><span class="nav-number">4.3.1.</span> <span class="nav-text"> haproxy使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#keepalived实现双机热备"><span class="nav-number">4.3.2.</span> <span class="nav-text"> keepalived实现双机热备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#replication方案原理"><span class="nav-number">4.4.</span> <span class="nav-text"> Replication方案原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pxc集群安装"><span class="nav-number">4.5.</span> <span class="nav-text"> PXC集群安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis集群"><span class="nav-number">5.</span> <span class="nav-text"> Redis集群</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#redis集群方案"><span class="nav-number">5.1.</span> <span class="nav-text"> Redis集群方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rediscluster架构"><span class="nav-number">5.2.</span> <span class="nav-text"> RedisCluster架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis主从同步"><span class="nav-number">5.3.</span> <span class="nav-text"> Redis主从同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rediscluster集群搭建"><span class="nav-number">5.4.</span> <span class="nav-text"> RedisCluster集群搭建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码解析"><span class="nav-number">6.</span> <span class="nav-text"> 源码解析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共128.1k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'chetaofeng',
+            repo: 'chetaofeng.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3a517daf6c3ddafc8d92d32fc3499e190849e1b2',
+            
+                client_id: 'cdad0b52d3b0f16bb4ea'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

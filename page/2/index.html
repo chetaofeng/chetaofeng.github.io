@@ -324,6 +324,1131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/数据库-2018-12-10-MongoDB搭建/" itemprop="url">MongoDB安装</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:23:15+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1解压安装文件"><a class="markdownIt-Anchor" href="#1解压安装文件"></a> (1).解压安装文件</h3>
+<pre><code>[gsunis@gsunis Desktop]$ tar zxvf mongodb-linux-x86_64-3.0.6.tgz
+</code></pre>
+<h3 id="2将mongodb文件移动到usrlocalmongodb目录下"><a class="markdownIt-Anchor" href="#2将mongodb文件移动到usrlocalmongodb目录下"></a> (2).将mongoDB文件移动到/usr/local/mongodb目录下</h3>
+<pre><code>[root@gsunis Desktop]# mv mongodb-linux-x86_64-3.0.6 /usr/local/mongodb
+export PATH=/usr/local/mongodb/bin:$PATH
+</code></pre>
+<h3 id="3数据存储目录"><a class="markdownIt-Anchor" href="#3数据存储目录"></a> (3).数据存储目录</h3>
+<pre><code>[root@gsunis bin]# mkdir -p /home/gsunis/data/db
+mkdir -p /data/conf 
+mkdir -p /data/data1  
+mkdir -p /data/data2  
+mkdir -p /data/data3  
+mkdir -p /data/data4  
+mkdir -p /data/data5  
+mkdir -p /data/data6 
+</code></pre>
+<h3 id="4启动mongod服务"><a class="markdownIt-Anchor" href="#4启动mongod服务"></a> (4).启动mongod服务</h3>
+<pre><code>[root@gsunis Desktop]# cd /usr/local/mongodb/bin
+[root@gsunis bin]# ./mongod --port 27017 --dbpath=/home/gsunis/data/db
+</code></pre>
+<h3 id="5启动mongo客户端"><a class="markdownIt-Anchor" href="#5启动mongo客户端"></a> (5).启动mongo客户端</h3>
+<pre><code>打开新的Terminal
+[gsunis@gsunis Desktop]$ su 
+查看mongod服务启动情况
+[root@gsunis Desktop]# netstat -ntpl | grep 27017
+
+[root@gsunis Desktop]# cd /usr/local/mongodb/bin/
+[root@gsunis bin]# ./mongo
+</code></pre>
+<h3 id="6编辑mongo配置文件"><a class="markdownIt-Anchor" href="#6编辑mongo配置文件"></a> (6).编辑mongo配置文件</h3>
+<pre><code>sudo vi conf.cnf
+
+//conf.cnf  
+rest=true  
+port=37017  
+dbpath=/home/gsunis/data/conf  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/conf/mongodb.log  
+nojournal=false  
+configsvr=true  
+profile=1 
+
+sudo vi db1.cnf
+
+//db1.cnf  
+replSet=shard1  
+rest=true  
+port=47017  
+dbpath=/home/gsunis/data/data1  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data1/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db2.cnf
+
+//db2.cnf  
+replSet=shard2  
+rest=true  
+port=47018  
+dbpath=/home/gsunis/data/data2  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data2/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db3.cnf
+
+//db3.cnf  
+replSet=shard3  
+rest=true  
+port=47019  
+dbpath=/home/gsunis/data/data3  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data3/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db4.cnf
+
+//db4.cnf  
+replSet=shard4  
+rest=true  
+port=47020  
+dbpath=/home/gsunis/data/data4  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data4/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db5.cnf
+
+//db5.cnf  
+replSet=shard5  
+rest=true  
+port=47021  
+dbpath=/home/gsunis/data/data5  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data5/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db6.cnf
+
+//db6.cnf  
+replSet=shard6  
+rest=true  
+port=47022  
+dbpath=/home/gsunis/data/data6  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data6/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+</code></pre>
+<h4 id="7编写启动mongo服务的脚本"><a class="markdownIt-Anchor" href="#7编写启动mongo服务的脚本"></a> (7).编写启动mongo服务的脚本</h4>
+<pre><code>sudo vi mg.sh
+
+#!/bin/bash  
+instance=$1  
+action=$2  
+case &quot;$action&quot; in  
+   'start')  
+/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf ;;  
+   'stop')  
+/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown;;  
+   'restart')  
+/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown  
+/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf;;  
+esac  
+</code></pre>
+<h4 id="8启动docker实例的mongo服务脚本"><a class="markdownIt-Anchor" href="#8启动docker实例的mongo服务脚本"></a> (8).启动docker实例的mongo服务脚本</h4>
+<pre><code>sudo vi start.sh
+
+#!/bin/bash 
+rm /data/conf/*.lock
+rm /data/data1/*.lock	
+rm /data/data2/*.lock
+rm /data/data3/*.lock
+rm /data/data4/*.lock
+rm /data/data5/*.lock
+rm /data/data6/*.lock
+/home/gsunis/data/mg.sh conf start 
+/home/gsunis/data/mg.sh db1 start  
+/home/gsunis/data/mg.sh db2 start  
+/home/gsunis/data/mg.sh db3 start  
+/home/gsunis/data/mg.sh db4 start  
+/home/gsunis/data/mg.sh db5 start
+/home/gsunis/data/mg.sh db6 start  
+</code></pre>
+<p>sudo vi <a href="http://start.sh" target="_blank" rel="noopener">start.sh</a></p>
+<pre><code>#!/bin/bash 
+rm /data/conf/*.lock
+rm /data/data1/*.lock	
+rm /data/data2/*.lock
+rm /data/data3/*.lock
+rm /data/data4/*.lock
+rm /data/data5/*.lock
+rm /data/data6/*.lock
+/home/gsunis/data/mg.sh conf stop 
+/home/gsunis/data/mg.sh db1 stop  
+/home/gsunis/data/mg.sh db2 stop  
+/home/gsunis/data/mg.sh db3 stop  
+/home/gsunis/data/mg.sh db4 stop  
+/home/gsunis/data/mg.sh db5 stop
+/home/gsunis/data/mg.sh db6 stop  
+</code></pre>
+<p>正常关闭mongoDB服务</p>
+<pre><code>./mongo
+use admin
+db.shutdownServer()
+</code></pre>
+<h3 id="9shard服务器副本集的建立"><a class="markdownIt-Anchor" href="#9shard服务器副本集的建立"></a> (9).shard服务器副本集的建立</h3>
+<pre><code>./mongo --port 47017
+
+config = {_id: 'shard1', members: [
+ {_id: 0, host: '10.62.0.128:47017'},
+ {_id: 1, host: '10.62.0.159:47017'}]
+ }
+rs.initiate(config)
+
+Ctrl + C 退出
+
+./mongo --port 47018
+
+config = {_id: 'shard2', members: [
+ {_id: 0, host: '10.62.0.128:47018'},
+ {_id: 1, host: '10.62.0.159:47018'}]
+ }
+rs.initiate(config)
+
+
+./mongo --port 47019
+
+config = {_id: 'shard3', members: [
+ {_id: 0, host: '10.62.0.128:47019'},
+ {_id: 1, host: '10.62.0.159:47019'}]
+ }
+rs.initiate(config)
+
+
+./mongo --port 47020
+
+config = {_id: 'shard4', members: [
+ {_id: 0, host: '10.62.0.128:47020'},
+ {_id: 1, host: '10.62.0.159:47020'}]
+ }
+rs.initiate(config)
+
+./mongo --port 47021
+
+config = {_id: 'shard5', members: [
+ {_id: 0, host: '10.62.0.128:47021'},
+ {_id: 1, host: '10.62.0.159:47021'}]
+ }
+rs.initiate(config)
+
+
+./mongo --port 47022
+
+config = {_id: 'shard6', members: [
+ {_id: 0, host: '10.62.0.128:47022'},
+ {_id: 1, host: '10.62.0.159:47022'}]
+ }
+rs.initiate(config)
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-MySQL与MariaDB对比/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/数据库-MySQL与MariaDB对比/" itemprop="url">MySQL与MariaDB对比</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:22:58+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="mysql与mariadb对比"><a class="markdownIt-Anchor" href="#mysql与mariadb对比"></a> MySQL与MariaDB对比</h1>
+<h2 id="mysql"><a class="markdownIt-Anchor" href="#mysql"></a> MySQL：</h2>
+<blockquote>
+<p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件。</p>
+</blockquote>
+<h2 id="mariadb"><a class="markdownIt-Anchor" href="#mariadb"></a> MariaDB</h2>
+<blockquote>
+<p>甲骨文收购 MySQL 后，由于甲骨文对 MySQL 的开发和维护更多倾向于闭门的立场，很多 MySQL 的开发者和用户放弃了它。在社区驱动下，促使更多人移到 MySQL 的另一个叫 MariaDB 的分支，在原有 MySQL 开发人员的带领下，MariaDB 的开发遵循开源的理念，并确保它的二进制格式与 MySQL 兼容。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/数据库-2018-12-10-MongoDB/" itemprop="url">MongoDB</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:22:58+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.jikexueyuan.com/course/mongoDB/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/mongoDB/</a></p>
+<p>NoSQL数据库：NoSQL(NoSQL = Not Only SQL )，意即&quot;不仅仅是SQL&quot;，指的是非关系型的数据库</p>
+<p>mongodb官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a><br>
+<a href="https://docs.mongodb.com/manual/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/</a></p>
+<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
+MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
+<p>NoSQL保证数据的最终一致性，数据由更新延迟</p>
+<p>CAP理论</p>
+<p>适用场景：数据缓存；json格式数据存储；高伸缩性场景；<br>
+MongoDB更多适合大数据量、高并发、弱事务的互联网应用，其内置的水平扩展机制提供了从几百万到十亿级别的数据处理能力，可很好的满足Web2.0和移动互联网应用的s数据存储要求。</p>
+<p>MongoDB由C++编写，支持32位（2G限制）和64位应用，是一个基于分布式文件存储的开源数据库系统。</p>
+<p>MongoDB3.0特性：</p>
+<ol>
+<li>加入WiredTiger存储引擎:<br>
+开源的存储引擎；为现代硬件设计：多核CPU，充分利用内存／芯片级缓存；RAM/SSD/HDD；为大数据设计：高性能，低延迟，高并发稳定性</li>
+<li>MMAPv1:内存映射存储引擎，为默认引擎 ，提供了Collection锁；无缝迁移MMAP</li>
+<li>可插拔引擎API</li>
+<li>基于Web的可视化管理工具：Ops Manager</li>
+</ol>
+<p>MongoDB数据模型<br>
+文档：本质上是一种类JSON的BSON格式的数据，可以理解为在JSON基础上添加了一些新的数据类型，包括Date，正则表达式等。<br>
+BSON官网：<a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>
+BSON是由一组组键值对组成，具有轻量性、可靠性和高效性3个特征。可遍历性是MongoDB将BSON作为数据存储的重要原因<br>
+使用文档时需要注意以下事项：<br>
+MongoDB中写操作的原子性限制在文档级别；<br>
+单个文档占用的存储空间不能超过16MB；<br>
+MongoDB会尽量保持文档被插入时键值对的顺序；<br>
+关于文档命名需要注意的事项：<br>
+_id是系统保留的关键字，他是默认的主键，该值在集合中必须唯一，且不可更改；<br>
+键不能包含空字符或\0，这个字符用于表示键的结尾；<br>
+不能以$开头且不能包含点号.<br>
+键是区分大小写的且不能重复</p>
+<p>集合：把一组相关的文档放到一起组成了集合，MongoDB的集合是模式自由的，一个集合里面的文档可以是各式各样的<br>
+MogoDB提供了一些特殊的集合：capped collection、system.indexes、system.namespaces等<br>
+集合命名需注意：<br>
+集合名不能是空字符串；<br>
+集合名不能包含空字符串或\0，该字符表示集合名的结尾<br>
+集合名不能以&quot;system.&quot;开头，此前缀是系统本身保留的<br>
+集合名不能包含$字符，但是可以包含点号.</p>
+<p>数据库：多个文档组成集合，多个集合组成数据库。一个MongoDB实例可承载多个数据库，每个数据库有独立的权限，在磁盘上，不同的数据库也可放置到不通目录<br>
+数据库命名规则：<br>
+不能是空字符串；不能以$开头；不能包含空字符串和点号.;数据库名称区分大小写；建议数据库名全部使用小写；数据库名最长64字节；不要与系统保留数据库名相同</p>
+<p>命名空间：把数据库名添加到集合名前面，中间用点号连接，得到集合的完全限定，就是命名空间<br>
+因为点号可以出现在集合名字中，如：jike.blog.posts 和 jike.blog.authors，可以将posts和authors看作是blog集合的子集合，blog集合甚至可以不存在<br>
+使用子集合的方式，可以是我们更好的组织数据，使数据结构更加清晰明了</p>
+<p>MongoDB数据类型<br>
+基本数据类型<br>
+null：表示空值或者不存在的字段<br>
+布尔：true／false<br>
+数据类型：32-int,64-int,64-double,注意：JavaScript只支持64位浮点数<br>
+字符串类型：使用UTF-8对字符串进行编码<br>
+二进制数据：可以保存由任意字节组成的字符串，如：图片、视频等<br>
+正则表达式类型：主要用于查询，使用正则表达式作为限定条件<br>
+Date类型：是一个64位整数，它代表距Unix epoch：1970-1-1的毫秒数，MongoDB在存储时间是现转换为UTC时间，北京时间=UTC+8小时，MongoDB Shell会根据本地时间 设置显示日期时间<br>
+Timestap：32bit Unix epoch + 32bit自增序数，只供MongoDB数据库服务内部使用，用于记录操作的详细时间<br>
+ObjectId：由24个16精制字符组成，每个字节存储两位16精制数字，总共需12字节存储空间=4字节时间戳+3字节机器标识+2字节pid+3字节计数器，ObjectId(),getTimestamp(),valueOf()<br>
+数组：使用方括号来表示的一组值，数组中可以包含不通数据类型的元素，针对数组，MongoDB提供了许多操作符，如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pop,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span></span></span></span>push,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pull,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span></span></span></span>slice,$addToSet等；MongoDB可自动为数组元素建立MultiKey索引<br>
+内嵌文档：文档可以作为键的值，这样的文档成为内嵌文档。内嵌文档可以使数据不用保存成扁平结果的键值对，从而使数据组织形式更加自然。</p>
+<p>内嵌文档模式VS引用文档模式<br>
+子文档比较小或变化不频繁，则使用内嵌文档模式，否则使用引用文档模式</p>
+<p>MongoDB自动将_id字段设置为主键</p>
+<p>MongoDB Shell：是MongoDB自带的JavaScript Shell，随MongoDB一起发布 =JavaScript V8解释器+MongoDB客户端</p>
+<p>help查看帮助<br>
+执行脚本<br>
+直接执行：mongo [–quiet] script.js<br>
+交互执行：load(“script.js”)<br>
+执行命令行程序：run(“ls”)<br>
+.mongorc.js文件，默认会加载<br>
+编辑复合变量EDITOR：在.bashrc中添加后source生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#EDITOR</span><br><span class="line">EDITOR=/usr/bin/vim</span><br></pre></td></tr></table></figure>
+<p>即可使用editor编辑文档</p>
+<p><a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-intro.html</a><br>
+Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。<br>
+GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。<br>
+MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</p>
+<p>MongoDB数据库安装：</p>
+<ol>
+<li>下载安装文件解压缩并添加bin目录到环境变量</li>
+<li>创建一个data目录，然后在data目录里创建db目录、logs目录</li>
+<li>启动服务端</li>
+<li>启动客户端：mongo</li>
+<li>windows下可以将MongoDB做成系统服务</li>
+</ol>
+<p>mac<br>
+临时添加环境变量：export PATH=/usr/local/mongodb/bin:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mi mathvariant="normal">编</mi><mi mathvariant="normal">辑</mi><mtext> </mtext><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>s</mi><msub><mi>h</mi><mi>p</mi></msub><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">：</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">PATH
+编辑~/.bash_profile,添加：export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord cjk_fallback">编</span><span class="mord cjk_fallback">辑</span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:/usr/local/mongodb4/bin/:$PATH 即可永久添加环境变量</p>
+<p>连接MongoDB数据库：./mongo + 服务器IP:端口号/数据库名<br>
+关闭MongoDB服务在 ./mongo 进入控制台后，输入 use admin,然后输入 db.shutdownServer()</p>
+<p>Mongodb可以通过命令行方式和配置文件的方式来启动：<br>
+这两种方式都是在前台启动Mongodb进程，如果Session窗口关闭，Mongodb进程也随之停止。<br>
+不过Mongodb同时还提供了一种后台Daemon方式启动，只需要加上一个&quot;–fork&quot;参数即可，用到了&quot;–fork&quot;参数就必须启用&quot;–logpath&quot;参数<br>
+通过命令行： ./bin/mongod --dbpath=/data/db --fork --logpath=/data/logs/mongodb.log<br>
+配置文件方式：./bin/mongod -f mongodb.conf  或 ./bin/mongod --config mongodb.conf  //-f 后面写要使用的配置文件<br>
+./bin/mongod --shutdown -f mongod.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">dbpath=/usr/local/mongodb/data/</span><br><span class="line">logpath=/usr/local/mongodb/log/mongodb.log  </span><br><span class="line">fork = true</span><br></pre></td></tr></table></figure>
+<p>命令行操作：<br>
+use mytetDB  //数据库如果不存在则创建<br>
+save时如果给定了_ObjectId则更新创建整条记录；如果要更新部分字段则使用update方法使用$set<br>
+db.dropDatabase()<br>
+db//显示当前数据库<br>
+show dbs<br>
+show collections</p>
+<p>有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。<br>
+admin： 从权限的角度来看，这是&quot;root&quot;数据库。要是将一个用户添加到这个数据库，这个用户自动继承所有数据库的权限。一些特定的服务器端命令也只能从这个数据库运行，比如列出所有的数据库或者关闭服务器。<br>
+local: 这个数据永远不会被复制，可以用来存储限于本地单台服务器的任意集合<br>
+config: 当Mongo用于分片设置时，config数据库在内部使用，用于保存分片的相关信息。</p>
+<p>MongoDB GridFS文件系统<br>
+分布式文件系统：将固定存储于单台机器上的文件系统，扩展到多台机器上，每个节点负责存储部分数据，众多的存储节点组成一个文件系统网络，各个节点通过网络进行通信和数据传输</p>
+<p>当存储文档大于16M时，可以考虑使用GridFS<br>
+GridFS：是MongoDB制定的如何在数据库中存储大文件的规范，MongoDB并没有实现GridFS，而是交由客户端驱动程序实现<br>
+GridFS使用两个集合（collection）存储文件。一个集合是chunks, 用于存储文件内容的二进制数据；一个集合是files，用于存储文件的元数据。<br>
+使用fs.files存储文件的元数据，包含字段如下：<br>
+使用fs.chunks存储以255K进行分割的文件块，包含字段如下：<br>
+GridFS适用于如下场景：<br>
+存储用户产生的文件且文件数量比较大；需要文件的自动备份和分布式存储；需要访问文件的部分内容；存储16MB以上的文件<br>
+mongofiles是MongoDB安装包中提供的一个工具，专门用来存取文件，包括查询所有文件、查看文件、上传一个文件、获取一个文件、按照_id来获取文件、按文件名删除文件、按_id删除文件。<br>
+mongofiles --help其实有四个主要命令，分别为：<br>
+put —存储命令<br>
+get —获取命令<br>
+list —列表命令<br>
+delete —删除命令</p>
+<p>MongoDB聚合管道：聚合操作主要用户批量数据处理，往往将记录按条件分组，然后在每组上分别进行一系列操作，如：求和、求最大小值等<br>
+聚合操作能够对记录进行复杂处理，主要为数理统计和数据挖掘。<br>
+MongoDB提供了3种聚合操作方式：<br>
+聚合管道（Aggregation Pipeline）:MongoDB Shell使用db.collection.aggregate([{…}])来构建和使用聚合管道<br>
+$project:用于修改文档的结构，可以重命名、增加或删除文档字段<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">滤</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi></mrow><annotation encoding="application/x-tex">match:用于过滤文档，在</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">滤</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span></span></span></span>match中不能使用$where,尽量出现在管道的前面，方便借助索引加快查询<br>
+$group:将集合中的文档进行分组，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
+$sort:将集合中的文档进行排序，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
+$skip:跳过指定数量的文档<br>
+$unwind:将文档按照数组字段拆分成多条文档，每条文档包含数组的一个元素<br>
+$geoNear:按照由近到远顺序输出接近某一地理位置的文档<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">将</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">储</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">阶</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">键</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">构</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">：</mi><mn>1</mn><mi mathvariant="normal">将</mi></mrow><annotation encoding="application/x-tex">out:将聚合结果存储到集合中，参数为集合名称
+    。。。
+    聚合管道表达式：阶段操作符可以看作是&quot;键&quot;，所对应的&quot;值&quot;称为管道表达式，管道表达式可以看作是管道操作符的操作数，管道表达式是一个文档结构，由字段名、字段值和表达式操作符组成。
+    聚合管道使用优化：
+    1将</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">储</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">阶</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord">&quot;</span><span class="mord cjk_fallback">键</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord">&quot;</span><span class="mord cjk_fallback">值</span><span class="mord">&quot;</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord">1</span><span class="mord cjk_fallback">将</span></span></span></span>match、$sort放到管道开始阶段，有利于利用索引提高文档处理效率<br>
+2提交过滤可减少流经后续阶段的文档数量<br>
+聚合管道的限制：<br>
+1返回文档结果不能超过16M，可通过返回一个游标或存储到集合中跳过此限制<br>
+单目的聚合操作<br>
+count<br>
+distinct<br>
+group<br>
+MapReduce编程模型</p>
+<p>mongoimport可以导入集合</p>
+<p>MongoDB数据更新<br>
+文档插入和删除：insert、update、delete<br>
+Bulk函数：Bulk可将多个数据更新操作放到一个待执行的列表中批量来执行，顺序执行的Bulk（按添加顺序执行，一个有问题则退出）和并执行的Bulk（随机方式并行）<br>
+1初始化Bulk：<br>
+并行：db.集合名.initializeUnorderedBulkOp()<br>
+顺序：db.集合名.initializeOrderedBulkOp()<br>
+2 bulk.inset({…})<br>
+3 bulk.execute()</p>
+<p>MMAPv1的内存分配策略：如果一个更新操作超过了文档在磁盘上预分配的空间，MongoDB会重新在磁盘上为其分配一块更大的连续空间。使用&quot;2的N次方&quot;的方式分配内存，如：32，64，128，256…2M，4M…<br>
+优点：1有利用内存的重用，降低系统碎片的数量；2减少数据移动频率，提高系统数据写效率</p>
+<p>文档修改<br>
+WriteResult = db.集合名.update(query,obj,upsert,multi)<br>
+query:查询条件，相当于where<br>
+obj：更改的内容，相当于SQL中的set语句<br>
+upsert：当query的文档不存在时是否插入一条新文档<br>
+multi：当query返回多个文档时是否一次更新满足条件的所有文档，默认只更新一条</p>
+<p>内嵌文档的修改：</p>
+<ol>
+<li>修改整个内嵌文档：{$set:{field1:新内嵌文档}}</li>
+<li>修改内嵌文档的某个字段：{$某个修改操作符:{field1.field2:value}}</li>
+</ol>
+<p>数组元素：MongoDB提供了大量的特定操作符，使得数组既可以作为栈、队列等有序对象使用，也可当作集合等无序对象来使用</p>
+<p>MongoDB的写安全机制<br>
+写过程：使用update、save等操作数据集合中数据时，只是修改了数据再内存中的映像，数据更新并没有同步地保存到磁盘上，而且更新内存中数据之前，更新操作会被记录到journal日志文件中，<br>
+每隔100ms将内存journal中的日志写到磁盘journal日志文件中 ，每隔60s将内存中修改的数据写会到磁盘上<br>
+写入安全级别：写入安全Write Concern是一种客户端设置的，用于控制写入安全级别的机制，通过写入安全机制可提高数据的可靠性。<br>
+分为四个级别，分别是：<br>
+非确认式写入Unacknowledged：写操作不会返回结果，所以无法知道是否写入成功；但速度快、效率高、无阻塞<br>
+确认式写入Acknowledged：写操作必须得到MongoDB服务器的写入确认，如果失败，会返回异常<br>
+日志写入Journaled：写操作要等到操作记录存储到Journal日志文件后才返回结果<br>
+复制集确认写入Replica Acknowledged：写操作不仅要得到主节点的写入确认，还要得到从节点的写入确认，可以设置写入节点的个数（包含主节点）</p>
+<p>journal日志相当于oracle中的redo日志文件，用户故障恢复和持久。Journal默认100ms刷新一次，所以最多丢失100ms数据<br>
+文件位于journal目录中，只能以追加方式添加数据，文件名以&quot;j._&quot;开头，超过1G会自动创建新的；数据库正常关闭时，数据库服务会自动清空journal目录下所有文件</p>
+<p>设置写安全操作级别，其实就是在写操作的性能和可靠性间取一个权衡；使用的写操作级别越高，时间越长，可靠性越高</p>
+<p>使用writeConcern函数作为更新函数的一个参数来设置写安全级别,如：db.集合名称.insert({name:“joe”},{writeConcern:{j:true}}),writeConcern函数参数如下：<br>
+w选项，可选择0，1，2等整数值及&quot;majority&quot;，0-非确认式写入 1-确认式写入（未启用复制集）／主节点确认式写入（启用了复制集），&gt;1只能用于复制集，2-数据至少写到1个从节点后返回，majority 只能用于复制集，表示更新操作用到大多数从节点<br>
+j选项，设置为true来使用journaled日志安全级别<br>
+wtimeout选项，用于设置超时单位为毫秒<br>
+以上选项可组合使用</p>
+<p>数据MongoDB数据查询<br>
+Cursor = db.集合名称.find(query,fields,limit,skip)<br>
+query:查询条件，相当于where<br>
+fields:用于字段映射，语法格式：{field:0}（0表示返回结果不包含此字段）或{field:1}（1表示返回结果不包含此字段），默认包含_id字段,相当于select中后面需要的字段<br>
+limit：限制查询结果集的数量，指定查询返回结果的数量上限，也可通过limit()实现<br>
+skip:跳过一定数据量的结果，设置第一条返回文档的偏移量，也可通过skip()实现<br>
+find查询只能正对一个集合；返回的集合默认是无序的</p>
+<p>db.集合名称.findOne()只返回第一条数据</p>
+<p>查询操作符<br>
+比较查询操作符<br>
+逻辑查询操作符<br>
+元素查询操作符<br>
+$where查询操作符：可以将JavaScript表达式的字符串或JavaScript函数作为查询语句的一部分，在js表达式和函数中，可使用this或obj来引用当前操作的文档，当js表达式或函数返回true时，才会返回当前文档</p>
+<p>内嵌文档与数组查询<br>
+内嵌文档查询<br>
+1查询整个内嵌文档：当内嵌文档的键值对数量和键值对顺序都相同时，才会匹配<br>
+2查询文档的某个字段：需要使用.号操作符，如:db.user.find({“address.city”:“BeiJing”})<br>
+数组查询<br>
+1查询整个数组：当数组元素内容和数组元素顺序都相同时，才会匹配<br>
+2查询数组中的元素（普通元素）：<br>
+A与位置无关，查询数组中含有某个值的文档，如：db.user.find({score:80})<br>
+B与位置有关，按照指定的数组索引查询数组元素的值，如：db.user.find({‘scores.2’:80})<br>
+3查询数组中的数组元素是文档时，查询数组元素有两种情况<br>
+A与位置无关，查询数组中满足条件的子文档元素，如：db.user.find(‘scores.成绩’：95)<br>
+B与位置有关，按照指定的数组索引查询数组子文档，如： db.user.find(‘scores.2.成绩’：95)</p>
+<p>MongoDB查询结果返回过程：find函数查询结果是以多条文档的形式分批来返回查询结果的，返回的文档会缓存到内存中，Cursor在一批数据回来之后遍历，下一批没来时会自动发起下一批请求，然后继续遍历</p>
+<p>MongoDB游标：用来遍历结果集中的数据。<br>
+游标的生命周期：创建、使用、销毁<br>
+游标可能会返回那些由于体积变大而被移动到集合末尾的文档而重复返回，可通过对查询快照的方式解决此问题，语法为：db.collection.find().snapshot().<br>
+使用快照之后，查询就会在_id索引上来遍历执行，这样就可以保证每个文档只被返回一次，从而保证获取结果的一致性。</p>
+<p>模糊查询：查询条件可以使用正则表达式实现模糊查询，支持正则表达式操作符和正则表达式对象两种。<br>
+正则表达式操作符：$regex</p>
+<p>findAndModify函数使用执行分为find和update两步，但可以保证操作的原子性</p>
+<p>MongoDB是为分布式存储而设计，_id主键默认使用ObjectId类型的值，比自增方式更适合分布式环境，所以MongoDB默认不支持字段自增长功能</p>
+<p>MongoDB索引：数据库索引是对数据表中一列或多列的值进行排序的一种数据结构，使用索引可快速访问数据表中的特定信息。MogonDB索引不仅提高文档查询速度，还有利于排序时节省内存资源。<br>
+MongoDB所有的索引信息被保存在system.indexes集合中，且默认总为_id创建单字段升序具有唯一属性的索引，可通过db.system.indexes.find()查看所有索引<br>
+MongoDB可在单个字段上建立索引，字段可以是普通字段、整个文档以及子文档的某个字段<br>
+对于复合索引，MongoDB支持前缀匹配<br>
+为确保查询只使用复合索引，可以使用映射来指定不要返回_id字段（除非它是复合索引的一部分）<br>
+多键索引：是对数组类型建立的索引，实际上是对数组的每个元素建立索引，而不是数组本身建立索引；当数组元素是文档时，可为文档的某个字段建立多键索引<br>
+哈希索引：只支持等值查询，不支持范围查询，主要用于分片的集合上，可以作为片键来使用，能将数据比较均匀的分散存储在各个分片上，如：db.集合名.createIndex({name:“hashed”})</p>
+<p>MongoDB索引的属性<br>
+唯一索引:可以确保集合的每一个文档的索引字段都有唯一的值，不会出现重复值，如：db.集合名.createIndex({name:1},{unique:true})，在非空集合创建唯一索引可能会因为已有重复值而失败，可添加dropBups:true删除重复文档<br>
+稀疏索引：只会为索引字段存在的文档建立索引，即使索引字段的值为null，但不会为索引字段不存在的文档建立索引<br>
+TTL(Time To Live)索引：为文档设置一个超时时间，当达到预设置的时间后，该文档会被数据库自动删除，但删除可能有延迟。这种类型的索引对缓存问题非常有用。只能建立在单独非_id字段<br>
+创建了TTL索引后，MongoDB会有一个后台线程来管理文档；在复制集上建立的TTL索引，TTL后台线程只会运行在主节点上</p>
+<p>MongoDB索引的管理<br>
+索引的默认命名规则：keyname1_dir1_keyname2_dir2…，其中keynameX是索引字段的名称，dirX是索引方向，1升序-1降序，也可自定义命名<br>
+创建索引：db.集合名.createIndex(keys,options),返回值为一个文档类型。索引一旦创建就不能修改，创建后可通过db.集合名.getIndexes()查看集合所拥有的索引，创建索引有两种方式：<br>
+1foreground:阻塞所有对数据库的读写请求，直到索引创建完成，为默认方式<br>
+2background：创建索引时，如果有新的数据库请求，创建过程会暂停<br>
+删除索引：db.集合.dropIndex(index)<br>
+查询优化器：用来优化查询过程，通过比较返回100条文档速度得到最佳查询计划<br>
+explain函数：能够提供大量与查询有关的信息，可以很好的评估索引性能，帮助优化索引的使用策略。db.集合.find().explain(mode),支持3种模式：<br>
+1queryPlanner：查询计划，默认<br>
+2executionStatus：查询性能统计<br>
+3allPlansExecution：所有计划统计信息（最优与被拒绝的计划）<br>
+explain返回结果使用由多个阶段（Stage）组成的树形结构来表示查询计划，查询计划自下而上执行，树的叶节点用来访问文档或索引，内部节点处理下层节点返回文档或索引，根节点输出查询结果<br>
+hint函数：强制MongoDB使用特定索引</p>
+<p>MongoDB特殊索引<br>
+地理空间索引：对地理位置数据建立索引，MongoDB支持两种2dsphere球面索引和平面2d索引<br>
+2dSphere球面索引<br>
+2d平面索引</p>
+<p>全文索引：又称为倒排索引，用于在大量文本中对每一个词组建立索引，指出该词在整段文本中出现的位置和次数，此技术主要用于搜索引擎和站内搜索等。<br>
+一个集合只能有一个全文索引</p>
+<p>java对mongodb的使用<br>
+集群搭建：mongodb分布式集群搭建手记</p>
+<p>学习：<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html" target="_blank" rel="noopener">http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html</a></p>
+<p>分析没有默认的，因为你还没给root设置密码，第一个 user 是在 admin 组 ，所以他可以给 root 设置密码 , so<br>
+sudo passwd root</p>
+<p>Language Support</p>
+<p><a href="http://blog.csdn.net/sinat_35418761/article/details/53241481" target="_blank" rel="noopener">http://blog.csdn.net/sinat_35418761/article/details/53241481</a></p>
+<p><a href="http://www.2cto.com/database/201504/395442.html" target="_blank" rel="noopener">http://www.2cto.com/database/201504/395442.html</a><br>
+<a href="http://www.myexception.cn/operating-system/1685604.html" target="_blank" rel="noopener">http://www.myexception.cn/operating-system/1685604.html</a></p>
+<p><a href="https://my.oschina.net/chinacaptain/blog/465723" target="_blank" rel="noopener">https://my.oschina.net/chinacaptain/blog/465723</a></p>
+<p><a href="http://api.mongodb.com/java/current/" target="_blank" rel="noopener">http://api.mongodb.com/java/current/</a></p>
+<p>MongoDB是什么<br>
+MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
+他的特点:高性能、易部署、易使用，存储数据非常方便。</p>
+<p>Bson：Binary Serialized Document Format，是一种类json的一种二进制形式的存储格式，简称Binary JSON，它和JSON一样，支持内嵌的文档对象和数组对象，但是BSON有JSON没有的一些数据类型，如Date和BinData类型</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-禁用SELinux时配置错误导致系统不能够启动的解决方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/Linux-禁用SELinux时配置错误导致系统不能够启动的解决方法/" itemprop="url">禁用SELinux时配置错误导致系统不能够启动的解决方法</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:21:27+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>CentOS在安装某些软件的时候，需要关闭SELinux，在修改配置文件/etc/selinux/config过程中，设置方法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># SELINUX=enforcing</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+<p>如果设置之后，没有设置回来，则启动的时候就会无法启动，解决办法为：</p>
+<ul>
+<li>系统启动的时候，按下‘e’键进入grub编辑界面，</li>
+<li>编辑grub菜单，选择“kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet” 一栏</li>
+<li>按‘e’键进入编辑</li>
+<li>在末尾增加enforcing=0，即：<br>
+kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enforcing=0</li>
+<li>按‘b’键继续引导，OK顺利前进。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-设置网络自动启动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -957,6 +2082,168 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
+</blockquote>
+<blockquote>
+<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
+</blockquote>
+<blockquote>
+<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
+<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
+<p>Centos7解决图形界面卡死问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS下yum源的搭建与使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1147,956 +2434,6 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
-</blockquote>
-<blockquote>
-<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
-</blockquote>
-<blockquote>
-<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
-<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
-<p>Centos7解决图形界面卡死问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS系统GRUB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-CentOS系统GRUB/" itemprop="url">CentOS系统GRUB</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<blockquote>
-<p>Grub（GRand Unified Bootloader）是统一资源引导器，也就是引导加载器；它的工作是提供一个菜单，允许用户选择要启动的系统或不同的内核版本；把用户选定的内核装载到RAM中的特定空间中，然后解压、展开，而后把系统控制权移交给内核</p>
-</blockquote>
-<blockquote>
-<p>它目前有两个版本：</p>
-</blockquote>
-<ol>
-<li>GRUB 0.X：Grub Legacy</li>
-<li>GRUB 1.X：Grub2</li>
-</ol>
-<p><img src="http://note.youdao.com/yws/api/personal/file/WEB1757c30da1a3a8c8f9ff3272fc6119ea?method=download&amp;shareKey=df69cd3a77eed3186307b58a07a55ad5" alt="Grub启动流程图"></p>
-<h1 id="grub-legacy概述"><a class="markdownIt-Anchor" href="#grub-legacy概述"></a> Grub Legacy概述</h1>
-<blockquote>
-<p>Grub Legacy是最经典的Grub程序。它分为三个部分stage1、stage1_5和stage2</p>
-</blockquote>
-<ol>
-<li>stage1</li>
-</ol>
-<blockquote>
-<p>即写入mbr中存储的bootloader程序。它的任务就是将stage1_5（此时并不能算是磁盘分区/boot/grub/下的stage1_5,因为stage1无法识别文件系统）载入内存执行</p>
-</blockquote>
-<ol start="2">
-<li>stage1_5</li>
-</ol>
-<blockquote>
-<p>位于mbr之后的扇区，通过提供基本文件系统驱动让stage1中的bootloader程序能识别磁盘分区/boot/grub/上的stage2文件并载入内存执行</p>
-</blockquote>
-<p>注意：此处若是boot分区的文件系统类型不属于stage1_5的中的一个，则会借助ramdisk来加载在/lib64/moudles/下额外的文件系统驱动。</p>
-<ol start="3">
-<li>stage2</li>
-</ol>
-<blockquote>
-<p>这个程序主要给用户提供一个比较友好的启动菜单，而后去加载位于同一个磁盘分区/boot/的内核文件（例如 vmlinuz-2.6.32-573.el6.x86_64）</p>
-</blockquote>
-<h1 id="grub的配置文件和功用"><a class="markdownIt-Anchor" href="#grub的配置文件和功用"></a> Grub的配置文件和功用</h1>
-<blockquote>
-<p>配置文件：/boot/grub/grub.conf，保证grub和内核等在一个目录；此外它创建了一个链接文件/etc/grub.conf指向配置文件来保证用户使用配置文件一致性</p>
-</blockquote>
-<p>配置项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">default=#：设定默认启动的菜单项：菜单项（title）编号从0开始</span><br><span class="line">timeout=#：指定菜单项等待选项选择的时长；</span><br><span class="line">splashimage=(hd#,#)/PATH/TO/XPM_PIC_FILE：指明菜单背景图片文件路径；</span><br><span class="line">hiddemenu：隐藏菜单</span><br><span class="line">password [--md5] STRING：菜单编辑认证；</span><br><span class="line">title TITLE：定义菜单项“标题”，可出现多次；</span><br><span class="line">   root（hd#，#）：grub查找stage2及kernel文件所在设备分区：为grub的“根”</span><br><span class="line">   kernel /PATH/TO/VMLINUZ_FILE [PARAMETERS]：启动的内核</span><br><span class="line">   initrd /PATH/TO/INITRAMFS_FILE：内核匹配的ramfs文件</span><br><span class="line">   password [--md5] STRING：启动选定的内核或者操作系统进行认证；</span><br></pre></td></tr></table></figure>
-<p>示例：</p>
-<blockquote>
-<p>/boot/grub/menu.lst 或者 /boot/grub/grub.conf  CentOS下这两个文件是绑定的</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># grub.conf generated by anaconda     </span><br><span class="line">#     </span><br><span class="line"># Note that you do not have to rerun grub after making changes to this file     </span><br><span class="line"># NOTICE:  You have a /boot partition.  This means that     </span><br><span class="line">#          all kernel and initrd paths are relative to /boot/, eg.     </span><br><span class="line">#          root (hd1,0)     </span><br><span class="line">#          kernel /vmlinuz-version ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">#          initrd /initrd-version.img     </span><br><span class="line">#boot=/dev/sdb     </span><br><span class="line">default=0    </span><br><span class="line">timeout=5    </span><br><span class="line">splashimage=(hd0,0)/grub/splash.xpm.gz     </span><br><span class="line">hiddenmenu     </span><br><span class="line">title CentOS (2.6.18-274.3.1.el5)     </span><br><span class="line">        root (hd0,0)     </span><br><span class="line">        kernel /vmlinuz-2.6.18-274.3.1.el5 ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">        initrd /initrd-2.6.18-274.3.1.el5.img     </span><br><span class="line">title CentOS (2.6.18-238.el5)     </span><br><span class="line">        root (hd0,0)     </span><br><span class="line">        kernel /vmlinuz-2.6.18-238.el5 ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">        initrd /initrd-2.6.18-238.el5.img     </span><br><span class="line">title Other     </span><br><span class="line">        rootnoverify (hd0,3)     </span><br><span class="line">        chainloader +1</span><br></pre></td></tr></table></figure>
-<p>功用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 提供菜单、并提供交互式接口</span><br><span class="line">* e：编辑模式，用于编辑菜单</span><br><span class="line">* c：命令模式，交互式接口</span><br><span class="line">2. 加载用户选择的内核或操作系统</span><br><span class="line">* 允许传递参数给内核；可隐藏此菜单（通过grub.conf中的hiddenmenu）</span><br><span class="line">3. 为菜单提供了保护机制</span><br><span class="line">* 为编辑菜单进行认证（title上定义的password）</span><br><span class="line">* 为启用内核或者操作系统进行认证（title下的password字段）</span><br></pre></td></tr></table></figure>
-<h1 id="grub的命令行接口和编辑功能"><a class="markdownIt-Anchor" href="#grub的命令行接口和编辑功能"></a> Grub的命令行接口和编辑功能</h1>
-<ol>
-<li>进入grub的命令行界面和编辑界面</li>
-</ol>
-<ul>
-<li>启动机器时，按ESC键可进入内核选择界面</li>
-<li>按c可进入命令行界面</li>
-<li>按e可进入编辑界面</li>
-</ul>
-<ol start="2">
-<li>rub的命令行命令和编辑命令</li>
-</ol>
-<p>grub的命令行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">help：获取帮助信息</span><br><span class="line">help KEYWORD：获取某一具体命令的帮助信息</span><br><span class="line">find (hd#,#)/PATH/TO/SOMEFFILE：查找文件（内核文件等）</span><br><span class="line">root (hd#,#)：设定那个磁盘是根，执行后，fnd不需指磁盘了；</span><br><span class="line">kernel /PATH/TO/KERNEL_FILE：设定本次启动时用到的内核文件；</span><br><span class="line">initrd /PATH/TO/OMOTRAMFS_FILE：设定为选定的initrd文件</span><br><span class="line">boot：引导启动选定的内核；</span><br></pre></td></tr></table></figure>
-<p>grub的编辑命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">b：boot，启动</span><br><span class="line">e：edit，编辑选中的项</span><br><span class="line">o：在选中行的下一行新加一行</span><br><span class="line">O：在选中行的上一行添加一行</span><br><span class="line">d：删除选中行</span><br><span class="line">ESC：可以退出编辑界面进入主界面</span><br></pre></td></tr></table></figure>
-<h1 id="grub的安装"><a class="markdownIt-Anchor" href="#grub的安装"></a> grub的安装</h1>
-<ol>
-<li>grub-install</li>
-</ol>
-<p>使用格式：grub-install --root-directory=/PATH/TO/rootDIR DEVICE<br>
-示例：grub-install --root-directory=/ /dev/sda3<br>
-2. grub命令（shell中输入）</p>
-<p>grub&gt; root (hd0,0)</p>
-<p>grub&gt; setup (hd0)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS时钟同步设置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-CentOS时钟同步设置/" itemprop="url">CentOS时钟同步设置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<ul>
-<li>网络时间协议NTP（Network Time Protocol）是用于互联网中时间同步的标准互联网协议</li>
-<li>NTP的用途是把计算机的时间同步到某些时间标准。目前采用的时间标准是世界协调时UTC（Universal Time Coordinated）</li>
-<li>NTP的主要开发者是美国特拉华大学的David L. Mills教授</li>
-</ul>
-<h1 id="ntp在linux下有两种时钟同步方式"><a class="markdownIt-Anchor" href="#ntp在linux下有两种时钟同步方式"></a> NTP在linux下有两种时钟同步方式</h1>
-<ol>
-<li>直接同步:使用ntpdate命令进行同步，直接进行时间变更。如果服务器上存在一个12点运行的任务，当前服务器时间是13点，但标准时间时11点，使用此命令可能会造成任务重复执行。因此使用ntpdate同步可能会引发风险，因此该命令也多用于配置时钟同步服务时第一次同步时间时使用。</li>
-<li>平滑同步:使用ntpd进行时钟同步，可以保证一个时间不经历两次，它每次同步时间的偏移量不会太陡，是慢慢来的，这正因为这样，ntpd平滑同步可能耗费的时间比较长。</li>
-</ol>
-<h1 id="标准时钟同步服务"><a class="markdownIt-Anchor" href="#标准时钟同步服务"></a> 标准时钟同步服务</h1>
-<blockquote>
-<p><a href="http://www.pool.ntp.org/zone/cn" target="_blank" rel="noopener">http://www.pool.ntp.org/zone/cn</a> 网站包含全球的标准时间同步服务，也包括对中国时间的同步，<a href="http://xn--URLcn-gq1h343fqye1p9d.pool.ntp.org" target="_blank" rel="noopener">对应的URL为cn.pool.ntp.org</a></p>
-</blockquote>
-<p>国内常用的时间服务器列表：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">210.72.145.44  (国家授时中心服务器IP地址) </span><br><span class="line">ntp.sjtu.edu.cn 202.120.2.101 (上海交通大学网络中心NTP服务器地址）</span><br><span class="line">s1a.time.edu.cn	北京邮电大学</span><br><span class="line">s1b.time.edu.cn	清华大学</span><br><span class="line">s1c.time.edu.cn	北京大学</span><br><span class="line">s1d.time.edu.cn	东南大学</span><br><span class="line">s1e.time.edu.cn	清华大学</span><br><span class="line">s2a.time.edu.cn	清华大学</span><br><span class="line">s2b.time.edu.cn	清华大学</span><br><span class="line">s2c.time.edu.cn	北京邮电大学</span><br><span class="line">s2d.time.edu.cn	西南地区网络中心</span><br><span class="line">s2e.time.edu.cn	西北地区网络中心</span><br><span class="line">s2f.time.edu.cn	东北地区网络中心</span><br><span class="line">s2g.time.edu.cn	华东南地区网络中心</span><br><span class="line">s2h.time.edu.cn	四川大学网络管理中心</span><br><span class="line">s2j.time.edu.cn	大连理工大学网络中心</span><br><span class="line">s2k.time.edu.cn CERNET桂林主节点</span><br><span class="line">s2m.time.edu.cn 北京大学</span><br></pre></td></tr></table></figure>
-<h2 id="具体设置步骤如下"><a class="markdownIt-Anchor" href="#具体设置步骤如下"></a> 具体设置步骤如下：</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* rpm -q ntp    //使用rpm检查ntp包是否安装,有则显示如：ntp-4.2.6p5-19.el7.centos.3.x86_64</span><br><span class="line">* 如果已经安装则略过此步，否则使用yum进行安装，并设置系统开机自动启动并启动服务</span><br><span class="line"> 1. yum -y install ntp</span><br><span class="line"> 2. systemctl enable ntpd</span><br><span class="line"> 3. systemctl start ntpd</span><br><span class="line">* 设置ntp服务器: 192.168.11.212</span><br><span class="line">  配置前先使用命令：ntpdate -u cn.pool.ntp.org，同步服务器</span><br><span class="line">* 修改/etc/ntp.conf文件，修改内容如下：</span><br><span class="line"> 1. ntp服务器设置</span><br><span class="line"> </span><br><span class="line"> 2. ntp客户端设置</span><br><span class="line"> </span><br><span class="line">* systemctl restart ntpd    //修改完成后重启ntpd服务</span><br><span class="line">* 启动后，查看同步情况</span><br><span class="line"> 1. ntpq -p //查看网络中的NTP服务器，同时显示客户端和每个服务器的关系</span><br><span class="line"> 2. ntpstat //查看时间同步状态，这个一般需要5-10分钟后才能成功连接和同步</span><br></pre></td></tr></table></figure>
-<h2 id="参数说明"><a class="markdownIt-Anchor" href="#参数说明"></a> 参数说明</h2>
-<blockquote>
-<p>用restrict控管权限</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nomodify - 用户端不能更改ntp服务器的时间参数 </span><br><span class="line">noquery - 用户端不能使用ntpq，ntpc等命令来查询ntp服务器 </span><br><span class="line">notrap - 不提供trap远端登陆</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ntpq -p 查看网络中的NTP服务器,每项说明如下</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 响应的NTP服务器和最精确的服务器</span><br><span class="line">+ 响应这个查询请求的NTP服务器</span><br><span class="line">blank(空格) 没有响应的NTP服务器</span><br><span class="line">remote  响应这个请求的NTP服务器的名称</span><br><span class="line">refid   NTP服务器使用的更高一级服务器的名称</span><br><span class="line">st  正在响应请求的NTP服务器的级别</span><br><span class="line">when    上一次成功请求之后到现在的秒数</span><br><span class="line">poll    本地和远程服务器多少时间进行一次同步，单位秒，在一开始运行NTP的时候这个poll值会比较小，服务器同步的频率大，可以尽快调整到正确的时间范围，之后poll值会逐渐增大，同步的频率也就会相应减小</span><br><span class="line">reach   用来测试能否和服务器连接，是一个八进制值，每成功连接一次它的值就会增加</span><br><span class="line">delay   从本地机发送同步要求到ntp服务器的往返时间</span><br><span class="line">offset  主机通过NTP时钟同步与所同步时间源的时间偏移量，单位为毫秒，offset越接近于0，主机和ntp服务器的时间越接近</span><br><span class="line">jitter  统计了在特定个连续的连接数里offset的分布情况。简单地说这个数值的绝对值越小，主机的时间就越精确</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-Linux下scp命令详解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-Linux下scp命令详解/" itemprop="url">CentOS修改Root密码</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="scp简介"><a class="markdownIt-Anchor" href="#scp简介"></a> scp简介</h1>
-<p>scp是secure copy的简写，用于在Linux下进行远程拷贝文件的命令，和它类似的命令有cp，不过cp只是在本机进行拷贝不能跨服务器，而且scp传输是加密的。可能会稍微影响一下速度。</p>
-<h1 id="scp作用说明"><a class="markdownIt-Anchor" href="#scp作用说明"></a> scp作用说明</h1>
-<ol>
-<li>我们需要获得远程服务器上的某个文件，远程服务器既没有配置ftp服务器，没有开启web服务器，也没有做共享，无法通过常规途径获得文件时，只需要通过scp命令便可轻松的达到目的</li>
-<li>我们需要将本机上的文件上传到远程服务器上，远程服务器没有开启ftp服务器或共享，无法通过常规途径上传是，只需要通过scp命令便可以轻松的达到目的。</li>
-</ol>
-<h1 id="使用举例"><a class="markdownIt-Anchor" href="#使用举例"></a> 使用举例</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#将本地文件拷贝到服务器上</span><br><span class="line">scp -rp /path/filename username@remoteIP:/path </span><br><span class="line">#将远程文件从服务器下载到本地</span><br><span class="line">scp -rp username@remoteIP:/path/filename /path </span><br><span class="line"></span><br><span class="line">#压缩传输</span><br><span class="line">tar cvzf - /path/ | ssh username@remoteip &quot;cd /some/path/; cat -&gt; path.tar.gz&quot; </span><br><span class="line">#压缩传输一个目录并解压</span><br><span class="line">tar cvzf - /path/ | ssh username@remoteip &quot;cd /some/path/; tar xvzf -&quot;</span><br></pre></td></tr></table></figure>
-<h1 id="脚本方式举例"><a class="markdownIt-Anchor" href="#脚本方式举例"></a> 脚本方式举例</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash  </span><br><span class="line">ssh root@192.168.0.23   &lt;&lt; remotessh  </span><br><span class="line">killall -9 java  </span><br><span class="line">cd /data/apache-tomcat-7.0.53/webapps/  </span><br><span class="line">exit  </span><br><span class="line">remotessh</span><br></pre></td></tr></table></figure>
-<p>远程执行的内容在“&lt;&lt; remotessh ” 至“ remotessh ”之间，在远程机器上的操作就位于其中，注意的点：&lt;&lt; remotessh，ssh后直到遇到remotessh这样的内容结束，remotessh可以随便修改成其他形式。在结束前，加exit退出远程节点</p>
-<h1 id="参数"><a class="markdownIt-Anchor" href="#参数"></a> 参数</h1>
-<ul>
-<li>-v 和大多数 linux 命令中的 -v 意思一样 , 用来显示进度 . 可以用来查看连接 , 认证 , 或是配置错误</li>
-<li>-C 使能压缩选项</li>
-<li>-4 强行使用 IPV4 地址</li>
-<li>-6 强行使用 IPV6 地址</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-Shell脚本调试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-Shell脚本调试/" itemprop="url">Shell脚本调试</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<blockquote>
-<p>shell编程在unix/linux世界中使用得非常广泛，熟练掌握shell编程也是成为一名优秀的unix/linux开发者和系统管理员的必经之路</p>
-</blockquote>
-<blockquote>
-<p>与其它高级语言相比，shell解释器缺乏相应的调试机制和调试工具的支持，其输出的错误信息又往往很不明确</p>
-</blockquote>
-<h1 id="调试方法"><a class="markdownIt-Anchor" href="#调试方法"></a> 调试方法</h1>
-<h2 id="通过echo方式"><a class="markdownIt-Anchor" href="#通过echo方式"></a> 通过echo方式</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">功能: 最简单的调试方法，可以在任何怀疑出错的地方用echo打印变量</span><br><span class="line">场合: 所有怀疑可能有问题的地方</span><br><span class="line">示例: echo $VAR</span><br></pre></td></tr></table></figure>
-<h2 id="通过test的方式"><a class="markdownIt-Anchor" href="#通过test的方式"></a> 通过test的方式</h2>
-<p>返回值为0为真,1表假</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test -f /test.sh | echo $?</span><br></pre></td></tr></table></figure>
-<h2 id="使用调试工具-bashdb"><a class="markdownIt-Anchor" href="#使用调试工具-bashdb"></a> 使用调试工具-bashdb</h2>
-<blockquote>
-<p>使用shell调试器bashdb，这是一个类似于GDB的调试工具，可以完成对shell脚本的断点设置，单步执行，变量观察等许多功能</p>
-</blockquote>
-<p>用法：bashdb -c <a href="http://script.sh" target="_blank" rel="noopener">script.sh</a>   或者 bashdb <a href="http://script.sh" target="_blank" rel="noopener">script.sh</a></p>
-<h2 id="通过trap来调试"><a class="markdownIt-Anchor" href="#通过trap来调试"></a> 通过trap来调试</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">作用: 用于捕获指定的信号并执行预定义的命令</span><br><span class="line">语法: trap `command` signal</span><br><span class="line">说明: signal是要捕获的信号,command是捕获到指定的信号，所要执行的命令, 可以用kill -l命令看到系统中全部可用的信号名,捕获信号后所执行的命令,可以是一条或多条合法的Shell语句,也可以是一个函数名, Shell脚本执行时，会产生三个伪信号(之所以称为伪信息，因这是shell自己产生，而非操作系统产生)，通过使用trap 捕获这三个伪信号并输出信息对调试大有帮助</span><br><span class="line"></span><br><span class="line">Shell脚本执行时，会产生三个伪信号(之所以称为伪信息，因这是shell自己产生，而非操作系统产生)，通过使用trap 捕获这三个伪信号并输出信息对调试大有帮助.SHELL三个伪信号:</span><br><span class="line"></span><br><span class="line">* EXIT  从一个函数中退出或整个执行完毕</span><br><span class="line">* ERR   当一个命令执行不成功，返回非0状态时</span><br><span class="line">* DEBUG 脚本中每一条命令执行之前</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">errorTrap()</span><br><span class="line">&#123;</span><br><span class="line">    echo &quot;[LINE:$1]Error: Command or function exited with status $?&quot;</span><br><span class="line">&#125;</span><br><span class="line">foo()</span><br><span class="line">&#123;</span><br><span class="line">    return 1;</span><br><span class="line">&#125;</span><br><span class="line">trap &apos;errorTrap $LINENO&apos; ERR</span><br><span class="line">abc</span><br><span class="line">foo</span><br><span class="line">脚本输出:</span><br><span class="line">[root@localhost:shell]# bash test.sh</span><br><span class="line">test.sh: line 12: abc: command not found</span><br><span class="line">[LINE:12]Error: Command or function exited with status 127</span><br><span class="line">[LINE:9]Error: Command or function exited with status 1</span><br></pre></td></tr></table></figure>
-<p>在调试过程中，为了跟踪某些变量的值，我们常常需要在shell脚本的许多地方插入相同的echo语句来打印相关变量的值，这种做法显得烦琐而笨拙。而通过捕获DEBUG信号，我们只需要一条trap语句就可以完成对相关变量的全程跟踪。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">trap &apos;echo “before execute line:$LINENO, a=$a,b=$b,c=$c”&apos; DEBUG</span><br><span class="line">a=1</span><br><span class="line">if [ &quot;$a&quot; -eq 1 ]</span><br><span class="line">then</span><br><span class="line">  b=2</span><br><span class="line">else</span><br><span class="line">  b=1</span><br><span class="line">fi</span><br><span class="line">c=3</span><br><span class="line">echo &quot;end&quot;</span><br></pre></td></tr></table></figure>
-<p>其执行输出结果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">before execute line:3, a=,b=,c=</span><br><span class="line">before execute line:4, a=1,b=,c=</span><br><span class="line">before execute line:6, a=1,b=,c=</span><br><span class="line">before execute line:10, a=1,b=2,c=</span><br><span class="line">before execute line:11, a=1,b=2,c=3</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h2 id="使用tee命令"><a class="markdownIt-Anchor" href="#使用tee命令"></a> 使用tee命令</h2>
-<blockquote>
-<p>在shell脚本中管道以及输入输出重定向使用得非常多，在管道的作用下，一些命令的执行结果直接成为了下一条命令的输入。如果我们发现由管道连接起来的一批命令的执行结果并非如预期的那样，就需要逐步检查各条命令的执行结果来判断问题出在哪儿，但因为使用了管道，这些中间结果并不会显示在屏幕上，给调试带来了困难，此时我们就可以借助于tee命令了</p>
-</blockquote>
-<blockquote>
-<p>tee命令会从标准输入读取数据，将其内容输出到标准输出设备,同时又可将内容保存成文件</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipaddr=`/sbin/ifconfig | grep &apos;inet addr:&apos; | grep -v &apos;127.0.0.1&apos;</span><br><span class="line">| tee temp.txt | cut -d : -f3 | awk &apos;&#123;print $1&#125;&apos;`</span><br></pre></td></tr></table></figure>
-<h2 id="使用调试钩子"><a class="markdownIt-Anchor" href="#使用调试钩子"></a> 使用&quot;调试钩子&quot;</h2>
-<blockquote>
-<p>在C语言程序中，我们经常使用DEBUG宏来控制是否要输出调试信息，在shell脚本中我们同样可以使用这样的机制，这样的代码块通常称之为“调试钩子”或“调试块”.如下列代码所示：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if [ “$DEBUG” = “true” ]; then</span><br><span class="line">echo “debugging”  #此处可以输出调试信息</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<h2 id="通过选项方式"><a class="markdownIt-Anchor" href="#通过选项方式"></a> 通过选项方式</h2>
-<ul>
-<li>-n:选项只做语法检查，而不执行脚本  //sh -n script_name.sh</li>
-<li>-x:启动调试   //sh -x script_name.sh</li>
-</ul>
-<blockquote>
-<p>进入调试模式后，Shell依次执行读入的语句，产生的输出中有的带加号，有的不带。带加号表示该条语句是Shell执行的；不带加号表示该语句是Shell产生的输出；前面有“++”号的行是执行trap机制中指定的命令。&quot;+&quot;号后面显示的是经过了变量替换之后的命令行的内容，有助于分析实际执行的是什么命令</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1).在命令行提供参数：$ sh -x script.sh</span><br><span class="line">2).脚本开头提供参数：#!/bin/sh -x</span><br><span class="line">3).在脚本中用set命令启用or禁用参数：其中set -x表启用，set +x表禁用</span><br></pre></td></tr></table></figure>
-<ul>
-<li>-c:该选项使Shell解析器从字符串而非文件中读取并执行命令,如：bash -c ‘x=1;y=2;let z=x+y;echo “z=$z”’</li>
-<li>-v：区别于-x参数,该选项打印命令行的原始内容，-x参数打印出经过替换后命令行的内容，适用于仅想显示命令行的原始内容</li>
-<li>Ctrl + Z:中断调试，观察结果，然后再按fg键继续调试即可</li>
-<li>调试代码块:-x选项是调试整个脚本的，如果脚本很大，会很不方便，还有一种方法是调试某一块代码的</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set -x</span><br><span class="line">...</span><br><span class="line">code block</span><br><span class="line">...</span><br><span class="line">set +x</span><br></pre></td></tr></table></figure>
-<h1 id="shell内置的环境变量"><a class="markdownIt-Anchor" href="#shell内置的环境变量"></a> shell内置的环境变量</h1>
-<ul>
-<li>$LINENO：代表shell脚本的当前行号，类似于C语言中的内置宏__LINE__</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mi>U</mi><mi>N</mi><mi>C</mi><mi>N</mi><mi>A</mi><mi>M</mi><mi>E</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">它</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">量</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">其</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">包</mi><mi mathvariant="normal">含</mi><mi mathvariant="normal">了</mi><mi mathvariant="normal">整</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">调</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">链</mi><mi mathvariant="normal">上</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">故</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">量</mi></mrow><annotation encoding="application/x-tex">FUNCNAME：函数的名字，它是一个数组变量，其中包含了整个调用链上所有的函数的名字，故变量</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">它</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">变</span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">包</span><span class="mord cjk_fallback">含</span><span class="mord cjk_fallback">了</span><span class="mord cjk_fallback">整</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">调</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">链</span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">故</span><span class="mord cjk_fallback">变</span><span class="mord cjk_fallback">量</span></span></span></span>{FUNCNAME[0]}代表shell脚本当前正在执行的函数的名字，而变量<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>F</mi><mi>U</mi><mi>N</mi><mi>C</mi><mi>N</mi><mi>A</mi><mi>M</mi><mi>E</mi><mo>[</mo><mn>1</mn><mo>]</mo></mrow><mi mathvariant="normal">则</mi><mi mathvariant="normal">代</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">调</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi></mrow><annotation encoding="application/x-tex">{FUNCNAME[1]}则代表调用函数</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span><span class="mord cjk_fallback">则</span><span class="mord cjk_fallback">代</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">调</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span></span></span></span>{FUNCNAME[0]}的函数的名字，余者可以依此类推</li>
-<li>$PS4：</li>
-</ul>
-<h1 id="常见错误诊断"><a class="markdownIt-Anchor" href="#常见错误诊断"></a> 常见错误诊断</h1>
-<ul>
-<li><a href="http://xxx.sh" target="_blank" rel="noopener">xxx.sh</a>: cannot shift</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这种错误一般是参数传递有误，比如没有给参数，或者参数个数少了。因为shell脚本使用shift来获取下一个参数，如果个数不对，shift命令就会失败</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="http://xxx.sh" target="_blank" rel="noopener">xxx.sh</a>: ^M: not found</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">^M是Windows上的回车符\r在UNIX上的显示形式。这种情况多半是在Windows上编辑了shell脚本，然后拿到UNIX/Linux上执行。如下处理即可：</span><br><span class="line">tr -d &quot;\015&quot; &lt; oldfile.sh &gt; newfile.sh  //\r的ASCII码是\015</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2156,7 +2493,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2272,7 +2609,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共121.8k字</span>
+  <span class="post-count">博客全站共128.1k字</span>
 </div>
 
 

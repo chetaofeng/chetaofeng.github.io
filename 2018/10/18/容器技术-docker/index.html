@@ -105,20 +105,22 @@
 
 
 
-<meta name="description" content="阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html   Docker是基于CS架构，系统有两个程序：docker服务端和do">
+<meta name="description" content="阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html  简介 docker虚拟机架构  docker管理常用指令   Dock">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker">
 <meta property="og:url" content="https://chetaofeng.github.io/2018/10/18/容器技术-docker/index.html">
 <meta property="og:site_name" content="行锋">
-<meta property="og:description" content="阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html   Docker是基于CS架构，系统有两个程序：docker服务端和do">
+<meta property="og:description" content="阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html  简介 docker虚拟机架构  docker管理常用指令   Dock">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/docker%E6%9E%B6%E6%9E%84.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/docker%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86%E6%8C%87%E4%BB%A4.png">
-<meta property="og:updated_time" content="2019-02-21T03:26:33.000Z">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%AD%E7%9A%84Docker%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E5%AE%B9%E5%99%A8%E4%B8%8E%E9%95%9C%E5%83%8F.png">
+<meta property="og:updated_time" content="2019-03-01T01:47:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker">
-<meta name="twitter:description" content="阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html   Docker是基于CS架构，系统有两个程序：docker服务端和do">
+<meta name="twitter:description" content="阿里云服务器购买 http://www.runoob.com/docker/docker-tutorial.html 官网：https://www.docker.com/ 中文社区：http://www.docker.org.cn/ http://www.cnblogs.com/SzeCheng/p/6822905.html  简介 docker虚拟机架构  docker管理常用指令   Dock">
 <meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/docker%E6%9E%B6%E6%9E%84.png">
 
 
@@ -432,35 +434,61 @@
 <p>官网：<a href="https://www.docker.com/" target="_blank" rel="noopener">https://www.docker.com/</a><br>
 中文社区：<a href="http://www.docker.org.cn/" target="_blank" rel="noopener">http://www.docker.org.cn/</a></p>
 <p><a href="http://www.cnblogs.com/SzeCheng/p/6822905.html" target="_blank" rel="noopener">http://www.cnblogs.com/SzeCheng/p/6822905.html</a></p>
-<p><img src="/pub-images/docker%E6%9E%B6%E6%9E%84.png" alt="image"></p>
-<p><img src="/pub-images/docker%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86%E6%8C%87%E4%BB%A4.png" alt="image"></p>
-<p>Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术<br>
-其中docker服务端是一个服务进程，管理着所有的容器。<br>
-docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。<br>
-大部分情况下，docker服务端和客户端运行在一台机器上。</p>
-<p>Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的<br>
-Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write）</p>
-<p>Docker容器的能力<br>
-1文件系统隔离：每个容器都有自己的root文件系统<br>
-2进程隔离：每个容器都运行在自己的进程环境中<br>
-3网络隔离：容器间的虚拟网络接口和IP地址都是分开的<br>
-4资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器</p>
-<p>docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作<br>
-docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器<br>
-docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm）</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>docker虚拟机架构<br>
+<img src="/pub-images/docker%E6%9E%B6%E6%9E%84.png" alt="image"></p>
+<p>docker管理常用指令<br>
+<img src="/pub-images/docker%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86%E6%8C%87%E4%BB%A4.png" alt="image"></p>
+<ul>
+<li>Docker版本分为两个：Docker Community Edition (CE)和 Docker Enterprise Edition (EE)。</li>
+<li>Docker是基于CS架构，系统有两个程序：docker服务端和docker客户端，是一种Linux容器管理技术</li>
+<li>docker服务端是一个服务进程，管理着所有的容器;docker客户端则扮演着docker服务端的远程控制器，可以用来控制docker的服务端进程。</li>
+<li>大部分情况下，docker服务端和客户端运行在一台机器上。</li>
+<li>Docker为容器引入了镜像，使得容器可以从预先定义好的模版（images）创建出来，并且这个模版还是分层的</li>
+<li>Docker容器通过镜像启动，是镜像的启动和执行阶段，采用写时复制（copy on write）</li>
+</ul>
+<p>云计算中的Docker虚拟机<br>
+<img src="/pub-images/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%AD%E7%9A%84Docker%E8%99%9A%E6%8B%9F%E6%9C%BA.png" alt="image"></p>
+<h1 id="docker容器的能力"><a class="markdownIt-Anchor" href="#docker容器的能力"></a> Docker容器的能力</h1>
+<ol>
+<li>文件系统隔离：每个容器都有自己的root文件系统</li>
+<li>进程隔离：每个容器都运行在自己的进程环境中</li>
+<li>网络隔离：容器间的虚拟网络接口和IP地址都是分开的</li>
+<li>资源隔离和分组：使用cgroups将CPU和内存之类的资源独立分配给每个Docker容器</li>
+</ol>
+<ul>
+<li>docker Client客户端————&gt;向docker服务器进程发起请求，如:创建、停止、销毁容器等操作</li>
+<li>docker Server服务器进程—–&gt;处理所有docker的请求，管理所有容器</li>
+<li>docker Registry镜像仓库——&gt;镜像存放的中央仓库，可看作是存放二进制的软件配置管理（scm）</li>
+</ul>
 <p><a href="https://www.cnblogs.com/atuotuo/p/6668233.html" target="_blank" rel="noopener">https://www.cnblogs.com/atuotuo/p/6668233.html</a></p>
-<p>安装：下载安装完成之后docker version查看</p>
-<p>Kitematic，</p>
-<p>yum -y update<br>
-yum -y install docker<br>
-service docker start|stop|restart</p>
+<h1 id="docker安装"><a class="markdownIt-Anchor" href="#docker安装"></a> docker安装</h1>
+<p><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank" rel="noopener">https://docs.docker.com/install/linux/docker-ce/ubuntu/</a></p>
+<p>CentOS系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br><span class="line">yum -y install docker</span><br><span class="line">service docker start|stop|restart</span><br></pre></td></tr></table></figure>
+<p>Ubuntu系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install docker.io</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
+<p>下载安装完成之后docker version查看</p>
+<h1 id="免sudo使用docker命令"><a class="markdownIt-Anchor" href="#免sudo使用docker命令"></a> 免sudo使用docker命令</h1>
+<p>参考自网络：<a href="https://www.jianshu.com/p/95e397570896" target="_blank" rel="noopener">https://www.jianshu.com/p/95e397570896</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd docker</span><br><span class="line">sudo gpasswd -a $&#123;USER&#125; docker</span><br><span class="line">sudo service docker restart</span><br><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
+<h1 id="docker加速器配置"><a class="markdownIt-Anchor" href="#docker加速器配置"></a> docker加速器配置</h1>
+<p>docker国内镜像仓库设置，官网：<a href="https://www.daocloud.io/" target="_blank" rel="noopener">https://www.daocloud.io/</a><br>
+配置加速：<a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io</span><br></pre></td></tr></table></figure>
+<p>检查文件cat /etc/docker/daemon.json ，确保格式正确，无多余逗号，有则删除,如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;registry-mirrors&quot;: [&quot;http://f1361db2.m.daocloud.io&quot;]&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="docker虚拟机安装java"><a class="markdownIt-Anchor" href="#docker虚拟机安装java"></a> docker虚拟机安装java</h1>
+<p>docker search java  #查找java镜像，如选择使用name为java的镜像<br>
+docker pull java</p>
+<p>导出导入镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker save java &gt; /home/java.tar.gz    //save后面跟的是镜像的名称</span><br><span class="line">docker load &lt; /home/java.tar.gz</span><br><span class="line">docker images</span><br><span class="line">docker rmi</span><br></pre></td></tr></table></figure>
+<p>exit推出交互界面后也停止了容器，重新进入：docker start -i java</p>
 <p>Docker Machine<br>
 docker-machine ls<br>
 docker-machine ssh demo</p>
 <p>远程登录管理deocker和本地管理远程docker<br>
 <a href="https://labs.play-with-docker.com/" target="_blank" rel="noopener">https://labs.play-with-docker.com/</a></p>
-<p>docker国内镜像仓库设置：<a href="https://www.daocloud.io/" target="_blank" rel="noopener">https://www.daocloud.io/</a><br>
-<a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></p>
 <p>docker提供了一个开发，打包，运行app的平台，把app和底层infratructure隔离开来</p>
 <p>docker底层技术支持,依赖于Linux内核特性Namespaces和Cgroups<br>
 Namespaces：做隔离pid，net，ipc，mnt，uts<br>
@@ -477,15 +505,17 @@ docker通过联合加载技术一次加载多个文件系统，从外部看，�
 image本身是read-only的<br>
 sudo docker image ls<br>
 docker history [imageID]</p>
-<p>image的获取</p>
+<h1 id="docker容器与镜像"><a class="markdownIt-Anchor" href="#docker容器与镜像"></a> docker容器与镜像</h1>
+<p><img src="/pub-images/%E5%AE%B9%E5%99%A8%E4%B8%8E%E9%95%9C%E5%83%8F.png" alt="image"></p>
+<h2 id="image的获取"><a class="markdownIt-Anchor" href="#image的获取"></a> image的获取</h2>
 <ol>
 <li>通过Dockerfile</li>
 <li>从Registry获取，如：docker pull ubuntu:14.04，<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></li>
 <li>命令行的格式为：docker search 镜像名字</li>
 </ol>
 <p>DIY一个Base Image</p>
-<p>Container<br>
-docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
+<h2 id="container"><a class="markdownIt-Anchor" href="#container"></a> Container</h2>
+<p>docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
 <p>通过Image创建<br>
 在Image Layer之上建立一个container layer（可读写）<br>
 类比面向对象：类和实例<br>
@@ -514,7 +544,7 @@ docker commit [containerName] [dockerhubID/imageNewName]</p>
 <li>docker build -t [dockerhubID/imageNewName] .   //.表示当前目录中查找Dockerfile</li>
 <li>docker image ls查看</li>
 </ol>
-<p>Dockerfile语法梳理及最佳实践</p>
+<h1 id="dockerfile语法梳理及最佳实践"><a class="markdownIt-Anchor" href="#dockerfile语法梳理及最佳实践"></a> Dockerfile语法梳理及最佳实践</h1>
 <ol>
 <li>FROM:尽量使用官方的iamge作为base image</li>
 <li>LABEL:Metadata不可少，让大家了解到image的信息，相当于image的注释</li>
@@ -524,25 +554,17 @@ docker commit [containerName] [dockerhubID/imageNewName]</p>
 <li>ENV：设置环境变量，尽量使用ENV增加可维护性</li>
 </ol>
 <p><a href="https://github.com/docker-library/" target="_blank" rel="noopener">https://github.com/docker-library/</a></p>
-<p>MAINTAINER：指定容器的相关维护信息，维护人、邮箱等<br>
-RUN：执行命令并创建新的Image Layer，是在容器构建时执行<br>
-CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数<br>
-ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint<br>
-EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口<br>
-VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能<br>
-WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去<br>
-USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户<br>
-ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行</p>
-<p>使用中间层镜像进行调试，查找错误<br>
-docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER：指定容器的相关维护信息，维护人、邮箱等</span><br><span class="line">RUN：执行命令并创建新的Image Layer，是在容器构建时执行</span><br><span class="line">CMD：设置容器启动后默认执行的命令和参数，是在容器运行时运行的.如果docker run指定了其他命令，CMD命令被忽略；如果定义了多个CMD，只会执行最后一个；也可以只提供参数，作为ENTRYPOINT的默认参数</span><br><span class="line">ENTRYPOINT：设置容器启动时运行的命令，让容器以应用程序或者服务的形式执行；不会被忽略，一定会执行；最佳实践是写一个shell脚本作为entrypoint</span><br><span class="line">EXPOSE：指定运行该镜像的容器使用的端口，但此端口并未自动打开，在使用的时候需要映射／设置端口 </span><br><span class="line">VOLUME：用来向基于镜像创建的容器，一个卷是可以存在于一个或多个容器的特定目录，这个目录可以绕过联合文件系统提供共享数据、数据持久化功能</span><br><span class="line">WORKDIR：用于在容器内部设置工作目录，一般使用绝对路径，如果使用相对路径，路径会一致传递下去</span><br><span class="line">USER：用来指定镜像被什么用户去运行，如果不设置，默认为root用户</span><br><span class="line">ONBUILD：用来为镜像添加触发器，当一个镜像被其他镜像作为基础镜像执行时，此触发器会被执行</span><br></pre></td></tr></table></figure>
+<h1 id="使用中间层镜像进行调试查找错误"><a class="markdownIt-Anchor" href="#使用中间层镜像进行调试查找错误"></a> 使用中间层镜像进行调试，查找错误</h1>
+<p>docker build命令只删除了中间层常见的容器，但是没有删除中间层创建的镜像</p>
 <p>构建缓存：构建过程中会产生缓存，下次构建直接使用缓存镜像，如果不想使用构建缓存，则可通过：docker build --no-cache,或者通过dockerfile文件的ENV REFRESH_DATE修改日期，则本条语句后就不使用缓存了</p>
 <p>docker history 镜像，用来查看镜像的构建过程</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPY docker-entrypoint.sh /usr/local/bin/</span><br><span class="line">ENTRYPOINT [&quot;docker-entrypoint.sh &quot;]</span><br></pre></td></tr></table></figure>
 <p>shell格式和EXEC格式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get install -y vim</span><br><span class="line">CMD echo &quot;Hello Docker&quot;</span><br><span class="line">ENTRYPOINT echo &quot;Hello Docker&quot;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN [&quot;apt-get&quot;,&quot;install&quot;,&quot;-y&quot;,&quot;vim&quot;]</span><br><span class="line">CMD [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br><span class="line">ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hello Docker&quot;]</span><br></pre></td></tr></table></figure>
-<p>登录dockerhub<br>
-docker login:  用户名（非邮箱）／密码</p>
+<h1 id="登录dockerhub"><a class="markdownIt-Anchor" href="#登录dockerhub"></a> 登录dockerhub</h1>
+<p>docker login:  用户名（非邮箱）／密码</p>
 <ol>
 <li>本地push上去，其他人就可以pull</li>
 <li>关联github，github管理Dockerfile，有修改后自动build。Create-Create Automated build</li>
@@ -557,49 +579,8 @@ docker exec<br>
 docker exec -it [containerID] /bin/bash<br>
 docker inspect [imageName] //查看<br>
 docker logs [containerID]</p>
-<p>前3章</p>
-<p>Docker常见命令<br>
-容器相关操作<br>
-docker create # 创建一个容器但是不启动它<br>
-docker run # 创建并启动一个容器<br>
-docker stop # 停止容器运行，发送信号SIGTERM<br>
-docker start # 启动一个停止状态的容器<br>
-docker restart # 重启一个容器<br>
-docker rm # 删除一个容器<br>
-docker kill # 发送信号给容器，默认SIGKILL<br>
-docker attach # 连接(进入)到一个正在运行的容器<br>
-docker wait # 阻塞到一个容器，直到容器停止运行<br>
-获取容器相关信息<br>
-docker ps # 显示状态为运行（Up）的容器<br>
-docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited)<br>
-docker inspect # 深入容器内部获取容器所有信息<br>
-docker logs # 查看容器的日志(stdout/stderr)<br>
-docker events # 得到docker服务器的实时的事件<br>
-docker port # 显示容器的端口映射<br>
-docker top # 显示容器的进程信息<br>
-docker diff # 显示容器文件系统的前后变化<br>
-导出容器<br>
-docker cp # 从容器里向外拷贝文件或目录<br>
-docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息<br>
-执行<br>
-docker exec # 在容器里执行一个命令，可以执行bash进入交互式<br>
-镜像操作<br>
-docker images # 显示本地所有的镜像列表<br>
-docker import # 从一个tar包创建一个镜像，往往和export结合使用<br>
-docker build # 使用Dockerfile创建镜像（推荐）<br>
-docker commit # 从容器创建镜像<br>
-docker rmi # 删除一个镜像<br>
-docker load # 从一个tar包创建一个镜像，和save配合使用<br>
-docker save # 将一个镜像保存为一个tar包，带layers和tag信息<br>
-docker history # 显示生成一个镜像的历史命令<br>
-docker tag # 为镜像起一个别名<br>
-镜像仓库(registry)操作<br>
-docker login # 登录到一个registry<br>
-docker search # 从registry仓库搜索镜像<br>
-docker pull # 从仓库下载镜像到本地<br>
-docker push # 将一个镜像push到registry仓库中</p>
-<p>docker system df    //查看镜像、容器、数据卷所占用的空间<br>
-docker commit -m “ubuntu with vim” -a “sgy” aa97ba3292ce sgy/ubuntu:vim</p>
+<h1 id="docker常见命令"><a class="markdownIt-Anchor" href="#docker常见命令"></a> Docker常见命令</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">容器相关操作</span><br><span class="line">docker create # 创建一个容器但是不启动它</span><br><span class="line">docker run # 创建并启动一个容器</span><br><span class="line">docker stop # 停止容器运行，发送信号SIGTERM</span><br><span class="line">docker start # 启动一个停止状态的容器</span><br><span class="line">docker restart # 重启一个容器</span><br><span class="line">docker rm # 删除一个容器</span><br><span class="line">docker kill # 发送信号给容器，默认SIGKILL</span><br><span class="line">docker attach # 连接(进入)到一个正在运行的容器</span><br><span class="line">docker wait # 阻塞到一个容器，直到容器停止运行</span><br><span class="line">获取容器相关信息</span><br><span class="line">docker ps # 显示状态为运行（Up）的容器</span><br><span class="line">docker ps -a # 显示所有容器,包括运行中（Up）的和退出的(Exited)</span><br><span class="line">docker inspect # 深入容器内部获取容器所有信息</span><br><span class="line">docker logs # 查看容器的日志(stdout/stderr)</span><br><span class="line">docker events # 得到docker服务器的实时的事件</span><br><span class="line">docker port # 显示容器的端口映射</span><br><span class="line">docker top # 显示容器的进程信息</span><br><span class="line">docker diff # 显示容器文件系统的前后变化</span><br><span class="line">导出容器</span><br><span class="line">docker cp # 从容器里向外拷贝文件或目录</span><br><span class="line">docker export # 将容器整个文件系统导出为一个tar包，不带layers、tag等信息</span><br><span class="line">执行</span><br><span class="line">docker exec # 在容器里执行一个命令，可以执行bash进入交互式</span><br><span class="line">镜像操作</span><br><span class="line">docker images # 显示本地所有的镜像列表</span><br><span class="line">docker import # 从一个tar包创建一个镜像，往往和export结合使用</span><br><span class="line">docker build # 使用Dockerfile创建镜像（推荐）</span><br><span class="line">docker commit # 从容器创建镜像</span><br><span class="line">docker rmi # 删除一个镜像</span><br><span class="line">docker load # 从一个tar包创建一个镜像，和save配合使用</span><br><span class="line">docker save # 将一个镜像保存为一个tar包，带layers和tag信息</span><br><span class="line">docker history # 显示生成一个镜像的历史命令</span><br><span class="line">docker tag # 为镜像起一个别名</span><br><span class="line">镜像仓库(registry)操作</span><br><span class="line">docker login # 登录到一个registry</span><br><span class="line">docker search # 从registry仓库搜索镜像</span><br><span class="line">docker pull # 从仓库下载镜像到本地</span><br><span class="line">docker push # 将一个镜像push到registry仓库中  </span><br><span class="line"></span><br><span class="line">docker system df    //查看镜像、容器、数据卷所占用的空间</span><br><span class="line">docker commit -m &quot;ubuntu with vim&quot; -a &quot;sgy&quot; aa97ba3292ce sgy/ubuntu:vim</span><br></pre></td></tr></table></figure>
 <p>前后端分离部署及运维<br>
 高性能高负载高可用</p>
 <p><a href="https://www.renren.io" target="_blank" rel="noopener">https://www.renren.io</a>  renren-fast</p>
@@ -625,8 +606,8 @@ docker run --volumes-from 数据卷容器名称<br>
 即使删除了数据卷容器，挂载了数据卷容器的容器，仍然可以访问数据卷容器的目录，数据卷容器起的作用仅仅是将挂载配置传递到待挂载容器</p>
 <p>Docker数据卷的备份与还原：通过挂载目录压缩后放到挂载目录</p>
 <p>Docker For Mac的Docker Daemon是运行于虚拟机(xhyve)中的, 而不是像Linux上那样作为进程运行于宿主机，因此Docker For Mac没有docker0网桥，不能实现host网络模式，host模式会使Container复用Daemon的网络栈(在xhyve虚拟机中)，而不是与Host主机网络栈，这样虽然其它容器仍然可通过xhyve网络栈进行交互，但却不是用的Host上的端口(在Host上无法访问)。bridge网络模式 -p 参数不受此影响，它能正常打开Host上的端口并映射到Container的对应Port。</p>
-<p>docker容器的网络连接<br>
-docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡<br>
+<h1 id="docker容器的网络连接"><a class="markdownIt-Anchor" href="#docker容器的网络连接"></a> docker容器的网络连接</h1>
+<p>docker0：是Linux的虚拟网桥（网桥是数据链路层的一种设备），Linux的虚拟网桥可以设置IP地址，相当于拥有一个隐藏的虚拟网卡<br>
 docker0地址划分：IP127.17.42.1,掩码255.255.0.0,总共提供了65534个地址<br>
 网桥操作需安装bridge-utils工具，安装之后brctl show查看网桥信息，可以添加网桥或者配置网桥信息<br>
 docker容器的IP地址在重启容器之后会变化，是不可靠的</p>
@@ -673,9 +654,11 @@ Compose 中有两个重要的概念：<br>
 <p>Docker Swarm:Docker集群管理工具，支持标准的Docker API,其主要作用是把若干台Docker主机抽象为一个整体，并且通过一个入口统一管理这些Docker主机上的各种Docker资源。<br>
 Swarm和Kubernetes比较类似，但是更加轻，具有的功能也较kubernetes更少一些。</p>
 <p>Docker Compose 是一个在单个服务器或主机上创建多个容器的工具，而 Docker Swarm 则可以在多个服务器或主机上创建容器集群服务，对于微服务的部署，显然 Docker Swarm 会更加适合。</p>
-<p>三大主流调度框架：Swarm、Kubernetes和Mesos</p>
+<h1 id="三大主流调度框架"><a class="markdownIt-Anchor" href="#三大主流调度框架"></a> 三大主流调度框架</h1>
+<p>Swarm、Kubernetes和Mesos</p>
 <p>Kubernetes：交互工具kubectl<br>
 pods：创建、调度及管理的最小单元，共存的一组容器的集合，同一pods中的容器共享pid、网络、ipc及utf命名空间和共享存储卷</p>
+<p><a href="https://www.cnblogs.com/zuxing/articles/8745816.html" target="_blank" rel="noopener">https://www.cnblogs.com/zuxing/articles/8745816.html</a></p>
 
       
     </div>
@@ -696,7 +679,7 @@ pods：创建、调度及管理的最小单元，共存的一组容器的集合�
   <p><span>本文标题:</span><a href="/2018/10/18/容器技术-docker/">docker</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年10月18日 - 09:10</p>
-  <p><span>最后更新:</span>2019年02月21日 - 11:02</p>
+  <p><span>最后更新:</span>2019年03月01日 - 09:03</p>
   <p><span>原始链接:</span><a href="/2018/10/18/容器技术-docker/" title="docker">https://chetaofeng.github.io/2018/10/18/容器技术-docker/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/10/18/容器技术-docker/"  aria-label="复制成功！"></i></span>
   </p>
@@ -795,8 +778,8 @@ pods：创建、调度及管理的最小单元，共存的一组容器的集合�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/18/容器技术-vagrant/" rel="prev" title="docker">
-                docker <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/18/容器技术-vagrant/" rel="prev" title="vagrant">
+                vagrant <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -862,8 +845,17 @@ pods：创建、调度及管理的最小单元，共存的一组容器的集合�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -882,7 +874,7 @@ pods：创建、调度及管理的最小单元，共存的一组容器的集合�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -944,6 +936,22 @@ pods：创建、调度及管理的最小单元，共存的一组容器的集合�
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker容器的能力"><span class="nav-number">2.</span> <span class="nav-text"> Docker容器的能力</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker安装"><span class="nav-number">3.</span> <span class="nav-text"> docker安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#免sudo使用docker命令"><span class="nav-number">4.</span> <span class="nav-text"> 免sudo使用docker命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker加速器配置"><span class="nav-number">5.</span> <span class="nav-text"> docker加速器配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker虚拟机安装java"><span class="nav-number">6.</span> <span class="nav-text"> docker虚拟机安装java</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker容器与镜像"><span class="nav-number">7.</span> <span class="nav-text"> docker容器与镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#image的获取"><span class="nav-number">7.1.</span> <span class="nav-text"> image的获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#container"><span class="nav-number">7.2.</span> <span class="nav-text"> Container</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dockerfile语法梳理及最佳实践"><span class="nav-number">8.</span> <span class="nav-text"> Dockerfile语法梳理及最佳实践</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用中间层镜像进行调试查找错误"><span class="nav-number">9.</span> <span class="nav-text"> 使用中间层镜像进行调试，查找错误</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#登录dockerhub"><span class="nav-number">10.</span> <span class="nav-text"> 登录dockerhub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker常见命令"><span class="nav-number">11.</span> <span class="nav-text"> Docker常见命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker容器的网络连接"><span class="nav-number">12.</span> <span class="nav-text"> docker容器的网络连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三大主流调度框架"><span class="nav-number">13.</span> <span class="nav-text"> 三大主流调度框架</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -998,7 +1006,7 @@ pods：创建、调度及管理的最小单元，共存的一组容器的集合�
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共121.8k字</span>
+  <span class="post-count">博客全站共128.1k字</span>
 </div>
 
 
