@@ -324,6 +324,851 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/" itemprop="url">Android中主题(Theme)和样式(Style)使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-15T11:00:40+08:00">
+                2019-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/移动开发/" itemprop="url" rel="index">
+                    <span itemprop="name">移动开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="theme和style说明"><a class="markdownIt-Anchor" href="#theme和style说明"></a> Theme和Style说明</h1>
+<ul>
+<li>Theme是全局的设计风格。style是局部的设计风格</li>
+<li>Theme是一套UI控件和Activity的样式。可以给Application 和 activity 设置主题。来设置显示界面的样式</li>
+<li>style是针对view来说的，比如 TextView，EditText这些，而Theme必须针对整个activity或者 整个application，你必须在AndroidManifest.xml中 的<application>或者<activity>中定义</activity></application></li>
+<li>Style的xml文件要求：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 他的根节点必须 是&lt;resources&gt;</span><br><span class="line">2. 给&lt;style&gt; 增加一个全局唯一的名字，也可以选择增加一个parent父类属性</span><br><span class="line">3. 使用时只要在写我们的view时，加入style标签就可以了</span><br><span class="line">    &lt;TextView</span><br><span class="line">        style=&quot;@style/CodeFont&quot;</span><br><span class="line">        android:text=&quot;@string/hello&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="theme设置"><a class="markdownIt-Anchor" href="#theme设置"></a> Theme设置</h1>
+<h2 id="theme设置-2"><a class="markdownIt-Anchor" href="#theme设置-2"></a> Theme设置</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    package=&quot;com.jude.test.education&quot; &gt;</span><br><span class="line"></span><br><span class="line">    &lt;application</span><br><span class="line">        android:allowBackup=&quot;true&quot;</span><br><span class="line">        android:icon=&quot;@mipmap/ic_launcher&quot;</span><br><span class="line">        android:label=&quot;@string/app_name&quot;</span><br><span class="line">        &lt;!--这里设置的是整个APP的主题，所有activiy和view都会默认为这个主题--&gt;</span><br><span class="line">        android:theme=&quot;@style/AppTheme&quot; &gt;</span><br><span class="line">        &lt;activity</span><br><span class="line">            android:name=&quot;.MainActivity&quot;</span><br><span class="line">            android:label=&quot;@string/app_name&quot;</span><br><span class="line">            &lt;!--这里设置的是这个Activity的主题，Activity所有view都会默认为这个主题--&gt;</span><br><span class="line">            android:theme=&quot;@style/AppTheme&quot;</span><br><span class="line">            &gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">    &lt;/application&gt;</span><br><span class="line"></span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="theme继承并重写"><a class="markdownIt-Anchor" href="#theme继承并重写"></a> Theme继承并重写</h2>
+<p>在value-&gt;style里定义主题。可以继承并重写属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 兼容主题 深色主题 activity背景默认黑色，字体默认白色--&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 兼容主题 浅色主题 activity背景默认白色 字体默认黑色 --&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme2&quot; parent=&quot;Theme.AppCompat.Light&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 兼容主题 深色主题 无Actionbar--&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme3&quot; parent=&quot;Theme.AppCompat.NoActionBar&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 兼容主题 浅色主题 无Actionbar--&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme4&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="代码中设置activity主题"><a class="markdownIt-Anchor" href="#代码中设置activity主题"></a> 代码中设置Activity主题</h2>
+<ul>
+<li>Activity 是 ContextThemeWrapper的子类。而ContextThemeWrapper一个很重要的属性就是Theme</li>
+<li>实例化一个View必须要 new View(Context context) 。因为View需要把Attributes交给Context的Theme来确定一堆属性(在一个叫TypedArray的容器里)</li>
+</ul>
+<h2 id="theme设置注意事项"><a class="markdownIt-Anchor" href="#theme设置注意事项"></a> Theme设置注意事项</h2>
+<ul>
+<li>如果使用 android.support.v7.app.ActionBarActivity 就必须要用兼容主题Theme.AppCompat。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ActionBarActivity 的存在就是为了兼容低API。让他们用上高API的东西。比如Toolbar</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Holo主题是Android4.0开始谷歌极力推行的Android Design的主题</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;AppTheme5&quot; parent=&quot;android:Theme.Holo&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Android5.0谷歌又推出了Material Design来取代Android Design</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> &lt;style name=&quot;AppTheme5&quot; parent=&quot;android:Theme.Material&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="theme来源"><a class="markdownIt-Anchor" href="#theme来源"></a> Theme来源</h1>
+<p>在Android Studio中书写主题时都会有自动提示</p>
+<ol>
+<li>来自Android系统自带的。自带的主题要加上“android:”，如：android:Theme.Black</li>
+<li>来自兼容包的(比如v7兼容包)。使用v7兼容包中的主题不需要前缀，直接：Theme.AppCompat</li>
+<li>自己写一个主题</li>
+</ol>
+<h1 id="theme种类"><a class="markdownIt-Anchor" href="#theme种类"></a> Theme种类</h1>
+<ul>
+<li>所有能应用于应用程序主题都是以“Theme.”开头</li>
+<li>在v7中有很多以“Base”开头的主题，是一些父主题，不建议直接使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">系统自带主题：</span><br><span class="line">API 1:</span><br><span class="line">android:Theme 根主题</span><br><span class="line">android:Theme.Black 背景黑色</span><br><span class="line">android:Theme.Light 背景白色</span><br><span class="line">android:Theme.Wallpaper 以桌面墙纸为背景</span><br><span class="line">android:Theme.Translucent 透明背景</span><br><span class="line">android:Theme.Panel 平板风格</span><br><span class="line">android:Theme.Dialog 对话框风格</span><br><span class="line"></span><br><span class="line">API 11:</span><br><span class="line">android:Theme.Holo Holo根主题</span><br><span class="line">android:Theme.Holo.Black Holo黑主题</span><br><span class="line">android:Theme.Holo.Light Holo白主题</span><br><span class="line"></span><br><span class="line">API 14:</span><br><span class="line">Theme.DeviceDefault 设备默认根主题</span><br><span class="line">Theme.DeviceDefault.Black 设备默认黑主题</span><br><span class="line">Theme.DeviceDefault.Light 设备默认白主题</span><br><span class="line"></span><br><span class="line">API 21: (网上常说的 Android Material Design 就是要用这种主题)</span><br><span class="line">Theme.Material Material根主题</span><br><span class="line">Theme.Material.Light Material白主题</span><br><span class="line"></span><br><span class="line">================================================================</span><br><span class="line">兼容包v7中带的主题：</span><br><span class="line">Theme.AppCompat 兼容主题的根主题</span><br><span class="line">Theme.AppCompat.Black 兼容主题的黑色主题</span><br><span class="line">Theme.AppCompat.Light 兼容主题的白色主题</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h1 id="theme风格种类"><a class="markdownIt-Anchor" href="#theme风格种类"></a> Theme风格种类</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Black 黑色风格</span><br><span class="line">Light 光明风格</span><br><span class="line">Dark 黑暗风格</span><br><span class="line">DayNight 白昼风格</span><br><span class="line">Wallpaper 墙纸为背景</span><br><span class="line">Translucent 透明背景</span><br><span class="line">Panel 平板风格</span><br><span class="line">Dialog 对话框风格</span><br><span class="line">NoTitleBar 没有TitleBar</span><br><span class="line">NoActionBar 没有ActionBar</span><br><span class="line">Fullscreen 全屏风格</span><br><span class="line">MinWidth 对话框或者ActionBar的宽度根据内容变化，而不是充满全屏</span><br><span class="line">WhenLarge 对话框充满全屏</span><br><span class="line">TranslucentDecor 半透明风格</span><br><span class="line">NoDisplay 不显示，也就是隐藏了</span><br><span class="line">WithActionBar 在旧版主题上显示ActionBar</span><br></pre></td></tr></table></figure>
+<h1 id="每个主题中定义item分类"><a class="markdownIt-Anchor" href="#每个主题中定义item分类"></a> 每个主题中定义item分类</h1>
+<p><a href="https://yq.aliyun.com/articles/72108" target="_blank" rel="noopener">https://yq.aliyun.com/articles/72108</a></p>
+<p>颜色、字体、按钮、list、window、Dialog、AlertDialog、Panel、滚动条、文字选中（Text Selection）、Widget样式、Preference样式、search控件样式、ActionBar样式、其他样式</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/其他-svn迁移/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/其他-svn迁移/" itemprop="url">SVN迁移</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:24:30+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>SVN_Root为所有SVN操作根目录，包括所有的软件、资源库等</p>
+<ul>
+<li>Soft：为搭建SVN环境相关的软件</li>
+<li>Subversion：为SVN服务端软件安装目录</li>
+<li>SVN_BAK：为SVN备份文件</li>
+<li>repos:SVN仓库的根目录</li>
+<li>ReadMe：当前目录说明文件</li>
+</ul>
+<p>所有命令行操作需要管理员权限</p>
+<p>服务启动：<br>
+svnserve.exe -d -r D:\SVN_Root\repos</p>
+<p>SVN还原<br>
+svnadmin load D:\SVN_Root\repos\repos &lt; D:\repos.dump</p>
+<p>注册为系统服务<br>
+sc create svn binpath= ““D:\SVN_Root\Subversion\bin\svnserve.exe” --service -r D:\SVN_Root\repos” displayname= “Subversion Server” depend= Tcpip start= auto</p>
+<p>项目更换服务器，需迁移SVN，现记录过程。</p>
+<p>Subversion简介</p>
+<ol>
+<li>Subversion（简称SVN）是一款功能强大的开源版本控制工具，支持Linux和Windows平台。</li>
+<li>SVN可以有两个访问方式，一种是独立服务器直接访问，即利用svnserve命令启动服务，通过svn://yourdomain.com/project进行访问和操作。另一种结合apache，利用HTTP协议，通过http://yourdomain.com/svn/project进行访问及各类操作。如果服务器需要在互联网上共享，一般选择后一种方式。</li>
+<li>通常情况下，如果选择SVN Server和Apache HTTP Server各自独立安装，配置起来会比较繁琐。</li>
+</ol>
+<p>软件下载<br>
+服务器：Subversion v1.7 <a href="http://sourceforge.net/projects/win32svn/" target="_blank" rel="noopener">http://sourceforge.net/projects/win32svn/</a><br>
+客户端：Tortoisesvn V1.7 <a href="http://tortoisesvn.net/downloads.html" target="_blank" rel="noopener">http://tortoisesvn.net/downloads.html</a></p>
+<p>结构说明<br>
+D:/svnroot<br>
+├─project1<br>
+│     ├─conf<br>
+│     ├─dav<br>
+│     ├─db<br>
+│     │     ├─revprops<br>
+│     │     ├─revs<br>
+│     │     └─transactions<br>
+│     ├─hooks<br>
+│     └─locks<br>
+└─project2<br>
+├─conf<br>
+├─dav<br>
+├─db<br>
+│     ├─revprops<br>
+│     ├─revs<br>
+│     └─transactions<br>
+├─hooks<br>
+└─locks<br>
+其中：svnroot文件夹为存放所有仓库，也是服务启动的时候需指定的目录，下面的各项为项目目录</p>
+<p>启动服务<br>
+启动独立服务方式<br>
+svnserve –d –r e:/svn_repository/<br>
+访问方法：svn://localhost/dev，或file:///3:/svn_repository/dev<br>
+启动apache方式<br>
+cd D:/Program Files/CollabNet Subversion Server/httpd/bin<br>
+httpd.exe<br>
+访问方法：<a href="http://localhost/svn/dev/" target="_blank" rel="noopener">http://localhost/svn/dev/</a></p>
+<p>本项目所使用过程<br>
+所有命令行操作需要管理员权限<br>
+1.服务启动：<br>
+svnserve.exe -d -r D:\SVN_Root\repos<br>
+2.SVN备份（从源服务器备份，如：192.168.11.121）：<br>
+A：svnadmin dump d:\svn\repos\project1&gt; dump.dump &gt;D:\repos.dump      .dump后缀不能丢<br>
+B：备份d:\svn\repos\project1下conf目录<br>
+3.SVN还原（拷贝.dump文件到目的服务器，如：192.168.7.116）：<br>
+A：svnadmin create D:\SVN_Root\repos\project1<br>
+B：svnadmin load D:\SVN_Root\repos\project1 &lt; D:\repos.dump<br>
+C：拷贝2.B中备份的conf文件夹覆盖D:\SVN_Root\repos\project1下conf文件<br>
+4.注册为系统服务<br>
+sc create svn binpath= ““D:\SVN_Root\Subversion\bin\svnserve.exe” --service -r D:\SVN_Root\repos” displayname= “Subversion Server” depend= Tcpip start= auto</p>
+<p>荐读：<br>
+svnadmin命令：<br>
+<a href="http://blog.csdn.net/wzq9706/article/details/7319728" target="_blank" rel="noopener">http://blog.csdn.net/wzq9706/article/details/7319728</a><br>
+<a href="http://www.ityen.com/archives/529" target="_blank" rel="noopener">http://www.ityen.com/archives/529</a><br>
+svn命令：<a href="http://blog.sina.com.cn/s/blog_963453200101eiuq.html%EF%BC%8Csvn%E5%91%BD%E4%BB%A4%E4%B9%9F%E5%8F%AF%E9%80%9A%E8%BF%87Tortoisesvn%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%93%8D%E4%BD%9C%E4%BB%A3%E6%9B%BF" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_963453200101eiuq.html，svn命令也可通过Tortoisesvn客户端操作代替</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB集群搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/数据库-2018-12-10-MongoDB集群搭建/" itemprop="url">MongoDB集群搭建</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:23:24+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##集群环境:三台服务器</p>
+<h3 id="server110620128主server210620135从server310620159从"><a class="markdownIt-Anchor" href="#server110620128主server210620135从server310620159从"></a> server1:10.62.0.128主;server2:10.62.0.135从;server3:10.62.0.159从</h3>
+<h4 id="每一台分为6个片shard1~shard6端口为470174701847019470204702147022每一片建三个副本集配置服务器端口号37017路由服务器端口号30000"><a class="markdownIt-Anchor" href="#每一台分为6个片shard1~shard6端口为470174701847019470204702147022每一片建三个副本集配置服务器端口号37017路由服务器端口号30000"></a> 每一台分为6个片：shard1~shard6端口为47017,47018,47019,47020,47021,47022；每一片建三个副本集；配置服务器端口号：37017；路由服务器端口号：30000；</h4>
+<h3 id="1解压安装文件"><a class="markdownIt-Anchor" href="#1解压安装文件"></a> (1).解压安装文件</h3>
+<pre><code>[gsunis@gsunis Desktop]$ tar zxvf mongodb-linux-x86_64-3.0.6.tgz
+</code></pre>
+<h3 id="2将mongodb文件移动到homegsunismongodb目录下"><a class="markdownIt-Anchor" href="#2将mongodb文件移动到homegsunismongodb目录下"></a> (2).将mongoDB文件移动到/home/gsunis/mongodb目录下</h3>
+<pre><code>[root@gsunis Desktop]# mv mongodb-linux-x86_64-3.0.6 /home/gsunis/mongodb
+</code></pre>
+<h3 id="3数据存储目录"><a class="markdownIt-Anchor" href="#3数据存储目录"></a> (3).数据存储目录</h3>
+<pre><code>[root@gsunis bin]# mkdir -p /home/gsunis/data/db
+</code></pre>
+<h3 id="4启动mongod服务"><a class="markdownIt-Anchor" href="#4启动mongod服务"></a> (4).启动mongod服务</h3>
+<pre><code>[root@gsunis Desktop]# cd /home/gsunis/mongodb/bin
+[root@gsunis bin]# ./mongod --port 27017 --dbpath=/home/gsunis/data/db
+</code></pre>
+<h3 id="5启动mongo客户端"><a class="markdownIt-Anchor" href="#5启动mongo客户端"></a> (5).启动mongo客户端</h3>
+<pre><code>打开新的Terminal
+[gsunis@gsunis Desktop]$ su 
+查看mongod服务启动情况
+[root@gsunis Desktop]# netstat -ntpl | grep 27017
+
+[root@gsunis Desktop]# cd /home/gsunis/mongodb/bin/
+[root@gsunis bin]# ./mongo
+</code></pre>
+<p>###正常关闭mongoDB服务</p>
+<pre><code>./mongo
+use admin
+db.shutdownServer() 或者ps -ef|grep mongodb  kill -2 pid
+</code></pre>
+<p>##以上是简单的安装mongodb，下面是开始建立集群，分片和建立副本集</p>
+<p>###创建目录<br>
+mkdir -p /data/conf<br>
+mkdir -p /data/data1<br>
+mkdir -p /data/data2<br>
+mkdir -p /data/data3<br>
+mkdir -p /data/data4<br>
+mkdir -p /data/data5<br>
+mkdir -p /data/data6</p>
+<h3 id="6编辑mongo配置文件"><a class="markdownIt-Anchor" href="#6编辑mongo配置文件"></a> (6).编辑mongo配置文件</h3>
+<pre><code>sudo vi conf.cnf
+
+//conf.cnf   
+port=37017  
+dbpath=/home/gsunis/data/conf  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/conf/mongodb.log  
+nojournal=false  
+configsvr=true  
+profile=1 
+
+sudo vi db1.cnf
+
+//db1.cnf  
+replSet=shard1  
+port=47017  
+dbpath=/home/gsunis/data/data1  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data1/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db2.cnf
+
+//db2.cnf  
+replSet=shard2   
+port=47018  
+dbpath=/home/gsunis/data/data2  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data2/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db3.cnf
+
+//db3.cnf  
+replSet=shard3  
+port=47019  
+dbpath=/home/gsunis/data/data3  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data3/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db4.cnf
+
+//db4.cnf  
+replSet=shard4   
+port=47020  
+dbpath=/home/gsunis/data/data4  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data4/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db5.cnf
+
+//db5.cnf  
+replSet=shard5   
+port=47021  
+dbpath=/home/gsunis/data/data5  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data5/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+
+sudo vi db6.cnf
+
+//db6.cnf  
+replSet=shard6   
+port=47022  
+dbpath=/home/gsunis/data/data6  
+logappend = true  
+fork=true  
+logpath=/home/gsunis/data/data6/mongodb.log  
+nojournal=false  
+shardsvr=true  
+profile=1  
+</code></pre>
+<h4 id="7编写启动mongo服务的脚本"><a class="markdownIt-Anchor" href="#7编写启动mongo服务的脚本"></a> (7).编写启动mongo服务的脚本</h4>
+<pre><code>sudo vi mg.sh
+
+#!/bin/bash  
+instance=$1  
+action=$2  
+case &quot;$action&quot; in  
+   'start')  
+/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf ;;  
+   'stop')  
+/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown;;  
+   'restart')  
+/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown  
+/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf;;  
+esac  
+</code></pre>
+<h4 id="8启动mongo服务脚本"><a class="markdownIt-Anchor" href="#8启动mongo服务脚本"></a> (8).启动mongo服务脚本</h4>
+<pre><code>sudo vi start.sh
+
+#!/bin/bash 
+rm /data/conf/*.lock
+rm /data/data1/*.lock	
+rm /data/data2/*.lock
+rm /data/data3/*.lock
+rm /data/data4/*.lock
+rm /data/data5/*.lock
+rm /data/data6/*.lock
+/home/gsunis/data/mg.sh db1 start  
+/home/gsunis/data/mg.sh db2 start  
+/home/gsunis/data/mg.sh db3 start  
+/home/gsunis/data/mg.sh db4 start  
+/home/gsunis/data/mg.sh db5 start
+/home/gsunis/data/mg.sh db6 start  
+</code></pre>
+<p>sudo vi <a href="http://stop.sh" target="_blank" rel="noopener">stop.sh</a></p>
+<pre><code>#!/bin/bash 
+/home/gsunis/data/mg.sh conf stop 
+/home/gsunis/data/mg.sh db1 stop  
+/home/gsunis/data/mg.sh db2 stop  
+/home/gsunis/data/mg.sh db3 stop  
+/home/gsunis/data/mg.sh db4 stop  
+/home/gsunis/data/mg.sh db5 stop
+/home/gsunis/data/mg.sh db6 stop  
+</code></pre>
+<p>###准备工作做好，先启动配置服务器（先启动主，依次启动两从机）<br>
+/home/gsunis/data/mg.sh conf start<br>
+###再启动路由服务器（先启动主，依次启动两从机）<br>
+/home/gsunis/mongodb/bin/mongos  --configdb 10.62.0.128:37017,10.62.0.135:37017,10.62.0.159:37017 --port 30000 --chunkSize 1 --logpath /home/gsunis/data/mongos1.log --logappend --fork<br>
+###最后启动mongod（先启动主，依次启动两从机）<br>
+/home/gsunis/mongodb/data/start.sh</p>
+<h3 id="9shard服务器副本集的建立只需要在主机上做即可两从机会自动复制"><a class="markdownIt-Anchor" href="#9shard服务器副本集的建立只需要在主机上做即可两从机会自动复制"></a> (9).shard服务器副本集的建立（只需要在主机上做即可，两从机会自动复制）</h3>
+<pre><code>./mongo --port 47017
+
+config = {_id: 'shard1', members: [
+ {_id: 0, host: '10.62.0.128:47017'},
+ {_id: 1, host: '10.62.0.135:47017'},
+ {_id: 2, host: '10.62.0.159:47017'}]
+ }
+rs.initiate(config)
+
+Ctrl + C 退出
+</code></pre>
+<ul>
+<li>rs.add({&quot;_id&quot;:2,“host”:“10.62.0.135:47017”})	#在线增加复制集</li>
+</ul>
+<hr>
+<pre><code>./mongo --port 47018
+
+config = {_id: 'shard2', members: [
+ {_id: 0, host: '10.62.0.128:47018'},
+ {_id: 1, host: '10.62.0.135:47018'},
+ {_id: 2, host: '10.62.0.159:47018'}]
+ }
+rs.initiate(config)
+
+
+./mongo --port 47019
+
+config = {_id: 'shard3', members: [
+ {_id: 0, host: '10.62.0.128:47019'},
+ {_id: 1, host: '10.62.0.135:47019'},
+ {_id: 2, host: '10.62.0.159:47019'}]
+ }
+rs.initiate(config)
+
+
+./mongo --port 47020
+
+config = {_id: 'shard4', members: [
+ {_id: 0, host: '10.62.0.128:47020'},
+ {_id: 1, host: '10.62.0.135:47020'},
+ {_id: 2, host: '10.62.0.159:47020'}]
+ }
+rs.initiate(config)
+
+./mongo --port 47021
+
+config = {_id: 'shard5', members: [
+ {_id: 0, host: '10.62.0.128:47021'},
+ {_id: 1, host: '10.62.0.135:47021'},
+ {_id: 2, host: '10.62.0.159:47021'}]
+ }
+rs.initiate(config)
+
+
+./mongo --port 47022
+
+config = {_id: 'shard6', members: [
+ {_id: 0, host: '10.62.0.128:47022'},
+ {_id: 1, host: '10.62.0.135:47022'},
+ {_id: 2, host: '10.62.0.159:47022'}]
+ }
+rs.initiate(config)
+</code></pre>
+<h2 id="配置sharding登录到mongos添加shard节点"><a class="markdownIt-Anchor" href="#配置sharding登录到mongos添加shard节点"></a> 配置sharding:登录到mongos，添加shard节点</h2>
+<pre><code>./mongo --port 30000
+
+use admin
+
+db.runCommand({addshard:&quot;shard1/10.62.0.128:47017,10.62.0.159:47017,10.62.0.135:47017&quot;});
+db.runCommand({addshard:&quot;shard2/10.62.0.128:47018,10.62.0.159:47018,10.62.0.135:47018&quot;});
+db.runCommand({addshard:&quot;shard3/10.62.0.128:47019,10.62.0.159:47019,10.62.0.135:47019&quot;});
+db.runCommand({addshard:&quot;shard4/10.62.0.128:47020,10.62.0.159:47020,10.62.0.135:47020&quot;});
+db.runCommand({addshard:&quot;shard5/10.62.0.128:47021,10.62.0.159:47021,10.62.0.135:47021&quot;});
+db.runCommand({addshard:&quot;shard6/10.62.0.128:47022,10.62.0.159:47022,10.62.0.135:47022&quot;});
+
+
+use config
+
+db.shards.find()
+</code></pre>
+<h4 id="启动路由服务出错"><a class="markdownIt-Anchor" href="#启动路由服务出错"></a> 启动路由服务出错</h4>
+<p>错误：</p>
+<p><img src="http://i.imgur.com/Usu4wPa.png" alt="时钟不同步，导致无法启动路由服务"></p>
+<p>解决方法：</p>
+<ul>
+<li>(1).关闭所有mongo相关服务</li>
+<li>(2).先启配置服务 		Config Server</li>
+<li>(3).启动路由服务		mongos</li>
+<li>(4).最后启动所有mongod服务	mongod<br>
+###远程copy<br>
+scp /home/gsunis/Tools/mongodb-linux-x86_64-3.0.6.tgz <a href="mailto:gsunis@10.62.0.135" target="_blank" rel="noopener">gsunis@10.62.0.135</a>:/home/gsunis/</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1766,7 +2611,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/01/02/Java-2019-01-02-Java并发编程/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/01/18/容器技术-docker入门helloworld/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1785,7 +2630,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/02/Java-2019-01-02-Java并发编程/" itemprop="url">Java并发编程</a></h2>
+                <a class="post-title-link" href="/2019/01/18/容器技术-docker入门helloworld/" itemprop="url">docker入门之Hello World</a></h2>
         
 
         <div class="post-meta">
@@ -1797,8 +2642,8 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-02T15:52:38+08:00">
-                2019-01-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-18T09:38:59+08:00">
+                2019-01-18
               </time>
             
 
@@ -1820,8 +2665,8 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
                   </a>
                 </span>
 
@@ -1859,537 +2704,46 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
       
         
           
-            <p>ExecutorService   Semaphore</p>
-<p>并发实现一个计数器：引入问题</p>
-<p>并发与高并发：</p>
-<p>Java内存模型-写一篇文章<br>
-Java内存模型：Java Memory Model（JMM）</p>
-<p>CPU包括运算逻辑部件、寄存器部件和控制部件等。寄存器在CPU上</p>
-<p>Java堆：Heap运行时数据区，有垃圾回收来负责，可以动态分配大小，生存期也不必提前告诉编译器，是在运行时动态分配内存的，由于需要动态分配，所以速度比栈慢<br>
-Java栈：Stack速度仅次于寄存器，数据可以共享，缺点是栈中的数据的大小及生存期必须是确定的，</p>
-<p>线程之间操作必须通过主内存</p>
-<p><a href="https://www.cnblogs.com/zhehan54/p/6130030.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhehan54/p/6130030.html</a><br>
-实现并发的方式有多种：比如多进程、多线程、IO多路复用。<br>
-进程是资源（CPU、内存等）分配的基本单位</p>
-<p>自定义注解</p>
-<p><a href="https://blog.csdn.net/motui/article/details/79012846" target="_blank" rel="noopener">https://blog.csdn.net/motui/article/details/79012846</a></p>
-<p>线程安全性-原子性<br>
-compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果不一样，则重新获取再比较</p>
-<p>AtomicLong  LongAdder</p>
-<p><a href="https://blog.csdn.net/jesonjoke/article/list/1" target="_blank" rel="noopener">https://blog.csdn.net/jesonjoke/article/list/1</a></p>
-<p><a href="http://www.cnblogs.com/hongten/p/hongten_oracle_plsql.html" target="_blank" rel="noopener">http://www.cnblogs.com/hongten/p/hongten_oracle_plsql.html</a></p>
-<p><a href="https://me.csdn.net/jesonjoke" target="_blank" rel="noopener">https://me.csdn.net/jesonjoke</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Java-2018-12-19-aa/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Java-2018-12-19-aa/" itemprop="url">aa</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/god--love-you/p/6133390.html" target="_blank" rel="noopener">https://www.cnblogs.com/god--love-you/p/6133390.html</a></p>
-<p>springboot<br>
-<a href="https://blog.csdn.net/forezp/column/info/15397/1" target="_blank" rel="noopener">https://blog.csdn.net/forezp/column/info/15397/1</a><br>
-<a href="https://blog.csdn.net/vbirdbest/article/category/7490600/3" target="_blank" rel="noopener">https://blog.csdn.net/vbirdbest/article/category/7490600/3</a></p>
-<p><a href="https://github.com/lenve/vhr" target="_blank" rel="noopener">https://github.com/lenve/vhr</a></p>
-<p>netty<br>
-<a href="https://waylau.com/netty-4-user-guide/" target="_blank" rel="noopener">https://waylau.com/netty-4-user-guide/</a></p>
-<p><a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener">https://github.com/doocs/advanced-java</a></p>
-<p><a href="https://blog.csdn.net/qq_38765404/article/details/78615572" target="_blank" rel="noopener">https://blog.csdn.net/qq_38765404/article/details/78615572</a></p>
-<p><a href="http://www.cnblogs.com/felixzh/p/5869212.html" target="_blank" rel="noopener">http://www.cnblogs.com/felixzh/p/5869212.html</a></p>
-<p>oracle<br>
-<a href="https://www.cnblogs.com/kane1990/p/OracleNetManager.html" target="_blank" rel="noopener">https://www.cnblogs.com/kane1990/p/OracleNetManager.html</a><br>
-<a href="https://blog.csdn.net/u011179993/article/details/51554324" target="_blank" rel="noopener">https://blog.csdn.net/u011179993/article/details/51554324</a><br>
-<a href="https://www.cnblogs.com/yadongliang/p/5840203.html" target="_blank" rel="noopener">https://www.cnblogs.com/yadongliang/p/5840203.html</a><br>
-<a href="http://blog.51cto.com/mazongfei/2126876" target="_blank" rel="noopener">http://blog.51cto.com/mazongfei/2126876</a><br>
-<a href="https://blog.csdn.net/weixin_37480339/article/details/81017214" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37480339/article/details/81017214</a><br>
-<a href="https://blog.csdn.net/wangjialiang/article/details/7867791" target="_blank" rel="noopener">https://blog.csdn.net/wangjialiang/article/details/7867791</a></p>
-<p><a href="http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
-</blockquote>
-<blockquote>
-<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
-</blockquote>
-<blockquote>
-<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
-<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
-<p>Centos7解决图形界面卡死问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS下yum源的搭建与使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-CentOS下yum源的搭建与使用/" itemprop="url">CentOS下yum源的搭建与使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="yum简介"><a class="markdownIt-Anchor" href="#yum简介"></a> yum简介</h1>
+            <h1 id="docker-版本helloworld"><a class="markdownIt-Anchor" href="#docker-版本helloworld"></a> docker 版本HelloWorld</h1>
+<p>安装好docker后执行如下命令：</p>
 <ul>
-<li>yum就是为了解决依赖关系而存在的</li>
-<li>yum源就相当是一个目录项，当我们使用yum机制安装软件时，若需要安装依赖软件，则yum机制就会根据在yum源中定义好的路径查找依赖软件，并将依赖软件安装好</li>
-<li>YUM是“Yellow dog Updater, Modified”的缩写，是一个软件包管理器，YUM从指定的地方（相关网站的rpm包地址或本地的rpm路径）自动下载RPM包并且安装，能够很好的解决依赖关系问题</li>
-<li>yum两种源：本地yum源和网络yum源</li>
+<li>docker serach hello-world</li>
+<li>docker pull hello-world</li>
+<li>docker run hello-world</li>
 </ul>
-<h1 id="yum工作机制"><a class="markdownIt-Anchor" href="#yum工作机制"></a> yum工作机制</h1>
+<h1 id="docker镜像原理"><a class="markdownIt-Anchor" href="#docker镜像原理"></a> docker镜像原理</h1>
+<p><img src="/pub-images/%E9%95%9C%E5%83%8F%E5%8E%9F%E7%90%86.png" alt="image"></p>
+<h1 id="docker-web版本helloworld"><a class="markdownIt-Anchor" href="#docker-web版本helloworld"></a> docker web版本HelloWorld</h1>
+<ul>
+<li>docker pull nginx</li>
+<li>docker run -d -p 8080:80 nginx</li>
+<li>浏览器访问：<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a></li>
+</ul>
+<h1 id="自我制作镜像"><a class="markdownIt-Anchor" href="#自我制作镜像"></a> 自我制作镜像</h1>
+<h2 id="dockerfile方式"><a class="markdownIt-Anchor" href="#dockerfile方式"></a> Dockerfile方式</h2>
 <ol>
-<li>服务器端</li>
+<li>下载war包，作为镜像制作项目： <a href="https://gitee.com/GalaIO/jpress/blob/master/wars/jpress-web-newest.war" target="_blank" rel="noopener">https://gitee.com/GalaIO/jpress/blob/master/wars/jpress-web-newest.war</a></li>
+<li>docker pull tomcat   //准备war项目的容器</li>
+<li>创建空目录:cd /media/psf/LinuxShare/data;sudo mkdir myDocker;cd myDocker;</li>
+<li>sudo cp /media/psf/LinuxShare/soft/jpress-web-newest.war /media/psf/LinuxShare/data/myDocker/</li>
+<li>创建Dockerfile文件，sudo vim myDocker;编辑内容如下：</li>
 </ol>
-<ul>
-<li>在服务器上面存放了所有的RPM软件包，然后以相关的功能去分析每个RPM文件的依赖性关系，将这些数据记录成文件存放在服务器的某特定目录内</li>
-</ul>
-<ol start="2">
-<li>客户端</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from tomcat</span><br><span class="line"></span><br><span class="line">MAINTAINER xingfeng1024 xingfeng1024@163.com</span><br><span class="line"></span><br><span class="line">COPY jpress-web-newest.war /usr/local/tomcat/webapps</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>构建镜像：docker build -t mydocker/jpress:latest .</li>
+<li>docker images查看镜像</li>
+<li>docker run -d -p 8888:8080 mydocker/jpress</li>
+<li>浏览器：<a href="http://localhost:8888/jpress-web-newest" target="_blank" rel="noopener">http://localhost:8888/jpress-web-newest</a> 查看效果</li>
 </ol>
-<ul>
-<li>如果需要安装某个软件时，先下载服务器上面记录的依赖性关系文件(可通过WWW或FTP方式)，通过对服务器端下载的纪录数据进行分析，然后取得所有相关的软件，一次全部下载下来进行安装</li>
-</ul>
-<h1 id="yum文件"><a class="markdownIt-Anchor" href="#yum文件"></a> yum文件</h1>
-<blockquote>
-<p>在/etc/yum.repos.d 目录下存放的就是yum源的设定文件</p>
-</blockquote>
-<blockquote>
-<p>yum repolist all   //此命令可查看启用的源配置文件</p>
-</blockquote>
-<p>*.repo各配置项说明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* [base]：代表容器的名字，里面的名称则可以随意取，但是不能有两个相同的容器名称， 否则 yum 会不晓得该到哪里去找容器相关软体清单档案</span><br><span class="line">* name：只是说明一下这个容器的意义而已，重要性不高</span><br><span class="line">* mirrorlist=：列出这个容器可以使用的映射站台，如果不想使用，可以注解到这行</span><br><span class="line">* baseurl=：这个最重要，因为后面接的就是容器的实际网址！ mirrorlist 是由 yum 程式自行去捉映射站台， baseurl 则是指定固定的一个容器网址</span><br><span class="line">* enable=1：就是让这个容器被启动  </span><br><span class="line">* gpgcheck=1：指定是否需要查阅RPM档案内的数位签章！0表示不检测</span><br><span class="line">* gpgkey=：就是数位签章的公钥档所在位置！使用预设值即可</span><br></pre></td></tr></table></figure>
-<h1 id="更改yum源与更新系统"><a class="markdownIt-Anchor" href="#更改yum源与更新系统"></a> 更改yum源与更新系统</h1>
-<ul>
-<li>备份/etc/yum.repos.d/CentOS-Base.repo:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
-<ul>
-<li>进入yum源配置文件所在文件夹</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
-<ul>
-<li>下载163或其他的yum源配置文件，放入/etc/yum.repos.d/(操作前请做好相应备份)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.163.com/.help/CentOS6-Base-163.repo</span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行yum makecache生成缓存:yum makecache</li>
-<li>更新系统:yum -y update</li>
-</ul>
-<h1 id="yum基本使用"><a class="markdownIt-Anchor" href="#yum基本使用"></a> yum基本使用</h1>
-<p>参数说明:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-y : 如果在工作过程中如要使用者响应,这个参数可以直接回答yes</span><br><span class="line">list : 列出在yum server 上面有的RPM套件</span><br><span class="line">install: 安装某个套件</span><br><span class="line">update : 升级某个套件,如果update后面没有接套件名称,即更新目前主机所有已安装的套件.</span><br><span class="line">info   : 列出某个套件的详细信息,相当于rpm -qi package内容</span><br><span class="line">clean : 将已下载到本机的packages或headers移除</span><br><span class="line">remove : 移除已经安装在系统中的某个套件</span><br><span class="line">yum localinstall package 本地安装软件包</span><br><span class="line">yum update 全部更新</span><br><span class="line">yum update package 更新指定程序包package</span><br><span class="line">yum check-update 检查可更新的程序</span><br><span class="line">yum info 显示安装包信息</span><br><span class="line">yum list 显示所有已经安装和可以安装的程序包 </span><br><span class="line">yum search 查找软件包</span><br><span class="line">yum remove | erase package1 删除程序包</span><br><span class="line">yum clean headers 清除header</span><br><span class="line">yum clean packages 清除下载的rpm包</span><br><span class="line">yum clean all 清除header与rpm包</span><br></pre></td></tr></table></figure>
-<h1 id="yum源服务器的搭建"><a class="markdownIt-Anchor" href="#yum源服务器的搭建"></a> yum源服务器的搭建</h1>
-<p>yum源的搭建可分为三步：①搭建Apache服务器②挂载ISO镜像，将镜像中的包放至Apache服务器目录下③ISO镜像的包比较老旧，可以定时同步其他源中的包到本地</p>
-<h1 id="客户端访问yum源服务器"><a class="markdownIt-Anchor" href="#客户端访问yum源服务器"></a> 客户端访问yum源服务器</h1>
+<h2 id="打包方式"><a class="markdownIt-Anchor" href="#打包方式"></a> 打包方式</h2>
+<ol>
+<li>在以上镜像基础上，进入镜像：docker exec -it mydocker/jpress bash</li>
+<li>apt-get install vim</li>
+<li>vim <a href="http://readme.md" target="_blank" rel="noopener">readme.md</a>;  随便输入内容保存即可</li>
+<li>退出容器：Ctrl+P，Ctrl+Q</li>
+<li>制作镜像：docker commit f8ed84a63e94 mydocker/jpress-vim  //f8ed84a63e94为容器ID</li>
+<li>docker images查看最新制作镜像，创建容器运行后进入发现有了vim功能</li>
+</ol>
 
           
         
@@ -2438,7 +2792,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2493,7 +2847,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">127</span>
+                  <span class="site-state-item-count">131</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2515,7 +2869,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">71</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2609,7 +2963,7 @@ compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.1k字</span>
+  <span class="post-count">博客全站共128.7k字</span>
 </div>
 
 

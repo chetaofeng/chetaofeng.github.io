@@ -324,6 +324,944 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/数据库-2018-12-12-oracle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/12/数据库-2018-12-12-oracle/" itemprop="url">oracle</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T23:11:39+08:00">
+                2018-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>官网：<a href="https://www.oracle.com/index.html" target="_blank" rel="noopener">https://www.oracle.com/index.html</a><br>
+版本中字母的含义：c（cloud）、g（grid）、i（internet）</p>
+<p>下载：<a href="https://www.oracle.com/downloads/%EF%BC%8C%E9%9C%80%E8%A6%81%E7%99%BB%E5%BD%95oracle%E5%AE%98%E7%BD%91%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD" target="_blank" rel="noopener">https://www.oracle.com/downloads/，需要登录oracle官网，下载的两个文件解压在一个文件夹中</a></p>
+<p>安装：</p>
+<ol>
+<li>安装Oracle11g出现INS-13001环境不满足最低要求 <a href="https://blog.csdn.net/q_sea__/article/details/79012808" target="_blank" rel="noopener">https://blog.csdn.net/q_sea__/article/details/79012808</a></li>
+<li>Environment variable: “PATH”<br>
+安装时确保不要关机或断电；安装过程中复制文件过程比较耗费时间</li>
+</ol>
+<p>完整的Oracle数据库通常由两部分组成：Oracle数据库和数据库实例。</p>
+<ol>
+<li>数据库是一系列物理文件的集合（数据文件，控制文件，联机日志，参数文件等）；</li>
+<li>Oracle数据库实例则是一组Oracle后台进程/线程以及在服务器分配的共享内存区。</li>
+</ol>
+<p>在启动Oracle数据库服务器时，实际上是在服务器的内存中创建一个Oracle实例（即在服务器内存中分配共享内存并创建相关的后台内存），然后由这个Oracle数据库实例来访问和控制磁盘中的数据文件。Oracle有一个很大的内存快，称为全局区（SGA）。</p>
+<p>数据库的创建与监听器的配置54C<br>
+创建数据库:Database Conguration Assistant,可以创建、配置、删除、管理数据库<br>
+全局数据库名称为数据库名称，其至少要有一个Oracle实例引用，该实例由SID唯一标识,如：orcl<br>
+配置Enterprise Manager会占用较大内存，先不配置;注意选择字符集;修改scott和hr的密码<br>
+sys用户为数据库的所有者，system用户为数据库的操作员<br>
+监听器的配置：Net Conguration Assistant，配置完成后在系统服务中查看添加了OracleOraDb11g_home1TNSListener,此服务启动之后就允许外部连接数据库了<br>
+OracleServiceORCL是关于数据库实例的服务，此服务启动之后，数据库才可用</p>
+<p>oracle常用数据库工具<br>
+Oracle Universal Installer：OUI（Oracle全局安装器），用来安装卸载oracle数据库管理系统<br>
+Database Conguration Assistant：(DBCA)创建、配置、删除、管理数据库<br>
+Net Conguration Assistant：(NCA)监听器、命名方法、本地网络服务名、目录使用配置<br>
+SQL Plus：基于命令行的oracle官方操作工具<br>
+SQL Devloper：基于Java的图形化的oracle官方操作工具,需人工关联sqldeveloper.exe文件和配置JDK<br>
+PL/SQL Devloper：第三方工具<br>
+TOAD：第三方工具</p>
+<p>Oracle中的用户、权限与角色<br>
+用户管理：需切换到system用户操作<br>
+创建用户：create user 用户名 identified by 密码 [account lock|unlock] [password expire];（password expire表示密码立即过期，第一次登录后需修改密码）用户创建后还需授权才能操作数据库<br>
+修改用户：alter user 用户名 identified by 密码 [account lock|unlock] [password expire];<br>
+删除用户：drop user 用户名 [cascade];(cascade用来表示删除用户下的所有数据对象)<br>
+权限管理：权限为系统中设置的安全规则或安全策略，分为系统权限（用户能否在数据库上完成某个动作）和对象权限（用户能否在某个数据库对象上完成某种操作）<br>
+系统权限授予：grant 权限 to user|role [with admin option];(表示可以级联授予)<br>
+系统权限回收：revoke 权限 from user|role;<br>
+对象权限授予：grant 权限[(col,…)] on 数据库对象 to user|role [with admin option];<br>
+对象权限回收：revoke 权限[(col,…)] on 数据库对象 from user|role;<br>
+对象权限的回收是级联的，系统权限回收是非级联的<br>
+角色管理：角色是权限的集合，用来简化权限管理<br>
+创建／删除角色：create/drop role 角色;<br>
+角色上系统权限授予：grant 权限 to role [with admin option];(表示可以级联授予)<br>
+角色上系统权限回收：revoke 权限 from 角色;<br>
+角色上对象权限授予：grant 权限[(col,…)] on 数据库对象 to role [with admin option];<br>
+角色上对象权限回收：revoke 权限[(col,…)] on 数据库对象 from role;<br>
+用户角色授予：grant 角色 to 用户;<br>
+用户角色回收：revoke 角色 from 用户;</p>
+<p>Oracle表：由行和列组成的数据库中基本的存储单元，访问其他用户的表需要加用户名作为前缀<br>
+约束：表级别约束和列级别约束，由主键、外键、非空、唯一、检查5种约束<br>
+启用表的只读状态便于备份和导出表：alter table 表名 read only;启用表的读写状态：alter table 表名 read write;</p>
+<p>Oracle事务:有一组DML组成的逻辑工作单元，有原子性、一致性、独立性和持久性</p>
+<p>序列sequence：数值生成器，通常用于生成主键值，</p>
+<p>dual是Oracle提供的最小的工作表，只有一行一列，具有某些特殊功用，只有一条记录:‘X’,习惯上,我们称之为’伪表’,他的存在是为了操作上的方便,因为select都是要有特定对象的.<br>
+select count(*) from dual;</p>
+<p>索引和同义词的使用<br>
+索引：通过关联ROWID和关键值来提升查询速度<br>
+同义词：数据库对象的别名，public同义词对所有用户有用，创建需一定权限<br>
+创建：create [public] synonym 名称 for object;<br>
+删除：drop [public] synonym 名称 for object;</p>
+<p>PL/SQL：是一种程序语言，叫做过程化SQL语言（Procedural Language/SQL）。PL/SQL是Oracle数据库对SQL语句的扩展。在普通SQL语句的使用上增加了编程语言的特点<br>
+官网：<a href="https://www.oracle.com/technetwork/database/features/plsql/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/database/features/plsql/index.html</a><br>
+PL/SQL developer官网：<a href="https://www.allroundautomations.com/" target="_blank" rel="noopener">https://www.allroundautomations.com/</a><br>
+PLSQL Developer 12 注册码<br>
+product code： 4vkjwhfeh3ufnqnmpr9brvcuyujrx3n3le<br>
+serial Number：226959<br>
+password: xs374ca</p>
+<p>配置pl/sql的Database的两种方式：<br>
+确保OracleOraDb11g_home1TNSListener和OracleServiceXXXX服务已启动<br>
+1.登录时直接在Database选项输入数据库信息:在登录时输入数据库信息 ip:端口/数据库名,如：127.0.0.1:1521/ORCL<br>
+2.配置product\11.2.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora文件，添加一下内容到文档最后，登录时输入如ORCL即可登录<br>
+ORCL =<br>
+(DESCRIPTION =<br>
+(ADDRESS_LIST =<br>
+(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))<br>
+)<br>
+(CONNECT_DATA =<br>
+(SERVER = DEDICATED)<br>
+(SERVICE_NAME = ORCL)<br>
+)<br>
+)</p>
+<p><a href="https://www.jikexueyuan.com/course/oracledb/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/</a></p>
+<p><a href="https://www.oracle.com/technetwork/topics/winsoft-085727.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/topics/winsoft-085727.html</a></p>
+<p><a href="https://www.cnblogs.com/xiashiwendao/p/7634240.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiashiwendao/p/7634240.html</a></p>
+<p>严格来讲SQL会分为三种类型:</p>
+<p>1、数据操纵语言（DML）：用来操纵数据库中数据的命令。包括：select、insert、update、delete。</p>
+<p>2、数据定义语言（DDL）：用来建立数据库、数据库对象和定义列的命令。包括：create、alter、drop。</p>
+<p>3、数据控制语言（DCL）：用来控制数据库组件</p>
+<p>用select * from tab;来查询用户下的表<br>
+查看表结构用:DESC 表名称</p>
+<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
+全局数据库名：就是一个数据库的标识，在安装时就要想好，以后一般不修改，修改起来也麻烦，因为数据库一旦安装，数据库名就写进了控制文件，数据库表，很多地方都会用到这个数据库名。<br>
+启动数据库：也叫全局数据库，是数据库系统的入口，它会内置一些高级权限的用户如SYS，SYSTEM等。我们用这些高级权限账号登陆就可以在数据库实例中创建表空间，用户，表了。</p>
+<p>查询当前数据库名：select name from v$database;</p>
+<p>我们访问Oracle都是访问一个实例，但这个实例如果关联了数据库文件，就是可以访问的，如果没有，就会得到实例不可用的错误。<br>
+实例名指的是用于响应某个数据库操作的数据库管理系统的名称。她同时也叫SID。实例名是由参数instance_name决定的<br>
+查询当前数据库实例名：select instance_name from v$instance;</p>
+<p>从oracle9i版本开始，引入了一个新的参数，即数据库服务名。数据库的逻辑表示，它是数据库呈现给客户机的方式。参数名是SERVICE_NAME。如果数据库有域名，则数据库服务名就是全局数据库名；否则，数据库服务名与数据库名相同。</p>
+<p>网络服务名(NET SERVICES NAME)<br>
+         它是“连接描述符”简称，连接描述符是网络连接目标特殊格式的描述，它包括网络协议、主机名称或地址、和目标服务<br>
+         在Oracle7和Oracle8版本,目标服务由Oracle系统标识符(SID)来标识，而Oracle8i、Oracle9i则通过数据库服务名来来标识。保存tnsnames.ora文件中在格式如下：<br>
+ myDB =<br>
+   (DESCRIPTION =<br>
+     (ADDRESS_LIST =<br>
+       (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.10.1)(PORT = 1521))<br>
+     )<br>
+     (CONNECT_DATA =<br>
+       (SERVICE_NAME = <a href="http://testDB.ChinaMobile.com" target="_blank" rel="noopener">testDB.ChinaMobile.com</a>)<br>
+     )<br>
+   )</p>
+<p>若要向ORACLE代理商购买ORACLE，是以用户数来算钱的。那么，这个“用户”跟我们在ORACLE中通过</p>
+<p>CREATE USER USERNAME IDENTIFIED BY PASSWORD创建的用户是不同概念，“用户数”指的是并发访问用户数，</p>
+<p>（我理解是同时间访问同一个内存地址的进程数）。要是我买了8个用户的，可以建几十、上百个用户也没问题，只要峰值达不到并发数就可以了。</p>
+<p>打个比方，你的名字叫小明，但是你有很多外号。你父母叫你小明，但是朋友都叫你的外号。<br>
+这里你的父母就是oracle实例，小明就是sid，service name就是你的外号。<br>
+sid用于实例区分各个数据库，service name用于外部链接。</p>
+<p>一个Oracle Server由一个Oracle实例和一个Oracle数据库组成。<br>
+即：Oracle Server = Oracle Instance + Oracle Database</p>
+<p>Oracle实例包括了内存结构(SGA)和一系列后台进程(Background Process),两者合起来称为一个Oracle实例，即：Oracle Instance = SGA + Background Process</p>
+<p>数据库逻辑组织结构<br>
+表空间、段、区、块<br>
+一个数据库由一个或多个表空间组成，一个表空间只能属于一个数据库<br>
+一个表空间由一个或多个多个数据文件组成，一个数据文件只能属于一个表空间<br>
+一个数据文件由一个或多个操作系统块组成，每一个操作系统块只能数以一个数据文件<br>
+一个表空间可以包含一个或多个段，一个段只能属于一个表空间<br>
+一个段由一个或多个区组成，每一个区只能属于一个段<br>
+一个区由一个或多个Oracle 块组成，每一个Oracle块只能属于一个区<br>
+一个区只能属于一个数据文件，数据文件的空间可以分配到一个或多个区<br>
+一个Oracle 块由一个或多个操作系统块组成，一个操作系统块是一个Oracle块的一部分</p>
+<p><a href="https://blog.csdn.net/prince_lintb/article/details/78772999" target="_blank" rel="noopener">https://blog.csdn.net/prince_lintb/article/details/78772999</a></p>
+<p>pl/sql plus： &quot;／&quot;表示执行</p>
+<p>scott库：<a href="https://www.2cto.com/database/201805/742911.html" target="_blank" rel="noopener">https://www.2cto.com/database/201805/742911.html</a></p>
+<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
+<a href="http://www.cnblogs.com/kscnchina/p/4570865.html" target="_blank" rel="noopener">http://www.cnblogs.com/kscnchina/p/4570865.html</a></p>
+<p>声明时，变量以v_开头，常量以c_开头</p>
+<p><a href="https://blog.csdn.net/michaelehome/article/details/79464214" target="_blank" rel="noopener">https://blog.csdn.net/michaelehome/article/details/79464214</a></p>
+<p>select userenv(‘language’) from dual;<br>
+NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
+<p>字符集：<a href="https://www.cnblogs.com/kaishirenshi/p/9018343.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaishirenshi/p/9018343.html</a></p>
+<p>本地动态sql</p>
+<p>SQL环境  begin … end pl/sql环境</p>
+<p>一组SQL语句操作要成为事务，数据库管理系统必须保证这组操作的原子性（Atomicity）、一致性（consistency）、隔离性（Isolation）和持久性（Durability），这就是ACID特性。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/10/Java-2018-12-10-MyBatis/" itemprop="url">MyBatis</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T13:43:24+08:00">
+                2018-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Java持久化框架 瞬态+持久态</p>
+<p>iBatis-MyBatis<br>
+apache-google-github</p>
+<p>SQL语句与代码分离；面向配置编程；良好支持复杂数据映射；动态SQL</p>
+<p><a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">https://github.com/mybatis/mybatis-3</a><br>
+<a href="http://www.mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/index.html</a></p>
+<p>日志配置<br>
+<a href="https://www.cnblogs.com/zhaozihan/p/6371133.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaozihan/p/6371133.html</a></p>
+<p>MyBatisg工作流程</p>
+<ol>
+<li>读取配置文件</li>
+<li>生成SqlSessionFactory,表示和数据库的连接，一般是程序级的生命周期</li>
+<li>简历SqlSession</li>
+<li>调用MyBatist提供的API</li>
+<li>查询Map配置</li>
+<li>返回结果</li>
+<li>关闭SqlSession</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;$&#123;driver&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;$&#123;url&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;$&#123;username&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<p>map文件引用<br>
+1.相对路径 2.绝对路径 3.包路径</p>
+<p>MyBatis配置文件：基本配置文件+映射配置文件</p>
+<p>typeAliases标记定义别名，需要environments标记之前</p>
+<p>map文件方式+注解方式（接口方式）</p>
+<p>mappers里面3种写法：resource／class／package</p>
+<p>Select配置属性说明<br>
+两者只能有一个成立<br>
+resultType<br>
+resultMap解决复杂查询时的映射问题，如属性为对象</p>
+<p>parameterType封装hashmap，key既是key也是sql形参<br>
+parameterType封装对象如User，对象参数自动匹配属性，如果对象属性和列名不一样用别名</p>
+<p>返回多上记录时MyBatis自动封装成List</p>
+<p>事务处理：<br>
+MyBatis事务处理由两种方式处理：JDBC+MANAGED</p>
+<p>每张表单独的一个配置文件，方便管理</p>
+<p>MyBatis自动id返回，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one.setUserName(&quot;123&quot;);</span><br><span class="line">session.insert(&quot;insertOne&quot;,one);</span><br><span class="line">System.out.println(one.id);  //可以正常获取id</span><br></pre></td></tr></table></figure>
+<p>高级查询<br>
+关联查询<br>
+联合查询：association<br>
+构造查询：POJO添加构造函数，同时确保要有默认构造函数，防止构造函数重新后找不到默认构造函数<br>
+子查询：所有联合查询，都可以通过子查询替换，但是他让查询成了N+1次的查询</p>
+<pre><code>子查询和联合查询的区别：
+联合查询一次查询占用资源大，子查询N+1次查询占用资源可大可小，MyBatis中子查询可能速度比联合查询速度高如果开启了懒加载的话
+懒加载的使用：配置要在配置别名之前
+</code></pre>
+<p>集合查询：Collection标记，适用于查询的对象还有一个集合引用的事后<br>
+鉴别器：discriminator标记<br>
+javaType属性：<br>
+Column属性：<br>
+Case子标记：</p>
+<p>MyBatis动态SQL：动态生成SQL</p>
+<p><a href="https://www.aliyun.com/jiaocheng/811373.html" target="_blank" rel="noopener">https://www.aliyun.com/jiaocheng/811373.html</a></p>
+<p><a href="https://www.jikexueyuan.com/course/oracledb/1-0-0-0/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/1-0-0-0/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-Kotlin/" itemprop="url">Kotlin</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://kotlinlang.org/" target="_blank" rel="noopener">http://kotlinlang.org/</a><br>
+<a href="https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt" target="_blank" rel="noopener">https://try.kotlinlang.org/#/Examples/Hello, world!/Simplest version/Simplest version.kt</a></p>
+<p>Kotlin作者Andrey<br>
+Kotlin是一种在 Java 虚拟机上运行的静态类型编程语言,被称之为 Android 世界的Swift,由 JetBrains 设计开发并开源<br>
+Kotlin是一种运行在Java虚拟机、Android、浏览器上的静态语言<br>
+Kotlin可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。<br>
+Android官方语言；100%兼容Java；Kotlin-js前端开发；Kotlin-jvm服务端开发；Kotlin-native本地执行程序；Kotlin是一门全栈语言</p>
+<p>千里之行，始于Hello World</p>
+<p>Kotlin不存在拆箱装箱问题;Kotlin不可隐式转换类型<br>
+var tmp:[类型]=[变量值]</p>
+<p>Boolean类型<br>
+Number数据类型：Byte，Short，Int，Long，Float，Double<br>
+Char数据类型：Char<br>
+String数据类型：String         字符串a==b 比较内容；a===b比较应用  字符串模版$args1  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>1</mn><mo>+</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>2</mn></mrow><mo separator="true">,</mo><mi mathvariant="normal">引</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">中</mi></mrow><annotation encoding="application/x-tex">{args1+args2},引号中</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">2</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">中</span></span></span></span>引用变量 ，多行<br>
+var a:String …<br>
+a1<br>
+a2<br>
+…</p>
+<p>Kotlin中 Any 等于 Java中 Object，是顶级类</p>
+<p>空类型：任意类型都有可空和不可空两种状态，？表示可为空，!!表示强制认定nullable不可为空<br>
+fun main(args:Array<string>){<br>
+var name:String = getName() ?: return<br>
+println(name)</string></p>
+<pre><code>var tmp:String? = &quot;Hello Kotlin&quot;
+println(tmp)
+println(tmp!!.length)
+</code></pre>
+<p>}</p>
+<p>fun getName():String?{<br>
+return null<br>
+}</p>
+<p>智能类型转换<br>
+Java方式的：var sub:Subclass = parent as Subclass   //类似于Java方式，转换异常则会抛异常<br>
+安全类型转换：var sub:Subclass? = parent as? Subclass   //如果转换失败，则返回null，不抛异常</p>
+<p>if(parent is Subclass)</p>
+<p>import com.test as test</p>
+<p>区间Range:一个数学上的概念，表示范围；是ClosedRange的子类，IntRange最常用；i in 0…1024 判断i是否在区间内<br>
+var range:IntRange = 0…1024    //[0,1024]<br>
+var range:IntRange = 0 until 1024    //[0,1024) == [0,1023]</p>
+<p>className::java.class.name<br>
+className::java.class.simpleName</p>
+<p>数组: val array:Array&lt;&gt; = arrayOf(…)<br>
+为了避免不必要的拆箱和装箱，基本类型的数组是定制的<br>
+val arrayOfInt:IntArray = intArrayOf(1,2,4)<br>
+val arrayOfChar:CharArray = charArrayOf(‘H’,‘e’,‘y’)<br>
+val arrayOfString: Array<string> = arrayOf(“Hello”,“Kotlin”)<br>
+val arrayOfOther:Array<other> = arrayOf(Other(1),Other(2))</other></string></p>
+<p>常量：val，常量因为赋值了，编译器可以推导出来类型，所以类型可以不用写，变量：var</p>
+<p>External Tools<br>
+Tools-&gt;Kotlin-&gt;Show Kotlin Bytecode</p>
+<p>函数：Kotlin中没有申明返回值的默认返回值是Unit<br>
+kotlinc安装，使用和javac一样<br>
+变量函数<br>
+var int2Long = fun(x:Int):Long{<br>
+return x.toLong()<br>
+}<br>
+int2Long(123)<br>
+fun sum(arg1:Int,arg2:Int) = arg1+arg2<br>
+Lambda表达式调用使用()或者invoke(),如：sum(1,2) 或 sum.invoke(1,2)<br>
+Lambda表达式–匿名函数</p>
+<p>var = {arg1:Int,arg2:Int -&gt; arg1+arg2}</p>
+<p>arrayOfString.forEach { println(it) }   //如果字面函数只有一个参数,可以省略该参数声明,并用“it”代替<br>
+arrayOfString.forEach(::println)</p>
+<p>Lambda表达式中的return<br>
+<a href="https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app</a></p>
+<p>public inline fun <t> Array<out t="">.forEach(action: (T) -&gt; Unit): Unit {<br>
+for (element in this) action(element)<br>
+}</out></t></p>
+<p>indexes.forEach {<br>
+if (it &gt; 5) {<br>
+return@forEach<br>
+}<br>
+println(it)<br>
+}</p>
+<p>indexes.forEach label@ {<br>
+if (it &gt; 5) {<br>
+return @label<br>
+}<br>
+println(it)<br>
+}</p>
+<p>函数参数调用时最后一个Lambda可以移出去<br>
+函数参数只有一个Lambda，调用时小括号可以省略<br>
+Lambda有一个参数，可默认为it<br>
+入参、返回值与形参一致的函数可以用函数引用的方式作为实参传入</p>
+<p>类成员方法和成员变量<br>
+class B<br>
+class A{<br>
+var b=0;<br>
+lateinit var c:String<br>
+val d:B by lazy{<br>
+B()<br>
+}<br>
+}<br>
+属性初始化</p>
+<ol>
+<li>尽量在构造方法中完成</li>
+<li>无法在构造方法中完成的，尝试降级为局部变量</li>
+<li>var用lateinit延迟初始化，val用lazy</li>
+<li>可空类型慎用null直接初始化</li>
+</ol>
+<p>中缀表达式：只有一个参数，且用infix修饰的函数<br>
+class Book {infix fun on(placeString:String){…}}<br>
+Book() on “My Desk” //使用方式<br>
+分支表达式：<br>
+val mode=if(args.isNotEmpty() &amp;&amp; args[0] ==1){<br>
+0<br>
+}else{<br>
+1<br>
+}</p>
+<p>异常捕捉<br>
+try …catch …finally中的执行完之后，再返回结果，可通过var获取返回值</p>
+<p>具名参数：sum(arg1=2,arg0=3)  //参数就可以不按照顺序传递了<br>
+变长参数：如main方法中的args<br>
+fun test(vararg  args:String){}<br>
+默认参数：给出参数默认值</p>
+<p>导出可执行程序</p>
+<p>kotlin应用场景：</p>
+<p>kotlin-android</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-Java8-特性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/Java-Java8-特性/" itemprop="url">Java8 特性</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="sam接口"><a class="markdownIt-Anchor" href="#sam接口"></a> SAM接口</h1>
+<p>Java8中增加了一个新的包：java.util.function，它里面包含了常用的函数式接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Predicate&lt;T&gt;——接收T对象并返回boolean</span><br><span class="line">Consumer&lt;T&gt;——接收T对象，不返回值</span><br><span class="line">Function&lt;T, R&gt;——接收T对象，返回R对象</span><br><span class="line">Supplier&lt;T&gt;——提供T对象（例如工厂），不接收值</span><br><span class="line">UnaryOperator&lt;T&gt;——接收T对象，返回T对象</span><br><span class="line">BinaryOperator&lt;T&gt;——接收两个T对象，返回T对象</span><br></pre></td></tr></table></figure>
+<h1 id="lambda表达式"><a class="markdownIt-Anchor" href="#lambda表达式"></a> lambda表达式</h1>
+<p>参考：<a href="http://note.youdao.com/noteshare?id=3bc7675e64b86f5e9b75534c0e436694" target="_blank" rel="noopener">http://note.youdao.com/noteshare?id=3bc7675e64b86f5e9b75534c0e436694</a></p>
+<h1 id="方法引用和构造器引用"><a class="markdownIt-Anchor" href="#方法引用和构造器引用"></a> 方法引用和构造器引用</h1>
+<h2 id="方法引用"><a class="markdownIt-Anchor" href="#方法引用"></a> 方法引用</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">objectName::instanceMethod</span><br><span class="line"></span><br><span class="line">ClassName::staticMethod</span><br><span class="line"></span><br><span class="line">ClassName::instanceMethod</span><br></pre></td></tr></table></figure>
+<ol>
+<li>前两种方式类似，等同于把lambda表达式的参数直接当成instanceMethod|staticMethod的参数来调用</li>
+<li>最后一种方式，等同于把lambda表达式的第一个参数当成instanceMethod的目标对象，其他剩余参数当成该方法的参数</li>
+</ol>
+<h2 id="构造器引用"><a class="markdownIt-Anchor" href="#构造器引用"></a> 构造器引用</h2>
+<p>构造器引用语法如下：ClassName::new，把lambda表达式的参数当成ClassName构造器的参数 。例如BigDecimal::new等同于x-&gt;new BigDecimal(x)</p>
+<h1 id="stream语法"><a class="markdownIt-Anchor" href="#stream语法"></a> Stream语法</h1>
+<p>stream就是JAVA8提供给我们的对于元素集合统一、快速、并行操作的一种方式。<br>
+它能充分运用多核的优势，以及配合lambda表达式、链式结构对集合等进行许多有用的操作</p>
+<ol>
+<li>Stream是元素的集合，这点让Stream看起来用些类似Iterator,可以把Stream当成一个装饰后的Iterator；</li>
+<li>可以支持顺序和并行的对原Stream进行汇聚的操作；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; nums = Lists.newArrayList(1,null,3,4,null,6);</span><br><span class="line">nums.stream().filter(num -&gt; num != null).count();</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Linux-CentOS查看硬件信息/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1326,962 +2264,11 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/02/C-开发-2018-11-02-NuGet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/02/C-开发-2018-11-02-NuGet/" itemprop="url">NuGet</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T10:44:02+08:00">
-                2018-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/nizhenghua/p/6422078.html" target="_blank" rel="noopener">https://www.cnblogs.com/nizhenghua/p/6422078.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/node-NW-js入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/node-NW-js入门/" itemprop="url">NW.js入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>NW.js （原名 node-webkit）是一个基于 Chromium 和 node.js 的应用运行时，通过它可以用 HTML 和 JavaScript 编写原生应用程序。它还允许您从 DOM 调用 Node.js 的模块 ，实现了一个用所有 Web 技术来写原生应用程序的新的开发模式。</p>
-<ul>
-<li>官网：<a href="https://nwjs.io/" target="_blank" rel="noopener">https://nwjs.io/</a></li>
-<li>中文文档：<a href="https://www.gitbook.com/book/wizardforcel/nwjs-doc/details" target="_blank" rel="noopener">https://www.gitbook.com/book/wizardforcel/nwjs-doc/details</a></li>
-</ul>
-<h1 id="功能特性"><a class="markdownIt-Anchor" href="#功能特性"></a> 功能特性</h1>
-<ul>
-<li>用现代 HTML5,CSS3,JS 和 WebGL 来编写应用程序</li>
-<li>完全支持 Node.js APIs 和所有其 第三方模块</li>
-<li>良好的性能:Node 和 WebKit</li>
-<li>运行在相同的线程:函数调用是更简洁;对象在同一堆可以互相引用</li>
-<li>容易打包和分发应用程序</li>
-<li>支持 Linux、Mac OS X 和 Windows</li>
-</ul>
-<h1 id="窗口外观常用属性"><a class="markdownIt-Anchor" href="#窗口外观常用属性"></a> 窗口外观常用属性</h1>
-<p>在package.json文件中设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">title : 字符串，设置默认 title。</span><br><span class="line">width/height : 主窗口的大小。</span><br><span class="line">toolbar : bool 值。是否显示导航栏。</span><br><span class="line">icon : 窗口的 icon。</span><br><span class="line">position :字符串。窗口打开时的位置，可以设置为“null”、“center”或者“mouse”。</span><br><span class="line">min_width/min_height : 窗口的最小值。</span><br><span class="line">max_width/max_height : 窗口显示的最大值。</span><br><span class="line">resizable : bool 值。是否允许调整窗口大小。</span><br><span class="line">always-on-top : bool 值。窗口置顶。</span><br><span class="line">fullscreen : bool 值。是否全屏显示。</span><br><span class="line">show_in_taskbar : 是否在任务栏显示图标。</span><br><span class="line">frame : bool 值。如果设置为 false，程序将无边框显示。</span><br></pre></td></tr></table></figure>
-<h1 id="webstorm项目创建及调试"><a class="markdownIt-Anchor" href="#webstorm项目创建及调试"></a> webstorm项目创建及调试</h1>
-<h2 id="下载三个不同-os-平台的-nwjs"><a class="markdownIt-Anchor" href="#下载三个不同-os-平台的-nwjs"></a> 下载三个不同 OS 平台的 NW.js</h2>
-<h2 id="创建项目并运行"><a class="markdownIt-Anchor" href="#创建项目并运行"></a> 创建项目并运行</h2>
-<ol>
-<li>创建空项目</li>
-<li>创建package.json,编辑起内容，最简为:</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;helloworld&quot;, </span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.html&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在webstorm 中添加一个nw.js：run – edit configurations – + nw.js</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NW.js app : 可以是当前项目目录，但要包含package.json文件. 或者是一个.nw的文件</span><br><span class="line">NW.js interpreter 指定可执行的 nw(官网下的包中的) (mac下是nwjs),如：/MyDeveloper/nwjs-v0.22.1-osx-x64/nwjs.app</span><br><span class="line">working direction ： 项目目录</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>运行查看效果</li>
-</ol>
-<h2 id="调试"><a class="markdownIt-Anchor" href="#调试"></a> 调试</h2>
-<p><a href="https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-webkit.html</a></p>
-<h1 id="打包到各个平台"><a class="markdownIt-Anchor" href="#打包到各个平台"></a> 打包到各个平台</h1>
-<p><a href="https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps" target="_blank" rel="noopener">https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps</a></p>
-<h2 id="mac下打包"><a class="markdownIt-Anchor" href="#mac下打包"></a> mac下打包</h2>
-<ol>
-<li>拷贝下载的nwjs-sdk-v0.22.1-osx-x64.zip中的nwjs.app文件到项目的根目录的同级目录</li>
-<li>修改nwjs.app目录名称为你想要的名称，如：MyNW.app</li>
-<li>在项目根目录执行如下命令：zip -r …/MyNW.app/Contents/Resources/app.nw *,将当前目录下所有文件打包到MyNW.app中</li>
-<li>open MyNW.app可以打开项目</li>
-<li>制作成dmg文件</li>
-</ol>
-<ul>
-<li>
-<ul>
-<li>在应用程序-&gt;实用工具下打开磁盘工具</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>新建一个磁盘映像，放在桌面上(可随意)，名称设置为temp.dmg(可随意)，存储为mytemp</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>拷贝4中的文件到mytemp中</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>执行：ln -s /Applications /Volumes/temp.dmg/Applications</li>
-</ul>
-</li>
-</ul>
-<ol start="6">
-<li>成功</li>
-</ol>
-<p>问题：4中制作的文件太大</p>
-<h2 id="代码加密保护"><a class="markdownIt-Anchor" href="#代码加密保护"></a> 代码加密保护</h2>
-<blockquote>
-<p>有些情况下，代码还是不能直接暴露给用户的；我们可以使用V8 Snapshot 的方式来达到代码加密保护的目的</p>
-</blockquote>
-<p>具体的方式是:</p>
-<ol>
-<li>使用 /nwjs.exe 来运行 nwjc source.js core.bin命令</li>
-<li>在index.html里使用require(‘nw.gui’).Window.get().evalNWBin(null, ‘./app/v0.0.1/core.bin’);(注意这里的路径，是相对于nw.exe的位置)将代码引入到项目中；</li>
-<li>加密的代码里不要使用 let、const这些关键字，可能因为这个始终编译不通过</li>
-</ol>
-<h2 id="自动更新"><a class="markdownIt-Anchor" href="#自动更新"></a> 自动更新</h2>
-<h3 id="项目代码需要更新"><a class="markdownIt-Anchor" href="#项目代码需要更新"></a> 项目代码需要更新</h3>
-<p>前面介绍项目接口就提到 /app/v0.0.1/ 就是放置V0.0.1的所有代码的位置；<br>
-那么如果要更新到V0.0.2，那我们新建一个文件夹 /app/V0.0.2,然后把V0.0.2的代码都放到这个文件下，然后把/package.json替换成新版本的package.json；这样重启客户端之后，然会读取v0.0.2的代码了。具体的更新代码就不写了，可以把新版本的代码打包成zip包，然后客户端下载好，解压就行。</p>
-<h3 id="nwjs本身需要更新"><a class="markdownIt-Anchor" href="#nwjs本身需要更新"></a> nw.js本身需要更新</h3>
-<p>通常情况下，不会遇到需要更新nw.js 本身的情况，因为当选定一个版本的NW.js后，就认定它了，除非遇到了什么无法解决的BUG</p>
-<h2 id="系列教程"><a class="markdownIt-Anchor" href="#系列教程"></a> 系列教程</h2>
-<p><a href="https://blog.csdn.net/zeping891103/column/info/19257" target="_blank" rel="noopener">https://blog.csdn.net/zeping891103/column/info/19257</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-2018-10-26-ECMAScript规范/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-2018-10-26-ECMAScript规范/" itemprop="url">ECMAScript规范</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>ECMAScript 6（简称ES6）是JavaScript语言的下一代标准，于2015年6月正式发布，也称ECMAScript 2015。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考资料</span><br><span class="line">《ECMAScript 6 入门》： http://es6.ruanyifeng.com/</span><br></pre></td></tr></table></figure>
-<p>ECMA是标准，js是实现</p>
-<p>[toc]</p>
-<h3 id="历史"><a class="markdownIt-Anchor" href="#历史"></a> 历史</h3>
-<ul>
-<li>1996    ES1.0   js稳定，Netscapte将js提交给ECMA组织，ES正式出现</li>
-<li>1998  ES2.0   ES2.0正式发布</li>
-<li>1999  ES3.0   ES3被浏览器广泛支持</li>
-<li>2007  ES4.0   ES4过于激进，被废除了</li>
-<li>2008  ES3.1   4.0退化为严重缩水版3.1，代号Harmony（和谐）</li>
-<li>2009  ES5.0   ES5正式发布了，公布了JS.next，即后来的ES6.0</li>
-<li>2011  ES5.1   ES5.1成为了ISO国际标准</li>
-<li>2013.3  ES6.0   制定草案</li>
-<li>2013.12   ES6.0   ES6.0草案发布</li>
-<li>2015.6    ES6.0   ES6.0预计发布正式版，同时JS.next指向ES7.0</li>
-</ul>
-<h3 id="兼容性"><a class="markdownIt-Anchor" href="#兼容性"></a> 兼容性</h3>
-<blockquote>
-<p>目前ES5、ES6支持还可以，凑合；ES5、ES6逐渐沦为后台语言</p>
-</blockquote>
-<blockquote>
-<p>在浏览器中使用需要用到编译工具，babel／traceur（由google出的编译器，把ES6语法编译成ES5）</p>
-</blockquote>
-<h3 id="使用的三种方式"><a class="markdownIt-Anchor" href="#使用的三种方式"></a> 使用的三种方式</h3>
-<ol>
-<li>网页内直接使用</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;traceur.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;module&quot;&gt;</span><br><span class="line">    //此出写ES6代码</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>直接在线编译（主要用于测试）</li>
-</ol>
-<ul>
-<li><a href="http://babeljs.io/repl/" target="_blank" rel="noopener">http://babeljs.io/repl/</a></li>
-<li><a href="https://google.github.io/traceur-compiler/demo/repl.html" target="_blank" rel="noopener">https://google.github.io/traceur-compiler/demo/repl.html</a></li>
-</ul>
-<ol start="3">
-<li>直接在node中使用</li>
-</ol>
-<ul>
-<li>直接用，需添加‘use strict’</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//test.js</span><br><span class="line">&apos;use strict&apos;</span><br><span class="line">let a=2;</span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure>
-<p>node test.js</p>
-<ul>
-<li>node --harmony_desctructuring test.js</li>
-</ul>
-<h3 id="新增功能"><a class="markdownIt-Anchor" href="#新增功能"></a> 新增功能</h3>
-<h4 id="定义变量-let"><a class="markdownIt-Anchor" href="#定义变量-let"></a> 定义变量 let</h4>
-<ul>
-<li>let定义的变量只能在代码块中使用，具备块级作用域；var具备函数级作用域；</li>
-<li>块级作用域其实就是匿名函数立即调用</li>
-<li>变量不能重复定义</li>
-<li>可用于封闭空间;封闭空间可解决i问题<br>
-以前：<br>
-(function(i){<br>
-var a=12;<br>
-})(i);<br>
-现在：<br>
-{<br>
-let  a=12;<br>
-}</li>
-</ul>
-<h4 id="定义常量-const"><a class="markdownIt-Anchor" href="#定义常量-const"></a> 定义常量 const</h4>
-<p>定义后则不能修改</p>
-<h4 id="字符串连接"><a class="markdownIt-Anchor" href="#字符串连接"></a> 字符串连接</h4>
-<p>==反单引号==：==``==,内容模版,==${变量名}填充模版==</p>
-<h4 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值"></a> 解构赋值</h4>
-<ul>
-<li>var [a,b,c]=[12,5,101];解析结构，给a、b、c都赋值；</li>
-<li>json格式（通过名称匹配，与顺序无关）也支持</li>
-<li>==模式匹配==：var [a,[b,c],d] =[12,[3,2],101],左侧的样子需要和右侧一样</li>
-<li>可==以给默认值==。var {time=12,date} ={data=123}</li>
-</ul>
-<h4 id="复制数组"><a class="markdownIt-Anchor" href="#复制数组"></a> 复制数组</h4>
-<p>数组赋值为引用赋值，复制以前用for循环🔥 Array.from()函数，现在使用==超引用’…’==, var arr2 = […arr1]; 在函数中通过 …args 接收多个参数</p>
-<h4 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h4>
-<p>以前是for或for in，现在：for of，支持数组、json、map</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//i表示数组或者json的值，for in中i是下标，for of中表示key+value，实质是jsonObj.entrys(),类似的还有jsonObj.keys()、jsonObj.values()</span><br><span class="line">for(var i of arr)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="map操作"><a class="markdownIt-Anchor" href="#map操作"></a> map操作</h4>
-<p>get()\set()\delete()</p>
-<h4 id="箭头函数"><a class="markdownIt-Anchor" href="#箭头函数"></a> 箭头函数  =&gt;</h4>
-<p><strong>注意事项</strong></p>
-<ul>
-<li>this问题  //this指向了window对象</li>
-<li>arguments不能使用，箭头函数没有自己的 arguments</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123; </span><br><span class="line">  var f = (...args) =&gt; args[0]; </span><br><span class="line">  return f(2); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(1); // 2</span><br></pre></td></tr></table></figure>
-<p>更多：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a></p>
-<h4 id="对象语法简洁化"><a class="markdownIt-Anchor" href="#对象语法简洁化"></a> 对象语法简洁化</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//以前</span><br><span class="line">var person=&#123;</span><br><span class="line">    name:&apos;abc&apos;,</span><br><span class="line">    age:100,</span><br><span class="line">    showName:function()&#123;</span><br><span class="line">        alert(this.name);       //this有问题</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">var name=&apos;abc&apos;;</span><br><span class="line">var age =100;</span><br><span class="line">var person=&#123;</span><br><span class="line">    name,</span><br><span class="line">    age,</span><br><span class="line">    showName()&#123;</span><br><span class="line">        alert(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//以前面向对象</span><br><span class="line">function Person(name,age)&#123;  //类和构造函数一体</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.showName=function()&#123;</span><br><span class="line">    return this.name;</span><br><span class="line">&#125;</span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//ES6面向对象</span><br><span class="line">class Person&#123;</span><br><span class="line">    constructor(name=&apos;defalut&apos;,age=0)&#123;  //此处可以设置默认值，这是函数的功能，即：函数参数可以给默认值</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    showName()&#123;</span><br><span class="line">        return this.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = new Person(&apos;abc&apos;,100);</span><br><span class="line">alert(p1.name);     </span><br><span class="line">alert(p1.showName());</span><br></pre></td></tr></table></figure>
-<p>继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//以前  子类.prototype = new 父类();</span><br><span class="line">function Worker(name,age)&#123;</span><br><span class="line">    Person.apply(this,arguments);</span><br><span class="line">&#125;</span><br><span class="line">Worker.prototype=new Person();</span><br><span class="line"></span><br><span class="line">//ES6</span><br><span class="line">class Woker extends Person&#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        super();    //调用父级构造</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="es5-thisbind"><a class="markdownIt-Anchor" href="#es5-thisbind"></a> ES5:  this.bind();</h4>
-<h4 id="模块化"><a class="markdownIt-Anchor" href="#模块化"></a> 模块化</h4>
-<blockquote>
-<p>当前使用模块化必须引入traceur和bootstrap，type必须写成module</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//定义</span><br><span class="line">export default &#123;a,b&#125;</span><br><span class="line">//引用</span><br><span class="line">import modA from &apos;./a.js&apos;;</span><br><span class="line">//使用</span><br><span class="line">var sum = modA.a + modA.b</span><br></pre></td></tr></table></figure>
-<h4 id="promise"><a class="markdownIt-Anchor" href="#promise"></a> Promise</h4>
-<blockquote>
-<p>本身为一个对象，用来传递异步操作的数据</p>
-</blockquote>
-<blockquote>
-<p>整体是链式操作</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pending(等待、处理中)  ---&gt; Resolve（完成）   </span><br><span class="line">                     ---&gt; Reject  (拒绝)</span><br></pre></td></tr></table></figure>
-<p>使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var p1 = new Promise(function(resolve,reject)&#123;</span><br><span class="line">    if(异步处理成功了)</span><br><span class="line">        resolve(成功数据)</span><br><span class="line">    else</span><br><span class="line">        reject(失败原因)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>包含方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">所有方法都支持链式编程</span><br><span class="line">*  then(成功(resolve数据),失败（reject数据）)  //此方法可以防止异步编程括号深度太多的的问题</span><br><span class="line">*  catch（function（e）&#123;&#125;）；    // 用来捕获错误</span><br><span class="line">*  all[p1,p2,p3....]  //用于将多个promise对象组合／包装成一个全新的promise对象,数组中的Promise又一个错误则按错误流程走，所有都成功则按成功流程走</span><br><span class="line">*  Promise.race([p1,p2....]).then(function(value)&#123;&#125;); //返回最先执行的Promise的结果</span><br><span class="line">*  Promise.reject()         //生成错误的Promise</span><br><span class="line">*  Promise.resolve()        //生成成功的Promise</span><br></pre></td></tr></table></figure>
-<h4 id="generatoryield"><a class="markdownIt-Anchor" href="#generatoryield"></a> Generator+yield</h4>
-<blockquote>
-<p>Generator:生成器，是一个函数，可以遍历</p>
-</blockquote>
-<ul>
-<li>Generator函数名字前有*</li>
-<li>Generator函数内部使用yield语句</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//普通函数</span><br><span class="line">function show()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">function* show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line">//generator函数</span><br><span class="line">*show()&#123;</span><br><span class="line">    yield “Hello”；</span><br><span class="line">    yield &quot;World&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var res=show();</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;Hello&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;World&quot;,done:false&#125;</span><br><span class="line">console.log(res.next());  //&#123;value:&quot;undefined&quot;,done:true&#125;</span><br><span class="line">~~~ </span><br><span class="line">* Generator函数调用后的对象有next方法</span><br><span class="line">* next方法每次返回一个value和done结果，value位yield后面的值，done代表是否遍历结束</span><br><span class="line">* yield语句本身没有返回值或每次返回undefined</span><br><span class="line">* next可以带参数，所带参数给了上一个yield</span><br><span class="line">* for ...of循环支持Generator函数</span><br></pre></td></tr></table></figure>
-<p>for (let v of show()){<br>
-document.write(v);<br>
-}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 展开运算符</span><br><span class="line"> 扩展语法允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组文本）或多个变量（用于解构赋值）的位置扩展</span><br><span class="line">1. 用于函数调用</span><br></pre></td></tr></table></figure>
-<p>myFunction(…iterableObj);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 用于数组字面量</span><br></pre></td></tr></table></figure>
-<p>[…iterableObj, 4, 5, 6]</p>
-<pre class="highlight"><code class="">
-ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/10/26/前端开发-Angular入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/26/前端开发-Angular入门/" itemprop="url">Angular入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T16:04:30+08:00">
-                2018-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://angular.io/</span><br><span class="line">https://www.angular.cn/</span><br><span class="line">http://www.angularjs.cn/</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. Angular和JavaScript不互通（函数、变量、事件都不互通）</span><br><span class="line">2. Angular的开发模式和传统开发模式完全不通：只需盯住数据，数据是核心</span><br></pre></td></tr></table></figure>
-<h1 id="简介及入门"><a class="markdownIt-Anchor" href="#简介及入门"></a> 简介及入门</h1>
-<p>Angular2是面向未来的科技，要求浏览器支持ES6+</p>
-<p>Angular 应用是由组件组成的。 组件由 HTML 模板和组件类组成，组件类控制视图</p>
-<p>每个组件都以@Component装饰器函数开始，它接受一个元数据对象参数。该元素对象描述了 HTML 模板和组件类是如何一起工作的</p>
-<p>selector属性为 Angular 指定了在index.html中的自定义<my-app>标签里显示该组件</my-app></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  selector: &apos;my-app&apos;,</span><br><span class="line">  template: `&lt;h1&gt;Hello &#123;&#123;name&#125;&#125;&lt;/h1&gt;`</span><br><span class="line">&#125;)</span><br><span class="line">export class AppComponent &#123; name = &apos;Angular&apos;; &#125;</span><br><span class="line"></span><br><span class="line">注️：template后面不是单引号</span><br></pre></td></tr></table></figure>
-<h2 id="网页版使用示例"><a class="markdownIt-Anchor" href="#网页版使用示例"></a> 网页版使用示例</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;网页版使用示例&lt;/title&gt;</span><br><span class="line">    &lt;script src=&quot;angular.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div ng-app=&quot;&quot; ng-init=&quot;str=123&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; ng-model=&quot;str&quot;/&gt;</span><br><span class="line">        &lt;div ng-bing=&quot;str&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>说明：</p>
-<ul>
-<li>ng-app:表示此区域内由angular控制</li>
-</ul>
-<h1 id="angular-cli"><a class="markdownIt-Anchor" href="#angular-cli"></a> Angular CLI</h1>
-<p><a href="http://www.itnose.net/detail/6694827.html" target="_blank" rel="noopener">http://www.itnose.net/detail/6694827.html</a></p>
-<p>Angular CLI是一个命令行界面工具，它可以创建项目、添加文件以及执行一大堆开发任务，比如测试、打包和发布</p>
-<ol start="0">
-<li>因为angular-cli是用typescript写的，所以要先装这两个:npm install -g typescript typings</li>
-<li>全局安装 :npm install -g @angular/cli</li>
-<li>创建新项目:ng new my-app</li>
-<li>启动开发服务器:cd my-app;ng serve --open</li>
-</ol>
-<ul>
-<li>问题1：/usr/local/lib/node_modules/angular-cli/node_modules/_@ngtools_json-schema@1.0.9@@ngtools/json-schema/src/schema-class-factory.js:34</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决：node版本太低</span><br></pre></td></tr></table></figure>
-<ul>
-<li>问题2:Installing packages for tooling via npm.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">太耗时，强制停止后，通过cnpm下载依赖</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>使用说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>组件Component</td>
-<td>ng generate component my-new-component</td>
-</tr>
-<tr>
-<td>指令Directive</td>
-<td>ng generate directive my-new-directive</td>
-</tr>
-<tr>
-<td>服务Service</td>
-<td>ng generate pipe my-new-service</td>
-</tr>
-<tr>
-<td>管道Pipe</td>
-<td>ng generate pipe my-new-pipe</td>
-</tr>
-<tr>
-<td>类Class</td>
-<td>ng generate class my-new-class</td>
-</tr>
-<tr>
-<td>接口Interface</td>
-<td>ng generate interface my-new-interface</td>
-</tr>
-<tr>
-<td>枚举对象Enum</td>
-<td>ng generate enum my-new-enum</td>
-</tr>
-<tr>
-<td>模块Module</td>
-<td>ng generate module my-module</td>
-</tr>
-</tbody>
-</table>
-<h1 id="架构"><a class="markdownIt-Anchor" href="#架构"></a> 架构</h1>
-<p>Angular 应用使用方法：用 Angular 扩展语法编写 HTML 模板， 用组件类管理这些模板，用服务添加应用逻辑， 用模块打包发布组件与服务</p>
-<p>通过引导根模块来启动该应用。 Angular 在浏览器中接管、展现应用的内容，并根据我们提供的操作指令响应用户的交互</p>
-<p><img src="http://note.youdao.com/yws/api/personal/file/WEBbb5e44b6400e1044b8304cd17df748bc?method=download&amp;shareKey=1fb157c2334799e7329bcbb28240114b" alt="image"></p>
-<h2 id="模块-module"><a class="markdownIt-Anchor" href="#模块-module"></a> 模块 (module)</h2>
-<h3 id="模块简介"><a class="markdownIt-Anchor" href="#模块简介"></a> 模块简介</h3>
-<p>Angular 应用是模块化的，并且 Angular 有自己的模块系统，它被称为 Angular 模块或 NgModules</p>
-<p>每个 Angular 应用至少有一个模块（根模块），习惯上命名为AppModule。</p>
-<p>Angular 模块都是一个带有@NgModule装饰器的类。</p>
-<p>NgModule是一个装饰器函数，它接收一个用来描述模块属性的元数据对象。其中最重要的属性是：</p>
-<ul>
-<li>declarations - 声明本模块中拥有的视图类。Angular 有三种视图类：组件、指令和管道。</li>
-<li>exports - declarations 的子集，可用于其它模块的组件模板。</li>
-<li>imports - 本模块声明的组件模板需要的类所在的其它模块。</li>
-<li>providers - 服务的创建者，并加入到全局服务列表中，可用于应用任何部分。</li>
-<li>bootstrap - 指定应用的主视图（称为根组件），它是所有其它视图的宿主。只有根模块才能设置bootstrap属性。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// src/app/app.module.ts</span><br><span class="line">import &#123; NgModule &#125;      from &apos;@angular/core&apos;;</span><br><span class="line">import &#123; BrowserModule &#125; from &apos;@angular/platform-browser&apos;;</span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  imports:      [ BrowserModule ],</span><br><span class="line">  providers:    [ Logger ],</span><br><span class="line">  declarations: [ AppComponent ],</span><br><span class="line">  exports:      [ AppComponent ],</span><br><span class="line">  bootstrap:    [ AppComponent ]</span><br><span class="line">&#125;)</span><br><span class="line">export class AppModule &#123; &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="angular-模块库"><a class="markdownIt-Anchor" href="#angular-模块库"></a> Angular 模块库</h3>
-<p>Angular 提供了一组 JavaScript 模块。可以把它们看做库模块。每个 Angular 库的名字都带有@angular前缀</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</span><br></pre></td></tr></table></figure>
-<h2 id="组件-component"><a class="markdownIt-Anchor" href="#组件-component"></a> 组件 (component)</h2>
-<p>组件负责控制屏幕上的一小块区域，我们称之为视图; 组件通过一些由属性和方法组成的 API 与视图交互</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">export class HeroListComponent implements OnInit &#123;</span><br><span class="line">  heroes: Hero[];</span><br><span class="line">  selectedHero: Hero;</span><br><span class="line"></span><br><span class="line">  constructor(private service: HeroService) &#123; &#125;</span><br><span class="line"></span><br><span class="line">  ngOnInit() &#123;</span><br><span class="line">    this.heroes = this.service.getHeroes();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  selectHero(hero: Hero) &#123; this.selectedHero = hero; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="模板-template"><a class="markdownIt-Anchor" href="#模板-template"></a> 模板 (template)</h2>
-<p>通过组件的自带的模板来定义组件视图。模板以 HTML 形式存在，告诉 Angular 如何渲染组件</p>
-<h2 id="元数据-metadata"><a class="markdownIt-Anchor" href="#元数据-metadata"></a> 元数据 (metadata)</h2>
-<p>元数据告诉 Angular 如何处理一个类;要告诉 Angular HeroListComponent是个组件，只要把元数据附加到这个类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Component(&#123;</span><br><span class="line">  selector:    &apos;hero-list&apos;,</span><br><span class="line">  templateUrl: &apos;./hero-list.component.html&apos;,</span><br><span class="line">  providers:  [ HeroService ]</span><br><span class="line">&#125;)</span><br><span class="line">export class HeroListComponent implements OnInit &#123;</span><br><span class="line">/* . . . */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="数据绑定-data-binding"><a class="markdownIt-Anchor" href="#数据绑定-data-binding"></a> 数据绑定 (data binding)</h2>
-<p>数据绑定的语法有四种形式：<br>
-<img src="http://note.youdao.com/yws/api/personal/file/WEBa57b03e91f6bd4ed38e8c6b1e8caa70a?method=download&amp;shareKey=b3b585887d1a4e10af48b2acbd8367f2" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;&#123;&#123;hero.name&#125;&#125;&lt;/li&gt;</span><br><span class="line">&lt;hero-detail [hero]=&quot;selectedHero&quot;&gt;&lt;/hero-detail&gt;</span><br><span class="line">&lt;li (click)=&quot;selectHero(hero)&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;input [(ngModel)]=&quot;hero.name&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>每种形式都有一个方向 —— 绑定到 DOM 、绑定自 DOM 以及双向绑定。</p>
-<h2 id="指令-directive"><a class="markdownIt-Anchor" href="#指令-directive"></a> 指令 (directive)</h2>
-<p>Angular 模板是动态的。当 Angular 渲染它们时，它会根据指令提供的操作对 DOM 进行转换</p>
-<h2 id="服务-service"><a class="markdownIt-Anchor" href="#服务-service"></a> 服务 (service)</h2>
-<p>组件是最大的服务消费者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//src/app/logger.service.ts</span><br><span class="line">export class Logger &#123;</span><br><span class="line">  log(msg: any)   &#123; console.log(msg); &#125;</span><br><span class="line">  error(msg: any) &#123; console.error(msg); &#125;</span><br><span class="line">  warn(msg: any)  &#123; console.warn(msg); &#125;</span><br><span class="line">&#125;</span><br><span class="line">//src/app/hero.service.ts</span><br><span class="line">export class HeroService &#123;</span><br><span class="line">  private heroes: Hero[] = [];</span><br><span class="line"></span><br><span class="line">  constructor(</span><br><span class="line">    private backend: BackendService,</span><br><span class="line">    private logger: Logger) &#123; &#125;</span><br><span class="line"></span><br><span class="line">  getHeroes() &#123;</span><br><span class="line">    this.backend.getAll(Hero).then( (heroes: Hero[]) =&gt; &#123;</span><br><span class="line">      this.logger.log(`Fetched $&#123;heroes.length&#125; heroes.`);</span><br><span class="line">      this.heroes.push(...heroes); // fill cache</span><br><span class="line">    &#125;);</span><br><span class="line">    return this.heroes;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="依赖注入-dependency-injection"><a class="markdownIt-Anchor" href="#依赖注入-dependency-injection"></a> 依赖注入 (dependency injection)</h2>
-<p>Angular 使用依赖注入来提供新组件以及组件所需的服务</p>
-<ol>
-<li>当 Angular 创建组件时，会首先为组件所需的服务请求一个注入器 (injector)。</li>
-<li>注入器维护了一个服务实例的容器，存放着以前创建的实例。 如果所请求的服务实例不在容器中，注入器就会创建一个服务实例，并且添加到容器中，然后把这个服务返回给 Angular。</li>
-<li>当所有请求的服务都被解析完并返回时，Angular 会以这些服务为参数去调用组件的构造函数。</li>
-</ol>
-<p>这就是依赖注入</p>
-<p><img src="http://note.youdao.com/yws/api/personal/file/WEB74722e9c03ab05fe303782eb6e27172b?method=download&amp;shareKey=d698cb66bf2c3035e7b1ada6c2e255e0" alt="image"></p>
-<ul>
-<li>函数：参数由调用方决定</li>
-<li>依赖注入：参数由定于方决定</li>
-</ul>
-<h1 id="模版"><a class="markdownIt-Anchor" href="#模版"></a> 模版</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* &#123;&#123;msg&#125;&#125;  </span><br><span class="line"></span><br><span class="line">*  $scope  Controller</span><br><span class="line"></span><br><span class="line">* filter    &#123;&#123;123|currency&#125;&#125; &#123;&#123;12321213|date:&quot;yyyy-MM-dd&quot;&#125;&#125;</span><br><span class="line"></span><br><span class="line">* ng-clack</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2336,7 +2323,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">127</span>
+                  <span class="site-state-item-count">131</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2358,7 +2345,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">71</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2452,7 +2439,7 @@ ECMA-262文档下载：https://chetaofeng.github.io/pub-images/Ecma-262.pdf</cod
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.1k字</span>
+  <span class="post-count">博客全站共128.7k字</span>
 </div>
 
 
