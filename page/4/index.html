@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-XShell使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-禁用SELinux时配置错误导致系统不能够启动的解决方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,1368 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/Linux-XShell使用/" itemprop="url">XShell使用</a></h2>
+                <a class="post-title-link" href="/2019/02/14/Linux-禁用SELinux时配置错误导致系统不能够启动的解决方法/" itemprop="url">禁用SELinux时配置错误导致系统不能够启动的解决方法</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:21:27+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>CentOS在安装某些软件的时候，需要关闭SELinux，在修改配置文件/etc/selinux/config过程中，设置方法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># SELINUX=enforcing</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+<p>如果设置之后，没有设置回来，则启动的时候就会无法启动，解决办法为：</p>
+<ul>
+<li>系统启动的时候，按下‘e’键进入grub编辑界面，</li>
+<li>编辑grub菜单，选择“kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet” 一栏</li>
+<li>按‘e’键进入编辑</li>
+<li>在末尾增加enforcing=0，即：<br>
+kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enforcing=0</li>
+<li>按‘b’键继续引导，OK顺利前进。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-设置网络自动启动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/Linux-设置网络自动启动/" itemprop="url">CentOS设置网络自动启动</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:20:08+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="设置网络自启动"><a class="markdownIt-Anchor" href="#设置网络自启动"></a> 设置网络自启动</h1>
+<p>修改/etc/sysconfig/network-scripts/ifcfg-ethX文件，修改其中ONBOOT===no==的值为yes即可</p>
+<p>如果想要自己设置静态ip，需要在上边文件的最后添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IPADDR=192.168.7.106 #静态IP  </span><br><span class="line">GATEWAY=192.168.7.1 #默认网关  </span><br><span class="line">NETMASK=255.255.255.0 #子网掩码  </span><br><span class="line">DNS1=192.168.7.1 #DNS 配置</span><br></pre></td></tr></table></figure>
+<p>重启服务即可</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-CentOS版本说明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/14/Linux-CentOS版本说明/" itemprop="url">CentOS版本说明</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:19:51+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>CentOS-7.0-1406-x86_64-DVD.iso             标准安装版，一般下载这个就可以了</li>
+<li>CentOS-7.0-1406-x86_64-NetInstall.iso       网络安装镜像</li>
+<li>CentOS-7.0-1406-x86_64-Everything.iso     对完整版安装盘的软件进行补充，集成所有软件。</li>
+<li>CentOS-7.0-1406-x86_64-GnomeLive.iso   GNOME桌面版</li>
+<li>CentOS-7.0-1406-x86_64-KdeLive.iso         KDE桌面版</li>
+<li>CentOS-7.0-1406-x86_64-livecd.iso            光盘上运行的系统，类拟于winpe</li>
+</ul>
+<ol>
+<li>CentOS-xxxx-LiveCD.ios 和CentOS-xxxx-bin-DVD.iso有什么区别？前者只有700M，后者有3.8G。其差别不仅仅在大小上，其更本质的差别是，CentOS-xxxx-LiveCD.ios只能加载到内存里运行，不能安装。CentOS-xxx-bin-DVD1.iso才可以安装到硬盘上。</li>
+<li>CentOS-xxx-bin-DVD1.iso，CentOS-xxx-bin-DVD2.iso分别是干什么的？前者是3.8G，后者是500M。其差别是DVD1是CentOS的安装文件，DVD2是CentOS的一些软件（就简单实用CentOS来说是不需要的）。</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/01/18/容器技术-docker入门helloworld/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/18/容器技术-docker入门helloworld/" itemprop="url">docker入门之Hello World</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-18T09:38:59+08:00">
+                2019-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="docker-版本helloworld"><a class="markdownIt-Anchor" href="#docker-版本helloworld"></a> docker 版本HelloWorld</h1>
+<p>安装好docker后执行如下命令：</p>
+<ul>
+<li>docker serach hello-world</li>
+<li>docker pull hello-world</li>
+<li>docker run hello-world</li>
+</ul>
+<h1 id="docker镜像原理"><a class="markdownIt-Anchor" href="#docker镜像原理"></a> docker镜像原理</h1>
+<p><img src="/pub-images/%E9%95%9C%E5%83%8F%E5%8E%9F%E7%90%86.png" alt="image"></p>
+<h1 id="docker-web版本helloworld"><a class="markdownIt-Anchor" href="#docker-web版本helloworld"></a> docker web版本HelloWorld</h1>
+<ul>
+<li>docker pull nginx</li>
+<li>docker run -d -p 8080:80 nginx</li>
+<li>浏览器访问：<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a></li>
+</ul>
+<h1 id="自我制作镜像"><a class="markdownIt-Anchor" href="#自我制作镜像"></a> 自我制作镜像</h1>
+<h2 id="dockerfile方式"><a class="markdownIt-Anchor" href="#dockerfile方式"></a> Dockerfile方式</h2>
+<ol>
+<li>下载war包，作为镜像制作项目： <a href="https://gitee.com/GalaIO/jpress/blob/master/wars/jpress-web-newest.war" target="_blank" rel="noopener">https://gitee.com/GalaIO/jpress/blob/master/wars/jpress-web-newest.war</a></li>
+<li>docker pull tomcat   //准备war项目的容器</li>
+<li>创建空目录:cd /media/psf/LinuxShare/data;sudo mkdir myDocker;cd myDocker;</li>
+<li>sudo cp /media/psf/LinuxShare/soft/jpress-web-newest.war /media/psf/LinuxShare/data/myDocker/</li>
+<li>创建Dockerfile文件，sudo vim myDocker;编辑内容如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from tomcat</span><br><span class="line"></span><br><span class="line">MAINTAINER xingfeng1024 xingfeng1024@163.com</span><br><span class="line"></span><br><span class="line">COPY jpress-web-newest.war /usr/local/tomcat/webapps</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>构建镜像：docker build -t mydocker/jpress:latest .</li>
+<li>docker images查看镜像</li>
+<li>docker run -d -p 8888:8080 mydocker/jpress</li>
+<li>浏览器：<a href="http://localhost:8888/jpress-web-newest" target="_blank" rel="noopener">http://localhost:8888/jpress-web-newest</a> 查看效果</li>
+</ol>
+<h2 id="打包方式"><a class="markdownIt-Anchor" href="#打包方式"></a> 打包方式</h2>
+<ol>
+<li>在以上镜像基础上，进入镜像：docker exec -it mydocker/jpress bash</li>
+<li>apt-get install vim</li>
+<li>vim <a href="http://readme.md" target="_blank" rel="noopener">readme.md</a>;  随便输入内容保存即可</li>
+<li>退出容器：Ctrl+P，Ctrl+Q</li>
+<li>制作镜像：docker commit f8ed84a63e94 mydocker/jpress-vim  //f8ed84a63e94为容器ID</li>
+<li>docker images查看最新制作镜像，创建容器运行后进入发现有了vim功能</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/01/02/Java-Java并发编程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/02/Java-Java并发编程/" itemprop="url">Java并发编程</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-02T15:52:38+08:00">
+                2019-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ExecutorService   Semaphore</p>
+<p>并发实现一个计数器：引入问题</p>
+<p>并发与高并发：</p>
+<p>Java内存模型-写一篇文章<br>
+Java内存模型：Java Memory Model（JMM）</p>
+<p>CPU包括运算逻辑部件、寄存器部件和控制部件等。寄存器在CPU上</p>
+<p>Java堆：Heap运行时数据区，有垃圾回收来负责，可以动态分配大小，生存期也不必提前告诉编译器，是在运行时动态分配内存的，由于需要动态分配，所以速度比栈慢<br>
+Java栈：Stack速度仅次于寄存器，数据可以共享，缺点是栈中的数据的大小及生存期必须是确定的，</p>
+<p>线程之间操作必须通过主内存</p>
+<p><a href="https://www.cnblogs.com/zhehan54/p/6130030.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhehan54/p/6130030.html</a><br>
+实现并发的方式有多种：比如多进程、多线程、IO多路复用。<br>
+进程是资源（CPU、内存等）分配的基本单位</p>
+<p>自定义注解</p>
+<p><a href="https://blog.csdn.net/motui/article/details/79012846" target="_blank" rel="noopener">https://blog.csdn.net/motui/article/details/79012846</a></p>
+<p>线程安全性-原子性<br>
+compareAndSwapXXX：当前值和底层值对比，如果一样则执行，如果不一样，则重新获取再比较</p>
+<p>AtomicLong  LongAdder</p>
+<p><a href="https://blog.csdn.net/jesonjoke/article/list/1" target="_blank" rel="noopener">https://blog.csdn.net/jesonjoke/article/list/1</a></p>
+<p><a href="http://www.cnblogs.com/hongten/p/hongten_oracle_plsql.html" target="_blank" rel="noopener">http://www.cnblogs.com/hongten/p/hongten_oracle_plsql.html</a></p>
+<p><a href="https://me.csdn.net/jesonjoke" target="_blank" rel="noopener">https://me.csdn.net/jesonjoke</a></p>
+<h1 id="countdownlatch"><a class="markdownIt-Anchor" href="#countdownlatch"></a> CountDownLatch</h1>
+<ul>
+<li>CountDownLatch是一个计数器，多用于线程，可以暂停也可以继续</li>
+<li>await()阻塞线程；countDown()计数器计数</li>
+</ul>
+<p>ConcurrentHashMap  <a href="http://www.importnew.com/28263.html" target="_blank" rel="noopener">http://www.importnew.com/28263.html</a>  <a href="https://www.cnblogs.com/heyonggang/p/9112731.html" target="_blank" rel="noopener">https://www.cnblogs.com/heyonggang/p/9112731.html</a><br>
+AtomicInteger <a href="https://www.cnblogs.com/sharkli/p/5623524.html" target="_blank" rel="noopener">https://www.cnblogs.com/sharkli/p/5623524.html</a><br>
+好的习惯，实体都实现toString()方法</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Java-2018-12-19-aa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Java-2018-12-19-aa/" itemprop="url">aa</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.cnblogs.com/god--love-you/p/6133390.html" target="_blank" rel="noopener">https://www.cnblogs.com/god--love-you/p/6133390.html</a></p>
+<p>springboot<br>
+<a href="https://blog.csdn.net/forezp/column/info/15397/1" target="_blank" rel="noopener">https://blog.csdn.net/forezp/column/info/15397/1</a><br>
+<a href="https://blog.csdn.net/vbirdbest/article/category/7490600/3" target="_blank" rel="noopener">https://blog.csdn.net/vbirdbest/article/category/7490600/3</a></p>
+<p>Java 能长盛不衰，主要是命好。每当人们觉得 Java 不行了的时候，总会有英雄横刀救美。<br>
+最初Java 开发出来不知道有什么用的时候，发现可以用 Applet 在网页上做动画。后来企业级软件开发时代 JavaEE 大行其道，开源社区 Spring 桃李满天下。<br>
+等到了移动时代，人们觉得 Java 要完蛋了，Google 拍马救市，收购并开放了 Android 平台，当家语言就是 Java，于是 Java 再次焕发勃勃生机。<br>
+目前大数据领域，Java 同样是当仁不让的好手</p>
+<p><a href="https://github.com/lenve/vhr" target="_blank" rel="noopener">https://github.com/lenve/vhr</a></p>
+<p>netty<br>
+<a href="https://waylau.com/netty-4-user-guide/" target="_blank" rel="noopener">https://waylau.com/netty-4-user-guide/</a></p>
+<p><a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener">https://github.com/doocs/advanced-java</a></p>
+<p><a href="https://blog.csdn.net/qq_38765404/article/details/78615572" target="_blank" rel="noopener">https://blog.csdn.net/qq_38765404/article/details/78615572</a></p>
+<p><a href="http://www.cnblogs.com/felixzh/p/5869212.html" target="_blank" rel="noopener">http://www.cnblogs.com/felixzh/p/5869212.html</a></p>
+<p>oracle<br>
+<a href="https://www.cnblogs.com/kane1990/p/OracleNetManager.html" target="_blank" rel="noopener">https://www.cnblogs.com/kane1990/p/OracleNetManager.html</a><br>
+<a href="https://blog.csdn.net/u011179993/article/details/51554324" target="_blank" rel="noopener">https://blog.csdn.net/u011179993/article/details/51554324</a><br>
+<a href="https://www.cnblogs.com/yadongliang/p/5840203.html" target="_blank" rel="noopener">https://www.cnblogs.com/yadongliang/p/5840203.html</a><br>
+<a href="http://blog.51cto.com/mazongfei/2126876" target="_blank" rel="noopener">http://blog.51cto.com/mazongfei/2126876</a><br>
+<a href="https://blog.csdn.net/weixin_37480339/article/details/81017214" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37480339/article/details/81017214</a><br>
+<a href="https://blog.csdn.net/wangjialiang/article/details/7867791" target="_blank" rel="noopener">https://blog.csdn.net/wangjialiang/article/details/7867791</a></p>
+<p><a href="http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_13689d7d40102y3d3.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS-图形界面-命令行界面切换/" itemprop="url">CentOS 图形界面 命令行界面切换 - CentOS</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>一、修改/etc/inittab文件中的  id:3:initdefault ， 将3改为5则为图形界面 ，反之则为命令行界面，修改完后重新启动系统生效</p>
+</blockquote>
+<blockquote>
+<p>二、如果用户已经启动了字符CentOS界面，想要进入图形CentOS界面可以使用如下命令 startx</p>
+</blockquote>
+<blockquote>
+<p>三、运行级别说明，用 init -x 切换级别，如想进入图形界面则输入 init -5 即可切换；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 0 所有进程将被终止，机器将有序的停止，关机时系统处于这个运行级别 </span><br><span class="line">* 1 单用户模式。用于系统维护，只有少数进程运行，同时所有服务也不启动 </span><br><span class="line">* 2 多用户模式。和运行级别3一样，只是网络文件系统（NFS）服务没被启动 </span><br><span class="line">* 3 多用户模式。允许多用户登录系统，是系统默认的启动级别 </span><br><span class="line">* 4 留给用户自定义的运行级别 </span><br><span class="line">* 5 多用户模式，并且在系统启动后运行X-Window，给出一个图形化的登录窗口 </span><br><span class="line">* 6 所有进程被终止，系统重新启动</span><br></pre></td></tr></table></figure>
+<h1 id="图形界面问题处理"><a class="markdownIt-Anchor" href="#图形界面问题处理"></a> 图形界面问题处理</h1>
+<p>Centos7解决图形界面卡死问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall -9 gnome-shell</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS下yum源的搭建与使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS下yum源的搭建与使用/" itemprop="url">CentOS下yum源的搭建与使用</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="yum简介"><a class="markdownIt-Anchor" href="#yum简介"></a> yum简介</h1>
+<ul>
+<li>yum就是为了解决依赖关系而存在的</li>
+<li>yum源就相当是一个目录项，当我们使用yum机制安装软件时，若需要安装依赖软件，则yum机制就会根据在yum源中定义好的路径查找依赖软件，并将依赖软件安装好</li>
+<li>YUM是“Yellow dog Updater, Modified”的缩写，是一个软件包管理器，YUM从指定的地方（相关网站的rpm包地址或本地的rpm路径）自动下载RPM包并且安装，能够很好的解决依赖关系问题</li>
+<li>yum两种源：本地yum源和网络yum源</li>
+</ul>
+<h1 id="yum工作机制"><a class="markdownIt-Anchor" href="#yum工作机制"></a> yum工作机制</h1>
+<ol>
+<li>服务器端</li>
+</ol>
+<ul>
+<li>在服务器上面存放了所有的RPM软件包，然后以相关的功能去分析每个RPM文件的依赖性关系，将这些数据记录成文件存放在服务器的某特定目录内</li>
+</ul>
+<ol start="2">
+<li>客户端</li>
+</ol>
+<ul>
+<li>如果需要安装某个软件时，先下载服务器上面记录的依赖性关系文件(可通过WWW或FTP方式)，通过对服务器端下载的纪录数据进行分析，然后取得所有相关的软件，一次全部下载下来进行安装</li>
+</ul>
+<h1 id="yum文件"><a class="markdownIt-Anchor" href="#yum文件"></a> yum文件</h1>
+<blockquote>
+<p>在/etc/yum.repos.d 目录下存放的就是yum源的设定文件</p>
+</blockquote>
+<blockquote>
+<p>yum repolist all   //此命令可查看启用的源配置文件</p>
+</blockquote>
+<p>*.repo各配置项说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* [base]：代表容器的名字，里面的名称则可以随意取，但是不能有两个相同的容器名称， 否则 yum 会不晓得该到哪里去找容器相关软体清单档案</span><br><span class="line">* name：只是说明一下这个容器的意义而已，重要性不高</span><br><span class="line">* mirrorlist=：列出这个容器可以使用的映射站台，如果不想使用，可以注解到这行</span><br><span class="line">* baseurl=：这个最重要，因为后面接的就是容器的实际网址！ mirrorlist 是由 yum 程式自行去捉映射站台， baseurl 则是指定固定的一个容器网址</span><br><span class="line">* enable=1：就是让这个容器被启动  </span><br><span class="line">* gpgcheck=1：指定是否需要查阅RPM档案内的数位签章！0表示不检测</span><br><span class="line">* gpgkey=：就是数位签章的公钥档所在位置！使用预设值即可</span><br></pre></td></tr></table></figure>
+<h1 id="更改yum源与更新系统"><a class="markdownIt-Anchor" href="#更改yum源与更新系统"></a> 更改yum源与更新系统</h1>
+<ul>
+<li>备份/etc/yum.repos.d/CentOS-Base.repo:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
+<ul>
+<li>进入yum源配置文件所在文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>下载163或其他的yum源配置文件，放入/etc/yum.repos.d/(操作前请做好相应备份)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.163.com/.help/CentOS6-Base-163.repo</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行yum makecache生成缓存:yum makecache</li>
+<li>更新系统:yum -y update</li>
+</ul>
+<h1 id="yum基本使用"><a class="markdownIt-Anchor" href="#yum基本使用"></a> yum基本使用</h1>
+<p>参数说明:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-y : 如果在工作过程中如要使用者响应,这个参数可以直接回答yes</span><br><span class="line">list : 列出在yum server 上面有的RPM套件</span><br><span class="line">install: 安装某个套件</span><br><span class="line">update : 升级某个套件,如果update后面没有接套件名称,即更新目前主机所有已安装的套件.</span><br><span class="line">info   : 列出某个套件的详细信息,相当于rpm -qi package内容</span><br><span class="line">clean : 将已下载到本机的packages或headers移除</span><br><span class="line">remove : 移除已经安装在系统中的某个套件</span><br><span class="line">yum localinstall package 本地安装软件包</span><br><span class="line">yum update 全部更新</span><br><span class="line">yum update package 更新指定程序包package</span><br><span class="line">yum check-update 检查可更新的程序</span><br><span class="line">yum info 显示安装包信息</span><br><span class="line">yum list 显示所有已经安装和可以安装的程序包 </span><br><span class="line">yum search 查找软件包</span><br><span class="line">yum remove | erase package1 删除程序包</span><br><span class="line">yum clean headers 清除header</span><br><span class="line">yum clean packages 清除下载的rpm包</span><br><span class="line">yum clean all 清除header与rpm包</span><br></pre></td></tr></table></figure>
+<h1 id="yum源服务器的搭建"><a class="markdownIt-Anchor" href="#yum源服务器的搭建"></a> yum源服务器的搭建</h1>
+<p>yum源的搭建可分为三步：①搭建Apache服务器②挂载ISO镜像，将镜像中的包放至Apache服务器目录下③ISO镜像的包比较老旧，可以定时同步其他源中的包到本地</p>
+<h1 id="客户端访问yum源服务器"><a class="markdownIt-Anchor" href="#客户端访问yum源服务器"></a> 客户端访问yum源服务器</h1>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS时钟同步设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS时钟同步设置/" itemprop="url">CentOS时钟同步设置</a></h2>
         
 
         <div class="post-meta">
@@ -418,28 +1779,33 @@
         
           
             <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<blockquote>
-<p>Xshell是一款服务器终端模拟软件，用户可以使用Xshell软件在Windows、Mac OS电脑上访问不同系统的服务器主机，让你可以方便对其进行控制管理。</p>
-</blockquote>
-<blockquote>
-<p>创新的设计和优良的体验，让用户以最高效率对服务器进行管理</p>
-</blockquote>
-<h1 id="功能特色"><a class="markdownIt-Anchor" href="#功能特色"></a> 功能特色</h1>
 <ul>
-<li>可以保存多个vps登陆信息，免去每次输入的烦恼</li>
-<li>设置命令快捷按钮</li>
-<li>通过代理登陆vps</li>
-<li>鼠标右键粘贴可将本地粘贴板内容复制到vps</li>
+<li>网络时间协议NTP（Network Time Protocol）是用于互联网中时间同步的标准互联网协议</li>
+<li>NTP的用途是把计算机的时间同步到某些时间标准。目前采用的时间标准是世界协调时UTC（Universal Time Coordinated）</li>
+<li>NTP的主要开发者是美国特拉华大学的David L. Mills教授</li>
 </ul>
-<h1 id="xshell-注册说明"><a class="markdownIt-Anchor" href="#xshell-注册说明"></a> Xshell 注册说明</h1>
+<h1 id="ntp在linux下有两种时钟同步方式"><a class="markdownIt-Anchor" href="#ntp在linux下有两种时钟同步方式"></a> NTP在linux下有两种时钟同步方式</h1>
 <ol>
-<li>公司名字随便填</li>
-<li>注册码 690313-111999-999313</li>
+<li>直接同步:使用ntpdate命令进行同步，直接进行时间变更。如果服务器上存在一个12点运行的任务，当前服务器时间是13点，但标准时间时11点，使用此命令可能会造成任务重复执行。因此使用ntpdate同步可能会引发风险，因此该命令也多用于配置时钟同步服务时第一次同步时间时使用。</li>
+<li>平滑同步:使用ntpd进行时钟同步，可以保证一个时间不经历两次，它每次同步时间的偏移量不会太陡，是慢慢来的，这正因为这样，ntpd平滑同步可能耗费的时间比较长。</li>
 </ol>
-<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
-<p>安装完成之后键盘输入无反应，解决方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文件--属性--终端--编码 改成Unicode(UTF-8)</span><br></pre></td></tr></table></figure>
-
+<h1 id="标准时钟同步服务"><a class="markdownIt-Anchor" href="#标准时钟同步服务"></a> 标准时钟同步服务</h1>
+<blockquote>
+<p><a href="http://www.pool.ntp.org/zone/cn" target="_blank" rel="noopener">http://www.pool.ntp.org/zone/cn</a> 网站包含全球的标准时间同步服务，也包括对中国时间的同步，<a href="http://xn--URLcn-gq1h343fqye1p9d.pool.ntp.org" target="_blank" rel="noopener">对应的URL为cn.pool.ntp.org</a></p>
+</blockquote>
+<p>国内常用的时间服务器列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">210.72.145.44  (国家授时中心服务器IP地址) </span><br><span class="line">ntp.sjtu.edu.cn 202.120.2.101 (上海交通大学网络中心NTP服务器地址）</span><br><span class="line">s1a.time.edu.cn	北京邮电大学</span><br><span class="line">s1b.time.edu.cn	清华大学</span><br><span class="line">s1c.time.edu.cn	北京大学</span><br><span class="line">s1d.time.edu.cn	东南大学</span><br><span class="line">s1e.time.edu.cn	清华大学</span><br><span class="line">s2a.time.edu.cn	清华大学</span><br><span class="line">s2b.time.edu.cn	清华大学</span><br><span class="line">s2c.time.edu.cn	北京邮电大学</span><br><span class="line">s2d.time.edu.cn	西南地区网络中心</span><br><span class="line">s2e.time.edu.cn	西北地区网络中心</span><br><span class="line">s2f.time.edu.cn	东北地区网络中心</span><br><span class="line">s2g.time.edu.cn	华东南地区网络中心</span><br><span class="line">s2h.time.edu.cn	四川大学网络管理中心</span><br><span class="line">s2j.time.edu.cn	大连理工大学网络中心</span><br><span class="line">s2k.time.edu.cn CERNET桂林主节点</span><br><span class="line">s2m.time.edu.cn 北京大学</span><br></pre></td></tr></table></figure>
+<h2 id="具体设置步骤如下"><a class="markdownIt-Anchor" href="#具体设置步骤如下"></a> 具体设置步骤如下：</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* rpm -q ntp    //使用rpm检查ntp包是否安装,有则显示如：ntp-4.2.6p5-19.el7.centos.3.x86_64</span><br><span class="line">* 如果已经安装则略过此步，否则使用yum进行安装，并设置系统开机自动启动并启动服务</span><br><span class="line"> 1. yum -y install ntp</span><br><span class="line"> 2. systemctl enable ntpd</span><br><span class="line"> 3. systemctl start ntpd</span><br><span class="line">* 设置ntp服务器: 192.168.11.212</span><br><span class="line">  配置前先使用命令：ntpdate -u cn.pool.ntp.org，同步服务器</span><br><span class="line">* 修改/etc/ntp.conf文件，修改内容如下：</span><br><span class="line"> 1. ntp服务器设置</span><br><span class="line"> </span><br><span class="line"> 2. ntp客户端设置</span><br><span class="line"> </span><br><span class="line">* systemctl restart ntpd    //修改完成后重启ntpd服务</span><br><span class="line">* 启动后，查看同步情况</span><br><span class="line"> 1. ntpq -p //查看网络中的NTP服务器，同时显示客户端和每个服务器的关系</span><br><span class="line"> 2. ntpstat //查看时间同步状态，这个一般需要5-10分钟后才能成功连接和同步</span><br></pre></td></tr></table></figure>
+<h2 id="参数说明"><a class="markdownIt-Anchor" href="#参数说明"></a> 参数说明</h2>
+<blockquote>
+<p>用restrict控管权限</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nomodify - 用户端不能更改ntp服务器的时间参数 </span><br><span class="line">noquery - 用户端不能使用ntpq，ntpc等命令来查询ntp服务器 </span><br><span class="line">notrap - 不提供trap远端登陆</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ntpq -p 查看网络中的NTP服务器,每项说明如下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 响应的NTP服务器和最精确的服务器</span><br><span class="line">+ 响应这个查询请求的NTP服务器</span><br><span class="line">blank(空格) 没有响应的NTP服务器</span><br><span class="line">remote  响应这个请求的NTP服务器的名称</span><br><span class="line">refid   NTP服务器使用的更高一级服务器的名称</span><br><span class="line">st  正在响应请求的NTP服务器的级别</span><br><span class="line">when    上一次成功请求之后到现在的秒数</span><br><span class="line">poll    本地和远程服务器多少时间进行一次同步，单位秒，在一开始运行NTP的时候这个poll值会比较小，服务器同步的频率大，可以尽快调整到正确的时间范围，之后poll值会逐渐增大，同步的频率也就会相应减小</span><br><span class="line">reach   用来测试能否和服务器连接，是一个八进制值，每成功连接一次它的值就会增加</span><br><span class="line">delay   从本地机发送同步要求到ntp服务器的往返时间</span><br><span class="line">offset  主机通过NTP时钟同步与所同步时间源的时间偏移量，单位为毫秒，offset越接近于0，主机和ntp服务器的时间越接近</span><br><span class="line">jitter  统计了在特定个连续的连接数里offset的分布情况。简单地说这个数值的绝对值越小，主机的时间就越精确</span><br></pre></td></tr></table></figure>
           
         
       
@@ -496,7 +1862,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-CentOS系统GRUB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -515,7 +1881,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/19/Linux-使用Vundle管理配置Vim基本插件/" itemprop="url">使用Vundle管理配置Vim基本插件</a></h2>
+                <a class="post-title-link" href="/2018/12/19/Linux-CentOS系统GRUB/" itemprop="url">CentOS系统GRUB</a></h2>
         
 
         <div class="post-meta">
@@ -589,1555 +1955,80 @@
       
         
           
-            <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>官网：<a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim</a></p>
+            <p>[toc]</p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
 <blockquote>
-<p>Vundle是基于Git仓库的插件管理软件。Vundle将插件的安装简化为类似yum软件安装的过程</p>
+<p>Grub（GRand Unified Bootloader）是统一资源引导器，也就是引导加载器；它的工作是提供一个菜单，允许用户选择要启动的系统或不同的内核版本；把用户选定的内核装载到RAM中的特定空间中，然后解压、展开，而后把系统控制权移交给内核</p>
 </blockquote>
 <blockquote>
-<p>其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下</p>
+<p>它目前有两个版本：</p>
 </blockquote>
-<h1 id="配置说明"><a class="markdownIt-Anchor" href="#配置说明"></a> 配置说明</h1>
 <ol>
-<li>在Github vim-scripts 用户下的repos,只需要写出repos名称</li>
-<li>在Github其他用户下的repos, 需要写出”用户名/repos名”</li>
-<li>不在Github上的插件，需要写出git全路径</li>
+<li>GRUB 0.X：Grub Legacy</li>
+<li>GRUB 1.X：Grub2</li>
 </ol>
-<p>具体步骤：</p>
-<ol>
-<li>需要有git环境，CentOS7自带，可通过git命令查看</li>
-<li>安装Vundle：git clone <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="noopener">https://github.com/VundleVim/Vundle.vim.git</a> ~/.vim/bundle/Vundle.vim</li>
-<li>修改.vimrc／vimrc文件，在CentOS7中是vimrc文件，修改前先备份.</li>
-</ol>
-<ul>
-<li>将以下内容放置到文件最开头，最小配置如下：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">set nocompatibl </span><br><span class="line">filetype off</span><br><span class="line"></span><br><span class="line">set rtp+=~/.vim/bundle/Vundle.vim</span><br><span class="line"></span><br><span class="line">call vundle#begin()</span><br><span class="line"></span><br><span class="line">Plugin &apos;VundleVim/Vundle.vim&apos;</span><br><span class="line"></span><br><span class="line">call vundle#end()</span><br><span class="line"></span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
-<p>在Plugin之后，添加自己想要安装的插件<br>
-4. 插件安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在vim中</span><br><span class="line">:PluginInstall</span><br><span class="line"></span><br><span class="line"># 在终端</span><br><span class="line">vim +PluginInstall +qall</span><br></pre></td></tr></table></figure>
-<h1 id="命令说明"><a class="markdownIt-Anchor" href="#命令说明"></a> 命令说明</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:PluginList -列举出列表中(.vimrc中)配置的所有插件</span><br><span class="line">:PluginInstall -安装列表中全部插件</span><br><span class="line">:PluginInstall! -更新列表中全部插件</span><br><span class="line">:PluginSearch foo -查找foo插件</span><br><span class="line">:PluginSearch! foo -刷新foo插件缓存</span><br><span class="line">:PluginClean -清除列表中没有的插件</span><br><span class="line">:PluginClean! -清除列表中没有的插件</span><br></pre></td></tr></table></figure>
-<h1 id="常用插件说明"><a class="markdownIt-Anchor" href="#常用插件说明"></a> 常用插件说明</h1>
-<ul>
-<li>rename.vim：在Vim中为文件重命名。</li>
-<li>vim-coffee-script：在Vim中舒心 的编写、编译Coffeescript。</li>
-<li>vim-mkdir：当你在Vim中新建文件的时候， 自动帮你创建不存在的目录。</li>
-<li>vim-surround：快速的删除、修改和添加 括号、引号、XML标签等等。</li>
-<li>matchit：用%去在两个对应的字符间跳转。</li>
-<li>tComment：快速注释、反注释代码。</li>
-<li>emmet-vim：Emmet的Vim版。</li>
-<li>tabular：快速对齐。</li>
-<li>snipmate.vim：快速的代码片段。</li>
-<li>vim-easymotion：在文件中快速定位。</li>
-<li>vim-instant-markdown：Vim中对</li>
-<li>Markdown文档的实时预览。</li>
-<li>NERDTree:一个用于浏览文件系统的树形资源管理外挂,它可以让你像使用Windows档案总管一样在VIM中浏览文件系统并且打开文件或目录</li>
-<li>MiniBufExplorer:提供多文件同时编辑功能，并在编辑器上方显示文件的标签</li>
-<li>一款状态栏增强插件，可以让你的Vim状态栏非常的美观，同时包括了buffer显示条扩展smart tab line以及集成了一些插件</li>
-<li></li>
-</ul>
-<h1 id="网络上配置收藏"><a class="markdownIt-Anchor" href="#网络上配置收藏"></a> 网络上配置收藏</h1>
-<ol>
-<li><a href="https://github.com/deepzz0/dotfiles/blob/master/.vimrc" target="_blank" rel="noopener">https://github.com/deepzz0/dotfiles/blob/master/.vimrc</a></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">if &amp;compatible</span><br><span class="line">  set nocompatible</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">filetype off</span><br><span class="line">set rtp+=~/.vim/bundle/vundle/</span><br><span class="line">call vundle#rc()</span><br><span class="line"></span><br><span class="line">&quot; Let Vundle manage Vundle</span><br><span class="line">Bundle &apos;gmarik/vundle&apos;</span><br><span class="line"></span><br><span class="line">&quot; Define bundles via Github repos</span><br><span class="line">Bundle &apos;christoomey/vim-run-interactive&apos;</span><br><span class="line">Bundle &apos;croaky/vim-colors-github&apos;</span><br><span class="line">Bundle &apos;danro/rename.vim&apos;</span><br><span class="line">Bundle &apos;kchmck/vim-coffee-script&apos;</span><br><span class="line">Bundle &apos;kien/ctrlp.vim&apos;</span><br><span class="line">Bundle &apos;pbrisbin/vim-mkdir&apos;</span><br><span class="line">Bundle &apos;scrooloose/syntastic&apos;</span><br><span class="line">Bundle &apos;slim-template/vim-slim&apos;</span><br><span class="line">Bundle &apos;thoughtbot/vim-rspec&apos;</span><br><span class="line">Bundle &apos;tpope/vim-bundler&apos;</span><br><span class="line">Bundle &apos;tpope/vim-endwise&apos;</span><br><span class="line">Bundle &apos;tpope/vim-fugitive&apos;</span><br><span class="line">Bundle &apos;tpope/vim-rails&apos;</span><br><span class="line">Bundle &apos;tpope/vim-surround&apos;</span><br><span class="line">Bundle &apos;vim-ruby/vim-ruby&apos;</span><br><span class="line">Bundle &apos;vim-scripts/ctags.vim&apos;</span><br><span class="line">Bundle &apos;vim-scripts/matchit.zip&apos;</span><br><span class="line">Bundle &apos;vim-scripts/tComment&apos;</span><br><span class="line">Bundle &quot;mattn/emmet-vim&quot;</span><br><span class="line">Bundle &quot;scrooloose/nerdtree&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-powerline&quot;</span><br><span class="line">Bundle &quot;godlygeek/tabular&quot;</span><br><span class="line">Bundle &quot;msanders/snipmate.vim&quot;</span><br><span class="line">Bundle &quot;jelera/vim-javascript-syntax&quot;</span><br><span class="line">Bundle &quot;altercation/vim-colors-solarized&quot;</span><br><span class="line">Bundle &quot;othree/html5.vim&quot;</span><br><span class="line">Bundle &quot;xsbeats/vim-blade&quot;</span><br><span class="line">Bundle &quot;Raimondi/delimitMate&quot;</span><br><span class="line">Bundle &quot;groenewege/vim-less&quot;</span><br><span class="line">Bundle &quot;evanmiller/nginx-vim-syntax&quot;</span><br><span class="line">Bundle &quot;Lokaltog/vim-easymotion&quot;</span><br><span class="line">Bundle &quot;tomasr/molokai&quot;</span><br><span class="line"></span><br><span class="line">if filereadable(expand(&quot;~/.vimrc.bundles.local&quot;))</span><br><span class="line">  source ~/.vimrc.bundles.local</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">filetype on</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-linux-磁盘分区工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-linux-磁盘分区工具/" itemprop="url">linux 磁盘分区工具</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>GParted是一款linux下的功能非常强大的分区工具，和windows下的‘分区魔术师’类似，操作和显示上也很相似。GParted可以方便的创建、删除分区，也可以调整分区的大小和移动分区的位置。GParted支持多种linux下常见的分区格式，包括ext2、ext4、fat、hfs、jfs、reiser4、reiserfs、xfs，甚至ntfs。另外官方还提供了 LiveCD 和 LiveUSB 版本的 GParted，方便在没有主系统的情况下对硬盘进行分区！<br>
-GParted可以用于创建、删除、移动分区，调整分区大小，检查、复制分区等操作。可以用于调整分区已安装新操作系统、备份特定分区到另一块硬盘等。 　　<br>
-GParted使用libparted来识别、调整分区表，并有各个文件系统工具来处理分区上的文件系统。这些文件系统工具并不是必须的，但要处理一中文件系统就必须先安装相应的工具。 　　<br>
-GParted使用C++写成，使用gtkmm提供GTK+界面。 　　<br>
-GParted项目还提供了一个包含GParted和全部文件系统工具的Live CD，也可以制作成Live USB或使用其他介质。这个Live CD系统基于Debian GNU/Linux。其它Linux Live CD版本也大多包含GParted，如Knoppix等。</p>
-<p>运行环境：Win2003,WinXP,Win2000,Win9X软件大小：140.3 MB</p>
-<p>下载地址：<br>
-<a href="http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b" target="_blank" rel="noopener">http://centoscn.com/plus/download.php?open=2&amp;id=139&amp;uhash=b720444ddecfffb41999608b</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/Linux-修改Root密码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/Linux-修改Root密码/" itemprop="url">CentOS修改Root密码</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>进入单用户模式<br>
-开机按ESC，选择内核后按e，后选择Kernerl再按e，在“&lt;rhgb quiet”后输入空格1或s或S或Single回车，按b键重启进入命令行模式</li>
-<li>修改密码：passwd root</li>
-<li>重启：init 5</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-02-Homebrew/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/其他-02-Homebrew/" itemprop="url">mac系统神器：Homebrew</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="homebrew"><a class="markdownIt-Anchor" href="#homebrew"></a> Homebrew</h1>
-<p>Homebrew是一款Mac OS平台下的软件包管理工具，拥有安装、卸载、更新、查看、搜索等很多实用的功能。简单的一条指令，就可以实现包管理，而不用你关心各种依赖和文件路径的情况，十分方便快捷。</p>
-<p>可以类比Homebrew的功能类似于前端技术的npm，RetHat系列的yum，Ubuntu系统的apt-get</p>
-<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
-<p>参考官网，使用非常简单： <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">https://brew.sh/index_zh-cn</a><br>
-安装完之后可更新源： brew update/brew upgrade</p>
-<h1 id="homebrew使用"><a class="markdownIt-Anchor" href="#homebrew使用"></a> Homebrew使用</h1>
-<p>搜索软件：brew search 软件名，如brew search wget<br>
-安装软件：brew install 软件名，如brew install wget<br>
-卸载软件：brew remove 软件名，如brew remove wget</p>
-<p>在macOS系统上，git、node都推荐通过Homebrew安装</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-UML类图大全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/其他-UML类图大全/" itemprop="url">UML类图大全</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://www.cnblogs.com/riky/archive/2007/04/07/704298.html" target="_blank" rel="noopener">http://www.cnblogs.com/riky/archive/2007/04/07/704298.html</a></p>
-<p>UML类关系图小结<br>
-在UML类图中，常见的有以下几种关系: 泛化（Generalization）,  实现（Realization），关联（Association)，聚合（Aggregation），组合(Composition)，依赖(Dependency)。</p>
-<ol>
-<li>泛化（Generalization）<br>
-【泛化关系】：是一种继承关系，表示一般与特殊的关系，它指定了子类如何特化父类的所有特征和行为。例如：PLC是设备的一种，即既有设备的属性，也有PLC的特性。<br>
-【箭头指向】：带三角箭头的实线，箭头指向父类</li>
-<li>实现（Realization）<br>
-【实现关系】：是一种类与接口的关系，表示类是接口所有特征和行为的实现。<br>
-【箭头指向】：带三角箭头的虚线，箭头指向接口</li>
-<li>关联（Association)<br>
-【关联关系】：是一种拥有的关系，它使一个类知道另一个类的属性和方法；如：老师与学生，丈夫与妻子关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。<br>
-【代码体现】：成员变量<br>
-【箭头及指向】：带普通箭头的实心线，指向被拥有者</li>
-<li>聚合（Aggregation）<br>
-【聚合关系】：是整体与部分的关系，且部分可以离开整体而单独存在。如车和轮胎是整体和部分的关系，轮胎离开车仍然可以存在。<br>
-聚合关系是关联关系的一种，是强的关联关系；关联和聚合在语法上无法区分，必须考察具体的逻辑关系。<br>
-【代码体现】：成员变量<br>
-【箭头及指向】：带空心菱形的实心线，菱形指向整体</li>
-<li>组合(Composition)<br>
-【组合关系】：是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。<br>
-组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期。<br>
-【代码体现】：成员变量<br>
-【箭头及指向】：带实心菱形的实线，菱形指向整体</li>
-<li>依赖(Dependency)<br>
-【依赖关系】：是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖.<br>
-【代码表现】：局部变量、方法的参数或者对静态方法的调用<br>
-【箭头及指向】：带箭头的虚线，指向被使用者</li>
-</ol>
-<p>各种关系的强弱顺序：<br>
-泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖<br>
-下面这张UML图，比较形象地展示了各种类图关系：</p>
-<p><img src="/pub-images/UML%E7%B1%BB%E5%9B%BE%E5%85%B3%E7%B3%BB.png" alt="image"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-gitbook/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/其他-gitbook/" itemprop="url">gitbook使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://my.oschina.net/huangyong/blog/372491" target="_blank" rel="noopener">https://my.oschina.net/huangyong/blog/372491</a></p>
-<p><a href="http://www.widuu.com/chinese_docker/userguide/dockerhub.html" target="_blank" rel="noopener">http://www.widuu.com/chinese_docker/userguide/dockerhub.html</a>     gitbook教程</p>
-<h1 id="简介及安装"><a class="markdownIt-Anchor" href="#简介及安装"></a> 简介及安装</h1>
-<p>Gitbook是一个开源的跨平台电子书解决方案。通过Gitbook，可以使用Markdown或者AsciiDoc来编写电子书，然后生成静态网页电子书，pdf，mobi，epub格式</p>
-<p>在使用GitBook 之前, 我们需要先安装一些必须的工具，Node.js、GitBook、GitBook Editor、Git版本控制器</p>
-<ul>
-<li>静态站点：GitBook默认输出该种格式</li>
-<li>PDF：需要安装gitbook-pdf依赖</li>
-<li>eBook：需要安装ebook-convert</li>
-</ul>
-<p>itBook官方客户端编辑器，支持Win、Linux、Mac系统</p>
-<p><a href="https://www.gitbook.com/" target="_blank" rel="noopener">https://www.gitbook.com/</a></p>
+<p><img src="http://note.youdao.com/yws/api/personal/file/WEB1757c30da1a3a8c8f9ff3272fc6119ea?method=download&amp;shareKey=df69cd3a77eed3186307b58a07a55ad5" alt="Grub启动流程图"></p>
+<h1 id="grub-legacy概述"><a class="markdownIt-Anchor" href="#grub-legacy概述"></a> Grub Legacy概述</h1>
 <blockquote>
-<p>在线网站，提供在线编写工具，有客户端，免费版本文章默认公开</p>
+<p>Grub Legacy是最经典的Grub程序。它分为三个部分stage1、stage1_5和stage2</p>
 </blockquote>
-<p>安装：</p>
-<ul>
-<li>npm install -g gitbook-cli  //想在系统上的任何地方的gitbook命令，需要安装“gitbook CLI”</li>
-<li>npm install gitbook -g</li>
-<li>gitbook -V</li>
-</ul>
-<h1 id="使用gitbook"><a class="markdownIt-Anchor" href="#使用gitbook"></a> 使用gitbook</h1>
-<h2 id="创建项目"><a class="markdownIt-Anchor" href="#创建项目"></a> 创建项目</h2>
-<blockquote>
-<p>本地命令创建</p>
-</blockquote>
-<ul>
-<li>mkdir MyFirstBook</li>
-<li>cd MyFirstBook</li>
-<li>gitbook init</li>
-</ul>
-<blockquote>
-<p><a href="https://www.gitbook.com/" target="_blank" rel="noopener">https://www.gitbook.com/</a> 创建在线版本，即托管到 <a href="http://GitBook.com" target="_blank" rel="noopener">GitBook.com</a><br>
-账号：github登陆（chetaofeng@163.com）</p>
-</blockquote>
-<h1 id="生成图书"><a class="markdownIt-Anchor" href="#生成图书"></a> 生成图书</h1>
-<h2 id="输出为静态网站"><a class="markdownIt-Anchor" href="#输出为静态网站"></a> 输出为静态网站</h2>
-<p>在自己的电脑上编辑好图书之后，可以使用Gitbook<br>
-的命令行进行本地预览：</p>
-<ul>
-<li>gitbook build //生成网站，此命令会生成_book目录，而这个目录中的文件，即是生成的静态网站内容</li>
-<li>gitbook serve  //启动服务</li>
-<li><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></li>
-<li>gitbook build --output=/tmp/gitbook  //需自己创建好目标目录</li>
-</ul>
-<h2 id="输出pdf"><a class="markdownIt-Anchor" href="#输出pdf"></a> 输出PDF</h2>
-<ul>
-<li>npm install gitbook-pdf -g //依赖</li>
-<li>gitbook pdf【路径/文件名.pdf】</li>
-</ul>
-<h2 id="输出电子书mobi"><a class="markdownIt-Anchor" href="#输出电子书mobi"></a> 输出电子书mobi</h2>
-<blockquote>
-<p>由于 GitBook 生成 mobi 格式电子书依赖 Calibre 的 ebook-convert，所以需下载安装 Calibre</p>
-</blockquote>
-<blockquote>
-<p>Calibre 安装完毕后，对于 Mac OS X 系统，还需要先设置一下软链接：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin</span><br></pre></td></tr></table></figure>
-<ul>
-<li>gitbook mobi【路径/文件名.mobi】</li>
-</ul>
-<h1 id="编辑内容"><a class="markdownIt-Anchor" href="#编辑内容"></a> 编辑内容</h1>
-<h2 id="readmemd"><a class="markdownIt-Anchor" href="#readmemd"></a> <a href="http://README.md" target="_blank" rel="noopener">README.md</a></h2>
-<p>此文件是简单的电子书介绍，可以把所制作的电子书做一下简单的描述</p>
-<h2 id="summarymd"><a class="markdownIt-Anchor" href="#summarymd"></a> <a href="http://SUMMARY.md" target="_blank" rel="noopener">SUMMARY.md</a></h2>
-<p>此为电子书的导航目录文件，每当新增一个章节文件就需要向此文件中添加一条记录。对于 Kindle 电子书来说，此文件所呈现的目录结构就是开头的目录内容和“前往”的目录导航</p>
-<p>如果需要“子章节”可以使用 Tab 缩进来实现（最多支持三级标题），如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Summary</span><br><span class="line"></span><br><span class="line">* [第一章](section1/README.md)</span><br><span class="line">    * [第一节](section1/example1.md)</span><br><span class="line">    * [第二节](section1/example2.md)</span><br><span class="line">* [第二章](section2/README.md)</span><br><span class="line">    * [第一节](section2/example1.md)</span><br></pre></td></tr></table></figure>
-<h2 id="glossarymd"><a class="markdownIt-Anchor" href="#glossarymd"></a> <a href="http://Glossary.md" target="_blank" rel="noopener">Glossary.md</a></h2>
-<p>对于电子书内容中需要解释的词汇可在此文件中定义。词汇表会被放在电子书末尾。其格式如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 电子书</span><br><span class="line">电子书是指将文字、图片、声音、影像等讯息内容数字化的出版物和植入或下载数字化文字、图片、声音、影像等讯息内容的集存储和显示终端于一体的手持阅读器。</span><br></pre></td></tr></table></figure>
-<h2 id="bookjson"><a class="markdownIt-Anchor" href="#bookjson"></a> book.json</h2>
-<p>“book.json”是电子书的配置文件，可以看作是电子书的“原数据”，比如 title、description、isbn、language、direction、styles 等，更多:<a href="https://toolchain.gitbook.com/" target="_blank" rel="noopener">https://toolchain.gitbook.com/</a></p>
-<h2 id="普通章节md"><a class="markdownIt-Anchor" href="#普通章节md"></a> <a href="http://xn--tkv086brrfx7o.md" target="_blank" rel="noopener">普通章节.md</a> 文件</h2>
-<p>每编写一个 .md 文件，不要忘了在“<a href="http://SUMMARY.md" target="_blank" rel="noopener">SUMMARY.md</a>”文件中添加一条记录</p>
-<h2 id="电子书封面图片"><a class="markdownIt-Anchor" href="#电子书封面图片"></a> 电子书封面图片</h2>
-<p>GitBook 帮助文档建议封面图片的尺寸为 1800*2360 像素并且遵循建议：</p>
-<ul>
-<li>没有边框</li>
-<li>清晰可见的书本标题</li>
-<li>任何重要的文字在小版本中应该可见</li>
-<li>图片的格式为 jpg 格式</li>
-</ul>
-<p>把图片重命名为“cover.jpg”放到电子书项目文件夹即可</p>
-<h1 id="高级功能"><a class="markdownIt-Anchor" href="#高级功能"></a> 高级功能</h1>
-<p>想要gitBook更美观，或者更符合我们自己的需求，则通过book.json配置进行自定义、以及安装一些常用的插件等</p>
-<h2 id="bookjson配置"><a class="markdownIt-Anchor" href="#bookjson配置"></a> Book.json配置</h2>
-<p>GitBook 在编译书籍的时候会读取书籍源码顶层目录中的 book.js 或者 book.json。参考：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    //样式风格配置格式</span><br><span class="line">    &quot;styles&quot;: &#123;</span><br><span class="line">        &quot;website&quot;: &quot;styles/website.css&quot;,</span><br><span class="line">        &quot;ebook&quot;: &quot;styles/ebook.css&quot;,</span><br><span class="line">        &quot;pdf&quot;: &quot;styles/pdf.css&quot;,</span><br><span class="line">        &quot;mobi&quot;: &quot;styles/mobi.css&quot;,</span><br><span class="line">        &quot;epub&quot;: &quot;styles/epub.css&quot;</span><br><span class="line">     &#125;,</span><br><span class="line"></span><br><span class="line">    //插件安装配置格式</span><br><span class="line"></span><br><span class="line">    &quot;plugins&quot;: [&quot;myplugin&quot;],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;myPlugin&quot;: &#123;</span><br><span class="line">            &quot;message&quot;: &quot;Hello World&quot;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="自定义插件扩展"><a class="markdownIt-Anchor" href="#自定义插件扩展"></a> 自定义插件扩展</h2>
-<p>插件是扩展GitBook功能最好的方法。使得GitBook功能更加强大</p>
-<ul>
-<li>插件搜索：<a href="https://plugins.gitbook.com/" target="_blank" rel="noopener">https://plugins.gitbook.com/</a></li>
-<li>插件安装：npm install 【gitbook-plugin-toggle-chapters】 --save-dev</li>
-<li>通过Book.json配置插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;plugins&quot;: [&quot;toggle-chapters&quot;],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;myPlugin&quot;: &#123;</span><br><span class="line">            &quot;message&quot;: &quot;Hello World&quot;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>常用插件：<a href="http://zhaoda.net/2015/11/09/gitbook-plugins/" target="_blank" rel="noopener">http://zhaoda.net/2015/11/09/gitbook-plugins/</a></li>
-</ul>
-<h1 id="android的离线打包"><a class="markdownIt-Anchor" href="#android的离线打包"></a> Android的离线打包</h1>
-<p>通过Gitbook，将电子书打包成静态网站。再将静态网站放到Android APP的assets目录下，作为离线网站，打包成一个离线电子书应用（Android APP）</p>
 <ol>
-<li>按照Gitbook规范，编写gitbook电子书</li>
-<li>通过Gitbook，将电子书打包成静态网站</li>
-<li>使用git将工程gitbook-android克隆下来，<a href="https://github.com/snowdream/gitbook-android?spm=5176.100239.blogcont31432.7.rKGSpR" target="_blank" rel="noopener">https://github.com/snowdream/gitbook-android?spm=5176.100239.blogcont31432.7.rKGSpR</a></li>
-<li>将静态网站放在gitbook-android工程的assets/book目录下</li>
-<li>在“gitbook-android\app\src\main\res\values\strings.xml”中修改app_name</li>
-<li>在“gitbook-android\app\build.gradle”中修改包名 applicationId “com.github.snowdream.apps.gitbook”</li>
-<li>新增以下四个keystore相关的环境变量，用于APK签名. KEYSTORE KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD</li>
-<li>在gitbook-android工程目录下，运行gradle assembleRelease --info即可。</li>
+<li>stage1</li>
 </ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-postman/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/其他-postman/" itemprop="url">postman</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/haoduoyu/p/5864775.html" target="_blank" rel="noopener">https://www.cnblogs.com/haoduoyu/p/5864775.html</a><br>
-插件网<br>
-<a href="http://www.cnplugins.com/tool/specify-postman-methods.html" target="_blank" rel="noopener">http://www.cnplugins.com/tool/specify-postman-methods.html</a><br>
-<a href="http://www.cnplugins.com/tool/specify-postman-methods.html" target="_blank" rel="noopener">http://www.cnplugins.com/tool/specify-postman-methods.html</a><br>
-<a href="https://www.cnblogs.com/s380774061/p/4624326.html" target="_blank" rel="noopener">https://www.cnblogs.com/s380774061/p/4624326.html</a>   推荐<br>
-<a href="https://blog.csdn.net/five3/article/details/53021084" target="_blank" rel="noopener">https://blog.csdn.net/five3/article/details/53021084</a>   推荐<br>
-<a href="https://blog.csdn.net/u013613428/article/details/51557804" target="_blank" rel="noopener">https://blog.csdn.net/u013613428/article/details/51557804</a>   推荐<br>
-<a href="https://blog.csdn.net/xiaosongbk/article/details/52801207" target="_blank" rel="noopener">https://blog.csdn.net/xiaosongbk/article/details/52801207</a>  token问题<br>
-<a href="https://blog.csdn.net/u011320646/article/details/77141876" target="_blank" rel="noopener">https://blog.csdn.net/u011320646/article/details/77141876</a> token问题</p>
-<p><a href="http://www.graphicsmagick.org/" target="_blank" rel="noopener">http://www.graphicsmagick.org/</a><br>
-<a href="http://baijiahao.baidu.com/s?id=1574259218782197&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">http://baijiahao.baidu.com/s?id=1574259218782197&amp;wfr=spider&amp;for=pc</a></p>
-<p><a href="https://github.com/dmytrodanylyk/folding-plugin" target="_blank" rel="noopener">https://github.com/dmytrodanylyk/folding-plugin</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-面试题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/其他-面试题/" itemprop="url">UML类图大全</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="java多线程并发原理"><a class="markdownIt-Anchor" href="#java多线程并发原理"></a> java多线程并发原理</h1>
-<p><a href="https://baijiahao.baidu.com/s?id=1611283938372470841&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">https://baijiahao.baidu.com/s?id=1611283938372470841&amp;wfr=spider&amp;for=pc</a><br>
-<a href="https://www.cnblogs.com/lyz0925/p/6734839.html" target="_blank" rel="noopener">https://www.cnblogs.com/lyz0925/p/6734839.html</a></p>
-<h1 id="hashmap实现原理及源码分析"><a class="markdownIt-Anchor" href="#hashmap实现原理及源码分析"></a> HashMap实现原理及源码分析</h1>
-<p><a href="https://www.cnblogs.com/chengxiao/p/6059914.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengxiao/p/6059914.html</a></p>
-<h1 id="java并发编程"><a class="markdownIt-Anchor" href="#java并发编程"></a> java并发编程</h1>
-<h2 id="jvm实现synchronized的底层机制"><a class="markdownIt-Anchor" href="#jvm实现synchronized的底层机制"></a> JVM实现synchronized的底层机制</h2>
-<p><a href="https://www.cnblogs.com/xujian2014/p/5354340.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5354340.html</a></p>
-<h2 id="闭锁"><a class="markdownIt-Anchor" href="#闭锁"></a> 闭锁</h2>
-<p><a href="https://www.cnblogs.com/xujian2014/p/5359684.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5359684.html</a></p>
-<p><a href="https://blog.csdn.net/yujin753/article/details/46125283" target="_blank" rel="noopener">https://blog.csdn.net/yujin753/article/details/46125283</a></p>
-<h2 id="栅栏"><a class="markdownIt-Anchor" href="#栅栏"></a> 栅栏</h2>
-<p><a href="https://blog.csdn.net/u012572955/article/details/54971072" target="_blank" rel="noopener">https://blog.csdn.net/u012572955/article/details/54971072</a></p>
-<ul>
-<li>栅栏类似于闭锁，它能阻塞一组线程直到某个事件发生。</li>
-<li>栅栏与闭锁的关键区别在于，所有线程必须同时到达栅栏位置，才能继续执行。闭锁用于等待事件，而栅栏用于等待其他线程，且能够重复执行</li>
-</ul>
-<h2 id="关卡"><a class="markdownIt-Anchor" href="#关卡"></a> 关卡</h2>
-<p><a href="https://www.cnblogs.com/xujian2014/p/5363759.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5363759.html</a></p>
-<h2 id="信号量"><a class="markdownIt-Anchor" href="#信号量"></a> 信号量</h2>
-<p><a href="https://www.cnblogs.com/xujian2014/p/5367078.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5367078.html</a></p>
-<h2 id="线程池"><a class="markdownIt-Anchor" href="#线程池"></a> 线程池</h2>
-<p><a href="https://www.cnblogs.com/xujian2014/p/5319828.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5319828.html</a></p>
-<h1 id="java中的cas实现原理"><a class="markdownIt-Anchor" href="#java中的cas实现原理"></a> Java中的CAS实现原理</h1>
-<p><a href="https://www.cnblogs.com/javalyy/p/8882172.html" target="_blank" rel="noopener">https://www.cnblogs.com/javalyy/p/8882172.html</a></p>
-<p>Spring Cloud由众多子项目组成，如Spring Cloud Config、Spring Cloud Netflix、Spring Cloud Consul 等，提供了搭建分布式系统及微服务常用的工具，</p>
-<p>分布式领域著名的CAP理论（C——数据一致性，A——服务可用性，P——服务对网络分区故障的容错性）</p>
-<p>一个java应用程序至少有两个线程，一个是主线程，负责main方法的执行，一个是垃圾回收器线程，负责回收垃圾。</p>
-<h1 id="springboot和springcloud对比"><a class="markdownIt-Anchor" href="#springboot和springcloud对比"></a> SpringBoot和SpringCloud对比</h1>
-<p><a href="https://blog.csdn.net/u010664947/article/details/80007767" target="_blank" rel="noopener">https://blog.csdn.net/u010664947/article/details/80007767</a></p>
-<h1 id="java-executorservice四种线程池的例子与说明"><a class="markdownIt-Anchor" href="#java-executorservice四种线程池的例子与说明"></a> Java ExecutorService四种线程池的例子与说明</h1>
-<p><a href="https://www.cnblogs.com/zhaoyan001/p/7049627.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaoyan001/p/7049627.html</a><br>
-<a href="https://blog.csdn.net/fwt336/article/details/81530581" target="_blank" rel="noopener">https://blog.csdn.net/fwt336/article/details/81530581</a></p>
-<h1 id="java多线程"><a class="markdownIt-Anchor" href="#java多线程"></a> Java多线程</h1>
-<p>多线程实现和安全问题： <a href="https://www.cnblogs.com/love-Stefanie/p/6706507.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6706507.html</a><br>
-Executor,Executors,ExecutorService比较： <a href="https://www.cnblogs.com/love-Stefanie/p/6728228.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6728228.html</a><br>
-Future和FutureTask： <a href="https://www.cnblogs.com/love-Stefanie/p/6729346.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6729346.html</a></p>
-<h1 id="待学习视频"><a class="markdownIt-Anchor" href="#待学习视频"></a> 待学习视频</h1>
-<p>基于 SpringCloud 微服务架构下广告系统设计与实现：<a href="https://coding.imooc.com/class/310.html" target="_blank" rel="noopener">https://coding.imooc.com/class/310.html</a><br>
-RocketMQ核心技术精讲与高并发抗压实战： <a href="https://coding.imooc.com/class/292.html" target="_blank" rel="noopener">https://coding.imooc.com/class/292.html</a><br>
-ZooKeeper分布式专题与Dubbo微服务入门： <a href="https://coding.imooc.com/class/201.html" target="_blank" rel="noopener">https://coding.imooc.com/class/201.html</a><br>
-打造仿猫眼项目 以Dubbo为核心解锁微服务： <a href="https://coding.imooc.com/class/273.html" target="_blank" rel="noopener">https://coding.imooc.com/class/273.html</a><br>
-Spring Cloud微服务实战： <a href="https://coding.imooc.com/class/package/187.html#Anchor" target="_blank" rel="noopener">https://coding.imooc.com/class/package/187.html#Anchor</a><br>
-Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/6732816.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6732816.html</a></p>
-<h1 id="并发编程网-httpifevecom"><a class="markdownIt-Anchor" href="#并发编程网-httpifevecom"></a> 并发编程网 <a href="http://ifeve.com/" target="_blank" rel="noopener">http://ifeve.com/</a></h1>
-<p>JVM性能优化系列： <a href="http://ifeve.com/jvm-optimize/" target="_blank" rel="noopener">http://ifeve.com/jvm-optimize/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/19/环境搭建-01-mac系统安装/" itemprop="url">mac系统安装</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
-                2018-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
-                    <span itemprop="name">环境搭建</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="u盘启动"><a class="markdownIt-Anchor" href="#u盘启动"></a> U盘启动</h1>
-<p>U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。</p>
-<h1 id="mac系统安装启动盘制作"><a class="markdownIt-Anchor" href="#mac系统安装启动盘制作"></a> mac系统安装启动盘制作</h1>
+<blockquote>
+<p>即写入mbr中存储的bootloader程序。它的任务就是将stage1_5（此时并不能算是磁盘分区/boot/grub/下的stage1_5,因为stage1无法识别文件系统）载入内存执行</p>
+</blockquote>
+<ol start="2">
+<li>stage1_5</li>
+</ol>
+<blockquote>
+<p>位于mbr之后的扇区，通过提供基本文件系统驱动让stage1中的bootloader程序能识别磁盘分区/boot/grub/上的stage2文件并载入内存执行</p>
+</blockquote>
+<p>注意：此处若是boot分区的文件系统类型不属于stage1_5的中的一个，则会借助ramdisk来加载在/lib64/moudles/下额外的文件系统驱动。</p>
+<ol start="3">
+<li>stage2</li>
+</ol>
+<blockquote>
+<p>这个程序主要给用户提供一个比较友好的启动菜单，而后去加载位于同一个磁盘分区/boot/的内核文件（例如 vmlinuz-2.6.32-573.el6.x86_64）</p>
+</blockquote>
+<h1 id="grub的配置文件和功用"><a class="markdownIt-Anchor" href="#grub的配置文件和功用"></a> Grub的配置文件和功用</h1>
+<blockquote>
+<p>配置文件：/boot/grub/grub.conf，保证grub和内核等在一个目录；此外它创建了一个链接文件/etc/grub.conf指向配置文件来保证用户使用配置文件一致性</p>
+</blockquote>
+<p>配置项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">default=#：设定默认启动的菜单项：菜单项（title）编号从0开始</span><br><span class="line">timeout=#：指定菜单项等待选项选择的时长；</span><br><span class="line">splashimage=(hd#,#)/PATH/TO/XPM_PIC_FILE：指明菜单背景图片文件路径；</span><br><span class="line">hiddemenu：隐藏菜单</span><br><span class="line">password [--md5] STRING：菜单编辑认证；</span><br><span class="line">title TITLE：定义菜单项“标题”，可出现多次；</span><br><span class="line">   root（hd#，#）：grub查找stage2及kernel文件所在设备分区：为grub的“根”</span><br><span class="line">   kernel /PATH/TO/VMLINUZ_FILE [PARAMETERS]：启动的内核</span><br><span class="line">   initrd /PATH/TO/INITRAMFS_FILE：内核匹配的ramfs文件</span><br><span class="line">   password [--md5] STRING：启动选定的内核或者操作系统进行认证；</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<blockquote>
+<p>/boot/grub/menu.lst 或者 /boot/grub/grub.conf  CentOS下这两个文件是绑定的</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># grub.conf generated by anaconda     </span><br><span class="line">#     </span><br><span class="line"># Note that you do not have to rerun grub after making changes to this file     </span><br><span class="line"># NOTICE:  You have a /boot partition.  This means that     </span><br><span class="line">#          all kernel and initrd paths are relative to /boot/, eg.     </span><br><span class="line">#          root (hd1,0)     </span><br><span class="line">#          kernel /vmlinuz-version ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">#          initrd /initrd-version.img     </span><br><span class="line">#boot=/dev/sdb     </span><br><span class="line">default=0    </span><br><span class="line">timeout=5    </span><br><span class="line">splashimage=(hd0,0)/grub/splash.xpm.gz     </span><br><span class="line">hiddenmenu     </span><br><span class="line">title CentOS (2.6.18-274.3.1.el5)     </span><br><span class="line">        root (hd0,0)     </span><br><span class="line">        kernel /vmlinuz-2.6.18-274.3.1.el5 ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">        initrd /initrd-2.6.18-274.3.1.el5.img     </span><br><span class="line">title CentOS (2.6.18-238.el5)     </span><br><span class="line">        root (hd0,0)     </span><br><span class="line">        kernel /vmlinuz-2.6.18-238.el5 ro root=/dev/VolGroup00/LogVol00     </span><br><span class="line">        initrd /initrd-2.6.18-238.el5.img     </span><br><span class="line">title Other     </span><br><span class="line">        rootnoverify (hd0,3)     </span><br><span class="line">        chainloader +1</span><br></pre></td></tr></table></figure>
+<p>功用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 提供菜单、并提供交互式接口</span><br><span class="line">* e：编辑模式，用于编辑菜单</span><br><span class="line">* c：命令模式，交互式接口</span><br><span class="line">2. 加载用户选择的内核或操作系统</span><br><span class="line">* 允许传递参数给内核；可隐藏此菜单（通过grub.conf中的hiddenmenu）</span><br><span class="line">3. 为菜单提供了保护机制</span><br><span class="line">* 为编辑菜单进行认证（title上定义的password）</span><br><span class="line">* 为启用内核或者操作系统进行认证（title下的password字段）</span><br></pre></td></tr></table></figure>
+<h1 id="grub的命令行接口和编辑功能"><a class="markdownIt-Anchor" href="#grub的命令行接口和编辑功能"></a> Grub的命令行接口和编辑功能</h1>
 <ol>
-<li>准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料</li>
-<li>下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。</li>
-<li>打开 “应用程序 → 实用工具 → 磁盘工具”，将U盘「抹掉」(格式化) 成「Mac OS X 扩展（日志式）」格式、GUID 分区图，并将U盘命名为「Sierra」。(注意：这个盘符名称将会与后面的命令一一对应，如果你改了这盘符的名字，必须保证后面的命令里的名称也要一致)</li>
-<li>打开 “应用程序→实用工具→终端”，将下面的一段命令复制并粘贴进去：</li>
+<li>进入grub的命令行界面和编辑界面</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</span><br></pre></td></tr></table></figure>
-<p>回车并执行该命令，这时会提示让你输入管理员密码，便会开始制作过程了：<br>
-<img src="/pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png" alt="image"></p>
-<p>如上图，这时系统已经在制作中了，请耐心等待直到屏幕最后出现 Done. 字样即表示大功告成了</p>
-<h1 id="mac系统u盘安装"><a class="markdownIt-Anchor" href="#mac系统u盘安装"></a> mac系统U盘安装</h1>
-<ol start="0">
-<li>（此步骤可选：如果想格式化磁盘则进行此操作）启动时按住[command + r]，进入磁盘管理工具抹掉磁盘即可</li>
-<li>先在目标电脑上插上 U 盘，然后重启你的 Mac，然后一直按住[option」(alt)] 按键不放，直到屏幕显示多出一个 USB 启动盘的选项。</li>
-<li>选择 U 盘的图标回车，即可通过 U 盘来安装 macOS Sierra 了！这时，你可以直接覆盖安装系统(升级)，也可以在磁盘工具里面格式化抹掉整个硬盘，或者重新分区等实现全新的干净的安装</li>
-<li>启动过程中电脑会重启，重启的时候，拔掉U盘</li>
+<ul>
+<li>启动机器时，按ESC键可进入内核选择界面</li>
+<li>按c可进入命令行界面</li>
+<li>按e可进入编辑界面</li>
+</ul>
+<ol start="2">
+<li>rub的命令行命令和编辑命令</li>
 </ol>
-<h1 id="安装软件"><a class="markdownIt-Anchor" href="#安装软件"></a> 安装软件</h1>
-<ul>
-<li>在登陆App Store之后，往常安装过的软件在&quot;已购项目&quot;列表中有，不用每次安装系统后再一一去查找安装过的程序。</li>
-</ul>
-<p>非App Store安装的程序，在安装时，又是会提示app出现某些安装包已损坏、显示未激活、打开崩溃等的提示！！这种多是因为新系统屏蔽了任何来源的设置，所以需要大家打开“允许任何来源”方可安装，可按如下方式操作</p>
-<ul>
-<li>步骤1：Spotlight搜索(快捷键：command+空格或右上角搜索的符号)：搜索 “终端”</li>
-<li>步骤2：直接复制粘贴 sudo spctl --master-disable   回车</li>
-<li>步骤3：输入你的 开机密码</li>
-<li>步骤4：回到系统偏好设置 的“安全与隐私”，勾选 “允许任何来源”完成安装.</li>
-</ul>
-<h1 id="macos一些其他维护相关知识"><a class="markdownIt-Anchor" href="#macos一些其他维护相关知识"></a> macOS一些其他维护相关知识</h1>
-<p>官方技术支持网址：<a href="https://support.apple.com/zh-cn" target="_blank" rel="noopener">https://support.apple.com/zh-cn</a></p>
+<p>grub的命令行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">help：获取帮助信息</span><br><span class="line">help KEYWORD：获取某一具体命令的帮助信息</span><br><span class="line">find (hd#,#)/PATH/TO/SOMEFFILE：查找文件（内核文件等）</span><br><span class="line">root (hd#,#)：设定那个磁盘是根，执行后，fnd不需指磁盘了；</span><br><span class="line">kernel /PATH/TO/KERNEL_FILE：设定本次启动时用到的内核文件；</span><br><span class="line">initrd /PATH/TO/OMOTRAMFS_FILE：设定为选定的initrd文件</span><br><span class="line">boot：引导启动选定的内核；</span><br></pre></td></tr></table></figure>
+<p>grub的编辑命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">b：boot，启动</span><br><span class="line">e：edit，编辑选中的项</span><br><span class="line">o：在选中行的下一行新加一行</span><br><span class="line">O：在选中行的上一行添加一行</span><br><span class="line">d：删除选中行</span><br><span class="line">ESC：可以退出编辑界面进入主界面</span><br></pre></td></tr></table></figure>
+<h1 id="grub的安装"><a class="markdownIt-Anchor" href="#grub的安装"></a> grub的安装</h1>
 <ol>
-<li>
-<p>关于 Mac 启动时您看到的屏幕：在从 OS X 启动 Mac 时，系统会显示不同的屏幕，以让您了解 Mac 的启动方式，或是启动可能未完成的原因。<br>
-<a href="https://support.apple.com/zh-cn/HT204156" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204156</a></p>
-</li>
-<li>
-<p>启动 Mac 时显示闪烁的问号<br>
-如果启动时在 Mac 屏幕上看到闪烁的问号，这意味着您的 Mac 无法找到自身的系统软件。<br>
-<a href="https://support.apple.com/zh-cn/HT204323" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204323</a></p>
-</li>
-<li>
-<p>如何重新安装 macOS<br>
-<a href="https://support.apple.com/zh-cn/HT204904" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204904</a></p>
-</li>
-<li>
-<p>关于 macOS 恢复功能<br>
-<a href="https://support.apple.com/zh-cn/HT201314" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201314</a></p>
-</li>
-<li>
-<p>使用 Time Machine 备份或恢复 Mac<br>
-<a href="https://support.apple.com/zh-cn/HT201250" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201250</a></p>
-</li>
-<li>
-<p>如何重置 Mac 上的 NVRAM        Command-Option-P-R<br>
-<a href="https://support.apple.com/zh-cn/HT204063" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204063</a></p>
-</li>
-<li>
-<p>重置 Mac 上的系统管理控制器 (SMC)       Shift-Control-Option<br>
-<a href="https://support.apple.com/zh-cn/HT201295" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201295</a></p>
-</li>
-<li>
-<p>如何识别 MacBook Pro 机型<br>
-<a href="https://support.apple.com/zh-cn/HT201300" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201300</a></p>
-</li>
+<li>grub-install</li>
 </ol>
+<p>使用格式：grub-install --root-directory=/PATH/TO/rootDIR DEVICE<br>
+示例：grub-install --root-directory=/ /dev/sda3<br>
+2. grub命令（shell中输入）</p>
+<p>grub&gt; root (hd0,0)</p>
+<p>grub&gt; setup (hd0)</p>
 
           
         
@@ -2186,7 +2077,7 @@ Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/673
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2241,7 +2132,7 @@ Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/673
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">484</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2263,7 +2154,7 @@ Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/673
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2357,7 +2248,7 @@ Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/673
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.7k字</span>
+  <span class="post-count">博客全站共223.6k字</span>
 </div>
 
 

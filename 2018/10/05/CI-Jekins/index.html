@@ -105,19 +105,19 @@
 
 
 
-<meta name="description" content="Jenkins 官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应  Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作   持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成到主干，并进程自动化测试 持续交付：指的是在持续集成的环境基础之上，">
+<meta name="description" content="Jenkins  官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应 中文网站：http://www.jenkins.org.cn/   Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作   持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成">
 <meta name="keywords" content="持续集成">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jenkins">
 <meta property="og:url" content="https://chetaofeng.github.io/2018/10/05/CI-Jekins/index.html">
 <meta property="og:site_name" content="行锋">
-<meta property="og:description" content="Jenkins 官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应  Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作   持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成到主干，并进程自动化测试 持续交付：指的是在持续集成的环境基础之上，">
+<meta property="og:description" content="Jenkins  官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应 中文网站：http://www.jenkins.org.cn/   Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作   持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/jenkins.png">
-<meta property="og:updated_time" content="2019-02-15T03:10:50.000Z">
+<meta property="og:updated_time" content="2019-03-11T08:56:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkins">
-<meta name="twitter:description" content="Jenkins 官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应  Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作   持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成到主干，并进程自动化测试 持续交付：指的是在持续集成的环境基础之上，">
+<meta name="twitter:description" content="Jenkins  官网下载：https://jenkins.io/download/ ,注意下载的版本要与jdk的版本对应 中文网站：http://www.jenkins.org.cn/   Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作   持续集成：指开发者在代码的开发过程中，可以频繁的将代码部署集成">
 <meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/jenkins.png">
 
 
@@ -427,7 +427,10 @@
 
       
         <h1 id="jenkins"><a class="markdownIt-Anchor" href="#jenkins"></a> Jenkins</h1>
-<p>官网下载：<a href="https://jenkins.io/download/" target="_blank" rel="noopener">https://jenkins.io/download/</a> ,注意下载的版本要与jdk的版本对应</p>
+<ul>
+<li>官网下载：<a href="https://jenkins.io/download/" target="_blank" rel="noopener">https://jenkins.io/download/</a> ,注意下载的版本要与jdk的版本对应</li>
+<li>中文网站：<a href="http://www.jenkins.org.cn/" target="_blank" rel="noopener">http://www.jenkins.org.cn/</a></li>
+</ul>
 <blockquote>
 <p>Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作</p>
 </blockquote>
@@ -437,6 +440,16 @@
 <li>持续部署：在持续交付的基础上，把部署到生产环境的过程自动化，持续部署和持续交付的区别就是最终部署到生产环境是自动化的</li>
 </ul>
 <p><img src="/pub-images/jenkins.png" alt="image"></p>
+<h1 id="启动"><a class="markdownIt-Anchor" href="#启动"></a> 启动</h1>
+<ol>
+<li>前提：安装配置好java和maven环境，下载jenkins.war文件</li>
+<li>启动：java -jar /media/psf/LinuxShare/soft/jenkins.war &amp;</li>
+<li>在启动时，会有临时密码生成，也可通过~/.jenkins/secrets/initialAdminPassword查看</li>
+</ol>
+<ul>
+<li>报错：Upgrading Jenkins. Failed to update the default Update Site ‘default’. Plugin upgrades may fail.</li>
+<li>解决: sudo vim ~/.jenkins/hudson.model.UpdateCenter.xml, 修改https为http重启即可</li>
+</ul>
 
       
     </div>
@@ -457,7 +470,7 @@
   <p><span>本文标题:</span><a href="/2018/10/05/CI-Jekins/">Jenkins</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年10月05日 - 10:10</p>
-  <p><span>最后更新:</span>2019年02月15日 - 11:02</p>
+  <p><span>最后更新:</span>2019年03月11日 - 16:03</p>
   <p><span>原始链接:</span><a href="/2018/10/05/CI-Jekins/" title="Jenkins">https://chetaofeng.github.io/2018/10/05/CI-Jekins/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/10/05/CI-Jekins/"  aria-label="复制成功！"></i></span>
   </p>
@@ -652,7 +665,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">484</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -674,7 +687,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -723,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jenkins"><span class="nav-number">1.</span> <span class="nav-text"> Jenkins</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jenkins"><span class="nav-number">1.</span> <span class="nav-text"> Jenkins</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动"><span class="nav-number">2.</span> <span class="nav-text"> 启动</span></a></li></ol></div>
             
 
           </div>
@@ -784,7 +797,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.7k字</span>
+  <span class="post-count">博客全站共223.6k字</span>
 </div>
 
 

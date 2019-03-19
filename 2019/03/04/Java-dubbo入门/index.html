@@ -105,19 +105,20 @@
 
 
 
-<meta name="description" content="简介 官网： http://dubbo.apache.org/zh-cn/ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。  RPC介绍：https://baike.baidu.com/item/远程过程调用协议/6893245?fro">
+<meta name="description" content="简介 官网： http://dubbo.apache.org/zh-cn/ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。   最大程度进行解耦，降低系统耦合性 生产者／消费者模式 zk注册中心，admin监控中心，协议支持  RPC介">
 <meta name="keywords" content="dubbo,分布式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dubbo入门">
 <meta property="og:url" content="https://chetaofeng.github.io/2019/03/04/Java-dubbo入门/index.html">
 <meta property="og:site_name" content="行锋">
-<meta property="og:description" content="简介 官网： http://dubbo.apache.org/zh-cn/ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。  RPC介绍：https://baike.baidu.com/item/远程过程调用协议/6893245?fro">
+<meta property="og:description" content="简介 官网： http://dubbo.apache.org/zh-cn/ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。   最大程度进行解耦，降低系统耦合性 生产者／消费者模式 zk注册中心，admin监控中心，协议支持  RPC介">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/dubbo%E5%8E%9F%E7%90%86.png">
-<meta property="og:updated_time" content="2019-03-04T03:39:40.000Z">
+<meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8F%98.png">
+<meta property="og:updated_time" content="2019-03-10T07:20:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dubbo入门">
-<meta name="twitter:description" content="简介 官网： http://dubbo.apache.org/zh-cn/ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。  RPC介绍：https://baike.baidu.com/item/远程过程调用协议/6893245?fro">
+<meta name="twitter:description" content="简介 官网： http://dubbo.apache.org/zh-cn/ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。   最大程度进行解耦，降低系统耦合性 生产者／消费者模式 zk注册中心，admin监控中心，协议支持  RPC介">
 <meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/dubbo%E5%8E%9F%E7%90%86.png">
 
 
@@ -430,7 +431,20 @@
 <p>官网： <a href="http://dubbo.apache.org/zh-cn/" target="_blank" rel="noopener">http://dubbo.apache.org/zh-cn/</a></p>
 <p>Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。<br>
 <img src="/pub-images/dubbo%E5%8E%9F%E7%90%86.png" alt="image"></p>
+<ul>
+<li>最大程度进行解耦，降低系统耦合性</li>
+<li>生产者／消费者模式</li>
+<li>zk注册中心，admin监控中心，协议支持</li>
+</ul>
 <p>RPC介绍：<a href="https://baike.baidu.com/item/%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E5%8D%8F%E8%AE%AE/6893245?fromtitle=RPC&amp;fromid=609861&amp;fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/远程过程调用协议/6893245?fromtitle=RPC&amp;fromid=609861&amp;fr=aladdin</a></p>
+<p><img src="/pub-images/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8F%98.png" alt="image"></p>
+<p>系统之间的调用方式：</p>
+<ul>
+<li>WebService-wsdl</li>
+<li>httpclient</li>
+<li>rpc通信（dubbo）／restful（spring cloud）</li>
+</ul>
+<h1 id=""><a class="markdownIt-Anchor" href="#"></a> </h1>
 
       
     </div>
@@ -451,7 +465,7 @@
   <p><span>本文标题:</span><a href="/2019/03/04/Java-dubbo入门/">dubbo入门</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2019年03月04日 - 21:03</p>
-  <p><span>最后更新:</span>2019年03月04日 - 11:03</p>
+  <p><span>最后更新:</span>2019年03月10日 - 15:03</p>
   <p><span>原始链接:</span><a href="/2019/03/04/Java-dubbo入门/" title="dubbo入门">https://chetaofeng.github.io/2019/03/04/Java-dubbo入门/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2019/03/04/Java-dubbo入门/"  aria-label="复制成功！"></i></span>
   </p>
@@ -542,7 +556,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/04/Java-Lombok入门/" rel="next" title="">
+              <a href="/2019/03/04/Java-分布式基础知识/" rel="next" title="">
                 <i class="fa fa-chevron-left"></i> 
               </a>
             
@@ -551,6 +565,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/05/Java-Lodop/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -644,7 +662,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">484</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,7 +684,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -715,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"> </span></a></li></ol></div>
             
 
           </div>
@@ -776,7 +794,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.7k字</span>
+  <span class="post-count">博客全站共223.6k字</span>
 </div>
 
 

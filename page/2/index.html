@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/05/Java-Lombok入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/" itemprop="url">Android中主题(Theme)和样式(Style)使用</a></h2>
+                <a class="post-title-link" href="/2019/03/05/Java-Lombok入门/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-15T11:00:40+08:00">
-                2019-02-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T11:39:33+08:00">
+                2019-03-05
               </time>
             
 
@@ -365,28 +365,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -417,1825 +395,36 @@
       
         
           
-            <h1 id="theme和style说明"><a class="markdownIt-Anchor" href="#theme和style说明"></a> Theme和Style说明</h1>
+            <hr>
+<p>title: Lombok入门<br>
+tags:</p>
 <ul>
-<li>Theme是全局的设计风格。style是局部的设计风格</li>
-<li>Theme是一套UI控件和Activity的样式。可以给Application 和 activity 设置主题。来设置显示界面的样式</li>
-<li>style是针对view来说的，比如 TextView，EditText这些，而Theme必须针对整个activity或者 整个application，你必须在AndroidManifest.xml中 的<application>或者<activity>中定义</activity></application></li>
-<li>Style的xml文件要求：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 他的根节点必须 是&lt;resources&gt;</span><br><span class="line">2. 给&lt;style&gt; 增加一个全局唯一的名字，也可以选择增加一个parent父类属性</span><br><span class="line">3. 使用时只要在写我们的view时，加入style标签就可以了</span><br><span class="line">    &lt;TextView</span><br><span class="line">        style=&quot;@style/CodeFont&quot;</span><br><span class="line">        android:text=&quot;@string/hello&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="theme设置"><a class="markdownIt-Anchor" href="#theme设置"></a> Theme设置</h1>
-<h2 id="theme设置-2"><a class="markdownIt-Anchor" href="#theme设置-2"></a> Theme设置</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    package=&quot;com.jude.test.education&quot; &gt;</span><br><span class="line"></span><br><span class="line">    &lt;application</span><br><span class="line">        android:allowBackup=&quot;true&quot;</span><br><span class="line">        android:icon=&quot;@mipmap/ic_launcher&quot;</span><br><span class="line">        android:label=&quot;@string/app_name&quot;</span><br><span class="line">        &lt;!--这里设置的是整个APP的主题，所有activiy和view都会默认为这个主题--&gt;</span><br><span class="line">        android:theme=&quot;@style/AppTheme&quot; &gt;</span><br><span class="line">        &lt;activity</span><br><span class="line">            android:name=&quot;.MainActivity&quot;</span><br><span class="line">            android:label=&quot;@string/app_name&quot;</span><br><span class="line">            &lt;!--这里设置的是这个Activity的主题，Activity所有view都会默认为这个主题--&gt;</span><br><span class="line">            android:theme=&quot;@style/AppTheme&quot;</span><br><span class="line">            &gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">    &lt;/application&gt;</span><br><span class="line"></span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="theme继承并重写"><a class="markdownIt-Anchor" href="#theme继承并重写"></a> Theme继承并重写</h2>
-<p>在value-&gt;style里定义主题。可以继承并重写属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 兼容主题 深色主题 activity背景默认黑色，字体默认白色--&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 兼容主题 浅色主题 activity背景默认白色 字体默认黑色 --&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme2&quot; parent=&quot;Theme.AppCompat.Light&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 兼容主题 深色主题 无Actionbar--&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme3&quot; parent=&quot;Theme.AppCompat.NoActionBar&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 兼容主题 浅色主题 无Actionbar--&gt;</span><br><span class="line">&lt;style name=&quot;AppTheme4&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="代码中设置activity主题"><a class="markdownIt-Anchor" href="#代码中设置activity主题"></a> 代码中设置Activity主题</h2>
-<ul>
-<li>Activity 是 ContextThemeWrapper的子类。而ContextThemeWrapper一个很重要的属性就是Theme</li>
-<li>实例化一个View必须要 new View(Context context) 。因为View需要把Attributes交给Context的Theme来确定一堆属性(在一个叫TypedArray的容器里)</li>
-</ul>
-<h2 id="theme设置注意事项"><a class="markdownIt-Anchor" href="#theme设置注意事项"></a> Theme设置注意事项</h2>
-<ul>
-<li>如果使用 android.support.v7.app.ActionBarActivity 就必须要用兼容主题Theme.AppCompat。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ActionBarActivity 的存在就是为了兼容低API。让他们用上高API的东西。比如Toolbar</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Holo主题是Android4.0开始谷歌极力推行的Android Design的主题</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;AppTheme5&quot; parent=&quot;android:Theme.Holo&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Android5.0谷歌又推出了Material Design来取代Android Design</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> &lt;style name=&quot;AppTheme5&quot; parent=&quot;android:Theme.Material&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="theme来源"><a class="markdownIt-Anchor" href="#theme来源"></a> Theme来源</h1>
-<p>在Android Studio中书写主题时都会有自动提示</p>
-<ol>
-<li>来自Android系统自带的。自带的主题要加上“android:”，如：android:Theme.Black</li>
-<li>来自兼容包的(比如v7兼容包)。使用v7兼容包中的主题不需要前缀，直接：Theme.AppCompat</li>
-<li>自己写一个主题</li>
-</ol>
-<h1 id="theme种类"><a class="markdownIt-Anchor" href="#theme种类"></a> Theme种类</h1>
-<ul>
-<li>所有能应用于应用程序主题都是以“Theme.”开头</li>
-<li>在v7中有很多以“Base”开头的主题，是一些父主题，不建议直接使用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">系统自带主题：</span><br><span class="line">API 1:</span><br><span class="line">android:Theme 根主题</span><br><span class="line">android:Theme.Black 背景黑色</span><br><span class="line">android:Theme.Light 背景白色</span><br><span class="line">android:Theme.Wallpaper 以桌面墙纸为背景</span><br><span class="line">android:Theme.Translucent 透明背景</span><br><span class="line">android:Theme.Panel 平板风格</span><br><span class="line">android:Theme.Dialog 对话框风格</span><br><span class="line"></span><br><span class="line">API 11:</span><br><span class="line">android:Theme.Holo Holo根主题</span><br><span class="line">android:Theme.Holo.Black Holo黑主题</span><br><span class="line">android:Theme.Holo.Light Holo白主题</span><br><span class="line"></span><br><span class="line">API 14:</span><br><span class="line">Theme.DeviceDefault 设备默认根主题</span><br><span class="line">Theme.DeviceDefault.Black 设备默认黑主题</span><br><span class="line">Theme.DeviceDefault.Light 设备默认白主题</span><br><span class="line"></span><br><span class="line">API 21: (网上常说的 Android Material Design 就是要用这种主题)</span><br><span class="line">Theme.Material Material根主题</span><br><span class="line">Theme.Material.Light Material白主题</span><br><span class="line"></span><br><span class="line">================================================================</span><br><span class="line">兼容包v7中带的主题：</span><br><span class="line">Theme.AppCompat 兼容主题的根主题</span><br><span class="line">Theme.AppCompat.Black 兼容主题的黑色主题</span><br><span class="line">Theme.AppCompat.Light 兼容主题的白色主题</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h1 id="theme风格种类"><a class="markdownIt-Anchor" href="#theme风格种类"></a> Theme风格种类</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Black 黑色风格</span><br><span class="line">Light 光明风格</span><br><span class="line">Dark 黑暗风格</span><br><span class="line">DayNight 白昼风格</span><br><span class="line">Wallpaper 墙纸为背景</span><br><span class="line">Translucent 透明背景</span><br><span class="line">Panel 平板风格</span><br><span class="line">Dialog 对话框风格</span><br><span class="line">NoTitleBar 没有TitleBar</span><br><span class="line">NoActionBar 没有ActionBar</span><br><span class="line">Fullscreen 全屏风格</span><br><span class="line">MinWidth 对话框或者ActionBar的宽度根据内容变化，而不是充满全屏</span><br><span class="line">WhenLarge 对话框充满全屏</span><br><span class="line">TranslucentDecor 半透明风格</span><br><span class="line">NoDisplay 不显示，也就是隐藏了</span><br><span class="line">WithActionBar 在旧版主题上显示ActionBar</span><br></pre></td></tr></table></figure>
-<h1 id="每个主题中定义item分类"><a class="markdownIt-Anchor" href="#每个主题中定义item分类"></a> 每个主题中定义item分类</h1>
-<p><a href="https://yq.aliyun.com/articles/72108" target="_blank" rel="noopener">https://yq.aliyun.com/articles/72108</a></p>
-<p>颜色、字体、按钮、list、window、Dialog、AlertDialog、Panel、滚动条、文字选中（Text Selection）、Widget样式、Preference样式、search控件样式、ActionBar样式、其他样式</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/其他-svn迁移/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/其他-svn迁移/" itemprop="url">SVN迁移</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:24:30+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>SVN_Root为所有SVN操作根目录，包括所有的软件、资源库等</p>
-<ul>
-<li>Soft：为搭建SVN环境相关的软件</li>
-<li>Subversion：为SVN服务端软件安装目录</li>
-<li>SVN_BAK：为SVN备份文件</li>
-<li>repos:SVN仓库的根目录</li>
-<li>ReadMe：当前目录说明文件</li>
-</ul>
-<p>所有命令行操作需要管理员权限</p>
-<p>服务启动：<br>
-svnserve.exe -d -r D:\SVN_Root\repos</p>
-<p>SVN还原<br>
-svnadmin load D:\SVN_Root\repos\repos &lt; D:\repos.dump</p>
-<p>注册为系统服务<br>
-sc create svn binpath= ““D:\SVN_Root\Subversion\bin\svnserve.exe” --service -r D:\SVN_Root\repos” displayname= “Subversion Server” depend= Tcpip start= auto</p>
-<p>项目更换服务器，需迁移SVN，现记录过程。</p>
-<p>Subversion简介</p>
-<ol>
-<li>Subversion（简称SVN）是一款功能强大的开源版本控制工具，支持Linux和Windows平台。</li>
-<li>SVN可以有两个访问方式，一种是独立服务器直接访问，即利用svnserve命令启动服务，通过svn://yourdomain.com/project进行访问和操作。另一种结合apache，利用HTTP协议，通过http://yourdomain.com/svn/project进行访问及各类操作。如果服务器需要在互联网上共享，一般选择后一种方式。</li>
-<li>通常情况下，如果选择SVN Server和Apache HTTP Server各自独立安装，配置起来会比较繁琐。</li>
-</ol>
-<p>软件下载<br>
-服务器：Subversion v1.7 <a href="http://sourceforge.net/projects/win32svn/" target="_blank" rel="noopener">http://sourceforge.net/projects/win32svn/</a><br>
-客户端：Tortoisesvn V1.7 <a href="http://tortoisesvn.net/downloads.html" target="_blank" rel="noopener">http://tortoisesvn.net/downloads.html</a></p>
-<p>结构说明<br>
-D:/svnroot<br>
-├─project1<br>
-│     ├─conf<br>
-│     ├─dav<br>
-│     ├─db<br>
-│     │     ├─revprops<br>
-│     │     ├─revs<br>
-│     │     └─transactions<br>
-│     ├─hooks<br>
-│     └─locks<br>
-└─project2<br>
-├─conf<br>
-├─dav<br>
-├─db<br>
-│     ├─revprops<br>
-│     ├─revs<br>
-│     └─transactions<br>
-├─hooks<br>
-└─locks<br>
-其中：svnroot文件夹为存放所有仓库，也是服务启动的时候需指定的目录，下面的各项为项目目录</p>
-<p>启动服务<br>
-启动独立服务方式<br>
-svnserve –d –r e:/svn_repository/<br>
-访问方法：svn://localhost/dev，或file:///3:/svn_repository/dev<br>
-启动apache方式<br>
-cd D:/Program Files/CollabNet Subversion Server/httpd/bin<br>
-httpd.exe<br>
-访问方法：<a href="http://localhost/svn/dev/" target="_blank" rel="noopener">http://localhost/svn/dev/</a></p>
-<p>本项目所使用过程<br>
-所有命令行操作需要管理员权限<br>
-1.服务启动：<br>
-svnserve.exe -d -r D:\SVN_Root\repos<br>
-2.SVN备份（从源服务器备份，如：192.168.11.121）：<br>
-A：svnadmin dump d:\svn\repos\project1&gt; dump.dump &gt;D:\repos.dump      .dump后缀不能丢<br>
-B：备份d:\svn\repos\project1下conf目录<br>
-3.SVN还原（拷贝.dump文件到目的服务器，如：192.168.7.116）：<br>
-A：svnadmin create D:\SVN_Root\repos\project1<br>
-B：svnadmin load D:\SVN_Root\repos\project1 &lt; D:\repos.dump<br>
-C：拷贝2.B中备份的conf文件夹覆盖D:\SVN_Root\repos\project1下conf文件<br>
-4.注册为系统服务<br>
-sc create svn binpath= ““D:\SVN_Root\Subversion\bin\svnserve.exe” --service -r D:\SVN_Root\repos” displayname= “Subversion Server” depend= Tcpip start= auto</p>
-<p>荐读：<br>
-svnadmin命令：<br>
-<a href="http://blog.csdn.net/wzq9706/article/details/7319728" target="_blank" rel="noopener">http://blog.csdn.net/wzq9706/article/details/7319728</a><br>
-<a href="http://www.ityen.com/archives/529" target="_blank" rel="noopener">http://www.ityen.com/archives/529</a><br>
-svn命令：<a href="http://blog.sina.com.cn/s/blog_963453200101eiuq.html%EF%BC%8Csvn%E5%91%BD%E4%BB%A4%E4%B9%9F%E5%8F%AF%E9%80%9A%E8%BF%87Tortoisesvn%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%93%8D%E4%BD%9C%E4%BB%A3%E6%9B%BF" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_963453200101eiuq.html，svn命令也可通过Tortoisesvn客户端操作代替</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB集群搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/数据库-2018-12-10-MongoDB集群搭建/" itemprop="url">MongoDB集群搭建</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:23:24+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##集群环境:三台服务器</p>
-<h3 id="server110620128主server210620135从server310620159从"><a class="markdownIt-Anchor" href="#server110620128主server210620135从server310620159从"></a> server1:10.62.0.128主;server2:10.62.0.135从;server3:10.62.0.159从</h3>
-<h4 id="每一台分为6个片shard1~shard6端口为470174701847019470204702147022每一片建三个副本集配置服务器端口号37017路由服务器端口号30000"><a class="markdownIt-Anchor" href="#每一台分为6个片shard1~shard6端口为470174701847019470204702147022每一片建三个副本集配置服务器端口号37017路由服务器端口号30000"></a> 每一台分为6个片：shard1~shard6端口为47017,47018,47019,47020,47021,47022；每一片建三个副本集；配置服务器端口号：37017；路由服务器端口号：30000；</h4>
-<h3 id="1解压安装文件"><a class="markdownIt-Anchor" href="#1解压安装文件"></a> (1).解压安装文件</h3>
-<pre><code>[gsunis@gsunis Desktop]$ tar zxvf mongodb-linux-x86_64-3.0.6.tgz
-</code></pre>
-<h3 id="2将mongodb文件移动到homegsunismongodb目录下"><a class="markdownIt-Anchor" href="#2将mongodb文件移动到homegsunismongodb目录下"></a> (2).将mongoDB文件移动到/home/gsunis/mongodb目录下</h3>
-<pre><code>[root@gsunis Desktop]# mv mongodb-linux-x86_64-3.0.6 /home/gsunis/mongodb
-</code></pre>
-<h3 id="3数据存储目录"><a class="markdownIt-Anchor" href="#3数据存储目录"></a> (3).数据存储目录</h3>
-<pre><code>[root@gsunis bin]# mkdir -p /home/gsunis/data/db
-</code></pre>
-<h3 id="4启动mongod服务"><a class="markdownIt-Anchor" href="#4启动mongod服务"></a> (4).启动mongod服务</h3>
-<pre><code>[root@gsunis Desktop]# cd /home/gsunis/mongodb/bin
-[root@gsunis bin]# ./mongod --port 27017 --dbpath=/home/gsunis/data/db
-</code></pre>
-<h3 id="5启动mongo客户端"><a class="markdownIt-Anchor" href="#5启动mongo客户端"></a> (5).启动mongo客户端</h3>
-<pre><code>打开新的Terminal
-[gsunis@gsunis Desktop]$ su 
-查看mongod服务启动情况
-[root@gsunis Desktop]# netstat -ntpl | grep 27017
-
-[root@gsunis Desktop]# cd /home/gsunis/mongodb/bin/
-[root@gsunis bin]# ./mongo
-</code></pre>
-<p>###正常关闭mongoDB服务</p>
-<pre><code>./mongo
-use admin
-db.shutdownServer() 或者ps -ef|grep mongodb  kill -2 pid
-</code></pre>
-<p>##以上是简单的安装mongodb，下面是开始建立集群，分片和建立副本集</p>
-<p>###创建目录<br>
-mkdir -p /data/conf<br>
-mkdir -p /data/data1<br>
-mkdir -p /data/data2<br>
-mkdir -p /data/data3<br>
-mkdir -p /data/data4<br>
-mkdir -p /data/data5<br>
-mkdir -p /data/data6</p>
-<h3 id="6编辑mongo配置文件"><a class="markdownIt-Anchor" href="#6编辑mongo配置文件"></a> (6).编辑mongo配置文件</h3>
-<pre><code>sudo vi conf.cnf
-
-//conf.cnf   
-port=37017  
-dbpath=/home/gsunis/data/conf  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/conf/mongodb.log  
-nojournal=false  
-configsvr=true  
-profile=1 
-
-sudo vi db1.cnf
-
-//db1.cnf  
-replSet=shard1  
-port=47017  
-dbpath=/home/gsunis/data/data1  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data1/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db2.cnf
-
-//db2.cnf  
-replSet=shard2   
-port=47018  
-dbpath=/home/gsunis/data/data2  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data2/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db3.cnf
-
-//db3.cnf  
-replSet=shard3  
-port=47019  
-dbpath=/home/gsunis/data/data3  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data3/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db4.cnf
-
-//db4.cnf  
-replSet=shard4   
-port=47020  
-dbpath=/home/gsunis/data/data4  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data4/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db5.cnf
-
-//db5.cnf  
-replSet=shard5   
-port=47021  
-dbpath=/home/gsunis/data/data5  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data5/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db6.cnf
-
-//db6.cnf  
-replSet=shard6   
-port=47022  
-dbpath=/home/gsunis/data/data6  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data6/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-</code></pre>
-<h4 id="7编写启动mongo服务的脚本"><a class="markdownIt-Anchor" href="#7编写启动mongo服务的脚本"></a> (7).编写启动mongo服务的脚本</h4>
-<pre><code>sudo vi mg.sh
-
-#!/bin/bash  
-instance=$1  
-action=$2  
-case &quot;$action&quot; in  
-   'start')  
-/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf ;;  
-   'stop')  
-/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown;;  
-   'restart')  
-/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown  
-/home/gsunis/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf;;  
-esac  
-</code></pre>
-<h4 id="8启动mongo服务脚本"><a class="markdownIt-Anchor" href="#8启动mongo服务脚本"></a> (8).启动mongo服务脚本</h4>
-<pre><code>sudo vi start.sh
-
-#!/bin/bash 
-rm /data/conf/*.lock
-rm /data/data1/*.lock	
-rm /data/data2/*.lock
-rm /data/data3/*.lock
-rm /data/data4/*.lock
-rm /data/data5/*.lock
-rm /data/data6/*.lock
-/home/gsunis/data/mg.sh db1 start  
-/home/gsunis/data/mg.sh db2 start  
-/home/gsunis/data/mg.sh db3 start  
-/home/gsunis/data/mg.sh db4 start  
-/home/gsunis/data/mg.sh db5 start
-/home/gsunis/data/mg.sh db6 start  
-</code></pre>
-<p>sudo vi <a href="http://stop.sh" target="_blank" rel="noopener">stop.sh</a></p>
-<pre><code>#!/bin/bash 
-/home/gsunis/data/mg.sh conf stop 
-/home/gsunis/data/mg.sh db1 stop  
-/home/gsunis/data/mg.sh db2 stop  
-/home/gsunis/data/mg.sh db3 stop  
-/home/gsunis/data/mg.sh db4 stop  
-/home/gsunis/data/mg.sh db5 stop
-/home/gsunis/data/mg.sh db6 stop  
-</code></pre>
-<p>###准备工作做好，先启动配置服务器（先启动主，依次启动两从机）<br>
-/home/gsunis/data/mg.sh conf start<br>
-###再启动路由服务器（先启动主，依次启动两从机）<br>
-/home/gsunis/mongodb/bin/mongos  --configdb 10.62.0.128:37017,10.62.0.135:37017,10.62.0.159:37017 --port 30000 --chunkSize 1 --logpath /home/gsunis/data/mongos1.log --logappend --fork<br>
-###最后启动mongod（先启动主，依次启动两从机）<br>
-/home/gsunis/mongodb/data/start.sh</p>
-<h3 id="9shard服务器副本集的建立只需要在主机上做即可两从机会自动复制"><a class="markdownIt-Anchor" href="#9shard服务器副本集的建立只需要在主机上做即可两从机会自动复制"></a> (9).shard服务器副本集的建立（只需要在主机上做即可，两从机会自动复制）</h3>
-<pre><code>./mongo --port 47017
-
-config = {_id: 'shard1', members: [
- {_id: 0, host: '10.62.0.128:47017'},
- {_id: 1, host: '10.62.0.135:47017'},
- {_id: 2, host: '10.62.0.159:47017'}]
- }
-rs.initiate(config)
-
-Ctrl + C 退出
-</code></pre>
-<ul>
-<li>rs.add({&quot;_id&quot;:2,“host”:“10.62.0.135:47017”})	#在线增加复制集</li>
+<li>java<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-03-04 14:25:33<br>
+categories: Java<br>
+password:</li>
 </ul>
 <hr>
-<pre><code>./mongo --port 47018
-
-config = {_id: 'shard2', members: [
- {_id: 0, host: '10.62.0.128:47018'},
- {_id: 1, host: '10.62.0.135:47018'},
- {_id: 2, host: '10.62.0.159:47018'}]
- }
-rs.initiate(config)
-
-
-./mongo --port 47019
-
-config = {_id: 'shard3', members: [
- {_id: 0, host: '10.62.0.128:47019'},
- {_id: 1, host: '10.62.0.135:47019'},
- {_id: 2, host: '10.62.0.159:47019'}]
- }
-rs.initiate(config)
-
-
-./mongo --port 47020
-
-config = {_id: 'shard4', members: [
- {_id: 0, host: '10.62.0.128:47020'},
- {_id: 1, host: '10.62.0.135:47020'},
- {_id: 2, host: '10.62.0.159:47020'}]
- }
-rs.initiate(config)
-
-./mongo --port 47021
-
-config = {_id: 'shard5', members: [
- {_id: 0, host: '10.62.0.128:47021'},
- {_id: 1, host: '10.62.0.135:47021'},
- {_id: 2, host: '10.62.0.159:47021'}]
- }
-rs.initiate(config)
-
-
-./mongo --port 47022
-
-config = {_id: 'shard6', members: [
- {_id: 0, host: '10.62.0.128:47022'},
- {_id: 1, host: '10.62.0.135:47022'},
- {_id: 2, host: '10.62.0.159:47022'}]
- }
-rs.initiate(config)
-</code></pre>
-<h2 id="配置sharding登录到mongos添加shard节点"><a class="markdownIt-Anchor" href="#配置sharding登录到mongos添加shard节点"></a> 配置sharding:登录到mongos，添加shard节点</h2>
-<pre><code>./mongo --port 30000
-
-use admin
-
-db.runCommand({addshard:&quot;shard1/10.62.0.128:47017,10.62.0.159:47017,10.62.0.135:47017&quot;});
-db.runCommand({addshard:&quot;shard2/10.62.0.128:47018,10.62.0.159:47018,10.62.0.135:47018&quot;});
-db.runCommand({addshard:&quot;shard3/10.62.0.128:47019,10.62.0.159:47019,10.62.0.135:47019&quot;});
-db.runCommand({addshard:&quot;shard4/10.62.0.128:47020,10.62.0.159:47020,10.62.0.135:47020&quot;});
-db.runCommand({addshard:&quot;shard5/10.62.0.128:47021,10.62.0.159:47021,10.62.0.135:47021&quot;});
-db.runCommand({addshard:&quot;shard6/10.62.0.128:47022,10.62.0.159:47022,10.62.0.135:47022&quot;});
-
-
-use config
-
-db.shards.find()
-</code></pre>
-<h4 id="启动路由服务出错"><a class="markdownIt-Anchor" href="#启动路由服务出错"></a> 启动路由服务出错</h4>
-<p>错误：</p>
-<p><img src="http://i.imgur.com/Usu4wPa.png" alt="时钟不同步，导致无法启动路由服务"></p>
-<p>解决方法：</p>
+<p><a href="https://blog.csdn.net/qq_20989105/article/details/79869963" target="_blank" rel="noopener">https://blog.csdn.net/qq_20989105/article/details/79869963</a></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>在项目中使用Lombok可以减少很多重复代码的书写，比如说getter/setter/toString等方法的编写</p>
 <ul>
-<li>(1).关闭所有mongo相关服务</li>
-<li>(2).先启配置服务 		Config Server</li>
-<li>(3).启动路由服务		mongos</li>
-<li>(4).最后启动所有mongod服务	mongod<br>
-###远程copy<br>
-scp /home/gsunis/Tools/mongodb-linux-x86_64-3.0.6.tgz <a href="mailto:gsunis@10.62.0.135" target="_blank" rel="noopener">gsunis@10.62.0.135</a>:/home/gsunis/</li>
+<li>官网：<a href="https://projectlombok.org/" target="_blank" rel="noopener">https://projectlombok.org/</a></li>
+<li>插件安装：<a href="https://github.com/mplushnikov/lombok-intellij-plugin" target="_blank" rel="noopener">https://github.com/mplushnikov/lombok-intellij-plugin</a></li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/数据库-2018-12-10-MongoDB搭建/" itemprop="url">MongoDB安装</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:23:15+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1解压安装文件"><a class="markdownIt-Anchor" href="#1解压安装文件"></a> (1).解压安装文件</h3>
-<pre><code>[gsunis@gsunis Desktop]$ tar zxvf mongodb-linux-x86_64-3.0.6.tgz
-</code></pre>
-<h3 id="2将mongodb文件移动到usrlocalmongodb目录下"><a class="markdownIt-Anchor" href="#2将mongodb文件移动到usrlocalmongodb目录下"></a> (2).将mongoDB文件移动到/usr/local/mongodb目录下</h3>
-<pre><code>[root@gsunis Desktop]# mv mongodb-linux-x86_64-3.0.6 /usr/local/mongodb
-export PATH=/usr/local/mongodb/bin:$PATH
-</code></pre>
-<h3 id="3数据存储目录"><a class="markdownIt-Anchor" href="#3数据存储目录"></a> (3).数据存储目录</h3>
-<pre><code>[root@gsunis bin]# mkdir -p /home/gsunis/data/db
-mkdir -p /data/conf 
-mkdir -p /data/data1  
-mkdir -p /data/data2  
-mkdir -p /data/data3  
-mkdir -p /data/data4  
-mkdir -p /data/data5  
-mkdir -p /data/data6 
-</code></pre>
-<h3 id="4启动mongod服务"><a class="markdownIt-Anchor" href="#4启动mongod服务"></a> (4).启动mongod服务</h3>
-<pre><code>[root@gsunis Desktop]# cd /usr/local/mongodb/bin
-[root@gsunis bin]# ./mongod --port 27017 --dbpath=/home/gsunis/data/db
-</code></pre>
-<h3 id="5启动mongo客户端"><a class="markdownIt-Anchor" href="#5启动mongo客户端"></a> (5).启动mongo客户端</h3>
-<pre><code>打开新的Terminal
-[gsunis@gsunis Desktop]$ su 
-查看mongod服务启动情况
-[root@gsunis Desktop]# netstat -ntpl | grep 27017
-
-[root@gsunis Desktop]# cd /usr/local/mongodb/bin/
-[root@gsunis bin]# ./mongo
-</code></pre>
-<h3 id="6编辑mongo配置文件"><a class="markdownIt-Anchor" href="#6编辑mongo配置文件"></a> (6).编辑mongo配置文件</h3>
-<pre><code>sudo vi conf.cnf
-
-//conf.cnf  
-rest=true  
-port=37017  
-dbpath=/home/gsunis/data/conf  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/conf/mongodb.log  
-nojournal=false  
-configsvr=true  
-profile=1 
-
-sudo vi db1.cnf
-
-//db1.cnf  
-replSet=shard1  
-rest=true  
-port=47017  
-dbpath=/home/gsunis/data/data1  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data1/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db2.cnf
-
-//db2.cnf  
-replSet=shard2  
-rest=true  
-port=47018  
-dbpath=/home/gsunis/data/data2  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data2/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db3.cnf
-
-//db3.cnf  
-replSet=shard3  
-rest=true  
-port=47019  
-dbpath=/home/gsunis/data/data3  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data3/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db4.cnf
-
-//db4.cnf  
-replSet=shard4  
-rest=true  
-port=47020  
-dbpath=/home/gsunis/data/data4  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data4/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db5.cnf
-
-//db5.cnf  
-replSet=shard5  
-rest=true  
-port=47021  
-dbpath=/home/gsunis/data/data5  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data5/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-
-sudo vi db6.cnf
-
-//db6.cnf  
-replSet=shard6  
-rest=true  
-port=47022  
-dbpath=/home/gsunis/data/data6  
-logappend = true  
-fork=true  
-logpath=/home/gsunis/data/data6/mongodb.log  
-nojournal=false  
-shardsvr=true  
-profile=1  
-</code></pre>
-<h4 id="7编写启动mongo服务的脚本"><a class="markdownIt-Anchor" href="#7编写启动mongo服务的脚本"></a> (7).编写启动mongo服务的脚本</h4>
-<pre><code>sudo vi mg.sh
-
-#!/bin/bash  
-instance=$1  
-action=$2  
-case &quot;$action&quot; in  
-   'start')  
-/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf ;;  
-   'stop')  
-/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown;;  
-   'restart')  
-/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf --shutdown  
-/usr/local/mongodb/bin/mongod -f /home/gsunis/data/&quot;$instance&quot;.cnf;;  
-esac  
-</code></pre>
-<h4 id="8启动docker实例的mongo服务脚本"><a class="markdownIt-Anchor" href="#8启动docker实例的mongo服务脚本"></a> (8).启动docker实例的mongo服务脚本</h4>
-<pre><code>sudo vi start.sh
-
-#!/bin/bash 
-rm /data/conf/*.lock
-rm /data/data1/*.lock	
-rm /data/data2/*.lock
-rm /data/data3/*.lock
-rm /data/data4/*.lock
-rm /data/data5/*.lock
-rm /data/data6/*.lock
-/home/gsunis/data/mg.sh conf start 
-/home/gsunis/data/mg.sh db1 start  
-/home/gsunis/data/mg.sh db2 start  
-/home/gsunis/data/mg.sh db3 start  
-/home/gsunis/data/mg.sh db4 start  
-/home/gsunis/data/mg.sh db5 start
-/home/gsunis/data/mg.sh db6 start  
-</code></pre>
-<p>sudo vi <a href="http://start.sh" target="_blank" rel="noopener">start.sh</a></p>
-<pre><code>#!/bin/bash 
-rm /data/conf/*.lock
-rm /data/data1/*.lock	
-rm /data/data2/*.lock
-rm /data/data3/*.lock
-rm /data/data4/*.lock
-rm /data/data5/*.lock
-rm /data/data6/*.lock
-/home/gsunis/data/mg.sh conf stop 
-/home/gsunis/data/mg.sh db1 stop  
-/home/gsunis/data/mg.sh db2 stop  
-/home/gsunis/data/mg.sh db3 stop  
-/home/gsunis/data/mg.sh db4 stop  
-/home/gsunis/data/mg.sh db5 stop
-/home/gsunis/data/mg.sh db6 stop  
-</code></pre>
-<p>正常关闭mongoDB服务</p>
-<pre><code>./mongo
-use admin
-db.shutdownServer()
-</code></pre>
-<h3 id="9shard服务器副本集的建立"><a class="markdownIt-Anchor" href="#9shard服务器副本集的建立"></a> (9).shard服务器副本集的建立</h3>
-<pre><code>./mongo --port 47017
-
-config = {_id: 'shard1', members: [
- {_id: 0, host: '10.62.0.128:47017'},
- {_id: 1, host: '10.62.0.159:47017'}]
- }
-rs.initiate(config)
-
-Ctrl + C 退出
-
-./mongo --port 47018
-
-config = {_id: 'shard2', members: [
- {_id: 0, host: '10.62.0.128:47018'},
- {_id: 1, host: '10.62.0.159:47018'}]
- }
-rs.initiate(config)
-
-
-./mongo --port 47019
-
-config = {_id: 'shard3', members: [
- {_id: 0, host: '10.62.0.128:47019'},
- {_id: 1, host: '10.62.0.159:47019'}]
- }
-rs.initiate(config)
-
-
-./mongo --port 47020
-
-config = {_id: 'shard4', members: [
- {_id: 0, host: '10.62.0.128:47020'},
- {_id: 1, host: '10.62.0.159:47020'}]
- }
-rs.initiate(config)
-
-./mongo --port 47021
-
-config = {_id: 'shard5', members: [
- {_id: 0, host: '10.62.0.128:47021'},
- {_id: 1, host: '10.62.0.159:47021'}]
- }
-rs.initiate(config)
-
-
-./mongo --port 47022
-
-config = {_id: 'shard6', members: [
- {_id: 0, host: '10.62.0.128:47022'},
- {_id: 1, host: '10.62.0.159:47022'}]
- }
-rs.initiate(config)
-</code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-MySQL与MariaDB对比/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/数据库-MySQL与MariaDB对比/" itemprop="url">MySQL与MariaDB对比</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:22:58+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="mysql与mariadb对比"><a class="markdownIt-Anchor" href="#mysql与mariadb对比"></a> MySQL与MariaDB对比</h1>
-<h2 id="mysql"><a class="markdownIt-Anchor" href="#mysql"></a> MySQL：</h2>
-<blockquote>
-<p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件。</p>
-</blockquote>
-<h2 id="mariadb"><a class="markdownIt-Anchor" href="#mariadb"></a> MariaDB</h2>
-<blockquote>
-<p>甲骨文收购 MySQL 后，由于甲骨文对 MySQL 的开发和维护更多倾向于闭门的立场，很多 MySQL 的开发者和用户放弃了它。在社区驱动下，促使更多人移到 MySQL 的另一个叫 MariaDB 的分支，在原有 MySQL 开发人员的带领下，MariaDB 的开发遵循开源的理念，并确保它的二进制格式与 MySQL 兼容。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/数据库-2018-12-10-MongoDB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/数据库-2018-12-10-MongoDB/" itemprop="url">MongoDB</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:22:58+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.jikexueyuan.com/course/mongoDB/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/mongoDB/</a></p>
-<p>NoSQL数据库：NoSQL(NoSQL = Not Only SQL )，意即&quot;不仅仅是SQL&quot;，指的是非关系型的数据库</p>
-<p>mongodb官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a><br>
-<a href="https://docs.mongodb.com/manual/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/</a></p>
-<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
-MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
-<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>
-<p>NoSQL保证数据的最终一致性，数据由更新延迟</p>
-<p>CAP理论</p>
-<p>适用场景：数据缓存；json格式数据存储；高伸缩性场景；<br>
-MongoDB更多适合大数据量、高并发、弱事务的互联网应用，其内置的水平扩展机制提供了从几百万到十亿级别的数据处理能力，可很好的满足Web2.0和移动互联网应用的s数据存储要求。</p>
-<p>MongoDB由C++编写，支持32位（2G限制）和64位应用，是一个基于分布式文件存储的开源数据库系统。</p>
-<p>MongoDB3.0特性：</p>
+<h1 id="项目使用"><a class="markdownIt-Anchor" href="#项目使用"></a> 项目使用</h1>
 <ol>
-<li>加入WiredTiger存储引擎:<br>
-开源的存储引擎；为现代硬件设计：多核CPU，充分利用内存／芯片级缓存；RAM/SSD/HDD；为大数据设计：高性能，低延迟，高并发稳定性</li>
-<li>MMAPv1:内存映射存储引擎，为默认引擎 ，提供了Collection锁；无缝迁移MMAP</li>
-<li>可插拔引擎API</li>
-<li>基于Web的可视化管理工具：Ops Manager</li>
+<li>安装插件lombok</li>
+<li>引入maven依赖</li>
 </ol>
-<p>MongoDB数据模型<br>
-文档：本质上是一种类JSON的BSON格式的数据，可以理解为在JSON基础上添加了一些新的数据类型，包括Date，正则表达式等。<br>
-BSON官网：<a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>
-BSON是由一组组键值对组成，具有轻量性、可靠性和高效性3个特征。可遍历性是MongoDB将BSON作为数据存储的重要原因<br>
-使用文档时需要注意以下事项：<br>
-MongoDB中写操作的原子性限制在文档级别；<br>
-单个文档占用的存储空间不能超过16MB；<br>
-MongoDB会尽量保持文档被插入时键值对的顺序；<br>
-关于文档命名需要注意的事项：<br>
-_id是系统保留的关键字，他是默认的主键，该值在集合中必须唯一，且不可更改；<br>
-键不能包含空字符或\0，这个字符用于表示键的结尾；<br>
-不能以$开头且不能包含点号.<br>
-键是区分大小写的且不能重复</p>
-<p>集合：把一组相关的文档放到一起组成了集合，MongoDB的集合是模式自由的，一个集合里面的文档可以是各式各样的<br>
-MogoDB提供了一些特殊的集合：capped collection、system.indexes、system.namespaces等<br>
-集合命名需注意：<br>
-集合名不能是空字符串；<br>
-集合名不能包含空字符串或\0，该字符表示集合名的结尾<br>
-集合名不能以&quot;system.&quot;开头，此前缀是系统本身保留的<br>
-集合名不能包含$字符，但是可以包含点号.</p>
-<p>数据库：多个文档组成集合，多个集合组成数据库。一个MongoDB实例可承载多个数据库，每个数据库有独立的权限，在磁盘上，不同的数据库也可放置到不通目录<br>
-数据库命名规则：<br>
-不能是空字符串；不能以$开头；不能包含空字符串和点号.;数据库名称区分大小写；建议数据库名全部使用小写；数据库名最长64字节；不要与系统保留数据库名相同</p>
-<p>命名空间：把数据库名添加到集合名前面，中间用点号连接，得到集合的完全限定，就是命名空间<br>
-因为点号可以出现在集合名字中，如：jike.blog.posts 和 jike.blog.authors，可以将posts和authors看作是blog集合的子集合，blog集合甚至可以不存在<br>
-使用子集合的方式，可以是我们更好的组织数据，使数据结构更加清晰明了</p>
-<p>MongoDB数据类型<br>
-基本数据类型<br>
-null：表示空值或者不存在的字段<br>
-布尔：true／false<br>
-数据类型：32-int,64-int,64-double,注意：JavaScript只支持64位浮点数<br>
-字符串类型：使用UTF-8对字符串进行编码<br>
-二进制数据：可以保存由任意字节组成的字符串，如：图片、视频等<br>
-正则表达式类型：主要用于查询，使用正则表达式作为限定条件<br>
-Date类型：是一个64位整数，它代表距Unix epoch：1970-1-1的毫秒数，MongoDB在存储时间是现转换为UTC时间，北京时间=UTC+8小时，MongoDB Shell会根据本地时间 设置显示日期时间<br>
-Timestap：32bit Unix epoch + 32bit自增序数，只供MongoDB数据库服务内部使用，用于记录操作的详细时间<br>
-ObjectId：由24个16精制字符组成，每个字节存储两位16精制数字，总共需12字节存储空间=4字节时间戳+3字节机器标识+2字节pid+3字节计数器，ObjectId(),getTimestamp(),valueOf()<br>
-数组：使用方括号来表示的一组值，数组中可以包含不通数据类型的元素，针对数组，MongoDB提供了许多操作符，如：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pop,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span></span></span></span>push,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">pull,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span></span></span></span>slice,$addToSet等；MongoDB可自动为数组元素建立MultiKey索引<br>
-内嵌文档：文档可以作为键的值，这样的文档成为内嵌文档。内嵌文档可以使数据不用保存成扁平结果的键值对，从而使数据组织形式更加自然。</p>
-<p>内嵌文档模式VS引用文档模式<br>
-子文档比较小或变化不频繁，则使用内嵌文档模式，否则使用引用文档模式</p>
-<p>MongoDB自动将_id字段设置为主键</p>
-<p>MongoDB Shell：是MongoDB自带的JavaScript Shell，随MongoDB一起发布 =JavaScript V8解释器+MongoDB客户端</p>
-<p>help查看帮助<br>
-执行脚本<br>
-直接执行：mongo [–quiet] script.js<br>
-交互执行：load(“script.js”)<br>
-执行命令行程序：run(“ls”)<br>
-.mongorc.js文件，默认会加载<br>
-编辑复合变量EDITOR：在.bashrc中添加后source生效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#EDITOR</span><br><span class="line">EDITOR=/usr/bin/vim</span><br></pre></td></tr></table></figure>
-<p>即可使用editor编辑文档</p>
-<p><a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">http://www.runoob.com/mongodb/mongodb-intro.html</a><br>
-Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。<br>
-GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。<br>
-MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</p>
-<p>MongoDB数据库安装：</p>
-<ol>
-<li>下载安装文件解压缩并添加bin目录到环境变量</li>
-<li>创建一个data目录，然后在data目录里创建db目录、logs目录</li>
-<li>启动服务端</li>
-<li>启动客户端：mongo</li>
-<li>windows下可以将MongoDB做成系统服务</li>
-</ol>
-<p>mac<br>
-临时添加环境变量：export PATH=/usr/local/mongodb/bin:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mi mathvariant="normal">编</mi><mi mathvariant="normal">辑</mi><mtext> </mtext><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>s</mi><msub><mi>h</mi><mi>p</mi></msub><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mo separator="true">,</mo><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">：</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">PATH
-编辑~/.bash_profile,添加：export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord cjk_fallback">编</span><span class="mord cjk_fallback">辑</span><span class="mspace nobreak"> </span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:/usr/local/mongodb4/bin/:$PATH 即可永久添加环境变量</p>
-<p>连接MongoDB数据库：./mongo + 服务器IP:端口号/数据库名<br>
-关闭MongoDB服务在 ./mongo 进入控制台后，输入 use admin,然后输入 db.shutdownServer()</p>
-<p>Mongodb可以通过命令行方式和配置文件的方式来启动：<br>
-这两种方式都是在前台启动Mongodb进程，如果Session窗口关闭，Mongodb进程也随之停止。<br>
-不过Mongodb同时还提供了一种后台Daemon方式启动，只需要加上一个&quot;–fork&quot;参数即可，用到了&quot;–fork&quot;参数就必须启用&quot;–logpath&quot;参数<br>
-通过命令行： ./bin/mongod --dbpath=/data/db --fork --logpath=/data/logs/mongodb.log<br>
-配置文件方式：./bin/mongod -f mongodb.conf  或 ./bin/mongod --config mongodb.conf  //-f 后面写要使用的配置文件<br>
-./bin/mongod --shutdown -f mongod.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">dbpath=/usr/local/mongodb/data/</span><br><span class="line">logpath=/usr/local/mongodb/log/mongodb.log  </span><br><span class="line">fork = true</span><br></pre></td></tr></table></figure>
-<p>命令行操作：<br>
-use mytetDB  //数据库如果不存在则创建<br>
-save时如果给定了_ObjectId则更新创建整条记录；如果要更新部分字段则使用update方法使用$set<br>
-db.dropDatabase()<br>
-db//显示当前数据库<br>
-show dbs<br>
-show collections</p>
-<p>有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。<br>
-admin： 从权限的角度来看，这是&quot;root&quot;数据库。要是将一个用户添加到这个数据库，这个用户自动继承所有数据库的权限。一些特定的服务器端命令也只能从这个数据库运行，比如列出所有的数据库或者关闭服务器。<br>
-local: 这个数据永远不会被复制，可以用来存储限于本地单台服务器的任意集合<br>
-config: 当Mongo用于分片设置时，config数据库在内部使用，用于保存分片的相关信息。</p>
-<p>MongoDB GridFS文件系统<br>
-分布式文件系统：将固定存储于单台机器上的文件系统，扩展到多台机器上，每个节点负责存储部分数据，众多的存储节点组成一个文件系统网络，各个节点通过网络进行通信和数据传输</p>
-<p>当存储文档大于16M时，可以考虑使用GridFS<br>
-GridFS：是MongoDB制定的如何在数据库中存储大文件的规范，MongoDB并没有实现GridFS，而是交由客户端驱动程序实现<br>
-GridFS使用两个集合（collection）存储文件。一个集合是chunks, 用于存储文件内容的二进制数据；一个集合是files，用于存储文件的元数据。<br>
-使用fs.files存储文件的元数据，包含字段如下：<br>
-使用fs.chunks存储以255K进行分割的文件块，包含字段如下：<br>
-GridFS适用于如下场景：<br>
-存储用户产生的文件且文件数量比较大；需要文件的自动备份和分布式存储；需要访问文件的部分内容；存储16MB以上的文件<br>
-mongofiles是MongoDB安装包中提供的一个工具，专门用来存取文件，包括查询所有文件、查看文件、上传一个文件、获取一个文件、按照_id来获取文件、按文件名删除文件、按_id删除文件。<br>
-mongofiles --help其实有四个主要命令，分别为：<br>
-put —存储命令<br>
-get —获取命令<br>
-list —列表命令<br>
-delete —删除命令</p>
-<p>MongoDB聚合管道：聚合操作主要用户批量数据处理，往往将记录按条件分组，然后在每组上分别进行一系列操作，如：求和、求最大小值等<br>
-聚合操作能够对记录进行复杂处理，主要为数理统计和数据挖掘。<br>
-MongoDB提供了3种聚合操作方式：<br>
-聚合管道（Aggregation Pipeline）:MongoDB Shell使用db.collection.aggregate([{…}])来构建和使用聚合管道<br>
-$project:用于修改文档的结构，可以重命名、增加或删除文档字段<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">滤</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi></mrow><annotation encoding="application/x-tex">match:用于过滤文档，在</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">滤</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span></span></span></span>match中不能使用$where,尽量出现在管道的前面，方便借助索引加快查询<br>
-$group:将集合中的文档进行分组，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
-$sort:将集合中的文档进行排序，此分组在内存中进行，最大100M，可通过allowDiskUse启用磁盘交换处理<br>
-$skip:跳过指定数量的文档<br>
-$unwind:将文档按照数组字段拆分成多条文档，每条文档包含数组的一个元素<br>
-$geoNear:按照由近到远顺序输出接近某一地理位置的文档<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">将</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">储</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">集</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">阶</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">键</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">档</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">构</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">达</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">聚</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">管</mi><mi mathvariant="normal">道</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">：</mi><mn>1</mn><mi mathvariant="normal">将</mi></mrow><annotation encoding="application/x-tex">out:将聚合结果存储到集合中，参数为集合名称
-    。。。
-    聚合管道表达式：阶段操作符可以看作是&quot;键&quot;，所对应的&quot;值&quot;称为管道表达式，管道表达式可以看作是管道操作符的操作数，管道表达式是一个文档结构，由字段名、字段值和表达式操作符组成。
-    聚合管道使用优化：
-    1将</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">储</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">集</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">阶</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord">&quot;</span><span class="mord cjk_fallback">键</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord">&quot;</span><span class="mord cjk_fallback">值</span><span class="mord">&quot;</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">档</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">达</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">聚</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">管</span><span class="mord cjk_fallback">道</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord">1</span><span class="mord cjk_fallback">将</span></span></span></span>match、$sort放到管道开始阶段，有利于利用索引提高文档处理效率<br>
-2提交过滤可减少流经后续阶段的文档数量<br>
-聚合管道的限制：<br>
-1返回文档结果不能超过16M，可通过返回一个游标或存储到集合中跳过此限制<br>
-单目的聚合操作<br>
-count<br>
-distinct<br>
-group<br>
-MapReduce编程模型</p>
-<p>mongoimport可以导入集合</p>
-<p>MongoDB数据更新<br>
-文档插入和删除：insert、update、delete<br>
-Bulk函数：Bulk可将多个数据更新操作放到一个待执行的列表中批量来执行，顺序执行的Bulk（按添加顺序执行，一个有问题则退出）和并执行的Bulk（随机方式并行）<br>
-1初始化Bulk：<br>
-并行：db.集合名.initializeUnorderedBulkOp()<br>
-顺序：db.集合名.initializeOrderedBulkOp()<br>
-2 bulk.inset({…})<br>
-3 bulk.execute()</p>
-<p>MMAPv1的内存分配策略：如果一个更新操作超过了文档在磁盘上预分配的空间，MongoDB会重新在磁盘上为其分配一块更大的连续空间。使用&quot;2的N次方&quot;的方式分配内存，如：32，64，128，256…2M，4M…<br>
-优点：1有利用内存的重用，降低系统碎片的数量；2减少数据移动频率，提高系统数据写效率</p>
-<p>文档修改<br>
-WriteResult = db.集合名.update(query,obj,upsert,multi)<br>
-query:查询条件，相当于where<br>
-obj：更改的内容，相当于SQL中的set语句<br>
-upsert：当query的文档不存在时是否插入一条新文档<br>
-multi：当query返回多个文档时是否一次更新满足条件的所有文档，默认只更新一条</p>
-<p>内嵌文档的修改：</p>
-<ol>
-<li>修改整个内嵌文档：{$set:{field1:新内嵌文档}}</li>
-<li>修改内嵌文档的某个字段：{$某个修改操作符:{field1.field2:value}}</li>
-</ol>
-<p>数组元素：MongoDB提供了大量的特定操作符，使得数组既可以作为栈、队列等有序对象使用，也可当作集合等无序对象来使用</p>
-<p>MongoDB的写安全机制<br>
-写过程：使用update、save等操作数据集合中数据时，只是修改了数据再内存中的映像，数据更新并没有同步地保存到磁盘上，而且更新内存中数据之前，更新操作会被记录到journal日志文件中，<br>
-每隔100ms将内存journal中的日志写到磁盘journal日志文件中 ，每隔60s将内存中修改的数据写会到磁盘上<br>
-写入安全级别：写入安全Write Concern是一种客户端设置的，用于控制写入安全级别的机制，通过写入安全机制可提高数据的可靠性。<br>
-分为四个级别，分别是：<br>
-非确认式写入Unacknowledged：写操作不会返回结果，所以无法知道是否写入成功；但速度快、效率高、无阻塞<br>
-确认式写入Acknowledged：写操作必须得到MongoDB服务器的写入确认，如果失败，会返回异常<br>
-日志写入Journaled：写操作要等到操作记录存储到Journal日志文件后才返回结果<br>
-复制集确认写入Replica Acknowledged：写操作不仅要得到主节点的写入确认，还要得到从节点的写入确认，可以设置写入节点的个数（包含主节点）</p>
-<p>journal日志相当于oracle中的redo日志文件，用户故障恢复和持久。Journal默认100ms刷新一次，所以最多丢失100ms数据<br>
-文件位于journal目录中，只能以追加方式添加数据，文件名以&quot;j._&quot;开头，超过1G会自动创建新的；数据库正常关闭时，数据库服务会自动清空journal目录下所有文件</p>
-<p>设置写安全操作级别，其实就是在写操作的性能和可靠性间取一个权衡；使用的写操作级别越高，时间越长，可靠性越高</p>
-<p>使用writeConcern函数作为更新函数的一个参数来设置写安全级别,如：db.集合名称.insert({name:“joe”},{writeConcern:{j:true}}),writeConcern函数参数如下：<br>
-w选项，可选择0，1，2等整数值及&quot;majority&quot;，0-非确认式写入 1-确认式写入（未启用复制集）／主节点确认式写入（启用了复制集），&gt;1只能用于复制集，2-数据至少写到1个从节点后返回，majority 只能用于复制集，表示更新操作用到大多数从节点<br>
-j选项，设置为true来使用journaled日志安全级别<br>
-wtimeout选项，用于设置超时单位为毫秒<br>
-以上选项可组合使用</p>
-<p>数据MongoDB数据查询<br>
-Cursor = db.集合名称.find(query,fields,limit,skip)<br>
-query:查询条件，相当于where<br>
-fields:用于字段映射，语法格式：{field:0}（0表示返回结果不包含此字段）或{field:1}（1表示返回结果不包含此字段），默认包含_id字段,相当于select中后面需要的字段<br>
-limit：限制查询结果集的数量，指定查询返回结果的数量上限，也可通过limit()实现<br>
-skip:跳过一定数据量的结果，设置第一条返回文档的偏移量，也可通过skip()实现<br>
-find查询只能正对一个集合；返回的集合默认是无序的</p>
-<p>db.集合名称.findOne()只返回第一条数据</p>
-<p>查询操作符<br>
-比较查询操作符<br>
-逻辑查询操作符<br>
-元素查询操作符<br>
-$where查询操作符：可以将JavaScript表达式的字符串或JavaScript函数作为查询语句的一部分，在js表达式和函数中，可使用this或obj来引用当前操作的文档，当js表达式或函数返回true时，才会返回当前文档</p>
-<p>内嵌文档与数组查询<br>
-内嵌文档查询<br>
-1查询整个内嵌文档：当内嵌文档的键值对数量和键值对顺序都相同时，才会匹配<br>
-2查询文档的某个字段：需要使用.号操作符，如:db.user.find({“address.city”:“BeiJing”})<br>
-数组查询<br>
-1查询整个数组：当数组元素内容和数组元素顺序都相同时，才会匹配<br>
-2查询数组中的元素（普通元素）：<br>
-A与位置无关，查询数组中含有某个值的文档，如：db.user.find({score:80})<br>
-B与位置有关，按照指定的数组索引查询数组元素的值，如：db.user.find({‘scores.2’:80})<br>
-3查询数组中的数组元素是文档时，查询数组元素有两种情况<br>
-A与位置无关，查询数组中满足条件的子文档元素，如：db.user.find(‘scores.成绩’：95)<br>
-B与位置有关，按照指定的数组索引查询数组子文档，如： db.user.find(‘scores.2.成绩’：95)</p>
-<p>MongoDB查询结果返回过程：find函数查询结果是以多条文档的形式分批来返回查询结果的，返回的文档会缓存到内存中，Cursor在一批数据回来之后遍历，下一批没来时会自动发起下一批请求，然后继续遍历</p>
-<p>MongoDB游标：用来遍历结果集中的数据。<br>
-游标的生命周期：创建、使用、销毁<br>
-游标可能会返回那些由于体积变大而被移动到集合末尾的文档而重复返回，可通过对查询快照的方式解决此问题，语法为：db.collection.find().snapshot().<br>
-使用快照之后，查询就会在_id索引上来遍历执行，这样就可以保证每个文档只被返回一次，从而保证获取结果的一致性。</p>
-<p>模糊查询：查询条件可以使用正则表达式实现模糊查询，支持正则表达式操作符和正则表达式对象两种。<br>
-正则表达式操作符：$regex</p>
-<p>findAndModify函数使用执行分为find和update两步，但可以保证操作的原子性</p>
-<p>MongoDB是为分布式存储而设计，_id主键默认使用ObjectId类型的值，比自增方式更适合分布式环境，所以MongoDB默认不支持字段自增长功能</p>
-<p>MongoDB索引：数据库索引是对数据表中一列或多列的值进行排序的一种数据结构，使用索引可快速访问数据表中的特定信息。MogonDB索引不仅提高文档查询速度，还有利于排序时节省内存资源。<br>
-MongoDB所有的索引信息被保存在system.indexes集合中，且默认总为_id创建单字段升序具有唯一属性的索引，可通过db.system.indexes.find()查看所有索引<br>
-MongoDB可在单个字段上建立索引，字段可以是普通字段、整个文档以及子文档的某个字段<br>
-对于复合索引，MongoDB支持前缀匹配<br>
-为确保查询只使用复合索引，可以使用映射来指定不要返回_id字段（除非它是复合索引的一部分）<br>
-多键索引：是对数组类型建立的索引，实际上是对数组的每个元素建立索引，而不是数组本身建立索引；当数组元素是文档时，可为文档的某个字段建立多键索引<br>
-哈希索引：只支持等值查询，不支持范围查询，主要用于分片的集合上，可以作为片键来使用，能将数据比较均匀的分散存储在各个分片上，如：db.集合名.createIndex({name:“hashed”})</p>
-<p>MongoDB索引的属性<br>
-唯一索引:可以确保集合的每一个文档的索引字段都有唯一的值，不会出现重复值，如：db.集合名.createIndex({name:1},{unique:true})，在非空集合创建唯一索引可能会因为已有重复值而失败，可添加dropBups:true删除重复文档<br>
-稀疏索引：只会为索引字段存在的文档建立索引，即使索引字段的值为null，但不会为索引字段不存在的文档建立索引<br>
-TTL(Time To Live)索引：为文档设置一个超时时间，当达到预设置的时间后，该文档会被数据库自动删除，但删除可能有延迟。这种类型的索引对缓存问题非常有用。只能建立在单独非_id字段<br>
-创建了TTL索引后，MongoDB会有一个后台线程来管理文档；在复制集上建立的TTL索引，TTL后台线程只会运行在主节点上</p>
-<p>MongoDB索引的管理<br>
-索引的默认命名规则：keyname1_dir1_keyname2_dir2…，其中keynameX是索引字段的名称，dirX是索引方向，1升序-1降序，也可自定义命名<br>
-创建索引：db.集合名.createIndex(keys,options),返回值为一个文档类型。索引一旦创建就不能修改，创建后可通过db.集合名.getIndexes()查看集合所拥有的索引，创建索引有两种方式：<br>
-1foreground:阻塞所有对数据库的读写请求，直到索引创建完成，为默认方式<br>
-2background：创建索引时，如果有新的数据库请求，创建过程会暂停<br>
-删除索引：db.集合.dropIndex(index)<br>
-查询优化器：用来优化查询过程，通过比较返回100条文档速度得到最佳查询计划<br>
-explain函数：能够提供大量与查询有关的信息，可以很好的评估索引性能，帮助优化索引的使用策略。db.集合.find().explain(mode),支持3种模式：<br>
-1queryPlanner：查询计划，默认<br>
-2executionStatus：查询性能统计<br>
-3allPlansExecution：所有计划统计信息（最优与被拒绝的计划）<br>
-explain返回结果使用由多个阶段（Stage）组成的树形结构来表示查询计划，查询计划自下而上执行，树的叶节点用来访问文档或索引，内部节点处理下层节点返回文档或索引，根节点输出查询结果<br>
-hint函数：强制MongoDB使用特定索引</p>
-<p>MongoDB特殊索引<br>
-地理空间索引：对地理位置数据建立索引，MongoDB支持两种2dsphere球面索引和平面2d索引<br>
-2dSphere球面索引<br>
-2d平面索引</p>
-<p>全文索引：又称为倒排索引，用于在大量文本中对每一个词组建立索引，指出该词在整段文本中出现的位置和次数，此技术主要用于搜索引擎和站内搜索等。<br>
-一个集合只能有一个全文索引</p>
-<p>java对mongodb的使用<br>
-集群搭建：mongodb分布式集群搭建手记</p>
-<p>学习：<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html" target="_blank" rel="noopener">http://www.cnblogs.com/huangxincheng/archive/2012/02/18/2356595.html</a></p>
-<p>分析没有默认的，因为你还没给root设置密码，第一个 user 是在 admin 组 ，所以他可以给 root 设置密码 , so<br>
-sudo passwd root</p>
-<p>Language Support</p>
-<p><a href="http://blog.csdn.net/sinat_35418761/article/details/53241481" target="_blank" rel="noopener">http://blog.csdn.net/sinat_35418761/article/details/53241481</a></p>
-<p><a href="http://www.2cto.com/database/201504/395442.html" target="_blank" rel="noopener">http://www.2cto.com/database/201504/395442.html</a><br>
-<a href="http://www.myexception.cn/operating-system/1685604.html" target="_blank" rel="noopener">http://www.myexception.cn/operating-system/1685604.html</a></p>
-<p><a href="https://my.oschina.net/chinacaptain/blog/465723" target="_blank" rel="noopener">https://my.oschina.net/chinacaptain/blog/465723</a></p>
-<p><a href="http://api.mongodb.com/java/current/" target="_blank" rel="noopener">http://api.mongodb.com/java/current/</a></p>
-<p>MongoDB是什么<br>
-MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>
-他的特点:高性能、易部署、易使用，存储数据非常方便。</p>
-<p>Bson：Binary Serialized Document Format，是一种类json的一种二进制形式的存储格式，简称Binary JSON，它和JSON一样，支持内嵌的文档对象和数组对象，但是BSON有JSON没有的一些数据类型，如Date和BinData类型</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-禁用SELinux时配置错误导致系统不能够启动的解决方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/Linux-禁用SELinux时配置错误导致系统不能够启动的解决方法/" itemprop="url">禁用SELinux时配置错误导致系统不能够启动的解决方法</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:21:27+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>CentOS在安装某些软件的时候，需要关闭SELinux，在修改配置文件/etc/selinux/config过程中，设置方法为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># SELINUX=enforcing</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
-<p>如果设置之后，没有设置回来，则启动的时候就会无法启动，解决办法为：</p>
+<h1 id="lombok注解列表"><a class="markdownIt-Anchor" href="#lombok注解列表"></a> Lombok注解列表</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Setter</span><br><span class="line">@Getter</span><br><span class="line">@Data</span><br><span class="line">@Log(这是一个泛型注解，具体有很多种形式：https://projectlombok.org/features/log)</span><br><span class="line">@AllArgsConstructor</span><br><span class="line">@NoArgsConstructor</span><br><span class="line">@EqualsAndHashCode</span><br><span class="line">@NonNull</span><br><span class="line">@Cleanup</span><br><span class="line">@ToString</span><br><span class="line">@RequiredArgsConstructor</span><br><span class="line">@Value</span><br><span class="line">@SneakyThrows</span><br><span class="line">@Synchronized</span><br></pre></td></tr></table></figure>
 <ul>
-<li>系统启动的时候，按下‘e’键进入grub编辑界面，</li>
-<li>编辑grub菜单，选择“kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet” 一栏</li>
-<li>按‘e’键进入编辑</li>
-<li>在末尾增加enforcing=0，即：<br>
-kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enforcing=0</li>
-<li>按‘b’键继续引导，OK顺利前进。</li>
+<li>具体使用参考官网示例： <a href="https://projectlombok.org/features/all" target="_blank" rel="noopener">https://projectlombok.org/features/all</a></li>
+<li>参考网页：<a href="https://blog.csdn.net/motui/article/details/79012846" target="_blank" rel="noopener">https://blog.csdn.net/motui/article/details/79012846</a></li>
 </ul>
 
           
@@ -2294,7 +483,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-设置网络自动启动/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/05/Linux-Linux命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -2313,7 +502,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/14/Linux-设置网络自动启动/" itemprop="url">CentOS设置网络自动启动</a></h2>
+                <a class="post-title-link" href="/2019/03/05/Linux-Linux命令/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -2325,8 +514,657 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:20:08+08:00">
-                2019-02-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T10:38:27+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: Linux命令<br>
+tags:</p>
+<ul>
+<li>Linux<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-03-05 08:25:33<br>
+categories: Linux<br>
+password:</li>
+</ul>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br></pre></td><td class="code"><pre><span class="line">su：Swith user  切换用户，切换到root用户</span><br><span class="line">cat: Concatenate  串联</span><br><span class="line">uname: Unix name  系统名称</span><br><span class="line">df: Disk free  空余硬盘</span><br><span class="line">du: Disk usage 硬盘使用率</span><br><span class="line">chown: Change owner 改变所有者</span><br><span class="line">chgrp: Change group 改变用户组</span><br><span class="line">ps：Process Status  进程状态</span><br><span class="line">tar：Tape archive 解压文件</span><br><span class="line">chmod: Change mode 改变模式</span><br><span class="line">umount: Unmount 卸载</span><br><span class="line">ldd：List dynamic dependencies 列出动态相依</span><br><span class="line">insmod：Install module 安装模块</span><br><span class="line">rmmod：Remove module 删除模块</span><br><span class="line">lsmod：List module 列表模块</span><br><span class="line">alias :Create your own name for a command</span><br><span class="line">bash :GNU Bourne-Again Shell  linux内核 </span><br><span class="line">grep:global regular expression print</span><br><span class="line">httpd :Start Apache</span><br><span class="line">ipcalc :Calculate IP information for a host</span><br><span class="line">ping :Send ICMP ECHO_Request to network hosts</span><br><span class="line">reboot: Restart your computer</span><br><span class="line">sudo:Superuser do</span><br><span class="line"> </span><br><span class="line">/bin = BINaries </span><br><span class="line">/dev = DEVices </span><br><span class="line">/etc = ETCetera </span><br><span class="line">/lib = LIBrary </span><br><span class="line">/proc = PROCesses </span><br><span class="line">/sbin = Superuser BINaries </span><br><span class="line">/tmp = TeMPorary </span><br><span class="line">/usr = Unix Shared Resources </span><br><span class="line">/var = VARiable ? </span><br><span class="line">FIFO = First In, First Out </span><br><span class="line">GRUB = GRand Unified Bootloader </span><br><span class="line">IFS = Internal Field Seperators </span><br><span class="line">LILO = LInux LOader </span><br><span class="line">MySQL = My最初作者的名字SQL = Structured Query Language </span><br><span class="line">PHP = Personal Home Page Tools = PHP Hypertext Preprocessor </span><br><span class="line">PS = Prompt String </span><br><span class="line">Perl = &quot;Pratical Extraction and Report Language&quot; = &quot;Pathologically Eclectic Rubbish Lister&quot; </span><br><span class="line">Python Monty Python&apos;s Flying Circus </span><br><span class="line">Tcl = Tool Command Language </span><br><span class="line">Tk = ToolKit </span><br><span class="line">VT = Video Terminal </span><br><span class="line">YaST = Yet Another Setup Tool </span><br><span class="line">apache = &quot;a patchy&quot; server </span><br><span class="line">apt = Advanced Packaging Tool </span><br><span class="line">ar = archiver </span><br><span class="line">as = assembler </span><br><span class="line">bash = Bourne Again SHell </span><br><span class="line">bc = Basic (Better) Calculator </span><br><span class="line">bg = BackGround </span><br><span class="line">cal = CALendar </span><br><span class="line">cat = CATenate </span><br><span class="line">cd = Change Directory </span><br><span class="line">chgrp = CHange GRouP </span><br><span class="line">chmod = CHange MODe </span><br><span class="line">chown = CHange OWNer </span><br><span class="line">chsh = CHange SHell </span><br><span class="line">cmp = compare </span><br><span class="line">cobra = Common Object Request Broker Architecture </span><br><span class="line">comm = common </span><br><span class="line">cp = CoPy </span><br><span class="line">cpio = CoPy In and Out </span><br><span class="line">cpp = C Pre Processor </span><br><span class="line">cups = Common Unix Printing System </span><br><span class="line">cvs = Current Version System </span><br><span class="line">daemon = Disk And Execution MONitor </span><br><span class="line">dc = Desk Calculator </span><br><span class="line">dd = Disk Dump </span><br><span class="line">df = Disk Free </span><br><span class="line">diff = DIFFerence </span><br><span class="line">dmesg = diagnostic message </span><br><span class="line">du = Disk Usage </span><br><span class="line">ed = editor </span><br><span class="line">egrep = Extended GREP </span><br><span class="line">elf = Extensible Linking Format </span><br><span class="line">elm = ELectronic Mail </span><br><span class="line">emacs = Editor MACroS </span><br><span class="line">eval = EVALuate </span><br><span class="line">ex = EXtended </span><br><span class="line">exec = EXECute </span><br><span class="line">fd = file descriptors </span><br><span class="line">fg = ForeGround </span><br><span class="line">fgrep = Fixed GREP </span><br><span class="line">fmt = format </span><br><span class="line">fsck = File System ChecK </span><br><span class="line">fstab = FileSystem TABle </span><br><span class="line">fvwm = F*** Virtual Window Manager </span><br><span class="line">gawk = GNU AWK </span><br><span class="line">gpg = GNU Privacy Guard </span><br><span class="line">groff = GNU troff </span><br><span class="line">hal = Hardware Abstraction Layer </span><br><span class="line">joe = Joe&apos;s Own Editor </span><br><span class="line">ksh = Korn SHell </span><br><span class="line">lame = Lame Ain&apos;t an MP3 Encoder </span><br><span class="line">lex = LEXical analyser </span><br><span class="line">lisp = LISt Processing = Lots of Irritating Superfluous Parentheses </span><br><span class="line">ln = LiNk </span><br><span class="line">lpr = Line PRint </span><br><span class="line">ls = list </span><br><span class="line">lsof = LiSt Open Files </span><br><span class="line">m4 = Macro processor Version 4 </span><br><span class="line">man = MANual pages </span><br><span class="line">mawk = Mike Brennan&apos;s AWK </span><br><span class="line">mc = Midnight Commander </span><br><span class="line">mkfs = MaKe FileSystem </span><br><span class="line">mknod = MaKe NODe </span><br><span class="line">motd = Message of The Day </span><br><span class="line">mozilla = MOsaic GodZILLa </span><br><span class="line">mtab = Mount TABle </span><br><span class="line">mv = MoVe </span><br><span class="line">nano = Nano&apos;s ANOther editor </span><br><span class="line">nawk = New AWK </span><br><span class="line">nl = Number of Lines </span><br><span class="line">nm = names </span><br><span class="line">nohup = No HangUP </span><br><span class="line">nroff = New ROFF </span><br><span class="line">od = Octal Dump </span><br><span class="line">passwd = PASSWorD </span><br><span class="line">pg = pager </span><br><span class="line">pico = PIne&apos;s message COmposition editor </span><br><span class="line">pine = &quot;Program for Internet News &amp; Email&quot; = &quot;Pine is not Elm&quot; </span><br><span class="line">ping =  Packet InterNet Grouper </span><br><span class="line">pirntcap = PRINTer CAPability </span><br><span class="line">popd = POP Directory </span><br><span class="line">pr = pre </span><br><span class="line">printf = PRINT Formatted </span><br><span class="line">ps = Processes Status </span><br><span class="line">pty = pseudo tty </span><br><span class="line">pushd = PUSH Directory </span><br><span class="line">pwd = Print Working Directory </span><br><span class="line">rc = runcom = run command, shell </span><br><span class="line">rev = REVerse </span><br><span class="line">rm = ReMove </span><br><span class="line">rn = Read News </span><br><span class="line">roff = RunOFF </span><br><span class="line">rpm = RPM Package Manager = RedHat Package Manager </span><br><span class="line">rsh, rlogin, = Remote </span><br><span class="line">rxvt = ouR XVT </span><br><span class="line">sed = Stream EDitor </span><br><span class="line">seq = SEQuence </span><br><span class="line">shar = SHell ARchive </span><br><span class="line">slrn = S-Lang rn </span><br><span class="line">ssh = Secure SHell </span><br><span class="line">ssl = Secure Sockets Layer </span><br><span class="line">stty = Set TTY </span><br><span class="line">su = Substitute User </span><br><span class="line">svn = SubVersioN </span><br><span class="line">tar = Tape ARchive </span><br><span class="line">tcsh = TENEX C shell </span><br><span class="line">telnet = TEminaL over Network </span><br><span class="line">termcap = terminal capability </span><br><span class="line">terminfo = terminal information </span><br><span class="line">tr = traslate </span><br><span class="line">troff = Typesetter new ROFF </span><br><span class="line">tsort = Topological SORT </span><br><span class="line">tty = TeleTypewriter </span><br><span class="line">twm = Tom&apos;s Window Manager </span><br><span class="line">tz = TimeZone </span><br><span class="line">udev = Userspace DEV </span><br><span class="line">ulimit = User&apos;s LIMIT </span><br><span class="line">umask = User&apos;s MASK </span><br><span class="line">uniq = UNIQue </span><br><span class="line">vi = VIsual = Very Inconvenient </span><br><span class="line">vim = Vi IMproved </span><br><span class="line">wall = write all </span><br><span class="line">wc = Word Count </span><br><span class="line">wine = WINE Is Not an Emulator </span><br><span class="line">xargs = eXtended ARGuments </span><br><span class="line">xdm = X Display Manager </span><br><span class="line">xlfd = X Logical Font Description </span><br><span class="line">xmms = X Multimedia System </span><br><span class="line">xrdb = X Resources DataBase </span><br><span class="line">xwd = X Window Dump </span><br><span class="line">yacc = yet another compiler compiler</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">在Linux中，最为常用的缩略语也许是“rc”，它是“runcomm”的缩写――即名词“run command”(运行命令)的简写。今天，“rc”是任何脚本类文件的后缀，这些脚本通常在程序的启动阶段被调用，通常是Linux系统启动时。如/etc/rs是Linux启动的主脚本，而.bashrc是当Linux的bash shell启动后所运行的脚本。.bashrc的前缀“.”是一个命名标准，它被设计用来在用户文件中隐藏那些用户指定的特殊文件;“ls”命令默认情况下不会列出此类文件，“rm”默认情况下也不会删除它们。许多程序在启动时，都需要“rc”后缀的初始文件或配置文件，这对于Unix的文件系统视图来说，没有什么神秘的。</span><br><span class="line"></span><br><span class="line">　　ETC</span><br><span class="line"></span><br><span class="line">　　在“etc/bin”中的“etc”真正代表的是“etcetera”(附加物)。在早期的Unix系统中，最为重要的目录是“bin”目录(“bin”是“binaries”二进制文件――编译后的程序的缩写)，“etc”中则包含琐碎的程序，如启动、关机和管理。运行一个Linux必须的东西的列表是:一个二进制程序，etcetera，etcetera――换句话说，是一个底层的重要项目，通常添加一些次等重要的零碎事物。今天，“etc”包含了广泛的系统配置文件，这些配置文件几乎包含了系统配置的方方面面，同样非常重要。</span><br><span class="line"></span><br><span class="line">　　Bin</span><br><span class="line"></span><br><span class="line">　　今天，许多在Linux上运行的大型子系统，如GNOME或Oracle，所编译成的程序使用它们自己的“bin”目录(或者是/usr/bin，或者是/usr/local/bin)作为标准的存放地。同样，现在也能够在这些目录看到脚本文件，因为“bin”目录通常添加到用户的PATH路径中，这样他们才能够正常的使用程序。因此运行脚本通常在bin中运行良好。</span><br><span class="line"></span><br><span class="line">　　TTY</span><br><span class="line"></span><br><span class="line">　　在Linux中，TTY也许是跟终端有关系的最为混乱的术语。TTY是TeleTYpe的一个老缩写。Teletypes，或者teletypewriters，原来指的是电传打字机，是通过串行线用打印机键盘通过阅读和发送信息的东西，和古老的电报机区别并不是很大。之后，当计算机只能以批处理方式运行时(当时穿孔卡片阅读器是唯一一种使程序载入运行的方式)，电传打字机成为唯一能够被使用的“实时”输入/输出设备。最终，电传打字机被键盘和显示器终端所取代，但在终端或TTY接插的地方，操作系统仍然需要一个程序来监视串行端口。一个getty“Get TTY”的处理过程是:一个程序监视物理的TTY/终端接口。对一个虚拟网络沮丧服务器(VNC)来说，一个伪装的TTY(Pseudo-TTY，即家猫的TTY，也叫做“PTY”)是等价的终端。当你运行一个xterm(终端仿真程序)或GNOME终端程序时，PTY对虚拟的用户或者如xterm一样的伪终端来说，就像是一个TTY在运行。“Pseudo”的意思是“duplicating in a fake way”(用伪造的方法复制)，它相比“virtual”或“emulated”更能真实的说明问题。而在现在的计算中，它却处于被放弃的阶段。</span><br><span class="line"></span><br><span class="line">　　Dev</span><br><span class="line"></span><br><span class="line">　　从TTY留下的命令有“stty”，是“set tty”(设置TTY)的缩写，它能够生成一个配置文件/etc/initab(“initialization table”，初始表)，以配置gettys使用哪一个串口。在现代，直接附加在Linux窗口上的唯一终端通常是控制台，由于它是特殊的TTY，因此被命名为“console”。当然，一旦你启动X11，“console”TTY就会消失，再也不能使用串口协议。所有的TTY都被储存在“/dev”目录，它是“ devices”([物理]设备)的缩写。以前，你必须在电脑后面的串口中接入一个新的终端时，手工修改和配置每一个设备文件。现在，Linux(和Unix)在安装过程中就在此目录中创建了它所能向导的每一个设备的文件。这就是说，你很少需要自己创建它。</span><br><span class="line"></span><br><span class="line">　　随着硬件在电脑中的移出移进，这些名字将变得更加模糊不清。幸运的是，今天在Linux上的高等级软件块对历史和硬件使用容易理解的名字。举例来说，嗯，Pango(http://www.pango.org/)就是其中之一。</span><br><span class="line"></span><br><span class="line">　　如果你对这些内容很感兴趣，那么我建议你阅读宏大的，但有些以美国英语历史为中心的，由Eric S. Raymond撰写的Jargon File。它并没有解释所有在Unix中使用的术语，但是它给出了这些形成的大致情况。</span><br><span class="line"></span><br><span class="line">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br></pre></td></tr></table></figure>
+<p>/vmlinuz<br>
+　　我们已经知道，每一个linux都有一个内核（vmlinuz），我们在这个内核上添加上可以完成各种特定功能的模块，每个模块就体现在 linux中各种不同的目录上。当然，各种不同的发行套件，其目录有细小的差别，但主要结构都是一样的。我们还要将linux的功能模块和各种应用程序结合起来，这样，才能使你的 linux系统为你服务。在/vmlinuz目录下存放的就是系统的内核。<br>
+/bin<br>
+　　显而易见，bin 就是二进制（binary）英文缩写。在一般的系统当中，你都可以在这个目录下找到linux常用的命令。在有的版本中你还会找到一些和根目录下相同的目录。</p>
+<p>/boot<br>
+　　在这个目录下存放的都是系统启动时要用到的程序。我们在使用lilo引导linux的时候，会用到这里的一些信息。</p>
+<p>/dev<br>
+　　dev 是设备(device)的英文缩写。这个目录对所有的用户都十分重要。因为在这个目录中包含了所有linux系统中使用的外部设备。但是这里并不是放的外部设备的驱动程序。这一点和我们常用的windows, dos操作系统不一样。它实际上是一个访问这些外部设备的端口。我们可以非常方便地去访问这些外部设备，和访问一个文件，一个目录没有任何区别。 例如：我们在系统中键入：cd /dev/cdrom 我们就可以看到光驱中的文件了。在这个目录下，有一个null设备，这个东西本身没有任何意义。如果你向这个目录写入文件或内容，他们统统有去无回。</p>
+<p>/cdrom<br>
+　　这个目录在你刚刚安装系统的时候是空的。你可以将光驱文件系统挂在这个目录下。例如：mount /dev/cdrom /cdrom</p>
+<p>/etc<br>
+　　etc这个目录是linux系统中最重要的目录之一。在这个目录下存放了系统管理时要用到的各种配置文件和子目录。我们要用到的网络配置文件，文件系统，x系统配置文件，设备配置信息，设置用户信息等都在这个目录下。</p>
+<p>/sbin<br>
+　　这个目录是用来存放系统管理员的系统管理程序。</p>
+<p>/home<br>
+　　如果我们建立一个用户，用户名是&quot;xx&quot;,那么在/home目录下就有一个对应的/home/xx路径，用来存放用户的主目录。</p>
+<p>/lib<br>
+　　lib是库（library）英文缩写。这个目录是用来存放系统动态连接共享库的。几乎所有的应用程序都会用到这个目录下的共享库。</p>
+<p>/lost+found<br>
+　　这个目录在大多数情况下都是空的。但是如果你正在工作突然停电，或是没有用正常方式关机，在你重新启动机器的时候，有些文件就会找不到应该存放的地方，对于这些文件，系统将他们放在这个目录下，就象为无家可归的人提供一个临时住所。</p>
+<p>/mnt<br>
+　　这个目录在一般情况下也是空的,有时有四个空目录.你可以临时将别的文件系统挂在这个目录下。</p>
+<p>/proc<br>
+　　可以在这个目录下获取系统信息。这些信息是在内存中，由系统自己产生的。这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器：<br>
+　　echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ ignore_all。</p>
+<p>/root<br>
+　　如果你是以超级用户的身份登录的，这个就是超级用户的主目录。</p>
+<p>/tmp<br>
+　　用来存放不同程序执行时产生的临时文件。</p>
+<p>/usr<br>
+　　这是linux系统中占用硬盘空间最大的目录。用户的很多应用程序和文件都存放在这个目录下。具体来说：</p>
+<p>/usr/X11R6存放X-Windows的目录；</p>
+<p>/usr/games存放着XteamLinux自带的小游戏；</p>
+<p>/usr/bin存放着许多应用程序；</p>
+<p>/usr/sbin存放root超级用户使用的管理程序；</p>
+<p>/usr/doc Linux技术文档；</p>
+<p>/usr/include用来存放Linux下开发和编译应用程序所需要的头文件；</p>
+<p>/usr/lib存放一些常用的动态链接共享库和静态档案库；</p>
+<p>/usr/local这是提供给一般用户的/usr目录，在这里安装一般的应用软件；</p>
+<p>/usr/man帮助文档所在的目录；</p>
+<p>/usr/src Linux开放的源代码，就存在这个目录，爱好者们别放过哦；</p>
+<p>/var这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。如果你想做一个网站，你也会用到/var/www这个目录。</p>
+<pre class="highlight"><code class="">
+
+
+
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/05/Java-Lodop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/05/Java-Lodop/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T08:49:22+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: Lodop<br>
+tags:</p>
+<ul>
+<li>java<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-03-04 14:25:33<br>
+categories: Java<br>
+password:</li>
+</ul>
+<hr>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>官网：<a href="http://www.c-lodop.com/index.html" target="_blank" rel="noopener">http://www.c-lodop.com/index.html</a><br>
+实例博客：<a href="http://blog.sina.com.cn/s/articlelist_1914599397_0_1.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/articlelist_1914599397_0_1.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/04/Java-dubbo入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/04/Java-dubbo入门/" itemprop="url">dubbo入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T21:25:33+08:00">
+                2019-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>官网： <a href="http://dubbo.apache.org/zh-cn/" target="_blank" rel="noopener">http://dubbo.apache.org/zh-cn/</a></p>
+<p>Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。<br>
+<img src="/pub-images/dubbo%E5%8E%9F%E7%90%86.png" alt="image"></p>
+<ul>
+<li>最大程度进行解耦，降低系统耦合性</li>
+<li>生产者／消费者模式</li>
+<li>zk注册中心，admin监控中心，协议支持</li>
+</ul>
+<p>RPC介绍：<a href="https://baike.baidu.com/item/%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8%E5%8D%8F%E8%AE%AE/6893245?fromtitle=RPC&amp;fromid=609861&amp;fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/远程过程调用协议/6893245?fromtitle=RPC&amp;fromid=609861&amp;fr=aladdin</a></p>
+<p><img src="/pub-images/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8F%98.png" alt="image"></p>
+<p>系统之间的调用方式：</p>
+<ul>
+<li>WebService-wsdl</li>
+<li>httpclient</li>
+<li>rpc通信（dubbo）／restful（spring cloud）</li>
+</ul>
+<h1 id=""><a class="markdownIt-Anchor" href="#"></a> </h1>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/04/Java-分布式基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/04/Java-分布式基础知识/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T11:53:11+08:00">
+                2019-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: 分布式基础知识<br>
+tags:</p>
+<ul>
+<li>分布式<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-03-04 09:25:33<br>
+categories: Java<br>
+password:</li>
+</ul>
+<hr>
+<h1 id="vrrp原理"><a class="markdownIt-Anchor" href="#vrrp原理"></a> VRRP原理</h1>
+<p><a href="https://www.jianshu.com/p/81115a4293c7" target="_blank" rel="noopener">https://www.jianshu.com/p/81115a4293c7</a></p>
+<ul>
+<li>虚拟路由冗余协议(Virtual Router Redundancy Protocol，简称VRRP)是由IETF提出的解决局域网中配置静态网关出现单点失效现象的路由协议</li>
+<li>它是通过将多台设备虚拟化成一台设备，如果其中一台设备出现故障，那么另一台设备可以迅速接替其工作，以保证通讯的可靠性和连续性</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/04/Linux-RHEL-7-中-systemctl-的用法（替代service-和-chkconfig）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/04/Linux-RHEL-7-中-systemctl-的用法（替代service-和-chkconfig）/" itemprop="url">RHEL 7 中 systemctl 的用法（替代service 和 chkconfig）</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T11:46:51+08:00">
+                2019-03-04
               </time>
             
 
@@ -2387,173 +1225,38 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
       
         
           
-            <h1 id="设置网络自启动"><a class="markdownIt-Anchor" href="#设置网络自启动"></a> 设置网络自启动</h1>
-<p>修改/etc/sysconfig/network-scripts/ifcfg-ethX文件，修改其中ONBOOT===no==的值为yes即可</p>
-<p>如果想要自己设置静态ip，需要在上边文件的最后添加以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IPADDR=192.168.7.106 #静态IP  </span><br><span class="line">GATEWAY=192.168.7.1 #默认网关  </span><br><span class="line">NETMASK=255.255.255.0 #子网掩码  </span><br><span class="line">DNS1=192.168.7.1 #DNS 配置</span><br></pre></td></tr></table></figure>
-<p>重启服务即可</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/14/Linux-CentOS版本说明/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/14/Linux-CentOS版本说明/" itemprop="url">CentOS版本说明</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T16:19:51+08:00">
-                2019-02-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>CentOS-7.0-1406-x86_64-DVD.iso             标准安装版，一般下载这个就可以了</li>
-<li>CentOS-7.0-1406-x86_64-NetInstall.iso       网络安装镜像</li>
-<li>CentOS-7.0-1406-x86_64-Everything.iso     对完整版安装盘的软件进行补充，集成所有软件。</li>
-<li>CentOS-7.0-1406-x86_64-GnomeLive.iso   GNOME桌面版</li>
-<li>CentOS-7.0-1406-x86_64-KdeLive.iso         KDE桌面版</li>
-<li>CentOS-7.0-1406-x86_64-livecd.iso            光盘上运行的系统，类拟于winpe</li>
+            <blockquote>
+<p>systemctl是RHEL 7 的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。可以使用它永久性或只在当前会话中启用/禁用服务。</p>
+</blockquote>
+<blockquote>
+<p>Systemctl是一个systemd工具，主要负责控制systemd系统和服务管理器。</p>
+</blockquote>
+<blockquote>
+<p>Systemd是一个系统管理守护进程、工具和库的集合，用于取代System V初始进程。Systemd的功能是用于集中管理和配置类UNIX系统</p>
+</blockquote>
+<blockquote>
+<p>启用服务就是在当前“runlevel”的配置文件目录/etc/systemd/system/multi-user.target.wants/里，建立/usr/lib/systemd/system里面对应服务配置文件的软链接；禁用服务就是删除此软链接，添加服务就是添加软连接</p>
+</blockquote>
+<blockquote>
+<p>Systemctl接受服务（.service），挂载点（.mount），套接口（.socket）和设备（.device）作为单元。</p>
+</blockquote>
+<ul>
+<li>启动一个服务：systemctl start postfix.service</li>
+<li>关闭一个服务：systemctl stop postfix.service</li>
+<li>重启一个服务：systemctl restart postfix.service</li>
+<li>显示一个服务的状态：systemctl status postfix.service</li>
+<li>在开机时启用一个服务：systemctl enable postfix.service</li>
+<li>在开机时禁用一个服务：systemctl disable postfix.service</li>
+<li>查看服务是否开机启动：systemctl is-enabled postfix.service</li>
+<li>查看已启动的服务列表：systemctl list-unit-files|grep enabled</li>
+<li>查看启动失败的服务列表：systemctl --failed</li>
 </ul>
-<ol>
-<li>CentOS-xxxx-LiveCD.ios 和CentOS-xxxx-bin-DVD.iso有什么区别？前者只有700M，后者有3.8G。其差别不仅仅在大小上，其更本质的差别是，CentOS-xxxx-LiveCD.ios只能加载到内存里运行，不能安装。CentOS-xxx-bin-DVD1.iso才可以安装到硬盘上。</li>
-<li>CentOS-xxx-bin-DVD1.iso，CentOS-xxx-bin-DVD2.iso分别是干什么的？前者是3.8G，后者是500M。其差别是DVD1是CentOS的安装文件，DVD2是CentOS的一些软件（就简单实用CentOS来说是不需要的）。</li>
-</ol>
+<blockquote>
+<p>使用命令 systemctl is-enabled postfix.service 得到的值可以是enable、disable或static，这里的 static 它是指对应的 Unit 文件中没有定义[Install]区域，因此无法配置为开机启动服务。</p>
+</blockquote>
+<p><img src="/pub-images/systemctl.png" alt="image"></p>
+<p>更多：<a href="https://linux.cn/article-5926-1.html" target="_blank" rel="noopener">https://linux.cn/article-5926-1.html</a></p>
+<p>chkconfig： <a href="https://www.cnblogs.com/gotodsp/p/6405106.html" target="_blank" rel="noopener">https://www.cnblogs.com/gotodsp/p/6405106.html</a></p>
 
           
         
@@ -2611,7 +1314,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/01/18/容器技术-docker入门helloworld/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/02/容器技术-k8s基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -2630,7 +1333,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/18/容器技术-docker入门helloworld/" itemprop="url">docker入门之Hello World</a></h2>
+                <a class="post-title-link" href="/2019/03/02/容器技术-k8s基础/" itemprop="url">k8s基础</a></h2>
         
 
         <div class="post-meta">
@@ -2642,8 +1345,8 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-18T09:38:59+08:00">
-                2019-01-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-02T09:38:59+08:00">
+                2019-03-02
               </time>
             
 
@@ -2704,46 +1407,795 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
       
         
           
-            <h1 id="docker-版本helloworld"><a class="markdownIt-Anchor" href="#docker-版本helloworld"></a> docker 版本HelloWorld</h1>
-<p>安装好docker后执行如下命令：</p>
+            <h1 id="应用部署模式的变迁"><a class="markdownIt-Anchor" href="#应用部署模式的变迁"></a> 应用部署模式的变迁</h1>
+<p><img src="/pub-images/%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%BC%8F%E5%8F%98%E8%BF%81.png" alt="image"></p>
+<h1 id="云原生"><a class="markdownIt-Anchor" href="#云原生"></a> 云原生</h1>
 <ul>
-<li>docker serach hello-world</li>
-<li>docker pull hello-world</li>
-<li>docker run hello-world</li>
+<li>“云原生”是一种构建和运行应用程序的方法，它利用了云计算交付模型的优势</li>
+<li>“云原生”是关于如何创建和部署应用程序，和位置无关。 这意味着应用程序位于云中，而不是传统数据中心<br>
+<img src="/pub-images/%E4%BA%91%E5%8E%9F%E7%94%9F12%E5%8E%9F%E5%88%99.png" alt="image"><br>
+云原生应用的三大特征：</li>
+<li>容器化封装：以容器为基础，提高整体开发水平，形成代码和组件重用，简化云原生应用程序的维护。在容器中运行应用程序和进程，并作为应用程序部署的独立单元，实现高水平资源隔离。</li>
+<li>动态管理：通过集中式的编排调度系统来动态的管理和调度。</li>
+<li>面向微服务：明确服务间的依赖，互相解耦<br>
+<img src="/pub-images/%E4%BA%91%E5%8E%9F%E7%94%9F%E8%83%BD%E5%8A%9B%E4%B8%8E%E7%89%B9%E7%82%B9.jpg" alt="image"></li>
 </ul>
-<h1 id="docker镜像原理"><a class="markdownIt-Anchor" href="#docker镜像原理"></a> docker镜像原理</h1>
-<p><img src="/pub-images/%E9%95%9C%E5%83%8F%E5%8E%9F%E7%90%86.png" alt="image"></p>
-<h1 id="docker-web版本helloworld"><a class="markdownIt-Anchor" href="#docker-web版本helloworld"></a> docker web版本HelloWorld</h1>
+<h1 id="k8s简介"><a class="markdownIt-Anchor" href="#k8s简介"></a> k8s简介</h1>
 <ul>
-<li>docker pull nginx</li>
-<li>docker run -d -p 8080:80 nginx</li>
-<li>浏览器访问：<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a></li>
+<li>k8s是以google内部容器编排管理容器borg为原型的开源实现</li>
+<li>k8s是一个容器编排管理平台；一个微服务支撑平台；一个可移植的&quot;云平台&quot;</li>
 </ul>
-<h1 id="自我制作镜像"><a class="markdownIt-Anchor" href="#自我制作镜像"></a> 自我制作镜像</h1>
-<h2 id="dockerfile方式"><a class="markdownIt-Anchor" href="#dockerfile方式"></a> Dockerfile方式</h2>
+<h2 id="容器编排管理平台"><a class="markdownIt-Anchor" href="#容器编排管理平台"></a> 容器编排管理平台</h2>
+<p>k8s作为容器编排管理平台提供：</p>
+<ul>
+<li>以Pod（容器组）为基本的编排和调度单元以及声明式的对象配置模型（控制器、configmap、secret等）</li>
+<li>资源配额与分配管理</li>
+<li>健康检查、自愈、伸缩与滚动升级</li>
+</ul>
+<h2 id="微服务支撑平台"><a class="markdownIt-Anchor" href="#微服务支撑平台"></a> 微服务支撑平台</h2>
+<p>k8s作为微服务支撑平台提供：</p>
+<ul>
+<li>服务发现、服务编排与内部路由支持</li>
+<li>服务快速部署与自动负载均衡</li>
+<li>提供对&quot;有状态&quot;服务的支持等</li>
+</ul>
+<h2 id="可移植的云平台"><a class="markdownIt-Anchor" href="#可移植的云平台"></a> 可移植的云平台</h2>
+<p>为用户提供简单且一致化的容器化应用部署、伸缩和管理机制，形成新的、通用的应用云化模型</p>
+<h1 id="k8s集群初体验"><a class="markdownIt-Anchor" href="#k8s集群初体验"></a> k8s集群初体验</h1>
+<p><img src="/pub-images/hellok8s.png" alt="image"></p>
+<h1 id="k8s架构介绍"><a class="markdownIt-Anchor" href="#k8s架构介绍"></a> k8s架构介绍</h1>
+<p><img src="/pub-images/k8s%E6%9E%B6%E6%9E%84%E5%85%A8%E5%9B%BE.png" alt="image"></p>
+<h2 id="master组件集群大脑"><a class="markdownIt-Anchor" href="#master组件集群大脑"></a> Master组件：集群大脑</h2>
+<p><img src="/pub-images/masternode.png" alt="image"></p>
+<ul>
+<li>所有集群的控制命令都传递给Master组件并在其上执行</li>
+<li>每个k8s集群至少有一套Master组件</li>
+<li>每套master组件包含3个核心组件（apiserver，scheduler，controller-manager）以及集群数据配置中心etcd</li>
+</ul>
+<h3 id="api-server"><a class="markdownIt-Anchor" href="#api-server"></a> API Server</h3>
+<ul>
+<li>集群控制的唯一入口，是提供k8s集群控制的restful API的核心组件</li>
+<li>集群各个组件之间数据交互和通信的中枢</li>
+<li>提供集群控制的安全机制（身份认证、授权以及admission control）</li>
+</ul>
+<h3 id="scheduler"><a class="markdownIt-Anchor" href="#scheduler"></a> Scheduler</h3>
+<ul>
+<li>通过APIServer的Watch接口监听新建pod副本信息，并通过调度算法为该pod选择一个最合适的node</li>
+<li>支持自定义调度算法provider</li>
+<li>默认调度算法内置预选策略和优选策略，决策考量资源需求、服务质量、软硬件约束、亲缘性、数据局部性等指标参数</li>
+</ul>
+<h3 id="controllermanager"><a class="markdownIt-Anchor" href="#controllermanager"></a> ControllerManager</h3>
+<ul>
+<li>集群内各种资源controller的核心管理者</li>
+<li>针对每一种具体的资源，都有相应的controller</li>
+<li>保证其下管理的每个controller所对应的资源始终处于&quot;期望状态&quot;</li>
+</ul>
+<h4 id="etcd"><a class="markdownIt-Anchor" href="#etcd"></a> Etcd</h4>
+<ul>
+<li>k8s集群的祝数据库，存储着所有资源对象及状态</li>
+<li>默认与Master组件部署在一个Node上</li>
+<li>Etcd的数据变更都是通过API Server进行</li>
+</ul>
+<h2 id="node组件工作负载节点"><a class="markdownIt-Anchor" href="#node组件工作负载节点"></a> Node组件：工作负载节点</h2>
+<ul>
+<li>k8s集群由多个node共同承担工作负载，Pod被分配到某个具体的node上执行</li>
+<li>k8s通过node controller对node资源进行管理，支持动态增删node</li>
+<li>每个集群node上都会部署kubelet和kube-proxy两个组件<br>
+<img src="/pub-images/k8snode.png" alt="image"></li>
+</ul>
+<h3 id="kubelet"><a class="markdownIt-Anchor" href="#kubelet"></a> kubelet</h3>
+<ul>
+<li>位于集群中每个node上的非容器形式的服务进程组件，Master和Node之间的桥梁</li>
+<li>处理Master下发到本node上pod的创建、启停等管理任务；向API Server注册node信息</li>
+<li>监控本node节点上容器和节点资源情况，并定期向Master汇报节点资源占用情况</li>
+</ul>
+<h3 id="kube-proxy"><a class="markdownIt-Anchor" href="#kube-proxy"></a> kube-proxy</h3>
+<ul>
+<li>运行在集群中每个node上</li>
+<li>Service抽象概念的实现，将到service的请求按策略（负载均衡）算法分发到后段Pod上</li>
+<li>默认使用iptables mode实现</li>
+<li>支持nodeport模式，实现从外部网络访问集群内的service</li>
+</ul>
+<h1 id="k8s基础概念"><a class="markdownIt-Anchor" href="#k8s基础概念"></a> k8s基础概念</h1>
+<h2 id="kubernetes对象"><a class="markdownIt-Anchor" href="#kubernetes对象"></a> Kubernetes对象</h2>
+<p>是一种持久化的、用于表示集群状态的实体，使用yaml文件描述，ke通过API／cubectl管理<br>
+<img src="/pub-images/k8sobject.png" alt="image"></p>
+<h2 id="常用metadata属性"><a class="markdownIt-Anchor" href="#常用metadata属性"></a> 常用Metadata属性</h2>
 <ol>
-<li>下载war包，作为镜像制作项目： <a href="https://gitee.com/GalaIO/jpress/blob/master/wars/jpress-web-newest.war" target="_blank" rel="noopener">https://gitee.com/GalaIO/jpress/blob/master/wars/jpress-web-newest.war</a></li>
-<li>docker pull tomcat   //准备war项目的容器</li>
-<li>创建空目录:cd /media/psf/LinuxShare/data;sudo mkdir myDocker;cd myDocker;</li>
-<li>sudo cp /media/psf/LinuxShare/soft/jpress-web-newest.war /media/psf/LinuxShare/data/myDocker/</li>
-<li>创建Dockerfile文件，sudo vim myDocker;编辑内容如下：</li>
+<li>name和UID</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from tomcat</span><br><span class="line"></span><br><span class="line">MAINTAINER xingfeng1024 xingfeng1024@163.com</span><br><span class="line"></span><br><span class="line">COPY jpress-web-newest.war /usr/local/tomcat/webapps</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对k8s集群中所有对象都通过name和UID明确标识</li>
+<li>API中的对象访问路径：/API/{version}/namespaces/{namespace}/{object-kind}/name</li>
+<li>在k8s集群的整个生命周期内创建的每个对象实例都具有不同的UID</li>
+</ul>
+<ol start="2">
+<li>namespace</li>
+</ol>
+<ul>
+<li>用于将物理集群划分为多个虚拟集群</li>
+<li>namespaces之间相互隔离，因此也常被用来隔离不同用户及权限</li>
+<li>k8s内置3个namespaces：defalut，kube-system和kube-public，Node和PersistentVolume不属于任何namespace</li>
+</ul>
+<ol start="3">
+<li>Label</li>
+</ol>
+<ul>
+<li>用来建立集群之间的灵活的、松耦合的多维关联关系</li>
+<li>一个label就是一个键-值对，其key-value均由用户自己定义</li>
+<li>label可附着在任何对象上，每个对象可以有任意个label</li>
+<li>label可以将有组织目的的结构映射到集群对象上，从而形成一个与现实世界管理结构同步对应松耦合的、多维的对象管理结构</li>
+<li>通过label selector查询和筛选建立对象间的关系，其关联关系示例如下图：<br>
+<img src="/pub-images/label%E5%85%B3%E8%81%94.png" alt="image"></li>
+</ul>
+<ol start="4">
+<li>Annotaions</li>
+</ol>
+<ul>
+<li>Annotaions可以将任意非标识性元数据附加到对象上</li>
+<li>以键值对形式呈现</li>
+<li>工具和库可以检索到Annotaions元数据</li>
+<li>将数据以Annotaions附着在对象上，有利于创建一些用于部署、管理和做内部检查的共享工具或客户端</li>
+</ul>
+<h2 id="k8s对象分类"><a class="markdownIt-Anchor" href="#k8s对象分类"></a> k8s对象分类</h2>
+<p><img src="/pub-images/k8s%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB.png" alt="image"></p>
+<p>Pod 以Pod为中心，集群调度的基本单元，是一个有特定关系的容器集合<br>
+<img src="/pub-images/pod.png" alt="image"></p>
+<ul>
+<li>Pod是集群中可以创建和部署的最小且最简的k8s对象单元</li>
+<li>Pod也是一种封装，它封装了应用容器、存储资源、独立网络IP以及决定容器如何运行的策略选项</li>
+<li>每个Pod中预置一个pause容器，其名字空间、IPC资源、网络资源和存储资源被pod内其他容器共享。pod内所有容器紧密协作，并作为一个整体被管理、调度和运行</li>
+<li>pod是一个非持久化性实体</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/01/容器技术-docker网络详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/01/容器技术-docker网络详解/" itemprop="url">docker网络详解</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T09:38:59+08:00">
+                2019-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>学习参考文章：<a href="https://www.cnblogs.com/zuxing/articles/8780661.html" target="_blank" rel="noopener">https://www.cnblogs.com/zuxing/articles/8780661.html</a></p>
+<h1 id="docker自身的4种网络工作方式"><a class="markdownIt-Anchor" href="#docker自身的4种网络工作方式"></a> Docker自身的4种网络工作方式</h1>
+<p>安装Docker时，它会自动创建三个网络，bridge（创建容器默认连接到此网络）、 none 、host，可通过：docker network ls 查看</p>
+<ul>
+<li>host：容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口。</li>
+<li>Container：创建的容器不会创建自己的网卡，配置自己的IP，而是和一个指定的容器共享IP、端口范围。</li>
+<li>None：该模式关闭了容器的网络功能。</li>
+<li>Bridge：此模式会为每一个容器分配、设置IP等，并将容器连接到一个docker0虚拟网桥，通过docker0网桥以及Iptables nat表配置与宿主机通信。除非你使用该docker run --network=<network>选项指定，否则Docker守护程序默认将容器连接到此网络。</network></li>
+</ul>
+<h2 id="host"><a class="markdownIt-Anchor" href="#host"></a> host</h2>
+<ul>
+<li>host模式：使用 --net=host 指定</li>
+<li>docker的host模式相当于Vmware中的桥接模式，与宿主机在同一个网络中，但没有独立IP地址。</li>
+<li>Docker使用了Linux的Namespaces技术来进行资源隔离，如PID Namespace隔离进程，Mount Namespace隔离文件系统，Network Namespace隔离网络等。</li>
+<li>一个Network Namespace提供了一份独立的网络环境，包括网卡、路由、Iptable规则等都与其他的Network Namespace隔离。</li>
+<li>一个Docker容器一般会分配一个独立的Network Namespace。</li>
+<li>如果启动容器的时候使用host模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口。</li>
+<li>外界访问容器中的应用，则直接使用宿主机IP即可，不用任何NAT转换，就如直接跑在宿主机中一样。但是，容器的其他方面，如文件系统、进程列表等还是和宿主机隔离的。</li>
+</ul>
+<h2 id="container"><a class="markdownIt-Anchor" href="#container"></a> Container</h2>
+<p>此模式类似于host模式，指定新创建的容器和已经存在的一个容器共享一个Network Namespace，而不是和宿主机共享，其他机制和host模式类似</p>
+<ul>
+<li>container模式：使用 --net=container:NAME_or_ID 指定</li>
+</ul>
+<h2 id="none"><a class="markdownIt-Anchor" href="#none"></a> None</h2>
+<ul>
+<li>none模式：使用 --net=none 指定<br>
+该模式关闭了容器的网络功能</li>
+</ul>
+<h2 id="bridge"><a class="markdownIt-Anchor" href="#bridge"></a> Bridge</h2>
+<p>相当于Vmware中的Nat模式，容器使用独立network Namespace，并连接到docker0虚拟网卡（默认模式）</p>
+<h3 id="docker网络模式详解"><a class="markdownIt-Anchor" href="#docker网络模式详解"></a> Docker：网络模式详解</h3>
+<p><img src="/pub-images/docker%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E5%9B%BE.jpg" alt="image"></p>
+<ul>
+<li>bridge模式：使用 --net=bridge 指定</li>
+<li>当Docker server启动时，会在主机上创建一个名为docker0的虚拟网桥，此主机上启动的Docker容器会连接到这个虚拟网桥上</li>
+<li>在主机上创建一对虚拟网卡veth pair设备。veth设备总是成对出现的，它们组成了一个数据的通道，数据从一个设备进入，就会从另一个设备出来。因此，veth设备常用来连接两个网络设备。</li>
+<li>Docker将veth pair设备的一端放在新创建的容器中，并命名为eth0。另一端放在主机中，以veth65f9这样类似的名字命名，并将这个网络设备加入到docker0网桥中，可以通过brctl show命令查看</li>
+<li>从docker0子网中分配一个IP给容器使用，并设置docker0的IP地址为容器的默认网关，可以通过docker inspect 容器ID方式查看网络</li>
+</ul>
+<p>宿主机ifconfig：（较新版的udev使用了新的命名规则，原来的eth0网卡命名变成类似enp0s5）<br>
+<img src="/pub-images/%E5%AE%BF%E4%B8%BB%E6%9C%BAip.png" alt="image"><br>
+容器ifconfig<br>
+<img src="/pub-images/%E5%AE%B9%E5%99%A8ip.png" alt="image"></p>
+<h3 id="bridge模式下容器的通信"><a class="markdownIt-Anchor" href="#bridge模式下容器的通信"></a> bridge模式下容器的通信</h3>
+<ul>
+<li>在bridge模式下，连在同一网桥上的容器可以相互通信</li>
+<li>若出于安全考虑，也可以禁止它们之间通信，方法是在DOCKER_OPTS变量中设置–icc=false，这样只有使用–link才能使两个容器通信</li>
+</ul>
+<h1 id="自定义网络"><a class="markdownIt-Anchor" href="#自定义网络"></a> 自定义网络</h1>
+<p>Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。overlay 和 macvlan 用于创建跨主机的网络</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker network ls //显示所有网络</span><br><span class="line">docker network create -d bridge my-net  //新建网络,-d bridge为默认，也可省略</span><br><span class="line">docker run -it --rm --name busybox1 --network my-net busybox sh</span><br><span class="line">docker run -it --rm --name busybox2 --network my-net busybox sh //busybox1和busybox2加入了相同的网络，在调用相互的服务时可以使用别名进行调用了，也可进入容器ping测试</span><br><span class="line">docker network connect my-net web   //添加已经运行的容器到自定义网络</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/26/Java-JDBC链接MySQL8的注意事项/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/26/Java-JDBC链接MySQL8的注意事项/" itemprop="url">JDBC链接MySQL8的注意事项</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T21:25:33+08:00">
+                2019-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>需要使用高版本的JDBC驱动，“mysql-connector-java 8”以上版本,具体可通过数据库版本取maven库中查看驱动版本</li>
+<li>JDBC driver 由“com.mysql.jdbc.Driver”改为“com.mysql.cj.jdbc.Driver</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/24/容器技术-Docker环境下的前后端分离项目部署与运维/" itemprop="url">Docker环境下的前后端分离项目部署与运维</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T09:38:59+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>学习视频：<a href="https://coding.imooc.com/learn/list/219.html" target="_blank" rel="noopener">https://coding.imooc.com/learn/list/219.html</a></p>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>人人开源项目：<a href="https://www.renren.io/" target="_blank" rel="noopener">https://www.renren.io/</a><br>
+项目部署图解：<br>
+<img src="/pub-images/renrenfast%E6%9E%B6%E6%9E%84.png" alt="image"><br>
+<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%9B%86%E7%BE%A4.png" alt="image"><br>
+<img src="/pub-images/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%9B%BE.png" alt="image"></p>
+<h1 id="开发环境要求"><a class="markdownIt-Anchor" href="#开发环境要求"></a> 开发环境要求</h1>
+<p>软件：宿主机-Vmware虚拟机（CentOS／Ubuntu）-Docker虚拟机</p>
+<h1 id="mysql集群"><a class="markdownIt-Anchor" href="#mysql集群"></a> MySQL集群</h1>
+<p>单节点数据库无法满足性能上的要求及高可用冗余设计，大型互联网程序用户群体庞大，架构必须特殊设计，mysql常见集群方案：<br>
+<img src="/pub-images/mysql%E5%B8%B8%E8%A7%81%E9%9B%86%E7%BE%A4%E6%96%B9%E6%A1%88.png" alt="image"></p>
+<h2 id="pxc方案原理"><a class="markdownIt-Anchor" href="#pxc方案原理"></a> PXC方案原理</h2>
+<p>PXC（Percona XtraDB Cluster）：建议PXC使用PerconaServer（MySQL改进版，性能提升很大）<br>
+<img src="/pub-images/pxc%E6%96%B9%E6%A1%88%E5%8E%9F%E7%90%86.png" alt="image"><br>
+PXC数据强一致性：同步复制，事物在所有集群节点要么同时提交，要么不提交</p>
+<h2 id="pxc集群搭建"><a class="markdownIt-Anchor" href="#pxc集群搭建"></a> PXC集群搭建</h2>
+<p>网络准备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker network create --subnet=172.18.0.0/24 net1</span><br><span class="line">docker network inspect net1 //查看网络详细信息</span><br></pre></td></tr></table></figure>
+<p>准备数据卷：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker volume create --name v1</span><br><span class="line">docker inspect v1   //查看volume在宿主机上的实际路径，方便后期做容器卷映射</span><br><span class="line">docker volume create v2</span><br><span class="line">docker volume create v3</span><br><span class="line">docker volume create v4</span><br><span class="line">docker volume create v5</span><br><span class="line">docker volume create ‐‐name backup  //创建备份数据卷用于热备份数据</span><br></pre></td></tr></table></figure>
+<p>创建pxc容器：每个MySQL容器创建之后，因为要执行PXC的初始化和加入集群等工作，耐心等待1分钟左右再用客户 端连接MySQL。另外，必须第1个MySQL节点启动成功，用MySQL客户端能连接上之后，再去创建其他 MySQL节点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker pull percona/percona-xtradb-cluster</span><br><span class="line">//创建第一个节点</span><br><span class="line">docker run -d -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -v v1:/var/lib/mysql -v backup:/data --privileged --name=node1 --net=net1 --ip 172.18.0.2 percona/percona-xtradb-cluster</span><br><span class="line">//创建第二个节点</span><br><span class="line">docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v2:/var/lib/mysql -v backup:/data --privileged --name=node2 --net=net1 --ip 172.18.0.3 percona/percona-xtradb-cluster</span><br><span class="line">//创建第三个节点</span><br><span class="line">docker run -d -p 3309:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v3:/var/lib/mysql -v backup:/data --privileged --name=node3 --net=net1 --ip 172.18.0.4 percona/percona-xtradb-cluster</span><br><span class="line">//创建第四个节点</span><br><span class="line">docker run -d -p 3310:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v4:/var/lib/mysql -v backup:/data --privileged --name=node4 --net=net1 --ip 172.18.0.5 percona/percona-xtradb-cluster</span><br><span class="line">//创建第五个节点</span><br><span class="line">docker run -d -p 3311:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node1 -v v5:/var/lib/mysql -v backup:/data --privileged --name=node5 --net=net1 --ip 172.18.0.6 percona/percona-xtradb-cluster</span><br></pre></td></tr></table></figure>
+<p>通过客户端测试数据库集群：</p>
+<ul>
+<li>输入数据库ip为宿主机ip，端口为映射ip，如：3307、3308等连接不同节点</li>
+<li>任意节点建库、建表测试是否同步</li>
+</ul>
+<h2 id="数据库集群的负载均衡"><a class="markdownIt-Anchor" href="#数据库集群的负载均衡"></a> 数据库集群的负载均衡</h2>
+<p><img src="/pub-images/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AF%B9%E6%AF%94.png" alt="image"><br>
+使用Haproxy做负载均衡，请求被均匀分发给每个节点，单节点负载低，性能好<br>
+<img src="/pub-images/pxc%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.png" alt="image"></p>
+<h3 id="haproxy使用"><a class="markdownIt-Anchor" href="#haproxy使用"></a> haproxy使用</h3>
+<ol>
+<li>docker pull haproxy //获取haproxy系统镜像</li>
+<li>创建haproxy配置文件: sudo vim /media/psf/LinuxShare/data/conf/haproxy.cfg，更多配置查看：<a href="https://zhang.ge/5125.html" target="_blank" rel="noopener">https://zhang.ge/5125.html</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">global</span><br><span class="line">	#工作目录</span><br><span class="line">	chroot /usr/local/etc/haproxy</span><br><span class="line">	#日志文件，使用rsyslog服务中local5日志设备（/var/log/local5），等级info</span><br><span class="line">	log 127.0.0.1 local5 info</span><br><span class="line">	#守护进程运行</span><br><span class="line">	daemon</span><br><span class="line"></span><br><span class="line">defaults</span><br><span class="line">	log	global</span><br><span class="line">	mode	http</span><br><span class="line">	#日志格式</span><br><span class="line">	option	httplog</span><br><span class="line">	#日志中不记录负载均衡的心跳检测记录</span><br><span class="line">	option	dontlognull</span><br><span class="line">    #连接超时（毫秒）</span><br><span class="line">	timeout connect 5000</span><br><span class="line">    #客户端超时（毫秒）</span><br><span class="line">	timeout client  50000</span><br><span class="line">	#服务器超时（毫秒）</span><br><span class="line">    timeout server  50000</span><br><span class="line"></span><br><span class="line">#监控界面	</span><br><span class="line">listen  admin_stats</span><br><span class="line">	#监控界面的访问的IP和端口</span><br><span class="line">	bind  0.0.0.0:8888</span><br><span class="line">	#访问协议</span><br><span class="line">    mode        http</span><br><span class="line">	#URI相对地址</span><br><span class="line">    stats uri   /dbs</span><br><span class="line">	#统计报告格式</span><br><span class="line">    stats realm     Global\ statistics</span><br><span class="line">	#登陆帐户信息</span><br><span class="line">    stats auth  admin:admin</span><br><span class="line">#数据库负载均衡</span><br><span class="line">listen  proxy-mysql</span><br><span class="line">	#访问的IP和端口</span><br><span class="line">	bind  0.0.0.0:3306  </span><br><span class="line">    #网络协议</span><br><span class="line">	mode  tcp</span><br><span class="line">	#负载均衡算法（轮询算法）</span><br><span class="line">	#轮询算法：roundrobin</span><br><span class="line">	#权重算法：static-rr</span><br><span class="line">	#最少连接算法：leastconn</span><br><span class="line">	#请求源IP算法：source </span><br><span class="line">    balance  roundrobin</span><br><span class="line">	#日志格式</span><br><span class="line">    option  tcplog</span><br><span class="line">	#在MySQL中创建一个没有权限的haproxy用户，密码为空。Haproxy使用这个账户对MySQL数据库心跳检测</span><br><span class="line">    option  mysql-check user haproxy</span><br><span class="line">    server  MySQL_1 172.18.0.2:3306 check weight 1 maxconn 2000  </span><br><span class="line">    server  MySQL_2 172.18.0.3:3306 check weight 1 maxconn 2000  </span><br><span class="line">	server  MySQL_3 172.18.0.4:3306 check weight 1 maxconn 2000 </span><br><span class="line">	server  MySQL_4 172.18.0.5:3306 check weight 1 maxconn 2000</span><br><span class="line">	server  MySQL_5 172.18.0.6:3306 check weight 1 maxconn 2000</span><br><span class="line">	#使用keepalive检测死链</span><br><span class="line">    option  tcpka</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>创建haproxy容器</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#创建第1个Haproxy负载均衡服务器</span><br><span class="line">docker run -it -d -p 4001:8888 -p 4002:3306 -v /media/psf/LinuxShare/data/conf:/usr/local/etc/haproxy --name h1 --privileged --net=net1 --ip 172.18.0.10 haproxy</span><br><span class="line"></span><br><span class="line">#创建第2个Haproxy负载均衡服务器</span><br><span class="line">docker run -it -d -p 4003:8888 -p 4004:3306 -v /media/psf/LinuxShare/data/conf:/usr/local/etc/haproxy --name h2 --privileged --net=net1 --ip 172.18.0.11 haproxy</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>创建数据库haproxy用户：create user ‘haproxy’@’%’ identified by ‘’;</li>
+<li>启动haproxy</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it h1 bash</span><br><span class="line">haproxy -f /usr/local/etc/haproxy/haproxy.cfg</span><br><span class="line"></span><br><span class="line">docker exec -it h2 bash</span><br><span class="line">haproxy -f /usr/local/etc/haproxy/haproxy.cfg</span><br></pre></td></tr></table></figure>
 <ol start="6">
-<li>构建镜像：docker build -t mydocker/jpress:latest .</li>
-<li>docker images查看镜像</li>
-<li>docker run -d -p 8888:8080 mydocker/jpress</li>
-<li>浏览器：<a href="http://localhost:8888/jpress-web-newest" target="_blank" rel="noopener">http://localhost:8888/jpress-web-newest</a> 查看效果</li>
+<li>浏览器访问：<br>
+浏览器访问地址：<a href="http://xn--ip-wz2c754c5qn:4001/dbs" target="_blank" rel="noopener">http://宿主机ip:4001/dbs</a></li>
+<li>数据库访问：<br>
+ip为宿主机ip，端口4002，见第三步</li>
+<li>测试节点宕机</li>
 </ol>
-<h2 id="打包方式"><a class="markdownIt-Anchor" href="#打包方式"></a> 打包方式</h2>
-<ol>
-<li>在以上镜像基础上，进入镜像：docker exec -it mydocker/jpress bash</li>
-<li>apt-get install vim</li>
-<li>vim <a href="http://readme.md" target="_blank" rel="noopener">readme.md</a>;  随便输入内容保存即可</li>
-<li>退出容器：Ctrl+P，Ctrl+Q</li>
-<li>制作镜像：docker commit f8ed84a63e94 mydocker/jpress-vim  //f8ed84a63e94为容器ID</li>
-<li>docker images查看最新制作镜像，创建容器运行后进入发现有了vim功能</li>
-</ol>
+<ul>
+<li>docker stop node1;查看浏览器，node1节点是否宕机</li>
+<li>恢复node1节点:删除node1节点，重新以从节点方式创建node1即可</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm node1</span><br><span class="line">docker run -d -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root -e CLUSTER_NAME=PXC -e XTRABACKUP_PASSWORD=root -e CLUSTER_JOIN=node2 -v v1:/var/lib/mysql -v backup:/data --privileged --name=node1 --net=net1 --ip 172.18.0.2 percona/percona-xtradb-cluster</span><br></pre></td></tr></table></figure>
+<p>虚拟IP地址技术</p>
+<h3 id="keepalived实现双机热备"><a class="markdownIt-Anchor" href="#keepalived实现双机热备"></a> keepalived实现双机热备</h3>
+<p><img src="/pub-images/haproxy%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E6%96%B9%E6%A1%88.png" alt="image"></p>
+<ul>
+<li>Keepalived必须安装在haproxy容器内</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it h1 bash</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install vim</span><br><span class="line">apt-get install keepalived</span><br><span class="line">vim /etc/keepalived/keepalived.conf</span><br></pre></td></tr></table></figure>
+<p>配置文件内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vrrp_instance  VI_1 &#123;</span><br><span class="line">   state  MASTER</span><br><span class="line">   interface  eth0</span><br><span class="line">   virtual_router_id  51</span><br><span class="line">   priority  100</span><br><span class="line">   advert_int  1</span><br><span class="line">   authentication &#123;</span><br><span class="line">       auth_type  PASS</span><br><span class="line">       auth_pass  123456</span><br><span class="line">   &#125;</span><br><span class="line">   virtual_ipaddress &#123;</span><br><span class="line">       172.18.0.201</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">virtual_server 192.168.99.150 8888 &#123;</span><br><span class="line">  delay_loop 3</span><br><span class="line">  lb_algo rr</span><br><span class="line">  lb_kind NAT</span><br><span class="line">  persistence_timeout 50</span><br><span class="line">  protocol TCP</span><br><span class="line">  real_server 172.18.0.201 8888 &#123;</span><br><span class="line">    weight 1</span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br><span class="line">virtual_server 192.168.99.150 3306 &#123;</span><br><span class="line">  delay_loop 3</span><br><span class="line">  lb_algo rr</span><br><span class="line">  lb_kind NAT</span><br><span class="line">  persistence_timeout 50</span><br><span class="line">  protocol TCP</span><br><span class="line">  real_server 172.18.0.201 3306 &#123;</span><br><span class="line">    weight 1</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>暂停PXC集群的办法</p>
+<ul>
+<li>在/etc/sysctl.conf文件末尾添加：net.ipv4.ip_forward=1;重启网络服务：systectl restart network</li>
+</ul>
+<h2 id="replication方案原理"><a class="markdownIt-Anchor" href="#replication方案原理"></a> Replication方案原理</h2>
+<p><img src="/pub-images/replication%E6%96%B9%E6%A1%88.png" alt="image"><br>
+Replication采用异步复制，单向同步，无法保证数据的一致性</p>
+<p>参考文章：</p>
+<ul>
+<li><a href="https://www.cnblogs.com/zhenyuyaodidiao/p/4635458.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhenyuyaodidiao/p/4635458.html</a></li>
+<li><a href="https://www.cnblogs.com/clsn/p/8150036.html" target="_blank" rel="noopener">https://www.cnblogs.com/clsn/p/8150036.html</a></li>
+</ul>
+<p>–sql<br>
+stop slave;<br>
+show slave status;</p>
+<h2 id="pxc集群安装"><a class="markdownIt-Anchor" href="#pxc集群安装"></a> PXC集群安装</h2>
+<p>MySQL集群（PXC）入门：<a href="https://www.imooc.com/learn/993" target="_blank" rel="noopener">https://www.imooc.com/learn/993</a></p>
+<h1 id="redis集群"><a class="markdownIt-Anchor" href="#redis集群"></a> Redis集群</h1>
+<p>高速缓存：利用内存保存数据，读写速度远超硬盘；减少I／O操作</p>
+<h2 id="redis集群方案"><a class="markdownIt-Anchor" href="#redis集群方案"></a> Redis集群方案</h2>
+<ul>
+<li>RedisCluster：官方推荐，没有中心节点，客户端与redis节点直连，不需要中间代理层；数据可被分片存储；管理方便，后续可自行增删节点</li>
+<li>Codis：中间件产品，存在中心节点，360公司产品</li>
+<li>Twemproxy：中间件产品，存在中心节点</li>
+<li>Redis集群中应该包含奇数个Master，至少应该有3个Master</li>
+<li>Redis集群中每个Master都应该有Slave<br>
+<img src="/pub-images/redis%E4%B8%BB%E4%BB%8E.png" alt="image"></li>
+<li>redis集群不配置负载均衡是因为在前后端分离项目中Spring程序实现了负载均衡</li>
+</ul>
+<h2 id="rediscluster架构"><a class="markdownIt-Anchor" href="#rediscluster架构"></a> RedisCluster架构</h2>
+<p><img src="/pub-images/rediscluster.png" alt="image"></p>
+<h2 id="redis主从同步"><a class="markdownIt-Anchor" href="#redis主从同步"></a> Redis主从同步</h2>
+<ul>
+<li>Redis集群中的数据库复制是通过主从同步来实现的</li>
+<li>主节点（Master）把数据分发给从节点（Slave）</li>
+<li>主从同步的好处在于高可用，Redis节点有冗余设计</li>
+</ul>
+<h2 id="rediscluster集群搭建"><a class="markdownIt-Anchor" href="#rediscluster集群搭建"></a> RedisCluster集群搭建</h2>
+<p>网络准备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create --subnet=172.19.0.0/16 net2</span><br></pre></td></tr></table></figure>
+<p>镜像准备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull grokzen/redis-cluster</span><br><span class="line">docker pull yyyyttttwwww/redis  //课程使用</span><br></pre></td></tr></table></figure>
+<p>容器创建：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -d --name r1 -p 5001:6379 --net=net2 --ip 172.19.0.2 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r2 -p 5002:6379 --net=net2 --ip 172.19.0.3 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r3 -p 5003:6379 --net=net2 --ip 172.19.0.4 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r4 -p 5004:6379 --net=net2 --ip 172.19.0.5 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r5 -p 5005:6379 --net=net2 --ip 172.19.0.6 yyyyttttwwww/redis bash</span><br><span class="line">docker run -it -d --name r6 -p 5006:6379 --net=net2 --ip 172.19.0.7 yyyyttttwwww/redis bash</span><br></pre></td></tr></table></figure>
+<p>配置redis配置文件：(默认关闭了redis集群功能)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//逐个进入容器，如：</span><br><span class="line">docker exec -it  r1  bash</span><br><span class="line">//逐个配置</span><br><span class="line">daemonize yes   </span><br><span class="line">bind 0.0.0.0</span><br><span class="line">cluster-enabled yes</span><br><span class="line">cluster-config-file nodes.conf</span><br><span class="line">cluster-node-timeout 15000</span><br><span class="line">appendonly yes  //开启AOF日志模式</span><br></pre></td></tr></table></figure>
+<p>逐个启动redis服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/redis/src/redis-server /usr/redis/redis.conf</span><br><span class="line">//客户端连接测试,如：</span><br><span class="line">./redis-cli -h 172.19.0.3 -p 6379 -c</span><br></pre></td></tr></table></figure>
+<p>通过redis-trib.rb(redis自带,需要ruby环境)创建集群</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//进入任一容器，如：</span><br><span class="line">docker exec -it  r1  bash</span><br><span class="line">cd /usr/redis/</span><br><span class="line">mkdir cluster</span><br><span class="line">cp src/redis-trib.rb cluster/</span><br><span class="line">cd cluster/</span><br><span class="line">//创建集群，过程中确认请输入&quot;yes&quot;</span><br><span class="line">./redis-trib.rb create --replicas 1 172.19.0.2:6379 172.19.0.3:6379 172.19.0.4:6379 172.19.0.5:6379 172.19.0.6:6379 172.19.0.7:6379</span><br></pre></td></tr></table></figure>
+<p>测试集群效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//逐个任一容器，如：</span><br><span class="line">docker exec -it  r1  bash</span><br><span class="line">./redis-cli -c</span><br><span class="line">cluster nodes   //查看集群节点信息</span><br></pre></td></tr></table></figure>
+<h1 id="docker-compose"><a class="markdownIt-Anchor" href="#docker-compose"></a> Docker Compose</h1>
+<ul>
+<li>Docker-Compose用于解决容器与容器之间如何管理编排的问题</li>
+<li>Dockerfile 可以让用户管理一个单独的应用容器；而 Compose 则允许用户在一个模板（YAML 格式）中定义一组相关联的应用容器（被称为一个 project，即项目），例如一个 Web 服务容器再加上后端的数据库服务容器等。</li>
+</ul>
+<p>Compose 中有两个重要的概念</p>
+<ul>
+<li>服务 (service) ：一个应用的容器，实际上可以包括若干运行相同镜像的容器实例</li>
+<li>项目 (project) ：由一组关联的应用容器组成的一个完整业务单元，在 docker-compose.yml 文件中定义</li>
+</ul>
+<h2 id="docker-compose-安装"><a class="markdownIt-Anchor" href="#docker-compose-安装"></a> Docker Compose 安装</h2>
+<p>Docker Compose 是 Docker 的独立产品，需自行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure>
+<h2 id="基本使用"><a class="markdownIt-Anchor" href="#基本使用"></a> 基本使用</h2>
+<p>启动服务：docker-compose up -d   //在后台启动服务<br>
+查看启动的服务:docker-compose ps<br>
+停止服务: docker-compose stop</p>
+<h2 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">#查看帮助</span><br><span class="line">docker-compose -h</span><br><span class="line"></span><br><span class="line"># -f  指定使用的 Compose 模板文件，默认为 docker-compose.yml，可以多次指定。</span><br><span class="line">docker-compose -f docker-compose.yml up -d </span><br><span class="line"></span><br><span class="line">#启动所有容器，-d 将会在后台启动并运行所有的容器</span><br><span class="line">docker-compose up -d</span><br><span class="line"></span><br><span class="line">#停用移除所有容器以及网络相关</span><br><span class="line">docker-compose down</span><br><span class="line"></span><br><span class="line">#查看服务容器的输出</span><br><span class="line">docker-compose logs</span><br><span class="line"></span><br><span class="line">#列出项目中目前的所有容器</span><br><span class="line">docker-compose ps</span><br><span class="line"></span><br><span class="line">#构建（重新构建）项目中的服务容器。服务容器一旦构建后，将会带上一个标记名，例如对于 web 项目中的一个 db 容器，可能是 web_db。可以随时在项目目录下运行 docker-compose build 来重新构建服务</span><br><span class="line">docker-compose build</span><br><span class="line"></span><br><span class="line">#拉取服务依赖的镜像</span><br><span class="line">docker-compose pull</span><br><span class="line"></span><br><span class="line">#重启项目中的服务</span><br><span class="line">docker-compose restart</span><br><span class="line"></span><br><span class="line">#删除所有（停止状态的）服务容器。推荐先执行 docker-compose stop 命令来停止容器。</span><br><span class="line">docker-compose rm </span><br><span class="line"></span><br><span class="line">#在指定服务上执行一个命令。</span><br><span class="line">docker-compose run ubuntu ping docker.com</span><br><span class="line"></span><br><span class="line">#设置指定服务运行的容器个数。通过 service=num 的参数来设置数量</span><br><span class="line">docker-compose scale web=3 db=2</span><br><span class="line"></span><br><span class="line">#启动已经存在的服务容器。</span><br><span class="line">docker-compose start</span><br><span class="line"></span><br><span class="line">#停止已经处于运行状态的容器，但不删除它。通过 docker-compose start 可以再次启动这些容器。</span><br><span class="line">docker-compose stop</span><br></pre></td></tr></table></figure>
+<h1 id="docker-swarm"><a class="markdownIt-Anchor" href="#docker-swarm"></a> Docker Swarm</h1>
+<h1 id="课后作业"><a class="markdownIt-Anchor" href="#课后作业"></a> 课后作业</h1>
+<h1 id="源码解析"><a class="markdownIt-Anchor" href="#源码解析"></a> 源码解析</h1>
+<p><a href="https://www.jianshu.com/p/259d35eef3f1" target="_blank" rel="noopener">https://www.jianshu.com/p/259d35eef3f1</a></p>
 
           
         
@@ -2792,7 +2244,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2847,7 +2299,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">484</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2869,7 +2321,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2963,7 +2415,7 @@ kernel /vmlinuz-2.6.23.1-42.fc8 ro root=/dev/vogroup00/logvol00 rhgb quiet enfor
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.7k字</span>
+  <span class="post-count">博客全站共223.6k字</span>
 </div>
 
 

@@ -105,22 +105,22 @@
 
 
 
-<meta name="description" content="简介  中间件，提供协调服务 作用于分布式系统，发挥其优势，可以为大数据服务 支持java，提供java和c语言对客户端api  zookeeper=文件系统+监听通知机制  分布式系统  很多台计算机组成一个整体，一个整体一致对外并且处理同一请求 内部的每台计算机都可以相互通信（rest／rpc） 客户端到服务端的一次请求到响应结束会历经多台计算机  自行搜索图解  分布式系统的瓶颈  zo">
+<meta name="description" content="简介  中间件，提供协调服务 作用于分布式系统，发挥其优势，可以为大数据服务 支持java，提供java和c语言对客户端api  zookeeper=文件系统+监听通知机制  分布式系统  很多台计算机组成一个整体，一个整体一致对外并且处理同一请求 内部的每台计算机都可以相互通信（rest／rpc） 客户端到服务端的一次请求到响应结束会历经多台计算机  自行搜索图解  zookeeper的特性">
 <meta name="keywords" content="分布式,zookeeper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zookeeper入门">
 <meta property="og:url" content="https://chetaofeng.github.io/2019/02/20/Java-zookeeper入门/index.html">
 <meta property="og:site_name" content="行锋">
-<meta property="og:description" content="简介  中间件，提供协调服务 作用于分布式系统，发挥其优势，可以为大数据服务 支持java，提供java和c语言对客户端api  zookeeper=文件系统+监听通知机制  分布式系统  很多台计算机组成一个整体，一个整体一致对外并且处理同一请求 内部的每台计算机都可以相互通信（rest／rpc） 客户端到服务端的一次请求到响应结束会历经多台计算机  自行搜索图解  分布式系统的瓶颈  zo">
+<meta property="og:description" content="简介  中间件，提供协调服务 作用于分布式系统，发挥其优势，可以为大数据服务 支持java，提供java和c语言对客户端api  zookeeper=文件系统+监听通知机制  分布式系统  很多台计算机组成一个整体，一个整体一致对外并且处理同一请求 内部的每台计算机都可以相互通信（rest／rpc） 客户端到服务端的一次请求到响应结束会历经多台计算机  自行搜索图解  zookeeper的特性">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/zookeeper.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/zookeeper%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/zk%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/zk%E5%8D%95%E6%9C%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE.png">
-<meta property="og:updated_time" content="2019-02-26T09:26:48.000Z">
+<meta property="og:updated_time" content="2019-03-19T05:40:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zookeeper入门">
-<meta name="twitter:description" content="简介  中间件，提供协调服务 作用于分布式系统，发挥其优势，可以为大数据服务 支持java，提供java和c语言对客户端api  zookeeper=文件系统+监听通知机制  分布式系统  很多台计算机组成一个整体，一个整体一致对外并且处理同一请求 内部的每台计算机都可以相互通信（rest／rpc） 客户端到服务端的一次请求到响应结束会历经多台计算机  自行搜索图解  分布式系统的瓶颈  zo">
+<meta name="twitter:description" content="简介  中间件，提供协调服务 作用于分布式系统，发挥其优势，可以为大数据服务 支持java，提供java和c语言对客户端api  zookeeper=文件系统+监听通知机制  分布式系统  很多台计算机组成一个整体，一个整体一致对外并且处理同一请求 内部的每台计算机都可以相互通信（rest／rpc） 客户端到服务端的一次请求到响应结束会历经多台计算机  自行搜索图解  zookeeper的特性">
 <meta name="twitter:image" content="https://chetaofeng.github.io/pub-images/zookeeper.png">
 
 
@@ -444,7 +444,6 @@
 <li>客户端到服务端的一次请求到响应结束会历经多台计算机</li>
 </ul>
 <p>自行搜索图解</p>
-<h1 id="分布式系统的瓶颈"><a class="markdownIt-Anchor" href="#分布式系统的瓶颈"></a> 分布式系统的瓶颈</h1>
 <h1 id="zookeeper的特性"><a class="markdownIt-Anchor" href="#zookeeper的特性"></a> zookeeper的特性</h1>
 <ul>
 <li>一致性：数据一致性，数据按顺序分批入库</li>
@@ -454,10 +453,14 @@
 <li>实时性：客户端可以读取到zk服务端的最新数据</li>
 </ul>
 <h1 id="安装配置"><a class="markdownIt-Anchor" href="#安装配置"></a> 安装配置</h1>
-<p>官网： <a href="http://zookeeper.apache.org/" target="_blank" rel="noopener">http://zookeeper.apache.org/</a><br>
-下载： <a href="https://archive.apache.org/dist/zookeeper/" target="_blank" rel="noopener">https://archive.apache.org/dist/zookeeper/</a><br>
+<p>官网： <a href="http://zookeeper.apache.org/" target="_blank" rel="noopener">http://zookeeper.apache.org/</a></p>
+<h2 id="linux安装"><a class="markdownIt-Anchor" href="#linux安装"></a> Linux安装</h2>
+<p>下载： <a href="https://archive.apache.org/dist/zookeeper/" target="_blank" rel="noopener">https://archive.apache.org/dist/zookeeper/</a><br>
 解压文件到/usr／local/后配置环境：vim ／etc/profile,添加：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ZOOKEEPER_HOME=/usr/local/zookeeper</span><br><span class="line">export PATH=$PATH:$ZOOKEEPER_HOME/bin</span><br></pre></td></tr></table></figure>
+<h2 id="macos安装"><a class="markdownIt-Anchor" href="#macos安装"></a> macOS安装</h2>
+<p>brew install zookeeper      //安装位置/usr/local/etc/zookeeper</p>
+<p><a href="https://blog.csdn.net/whereismatrix/article/details/50420099" target="_blank" rel="noopener">https://blog.csdn.net/whereismatrix/article/details/50420099</a></p>
 <p>安装启动遇到问题及解决：</p>
 <ul>
 <li><a href="https://www.jianshu.com/p/5cd618ad381e" target="_blank" rel="noopener">https://www.jianshu.com/p/5cd618ad381e</a></li>
@@ -664,10 +667,35 @@
 <blockquote>
 <p>ZooKeeper的api支持多种语言，在操作时可以选择使用同步api还是异步api。同步api一般是直接返回结果，异步api一般是通过回调来传送执行结果的，一般方法中有某参数是类AsyncCallback的内部接口，那么该方法应该就是异步调用，回调方法名为processResult。</p>
 </blockquote>
-<p><a href="https://www.cnblogs.com/leocook/p/zk_0.html" target="_blank" rel="noopener">https://www.cnblogs.com/leocook/p/zk_0.html</a></p>
-<p><a href="https://www.cnblogs.com/gaojy/p/6635026.html" target="_blank" rel="noopener">https://www.cnblogs.com/gaojy/p/6635026.html</a></p>
-<p><a href="https://www.cnblogs.com/niechen/p/8597344.html" target="_blank" rel="noopener">https://www.cnblogs.com/niechen/p/8597344.html</a></p>
-<p>入门：<a href="https://blog.csdn.net/java_66666/article/details/81015302" target="_blank" rel="noopener">https://blog.csdn.net/java_66666/article/details/81015302</a></p>
+<p>具体操作代码详见：</p>
+<p>缺点：</p>
+<ul>
+<li>超时重连不支持自动，需手动重连</li>
+<li>watch注册一次后会失效</li>
+<li>不支持递归创建节点</li>
+</ul>
+<h1 id="apache-curator客户端使用"><a class="markdownIt-Anchor" href="#apache-curator客户端使用"></a> Apache Curator客户端使用</h1>
+<p><a href="http://curator.apache.org/" target="_blank" rel="noopener">http://curator.apache.org/</a></p>
+<p>Curator的Maven依赖如下，一般直接使用curator-recipes就行了，如果需要自己封装一些底层些的功能的话，例如增加连接管理重试机制等，则可以引入curator-framework包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;curator-framework&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.1.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apach e.curator&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;curator-recipes&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.1.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>curator引入，版本要和zookeeper匹配，具体参考：<a href="http://curator.apache.org/zk-compatibility.html" target="_blank" rel="noopener">http://curator.apache.org/zk-compatibility.html</a></li>
+<li>curator重试连接策略：ExponentialBackoffRetry、RetryNTimes、RetryOneTimes、RetryUntilElapsed</li>
+<li>Curator提供了三种Watcher(Cache)来监听结点的变化：</li>
+</ul>
+<ol>
+<li>Path Cache：监视一个路径下1）孩子结点的创建、2）删除，3）以及结点数据的更新。产生的事件会传递给注册的PathChildrenCacheListener。</li>
+<li>Node Cache：监视一个结点的创建、更新、删除，并将结点的数据缓存在本地。</li>
+<li>Tree Cache：Path Cache和Node Cache的“合体”，监视路径下的创建、更新、删除事件，并缓存路径下所有孩子结点的数据。</li>
+</ol>
+<h1 id="参考文章"><a class="markdownIt-Anchor" href="#参考文章"></a> 参考文章</h1>
+<ul>
+<li><a href="https://www.cnblogs.com/seaspring/p/5536338.html" target="_blank" rel="noopener">https://www.cnblogs.com/seaspring/p/5536338.html</a></li>
+<li><a href="https://www.cnblogs.com/leocook/p/zk_0.html" target="_blank" rel="noopener">https://www.cnblogs.com/leocook/p/zk_0.html</a></li>
+<li><a href="https://www.cnblogs.com/gaojy/p/6635026.html" target="_blank" rel="noopener">https://www.cnblogs.com/gaojy/p/6635026.html</a></li>
+<li><a href="https://www.cnblogs.com/niechen/p/8597344.html" target="_blank" rel="noopener">https://www.cnblogs.com/niechen/p/8597344.html</a></li>
+<li><a href="https://blog.csdn.net/java_66666/article/details/81015302" target="_blank" rel="noopener">https://blog.csdn.net/java_66666/article/details/81015302</a></li>
+</ul>
 
       
     </div>
@@ -688,7 +716,7 @@
   <p><span>本文标题:</span><a href="/2019/02/20/Java-zookeeper入门/">zookeeper入门</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2019年02月20日 - 21:02</p>
-  <p><span>最后更新:</span>2019年02月26日 - 17:02</p>
+  <p><span>最后更新:</span>2019年03月19日 - 13:03</p>
   <p><span>原始链接:</span><a href="/2019/02/20/Java-zookeeper入门/" title="zookeeper入门">https://chetaofeng.github.io/2019/02/20/Java-zookeeper入门/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2019/02/20/Java-zookeeper入门/"  aria-label="复制成功！"></i></span>
   </p>
@@ -779,8 +807,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/15/移动开发-Android中主题-Theme-和样式-Style-使用/" rel="next" title="Android中主题(Theme)和样式(Style)使用">
-                <i class="fa fa-chevron-left"></i> Android中主题(Theme)和样式(Style)使用
+              <a href="/2019/02/20/Java-JWT-JSON-Web-Tokens-入门/" rel="next" title="JWT(JSON Web Tokens)入门">
+                <i class="fa fa-chevron-left"></i> JWT(JSON Web Tokens)入门
               </a>
             
           </div>
@@ -789,8 +817,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/21/环境搭建-Java程序开发其他配置/" rel="prev" title="Java开发其他配置">
-                Java开发其他配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/20/Java-MQTT入门/" rel="prev" title="MQTT入门">
+                MQTT入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -885,7 +913,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">484</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -907,7 +935,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -956,7 +984,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式系统"><span class="nav-number">2.</span> <span class="nav-text"> 分布式系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式系统的瓶颈"><span class="nav-number">3.</span> <span class="nav-text"> 分布式系统的瓶颈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper的特性"><span class="nav-number">4.</span> <span class="nav-text"> zookeeper的特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装配置"><span class="nav-number">5.</span> <span class="nav-text"> 安装配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper主要目录结构"><span class="nav-number">6.</span> <span class="nav-text"> zookeeper主要目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper配置文件介绍"><span class="nav-number">7.</span> <span class="nav-text"> zookeeper配置文件介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper数据模型"><span class="nav-number">8.</span> <span class="nav-text"> zookeeper数据模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper作用体现"><span class="nav-number">9.</span> <span class="nav-text"> zookeeper作用体现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四种类型的znode"><span class="nav-number">10.</span> <span class="nav-text"> 四种类型的znode</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#监听通知机制"><span class="nav-number">11.</span> <span class="nav-text"> 监听通知机制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper客户端的使用"><span class="nav-number">12.</span> <span class="nav-text"> Zookeeper客户端的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper常用命令行操作"><span class="nav-number">13.</span> <span class="nav-text"> zookeeper常用命令行操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#aclaccess-control-lists权限控制"><span class="nav-number">14.</span> <span class="nav-text"> ACL(access control lists)权限控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#acl常用使用场景"><span class="nav-number">15.</span> <span class="nav-text"> acl常用使用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper四字命令"><span class="nav-number">16.</span> <span class="nav-text"> zookeeper四字命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper集群搭建"><span class="nav-number">17.</span> <span class="nav-text"> zookeeper集群搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集群搭建前置"><span class="nav-number">17.1.</span> <span class="nav-text"> 集群搭建前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单机伪分布式zk集群搭建"><span class="nav-number">17.2.</span> <span class="nav-text"> 单机伪分布式zk集群搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#真实环境zk集群搭建"><span class="nav-number">17.3.</span> <span class="nav-text"> 真实环境zk集群搭建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#api操作相关代码"><span class="nav-number">18.</span> <span class="nav-text"> API操作相关代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式系统"><span class="nav-number">2.</span> <span class="nav-text"> 分布式系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper的特性"><span class="nav-number">3.</span> <span class="nav-text"> zookeeper的特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装配置"><span class="nav-number">4.</span> <span class="nav-text"> 安装配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux安装"><span class="nav-number">4.1.</span> <span class="nav-text"> Linux安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#macos安装"><span class="nav-number">4.2.</span> <span class="nav-text"> macOS安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper主要目录结构"><span class="nav-number">5.</span> <span class="nav-text"> zookeeper主要目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper配置文件介绍"><span class="nav-number">6.</span> <span class="nav-text"> zookeeper配置文件介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper数据模型"><span class="nav-number">7.</span> <span class="nav-text"> zookeeper数据模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper作用体现"><span class="nav-number">8.</span> <span class="nav-text"> zookeeper作用体现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四种类型的znode"><span class="nav-number">9.</span> <span class="nav-text"> 四种类型的znode</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#监听通知机制"><span class="nav-number">10.</span> <span class="nav-text"> 监听通知机制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper客户端的使用"><span class="nav-number">11.</span> <span class="nav-text"> Zookeeper客户端的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper常用命令行操作"><span class="nav-number">12.</span> <span class="nav-text"> zookeeper常用命令行操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#aclaccess-control-lists权限控制"><span class="nav-number">13.</span> <span class="nav-text"> ACL(access control lists)权限控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#acl常用使用场景"><span class="nav-number">14.</span> <span class="nav-text"> acl常用使用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper四字命令"><span class="nav-number">15.</span> <span class="nav-text"> zookeeper四字命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper集群搭建"><span class="nav-number">16.</span> <span class="nav-text"> zookeeper集群搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集群搭建前置"><span class="nav-number">16.1.</span> <span class="nav-text"> 集群搭建前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单机伪分布式zk集群搭建"><span class="nav-number">16.2.</span> <span class="nav-text"> 单机伪分布式zk集群搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#真实环境zk集群搭建"><span class="nav-number">16.3.</span> <span class="nav-text"> 真实环境zk集群搭建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#api操作相关代码"><span class="nav-number">17.</span> <span class="nav-text"> API操作相关代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#apache-curator客户端使用"><span class="nav-number">18.</span> <span class="nav-text"> Apache Curator客户端使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">19.</span> <span class="nav-text"> 参考文章</span></a></li></ol></div>
             
 
           </div>
@@ -1017,7 +1045,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.7k字</span>
+  <span class="post-count">博客全站共223.6k字</span>
 </div>
 
 

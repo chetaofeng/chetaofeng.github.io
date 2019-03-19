@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/31/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/31/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpChoose-New-Context-dialog-box/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpChoose-New-Context-dialog-box/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>&ldquo;选择新上下文&rdquo;对话框</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpChoose_New_Context_dialog_box">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1 class="gui-object">&ldquo;选择新上下文&rdquo;对话框</h1>
+
+  <p>&ldquo;选择新上下文&rdquo;对话框使您能够设置另一个 <a href="n8ahelpOracle_Context.htm">Oracle Context</a>，后者是<a href="n8ahelpDirectory_Information_Tree_DIT.htm">目录信息树 (DIT)</a> 中名为 <span class="Code">cn=OracleContext</span> 的容器，其中包含用于 Oracle 软件的条目。这些条目可以包含<a href="n8ahelpnet_service_name.htm">网络服务名</a>和连接到数据库服务的数据库服务名。默认情况下，Oracle Net Manager 使用由 Oracle Net Configuration Assistant 配置的 Oracle Context。</p>
+
+  <p><span class="gui-object">目录命名上下文</span></p>
+
+  <p>从列表中，选择包含您要查看的 <a href="n8ahelpOracle_Context.htm">Oracle Context</a> 的目录条目。</p>
+
+  <p><span class="gui-object">Oracle Context</span></p>
+
+  <p>从此列表中选择一个 Oracle Context。您选择的 Oracle Context 应包含目录树中您打算修改或添加其网络信息的条目。</p>
+
+  <p>&ldquo;导航器&rdquo;窗格中的<span class="gui-object">目录 &gt; 服务命名</span>文件夹随所选的 Oracle Context 的网络对象进行更新。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpChange_the_Oracle_Context.htm">更改 Oracle Context</a></p>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Heterogeneous-Services/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Heterogeneous-Services/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>为监听程序配置异构服务</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_Heterogeneous_Services">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1 class="gui-object">为监听程序配置异构服务</h1>
+
+  <p>异构服务使您能够从 Oracle 服务器访问非 Oracle 系统。要启动与非 Oracle 系统的连接，Oracle 服务器需要通过网关上的监听程序启动代理进程。监听程序的&ldquo;异构服务配置&rdquo;包括创建&ldquo;异构&rdquo;代理的服务信息。</p>
+
+  <p>要为监听程序配置异构服务，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>a. 在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 本地 &gt; 监听程序</span>。</p>
+    </li>
+
+    <li>
+      <p>选择监听程序。</p>
+    </li>
+
+    <li>
+      <p>从右侧窗格的列表中，选择<span class="gui-object">其他服务</span>。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">添加服务</span>。此时将显示新的<span class="gui-object">服务</span>选项卡。</p>
+    </li>
+
+    <li>
+      <p>请在<span class="gui-object">程序名</span>字段中输入代理可执行文件，在 <span class="gui-object">SID</span> 字段中输入代理的 <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle 系统标识符 (SID)</a>，并在 <span class="gui-object">Oracle</span> 主目录字段中输入 Oracle 主目录。</p>
+    </li>
+
+    <li>
+      <p>确保服务器配置有连接描述符以访问异构服务，如<a href="n8ahelpConfigure_a_Connect_Desc00000029.htm">为外部过程配置连接描述符</a>中所述。</p>
+    </li>
+
+    <li>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</li>
+  </ol>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Oracle-Advance00000211/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Oracle-Advance00000211/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>配置 Oracle Advanced Security</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_Oracle_Advance00000211">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>配置 Oracle Advanced Security</h1>
+
+  <p>使用 Oracle Net Manager 配置 Oracle Advanced Security。每个 Oracle Advanced Security 选项卡页都使您能够配置一组单独的参数。Oracle Advanced Security 将启用数据<a href="n8ahelpencryption.htm">加密</a>和<a href="n8ahelpintegrity.htm">完整性</a>检查、增强验证以及<a href="n8ahelpsingle_signon.htm">一次登入</a>。Oracle Advanced Security 还在符合 LDAP 的<a href="n8ahelpdirectory_server.htm">目录服务器</a>上提供集中式用户管理，并提供基于证书的一次登入功能，该功能依赖于&ldquo;安全套接字层 (SSL)&rdquo;。</p>
+
+  <p>要配置 Oracle Advanced Security，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 本地 &gt; 概要文件</span>。</p>
+    </li>
+
+    <li>
+      <p>从右侧窗格的列表中，选择 <span class="gui-object">Oracle Advanced Security</span>。</p>
+    </li>
+
+    <li>
+      <p>将显示下列选项卡面板：</p>
+    </li>
+
+    <li style="list-style: none">
+      <ul>
+        <li>
+          <p><a href="n8ahelpOracle_Advanced_Security_Authent.htm">验证</a></p>
+        </li>
+
+        <li>
+          <p><a href="n8ahelpOracle_Advanced_Security_Other_P.htm">其他参数</a></p>
+        </li>
+
+        <li>
+          <p><a href="n8ahelpOracle_Advanced_Security_Integri.htm">完整性</a></p>
+        </li>
+
+        <li>
+          <p><a href="n8ahelpOracle_Advanced_Security_Encrypt.htm">加密</a></p>
+        </li>
+
+        <li>
+          <p><a href="n8ahelpOracle_Advanced_Security_SSL.htm">SSL</a></p>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <p>更改您的配置。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</p>
+    </li>
+  </ol>
+
+  <p>更改将保存到 <a href="n8ahelpsqlnetora_file.htm">sqlnet.ora</a> 文件中。</p>
+
+  <p><strong>注：</strong>如果列表中没有显示 Oracle Advanced Security，则说明它尚未安装。</p>
+
+  <p>有关详细信息，请参阅 <em>Oracle Advanced Security Administrator's Guide</em>。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Desc00000028/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Desc00000028/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>配置连接到 Oracle Connection Manager 的连接描述符</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_a_Connect_Desc00000028">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1 class="gui-object">配置连接到 Oracle Connection Manager 的连接描述符</h1>
+
+  <p>要通过 <a href="n8ahelpOracle_Connection_Manager.htm">Oracle Connection Manager</a> 将客户机路由至数据库服务器，请配置 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora</a> <a href="n8ahelptnsnamesora_file.htm">文件</a>或带有指定 Oracle Connection Manager 的协议地址的<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>的目录服务器。客户机可以使用此地址连接到 Oracle Connection Manager 所在的计算机。</p>
+
+  <p>要配置 Oracle Connection Manager 的协议地址，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 目录/本地 &gt; 服务命名</span>。</p>
+    </li>
+
+    <li>
+      <p>从工具栏中选择加号 (+)，或从菜单栏中选择<span class="gui-object">编辑 &gt; 创建</span>。将显示&ldquo;网络服务名向导&rdquo;的&ldquo;欢迎使用&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>在<span class="gui-object">网络服务名</span>字段中输入任意名称。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;协议&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>选择 Oracle Connection Manager 被配置在其上监听的协议。默认情况下，该协议为 TCP/IP。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;协议设置&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>在提供的字段中为所选协议输入相应的<a href="n8ahelpprotocol_parameters.htm">协议参数</a>。如果正在使用 TCP/IP，则默认端口是 1630。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;服务&rdquo;页。</p>
+    </li>
+
+    <li style="list-style: none">
+      <p>如果目标服务是 Oracle8<em>i</em> 或更高版本的服务，请选择 <span class="gui-object">Oracle8<em>i</em> 或更高版本</span>，然后在<span class="gui-object">服务名</span>字段中输入<a href="n8ahelpprotocol_parameters.htm">服务名</a>。如果目标服务是 Oracle8 或 Oracle7，请选择 <span class="gui-object">Oracle8 或更低版本</span>，然后在<span class="gui-object">数据库 SID 字段</span>中输入 <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle 系统标识符</a>。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;服务&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>单击<span class="gui-object">完成</span>保存配置并关闭&ldquo;网络服务名向导&rdquo;。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</p>
+    </li>
+
+    <li style="list-style: none">
+      <p>新的网络服务名将添加到&ldquo;服务命名&rdquo;文件夹。</p>
+    </li>
+  </ol>
+
+  <p>有关全面启用 Oracle Connection Manager 功能的详细信息，请参阅 <em>Oracle10i Net Administrator's Guide</em> 中的第 11 章&ldquo;Configuring and Administering Oracle Connection Manager&rdquo;。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Multiple-Address-Optio/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Multiple-Address-Optio/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>配置多个地址选项</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_Multiple_Address_Optio">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>配置多个地址选项</h1>
+
+  <p>当数据库服务可被多个监听程序的<a href="n8ahelpprotocol_address.htm">协议地址</a>访问时，指定协议地址的使用顺序是非常重要的。例如，可以随机选择协议地址，或者按顺序尝试。</p>
+
+  <p>当为网络服务名或数据库服务配置了多个协议地址时，则以下选项是可配置的：</p>
+
+  <ul>
+    <li>
+      <p><a href="n8ahelpconnecttime_failover.htm">连接时故障转移</a>用来选择第一个协议地址，并在第一个协议地址失败时切换到下一个协议地址。</p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpclient_load_balancing.htm">客户机负载平衡</a>用来随机选择协议地址。</p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpsource_routing.htm">源路由选择</a>用来按顺序使用所有协议地址。</p>
+    </li>
+  </ul>
+
+  <p>要配置多个地址选项，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 目录 &gt; 本地</span>或<span class="gui-object">服务命名</span>。</p>
+    </li>
+
+    <li>
+      <p>选择网络服务名或数据库服务。右侧窗格显示当前目标服务和地址列表。</p>
+    </li>
+
+    <li>
+      <p>在<span class="gui-object">地址配置</span>框中，选择<span class="gui-object">高级</span>。此时将显示<a href="n8ahelpAddress_List_Options_dialog_box.htm">地址列表选项</a>对话框。</p>
+    </li>
+
+    <li>
+      <p>如果此配置适用于 Oracle9i 或 Oracle8i 客户机，请清除<span class="gui-object">使用与 Net8 8.0 客户机兼容的选项</span>。</p>
+    </li>
+
+    <li>
+      <p>选择协议地址列表的相应选项，然后选择<span class="gui-object">确定</span>。</p>
+    </li>
+
+    <li>
+      <p>在右侧窗格中，选择<span class="gui-object">应用</span>。</p>
+    </li>
+
+    <li>
+      <p>如果要对本地文件夹进行上述更改，请选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</p>
+    </li>
+  </ol>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Oracle-Advance00000212/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Oracle-Advance00000212/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>配置 Oracle Advanced Security 验证方法</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_Oracle_Advance00000212">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>配置 Oracle 高级安全性认证方法</h1>
+
+  <p>集中的、安全的验证方法使您高度信任分布式环境中的用户、客户机和服务器的身份。网络验证方法还为用户提供了一次登入的好处。</p>
+
+  <p>使用 Oracle Net Manager 配置下列验证适配器：</p>
+
+  <ul>
+    <li>
+      <p><a href="n8ahelpKERBEROSv5.htm">Kerberos</a></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpCyberSafe.htm">CyberSafe</a></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpRADIUS.htm">RADIUS</a></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpSSL_authentication_method.htm">SSL</a></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpWindows_NT_native_authentication.htm">Windows NT Native 认证</a></p>
+    </li>
+  </ul>
+
+  <p><strong>注：</strong>如果配置了使用 SSL 的 TCP/IP 协议，在默认情况下将配置安全套接字层 (SSL)。在此选项卡中选择的任何验证方法都将覆盖 SSL 的验证功能。使用 <a href="n8ahelpOracle_Advanced_Security_SSL.htm">SSL 选项卡</a>配置其他的 SSL 选项。如果您正在使用带有 SSL 的 TCP/IP 协议，请不要使用任何其他验证方法。</p>
+
+  <p>要配置验证方法，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 本地 &gt; 概要文件</span>。</p>
+    </li>
+
+    <li>
+      <p>从右侧窗格的列表中，选择 <span class="gui-object">Oracle Advanced Security</span>。</p>
+    </li>
+
+    <li>
+      <p>选择<a href="n8ahelpOracle_Advanced_Security_Authent.htm">验证</a>选项卡。</p>
+    </li>
+
+    <li>
+      <p>从<span class="gui-object">可用方法</span>列表中选择您要使用的验证方法，然后选择右箭头按钮 (&gt;)。</p>
+    </li>
+
+    <li>
+      <p>根据您要使用的方法为验证方法排序。在<span class="gui-object">所选方法</span>列表中选择验证方法，并使用<span class="gui-object">上移</span>或<span class="gui-object">下移</span>按钮使所选方法在列表中上移或下移。</p>
+    </li>
+
+    <li>
+      <p>选择<a href="n8ahelpOracle_Advanced_Security_Other_P.htm">其他参数</a>选项卡，为以下验证方法配置其他参数：</p>
+    </li>
+
+    <li style="list-style: none">
+      <ul>
+        <li>
+          <p><a href="n8ahelpKERBEROSv5.htm">Kerberos</a></p>
+        </li>
+
+        <li>
+          <p><a href="n8ahelpCyberSafe.htm">CyberSAFE</a></p>
+        </li>
+
+        <li>
+          <p><a href="n8ahelpRADIUS.htm">RADIUS</a></p>
+        </li>
+      </ul>
+    </li>
+
+    <li>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</li>
+  </ol>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpOracle_Advanced_Security_Authent.htm">Oracle Advanced Security：验证</a></p>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p> <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descheterog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descheterog/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>为异构服务配置连接描述符</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_a_Connect_Descheterog">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1 class="gui-object">为异构服务配置连接描述符</h1>
+
+  <p>异构服务使您能够从 Oracle 服务器访问非 Oracle 系统。要建立与非 Oracle 系统的连接，Oracle 服务器需要通过网关上的监听程序启动代理进程。为了使 Oracle 数据库连接到非 Oracle 系统，请使用<a href="n8ahelpnet_service_name.htm">网络服务名</a>配置服务器。</p>
+
+  <p>要为异构服务配置服务器，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>确保已为异构服务配置了监听程序，如<a href="n8ahelpConfigure_Heterogeneous_Services.htm">为监听程序配置异构服务</a>中所述。</p>
+    </li>
+
+    <li>
+      <p>在 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>中创建可用于 Oracle 数据库服务器与非 Oracle 系统之间的连接的网络服务名。请确保连接描述符信息与为此监听程序配置的信息相匹配。</p>
+    </li>
+
+    <li>
+      <p>在<span class="gui-object">本地 &gt; 服务命名</span>文件夹中选择网络服务名。</p>
+    </li>
+
+    <li>
+      <p>在右侧窗格的<span class="gui-object">服务标识</span>框中，选择<span class="gui-object">高级</span>。将显示<a href="n8ahelpAdvanced_Service_Options_dialog_.htm">&ldquo;高级服务选项&rdquo;对话框</a>。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">用于不同种类服务</span>，然后选择<span class="gui-object">确定</span>。</p>
+    </li>
+
+    <li>
+      <p>在右侧窗格中，选择<span class="gui-object">应用</span>。</p>
+    </li>
+
+    <li>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</li>
+  </ol>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descrdb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descrdb/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>为 Oracle Rdb 数据库配置连接描述符</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpConfigure_a_Connect_Descrdb">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1 class="gui-object">为 Oracle Rdb 数据库配置连接描述符</h1>
+
+  <p>Oracle Rdb 数据库是用于 Digital 的 64 位平台的数据库。Oracle Rdb 服务器对客户机的显示方式与 Oracle 数据库相同。Oracle Rdb 数据库有自己的监听程序。客户机配置包含使用 Oracle Rdb 特定参数创建一个<a href="n8ahelpnet_service_name.htm">网络服务名</a>以访问数据库。</p>
+
+  <p>要配置 Oracle Rdb 数据库的客户机，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>请创建网络服务名 (这在<a href="n8ahelpCreate_a_Net_Service_Name.htm">创建网络服务名</a>中进行说明)。</p>
+    </li>
+
+    <li>
+      <p>在右侧窗格的<span class="gui-object">服务标识</span>框中，选择<span class="gui-object">高级</span>。将显示<a href="n8ahelpAdvanced_Service_Options_dialog_.htm">&ldquo;高级服务选项&rdquo;对话框</a>。</p>
+    </li>
+
+    <li>
+      <p>在 <span class="gui-object">Rdb 数据库</span>字段中，输入 Oracle Rdb 数据库的文件名。</p>
+    </li>
+
+    <li>
+      <p>请随意在<span class="gui-object">全局数据库名</span>域中输入全局数据库名，并且如果需要的话，请在<span class="gui-object">服务类型</span>域输入服务类型。</p>
+    </li>
+
+    <li>
+      <p>在&ldquo;高级服务选项&rdquo;对话框中，选择<span class="gui-object">确定</span>。</p>
+    </li>
+
+    <li>
+      <p>在右侧窗格中，选择<span class="gui-object">应用</span>。</p>
+    </li>
+
+    <li>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</li>
+  </ol>
+
+  <p>有关详细信息，请参阅 Oracle Rdb 文档。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a> &nbsp;</p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCreate-a-Net-Service-Name/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCreate-a-Net-Service-Name/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>创建网络服务名</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpCreate_a_Net_Service_Name">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>创建网络服务名</h1>
+
+  <p><strong>注：</strong>只有 OracleNetAdmins 或 OracleContextAdmins 组的成员用户可以在<a href="n8ahelpdirectory_server.htm">目录</a>中创建<a href="n8ahelpnet_service_name.htm">网络服务名</a>条目。</p>
+
+  <p>要向 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>或目录服务器添加网络服务名，请执行以下操作：</p>
+
+  <ol>
+    <li>
+      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 目录/本地 &gt; 服务命名</span>。</p>
+    </li>
+
+    <li>
+      <p>从工具栏中选择加号 (+)，或从菜单栏中选择<span class="gui-object">编辑 &gt; 创建</span>。将显示&ldquo;网络服务名向导&rdquo;的&ldquo;欢迎使用&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>在<span class="gui-object">网络服务名</span>字段中输入任意名称。网络服务名可使用客户机的域进行限定。如果指定了客户机域，网络服务名将自动限定域。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;协议&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>选择配置的监听程序进行监听的协议。请注意，此协议也必须安装在客户机上。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;协议设置&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>在提供的字段中为所选协议输入相应的<a href="n8ahelpprotocol_parameters.htm">协议参数</a>。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;服务&rdquo;页。</p>
+    </li>
+
+    <li>
+      <p>选择一种发行版，输入目标服务，并且作为一种选择，可从 Oracle8i 或更高版本的&ldquo;连接类型&rdquo;列表中选择一种数据库连接类型。</p>
+
+      <p>如果目标服务是 Oracle8<em>i</em> 或更高版本的服务，请选择 <span class="gui-object">Oracle8i 或更高版本</span>，并在<span class="gui-object">服务名</span>字段中输入<a href="n8ahelpprotocol_parameters.htm">服务名</a>，然后选择<span class="gui-object">下一步</span>。如果目标服务是 Oracle8 或 Oracle7，请选择 <span class="gui-object">Oracle8 或更低版本</span>，在<span class="gui-object">数据库 SID</span> 字段中输入 <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle 系统标识符</a>，然后选择<span class="gui-object">下一步</span>。</p>
+
+      <p>Oracle Corporation 建议对连接类型使用&ldquo;数据库默认设置&rdquo;。如果在<a href="n8ahelpinitialization_parameter_file.htm">初始化参数文件</a>中配置了<a href="n8ahelpshared_server.htm">共享服务器</a>，就可以选择<span class="gui-object">专用服务器</span>迫使监听程序绕过共享服务器配置来衍生一个专用服务器。如果在服务器上启用了&ldquo;数据库驻留连接共享&rdquo;，您可以选择<strong>池中服务器</strong>，从池中获取连接。如果在初始化参数文件中配置了共享服务器，并且希望确保此连接始终使用共享服务器，请选择<span class="gui-object">共享服务器</span>。</p>
+    </li>
+
+    <li>选择下一步。此时将显示&ldquo;测试&rdquo;页。</li>
+
+    <li>选择<span class="gui-object">测试</span>以验证网络服务名是否可用，或单击&ldquo;完成&rdquo;保存配置并关闭&ldquo;网络服务名向导&rdquo;。
+
+      <p>如果选择测试，Oracle Net 将通过使用您配置的连接描述符信息连接到数据库服务器。因此，要使测试成功，数据库和监听程序必须都在运行。如果没有运行，请参阅 <em>Oracle10i Net Administrator's Guide</em> 中的第 15 章&ldquo;Establishing a Connection and Testing the Network&rdquo;来启动这些组件。一个成功的测试将产生以下消息：</p>
+
+      <p><span class="Code">连接测试成功。</span></p>
+
+      <p>如果测试成功，请选择<span class="gui-object">关闭</span>以关闭&ldquo;连接测试&rdquo;对话框，然后继续步骤 12。</p>
+
+      <p>如果测试不成功：</p>
+
+      <p>a. 确保数据库和监听程序都在运行，然后选择<span class="gui-object">测试</span>。</p>
+
+      <p>b. 选择&ldquo;更改登录&rdquo;以更改连接的用户名和口令，然后选择<span class="gui-object">测试</span>。</p>
+    </li>
+
+    <li>
+      <p>选择<span class="gui-object">完成</span>保存配置并关闭&ldquo;网络服务名向导&rdquo;。</p>
+    </li>
+
+    <li>
+      <p>请确保<a href="n8ahelpprofile.htm">概要文件</a>反映本地 (LOCAL) 或目录命名 (LDAP) 方法。</p>
+    </li>
+  </ol>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpConfigure_Default_Domains_for_Cl.htm">为客户机配置默认域</a></p>
+
+  <p><a href="n8ahelpPrioritize_Naming_Methods.htm">区分命名方法的优先次序</a></p>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p> <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCyberSafe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCyberSafe/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>CyberSafe</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpCyberSafe">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>CyberSafe</h1>
+
+  <p>CyberSafe 验证方法要求您设置以下参数：</p>
+
+  <p><span class="gui-object">GSSAPI 服务</span></p>
+
+  <p>要使用的 GSSAPI 服务的名称。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpOracle_Advanced_Security_Other_P.htm">Oracle Advanced Security：其他参数</a></p>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p> <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/30/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/32/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共223.6k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/12/数据库-2018-12-12-oracle/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-postman/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/12/数据库-2018-12-12-oracle/" itemprop="url">oracle</a></h2>
+                <a class="post-title-link" href="/2018/12/19/其他-postman/" itemprop="url">postman</a></h2>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-12T23:11:39+08:00">
-                2018-12-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
               </time>
             
 
@@ -378,8 +378,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -417,149 +417,18 @@
       
         
           
-            <p>官网：<a href="https://www.oracle.com/index.html" target="_blank" rel="noopener">https://www.oracle.com/index.html</a><br>
-版本中字母的含义：c（cloud）、g（grid）、i（internet）</p>
-<p>下载：<a href="https://www.oracle.com/downloads/%EF%BC%8C%E9%9C%80%E8%A6%81%E7%99%BB%E5%BD%95oracle%E5%AE%98%E7%BD%91%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD" target="_blank" rel="noopener">https://www.oracle.com/downloads/，需要登录oracle官网，下载的两个文件解压在一个文件夹中</a></p>
-<p>安装：</p>
-<ol>
-<li>安装Oracle11g出现INS-13001环境不满足最低要求 <a href="https://blog.csdn.net/q_sea__/article/details/79012808" target="_blank" rel="noopener">https://blog.csdn.net/q_sea__/article/details/79012808</a></li>
-<li>Environment variable: “PATH”<br>
-安装时确保不要关机或断电；安装过程中复制文件过程比较耗费时间</li>
-</ol>
-<p>完整的Oracle数据库通常由两部分组成：Oracle数据库和数据库实例。</p>
-<ol>
-<li>数据库是一系列物理文件的集合（数据文件，控制文件，联机日志，参数文件等）；</li>
-<li>Oracle数据库实例则是一组Oracle后台进程/线程以及在服务器分配的共享内存区。</li>
-</ol>
-<p>在启动Oracle数据库服务器时，实际上是在服务器的内存中创建一个Oracle实例（即在服务器内存中分配共享内存并创建相关的后台内存），然后由这个Oracle数据库实例来访问和控制磁盘中的数据文件。Oracle有一个很大的内存快，称为全局区（SGA）。</p>
-<p>数据库的创建与监听器的配置54C<br>
-创建数据库:Database Conguration Assistant,可以创建、配置、删除、管理数据库<br>
-全局数据库名称为数据库名称，其至少要有一个Oracle实例引用，该实例由SID唯一标识,如：orcl<br>
-配置Enterprise Manager会占用较大内存，先不配置;注意选择字符集;修改scott和hr的密码<br>
-sys用户为数据库的所有者，system用户为数据库的操作员<br>
-监听器的配置：Net Conguration Assistant，配置完成后在系统服务中查看添加了OracleOraDb11g_home1TNSListener,此服务启动之后就允许外部连接数据库了<br>
-OracleServiceORCL是关于数据库实例的服务，此服务启动之后，数据库才可用</p>
-<p>oracle常用数据库工具<br>
-Oracle Universal Installer：OUI（Oracle全局安装器），用来安装卸载oracle数据库管理系统<br>
-Database Conguration Assistant：(DBCA)创建、配置、删除、管理数据库<br>
-Net Conguration Assistant：(NCA)监听器、命名方法、本地网络服务名、目录使用配置<br>
-SQL Plus：基于命令行的oracle官方操作工具<br>
-SQL Devloper：基于Java的图形化的oracle官方操作工具,需人工关联sqldeveloper.exe文件和配置JDK<br>
-PL/SQL Devloper：第三方工具<br>
-TOAD：第三方工具</p>
-<p>Oracle中的用户、权限与角色<br>
-用户管理：需切换到system用户操作<br>
-创建用户：create user 用户名 identified by 密码 [account lock|unlock] [password expire];（password expire表示密码立即过期，第一次登录后需修改密码）用户创建后还需授权才能操作数据库<br>
-修改用户：alter user 用户名 identified by 密码 [account lock|unlock] [password expire];<br>
-删除用户：drop user 用户名 [cascade];(cascade用来表示删除用户下的所有数据对象)<br>
-权限管理：权限为系统中设置的安全规则或安全策略，分为系统权限（用户能否在数据库上完成某个动作）和对象权限（用户能否在某个数据库对象上完成某种操作）<br>
-系统权限授予：grant 权限 to user|role [with admin option];(表示可以级联授予)<br>
-系统权限回收：revoke 权限 from user|role;<br>
-对象权限授予：grant 权限[(col,…)] on 数据库对象 to user|role [with admin option];<br>
-对象权限回收：revoke 权限[(col,…)] on 数据库对象 from user|role;<br>
-对象权限的回收是级联的，系统权限回收是非级联的<br>
-角色管理：角色是权限的集合，用来简化权限管理<br>
-创建／删除角色：create/drop role 角色;<br>
-角色上系统权限授予：grant 权限 to role [with admin option];(表示可以级联授予)<br>
-角色上系统权限回收：revoke 权限 from 角色;<br>
-角色上对象权限授予：grant 权限[(col,…)] on 数据库对象 to role [with admin option];<br>
-角色上对象权限回收：revoke 权限[(col,…)] on 数据库对象 from role;<br>
-用户角色授予：grant 角色 to 用户;<br>
-用户角色回收：revoke 角色 from 用户;</p>
-<p>Oracle表：由行和列组成的数据库中基本的存储单元，访问其他用户的表需要加用户名作为前缀<br>
-约束：表级别约束和列级别约束，由主键、外键、非空、唯一、检查5种约束<br>
-启用表的只读状态便于备份和导出表：alter table 表名 read only;启用表的读写状态：alter table 表名 read write;</p>
-<p>Oracle事务:有一组DML组成的逻辑工作单元，有原子性、一致性、独立性和持久性</p>
-<p>序列sequence：数值生成器，通常用于生成主键值，</p>
-<p>dual是Oracle提供的最小的工作表，只有一行一列，具有某些特殊功用，只有一条记录:‘X’,习惯上,我们称之为’伪表’,他的存在是为了操作上的方便,因为select都是要有特定对象的.<br>
-select count(*) from dual;</p>
-<p>索引和同义词的使用<br>
-索引：通过关联ROWID和关键值来提升查询速度<br>
-同义词：数据库对象的别名，public同义词对所有用户有用，创建需一定权限<br>
-创建：create [public] synonym 名称 for object;<br>
-删除：drop [public] synonym 名称 for object;</p>
-<p>PL/SQL：是一种程序语言，叫做过程化SQL语言（Procedural Language/SQL）。PL/SQL是Oracle数据库对SQL语句的扩展。在普通SQL语句的使用上增加了编程语言的特点<br>
-官网：<a href="https://www.oracle.com/technetwork/database/features/plsql/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/database/features/plsql/index.html</a><br>
-PL/SQL developer官网：<a href="https://www.allroundautomations.com/" target="_blank" rel="noopener">https://www.allroundautomations.com/</a><br>
-PLSQL Developer 12 注册码<br>
-product code： 4vkjwhfeh3ufnqnmpr9brvcuyujrx3n3le<br>
-serial Number：226959<br>
-password: xs374ca</p>
-<p>配置pl/sql的Database的两种方式：<br>
-确保OracleOraDb11g_home1TNSListener和OracleServiceXXXX服务已启动<br>
-1.登录时直接在Database选项输入数据库信息:在登录时输入数据库信息 ip:端口/数据库名,如：127.0.0.1:1521/ORCL<br>
-2.配置product\11.2.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora文件，添加一下内容到文档最后，登录时输入如ORCL即可登录<br>
-ORCL =<br>
-(DESCRIPTION =<br>
-(ADDRESS_LIST =<br>
-(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))<br>
-)<br>
-(CONNECT_DATA =<br>
-(SERVER = DEDICATED)<br>
-(SERVICE_NAME = ORCL)<br>
-)<br>
-)</p>
-<p><a href="https://www.jikexueyuan.com/course/oracledb/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/</a></p>
-<p><a href="https://www.oracle.com/technetwork/topics/winsoft-085727.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/topics/winsoft-085727.html</a></p>
-<p><a href="https://www.cnblogs.com/xiashiwendao/p/7634240.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiashiwendao/p/7634240.html</a></p>
-<p>严格来讲SQL会分为三种类型:</p>
-<p>1、数据操纵语言（DML）：用来操纵数据库中数据的命令。包括：select、insert、update、delete。</p>
-<p>2、数据定义语言（DDL）：用来建立数据库、数据库对象和定义列的命令。包括：create、alter、drop。</p>
-<p>3、数据控制语言（DCL）：用来控制数据库组件</p>
-<p>用select * from tab;来查询用户下的表<br>
-查看表结构用:DESC 表名称</p>
-<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
-全局数据库名：就是一个数据库的标识，在安装时就要想好，以后一般不修改，修改起来也麻烦，因为数据库一旦安装，数据库名就写进了控制文件，数据库表，很多地方都会用到这个数据库名。<br>
-启动数据库：也叫全局数据库，是数据库系统的入口，它会内置一些高级权限的用户如SYS，SYSTEM等。我们用这些高级权限账号登陆就可以在数据库实例中创建表空间，用户，表了。</p>
-<p>查询当前数据库名：select name from v$database;</p>
-<p>我们访问Oracle都是访问一个实例，但这个实例如果关联了数据库文件，就是可以访问的，如果没有，就会得到实例不可用的错误。<br>
-实例名指的是用于响应某个数据库操作的数据库管理系统的名称。她同时也叫SID。实例名是由参数instance_name决定的<br>
-查询当前数据库实例名：select instance_name from v$instance;</p>
-<p>从oracle9i版本开始，引入了一个新的参数，即数据库服务名。数据库的逻辑表示，它是数据库呈现给客户机的方式。参数名是SERVICE_NAME。如果数据库有域名，则数据库服务名就是全局数据库名；否则，数据库服务名与数据库名相同。</p>
-<p>网络服务名(NET SERVICES NAME)<br>
-         它是“连接描述符”简称，连接描述符是网络连接目标特殊格式的描述，它包括网络协议、主机名称或地址、和目标服务<br>
-         在Oracle7和Oracle8版本,目标服务由Oracle系统标识符(SID)来标识，而Oracle8i、Oracle9i则通过数据库服务名来来标识。保存tnsnames.ora文件中在格式如下：<br>
- myDB =<br>
-   (DESCRIPTION =<br>
-     (ADDRESS_LIST =<br>
-       (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.10.1)(PORT = 1521))<br>
-     )<br>
-     (CONNECT_DATA =<br>
-       (SERVICE_NAME = <a href="http://testDB.ChinaMobile.com" target="_blank" rel="noopener">testDB.ChinaMobile.com</a>)<br>
-     )<br>
-   )</p>
-<p>若要向ORACLE代理商购买ORACLE，是以用户数来算钱的。那么，这个“用户”跟我们在ORACLE中通过</p>
-<p>CREATE USER USERNAME IDENTIFIED BY PASSWORD创建的用户是不同概念，“用户数”指的是并发访问用户数，</p>
-<p>（我理解是同时间访问同一个内存地址的进程数）。要是我买了8个用户的，可以建几十、上百个用户也没问题，只要峰值达不到并发数就可以了。</p>
-<p>打个比方，你的名字叫小明，但是你有很多外号。你父母叫你小明，但是朋友都叫你的外号。<br>
-这里你的父母就是oracle实例，小明就是sid，service name就是你的外号。<br>
-sid用于实例区分各个数据库，service name用于外部链接。</p>
-<p>一个Oracle Server由一个Oracle实例和一个Oracle数据库组成。<br>
-即：Oracle Server = Oracle Instance + Oracle Database</p>
-<p>Oracle实例包括了内存结构(SGA)和一系列后台进程(Background Process),两者合起来称为一个Oracle实例，即：Oracle Instance = SGA + Background Process</p>
-<p>数据库逻辑组织结构<br>
-表空间、段、区、块<br>
-一个数据库由一个或多个表空间组成，一个表空间只能属于一个数据库<br>
-一个表空间由一个或多个多个数据文件组成，一个数据文件只能属于一个表空间<br>
-一个数据文件由一个或多个操作系统块组成，每一个操作系统块只能数以一个数据文件<br>
-一个表空间可以包含一个或多个段，一个段只能属于一个表空间<br>
-一个段由一个或多个区组成，每一个区只能属于一个段<br>
-一个区由一个或多个Oracle 块组成，每一个Oracle块只能属于一个区<br>
-一个区只能属于一个数据文件，数据文件的空间可以分配到一个或多个区<br>
-一个Oracle 块由一个或多个操作系统块组成，一个操作系统块是一个Oracle块的一部分</p>
-<p><a href="https://blog.csdn.net/prince_lintb/article/details/78772999" target="_blank" rel="noopener">https://blog.csdn.net/prince_lintb/article/details/78772999</a></p>
-<p>pl/sql plus： &quot;／&quot;表示执行</p>
-<p>scott库：<a href="https://www.2cto.com/database/201805/742911.html" target="_blank" rel="noopener">https://www.2cto.com/database/201805/742911.html</a></p>
-<p><a href="https://www.cnblogs.com/adforce/p/3312252.html" target="_blank" rel="noopener">https://www.cnblogs.com/adforce/p/3312252.html</a><br>
-<a href="http://www.cnblogs.com/kscnchina/p/4570865.html" target="_blank" rel="noopener">http://www.cnblogs.com/kscnchina/p/4570865.html</a></p>
-<p>声明时，变量以v_开头，常量以c_开头</p>
-<p><a href="https://blog.csdn.net/michaelehome/article/details/79464214" target="_blank" rel="noopener">https://blog.csdn.net/michaelehome/article/details/79464214</a></p>
-<p>select userenv(‘language’) from dual;<br>
-NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
-<p>字符集：<a href="https://www.cnblogs.com/kaishirenshi/p/9018343.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaishirenshi/p/9018343.html</a></p>
-<p>本地动态sql</p>
-<p>SQL环境  begin … end pl/sql环境</p>
-<p>一组SQL语句操作要成为事务，数据库管理系统必须保证这组操作的原子性（Atomicity）、一致性（consistency）、隔离性（Isolation）和持久性（Durability），这就是ACID特性。</p>
+            <p><a href="https://www.cnblogs.com/haoduoyu/p/5864775.html" target="_blank" rel="noopener">https://www.cnblogs.com/haoduoyu/p/5864775.html</a><br>
+插件网<br>
+<a href="http://www.cnplugins.com/tool/specify-postman-methods.html" target="_blank" rel="noopener">http://www.cnplugins.com/tool/specify-postman-methods.html</a><br>
+<a href="http://www.cnplugins.com/tool/specify-postman-methods.html" target="_blank" rel="noopener">http://www.cnplugins.com/tool/specify-postman-methods.html</a><br>
+<a href="https://www.cnblogs.com/s380774061/p/4624326.html" target="_blank" rel="noopener">https://www.cnblogs.com/s380774061/p/4624326.html</a>   推荐<br>
+<a href="https://blog.csdn.net/five3/article/details/53021084" target="_blank" rel="noopener">https://blog.csdn.net/five3/article/details/53021084</a>   推荐<br>
+<a href="https://blog.csdn.net/u013613428/article/details/51557804" target="_blank" rel="noopener">https://blog.csdn.net/u013613428/article/details/51557804</a>   推荐<br>
+<a href="https://blog.csdn.net/xiaosongbk/article/details/52801207" target="_blank" rel="noopener">https://blog.csdn.net/xiaosongbk/article/details/52801207</a>  token问题<br>
+<a href="https://blog.csdn.net/u011320646/article/details/77141876" target="_blank" rel="noopener">https://blog.csdn.net/u011320646/article/details/77141876</a> token问题</p>
+<p><a href="http://www.graphicsmagick.org/" target="_blank" rel="noopener">http://www.graphicsmagick.org/</a><br>
+<a href="http://baijiahao.baidu.com/s?id=1574259218782197&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">http://baijiahao.baidu.com/s?id=1574259218782197&amp;wfr=spider&amp;for=pc</a></p>
+<p><a href="https://github.com/dmytrodanylyk/folding-plugin" target="_blank" rel="noopener">https://github.com/dmytrodanylyk/folding-plugin</a></p>
 
           
         
@@ -617,7 +486,7 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/10/Java-2018-12-10-MyBatis/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-gitbook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -636,7 +505,7 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/10/Java-2018-12-10-MyBatis/" itemprop="url">MyBatis</a></h2>
+                <a class="post-title-link" href="/2018/12/19/其他-gitbook/" itemprop="url">gitbook使用</a></h2>
         
 
         <div class="post-meta">
@@ -648,8 +517,8 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T13:43:24+08:00">
-                2018-12-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
               </time>
             
 
@@ -671,8 +540,8 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -710,1516 +579,1719 @@ NLS_LANG=“AMERICAN_AMERICA.AL32UTF8”</p>
       
         
           
-            <p>Java持久化框架 瞬态+持久态</p>
-<p>iBatis-MyBatis<br>
-apache-google-github</p>
-<p>SQL语句与代码分离；面向配置编程；良好支持复杂数据映射；动态SQL</p>
-<p><a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">https://github.com/mybatis/mybatis-3</a><br>
-<a href="http://www.mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/index.html</a></p>
-<p>日志配置<br>
-<a href="https://www.cnblogs.com/zhaozihan/p/6371133.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaozihan/p/6371133.html</a></p>
-<p>MyBatisg工作流程</p>
-<ol>
-<li>读取配置文件</li>
-<li>生成SqlSessionFactory,表示和数据库的连接，一般是程序级的生命周期</li>
-<li>简历SqlSession</li>
-<li>调用MyBatist提供的API</li>
-<li>查询Map配置</li>
-<li>返回结果</li>
-<li>关闭SqlSession</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">  PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">  &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">  &lt;environments default=&quot;development&quot;&gt;</span><br><span class="line">    &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">      &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">      &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;driver&quot; value=&quot;$&#123;driver&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;url&quot; value=&quot;$&#123;url&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;username&quot; value=&quot;$&#123;username&#125;&quot;/&gt;</span><br><span class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;password&#125;&quot;/&gt;</span><br><span class="line">      &lt;/dataSource&gt;</span><br><span class="line">    &lt;/environment&gt;</span><br><span class="line">  &lt;/environments&gt;</span><br><span class="line">  &lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=&quot;org/mybatis/example/BlogMapper.xml&quot;/&gt;</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<p>map文件引用<br>
-1.相对路径 2.绝对路径 3.包路径</p>
-<p>MyBatis配置文件：基本配置文件+映射配置文件</p>
-<p>typeAliases标记定义别名，需要environments标记之前</p>
-<p>map文件方式+注解方式（接口方式）</p>
-<p>mappers里面3种写法：resource／class／package</p>
-<p>Select配置属性说明<br>
-两者只能有一个成立<br>
-resultType<br>
-resultMap解决复杂查询时的映射问题，如属性为对象</p>
-<p>parameterType封装hashmap，key既是key也是sql形参<br>
-parameterType封装对象如User，对象参数自动匹配属性，如果对象属性和列名不一样用别名</p>
-<p>返回多上记录时MyBatis自动封装成List</p>
-<p>事务处理：<br>
-MyBatis事务处理由两种方式处理：JDBC+MANAGED</p>
-<p>每张表单独的一个配置文件，方便管理</p>
-<p>MyBatis自动id返回，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one.setUserName(&quot;123&quot;);</span><br><span class="line">session.insert(&quot;insertOne&quot;,one);</span><br><span class="line">System.out.println(one.id);  //可以正常获取id</span><br></pre></td></tr></table></figure>
-<p>高级查询<br>
-关联查询<br>
-联合查询：association<br>
-构造查询：POJO添加构造函数，同时确保要有默认构造函数，防止构造函数重新后找不到默认构造函数<br>
-子查询：所有联合查询，都可以通过子查询替换，但是他让查询成了N+1次的查询</p>
-<pre><code>子查询和联合查询的区别：
-联合查询一次查询占用资源大，子查询N+1次查询占用资源可大可小，MyBatis中子查询可能速度比联合查询速度高如果开启了懒加载的话
-懒加载的使用：配置要在配置别名之前
-</code></pre>
-<p>集合查询：Collection标记，适用于查询的对象还有一个集合引用的事后<br>
-鉴别器：discriminator标记<br>
-javaType属性：<br>
-Column属性：<br>
-Case子标记：</p>
-<p>MyBatis动态SQL：动态生成SQL</p>
-<p><a href="https://www.aliyun.com/jiaocheng/811373.html" target="_blank" rel="noopener">https://www.aliyun.com/jiaocheng/811373.html</a></p>
-<p><a href="https://www.jikexueyuan.com/course/oracledb/1-0-0-0/" target="_blank" rel="noopener">https://www.jikexueyuan.com/course/oracledb/1-0-0-0/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-Kotlin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-Kotlin/" itemprop="url">Kotlin</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
-                    <span itemprop="name">Kotlin</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://kotlinlang.org/" target="_blank" rel="noopener">http://kotlinlang.org/</a><br>
-<a href="https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt" target="_blank" rel="noopener">https://try.kotlinlang.org/#/Examples/Hello, world!/Simplest version/Simplest version.kt</a></p>
-<p>Kotlin作者Andrey<br>
-Kotlin是一种在 Java 虚拟机上运行的静态类型编程语言,被称之为 Android 世界的Swift,由 JetBrains 设计开发并开源<br>
-Kotlin是一种运行在Java虚拟机、Android、浏览器上的静态语言<br>
-Kotlin可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。<br>
-Android官方语言；100%兼容Java；Kotlin-js前端开发；Kotlin-jvm服务端开发；Kotlin-native本地执行程序；Kotlin是一门全栈语言</p>
-<p>千里之行，始于Hello World</p>
-<p>Kotlin不存在拆箱装箱问题;Kotlin不可隐式转换类型<br>
-var tmp:[类型]=[变量值]</p>
-<p>Boolean类型<br>
-Number数据类型：Byte，Short，Int，Long，Float，Double<br>
-Char数据类型：Char<br>
-String数据类型：String         字符串a==b 比较内容；a===b比较应用  字符串模版$args1  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>1</mn><mo>+</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>s</mi><mn>2</mn></mrow><mo separator="true">,</mo><mi mathvariant="normal">引</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">中</mi></mrow><annotation encoding="application/x-tex">{args1+args2},引号中</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">s</span><span class="mord">2</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">中</span></span></span></span>引用变量 ，多行<br>
-var a:String …<br>
-a1<br>
-a2<br>
-…</p>
-<p>Kotlin中 Any 等于 Java中 Object，是顶级类</p>
-<p>空类型：任意类型都有可空和不可空两种状态，？表示可为空，!!表示强制认定nullable不可为空<br>
-fun main(args:Array<string>){<br>
-var name:String = getName() ?: return<br>
-println(name)</string></p>
-<pre><code>var tmp:String? = &quot;Hello Kotlin&quot;
-println(tmp)
-println(tmp!!.length)
-</code></pre>
-<p>}</p>
-<p>fun getName():String?{<br>
-return null<br>
-}</p>
-<p>智能类型转换<br>
-Java方式的：var sub:Subclass = parent as Subclass   //类似于Java方式，转换异常则会抛异常<br>
-安全类型转换：var sub:Subclass? = parent as? Subclass   //如果转换失败，则返回null，不抛异常</p>
-<p>if(parent is Subclass)</p>
-<p>import com.test as test</p>
-<p>区间Range:一个数学上的概念，表示范围；是ClosedRange的子类，IntRange最常用；i in 0…1024 判断i是否在区间内<br>
-var range:IntRange = 0…1024    //[0,1024]<br>
-var range:IntRange = 0 until 1024    //[0,1024) == [0,1023]</p>
-<p>className::java.class.name<br>
-className::java.class.simpleName</p>
-<p>数组: val array:Array&lt;&gt; = arrayOf(…)<br>
-为了避免不必要的拆箱和装箱，基本类型的数组是定制的<br>
-val arrayOfInt:IntArray = intArrayOf(1,2,4)<br>
-val arrayOfChar:CharArray = charArrayOf(‘H’,‘e’,‘y’)<br>
-val arrayOfString: Array<string> = arrayOf(“Hello”,“Kotlin”)<br>
-val arrayOfOther:Array<other> = arrayOf(Other(1),Other(2))</other></string></p>
-<p>常量：val，常量因为赋值了，编译器可以推导出来类型，所以类型可以不用写，变量：var</p>
-<p>External Tools<br>
-Tools-&gt;Kotlin-&gt;Show Kotlin Bytecode</p>
-<p>函数：Kotlin中没有申明返回值的默认返回值是Unit<br>
-kotlinc安装，使用和javac一样<br>
-变量函数<br>
-var int2Long = fun(x:Int):Long{<br>
-return x.toLong()<br>
-}<br>
-int2Long(123)<br>
-fun sum(arg1:Int,arg2:Int) = arg1+arg2<br>
-Lambda表达式调用使用()或者invoke(),如：sum(1,2) 或 sum.invoke(1,2)<br>
-Lambda表达式–匿名函数</p>
-<p>var = {arg1:Int,arg2:Int -&gt; arg1+arg2}</p>
-<p>arrayOfString.forEach { println(it) }   //如果字面函数只有一个参数,可以省略该参数声明,并用“it”代替<br>
-arrayOfString.forEach(::println)</p>
-<p>Lambda表达式中的return<br>
-<a href="https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app" target="_blank" rel="noopener">https://www.jianshu.com/p/92cd94cba709?utm_source=oschina-app</a></p>
-<p>public inline fun <t> Array<out t="">.forEach(action: (T) -&gt; Unit): Unit {<br>
-for (element in this) action(element)<br>
-}</out></t></p>
-<p>indexes.forEach {<br>
-if (it &gt; 5) {<br>
-return@forEach<br>
-}<br>
-println(it)<br>
-}</p>
-<p>indexes.forEach label@ {<br>
-if (it &gt; 5) {<br>
-return @label<br>
-}<br>
-println(it)<br>
-}</p>
-<p>函数参数调用时最后一个Lambda可以移出去<br>
-函数参数只有一个Lambda，调用时小括号可以省略<br>
-Lambda有一个参数，可默认为it<br>
-入参、返回值与形参一致的函数可以用函数引用的方式作为实参传入</p>
-<p>类成员方法和成员变量<br>
-class B<br>
-class A{<br>
-var b=0;<br>
-lateinit var c:String<br>
-val d:B by lazy{<br>
-B()<br>
-}<br>
-}<br>
-属性初始化</p>
-<ol>
-<li>尽量在构造方法中完成</li>
-<li>无法在构造方法中完成的，尝试降级为局部变量</li>
-<li>var用lateinit延迟初始化，val用lazy</li>
-<li>可空类型慎用null直接初始化</li>
-</ol>
-<p>中缀表达式：只有一个参数，且用infix修饰的函数<br>
-class Book {infix fun on(placeString:String){…}}<br>
-Book() on “My Desk” //使用方式<br>
-分支表达式：<br>
-val mode=if(args.isNotEmpty() &amp;&amp; args[0] ==1){<br>
-0<br>
-}else{<br>
-1<br>
-}</p>
-<p>异常捕捉<br>
-try …catch …finally中的执行完之后，再返回结果，可通过var获取返回值</p>
-<p>具名参数：sum(arg1=2,arg0=3)  //参数就可以不按照顺序传递了<br>
-变长参数：如main方法中的args<br>
-fun test(vararg  args:String){}<br>
-默认参数：给出参数默认值</p>
-<p>导出可执行程序</p>
-<p>kotlin应用场景：</p>
-<p>kotlin-android</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-Java8-特性/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Java-Java8-特性/" itemprop="url">Java8 特性</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="sam接口"><a class="markdownIt-Anchor" href="#sam接口"></a> SAM接口</h1>
-<p>Java8中增加了一个新的包：java.util.function，它里面包含了常用的函数式接口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Predicate&lt;T&gt;——接收T对象并返回boolean</span><br><span class="line">Consumer&lt;T&gt;——接收T对象，不返回值</span><br><span class="line">Function&lt;T, R&gt;——接收T对象，返回R对象</span><br><span class="line">Supplier&lt;T&gt;——提供T对象（例如工厂），不接收值</span><br><span class="line">UnaryOperator&lt;T&gt;——接收T对象，返回T对象</span><br><span class="line">BinaryOperator&lt;T&gt;——接收两个T对象，返回T对象</span><br></pre></td></tr></table></figure>
-<h1 id="lambda表达式"><a class="markdownIt-Anchor" href="#lambda表达式"></a> lambda表达式</h1>
-<p>参考：<a href="http://note.youdao.com/noteshare?id=3bc7675e64b86f5e9b75534c0e436694" target="_blank" rel="noopener">http://note.youdao.com/noteshare?id=3bc7675e64b86f5e9b75534c0e436694</a></p>
-<h1 id="方法引用和构造器引用"><a class="markdownIt-Anchor" href="#方法引用和构造器引用"></a> 方法引用和构造器引用</h1>
-<h2 id="方法引用"><a class="markdownIt-Anchor" href="#方法引用"></a> 方法引用</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">objectName::instanceMethod</span><br><span class="line"></span><br><span class="line">ClassName::staticMethod</span><br><span class="line"></span><br><span class="line">ClassName::instanceMethod</span><br></pre></td></tr></table></figure>
-<ol>
-<li>前两种方式类似，等同于把lambda表达式的参数直接当成instanceMethod|staticMethod的参数来调用</li>
-<li>最后一种方式，等同于把lambda表达式的第一个参数当成instanceMethod的目标对象，其他剩余参数当成该方法的参数</li>
-</ol>
-<h2 id="构造器引用"><a class="markdownIt-Anchor" href="#构造器引用"></a> 构造器引用</h2>
-<p>构造器引用语法如下：ClassName::new，把lambda表达式的参数当成ClassName构造器的参数 。例如BigDecimal::new等同于x-&gt;new BigDecimal(x)</p>
-<h1 id="stream语法"><a class="markdownIt-Anchor" href="#stream语法"></a> Stream语法</h1>
-<p>stream就是JAVA8提供给我们的对于元素集合统一、快速、并行操作的一种方式。<br>
-它能充分运用多核的优势，以及配合lambda表达式、链式结构对集合等进行许多有用的操作</p>
-<ol>
-<li>Stream是元素的集合，这点让Stream看起来用些类似Iterator,可以把Stream当成一个装饰后的Iterator；</li>
-<li>可以支持顺序和并行的对原Stream进行汇聚的操作；</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; nums = Lists.newArrayList(1,null,3,4,null,6);</span><br><span class="line">nums.stream().filter(num -&gt; num != null).count();</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Linux-CentOS查看硬件信息/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Linux-CentOS查看硬件信息/" itemprop="url">CentOS查看硬件信息</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>操作系统信息：lsb_release -a ；uname -a</li>
-<li>查看网卡型号：lspci | grep  Ethernet controller</li>
-<li>查看硬盘信息：df -ah</li>
-<li>查看内存信息：cat /proc/meminfo</li>
-<li>查看CPU信息：more /proc/cpuinfo | grep “model name”</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Linux-Linux-nc命令使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Linux-Linux-nc命令使用/" itemprop="url">Linux nc命令使用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/jjzd/p/6306273.html" target="_blank" rel="noopener">https://www.cnblogs.com/jjzd/p/6306273.html</a></p>
-<p><a href="https://blog.csdn.net/zhangxiao93/article/details/52705642" target="_blank" rel="noopener">https://blog.csdn.net/zhangxiao93/article/details/52705642</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Linux-Linux防火墙管理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Linux-Linux防火墙管理/" itemprop="url">Linux防火墙管理</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>查看防火墙状态： firewall-cmd --state</li>
-<li>service firewall start|stop|restart</li>
-<li>端口管理：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --add-port=8080-8085/tcp</span><br><span class="line">firewall-cmd --permanent --remove-port=8080-8085/tcp</span><br></pre></td></tr></table></figure>
+            <p><a href="https://my.oschina.net/huangyong/blog/372491" target="_blank" rel="noopener">https://my.oschina.net/huangyong/blog/372491</a></p>
+<p><a href="http://www.widuu.com/chinese_docker/userguide/dockerhub.html" target="_blank" rel="noopener">http://www.widuu.com/chinese_docker/userguide/dockerhub.html</a>     gitbook教程</p>
+<h1 id="简介及安装"><a class="markdownIt-Anchor" href="#简介及安装"></a> 简介及安装</h1>
+<p>Gitbook是一个开源的跨平台电子书解决方案。通过Gitbook，可以使用Markdown或者AsciiDoc来编写电子书，然后生成静态网页电子书，pdf，mobi，epub格式</p>
+<p>在使用GitBook 之前, 我们需要先安装一些必须的工具，Node.js、GitBook、GitBook Editor、Git版本控制器</p>
 <ul>
-<li>启用防火墙设置：firewall-cmd reload</li>
-<li>firewall-cmd --permanent --list-ports</li>
-<li>firewall-cmd --permanent --list-services</li>
+<li>静态站点：GitBook默认输出该种格式</li>
+<li>PDF：需要安装gitbook-pdf依赖</li>
+<li>eBook：需要安装ebook-convert</li>
 </ul>
-<p><a href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank" rel="noopener">https://www.cnblogs.com/moxiaoan/p/5683743.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Linux-Linux文件目录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Linux-Linux文件目录/" itemprop="url">Linux文件目录</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>![image](/pub-images/Linux 文件目录.png)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-JSP知识点小记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Java-JSP知识点小记/" itemprop="url">JSP知识点小记</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T21:25:33+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line">1.	JSP文件中的元素可分为5类：</span><br><span class="line">A 注释 &lt;!--  --&gt;  隐藏注视：不发给客户  &lt;%--  --%&gt;    java中的注释</span><br><span class="line">B 模板元素   HTMl元素</span><br><span class="line">C 脚本元素 </span><br><span class="line">1. 声明：&lt;%!  %&gt;   </span><br><span class="line">2.表达式  &lt;%=  %&gt; </span><br><span class="line">3.Scriptlets  &lt;%  %&gt;  是JSP中页面处理请求是执行的Java代码</span><br><span class="line">D 指令元素 </span><br><span class="line">	1. page指令 </span><br><span class="line"> 2．include指令(静态，编译时包含检查错误了，区别于动作包含)  </span><br><span class="line">3.taglib指令   允许使用自定义标签</span><br><span class="line">E动作元素   &lt;jsp:   &gt;</span><br><span class="line">2.	表达式语言用$&#123;&#125;表示</span><br><span class="line">3.	JSP内建对象</span><br><span class="line">所有的内建对象都是由容器管理和实现，在所有的JSP页面中都可以使用该内部对象</span><br><span class="line">1.	request           javax.servelt.ServletRequset的子类</span><br><span class="line">2.	response          javax.servelt.ServletResponse的子类</span><br><span class="line">3.	pageContext 		javax.servelt.jsp.PageContext的子类</span><br><span class="line">4.	session 			javax.servlet.http.HtttpSession</span><br><span class="line">5.	application   		javx.servlet.ServletContext</span><br><span class="line">6.	out				javax.servlet.jsp.JspWriter</span><br><span class="line">7.	config			javax.servlet.ServletConfig</span><br><span class="line">8.	page				javax.lang.Object</span><br><span class="line">9.	exception			java.lang.Throwable</span><br><span class="line">4.	JSP内建对象详解</span><br><span class="line">一．	Out对象</span><br><span class="line">表示为客户打开的输出流PrintWriter通过他向客户端发送输出六，简单的说，它主要用来向客户端输出数据，代表输出流的对象</span><br><span class="line">区分：out.clear();方法清除缓冲区的数据，并把数据输出到客户端</span><br><span class="line">		 Out.clearBuffer();方法清除缓冲区的数据，但不把数据输出到客户端</span><br><span class="line">其中的方法有print和println，但是println并没有换行的的作用，因为被浏览器忽略了，用println（“&lt;br&gt;”）；</span><br><span class="line">二、	request对象</span><br><span class="line">表示请求对象，通过gerParameter方法可以得到request对象的参数，通过Cookies、Referer等可以得到请求的HTTP头。</span><br><span class="line">来自客户端的请求经Servlet容器处理后，由request对象进行封装。</span><br><span class="line">isUserRole方法判断认证后的用户是否属于逻辑的Role的会员</span><br><span class="line">三、	response对象</span><br><span class="line">   response封装了JSP产生的响应，然后被发送到客户端以响应客户的请求，输出流是有缓冲的</span><br><span class="line">四、	session对象</span><br><span class="line">session对西安用来保存每个用户的信息，以便跟踪每个客户的操作状态。其中，session信息保存在容器中，session的ID保存在客户机的Cookie中。</span><br><span class="line">如果客户端禁掉了Cookies，则会自动的转化为URL-rewriting(重写ＵＲＬ，这个ＵＲＬ中包含客户端的信息)，session自动为每个流程提供方便的存储信息的方法。</span><br><span class="line">	Invalidate方法销毁这个session对象，使得和他绑定的对象都失效</span><br><span class="line">五、	pageContext对象</span><br><span class="line">他为ＪＳＰ页面包装了页面的上下文，管理对属于ＪＳＰ中特殊可见部分中已命名对象的访问。创建和初始化是由容器完成的。ＪＳＰ页面中可以直接使用pageContext对象的句柄</span><br><span class="line">	pageContext对象的getXXX()/setXXX()/findXXX()方法可以用来根据不同的对象范围实现对不同范围内的对象的管理</span><br><span class="line">	forward()方法重定向</span><br><span class="line">注意： pageContext属性默认在当前的页面是共享的</span><br><span class="line">	   Session中的属性在当前是session中是共享的</span><br><span class="line">	   ServletContext对象中的属性对所有页面是共享的</span><br><span class="line">六、	application对象</span><br><span class="line">他为多个应用程序保存信息。对于一个容器而已，每个用户都共同是由一个application对象，他和服务器同生同死</span><br><span class="line">getAttributeNames返回的是一个枚举的实例</span><br><span class="line">可以用来做网站计数器（刷新的时候变了？当服务器关闭时就从0开始计数，解决方法是每当服务器宕机后设置技术的初始值）</span><br><span class="line">七、	config对象</span><br><span class="line">他表示servlet的配置，当一个容器初始化的时候，容器把某些信息通过此对象传递给这个Servlet</span><br><span class="line">getServletContext（）返回执行者的Servlet上下文</span><br><span class="line">getInitParameter 和getInitParameterNames返回初始值</span><br><span class="line">八、	page对象</span><br><span class="line">他指的是JSP实现类的实例，即他就是JSP本身，通过这个可以对他进行访问</span><br><span class="line">九、	exception对象</span><br><span class="line">他值得是运行时的异常，也就是被调用的错误页面（isErrorPage==true）的结果，只有在错误页面中才可以使用</span><br><span class="line">5.	JSP中使用JavaBean</span><br><span class="line">JavaBean往往封装了程序的页面逻辑，它是可重用的组建</span><br><span class="line">区别：JavaBean和Enterprise  JavaBean概念是完全不同的。</span><br><span class="line">	EJB为开发服务器端应用程序组件提供了一个模型，利用这个模型来创建可移植与分布式企业应用程序服务器或组件。</span><br><span class="line">	JavaBean的属性是Bean组件内部状态的抽象表示，可分为四类：</span><br><span class="line">A．Simple  B。Indexed （可以操作数组） C。Bound   D。Constrained</span><br><span class="line">6、	动态页面和用户会话</span><br><span class="line">	JSP是一种动态页面技术</span><br><span class="line">动态网页的动态主要是以下几个方面获得：</span><br><span class="line">1.	根据时间的动态</span><br><span class="line">2.	根据用户类型的动态</span><br><span class="line">3.	根据用户自定义信息的动态</span><br><span class="line">4.	根据用户来自地区的动态</span><br><span class="line">5.	根据数据库内容的动态</span><br><span class="line">用户会会话跟踪</span><br><span class="line">不同页面间的信息交换：</span><br><span class="line">	1.	HTTP信息</span><br><span class="line">将信息保存在HTTP头部，以淘汰了</span><br><span class="line">2． 隐藏字段</span><br><span class="line">&lt;input type=”hiddern” name=”” value=””&gt;</span><br><span class="line">3. URL重写</span><br><span class="line">&lt;a href=”   ?name=3&amp;……”&gt;&lt;/a&gt;</span><br><span class="line">缺点:不安全，连接长度   （URL长度一般是2KB）</span><br><span class="line">4.Cookie</span><br><span class="line">5.session</span><br><span class="line">7  Sevlet技术</span><br><span class="line">Servlet先于JEE平台而出现</span><br><span class="line">Servlet是由服务器端调用和执行的、按照Servlet自身规范编写的Java类，可以实现Java编写的所有功能除图形界面以外</span><br><span class="line">作用：可以处理客户端传过来的HTTP请求，并返回一个响应。</span><br><span class="line">Servlet的生命周期：</span><br><span class="line">1．	装载Servlet</span><br><span class="line">2．	创建Servlet对象</span><br><span class="line">3．	调用Servlet的init方法</span><br><span class="line">4．	服务  调用service方法</span><br><span class="line">5．	销毁   调用Servlet的destroy方法</span><br><span class="line">平常编写Servlet一般都直接继承HttpServlet</span><br><span class="line">重点：编写配置文件</span><br><span class="line">8. Servlet常用接口的使用</span><br><span class="line">一、  Servlet实现相关</span><br><span class="line">Public interface Servlet 是所有Servlet必须直接或间接实现的接口，有init，destroy，service等方法</span><br><span class="line">Public abstract class GenericServlet implements Servlet，ServletConfig，java.io.Serializable</span><br><span class="line">其方法service是抽象方法</span><br><span class="line">Public abstract class HttpServlet extends GenericServlet implements java.io.Serializable</span><br><span class="line">他是针对使用HTTP协议的Web服务器的Servlet类，通过执行Servlet接口，能够提供HTTP协议的功能</span><br><span class="line">二、Servlet配置相关</span><br><span class="line">Javax.servlet.ServletConfig接口代表Servlet的配置，包括Servlet的名字，促使参数和上下文。</span><br><span class="line">Public interface ServletConfig 有getInitParameter方法，getServletContext等方法</span><br><span class="line">三、Servlet异常相关</span><br><span class="line">1、public class ServletException extends Exception  方法getRootCase返回异常产生原因</span><br><span class="line">2、public class UnavailableException  extends ServletException</span><br><span class="line">当Servelet或Filter不能使用时抛出此异常</span><br><span class="line">四、 请求和相应相关</span><br><span class="line">ServletRequest 、ervletI/O、ServletRequestWrapper（ServletRequest的实现类）、HttpServletReqest等</span><br><span class="line">五、会话跟踪</span><br><span class="line">Public interface HttpSession</span><br><span class="line">此接口被Servlet引擎用来实现HTTP客户端和HTTP会话两者之间的关联。Session用来再无状态的HTTP协议下越过多个请求页面来维持状态和识别用户</span><br><span class="line">一个Session可以通过Coookie或URL来维持</span><br><span class="line">六、Servlet上下文</span><br><span class="line">public interface ServletContext</span><br><span class="line">在服务器上使用Session对象维持与单个客户相关的状态，而当多个用户的Web应用维持一个状态时，则应使用Servlet环境（Context），ServletContext对象代表一组Servlet共享的资源。</span><br><span class="line">七、Servlet协作</span><br><span class="line">public interface RequestDispatcher，包含两个方法：forward和include</span><br><span class="line">八、过滤</span><br><span class="line">通过过滤可以对请求进行统一的编码、对请求进行认证等。每个filter可能只担任很少的任务，多个Filter可以相互协作，通过这种协作，可以完成一个复杂的功能。</span><br><span class="line">public interface Filter  他是Filter必须实现的接口，包含init，doFilter，destroy等方法</span><br><span class="line">public interface FilterChain  是代码的过滤链，通过它可以把过滤的任务在不同的Filter之间转移，包含doFilter方法</span><br><span class="line">public interface FilterConfig 代表Filter的配置</span><br><span class="line">十、	使用HttpServlet处理客户端的请求</span><br><span class="line">Servlet被设计成轻轻驱动的。</span><br><span class="line">当Web容器接受到某个对Servlet的请求时，把他封装成一个HttpServletRequest对象，然后把此对象传给Servlet的对应处理方法，如doGet和doPost等</span><br><span class="line">doGet：可以获取服务器信息，并将其作为响应返回给客户端</span><br><span class="line">doGet：用户把数据传送到服务器端，可以隐藏放松的数据，适合发送大量的数据</span><br><span class="line">9、获得Servlet的初始化参数</span><br><span class="line">   通过ServletConfig接口获得Servlet的初始参数 </span><br><span class="line">10、Servlet的配置</span><br><span class="line">第八章</span><br><span class="line">15、JSP和Servlet结合的方法</span><br><span class="line">   模式一：JSP+JavaBean</span><br><span class="line">       所有数据通过Bean处理，JSP实现页面的表现</span><br><span class="line">       小型应用中可以考虑</span><br><span class="line">   模式二：JSP+Servlet+JavaBean </span><br><span class="line">       遵循MVC模式，Servlet作为控制器修改Bean的属性，JSP读取Bean的属性，然后进行显示，即JavaBean作为ＪＳＰ和Ｓｅｒｖｌｅｔ通信的中间工具</span><br><span class="line">       大中型项目中使用</span><br><span class="line">实际中，所有ＪＳＰ都必须编译成Servlet，并且在Servlet的容器中执行。</span><br><span class="line">16、JSP开发中的常用技巧</span><br><span class="line">一、在不同页面之间共享数据（同一用户）</span><br><span class="line">A．ssession  B. Cookie C.隐含表单 D.ServletContext  E.application F.文件系统或者数据库</span><br><span class="line">二、在不同用户之间共享数据</span><br><span class="line">A．使用ServletContext     B、application对象</span><br><span class="line">三、创建错误处理页面</span><br><span class="line">在编译时出现错误，其代码为500.</span><br><span class="line">在JSP中声明出错页面&lt;%@ page errorPage=”error.jsp”%&gt;;在error.jsp中首先要制定该isErrorPage=“true”，只有这样，这个页面才能进行错误处理 ，才能使用exception对象。</span><br><span class="line">一句话：JSP 错误处理的本质是在不同的页面或者类中传递异常，并且在目标页面处理异常</span><br><span class="line">17、自定义标签库的开发</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/11/26/Java-2018-11-26-SpringBoot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/26/Java-2018-11-26-SpringBoot/" itemprop="url">SpringBoot</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T14:41:51+08:00">
-                2018-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://spring.io/" target="_blank" rel="noopener">http://spring.io/</a></p>
-<p><a href="https://www.imooc.com/video/16358" target="_blank" rel="noopener">https://www.imooc.com/video/16358</a></p>
-<p>英文文档：<a href="https://docs.spring.io/spring-boot/docs/current/reference/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/</a></p>
-<p>Spring Framework是一种JavaEE的框架<br>
-Spring Boot是一种快速构建的Spring应用<br>
-Spring Cloud是构建SpringBoot的分布式应用</p>
-<p>SpringBoot2.0<br>
-编程语言：Java 8+，Kotlin，底层框架：SpringFramework 5.0.X,支持Web Flux</p>
-<p>Web Flux</p>
+<p>itBook官方客户端编辑器，支持Win、Linux、Mac系统</p>
+<p><a href="https://www.gitbook.com/" target="_blank" rel="noopener">https://www.gitbook.com/</a></p>
+<blockquote>
+<p>在线网站，提供在线编写工具，有客户端，免费版本文章默认公开</p>
+</blockquote>
+<p>安装：</p>
+<ul>
+<li>npm install -g gitbook-cli  //想在系统上的任何地方的gitbook命令，需要安装“gitbook CLI”</li>
+<li>npm install gitbook -g</li>
+<li>gitbook -V</li>
+</ul>
+<h1 id="使用gitbook"><a class="markdownIt-Anchor" href="#使用gitbook"></a> 使用gitbook</h1>
+<h2 id="创建项目"><a class="markdownIt-Anchor" href="#创建项目"></a> 创建项目</h2>
+<blockquote>
+<p>本地命令创建</p>
+</blockquote>
+<ul>
+<li>mkdir MyFirstBook</li>
+<li>cd MyFirstBook</li>
+<li>gitbook init</li>
+</ul>
+<blockquote>
+<p><a href="https://www.gitbook.com/" target="_blank" rel="noopener">https://www.gitbook.com/</a> 创建在线版本，即托管到 <a href="http://GitBook.com" target="_blank" rel="noopener">GitBook.com</a><br>
+账号：github登陆（chetaofeng@163.com）</p>
+</blockquote>
+<h1 id="生成图书"><a class="markdownIt-Anchor" href="#生成图书"></a> 生成图书</h1>
+<h2 id="输出为静态网站"><a class="markdownIt-Anchor" href="#输出为静态网站"></a> 输出为静态网站</h2>
+<p>在自己的电脑上编辑好图书之后，可以使用Gitbook<br>
+的命令行进行本地预览：</p>
+<ul>
+<li>gitbook build //生成网站，此命令会生成_book目录，而这个目录中的文件，即是生成的静态网站内容</li>
+<li>gitbook serve  //启动服务</li>
+<li><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></li>
+<li>gitbook build --output=/tmp/gitbook  //需自己创建好目标目录</li>
+</ul>
+<h2 id="输出pdf"><a class="markdownIt-Anchor" href="#输出pdf"></a> 输出PDF</h2>
+<ul>
+<li>npm install gitbook-pdf -g //依赖</li>
+<li>gitbook pdf【路径/文件名.pdf】</li>
+</ul>
+<h2 id="输出电子书mobi"><a class="markdownIt-Anchor" href="#输出电子书mobi"></a> 输出电子书mobi</h2>
+<blockquote>
+<p>由于 GitBook 生成 mobi 格式电子书依赖 Calibre 的 ebook-convert，所以需下载安装 Calibre</p>
+</blockquote>
+<blockquote>
+<p>Calibre 安装完毕后，对于 Mac OS X 系统，还需要先设置一下软链接：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin</span><br></pre></td></tr></table></figure>
+<ul>
+<li>gitbook mobi【路径/文件名.mobi】</li>
+</ul>
+<h1 id="编辑内容"><a class="markdownIt-Anchor" href="#编辑内容"></a> 编辑内容</h1>
+<h2 id="readmemd"><a class="markdownIt-Anchor" href="#readmemd"></a> <a href="http://README.md" target="_blank" rel="noopener">README.md</a></h2>
+<p>此文件是简单的电子书介绍，可以把所制作的电子书做一下简单的描述</p>
+<h2 id="summarymd"><a class="markdownIt-Anchor" href="#summarymd"></a> <a href="http://SUMMARY.md" target="_blank" rel="noopener">SUMMARY.md</a></h2>
+<p>此为电子书的导航目录文件，每当新增一个章节文件就需要向此文件中添加一条记录。对于 Kindle 电子书来说，此文件所呈现的目录结构就是开头的目录内容和“前往”的目录导航</p>
+<p>如果需要“子章节”可以使用 Tab 缩进来实现（最多支持三级标题），如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Summary</span><br><span class="line"></span><br><span class="line">* [第一章](section1/README.md)</span><br><span class="line">    * [第一节](section1/example1.md)</span><br><span class="line">    * [第二节](section1/example2.md)</span><br><span class="line">* [第二章](section2/README.md)</span><br><span class="line">    * [第一节](section2/example1.md)</span><br></pre></td></tr></table></figure>
+<h2 id="glossarymd"><a class="markdownIt-Anchor" href="#glossarymd"></a> <a href="http://Glossary.md" target="_blank" rel="noopener">Glossary.md</a></h2>
+<p>对于电子书内容中需要解释的词汇可在此文件中定义。词汇表会被放在电子书末尾。其格式如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 电子书</span><br><span class="line">电子书是指将文字、图片、声音、影像等讯息内容数字化的出版物和植入或下载数字化文字、图片、声音、影像等讯息内容的集存储和显示终端于一体的手持阅读器。</span><br></pre></td></tr></table></figure>
+<h2 id="bookjson"><a class="markdownIt-Anchor" href="#bookjson"></a> book.json</h2>
+<p>“book.json”是电子书的配置文件，可以看作是电子书的“原数据”，比如 title、description、isbn、language、direction、styles 等，更多:<a href="https://toolchain.gitbook.com/" target="_blank" rel="noopener">https://toolchain.gitbook.com/</a></p>
+<h2 id="普通章节md"><a class="markdownIt-Anchor" href="#普通章节md"></a> <a href="http://xn--tkv086brrfx7o.md" target="_blank" rel="noopener">普通章节.md</a> 文件</h2>
+<p>每编写一个 .md 文件，不要忘了在“<a href="http://SUMMARY.md" target="_blank" rel="noopener">SUMMARY.md</a>”文件中添加一条记录</p>
+<h2 id="电子书封面图片"><a class="markdownIt-Anchor" href="#电子书封面图片"></a> 电子书封面图片</h2>
+<p>GitBook 帮助文档建议封面图片的尺寸为 1800*2360 像素并且遵循建议：</p>
+<ul>
+<li>没有边框</li>
+<li>清晰可见的书本标题</li>
+<li>任何重要的文字在小版本中应该可见</li>
+<li>图片的格式为 jpg 格式</li>
+</ul>
+<p>把图片重命名为“cover.jpg”放到电子书项目文件夹即可</p>
+<h1 id="高级功能"><a class="markdownIt-Anchor" href="#高级功能"></a> 高级功能</h1>
+<p>想要gitBook更美观，或者更符合我们自己的需求，则通过book.json配置进行自定义、以及安装一些常用的插件等</p>
+<h2 id="bookjson配置"><a class="markdownIt-Anchor" href="#bookjson配置"></a> Book.json配置</h2>
+<p>GitBook 在编译书籍的时候会读取书籍源码顶层目录中的 book.js 或者 book.json。参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    //样式风格配置格式</span><br><span class="line">    &quot;styles&quot;: &#123;</span><br><span class="line">        &quot;website&quot;: &quot;styles/website.css&quot;,</span><br><span class="line">        &quot;ebook&quot;: &quot;styles/ebook.css&quot;,</span><br><span class="line">        &quot;pdf&quot;: &quot;styles/pdf.css&quot;,</span><br><span class="line">        &quot;mobi&quot;: &quot;styles/mobi.css&quot;,</span><br><span class="line">        &quot;epub&quot;: &quot;styles/epub.css&quot;</span><br><span class="line">     &#125;,</span><br><span class="line"></span><br><span class="line">    //插件安装配置格式</span><br><span class="line"></span><br><span class="line">    &quot;plugins&quot;: [&quot;myplugin&quot;],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;myPlugin&quot;: &#123;</span><br><span class="line">            &quot;message&quot;: &quot;Hello World&quot;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义插件扩展"><a class="markdownIt-Anchor" href="#自定义插件扩展"></a> 自定义插件扩展</h2>
+<p>插件是扩展GitBook功能最好的方法。使得GitBook功能更加强大</p>
+<ul>
+<li>插件搜索：<a href="https://plugins.gitbook.com/" target="_blank" rel="noopener">https://plugins.gitbook.com/</a></li>
+<li>插件安装：npm install 【gitbook-plugin-toggle-chapters】 --save-dev</li>
+<li>通过Book.json配置插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;plugins&quot;: [&quot;toggle-chapters&quot;],</span><br><span class="line">    &quot;pluginsConfig&quot;: &#123;</span><br><span class="line">        &quot;myPlugin&quot;: &#123;</span><br><span class="line">            &quot;message&quot;: &quot;Hello World&quot;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>常用插件：<a href="http://zhaoda.net/2015/11/09/gitbook-plugins/" target="_blank" rel="noopener">http://zhaoda.net/2015/11/09/gitbook-plugins/</a></li>
+</ul>
+<h1 id="android的离线打包"><a class="markdownIt-Anchor" href="#android的离线打包"></a> Android的离线打包</h1>
+<p>通过Gitbook，将电子书打包成静态网站。再将静态网站放到Android APP的assets目录下，作为离线网站，打包成一个离线电子书应用（Android APP）</p>
 <ol>
-<li>支持函数编程，Java 8 Lambda</li>
-<li>响应式编程,Reactive Streams</li>
-<li>异步编程，Servlet3.1和Asyc NIO</li>
+<li>按照Gitbook规范，编写gitbook电子书</li>
+<li>通过Gitbook，将电子书打包成静态网站</li>
+<li>使用git将工程gitbook-android克隆下来，<a href="https://github.com/snowdream/gitbook-android?spm=5176.100239.blogcont31432.7.rKGSpR" target="_blank" rel="noopener">https://github.com/snowdream/gitbook-android?spm=5176.100239.blogcont31432.7.rKGSpR</a></li>
+<li>将静态网站放在gitbook-android工程的assets/book目录下</li>
+<li>在“gitbook-android\app\src\main\res\values\strings.xml”中修改app_name</li>
+<li>在“gitbook-android\app\build.gradle”中修改包名 applicationId “com.github.snowdream.apps.gitbook”</li>
+<li>新增以下四个keystore相关的环境变量，用于APK签名. KEYSTORE KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD</li>
+<li>在gitbook-android工程目录下，运行gradle assembleRelease --info即可。</li>
 </ol>
-<p>InteliJ中配置Java和Maven</p>
-<p>构建项目：<br>
-图形化方式<br>
-1 <a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a> ，输入选择Reactive Web<br>
-2 导入项目<br>
-命令行方式（Maven）<br>
-mvn archetype:generate -DinteractiveMode=false -DgroupId=com.test -DartifactId=first-app-by-maven -Dversion=1.0.0-SNAPSHOT<br>
-添加<br>
-<parent><br>
-<groupid>org.springframework.boot</groupid><br>
-<artifactid>spring-boot-starter-parent</artifactid><br>
-<version>1.5.9.RELEASE</version><br>
-<relativepath><br>
-</relativepath></parent></p>
-<dependencies>
-    <dependency>
-        <groupid>org.springframework.boot</groupid>
-        <artifactid>spring-boot-starter-web</artifactid>
-    </dependency>
-</dependencies>
-<p>取消Junit的版本，需要4.1.2以上，取掉之后spring-boot-starter-parent继承版本</p>
-<hr>
-<p>父Module的packaging设置为pom</p>
-<p>打包方式<br>
-Jar包方式<br>
-War包方式<br>
-指定Main-class方式</p>
-<plugin>
-  <groupid>org.springframework.boot</groupid>
-  <artifactid>spring-boot-maven-plugin</artifactid>
-  <version>1.5.4.RELEASE</version>
-  <configuration>
-    <mainclass>${start-class}</mainclass>
-    <layout>ZIP</layout>
-  </configuration>
-  <executions>
-    <execution>
-      <goals>
-        <goal>repackage</goal>
-      </goals>
-    </execution>
-  </executions>
-</plugin> 
-<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html</a></p>
-<p>jar包形式<br>
-mvn -Dmaven.test.skip -U clean package<br>
-java -jar [jar名称.jar]</p>
-<p>war包形式，需要有webapp-&gt;WEB-INF-&gt;web.xml<br>
-java -jar [war名称.war]</p>
-<p>运行模式<br>
-IDEA方式<br>
-Jar／War方式<br>
-Maven插件方式：<br>
-mvn srping-boot:run//需要在Main方法module，使用前，需要在父Module mvn -Dmaven.test.skip -U clean install<br>
-<a href="https://blog.csdn.net/taiyangdao/article/details/75303181" target="_blank" rel="noopener">https://blog.csdn.net/taiyangdao/article/details/75303181</a></p>
-<p>ConcurrentHashMap  <a href="http://www.importnew.com/28263.html" target="_blank" rel="noopener">http://www.importnew.com/28263.html</a>  <a href="https://www.cnblogs.com/heyonggang/p/9112731.html" target="_blank" rel="noopener">https://www.cnblogs.com/heyonggang/p/9112731.html</a><br>
-AtomicInteger <a href="https://www.cnblogs.com/sharkli/p/5623524.html" target="_blank" rel="noopener">https://www.cnblogs.com/sharkli/p/5623524.html</a><br>
-好的习惯，实体都实现toString()方法</p>
-<p>Flux &amp; Mono<br>
-Flux：0到N个对象的集合<br>
-Mono：0到1个对象的集合<br>
-Reactive中的Flux和Mono是异步处理的，都是Publisher</p>
-<p><a href="https://www.imooc.com/learn/1058" target="_blank" rel="noopener">https://www.imooc.com/learn/1058</a><br>
-组件自动装配：规约大于配置，专注核心业务<br>
-外部化部署：一次构建、按需调配，到处运行<br>
-嵌入式容器：内置容器、无需部署、独立运行<br>
-SpringBoot Starter:简化依赖、按需装配、自我包含<br>
-Production-Ready：一站式运维、生态无缝整合</p>
-<p>Java 能长盛不衰，主要是命好。每当人们觉得 Java 不行了的时候，总会有英雄横刀救美。<br>
-最初 Java 开发出来不知道有什么用的时候，发现可以用 Applet 在网页上做动画。后来企业级软件开发时代 JavaEE 大行其道，开源社区 Spring 桃李满天下。<br>
-等到了移动时代，人们觉得 Java 要完蛋了，Google 拍马救市，收购并开放了 Android 平台，当家语言就是 Java，于是 Java 再次焕发勃勃生机。<br>
-目前大数据领域，Java 同样是当仁不让的好手。</p>
-<p>现在 Spring Framework 那套东西使用了十几年，正当大家被长达几千行的 ApplicationContext 配置文件折磨的死去活来的时候，Spring Boot 诞生了。什么是 Spring Boot？用来简化 Spring 应用程序开发的。</p>
-<p>换句话说就是，当你觉得 Java 不好用的时候，我做了个轻量级的 S，让你好好用 Java。等你觉的 S 也不够轻了，我做了个 SB，让你觉得 S 还是挺轻的。</p>
-<p><a href="https://www.imooc.com/video/16783" target="_blank" rel="noopener">https://www.imooc.com/video/16783</a><br>
-SrpingBoot为微服务框架，与Spring4一起诞生</p>
-<p><a href="https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/</a></p>
-<p>Spring MVC 相当于一辆手动挡汽车，Spring Boot 相当于把汽车变成自动挡，然后还加装了无钥匙进入、自动启停等功能，让你开车更省心。但是车的主体功能不变，你还是要用到 Spring MVC。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/其他-面试题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/其他-面试题/" itemprop="url">面试题</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="java多线程并发原理"><a class="markdownIt-Anchor" href="#java多线程并发原理"></a> java多线程并发原理</h1>
+<p><a href="https://baijiahao.baidu.com/s?id=1611283938372470841&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">https://baijiahao.baidu.com/s?id=1611283938372470841&amp;wfr=spider&amp;for=pc</a><br>
+<a href="https://www.cnblogs.com/lyz0925/p/6734839.html" target="_blank" rel="noopener">https://www.cnblogs.com/lyz0925/p/6734839.html</a></p>
+<h1 id="hashmap实现原理及源码分析"><a class="markdownIt-Anchor" href="#hashmap实现原理及源码分析"></a> HashMap实现原理及源码分析</h1>
+<p><a href="https://www.cnblogs.com/chengxiao/p/6059914.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengxiao/p/6059914.html</a></p>
+<h1 id="java并发编程"><a class="markdownIt-Anchor" href="#java并发编程"></a> java并发编程</h1>
+<h2 id="jvm实现synchronized的底层机制"><a class="markdownIt-Anchor" href="#jvm实现synchronized的底层机制"></a> JVM实现synchronized的底层机制</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5354340.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5354340.html</a></p>
+<h2 id="闭锁"><a class="markdownIt-Anchor" href="#闭锁"></a> 闭锁</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5359684.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5359684.html</a></p>
+<p><a href="https://blog.csdn.net/yujin753/article/details/46125283" target="_blank" rel="noopener">https://blog.csdn.net/yujin753/article/details/46125283</a></p>
+<h2 id="栅栏"><a class="markdownIt-Anchor" href="#栅栏"></a> 栅栏</h2>
+<p><a href="https://blog.csdn.net/u012572955/article/details/54971072" target="_blank" rel="noopener">https://blog.csdn.net/u012572955/article/details/54971072</a></p>
+<ul>
+<li>栅栏类似于闭锁，它能阻塞一组线程直到某个事件发生。</li>
+<li>栅栏与闭锁的关键区别在于，所有线程必须同时到达栅栏位置，才能继续执行。闭锁用于等待事件，而栅栏用于等待其他线程，且能够重复执行</li>
+</ul>
+<h2 id="关卡"><a class="markdownIt-Anchor" href="#关卡"></a> 关卡</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5363759.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5363759.html</a></p>
+<h2 id="信号量"><a class="markdownIt-Anchor" href="#信号量"></a> 信号量</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5367078.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5367078.html</a></p>
+<h2 id="线程池"><a class="markdownIt-Anchor" href="#线程池"></a> 线程池</h2>
+<p><a href="https://www.cnblogs.com/xujian2014/p/5319828.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujian2014/p/5319828.html</a></p>
+<h1 id="java中的cas实现原理"><a class="markdownIt-Anchor" href="#java中的cas实现原理"></a> Java中的CAS实现原理</h1>
+<p><a href="https://www.cnblogs.com/javalyy/p/8882172.html" target="_blank" rel="noopener">https://www.cnblogs.com/javalyy/p/8882172.html</a></p>
+<p>Spring Cloud由众多子项目组成，如Spring Cloud Config、Spring Cloud Netflix、Spring Cloud Consul 等，提供了搭建分布式系统及微服务常用的工具，</p>
+<p>分布式领域著名的CAP理论（C——数据一致性，A——服务可用性，P——服务对网络分区故障的容错性）</p>
+<p>一个java应用程序至少有两个线程，一个是主线程，负责main方法的执行，一个是垃圾回收器线程，负责回收垃圾。</p>
+<h1 id="springboot和springcloud对比"><a class="markdownIt-Anchor" href="#springboot和springcloud对比"></a> SpringBoot和SpringCloud对比</h1>
+<p><a href="https://blog.csdn.net/u010664947/article/details/80007767" target="_blank" rel="noopener">https://blog.csdn.net/u010664947/article/details/80007767</a></p>
+<h1 id="java-executorservice四种线程池的例子与说明"><a class="markdownIt-Anchor" href="#java-executorservice四种线程池的例子与说明"></a> Java ExecutorService四种线程池的例子与说明</h1>
+<p><a href="https://www.cnblogs.com/zhaoyan001/p/7049627.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhaoyan001/p/7049627.html</a><br>
+<a href="https://blog.csdn.net/fwt336/article/details/81530581" target="_blank" rel="noopener">https://blog.csdn.net/fwt336/article/details/81530581</a></p>
+<h1 id="java多线程"><a class="markdownIt-Anchor" href="#java多线程"></a> Java多线程</h1>
+<p>多线程实现和安全问题： <a href="https://www.cnblogs.com/love-Stefanie/p/6706507.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6706507.html</a><br>
+Executor,Executors,ExecutorService比较： <a href="https://www.cnblogs.com/love-Stefanie/p/6728228.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6728228.html</a><br>
+Future和FutureTask： <a href="https://www.cnblogs.com/love-Stefanie/p/6729346.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6729346.html</a></p>
+<h1 id="待学习视频"><a class="markdownIt-Anchor" href="#待学习视频"></a> 待学习视频</h1>
+<p>基于 SpringCloud 微服务架构下广告系统设计与实现：<a href="https://coding.imooc.com/class/310.html" target="_blank" rel="noopener">https://coding.imooc.com/class/310.html</a><br>
+RocketMQ核心技术精讲与高并发抗压实战： <a href="https://coding.imooc.com/class/292.html" target="_blank" rel="noopener">https://coding.imooc.com/class/292.html</a><br>
+ZooKeeper分布式专题与Dubbo微服务入门： <a href="https://coding.imooc.com/class/201.html" target="_blank" rel="noopener">https://coding.imooc.com/class/201.html</a><br>
+打造仿猫眼项目 以Dubbo为核心解锁微服务： <a href="https://coding.imooc.com/class/273.html" target="_blank" rel="noopener">https://coding.imooc.com/class/273.html</a><br>
+Spring Cloud微服务实战： <a href="https://coding.imooc.com/class/package/187.html#Anchor" target="_blank" rel="noopener">https://coding.imooc.com/class/package/187.html#Anchor</a><br>
+Thread类中方法介绍： <a href="https://www.cnblogs.com/love-Stefanie/p/6732816.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-Stefanie/p/6732816.html</a></p>
+<h1 id="并发编程网-httpifevecom"><a class="markdownIt-Anchor" href="#并发编程网-httpifevecom"></a> 并发编程网 <a href="http://ifeve.com/" target="_blank" rel="noopener">http://ifeve.com/</a></h1>
+<p>JVM性能优化系列： <a href="http://ifeve.com/jvm-optimize/" target="_blank" rel="noopener">http://ifeve.com/jvm-optimize/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/" itemprop="url">mac虚拟机安装及设置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>Parallels Desktop是一款运行在 Mac 电脑上的极为优秀的虚拟机软件。用户可以在 Mac OS X 下非常方便运行 Windows、Linux 等操作系统及应用。</p>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<p>PD为收费软件，链接: <a href="https://pan.baidu.com/s/1CBa7tIghlF7JIiJTtuqdYQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1CBa7tIghlF7JIiJTtuqdYQ</a> 提取码: es9m，有经济能力的希望支持正版</p>
+<p>PD安装操作系统需准备一个系统ISO镜像,虚拟机系统安装过程和普通系统安装过程基本一致。<br>
+windows10镜像下载： <a href="https://www.microsoft.com/zh-cn/software-download/windows10ISO/" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/software-download/windows10ISO/</a></p>
+<p>系统安装完成之后，需安装Parallels Tools，否则使用时鼠标使用等方面会有很多不便，注意安装Parallels Tools时注意PD版本，防止有和系统不兼容。<br>
+如下图：<br>
+<img src="/pub-images/Parallels%20Tools.png" alt="image"></p>
+<h1 id="pd使用注意事项"><a class="markdownIt-Anchor" href="#pd使用注意事项"></a> PD使用注意事项</h1>
+<ol>
+<li>虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统内存、硬盘相关参数设置</li>
+<li>虚拟机系统安装完之后在虚拟机系统的【配置】中进行系统共享文件夹设置，方便系统间数据共享</li>
+<li>虚拟机初试安装后，再进行系统其他重要软件安装前，请先保存快照，再进行操作，操作不成功还可回退</li>
+<li>虚拟机系统更新、相关开发环境设置完成之后，建议移动硬盘保存虚拟机，方便后期恢复和循环使用</li>
+<li>虚拟机系统文件在右键【显示包内容】后，如下<br>
+<img src="/pub-images/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" alt="image"><br>
+其中.hdd文件为硬盘文件，可在虚拟机系统故障时优先保存此文件，或者将此文件复制替换到备份的虚拟机系统即可恢复</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-01-mac系统安装/" itemprop="url">mac系统安装</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="u盘启动"><a class="markdownIt-Anchor" href="#u盘启动"></a> U盘启动</h1>
+<p>U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。</p>
+<h1 id="mac系统安装启动盘制作"><a class="markdownIt-Anchor" href="#mac系统安装启动盘制作"></a> mac系统安装启动盘制作</h1>
+<ol>
+<li>准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料</li>
+<li>下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。</li>
+<li>打开 “应用程序 → 实用工具 → 磁盘工具”，将U盘「抹掉」(格式化) 成「Mac OS X 扩展（日志式）」格式、GUID 分区图，并将U盘命名为「Sierra」。(注意：这个盘符名称将会与后面的命令一一对应，如果你改了这盘符的名字，必须保证后面的命令里的名称也要一致)</li>
+<li>打开 “应用程序→实用工具→终端”，将下面的一段命令复制并粘贴进去：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</span><br></pre></td></tr></table></figure>
+<p>回车并执行该命令，这时会提示让你输入管理员密码，便会开始制作过程了：<br>
+<img src="/pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png" alt="image"></p>
+<p>如上图，这时系统已经在制作中了，请耐心等待直到屏幕最后出现 Done. 字样即表示大功告成了</p>
+<h1 id="mac系统u盘安装"><a class="markdownIt-Anchor" href="#mac系统u盘安装"></a> mac系统U盘安装</h1>
+<ol start="0">
+<li>（此步骤可选：如果想格式化磁盘则进行此操作）启动时按住[command + r]，进入磁盘管理工具抹掉磁盘即可</li>
+<li>先在目标电脑上插上 U 盘，然后重启你的 Mac，然后一直按住[option」(alt)] 按键不放，直到屏幕显示多出一个 USB 启动盘的选项。</li>
+<li>选择 U 盘的图标回车，即可通过 U 盘来安装 macOS Sierra 了！这时，你可以直接覆盖安装系统(升级)，也可以在磁盘工具里面格式化抹掉整个硬盘，或者重新分区等实现全新的干净的安装</li>
+<li>启动过程中电脑会重启，重启的时候，拔掉U盘</li>
+</ol>
+<h1 id="安装软件"><a class="markdownIt-Anchor" href="#安装软件"></a> 安装软件</h1>
+<ul>
+<li>在登陆App Store之后，往常安装过的软件在&quot;已购项目&quot;列表中有，不用每次安装系统后再一一去查找安装过的程序。</li>
+</ul>
+<p>非App Store安装的程序，在安装时，又是会提示app出现某些安装包已损坏、显示未激活、打开崩溃等的提示！！这种多是因为新系统屏蔽了任何来源的设置，所以需要大家打开“允许任何来源”方可安装，可按如下方式操作</p>
+<ul>
+<li>步骤1：Spotlight搜索(快捷键：command+空格或右上角搜索的符号)：搜索 “终端”</li>
+<li>步骤2：直接复制粘贴 sudo spctl --master-disable   回车</li>
+<li>步骤3：输入你的 开机密码</li>
+<li>步骤4：回到系统偏好设置 的“安全与隐私”，勾选 “允许任何来源”完成安装.</li>
+</ul>
+<h1 id="macos一些其他维护相关知识"><a class="markdownIt-Anchor" href="#macos一些其他维护相关知识"></a> macOS一些其他维护相关知识</h1>
+<p>官方技术支持网址：<a href="https://support.apple.com/zh-cn" target="_blank" rel="noopener">https://support.apple.com/zh-cn</a></p>
+<ol>
+<li>
+<p>关于 Mac 启动时您看到的屏幕：在从 OS X 启动 Mac 时，系统会显示不同的屏幕，以让您了解 Mac 的启动方式，或是启动可能未完成的原因。<br>
+<a href="https://support.apple.com/zh-cn/HT204156" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204156</a></p>
+</li>
+<li>
+<p>启动 Mac 时显示闪烁的问号<br>
+如果启动时在 Mac 屏幕上看到闪烁的问号，这意味着您的 Mac 无法找到自身的系统软件。<br>
+<a href="https://support.apple.com/zh-cn/HT204323" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204323</a></p>
+</li>
+<li>
+<p>如何重新安装 macOS<br>
+<a href="https://support.apple.com/zh-cn/HT204904" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204904</a></p>
+</li>
+<li>
+<p>关于 macOS 恢复功能<br>
+<a href="https://support.apple.com/zh-cn/HT201314" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201314</a></p>
+</li>
+<li>
+<p>使用 Time Machine 备份或恢复 Mac<br>
+<a href="https://support.apple.com/zh-cn/HT201250" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201250</a></p>
+</li>
+<li>
+<p>如何重置 Mac 上的 NVRAM        Command-Option-P-R<br>
+<a href="https://support.apple.com/zh-cn/HT204063" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT204063</a></p>
+</li>
+<li>
+<p>重置 Mac 上的系统管理控制器 (SMC)       Shift-Control-Option<br>
+<a href="https://support.apple.com/zh-cn/HT201295" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201295</a></p>
+</li>
+<li>
+<p>如何识别 MacBook Pro 机型<br>
+<a href="https://support.apple.com/zh-cn/HT201300" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201300</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-04-git安装配置/" itemprop="url">git安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<p>官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>
+Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。<br>
+Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
+<p>详细学习，推荐：</p>
+<ul>
+<li><a href="http://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/git/git-tutorial.html</a></li>
+<li>廖雪峰大神的git教程<br>
+<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
+<li>git的前世今生： <a href="https://blog.csdn.net/csdnprogram/article/details/52155078" target="_blank" rel="noopener">https://blog.csdn.net/csdnprogram/article/details/52155078</a></li>
+</ul>
+<h1 id="工作原理"><a class="markdownIt-Anchor" href="#工作原理"></a> 工作原理</h1>
+<h2 id="本地"><a class="markdownIt-Anchor" href="#本地"></a> 本地</h2>
+<ul>
+<li>工作区（Working Directory）：就是你在电脑里能看到的目录</li>
+<li>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库<br>
+Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
+</ul>
+<p><img src="/pub-images/git.png" alt="image"><br>
+我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<ul>
+<li>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
+<li>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</li>
+</ul>
+<h2 id="远程配合"><a class="markdownIt-Anchor" href="#远程配合"></a> 远程配合</h2>
+<p><img src="/pub-images/git2.png" alt="image"></p>
+<h1 id="git安装"><a class="markdownIt-Anchor" href="#git安装"></a> git安装</h1>
+<p>参考教程：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">https://git-scm.com/book/zh/v2/起步-安装-Git</a></p>
+<p>各平台都支持安装包安装方式</p>
+<h2 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; brew install git</span><br><span class="line">&gt; git --version //验证安装</span><br></pre></td></tr></table></figure>
+<h1 id="git全局设置"><a class="markdownIt-Anchor" href="#git全局设置"></a> git全局设置</h1>
+<p>config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local,底层配置会覆盖顶层配置<br>
+查看git不同级别配置信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list</span><br><span class="line">git config --global --list</span><br><span class="line">git config --和local --list</span><br></pre></td></tr></table></figure>
+<p>git安装完成后，还需要最后一步设置，在命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</p>
+<h1 id="git账号关联流程"><a class="markdownIt-Anchor" href="#git账号关联流程"></a> git账号关联流程</h1>
+<ol>
+<li>生成SSHkey<br>
+ssh-keygen命令用于为“ssh”生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥.<br>
+ssh-keygen(选项)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：指定密钥长度； </span><br><span class="line">-e：读取openssh的私钥或者公钥文件； </span><br><span class="line">-C：添加注释； </span><br><span class="line">-f：指定用来保存密钥的文件名； </span><br><span class="line">-i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥； </span><br><span class="line">-l：显示公钥文件的指纹数据； </span><br><span class="line">-N：提供一个新密语； </span><br><span class="line">-P：提供（旧）密语；</span><br><span class="line">-q：静默模式； </span><br><span class="line">-t：指定要创建的密钥类型。</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>登陆git服务器，添加public key信息</li>
+<li>测试登陆</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">测试是否成功,第一此输入命令，需输入yes后再次输入测试命令后出现类似&quot;Hi...&quot;，表示配置成功</span><br><span class="line">&gt; ssh -T git@github.com</span><br><span class="line">&gt; ssh -T git@gitee.com</span><br><span class="line">&gt; ssh -T git@gitlab.com</span><br></pre></td></tr></table></figure>
+<h1 id="git单账号关联"><a class="markdownIt-Anchor" href="#git单账号关联"></a> git单账号关联</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）</span><br><span class="line">&gt; cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>登陆网站，如github／gitee／gitlab等，在如设置／Settings中有SSH and GPG keys中【add new keys】，将id_rsa.pub内容添加，会自动识别标题,设置完成之后测试登陆</p>
+<h1 id="git多账号设置关联"><a class="markdownIt-Anchor" href="#git多账号设置关联"></a> git多账号设置关联</h1>
+<p>多账号配置是通过.ssh文件夹下config文件实现，操作如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; touch ~/.ssh/config </span><br><span class="line">&gt; chmod 600 ~/.ssh/config </span><br><span class="line"></span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.github -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitee -t rsa -C &quot;chetaofeng@163.com&quot;</span><br><span class="line">&gt; ssh-keygen -f ~/.ssh/id_rsa.gitlab -t rsa -C &quot;chetaofeng@163.com&quot;</span><br></pre></td></tr></table></figure>
+<p>config文件内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa.github</span><br><span class="line"></span><br><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">     HostName gitee.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitee</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.com</span><br><span class="line">     HostName gitlab.com</span><br><span class="line">     PreferredAuthentications publickey</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa.gitlab</span><br><span class="line">     </span><br><span class="line"># gitlab-公司内网</span><br><span class="line">Host gsunis.net</span><br><span class="line">  HostName 47.94.*.*</span><br><span class="line">  PreferredAuthentications publickey</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa.gitlab_local</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Host： 是我们在输入命令的时候的名字 比如我这里是lab  那么我使用ssh命令的时候需要使用 ssh lab</li>
+<li>HostName： 是目标主机的主机名，也就是平时我们使用ssh后面跟的地址名称。</li>
+<li>Port：指定的端口号。</li>
+<li>User：指定的登陆用户名。</li>
+<li>IdentifyFile：指定的私钥地址。</li>
+</ul>
+<h1 id="gitignore文件"><a class="markdownIt-Anchor" href="#gitignore文件"></a> .gitignore文件</h1>
+<p>不添加到版本库的内容记录，创建项目后一定要添加.gitignore文件</p>
+<h1 id="开发环境中配置"><a class="markdownIt-Anchor" href="#开发环境中配置"></a> 开发环境中配置</h1>
+<p>在Jetbrains系列开发工具中，【Version Control】界面中github选项默认有，进行设置即可<br>
+<img src="/pub-images/github%E8%AE%BE%E7%BD%AE.png" alt="image"><br>
+gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
+<img src="/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="image"></p>
+<p>以前配置gitlab的时候，是通过Other Settings-&gt;GitLab Settings设置如下：</p>
+<ul>
+<li>GitLab Server Url: <a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></li>
+<li>GitLab API Key： <a href="https://gitlab.com/profile/account" target="_blank" rel="noopener">https://gitlab.com/profile/account</a></li>
+</ul>
+<h1 id="git项目权限管理"><a class="markdownIt-Anchor" href="#git项目权限管理"></a> git项目权限管理</h1>
+<p>Git项目一般有五种身份权限，分别是：</p>
+<ul>
+<li>Owner 项目所有者，拥有所有的操作权限</li>
+<li>Master 项目的管理者，除更改、删除项目元信息外其它操作均可</li>
+<li>Developer 项目的开发人员，做一些开发工作，对受保护内容无权限</li>
+<li>Reporter 项目的报告者，只有项目的读权限，可以创建代码片断</li>
+<li>Guest 项目的游客，只能提交问题和评论内容</li>
+</ul>
+<h1 id="私服项目使用推荐流程"><a class="markdownIt-Anchor" href="#私服项目使用推荐流程"></a> 私服项目使用推荐流程</h1>
+<blockquote>
+<p>以下为项目owner需进行工作</p>
+</blockquote>
+<ol>
+<li>在私服先创建项目，添加人员并设置人员权限</li>
+<li>在本地webstorm中clone项目</li>
+<li>在clone项目中添加.gitignore文件</li>
+<li>添加.gitignore及相关需要版本控制的文件夹到版本控制（选中项后右键操作）</li>
+<li>提交项目并备注为初始提交</li>
+</ol>
+<blockquote>
+<p>以下为项目成员需做工作</p>
+</blockquote>
+<ol>
+<li>在本地webstorm中clone项目</li>
+<li>创建项目分支（可一人一个，也可通过项目模块进行分支创建），如果直接在master分支，则无法成功push项目提示被rejected</li>
+<li>进行代码编写</li>
+<li>提交需管理分支</li>
+<li>在gitlab私服网页发起合并请求，并添加详细描述</li>
+<li>等待相关人员进行合并</li>
+<li>合并结束后更新master分支</li>
+<li>创建分支继续工作</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-05-node安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-05-node安装/" itemprop="url">node安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h1>
+<p>nodejs：在项目开发时的所需要的代码库<br>
+nvm：nodejs 版本管理工具。<br>
+npm：nodejs包管理工具，在安装的 nodejs 的时候，npm也会跟着一起安装，它是包管理工具，管理nodejs中的第三方插件<br>
+yarn：Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ， 是为了弥补 npm 的一些缺陷而出现的<br>
+即：一个nvm可以管理多个node版本和npm版本</p>
+<h1 id="nvm安装"><a class="markdownIt-Anchor" href="#nvm安装"></a> nvm安装</h1>
+<p>官网： <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a><br>
+安装：curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh</a> | bash<br>
+安装完成后的提示界面会有类似一下的提示信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br></pre></td></tr></table></figure>
+<p>在~/.bash_profile中添加以上内容(如果没有这个文件则创建)后保存；通过source ~/.bash_profile使设置生效。<br>
+安装完成后关闭终端，重新打开终端输入 nvm 验证一下是否安装成功</p>
+<p>注：curl看系统是否已安装，如果没有安装则：sudo apt-get install curl</p>
+<h1 id="nvm常用命令"><a class="markdownIt-Anchor" href="#nvm常用命令"></a> nvm常用命令</h1>
+<p>nvm install stable ## 安装最新稳定版 node，当前是node v9.5.0 (npm v5.6.0)<br>
+nvm install <version> ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4<br>
+nvm uninstall <version> ## 删除已安装的指定版本，语法与install类似<br>
+nvm use <version> ## 切换使用指定的版本node<br>
+nvm ls ## 列出所有安装的版本<br>
+nvm ls-remote ## 列出所有远程服务器的版本（官方node version list）<br>
+nvm current ## 显示当前的版本<br>
+nvm alias <name> <version> ## 给不同的版本号添加别名<br>
+nvm unalias <name> ## 删除已定义的别名<br>
+nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包</version></name></version></name></version></version></version></p>
+<h1 id="nvm安装node"><a class="markdownIt-Anchor" href="#nvm安装node"></a> nvm安装node</h1>
+<p>nvm install stable</p>
+<h1 id="yarn"><a class="markdownIt-Anchor" href="#yarn"></a> yarn</h1>
+<p>快速、可靠、安全的依赖管理工具</p>
+<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
+<p>brew install yarn<br>
+brew install yarn --without-node</p>
+<h1 id="yarn和npm命令对比"><a class="markdownIt-Anchor" href="#yarn和npm命令对比"></a> Yarn和npm命令对比</h1>
+<table>
+<thead>
+<tr>
+<th>npm</th>
+<th>yarn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm install</td>
+<td>yarn install</td>
+</tr>
+<tr>
+<td>npm install react --save</td>
+<td>yarn add react</td>
+</tr>
+<tr>
+<td>npm uninstall react --save</td>
+<td>yarn remove react</td>
+</tr>
+<tr>
+<td>npm install react --save-dev</td>
+<td>yarn add react --dev</td>
+</tr>
+<tr>
+<td>npm update --save</td>
+<td>yarn upgrade</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-06-Java安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-06-Java安装/" itemprop="url">JDK安装配置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- oracle官网账号：  chetaofeng@163.com / Chetaofeng123./ --> 
+<h1 id="jdk下载"><a class="markdownIt-Anchor" href="#jdk下载"></a> JDK下载</h1>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<h1 id="环境变量设置说明"><a class="markdownIt-Anchor" href="#环境变量设置说明"></a> 环境变量设置说明</h1>
+<p>（jdk 需要配置三个环境变量； 1.5之后可以不再设置classpath，但建议保留classpath设置）</p>
+<ul>
+<li>CLASS_PATH 保证class文件能够在任意目录下运行</li>
+<li>PATH 保证javac可以在任意目录下运行</li>
+</ul>
+<h1 id="mac系统"><a class="markdownIt-Anchor" href="#mac系统"></a> mac系统</h1>
+<p>环境变量配置文件执行的顺序：<br>
+/etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc<br>
+/etc/profile和/etc/paths是系统级别的，系统启动就会加载，剩下的是用户级别的。</p>
+<p>下载dmg安装包后直接安装后，通过java -version；java；javac验证，个人发现最新版本中不用系统环境变量配置，重启电脑验证过，</p>
+<p>配置环境变量的方式：</p>
+<ol>
+<li>找到JDK安装目录，如：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>编辑文件~/.bash_profile 文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH:.</span><br><span class="line"></span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使配置生效：source .bash_profile</li>
+<li>输入 echo $JAVA_HOME 显示刚才配置的路径</li>
+<li>验证安装</li>
+</ol>
+<h1 id="linux系统"><a class="markdownIt-Anchor" href="#linux系统"></a> Linux系统</h1>
+<p>安装前，请在终端中通过java命令查看是否系统已默认安装OpenJDK，如果有，则先卸载</p>
+<ol>
+<li>下载安装包后解压，如：sudo tar -zxvf jdk-8u77-linux-x64.tar.gz,得到jdk1.8.0_77文件夹</li>
+<li>sudo mkdir /usr/java</li>
+<li>sudo cp -r jdk1.8.0_77/ /usr/java/</li>
+<li>配置环境变量,sudo vim /etc/profile,在前面添加</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_77</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib  </span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>source /etc/profile 使配置立即生效</li>
+<li>检查新安装的jdk:java -version;java;javac</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-07-CentOS系统初始设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-07-CentOS系统初始设置/" itemprop="url">CentOS安装设置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="设置网络自动启动"><a class="markdownIt-Anchor" href="#设置网络自动启动"></a> 设置网络自动启动</h1>
+<ul>
+<li>安装系统的时候设置网络自动启动（最简单）</li>
+<li>打开 vi /etc/sysconfig/network-scripts/ifcfg-eth0（每个机子都可能不一样，但格式会是“ifcfg-eth数字”），把ONBOOT=no，改为ONBOOT=yes，重启网络：service network restart</li>
+</ul>
+<h1 id="更新阿里云yum源"><a class="markdownIt-Anchor" href="#更新阿里云yum源"></a> 更新阿里云yum源</h1>
+<ul>
+<li>启用源下载wget<br>
+cd /etc/yum.repos.d/<br>
+sudo vi CentOS-Base.repo；修改文件内容中enable从0改为1<br>
+yum install wget</li>
+<li>下载repo文件<br>
+wget <a href="http://mirrors.aliyun.com/repo/Centos-7.repo" target="_blank" rel="noopener">http://mirrors.aliyun.com/repo/Centos-7.repo</a></li>
+<li>备份并替换系统的repo文件<br>
+cp Centos-7.repo /etc/yum.repos.d/<br>
+cd /etc/yum.repos.d/<br>
+mv CentOS-Base.repo CentOS-Base.repo.bak<br>
+mv Centos-7.repo CentOS-Base.repo （区分大小写）</li>
+<li>执行yum源更新命令<br>
+yum clean all<br>
+yum makecache<br>
+yum update</li>
+</ul>
+<h1 id="安装图形界面"><a class="markdownIt-Anchor" href="#安装图形界面"></a> 安装图形界面</h1>
+<ul>
+<li>sudo  yum groupinstall “GNOME Desktop” “Graphical Administration Tools”</li>
+<li>更新系统的运行级别，以便下次直接进入图形界面：udo ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/19/环境搭建-08-Ubuntu系统安装后的设置/" itemprop="url">Ubuntu系统安装后的设置</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T15:29:55+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">环境搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="修改默认源为国内源"><a class="markdownIt-Anchor" href="#修改默认源为国内源"></a> 修改默认源为国内源</h1>
+<ol>
+<li>cd /etc/apt</li>
+<li>cp /etc/apt/sources.list /etc/apt/sources.list.bak   备份/etc/apt/sources.list</li>
+<li>在/etc/apt/sources.list文件前面添加源条目,具体源条目可百度，如阿里源：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#添加阿里源</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>更新源</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+<h1 id="系统分辨率设置"><a class="markdownIt-Anchor" href="#系统分辨率设置"></a> 系统分辨率设置</h1>
+<p>安装Ubuntu系统后分辨率为800*600且无法修改，通过以下方式修改：</p>
+<ol>
+<li>首先打开终端Terminal，输入: sudo apt-get install xdiagnose</li>
+<li>sudo xdiagnose 启动【X 诊断工具设置】，点击【Apply】</li>
+<li>sudo reboot 重启系统</li>
+<li>再次打开设置发现分辨率可以设置了,如设置为：1280*800</li>
+</ol>
+<h1 id="chrome浏览器安装"><a class="markdownIt-Anchor" href="#chrome浏览器安装"></a> chrome浏览器安装</h1>
+<ul>
+<li>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" target="_blank" rel="noopener">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></li>
+<li>sudo dpkg -i google-chrome-stable_current_amd64.deb</li>
+</ul>
 
           
         
@@ -2268,7 +2340,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2323,7 +2395,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">484</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2345,7 +2417,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2439,7 +2511,7 @@ SrpingBoot为微服务框架，与Spring4一起诞生</p>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共128.7k字</span>
+  <span class="post-count">博客全站共223.6k字</span>
 </div>
 
 

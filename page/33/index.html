@@ -1,0 +1,2939 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="行锋的技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行锋">
+<meta property="og:url" content="https://chetaofeng.github.io/page/33/index.html">
+<meta property="og:site_name" content="行锋">
+<meta property="og:description" content="行锋的技术博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="行锋">
+<meta name="twitter:description" content="行锋的技术博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chetaofeng.github.io/page/33/"/>
+
+
+
+
+
+  <title>行锋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/chetaofeng"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">行锋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">低头走路，抬头思考</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpService-Identification/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpService-Identification/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Service Identification</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="attributes">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Service Identification</h1>
+
+  <p>This property sheet enables you to view or modify the network information for a selected <a href="n8ahelpnet_service_name.htm">net service name</a> or database service.</p>
+
+  <p><span class="gui-object">Service Identification</span></p>
+
+  <p>Use the Service Identification box to view or modify <a href="n8ahelpCONNECTDATA.htm">CONNECT_DATA</a> information.</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
+    <tr>
+      <td width="21%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
+      </td>
+
+      <td width="79%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Service Name</td>
+
+      <td valign="top">
+        <p>Enter a <a href="n8ahelpservice_name.htm">service name</a> if configuring this client to connect to an Oracle8 i or later database service.<br>
+        <strong>Note:</strong> For a database service stored in a <a href="n8ahelpdirectory_server.htm">directory server</a>, this field only displays the current value. Modifications are not permitted.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="21%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">SID</p>
+      </td>
+
+      <td width="79%" valign="top">Displays the <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle System Identifier (SID)</a> for an Oracle8 database.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Connect Type</td>
+
+      <td width="79%" valign="top">
+        <p>From the list, select if you want this net service name to use a <a href="n8ahelpdedicated_server.htm">dedicated server</a>, <a href="n8ahelpshared_server.htm">shared server</a>, or whatever the database has been configured with.<br>
+        If shared server is configured in the initialization parameter file, then select Dedicated Server to force the listener to start a dedicated server to bypass shared server configuration.<br>
+        If shared server is configured in the initialization parameter file and you want to guarantee that this connection always uses a shared server, then select Shared Server. If Database Resident Connection Pooling is enabled on the server, you can select <strong>Pooled Server</strong> to get a connection from the pool. </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Use Oracle8 Release 8.0 Compatible Identification</td>
+
+      <td valign="top">Select this option if you are configuring a client to connect to a pre-release Oracle8<em>i</em> database service. Clear this option if you are configuring for an Oracle9<em>i</em> or Oracle8<em>i</em> database service.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Advanced</td>
+
+      <td valign="top">Choose to configure advanced <a href="n8ahelpCONNECTDATA.htm">CONNECT_DATA</a> parameters.</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">Address Configuration</span></p>
+
+  <p>Use the Address box to modify, add, or delete a listener <a href="n8ahelpprotocol_address.htm">protocol address</a> .</p>
+
+  <p>If an address is already configured, then its protocol information displays in the fields.</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
+    <tr>
+      <td width="22%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
+      </td>
+
+      <td width="78%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Protocol</td>
+
+      <td valign="top">
+        <p>From the list, select the protocol for the listener address. Depending on the protocol chosen, enter information in the fields as appropriate.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Show Advanced/Hide Advanced button</td>
+
+      <td valign="top">
+        <p>Use the Show Advanced/Hide Advanced toggle to display or hide settings for specifying the I/O buffer space limit for the address.</p>
+
+        <p>These settings are supported by the TCP/IP, TCP/IP with SSL, and SDP protocols.</p>
+
+        <ul>
+          <li><span class="gui-object">Total Send Buffer Size:</span>Specify, in bytes, the buffer space for send operations of sessions.</li>
+        </ul>
+
+        <ul>
+          <li><span class="gui-object">Total Receive Buffer Size:</span> Specify, in bytes, the buffer space for receive operations of sessions.</li>
+        </ul>
+
+     
+          <p><strong>Note:</strong> Specifying these settings overrides these settings in a clientside sqlnet.ora file.</p>
+     
+      </td>
+    </tr>
+
+    <tr>
+      <td width="22%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">+ button</p>
+      </td>
+
+      <td width="78%" valign="top">Choose to create a new protocol address. A new Address tab displays from which you can select the protocol and enter protocol information in the fields. The chosen protocol must be installed on both the client and server (where the listener resides).</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">X button</td>
+
+      <td width="78%" valign="top">
+        <p>Choose to remove the selected Address tab and its address information.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">&lt; button</td>
+
+      <td valign="top">
+        <p>Choose to move the protocol address up in the list order.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row"><br>
+      &gt; button</td>
+
+      <td valign="top">Choose to move the protocol address down in the list order.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Advanced button</td>
+
+      <td valign="top">Choose to configure multiple addresses options, such as <a href="n8ahelpconnecttime_failover.htm">connect-time failover</a> and <a href="n8ahelpclient_load_balancing.htm">client load balancing</a>.</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">Apply button</span></p>
+
+  <p>Choose to apply the settings.</p>
+
+  <p><span class="gui-object">Revert button</span></p>
+
+  <p>Choose to reset the settings to their original values.</p>
+
+  <p>For more information about configuring I/O buffer space, see Chapter 14, Optimizing Performance, in the <em>Oracle10i Net Administrator's Guide.</em></p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpCreate_Network_Route_Information.htm">Create Network Route Information for a Database Service</a></p>
+
+  <p><a href="n8ahelpCreate_Additional_Protocol_Addre.htm">Create Additional Protocol Addresses</a></p>
+
+  <p><a href="n8ahelpConfigure_Multiple_Address_Optio.htm">Configure Multiple Address Options</a></p>
+
+  <p><a href="n8ahelpConfigure_Advanced_Connect_Data_.htm">Configure Advanced Connect Data Options</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-configuration-overview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-configuration-overview/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Listener Configuration Overview</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="n8ahelpListener_Configuration_Overview">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Listener Configuration Overview</h1>
+
+  <h2>Configuration During Installation</h2>
+
+  <p>During a an Enterprise Edition or Standard Edition installation on the database server, Oracle Net Configuration Assistant configures a listener called <span class="Code">LISTENER</span> that has a TCP/IP listening protocol address for the Oracle database. During a Custom installation, Oracle Net Configuration Assistant prompts you to configure a listener name and a protocol address of your choice.</p>
+
+  <p>Additionally, a listening IPC protocol address for external procedure calls is automatically configured, regardless of the installation type.</p>
+
+  <p>Oracle Net Configuration Assistant also automatically configures service information for the external procedures in the <span class="Code">listener.ora</span> file.</p>
+
+  <h2>Configuration with Oracle Net Manager</h2>
+
+  <p>Oracle Net Manager enables you to:</p>
+
+  <ul>
+    <li>
+      <p>Create a listener</p>
+    </li>
+
+    <li>
+      <p>Configure service information for Oracle8 or previous databases</p>
+    </li>
+
+    <li>
+      <p>Configure service information non-Oracle database services, including <a href="n8ahelpexternal_procedures.htm">external procedures</a> and <a href="n8ahelpHeterogeneous_Services.htm">Heterogeneous Services</a></p>
+    </li>
+
+    <li>
+      <p>Enable <a href="n8ahelptracing.htm">tracing</a> and <a href="n8ahelplogging.htm">logging</a> features</p>
+    </li>
+
+    <li>
+      <p>Enable password authentication for the <a href="n8ahelpLSNRCTL_utility.htm">Listener Control utility</a></p>
+    </li>
+  </ul>
+
+  <p>To access listener configuration:</p>
+
+  <p>From the navigator pane, expand <span class="gui-object">Oracle Net Configuration &gt; Local &gt; Listeners.</span></p>
+
+  <p>For more information, see Chapter 10, Configuring and Administering the Listener, in the <em>Oracle10i Net Administrator's Guide</em>.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-overview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-overview/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Listener Overview</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="n8ahelpListener_Overview">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Listener Overview</h1>
+
+  <p>Services coordinate their sessions with the help of a listener, a process on the server that receives connection requests on behalf of a client application. Listeners are configured to "listen on" <a href="n8ahelpprotocol_address.htm">protocol addresses</a> for a database service or non-database service.</p>
+
+  <p>Protocol addresses are configured in the listener configuration file, <a href="n8ahelplistenerora_file.htm">listener.ora</a>, for a database service or a non-database service. An Oracle9<em>i</em> or Oracle8<em>i</em> database service automatically registers its information with the listener, such as its service names, instance names, and load information. This feature, called <a href="n8ahelpservice_registration.htm">service registration</a>, does not require service configuration in the <span class="Code">listener.ora</span> file. Other services, including Oracle8 and Oracle7 database services, and the Oracle Enterprise Manager management tools, require service configuration in the <span class="Code">listener.ora</span> file.</p>
+
+  <p>Once the listener is configured, the listener may be managed with the <a href="n8ahelpLSNRCTL_utility.htm">Listener Control utility</a>.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnts/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>NTS</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="n8ahelpNTS">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>NTS</h1>
+
+  <p>The <a href="n8ahelpWindows_NT_native_authentication.htm">Windows NT native authentication</a> method does not require additional parameters.</p>
+
+  <p>For more information, see Windows NT documentation.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelppooled-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelppooled-server/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>shared server</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="n8ahelpshared_server">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  <style type="text/css">
+  <!--
+  .style1 {font-size: 10px}
+  -->
+  </style>
+</head>
+
+<body>
+
+  <h1>Database Resident Connection Pooling</h1>
+
+  <p>Database Resident Connection Pooling provides for the pooling of "Dedicated" connections across client applications or processes. A dedicated connection refers to a dedicated server along with its database session. Use Database Resident Connection Pooling when multiple client applications (like mid-tiers) need to maintain persistent connections to the database, or when server resources (such as memory) need to be optimized.</p>
+
+  <p>In Database Resident Connection Pooling, clients are connected to a background process called the Connection Broker that provides the pooling functionality.</p>
+
+  <p>Contrast with <a href="n8ahelpdedicated_server.htm">dedicated server</a> and <a href="n8ahelpshared_server.htm">shared server</a>.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-create-net-service-alias/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-create-net-service-alias/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Create Net Service Alias dialog box</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="nmhelp_create_net_service_alias">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Creating Net Service Alias dialog box</h1>
+
+  <p>The Create Net Service Alias dialog box enables you to create <a href="nmhelp_net_service_alias.htm">net service aliases</a> in a directory server.</p>
+
+  <p>A net service alias is an alternative name for a <a href="n8ahelpnet_service_name.htm">net service name</a> or database service. A net service alias entry does not have connect descriptor information. Instead, it only references the location of the object for which it is an alias. When a client requests a directory lookup of a net service alias, the directory determines that the entry is a net service alias and completes the lookup as if it is the referenced entry. For example, a net service alias of <span class="Code">db1alias</span> can be created for a database service of <span class="Code">db1</span>. When <span class="Code">db1alias</span> is used to connect to a database service, as in <span class="Code">CONNECT scott/tiger@db1alias</span> , it will actually resolve to and use the connect descriptor information for db1 .</p>
+
+  <p>There are two main uses of net service aliases:</p>
+
+  <ul>
+    <li>
+      <p>Use a net service alias as a way for clients to refer to a database service or net service name by another name.</p>
+    </li>
+
+    <li>
+      <p>Use a net service alias in one <a href="n8ahelpOracle_Context.htm">Oracle Context</a> for a database service or net service name in a different Oracle Context. This enables a database service or net service name to be defined once in the directory server, but referred to by clients that use other Oracle Contexts.</p>
+    </li>
+  </ul>
+
+  <p><span class="gui-object">Net Service Alias</span></p>
+
+  <p>Enter the name of the net service alias.</p>
+
+  <p><span class="gui-object">Net Service Name or Database Service</span></p>
+
+  <p>Use the Net Service Name or Database Service box to enter information about the database service or net service name:</p>
+
+  <p><span class="gui-object">Oracle Context:</span> Specify the Oracle Context of the database service or net service name by selecting one from the list or entering one in the field.</p>
+
+  <p><span class="gui-object">Name:</span> Specify the <a href="n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> of the database service or net service name by selecting one from the list or entering one in the field.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-easyconnect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-easyconnect/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>easy connect naming</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="nmhelp_easyconnect">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>easy connect naming</h1>
+
+  <p>A <a href="n8ahelpnaming_method.htm">naming method</a> that enables clients to connect to a database server without any configuration. Clients use a simple TCP/IP address, consisting of a host name and optional port and service name:</p>
+
+  <p><span class="Code">CONNECT <em>username/password@host[:port][/service_name]</em></span></p>
+
+  <p>For information about using the easy connect naming method, see Chapter 8, Configuring Naming Methods, in the <em>Oracle10i Net Services Administrator's Guide</em>.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-net-service-alias-details/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-net-service-alias-details/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Net Service Alias Details</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="alias_details">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Net Service Alias Details</h1>
+
+  <p>This property sheet enables you to view the details of the selected <a href="nmhelp_net_service_alias.htm">net service alias</a>.</p>
+
+  <p><span class="gui-object">Net Service Alias</span></p>
+
+  <p>View or modify the name of the net service alias.</p>
+
+  <p><span class="gui-object">Net Service Name or Database Service</span></p>
+
+  <p>View or modify the following information for the database service or net service name:</p>
+
+  <ul>
+    <li><span class="gui-object">Oracle Context:</span> View or modify the <a href="n8ahelpOracle_Context.htm">Oracle Context</a> of the database service or net service name.</li>
+
+    <li><span class="gui-object">Name:</span> View or modify the <a href="n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> of the database service or net service name.</li>
+  </ul>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpssl-profile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpssl-profile/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>ssl Profile</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="topic-id" content="profile_ssl">
+  <meta name="Description" content="enter description here...">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  <style type="text/css">
+  <!--
+  .style1 {font-size: 9px}
+  -->
+  </style>
+</head><!--(Body)==========================================================-->
+
+<body>
+
+  <h1 class="gui-object">SSL Profile</h1>
+
+  <p>The <span class="gui-object">SSL</span> tab enables you to modify Secure Sockets Layer (SSL) settings. SSL is an industry standard protocol for securing network communications. SSL provides for authentication, encryption, and data integrity. Use SSL to secure communications between any client and any server. Specifically, you can use SSL to authenticate any client or server to one or more Oracle servers or an Oracle server to any client.</p>
+
+  <p><span class="gui-object">Configure SSL</span></p>
+
+  <p>From the list, select to specify settings for either the client or server.</p>
+
+  <p>The settings you need to configure for the server are similar to those you set for the client. There is one additional parameter: a check box entitled Require Client Authentication.</p>
+
+  <p><span class="gui-object">Configuration Method</span></p>
+
+  <p>TBD...From the list, select <span class="gui-object">File System</span> to...., or select <span class="gui-object">Entrust</span> to...</p>
+
+  <p><span class="gui-object">Wallet Configuration</span></p>
+
+  <p>A wallet is contains certificates, keys and trust points. Select one of the four configuration methods described in the table. If the method chosen is File System or Entrust Wallets, <span class="gui-object">Browse</span> to search for a wallet in your file system.</p><!--(Table)=========================================================-->
+
+  <table summary="This table lists fields with links and the pages that appear when you click the links" x-use-null-cells="" style="width: 100%; x-border-left: 1px table-solid; x-border-top: 1px table-solid; x-border-right: 1px table-solid; x-border-bottom: 1px table-solid; border-collapse: separate; border-spacing: 2px;" cellspacing="2" width="100%" border="1">
+    <tr class="kadov-Cbold">
+      <td scope="col" style="x-cell-content-align: bottom; width: 32%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="32%">
+        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Wallet Configuration Method</b></p>
+      </td>
+
+      <td scope="col" style="x-cell-content-align: bottom; width: 68%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="68%">
+        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Access Method</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">File system</td>
+
+      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">
+        <p>Directory path</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; width: 32%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="32%">
+        <p style="text-align: left;" align="left">Microsoft certificate</p>
+      </td>
+
+      <td style="x-cell-content-align: top; width: 68%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="68%">None</td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Microsoft registry</td>
+
+      <td style="x-cell-content-align: top; width: 68%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="68%">
+        <p>Registry key</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Entrust wallets</td>
+
+      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Directory path</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">Cipher Suite Configuration</span></p>
+
+  <p>Several SSL cipher suites have been installed by default. These default cipher suites will be overwritten if you add one or more manually.</p><!--(Table)=========================================================-->
+
+  <table summary="This table lists fields with links and the pages that appear when you click the links" x-use-null-cells="" style="width: 100%; x-border-left: 1px table-solid; x-border-top: 1px table-solid; x-border-right: 1px table-solid; x-border-bottom: 1px table-solid; border-collapse: separate; border-spacing: 2px;" cellspacing="2" width="100%" border="1">
+    <tr>
+      <td scope="col" style="x-cell-content-align: bottom; width: 25%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="25%">
+        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Element</b></p>
+      </td>
+
+      <td scope="col" style="x-cell-content-align: bottom; width: 75%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="75%">
+        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Description</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Add button</td>
+
+      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">
+        <p>Choose to invoke the Select a Cipher Suite to enable dialog box. In the dialog box, select a suite, and then choose OK . The cipher suite is added to the list box.<strong><br>
+        Note:</strong> All Oracle Advanced Security encryption algorithms and key lengths are available for both U.S. domestic and international use.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; width: 25%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="25%">
+        <p style="text-align: left;" align="left">Remove button</p>
+      </td>
+
+      <td style="x-cell-content-align: top; width: 75%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="75%">Choose to remove a selected Cipher Suite.</td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Promote button</td>
+
+      <td style="x-cell-content-align: top; width: 75%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="75%">
+        <p>Choose to move a selected Cipher Suite to a higher level in the list.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Demote button</td>
+
+      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Choose to move a selected Cipher Suite to a lower level in the list.</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">Revocation Check (Server only)</span></p>
+
+  <p>Specify a revocation check for a certificate. Select from one of the following values:</p>
+
+  <ul>
+    <li class="kadov-p">
+      <p><span class="gui-object">None:</span> Select to turn off certificate revocation checking.</p>
+    </li>
+
+    <li class="kadov-p">
+      <p><span class="gui-object">Required:</span> Select to perform certificate revocation when a certificate is available. If a certificate is revoked and no appropriate Certificate Revocation List (CRL) is found, then reject the SSL connection If no appropriate CRL is found to ascertain the revocation status of the certificate and the certificate is not revoked. then accept the SSL connection.</p>
+    </li>
+
+    <li class="kadov-p"><span class="gui-object">Requested:</span> Select to perform certificate revocation in case a CRL is available. Reject SSL connection if the certificate is revoked. If no appropriate CRL is found to determine the revocation status of the certificate and the certificate is not revoked, then accept the SSL connection</li>
+  </ul>
+
+  <p><span class="gui-object">Require SSL Version (optional)</span></p>
+
+  <p>From the list, select the version of SSL. The client and the server must use a compatible versions of SSL. You can select SSL v3.0 or choose to allow any existing or future version of SSL to be used.</p>
+
+  <p><span class="gui-object">Require Client Authentication (Server only)</span></p>
+
+  <p>This check box is selected by default. Deselect this check box if you do not want to require client-side authentication.</p>
+
+  <p><span class="gui-object">Match server X.509 name (Client only)</span></p>
+
+  <p>From the list, select whether or not check to see if the server's <a href="../April%20Updates/mgr/n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> matches its service name. If you enforce the match verifications, then SSL ensures that the certificate is from the server. If you select to not enforce the match verification, then SSL performs the check but allows the connection, regardless if there is a match. Not enforcing the match allows the server to potentially fake its identify. Select from one of the following values:</p>
+
+  <ul>
+    <li class="kadov-p">
+      <p><span class="gui-object">Yes:</span> Select to check the server DN. If the DN matches the service name, the connection succeeds. If the DN does not match the service name, the connection is successful, but an error is logged in the <span class="Code">sqlnet.log</span> file..</p>
+    </li>
+
+    <li class="kadov-p">
+      <p><span class="gui-object">No:</span> Select to not check the server DN. Ignoring this check can enable the server to fake its identity.</p>
+    </li>
+
+    <li class="kadov-p">
+      <p><span class="gui-object">Let Client Decide:</span> TBD</p>
+    </li>
+  </ul>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpAddress-List-Options-dialog-box/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpAddress-List-Options-dialog-box/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:20+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Address List Options dialog box</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="address_options">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1 class="gui-object">Address List Options dialog box</h1>
+
+  <p>The Address List Options dialog box enables you to specify the order and how the <a href="n8ahelpprotocol_address.htm">protocol addresses</a> in <a href="n8ahelpconnect_descriptor.htm">connect descriptors</a> are used in a connections.</p>
+
+  <p><span class="gui-object">Try each address, in order, until one succeeds</span></p>
+
+  <p>Select to enable <a href="n8ahelpconnecttime_failover.htm">connect-time failover</a> for an Oracle9<em>i</em> or Oracle8<em>i</em> client. If the first address cannot be reached, then failover enables the client to use the next listener protocol address. Select this option and the <span class="gui-object">Use Options Compatible with Net8 8.0 Clients</span> option to turn <a href="n8ahelpsource_routing.htm">source routing</a> off for a release 8.0 or previous client.</p>
+
+  <p><span class="gui-object">Try each address, randomly, until one succeeds</span></p>
+
+  <p>Select to enable <a href="n8ahelpclient_load_balancing.htm">client load balancing</a> and connect-time failover for an Oracle9<em>i</em> or Oracle8<em>i</em> client.</p>
+
+  <p><span class="gui-object">Try one address, selected at random</span></p>
+
+  <p>Select to enable client load balancing feature for an Oracle9<em>i</em> or Oracle8<em>i</em> client.</p>
+
+  <p><span class="gui-object">Use each address in order until destination is reached</span></p>
+
+  <p>Select to enable source routing for an Oracle8<em>i</em> or Oracle8 client.</p>
+
+  <p>This option is required when reaching the destination requires more than one address stop. This feature is typically used to enable Oracle Connection Manager features.</p>
+
+  <p>This parameter is not required for an Oracle9<em>i</em> client.</p>
+
+  <p><span class="gui-object">Use only the first address</span></p>
+
+  <p>Select to disable source routing, connect-time failover, and client load balancing features.</p>
+
+  <p><span class="gui-object">Use Options Compatible with Net8 8.0 Clients</span></p>
+
+  <p>Select if you are configuring a release 8.0 client. You will only be able to select among the following options:</p>
+
+  <p><span class="gui-object">-Try each address, in order, until one succeeds</span></p>
+
+  <p>-<span class="gui-object">Use each address in order until destination is reached</span></p>
+
+  <p>Clear this option if you are configuring a Oracle9<em>i</em> or Oracle8<em>i</em> client.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpConfigure_a_Connect_Desc00000028.htm">Configure a Connect Descriptor for Connections to Oracle Connection Manager</a></p>
+
+  <p><a href="n8ahelpConfigure_Multiple_Address_Optio.htm">Configure Multiple Address Options</a></p>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+       
+         <div id="gitment-container"></div>
+       
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/pub-images/avatar.png"
+                alt="行锋" />
+            
+              <p class="site-author-name" itemprop="name">行锋</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chetaofeng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chetaofeng@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=505221860&auto=0&height=66"></iframe>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="theme-info">
+  <span>自古写字楼如青楼,不许楼里见白头</span>
+</div>
+
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">行锋</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+ <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共223.6k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
