@@ -117,7 +117,7 @@
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/git2.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/github%E8%AE%BE%E7%BD%AE.png">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png">
-<meta property="og:updated_time" content="2019-02-15T02:50:27.000Z">
+<meta property="og:updated_time" content="2019-03-19T14:32:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git安装配置">
 <meta name="twitter:description" content="简介 官网：https://git-scm.com/ Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 详细学习，推荐：  http:">
@@ -467,7 +467,7 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list</span><br><span class="line">git config --global --list</span><br><span class="line">git config --和local --list</span><br></pre></td></tr></table></figure>
 <p>git安装完成后，还需要最后一步设置，在命令行输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门</p>
+<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门，此用户名和邮箱是git提交代码时用来显示你身份和联系方式的，并不是github用户名和邮箱</p>
 <h1 id="git账号关联流程"><a class="markdownIt-Anchor" href="#git账号关联流程"></a> git账号关联流程</h1>
 <ol>
 <li>生成SSHkey<br>
@@ -481,7 +481,7 @@ ssh-keygen(选项)</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">测试是否成功,第一此输入命令，需输入yes后再次输入测试命令后出现类似&quot;Hi...&quot;，表示配置成功</span><br><span class="line">&gt; ssh -T git@github.com</span><br><span class="line">&gt; ssh -T git@gitee.com</span><br><span class="line">&gt; ssh -T git@gitlab.com</span><br></pre></td></tr></table></figure>
 <h1 id="git单账号关联"><a class="markdownIt-Anchor" href="#git单账号关联"></a> git单账号关联</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）</span><br><span class="line">&gt; cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ssh-keygen -t rsa -C &quot;xxxxx@gmail.com&quot;（注册github时的email）</span><br><span class="line">&gt; cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>登陆网站，如github／gitee／gitlab等，在如设置／Settings中有SSH and GPG keys中【add new keys】，将id_rsa.pub内容添加，会自动识别标题,设置完成之后测试登陆</p>
 <h1 id="git多账号设置关联"><a class="markdownIt-Anchor" href="#git多账号设置关联"></a> git多账号设置关联</h1>
 <p>多账号配置是通过.ssh文件夹下config文件实现，操作如下：</p>
@@ -507,6 +507,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
 <li>GitLab Server Url: <a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></li>
 <li>GitLab API Key： <a href="https://gitlab.com/profile/account" target="_blank" rel="noopener">https://gitlab.com/profile/account</a></li>
 </ul>
+<h1 id="http方式使用"><a class="markdownIt-Anchor" href="#http方式使用"></a> http方式使用</h1>
 <h1 id="git项目权限管理"><a class="markdownIt-Anchor" href="#git项目权限管理"></a> git项目权限管理</h1>
 <p>Git项目一般有五种身份权限，分别是：</p>
 <ul>
@@ -560,7 +561,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-04-git安装配置/">git安装配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年02月15日 - 10:02</p>
+  <p><span>最后更新:</span>2019年03月19日 - 22:03</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-04-git安装配置/" title="git安装配置">https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-04-git安装配置/"  aria-label="复制成功！"></i></span>
   </p>
@@ -659,8 +660,8 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-01-mac系统安装/" rel="prev" title="mac系统安装">
-                mac系统安装 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/" rel="prev" title="mac虚拟机安装及设置">
+                mac虚拟机安装及设置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -755,7 +756,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -766,7 +767,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -826,7 +827,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text"> 工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地"><span class="nav-number">2.1.</span> <span class="nav-text"> 本地</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程配合"><span class="nav-number">2.2.</span> <span class="nav-text"> 远程配合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git安装"><span class="nav-number">3.</span> <span class="nav-text"> git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac系统"><span class="nav-number">3.1.</span> <span class="nav-text"> mac系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git全局设置"><span class="nav-number">4.</span> <span class="nav-text"> git全局设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git账号关联流程"><span class="nav-number">5.</span> <span class="nav-text"> git账号关联流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git单账号关联"><span class="nav-number">6.</span> <span class="nav-text"> git单账号关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git多账号设置关联"><span class="nav-number">7.</span> <span class="nav-text"> git多账号设置关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitignore文件"><span class="nav-number">8.</span> <span class="nav-text"> .gitignore文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发环境中配置"><span class="nav-number">9.</span> <span class="nav-text"> 开发环境中配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git项目权限管理"><span class="nav-number">10.</span> <span class="nav-text"> git项目权限管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#私服项目使用推荐流程"><span class="nav-number">11.</span> <span class="nav-text"> 私服项目使用推荐流程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text"> 工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地"><span class="nav-number">2.1.</span> <span class="nav-text"> 本地</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程配合"><span class="nav-number">2.2.</span> <span class="nav-text"> 远程配合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git安装"><span class="nav-number">3.</span> <span class="nav-text"> git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac系统"><span class="nav-number">3.1.</span> <span class="nav-text"> mac系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git全局设置"><span class="nav-number">4.</span> <span class="nav-text"> git全局设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git账号关联流程"><span class="nav-number">5.</span> <span class="nav-text"> git账号关联流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git单账号关联"><span class="nav-number">6.</span> <span class="nav-text"> git单账号关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git多账号设置关联"><span class="nav-number">7.</span> <span class="nav-text"> git多账号设置关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitignore文件"><span class="nav-number">8.</span> <span class="nav-text"> .gitignore文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发环境中配置"><span class="nav-number">9.</span> <span class="nav-text"> 开发环境中配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#http方式使用"><span class="nav-number">10.</span> <span class="nav-text"> http方式使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git项目权限管理"><span class="nav-number">11.</span> <span class="nav-text"> git项目权限管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#私服项目使用推荐流程"><span class="nav-number">12.</span> <span class="nav-text"> 私服项目使用推荐流程</span></a></li></ol></div>
             
 
           </div>
@@ -887,7 +888,7 @@ gitlab／gitee没有配置选项，需先安装相应插件，如下：<br>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

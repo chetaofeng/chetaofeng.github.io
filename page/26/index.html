@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistener-configuration-overview/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpgeneral-parameters-general/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistener-configuration-overview/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpgeneral-parameters-general/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -399,56 +399,38 @@
 
 <html lang="zh_CN">
 <head>
-  <title>监听程序配置概览</title>
+  <title>一般参数：一般信息</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpListener_Configuration_Overview">
+  <meta name="topic-id" content="listener_gen">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>监听程序配置概览</h1>
+  <h1>一般参数：一般信息</h1>
 
-  <h2>安装期间的配置</h2>
+  <p><span class="gui-object">一般信息</span>选项卡使您能够配置监听程序的一般参数。</p>
 
-  <p>在数据库服务器上安装企业版或标准版期间，Oracle Net Configuration Assistant 将配置名为 <span class="Code">LISTENER</span> 的监听程序，该程序中含有 Oracle 数据库的 TCP/IP 监听协议地址。在进行定制安装期间，Oracle Net Configuration Assistant 将提示您为自己选取的监听程序配置监听程序名和协议地址。</p>
+  <p><span class="gui-object">监听程序名</span></p>
 
-  <p>另外，无论采用何种安装类型，外部过程调用的监听 IPC 协议地址都是自动配置的。</p>
+  <p>显示监听程序的名称。</p>
 
-  <p>Oracle Net Configuration Assistant 还自动在 <span class="Code">listener.ora</span> 文件中配置外部过程的服务信息。</p>
+  <p><span class="gui-object">启动等待时间</span></p>
 
-  <h2>具有 Oracle Net Manager 的配置</h2>
+  <p>指定在响应监听程序控制实用程序 START 命令之前监听程序等待的时间 (秒)。</p>
 
-  <p>Oracle Net Manager 使您能够完成以下操作：</p>
+  <p><strong>注：</strong>此设置已过时，在以后的发行版中不再支持。如果运行监听程序时需要此参数，请通知 Oracle 技术支持。</p>
 
-  <ul>
-    <li>
-      <p>创建监听程序</p>
-    </li>
+  <h2>选项</h2>
 
-    <li>
-      <p>配置 Oracle8 或以前数据库的服务信息</p>
-    </li>
+  <p><span class="gui-object">在关闭时保存配置</span></p>
 
-    <li>
-      <p>配置非 Oracle 数据库服务的服务信息，包括<a href="n8ahelpexternal_procedures.htm">外部过程</a>和<a href="n8ahelpHeterogeneous_Services.htm">异构服务</a></p>
-    </li>
+  <p>选择此选项以永久保存由监听程序控制实用程序 SET 命令所作的任何更改。</p>
 
-    <li>
-      <p>启用<a href="n8ahelptracing.htm">跟踪</a>和<a href="n8ahelplogging.htm">事件记录</a>功能</p>
-    </li>
+  <p><span class="gui-object">SNMP 联系信息</span></p>
 
-    <li>
-      <p>为<a href="n8ahelpLSNRCTL_utility.htm">监听程序控制实用程序</a>启用口令验证</p>
-    </li>
-  </ul>
-
-  <p>要访问监听程序配置，请执行以下操作：</p>
-
-  <p>在导航器窗格中，展开 <span class="gui-object">Oracle Net 配置 &gt; 本地 &gt; 监听程序</span>。</p>
-
-  <p>有关详细信息，请参阅 <em>Oracle10i Net Administrator's Guide</em> 中的第 10 章&ldquo;Configuring and Administering the Listener&rdquo;。</p>
+  <p>输入任意文本，此文本将写入 <span class="Code">snmp.ora</span> 文件供 Oracle Enterprise Manager 使用。此信息可通过任何 SNMP 连接发送，并且可以是任意字符串。它不会影响创建 SNMP 连接的进程。此信息一般由客户机的用户或管理员的联系信息组成。</p>
 
   <h2>相关主题</h2>
 
@@ -513,7 +495,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistener-overview/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpgeneral-routing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -532,7 +514,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistener-overview/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpgeneral-routing/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -588,22 +570,187 @@
 
 <html lang="zh_CN">
 <head>
-  <title>监听程序概览</title>
+  <title>一般信息：路由选择</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpListener_Overview">
+  <meta name="topic-id" content="profile_routing">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>监听程序概览</h1>
+  <h1>一般信息：路由选择</h1>
 
-  <p>在服务器 (它代表客户机应用程序接收连接请求) 上的监听程序、进程的帮助下，服务可以协调其会话。配置监听程序，使其在数据库服务或非数据库服务的<a href="n8ahelpprotocol_address.htm">协议地址</a>上进行&ldquo;监听&rdquo;。</p>
+  <p><span class="gui-object">路由选择</span>选项卡使您能够在所有时刻将连接请求从本计算机引导到特定进程。</p>
 
-  <p>协议地址是在数据库服务或非数据库服务的监听程序配置文件 <a href="n8ahelplistenerora_file.htm">listener.ora</a> 中配置的。Oracle9<em>i</em> 或 Oracle8<em>i</em> 数据库服务将其信息自动注册到监听程序，如服务名、实例名及加载信息。这种名为<a href="n8ahelpservice_registration.htm">服务注册</a>的功能不需要在 <span class="Code">listener.ora</span> 文件中进行服务配置。其他服务 (包括 Oracle8 和 Oracle7 数据库服务以及 Oracle Enterprise Manager 管理工具) 需要在 <span class="Code">listener.ora</span> 文件中配置服务。</p>
+  <p><span class="gui-object">始终使用专用服务器</span></p>
 
-  <p>一旦配置了监听程序，就可以用<a href="n8ahelpLSNRCTL_utility.htm">监听程序控制实用程序</a>管理它。</p>
+  <p>选择以强制监听程序从此客户机为所有网络会话衍生一个<a href="n8ahelpdedicated_server.htm">专用服务器</a>。通过将 <span class="Code">(SERVER=dedicated)</span> 添加到连接描述符的 <span class="Code">CONNECT_DATA</span> 部分来完成该操作。即使配置了<a href="n8ahelpshared_server.htm">共享服务器</a>，来自此客户机的连接仍会使用专用服务器。</p>
+
+  <p>使用此选项虽然可缩短连接时间，但会降低服务器的运行速度。因此 Oracle Corporation 建议在空闲时间很少的情况下处理大量数据库事务时，才使用此选项。</p>
+
+  <p><strong>注：</strong>如果启用此选项，将覆盖<a href="n8ahelpService_Identification.htm">服务标识</a>属性工作表中的<span class="gui-object">连接类型</span>选项。</p>
+
+  <p><span class="gui-object">首选连接管理器路由</span></p>
+
+  <p>选择此选项以便在任何可能的时候将客户机发送到 <a href="n8ahelpOracle_Connection_Manager.htm">Oracle Connection Manager</a>。如果没有可用的 Oracle Connection Manager 地址，则连接将通过任何可用的监听程序地址发送。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpRoute_Connection_Requests.htm">路由连接请求</a></p>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a> &nbsp;</p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpglobal-database-name/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpglobal-database-name/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>全局数据库名</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpglobal_database_name">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>全局数据库名</h1>
+
+  <p>数据库的全名，它唯一标识该数据库，以区别于任何其他数据库。全局数据库名的格式为<span class="Code">&ldquo;database_name.database_domain&rdquo;</span>，例如 <span class="Code">sales.us.example.com</span>。</p>
+
+  <p>数据库名称部分 <span class="Code">sales</span> 是您希望用来称呼数据库的简单名称。数据库域部分 <span class="Code">us.example.com</span> 指定数据库所在的域，使全局数据库名具有唯一性。Oracle 建议在可能时使数据库域镜像网络域。</p>
+
+  <p>全局数据库名是数据库的默认服务名，如同<a href="n8ahelpinitialization_parameter_file.htm">初始化参数文件</a>中的 <span class="Code">SERVICE_NAMES</span> 参数所指定的那样。</p>
 
   <h2>相关主题</h2>
 
@@ -668,7 +815,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistenerora-file/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphost-naming/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -687,7 +834,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistenerora-file/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphost-naming/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -743,34 +890,951 @@
 
 <html lang="zh_CN">
 <head>
-  <title>listener.ora 文件</title>
+  <title>主机命名</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpListener_Overview">
+  <meta name="topic-id" content="n8ahelphost_naming">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>listener.ora 文件</h1>
+  <h1>主机命名</h1>
 
-  <p>指定以下各项的<a href="n8ahelplistener.htm">监听程序</a>的配置文件：</p>
+  <p>使用户能够通过使用 TCP/IP 环境中的主机名别名连接到 Oracle 数据库服务器的一种<a href="n8ahelpnaming_method.htm">命名方法</a>。主机名被映射为现有名称解决方案服务 (如<a href="n8ahelpDomain_Name_System_DNS.htm">域名系统 (DNS)</a>、网络信息服务 (NIS) 或集中维护的 <span class="Code">/etc/hosts</span> 文件集) 中的服务器的全局数据库名。</p>
+
+  <p>有关配置主机命名方法的信息，请参阅 <em>Oracle10i Net Services Administrator's Guide</em> 中的第 8 章&ldquo;Configuring Naming Methods&rdquo;。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a>&nbsp;</p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphelp-menu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphelp-menu/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>&ldquo;帮助&rdquo;菜单</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpHelp_Menu">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>&ldquo;帮助&rdquo;菜单</h1>
+
+  <p>可以从<span class="gui-object">帮助</span>菜单中访问 Oracle Net Manager 联机帮助系统。</p>
+
+  <p><span class="gui-object">帮助目录</span></p>
+
+  <p>选择此项以显示包含 Oracle Net Manager 帮助系统的主题和索引条目列表的&ldquo;帮助主题&rdquo;窗口。</p>
+
+  <p><span class="gui-object">搜索</span></p>
+
+  <p>选择此项以在帮助系统中使用关键字来搜索帮助主题。</p>
+
+  <p><span class="gui-object">关于 Oracle Net Manager</span></p>
+
+  <p>选择此项以显示包含有关 Oracle Net Manager 版本信息的对话框。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>实例</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpinstance">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>实例</h1>
+
+  <p>系统全局区 (SGA) 和 Oracle 后台进程的组合。当数据库在数据库服务器上启动时 (不考虑计算机的类型)，Oracle 将分配一个称为 SGA 的内存区域并启动一个或多个 Oracle 进程。实例的内存和进程将有效管理相关数据库的数据并为数据库用户提供服务。您可以在并行服务器数据库内连接到任何实例来访问信息。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance-name/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance-name/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>实例名</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpinstance_name">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>实例名</h1>
+
+  <p>Oracle9<em>i</em> 和 Oracle8<em>i</em> 数据库<a href="n8ahelpinstance.htm">实例</a>由<a href="n8ahelpinitialization_parameter_file.htm">初始化参数文件</a>中的 <span class="Code">INSTANCE_NAME</span> 参数标识。<span class="Code">INSTANCE_NAME</span> 对应于该实例的 <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle 系统标识符 (SID)</a>。客户机可以通过指定<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>中的 <span class="Code">INSTANCE_NAME</span> 参数，连接到特定实例。</p>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinitialization-parameter-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinitialization-parameter-file/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>初始化参数文件</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpinitialization_parameter_file">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>初始化参数文件</h1>
+
+  <p>一个包含初始化数据库和实例的配置参数的文件。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpintegrity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpintegrity/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>完整性</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpintegrity">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>完整性</h1>
+
+  <p>对通过连接发送的客户机和服务器所看到的数据的比较。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpldapora-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpldapora-file/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>ldap.ora 文件</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpintegrity">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>ldap.ora 文件</h1>
+
+  <p>由 Oracle Net Configuration Assistant 创建并包含下列目录配置信息的文件：</p>
 
   <ul>
     <li>
-      <p>监听程序名</p>
+      <p>目录类型</p>
     </li>
 
     <li>
-      <p>它正在接受连接请求的<a href="n8ahelpprotocol_address.htm">协议地址</a></p>
+      <p>目录位置</p>
     </li>
 
     <li>
-      <p>监听程序正在监听的服务 (数据库或非数据库服务)</p>
+      <p>默认的 <a href="n8ahelpOracle_Context.htm">Oracle Context</a>，客户机或服务器将使用它来为到数据库服务的连接查找或配置<a href="n8ahelpconnect_identifier.htm">连接标识符</a></p>
     </li>
   </ul>
 
-  <p><span class="Code">listener.ora</span> 文件必须驻留在以下某一位置：</p>
+  <p><span class="Code">ldap.ora</span> 文件必须驻留在以下某一位置：</p>
 
   <ol>
     <li>
@@ -778,1208 +1842,13 @@
     </li>
 
     <li>
-      <p>节点的全局配置目录。对于 Sun Solaris，此目录为 <span class="Code">/var/opt/oracle</span>。Windows NT 不具有中央目录。</p>
+      <p>在 UNIX 上为 <span class="Code">$ORACLE_HOME/network/admin</span>，而在 Windows 操作系统上为 <span class="Code"><em>ORACLE_HOME</em>\network\admin</span> 目录。</p>
     </li>
-
-    <li>在 UNIX 上为 <span class="Code">$ORACLE_HOME/network/admin</span>，而在 Windows 操作系统上为 <span class="Code"><em>ORACLE_HOME</em>\network\admin</span> 目录。</li>
   </ol>
 
-  <p><strong>注：</strong>Oracle9<em>i</em> 和 Oracle8<em>i</em> 由于<a href="n8ahelpservice_registration.htm">服务注册</a>而不需要标识数据库服务。不过，如果您打算使用 <a href="n8ahelpOracle_Enterprise_Manager.htm">Oracle Enterprise Manager</a> 来监视数据库，则需要静态服务配置。</p>
-
   <h2>相关主题</h2>
 
   <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000018/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000018/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>本地命名概览</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpLocal_Naming00000018">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>本地命名概览</h1>
-
-  <p><a href="n8ahelplocal_naming00000153.htm">本地命名</a>是主要<a href="n8ahelpnaming_method.htm">命名方法</a>中的一种，它用于将简称 (<a href="n8ahelpnet_service_name.htm">网络服务名</a>) 解析为<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>，客户机使用此连接描述符连接数据库或服务。本地命名在本地 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>中存储网络服务名及其连接描述符。</p>
-
-  <p>最终用户以下列格式输入包括网络服务名的连接字符串：</p>
-
-  <p><span class="Code">CONNECT <em>username/password@net_service_name</em></span></p>
-
-  <p>在下面的示例中，sales 是在 tnsnames.ora 文件中找到的网络服务名：</p>
-
-  <p><span class="Code">CONNECT scott/tiger@sales</span></p>
-
-  <p>返回到客户机的连接描述符包括：</p>
-
-  <ul>
-    <li>
-      <p>监听程序协议地址的位置</p>
-    </li>
-
-    <li>
-      <p>数据库的<a href="n8ahelpservice_name.htm">服务名</a></p>
-    </li>
-  </ul>
-
-  <p>客户机使用此信息连接到某个监听程序。用同一个地址信息配置的监听程序接收此请求。如果监听程序正在监听对同一数据库服务的请求 (该数据库服务在连接描述符中指定)，则授予连接权限。</p>
-
-  <p>有关详细信息，请参阅 <em>Oracle10i Net Administrator's Guide</em> 中的第 2 章&ldquo;Connectivity Concepts&rdquo;。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000153/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000153/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>本地命名</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelplocal_naming00000153">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>本地命名</h1>
-
-  <p>将存储在客户机的 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>中的<a href="n8ahelpnet_service_name.htm">网络服务名</a>解析为<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>的一种<a href="n8ahelpnaming_method.htm">命名方法</a>。本地命名最适合具有少量不经常更改服务的简单分布式网络。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpCreate_a_Net_Service_Name.htm">创建网络服务名</a></p>
-
-  <p><a href="n8ahelpPrioritize_Naming_Methods.htm">区分命名方法的优先次序</a></p>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming-configuration-overv/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming-configuration-overv/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>本地命名配置概览</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpLocal_Naming_Configuration_Overv">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>本地命名配置概览</h1>
-
-  <h2>&ldquo;管理员&rdquo;安装或&ldquo;运行时&rdquo;安装</h2>
-
-  <p>在&ldquo;管理员&rdquo;或&ldquo;运行时&rdquo;客户机安装过程中，如果尚未配置目录用法，Oracle Net Configuration Assistant 将提示您在 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>中配置<a href="n8ahelpnet_service_name.htm">网络服务名</a>。</p>
-
-  <h2>定制安装</h2>
-
-  <p>如果在客户机或服务器定制安装期间选择本地命名作为命名方法，Oracle Net Configuration Assistant 将提示您在 <span class="Code">tnsnames.ora</span> 文件中配置网络服务名。</p>
-
-  <h2>具有 Oracle Net Manager 的配置</h2>
-
-  <p>Oracle Net Manager 使您能够配置网络服务名以及：</p>
-
-  <ul>
-    <li>
-      <p>创建非 Oracle 数据库服务的网络服务名</p>
-    </li>
-
-    <li>
-      <p>通过多个<a href="n8ahelpprotocol_address.htm">协议地址</a>配置到监听程序的多个路由</p>
-    </li>
-
-    <li>
-      <p>配置数据库服务或网络服务名的高级 <a href="n8ahelpCONNECTDATA.htm">CONNECT_DATA</a> 信息。</p>
-    </li>
-  </ul>
-
-  <p>要访问本地命名配置，请执行以下操作：</p>
-
-  <p>从导航器窗格中选择<span class="gui-object">本地 &gt; 服务命名</span>文件夹，以便创建网络服务名或修改连接描述符信息。</p>
-
-  <p>有关详细信息，请参阅 <em>Oracle10i Net Administrator's Guide</em> 中的第 8 章&ldquo;Configuring Naming Methods&rdquo;。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplogging/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplogging/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>事件记录</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelplogging">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>事件记录</h1>
-
-  <p>将错误、服务活动和统计信息写入日志文件的一种功能。当屏幕上的错误消息不足以了解故障时，日志文件将为管理员提供额外的信息。日志文件经由错误堆栈显示各层的软件状态。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-assistant-key-features/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-assistant-key-features/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>Oracle Net Manager 主要功能</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpNet8_Assistant_Key_Features">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>Oracle Net Manager 主要功能</h1>
-
-  <p>Oracle Net Manager 是帮助您配置和管理 Oracle 网络环境的一种工具。使用 Oracle Net Manager 可对下列 Oracle Net 特性和组件进行配置和管理：</p>
-
-  <h2>服务命名</h2>
-
-  <p>可以创建或修改 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora</a> 文件、<a href="n8ahelpdirectory_server.htm">目录服务器</a>或 Oracle Names Server 中数据库服务的网络说明。称为<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>的网络描述被映射到<a href="n8ahelpconnect_identifier.htm">连接标识符</a> (在数据库连接期间，客户机在它们的<a href="n8ahelpconnect_string.htm">连接字符串</a>中使用连接标识符)。</p>
-
-  <h2>监听程序</h2>
-
-  <p>可以创建或修改<a href="n8ahelplistener.htm">监听程序</a>，它是服务器上的接收和响应数据库服务的客户机连接请求的进程。</p>
-
-  <h2>概要文件</h2>
-
-  <p>可以创建或修改<a href="n8ahelpprofile.htm">概要文件</a>，它是确定客户机如何连接到 Oracle 网络的参数的集合。可以对<a href="n8ahelpnaming_method.htm">命名方法</a>、<a href="n8ahelplogging.htm">事件记录</a>、<a href="n8ahelptracing.htm">跟踪</a>、<a href="n8ahelpexternal_naming.htm">外部命名</a>参数以及 <a href="n8ahelpOracle_Advanced_Security.htm">Oracle Advanced Security</a> 使用客户机参数。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnaming-method/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnaming-method/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>命名方法</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpnaming_method">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>命名方法</h1>
-
-  <p>客户机应用程序使用的一种解析方法，在试图连接到数据库服务时，将某个<a href="n8ahelpconnect_identifier.htm">连接标识符</a>解析为<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>。Oracle Net 提供以下四种命名方法：</p>
-
-  <ul>
-    <li>
-      <p><a href="n8ahelplocal_naming00000153.htm">本地命名</a></p>
-    </li>
-
-    <li>
-      <p><a href="n8ahelpdirectory_naming.htm">目录命名</a></p>
-    </li>
-
-    <li>
-      <p><a href="nmhelp_easyconnect.htm">轻松连接命名</a> (以前叫做<a href="n8ahelphost_naming.htm">主机命名</a>)</p>
-    </li>
-
-    <li>
-      <p><a href="n8ahelpexternal_naming.htm">外部命名</a></p>
-    </li>
-  </ul>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-configuration-overview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-configuration-overview/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>Oracle Net Services 配置概览</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpNet8_Configuration_Overview">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>Oracle Net Services 配置概览</h1>
-
-  <p>Oracle Net Manager 让您可以配置网络的多个元素，包括命名方法、客户机和服务器概要文件以及监听程序。</p>
-
-  <h2>命名方法</h2>
-
-  <p>定义简称来标识服务的位置，如数据库。这些称作<a href="n8ahelpconnect_identifier.htm">连接标识符</a>的简称映射到<a href="n8ahelpconnect_descriptor.htm">连接描述符</a> (它包含服务的网络位置和标识)。</p>
-
-  <p>通过 Oracle Net Manager，可以配置不同的方式以通过<a href="n8ahelpnaming_method.htm">命名方法</a>将连接标识符解析为连接描述符。</p>
-
-  <h2>客户机和服务器概要文件</h2>
-
-  <p>通过<a href="n8ahelpprofile.htm">概要文件</a>配置首选项，该首选项用于在客户机和服务器上启用和配置 Oracle Net 功能。通过配置文件可以设置首选项，从而可以区分命名方法，启用 <a href="n8ahelpOracle_Advanced_Security.htm">Oracle Advanced Security</a> 功能，启用事件记录和跟踪或路由连接。</p>
-
-  <h2>服务器上的监听程序配置</h2>
-
-  <p>配置接收客户机连接的<a href="n8ahelplistener.htm">监听程序</a>。监听程序应配置有：</p>
-
-  <ul>
-    <li>
-      <p>一个或多个监听<a href="n8ahelpprotocol_address.htm">协议地址</a></p>
-    </li>
-
-    <li>
-      <p>有关目的服务的服务信息</p>
-    </li>
-  </ul>
-
-  <p>协议地址在监听程序配置文件 <a href="n8ahelplistenerora_file.htm">listener.ora</a> 中配置。服务信息可能在 <span class="Code">listener.ora</span> 文件中配置：</p>
-
-  <ul>
-    <li>
-      <p>Oracle8i 或更高版本的数据库将特定信息自动注册到监听程序，如服务名、实例名、服务处理程序和加载信息。这种称为<a href="n8ahelpservice_registration.htm">服务注册</a>的功能不需要在 <span class="Code">listener.ora</span> 文件中配置。</p>
-    </li>
-
-    <li>其他服务 (包括 Oracle7 或 Oracle8 数据库) 需要在 <span class="Code">listener.ora</span> 文件中配置服务。</li>
-  </ul>
-
-  <p>有关 Oracle Names 的信息，请参阅&ldquo;Oracle Names 概览&rdquo;。</p>
-
-  <p>有关详细信息，请参阅 Oracle10i Net Administrator's Guide 中的第 8 章&ldquo;Configuring Naming Methods&rdquo;。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpDirectory_Naming_Overview.htm">目录命名配置概览</a>，以获取有关目录命名概览</p>
-
-  <p><a href="n8ahelpLocal_Naming_Configuration_Overv.htm">本地命名配置概览</a>，以获取有关本地命名概览</p>
-
-  <p><a href="n8ahelpPrioritize_Naming_Methods.htm">区分优先次序的命名方法</a>，来配置并选择命名方法。</p>
-
-  <p><a href="n8ahelpProfile_Overview.htm">概要文件概览</a>，以获取有关概要文件的概览</p>
-
-  <p><a href="n8ahelpListener_Overview.htm">监听程序概览</a>，以获取有关监听程序的概览</p>
  <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
 </body>
 </html>
@@ -2031,7 +1900,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2086,7 +1955,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2097,7 +1966,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2202,7 +2071,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

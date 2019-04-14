@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Internet-Directory/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNaming-Methods/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Internet-Directory/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNaming-Methods/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -399,24 +399,82 @@
 
 <html lang="zh_CN">
 <head>
-  <title>Oracle Internet Directory</title>
+  <title>命名：方法</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpOracle_Internet_Directory">
+  <meta name="topic-id" content="profile_methods">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Oracle Internet Directory</h1>
+  <h1>命名：方法</h1>
 
-  <p>作为 Oracle 数据库的应用程序而实现的目录服务。它能检索分散的用户和网络资源的信息。它将<a href="n8ahelpLightweight_Directory_Access_Pro.htm">轻型目录访问协议 (LDAP) </a>第 3 版 (开放式 Internet 标准目录访问协议) 与 Oracle 数据库的高性能、可伸缩性、健壮性和可用性结合起来。</p>
+  <p><span class="gui-object">方法</span>选项卡可用于指定此客户机计算机将使用的<a href="n8ahelpnaming_method.htm">命名方法</a>以及优先级顺序。列表顶端的命名方法将最先用于解析给定的<a href="n8ahelpconnect_identifier.htm">连接标识符</a>、<a href="n8ahelpnet_service_name.htm">网络服务名</a>或数据库服务。如果它不能解析名称，则使用列表中指定的下一个方法。</p>
 
-  <p>有关详细信息，请参阅 <em>Oracle Internet Directory Administrator's Guide</em>。</p>
+  <p>在连接请求期间，客户机尝试与列出的第一个命名方法联系，以便将连接标识符解析为<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>。然后客户机申请将申请转发到在连接描述符中指定的监听程序地址。</p>
+
+  <p>Oracle Net 支持以下命名方法：</p>
+
+  <ul>
+    <li>
+      <p><a href="n8ahelplocal_naming00000153.htm">本地命名</a> <span class="Code">(TNSNAMES)</span></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpdirectory_naming.htm">目录命名</a> <span class="Code">(LDAP)</span></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelphost_naming.htm">主机命名</a> <span class="Code">(HOSTNAME)</span></p>
+    </li>
+
+    <li>
+      <p><a href="nmhelp_easyconnect.htm">轻松连接命名</a> <span class="Code">(EZCONNECT)</span></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpNetwork_Information_Service_NIS.htm">网络信息服务</a> <span class="Code">(NIS)</span></p>
+    </li>
+
+    
+  </ul>
+
+  <p><span class="gui-object">&ldquo;可用方法&rdquo;列表</span></p>
+
+  <p>显示可用于选项的命名方法</p>
+
+  <p><span class="gui-object">&ldquo;所选方法&rdquo;列表</span></p>
+
+  <p>显示已经选择的命名方法。列表中命名方法的次序决定 Oracle Net 以何种次序尝试使用命名方法。</p>
+
+  <p><span class="gui-object">&lt; 按钮</span></p>
+
+  <p>选择此项以将所选的命名方法从可用方法列表移到所选方法列表中。</p>
+
+  <p><span class="gui-object">&gt; 按钮</span></p>
+
+  <p>选择此项以将所选的命名方法从所选方法列表移到可用方法列表中。</p>
+
+  <p><span class="gui-object">&ldquo;上移&rdquo;按钮</span></p>
+
+  <p>选择此项以将所选方法列表中选定的命名方法上移。Oracle Net 尝试使用第一种方法来解析网络服务名或数据库服务名。如果 Oracle Net 无法使用第一种方法，它将使用第二种，依此类推。</p>
+
+  <p><span class="gui-object">&ldquo;下移&rdquo;按钮</span></p>
+
+  <p>选择此项以将所选方法列表中选定的命名方法下移。</p>
+
+  <p><span class="gui-object">默认域</span></p>
+
+  <p>输入从中产生最多客户机请求的网络<a href="n8ahelpdomain.htm">域</a>的名称。域名可以是客户机驻留的域，或是客户机经常从中请求网络服务的域。</p>
+
+  <p>设置时，域名将自动附加到任何未限定的名后。</p>
 
   <h2>相关主题</h2>
 
-  <p><a href="n8ahelpDirectory_Naming_Configuration_O.htm">目录命名配置概览</a></p>
+  <p><a href="n8ahelpPrioritize_Naming_Methods.htm">区分命名方法的优先次序</a></p>
+
+  <p><a href="n8ahelpConfigure_Default_Domains_for_Cl.htm">为客户机配置默认域</a></p>
 
   <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
  <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
@@ -479,7 +537,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOther-Services/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNetwork-Information-Service-NIS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -498,7 +556,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOther-Services/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNetwork-Information-Service-NIS/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -554,66 +612,22 @@
 
 <html lang="zh_CN">
 <head>
-  <title>其他服务</title>
+  <title>网络信息服务 (NIS)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="listener_oservices">
+  <meta name="topic-id" content="n8ahelpNetwork_Information_Service_NIS">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>其他服务</h1>
+  <h1>网络信息服务 (NIS)</h1>
 
-  <p><span class="gui-object">其他服务</span>选项卡可用于指定监听程序将为其接收连接请求的非数据库服务。非数据库服务可以是<a href="n8ahelpexternal_procedures.htm">外部过程</a>或<a href="n8ahelpHeterogeneous_Services.htm">异构服务</a>。</p>
+  <p>Sun Microsystems 的黄页 (yp) 客户机/服务器协议，用于分布式系统配置数据，如网络计算机间的用户和主机名。</p>
 
-  <p><span class="gui-object">全局服务名称</span></p>
-
-  <p>输入此服务的服务名和域名。</p>
-
-  <p><span class="gui-object">程序名</span></p>
-
-  <p>输入可执行程序名。例如<span class="Code"> extproc.exe</span>。</p>
-
-  <p><span class="gui-object">程序参数零</span></p>
-
-  <p>输入内部第一个参数，它常作为代用程序名。例如：<span class="Code">argv0</span></p>
-
-  <p><span class="gui-object">程序参数</span></p>
-
-  <p>输入应在启动服务时传送的命令行参数，例如，<span class="Code">-mode=5</span>。</p>
-
-  <p><span class="gui-object">环境</span></p>
-
-  <p>输入启动服务之前必须设置的任何环境变量。环境变量以下列格式指定：</p>
-
-  <p><span class="Code"><em>environment_variable=values</em></span></p>
-
-  <p>例如：<span class="Code">user=scott, start=immediate</span>。</p>
-
-  <p>请注意，变量以逗号分隔。</p>
-
-  <p><span class="gui-object">SID</span></p>
-
-  <p>输入服务的程序名或 <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle 系统标识符 (SID)</a>。</p>
-
-  <p><span class="gui-object">Oracle 主目录</span></p>
-
-  <p>输入可执行程序的位置。</p>
-
-  <p><span class="gui-object">&ldquo;添加服务&rdquo;按钮</span></p>
-
-  <p>选择此按钮以配置非数据库服务信息。显示一个新的<span class="gui-object">服务</span>选项卡，可以在该选项卡中输入另一个服务的信息。</p>
-
-  <p><span class="gui-object">&ldquo;删除服务&rdquo;按钮</span></p>
-
-  <p>选择此按钮以删除选定的<span class="gui-object">服务</span>选项卡及其服务信息。</p>
+  <p>有关将 NDS 配置为外部命名方法的信息，请参阅&ldquo;配置外部命名方法&rdquo;和&ldquo;区分优先次序的命名方法&rdquo;。</p>
 
   <h2>相关主题</h2>
-
-  <p><a href="n8ahelpConfigure_External_Procedures_fo.htm">为监听程序配置外部过程</a></p>
-
-  <p><a href="n8ahelpConfigure_Heterogeneous_Services.htm">为监听程序配置异构服务</a></p>
 
   <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
  <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
@@ -676,7 +690,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-System-Identifier-SID/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNet8-Configuration-Assistant/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -695,7 +709,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-System-Identifier-SID/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNet8-Configuration-Assistant/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -751,24 +765,207 @@
 
 <html lang="zh_CN">
 <head>
-  <title>Oracle 系统标识符 (SID)</title>
+  <title>Oracle Net Configuration Assistant</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpOracle_System_Identifier_SID">
+  <meta name="topic-id" content="n8ahelpNet8_Configuration_Assistant">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Oracle 系统标识符 (SID)</h1>
+  <h1>Oracle Net Configuration Assistant</h1>
 
-  <p>一个名称，用于标识运行早于 Oracle 8i 的数据库的特定实例。对于任何数据库，都至少有一个引用数据库的实例。</p>
+  <p>在安装后配置基本网络组件的&ldquo;安装后工具&rdquo;，它包括：</p>
 
-  <p>对于早于 Oracle8<em>i</em> 的数据库，SID 被用来标识数据库。SID 作为连接描述符的一部分包括在 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora</a> 文件中，并作为监听程序的定义包括在 <a href="n8ahelplistenerora_file.htm">listener.ora 文件</a>中。应使用 SID 参数配置<a href="n8ahelpconnect_descriptor.htm">连接描述符</a>，客户机将使用这些连接描述符连接到 Oracle8 或 Oracle7 数据库。</p>
+  <ul>
+    <li>
+      <p><a href="n8ahelplistener.htm">监听程序</a>名和<a href="n8ahelpprotocol_address.htm">协议地址</a></p>
+    </li>
+
+    <li>
+      <p>客户机用于解析<a href="n8ahelpconnect_identifier.htm">连接标识符</a>的<a href="n8ahelpnaming_method.htm">命名方法</a></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>中的<a href="n8ahelpnet_service_name.htm">网络服务名</a></p>
+    </li>
+
+    <li>
+      <p><a href="n8ahelpdirectory_server.htm">目录服务器</a>用法</p>
+    </li>
+  </ul>
+
+  <p>Oracle Net Configuration Assistant 在软件安装之后自动运行，正如在您的 Oracle 安装指南中所述。可以在客户机或数据库服务器上使用它。</p>
+
+  <p>还可以在独立模式下运行，以便配置命名方法的使用、监听程序、<span class="Code">tnsnames.ora</span> 文件中的网络服务名以及目录服务器的使用。</p>
+
+  <p>要以独立模式运行 Oracle Net Configuration Assistant，请执行以下操作：</p>
+
+  <ul>
+    <li>
+      <p>在 UNIX 上，在 <span class="Code">$ORACLE_HOME/bin</span> 下运行 <span class="Code">netmgr</span>。</p>
+    </li>
+
+    <li>
+      <p>在 Windows 操作系统中，选择<span class="gui-object">开始 &gt; 程序 &gt; Oracle - HOME_NAME &gt; Configuration and Migration Tools &gt; Net Configuration Assistant</span>。</p>
+    </li>
+  </ul>
 
   <h2>相关主题</h2>
 
-  <p><a href="n8ahelpDatabase_Identification_by_Servi.htm">用服务名进行数据库标识</a></p>
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>Oracle Advanced Security</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpOracle_Advanced_Security">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Oracle Advanced Security</h1>
+
+  <p>一个为 Oracle 环境提供一套综合安全功能的产品。此组安全特性保护企业网络并将公司网络安全扩展到 Internet。它提供将网络加密及认证解决方案、一次登入服务和安全协议集成的单一来源。Oracle Advanced Security 集成了工业标准并使 Oracle 网络及其以外产品具有无可比拟的安全性。</p>
+
+  <p>有关详细信息，请参阅 <em>Oracle Advanced Security Administrator's Guide</em>。</p>
+
+  <h2>相关主题</h2>
 
   <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
 
@@ -832,7 +1029,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Rdb-database/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Authent/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -851,7 +1048,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Rdb-database/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Authent/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -907,18 +1104,54 @@
 
 <html lang="zh_CN">
 <head>
-  <title>Oracle RDB 数据库</title>
+  <title>Oracle Advanced Security：验证</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpOracle_Rdb_database">
+  <meta name="topic-id" content="profile_authentication">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Oracle RDB 数据库</h1>
+  <h1>Oracle Advanced Security：验证</h1>
 
-  <p>用于 Digital 的 64 位平台的数据库。因为 Oracle Rdb 有自己的监听程序,所以客户机和 Rdb 之间的交互操作与客户机和 Oracle 数据库之间的交互操作的方式是相同的。</p>
+  <p><span class="gui-object">验证</span>选项卡可使您选择并区分<a href="n8ahelpauthentication_method.htm">验证方法</a>的优先次序。以下是 Oracle Advanced Security 支持的验证方法列表。</p>
+
+  <p><span class="gui-object">KERBEROS5</span></p>
+
+  <p>使用密钥密码技术，在分布式环境中提供对安全和一次登入能力的支持。口令存储在中央信息库中，从而不可能从网络上窃取口令。Kerberos 还提供数据库链接验证和增强型的 PC 安全。</p>
+
+  <p><span class="gui-object">CYBERSAFE</span></p>
+
+  <p>一种基于 Kerberos 的验证服务器，它提供基于密钥管理和共享密钥的安全验证。质询方使用标记安全卡进行口令检查和验证。</p>
+
+  <p><span class="gui-object">NTS</span></p>
+
+  <p>允许在 Windows NT 上的客户机和 Oracle 服务器之间执行操作系统认证。Windows NT Native 认证方法通过 Windows NT 启用数据库用户认证。这就使客户机计算机能安全地连接到 Windows NT 上的 Oracle 数据库。安全的连接是指当 Windows NT 客户端用户名通过 Windows NT Native 认证方法在 Windows NT 服务器上检索时，Windows NT 服务器随后认可用户名以在服务器上执行数据库操作。</p>
+
+  <p><span class="gui-object">RADIUS</span></p>
+
+  <p>支持任何遵循 RADIUS 标准的验证方法，包括令牌卡和智能卡。RADIUS 服务器在 Oracle 服务器和指定的验证服务器之间传递信息。在用户看来，整个验证过程的发生是无缝和透明的。</p>
+
+  <p><span class="gui-object">&lt; 按钮</span></p>
+
+  <p>选择此按钮以从&ldquo;可用方法&rdquo;列表中把选定的验证方法移动到&ldquo;所选方法&rdquo;列表。</p>
+
+  <p><span class="gui-object">&gt; 按钮</span></p>
+
+  <p>选择此按钮以从&ldquo;所选方法&rdquo;列表中把选定的验证方法移到&ldquo;可用方法&rdquo;列表。</p>
+
+  <p><span class="gui-object">&ldquo;上移&rdquo;按钮</span></p>
+
+  <p>选择此按钮以将&ldquo;所选方法&rdquo;列表中所选的验证方法上移。客户机/服务器协商将按列表中列出的顺序尝试使用验证方法。Oracle Net 将首先使用列表顶部的验证方法。如果 Oracle Net 使用不了第一种方法，它将使用第二种，依此类推。</p>
+
+  <p><span class="gui-object">&ldquo;下移&rdquo;按钮</span></p>
+
+  <p>选择此按钮将&ldquo;所选方法&rdquo;列表中所选的验证方法下移。</p>
+
+  <p><strong>注：</strong>如果已经配置使用 SSL 的 TCP/IP 协议，则默认为配置安全套接字层 (SSL)。在此选项卡中选择的任何验证方法都将覆盖 SSL 的验证功能。使用 <a href="n8ahelpOracle_Advanced_Security_SSL.htm">SSL 选项卡</a>配置其他的 SSL 选项。如果您正在使用带有 SSL 的 TCP/IP 协议，请不要使用任何其他验证方法。&ldquo;所选方法&rdquo;列表必须为空。</p>
+
+  <p>有关详细信息，请参阅 Windows NT 文档或 <em>Oracle Advanced Security Administrator's Guide</em>。</p>
 
   <h2>相关主题</h2>
 
@@ -983,7 +1216,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpPrioritize-Naming-Methods/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Integri/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1002,7 +1235,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpPrioritize-Naming-Methods/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Integri/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1058,574 +1291,28 @@
 
 <html lang="zh_CN">
 <head>
-  <title>区分命名方法的优先次序</title>
+  <title>Oracle Advanced Security：完整性</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpPrioritize_Naming_Methods">
+  <meta name="topic-id" content="profile_integrity">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>区分命名方法的优先次序</h1>
+  <h1>Oracle Advanced Security：完整性</h1>
 
-  <p>当配置好<a href="n8ahelpnaming_method.htm">命名方法</a>后，必须在概要文件中区分它们的优先次序。列表顶部的命名方法首选被使用，用于将网络服务名或数据库服务名解析为连接描述符。如果此方法不能解析名称，将使用列表中的第二个方法。</p>
+  <p><span class="gui-object">完整性</span>选项卡使您能够配置验证方法的数据<a href="n8ahelpintegrity.htm">完整性</a>。数据完整性是对通过连接发送的客户机和服务器所看到的数据的比较。</p>
 
-  <p>要指定命名方法的顺序，请执行以下操作：</p>
+  <p><strong>注：</strong>使用 <a href="n8ahelpOracle_Advanced_Security_SSL.htm">SSL</a> 选项卡可以配置安全套接字层 (SSL) 的密码套件。</p>
 
-  <ol>
-    <li>
-      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 本地 &gt; 概要文件</span>。</p>
-    </li>
+  <p><span class="gui-object">完整性</span></p>
 
-    <li>
-      <p>在右窗格的列表中，选择<span class="gui-object">命名</span>。</p>
-    </li>
+  <p>选择&ldquo;服务器&rdquo;或&ldquo;客户机&rdquo;复选框以指出当前正在配置的计算机是&ldquo;客户机&rdquo;还是&ldquo;服务器&rdquo;。&ldquo;服务器&rdquo;选项不适用于此计算机连接的服务器。</p>
 
-    <li>
-      <p>选择<a href="n8ahelpNaming_Methods.htm">方法</a>选项卡。</p>
-    </li>
+  <p><span class="gui-object">校验和级别</span></p>
 
-    <li>
-      <p>从<span class="gui-object">可用方法</span>列表中选择命名方法，并选择右箭头按钮。选定的命名方法就移动到<span class="gui-object">选定方法</span>列表中。</p>
-    </li>
-
-    <li>
-      <p>根据在解析网络服务名或数据库服务名时 Oracle Net 使用命名方法的先后顺序对其进行排序。从<span class="gui-object">所选方法</span>列表中选择命名方法，然后选择<span class="gui-object">上移</span>或<span class="gui-object">下移</span>上下移动列表中的选项。</p>
-    </li>
-
-    <li>
-      <p>选择<span class="gui-object">文件 &gt; 保存网络配置</span>。</p>
-    </li>
-  </ol>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpProfile-Overview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpProfile-Overview/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>概要文件概览</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpProfile_Overview">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>概要文件概览</h1>
-
-  <p><a href="n8ahelpprofile.htm">概要文件</a>指定在客户机或服务器上启用和配置 Oracle Net 功能的首选项。使用概要文件，您可以：</p>
-
-  <ul>
-    <li>
-      <p>指定附加到未限定名后的客户机<a href="n8ahelpdomain.htm">域</a></p>
-    </li>
-
-    <li>
-      <p>区分<a href="n8ahelpnaming_method.htm">命名方法</a>的优先次序。</p>
-    </li>
-
-    <li>
-      <p>启用<a href="n8ahelplogging.htm">事件记录</a>和<a href="n8ahelptracing.htm">跟踪</a>功能</p>
-    </li>
-
-    <li>
-      <p>通过指定进程路由连接</p>
-    </li>
-
-    <li>
-      <p>为<a href="n8ahelpexternal_naming.htm">外部命名</a>配置参数</p>
-    </li>
-
-    <li>
-      <p>配置 Oracle Advanced Security</p>
-    </li>
-  </ul>
-
-  <p>要访问概要文件，在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 本地 &gt; 概要文件</span>。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
- <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRecommended-Port-Numbers/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRecommended-Port-Numbers/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>建议的端口号</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpRecommended_Port_Numbers">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-</head>
-
-<body>
-
-  <h1>建议的端口号</h1>
-
-  <p>Oracle Corporation 建议将以下端口号用于 TCP/IP 和使用 SSL 的 TCP/IP 的<a href="n8ahelpprotocol_address.htm">协议地址</a>：</p>
-
-  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
-    <tr>
-      <td width="15%" valign="bottom" scope="col">
-        <p style="text-align : left; color: #000000;" align="left"><b>端口</b></p>
-      </td>
-
-      <td width="85%" valign="bottom" scope="col">
-        <p style="text-align : left; color: #000000;" align="left"><b>说明</b></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row">1521</td>
-
-      <td valign="top">
-        <p>客户机连接到监听程序的默认监听端口在将来的发行版中，可能将此端口号更改为正式注册的端口号 2483 (TCP/IP) 和 2484 (使用 SSL 的 TCP/IP)。&nbsp;</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td width="15%" valign="top" scope="row">
-        <p style="text-align : left;" align="left">1575</p>
-      </td>
-
-      <td width="85%" valign="top">客户机连接到 Oracle Names Server 的默认和正式注册的监听端口。</td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row">1630</td>
-
-      <td width="85%" valign="top">
-        <p>客户机连接到 Oracle Connection Manager 的默认和正式注册的监听端口。</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row">1830</td>
-
-      <td valign="top">
-        <p>缺省的并已正式注册的监听端口，用于 Oracle Connection Manager 的管理命令。</p>
-      </td>
-    </tr>
-  </table>
-
-  <p>有关详细信息，请参阅 <em>Oracle Advanced Security Administrator's Guide</em> 中的附录 C&ldquo;Integrating Authentication Devices Using RADIUS&rdquo;</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpOracle_Advanced_Security_Other_P.htm">Oracle Advanced Security：其他参数</a></p>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
-
-  <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle。保留所有权利。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRADIUS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRADIUS/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>RADIUS</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpRADIUS">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-</head>
-
-<body>
-
-  <h1>RADIUS</h1>
-
-  <p>RADIUS (远程验证拨入用户服务) 是一种广为人知的客户机/服务器安全协议，它能实现远程验证和访问。只需安装和配置 RADIUS 方法，您的网络就可以使用任何支持 RADIUS 标准 (包括令牌卡和智能卡) 的验证方法。RADIUS 验证方法要求您设置以下参数：</p>
+  <p>选择校验和级别。四个可能的校验和级别是：</p>
 
   <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
     <tr>
@@ -1639,227 +1326,657 @@
     </tr>
 
     <tr>
-      <td valign="top" scope="row">主机名</td>
+      <td valign="top" scope="row"><a href="n8ahelpAccepted.htm">被接受</a></td>
 
       <td valign="top">
-        <p>主 RADIUS 服务器的主机名<br>默认值 = localhost</p>
+        <p>如果连接的对方指定了&ldquo;必需的&rdquo;或&ldquo;请求的&rdquo;，并且对方存在可用的一致算法，则服务将是活动的；否则服务将是不活动的。</p>
       </td>
     </tr>
 
     <tr>
       <td width="15%" valign="top" scope="row">
+        <p style="text-align : left;" align="left"><a href="n8ahelpRejected.htm">被拒绝</a></p>
+      </td>
+
+      <td width="85%" valign="top">服务必须不是活动的，如果另一方指定&ldquo;必需的&rdquo;，则连接将会失败。</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row"><a href="n8ahelpRequested.htm">请求的</a></td>
+
+      <td width="85%" valign="top">
+        <p>如果连接的对方指定了&ldquo;被接受&rdquo;、&ldquo;必需的&rdquo;或&ldquo;请求的&rdquo;，并且对方存在可用的一致算法，则服务将是活动的；否则服务将是不活动的。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row"><a href="n8ahelpRequired.htm">必需的</a></td>
+
+      <td valign="top">服务必须是活动的，如果另一方指定&ldquo;拒绝&rdquo;或没有一致的算法，则连接将会失败。</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">&ldquo;可用方法&rdquo;列表</span></p>
+
+  <p>显示完整性算法，用于创建校验和。有两种这样的方法：</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr>
+      <td width="46%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>算法名</b></p>
+      </td>
+
+      <td width="54%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>有效值</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">安全散列算法 (SHA-1)</td>
+
+      <td valign="top">
+        <p>SHA1</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="46%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">消息摘要 5 (MD5)</p>
+      </td>
+
+      <td width="54%" valign="top">MD5</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">&ldquo;所选方法&rdquo;列表</span></p>
+
+  <p>显示选定的算法。此列表中算法的次序决定了它们的使用次序。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Encrypt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Encrypt/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>Oracle Advanced Security：加密</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="profile_encryption">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Oracle Advanced Security：加密</h1>
+
+  <p><span class="gui-object">加密</span>选项卡可使您为所选<a href="n8ahelpauthentication_method.htm">验证方法</a>配置<a href="n8ahelpencryption.htm">加密</a>参数。</p>
+
+  <p><strong>注：</strong>使用 <a href="n8ahelpOracle_Advanced_Security_SSL.htm">SSL</a> 选项卡可以配置安全套接字层 (SSL) 的密码套件。</p>
+
+  <p><span class="gui-object">加密</span></p>
+
+  <p>从此列表中选择当前正在配置的计算机：客户机或服务器。</p>
+
+  <p><span class="gui-object">加密</span><span class="gui-object">类型</span></p>
+
+  <p>当协商加密和完整性时，请选择一个值以指定客户机或服务器的行为。四种可能的加密类型是：</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr>
+      <td width="15%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>元素</b></p>
+      </td>
+
+      <td width="85%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>说明</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row"><a href="n8ahelpAccepted.htm">被接受</a></td>
+
+      <td valign="top">
+        <p>如果连接的对方指定了&ldquo;必需的&rdquo;或&ldquo;请求的&rdquo;，并且对方存在可用的一致算法，则服务将是活动的；否则服务将是不活动的。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="15%" valign="top" scope="row">
+        <p style="text-align : left;" align="left"><a href="n8ahelpRejected.htm">被拒绝</a></p>
+      </td>
+
+      <td width="85%" valign="top">服务必须不是活动的，如果另一方指定&ldquo;必需的&rdquo;，则连接将会失败。</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row"><a href="n8ahelpRequested.htm">请求的</a></td>
+
+      <td width="85%" valign="top">
+        <p>如果连接的对方指定了&ldquo;被接受&rdquo;、&ldquo;必需的&rdquo;或&ldquo;请求的&rdquo;，并且对方存在可用的一致算法，则服务将是活动的；否则服务将是不活动的。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row"><a href="n8ahelpRequired.htm">必需的</a></td>
+
+      <td valign="top">服务必须是活动的，如果另一方指定&ldquo;拒绝&rdquo;或没有一致的算法，则连接将会失败。</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">加密</span><span class="gui-object">种子</span></p>
+
+  <p>在<span class="gui-object">加密</span><span class="gui-object">种子</span>字段中输入加密种子：最多为 256 个字符的随机字符串。加密种子用于生成密钥。当启用加密或完整性时，需要此选项。</p>
+
+  <p><strong>注：</strong>如果选择使用逗号 [,] 或右括号 [)] 这样的特殊字符作为加密种子参数的一部分，Oracle 建议将值括在单引号内。</p>
+
+  <p><span class="gui-object">&ldquo;可用方法/所选方法&rdquo;列表</span></p>
+
+  <p>显示可用于选择的验证方法和选定的加密方法。列表中方法的顺序将确定协商的优先顺序。</p>
+
+  <p>使用左箭头按钮 (&lt;) 和右箭头按钮 (&gt;) 可以在列表间移动选定的加密算法。Oracle Advanced Security 支持下列加密算法：</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr>
+      <td width="15%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>元素</b></p>
+      </td>
+
+      <td width="85%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>说明</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">AES256</td>
+
+      <td valign="top">
+        <p>AES 256 位密钥</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="15%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">RC4_256</p>
+      </td>
+
+      <td width="85%" valign="top">RC4 256 位密钥</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">AES192</td>
+
+      <td width="85%" valign="top">
+        <p>AES 192 位密钥</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">3DES168</td>
+
+      <td valign="top">具有三密钥 (168 位) 选项的&ldquo;三重 DES&rdquo;</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">AES128</td>
+
+      <td valign="top">AES 128 位密钥</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">RC4_128</td>
+
+      <td valign="top">RC4 128 位密钥</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">3DES112</td>
+
+      <td valign="top">具有双密钥 (112 位) 选项的&ldquo;三重 DES&rdquo;</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">DES</td>
+
+      <td valign="top">DES 56 位密钥</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">RC4_40</td>
+
+      <td valign="top">RC4 40 位密钥</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">DES40</td>
+
+      <td valign="top">DES 40 位密钥</td>
+    </tr>
+  </table>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a> &nbsp;</p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Other-P/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Other-P/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>Oracle Advanced Security：其他参数</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="profile_otherparams">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Oracle Advanced Security：其他参数</h1>
+
+  <p><span class="gui-object">其他参数</span>选项卡使您能够配置其他验证服务参数。</p>
+
+  <p>请从<span class="gui-object">验证服务</span>列表中选择验证方法。依据所选择的验证方法在域中输入相应的信息。</p>
+
+  <p><span class="gui-object">KERBEROS(v5)</span></p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr>
+      <td width="15%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>元素</b></p>
+      </td>
+
+      <td width="85%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>说明</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">服务</td>
+
+      <td valign="top">
+        <p>输入任意字符串以指定 Kerberos 服务名。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="15%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">身份证明高速缓存文件</p>
+      </td>
+
+      <td width="85%" valign="top">输入任意有效路径名来指定 Kerberos 身份证明高速缓存路径名。</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">配置文件</td>
+
+      <td width="85%" valign="top">
+        <p>输入任意有效路径名来指定 Kerberos 配置文件。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">领域转换文件</td>
+
+      <td valign="top">输入任意有效路径名来将 Kerberos 主机名指定给领域转换文件。</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">键表</td>
+
+      <td valign="top">输入任意有效路径名来指定 Kerberos 密钥文件。</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">时钟偏差</td>
+
+      <td valign="top">输入任何正整数以指定发送和接收身份证明时可以接受的时间差值 (以秒为单位)。</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">CYBERSAFE</span></p>
+
+  <p><span class="gui-object">GSSAPI 服务：</span>指定 CYBERSAFE 服务主用户 (组)。输入任意具有正确格式的服务主用户 (组) 字符串。</p>
+
+  <p><span class="gui-object">NTS</span></p>
+
+  <p>不需要其他参数。</p>
+
+  <p><span class="gui-object">RADIUS</span></p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr>
+      <td width="25%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>元素</b></p>
+      </td>
+
+      <td width="75%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>说明</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">主机名</td>
+
+      <td valign="top">
+        <p>请输入主 RADIUS 服务器的名称。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%" valign="top" scope="row">
         <p style="text-align : left;" align="left">端口号</p>
       </td>
 
-      <td width="85%" valign="top">主 RADIUS 服务器的监听端口号<br>默认值 = 1645</td>
+      <td width="75%" valign="top">输入主 RADIUS 服务器的端口号。</td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">超时(秒)</td>
 
-      <td width="85%" valign="top">
-        <p>Oracle 服务器等待主 RADIUS 服务器响应的时间 (秒)<br>默认值 = 15 秒</p>
+      <td width="75%" valign="top">
+        <p>输入 Oracle 数据库服务器等待主 RADIUS 服务器响应所需的秒数。</p>
       </td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">重试次数</td>
 
-      <td valign="top">
-        <p>Oracle 数据库服务器应向主 RADIUS 服务器发送消息的次数</p>
-
-        <p>缺省值为 3 次</p>
-      </td>
+      <td valign="top">输入 Oracle 数据库服务器将消息重新发送到主 RADIUS 服务器所需的次数。</td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">机密文件</td>
 
-      <td valign="top">Oracle 服务器上的密钥文件位置。出于安全考虑，Oracle 建议您将此文件更改为仅限 root 用户访问。</td>
+      <td valign="top">输入密钥文件的路径名。</td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">发送帐户</td>
 
-      <td valign="top">RADIUS 帐户记录 Oracle 数据库服务器访问信息并将此信息存储在 RADIUS 帐户服务器上的文件中。只有当两个 RADIUS 验证服务器都支持此功能时才可以使用。<br>值 = on 或 off</td>
+      <td valign="top">输入&ldquo;on&rdquo;以启用帐目管理或输入&ldquo;off&rdquo;以禁用帐目管理。</td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">质询响应</td>
 
-      <td valign="top">当需要给用户提供&ldquo;质询响应&rdquo;GUI 时，此域的值为&ldquo;ON&rdquo;。</td>
+      <td valign="top">输入&ldquo;on&rdquo;以启用质询响应或输入&ldquo;off&rdquo;以禁用质询响应。</td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">默认关键字</td>
 
-      <td valign="top">通过质询/响应机制验证用户身份的关键字<br>默认值 = challenge</td>
+      <td valign="top">请输入从 RADIUS 服务器请求质询的关键字。</td>
     </tr>
 
     <tr>
       <td valign="top" scope="row">接口类名称</td>
 
-      <td valign="top">处理 Oracle 客户机和 RADIUS 服务器之间的质询/响应会话的类名。默认值 = DefaultRadiusInterface</td>
+      <td valign="top">输入已经创建的类名来处理 Oracle 客户机和 RADIUS 服务器之间的质询响应会话。</td>
     </tr>
   </table>
 
-  <p>有关详细信息，请参阅 <em>Oracle Advanced Security Administrator's Guide</em> 中的附录 C：&ldquo;Integrating Authentication Devices Using RADIUS&rdquo;。</p>
-
-  <h2>相关主题</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
-
-  <p><a href="n8ahelpOracle_Advanced_Security_Other_P.htm">Oracle Advanced Security：其他参数</a></p>
-
-  <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle。保留所有权利。</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRejected/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRejected/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
-                2009-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="zh_CN">
-<head>
-  <title>被拒绝</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpRejected">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>被拒绝</h1>
-
-  <p><em>即使对方需要，也不能将安全服务打开。</em></p>
-
-  <p>连接中的我方指定不允许使用安全服务。如果对方指定<a href="n8ahelpRequired.htm">需要的</a>，连接将终止，并返回错误消息 ORA-12650。如果对方被设置为<a href="n8ahelpRequested.htm">已请求的</a>、<a href="n8ahelpAccepted.htm">已接受的</a>或<a href="n8ahelpRejected.htm">已拒绝的</a>，连接将在不出错且不启用安全服务的情况下继续。</p>
+  <p>有关详细信息，请参阅 <em>Oracle Advanced Security Administrator's Guide</em>。</p>
 
   <h2>相关主题</h2>
 
@@ -1924,7 +2041,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRequested/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Connection-Manager/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1943,7 +2060,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRequested/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Connection-Manager/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1999,25 +2116,339 @@
 
 <html lang="zh_CN">
 <head>
-  <title>请求</title>
+  <title>Oracle Connection Manager</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="topic-id" content="n8ahelpRequested">
+  <meta name="topic-id" content="n8ahelpOracle_Connection_Manager">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>请求</h1>
+  <h1>Oracle Connection Manager</h1>
 
-  <p><em>如果对方允许，请打开安全服务。</em></p>
+  <p>一种路由器，客户机连接请求通过它可以发送到下一个中继段或直接发送到数据库服务器。而后，通过 Oracle Connection Manager 路由其连接请求的客户机可以利用在该 Oracle Connection Manager 上配置的访问控制、多路复用和协议转换功能的优点。</p>
 
-  <p>我方连接指定安全服务为&ldquo;希望的&rdquo;，而不是<a href="n8ahelpRequired.htm">需要的</a>。如果对方指定<a href="n8ahelpAccepted.htm">已接受的</a>、<a href="n8ahelpRequested.htm">已请求的</a>或<a href="n8ahelpRequired.htm">需要的</a>，安全服务将处于活动状态。对方必须有可用的匹配算法，否则也不能激活服务。如果对方指定<a href="n8ahelpRequired.htm">需要的</a>且不存在一致的算法，则连接将失败。</p>
+  <p>Oracle Connection 为以下环境提供连接路由选择：</p>
+
+  <ul>
+    <li>
+      <p>大量用户需要通过单一的协议访问单一的服务。</p>
+    </li>
+
+    <li>
+      <p>不同的协议安装在客户机和服务器上，从而造成典型的连接失败。</p>
+    </li>
+
+    <li>
+      <p>典型的 Oracle 网络连接要求客户机和服务器安装相同的协议。</p>
+    </li>
+
+    <li>
+      <p>需要控制客户机对 TCP/IP 环境下指定服务器的访问。</p>
+    </li>
+  </ul>
+
+  <p>有关 Oracle Connection Manager 的信息，请参阅 <em>Oracle9i Net Services Administrator's Guide</em> 中的第 1 章&ldquo;Networking Challenges in the Internet Age&rdquo;。</p>
 
   <h2>相关主题</h2>
 
   <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+
+  <p><a href="n8ahelpConfigure_a_Connect_Desc00000028.htm">配置连接到 Oracle Connection Manager 的连接描述符</a></p>
  <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-SSL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-SSL/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:06+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>Oracle Advanced Security：SSL</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpOracle_Advanced_Security_SSL">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Oracle Advanced Security：SSL</h1>
+
+  <p>使用 <span class="gui-object">SSL</span> 选项卡可修改&ldquo;安全套接字层 (SSL)&rdquo;设置。SSL 是一个保护网络通信的工业标准协议。SSL 提供验证、加密和数据完整性。使用 SSL 可保护任意客户机和服务器之间的通信。具有特别意义的是，可以使用 SSL 进行任意客户机或服务器到一个或多个 Oracle 服务器的验证，或者是一个 Oracle 服务器到任意客户机的验证。</p>
+
+  <p><span class="gui-object">配置 SSL</span></p>
+
+  <p>在相应的列表中进行选择，以指定客户机或服务器的设置。</p>
+
+  <p>为服务器配置的设置应与为客户机配置的设置类似。还有一个附加参数：标记为&ldquo;要求客户机验证&rdquo;的复选框。</p>
+
+  <p><span class="gui-object">配置方法</span></p>
+
+  <p>TBD...从列表中，选择<span class="gui-object">文件系统</span>以....，或者选择<span class="gui-object">委托</span>以...</p>
+
+  <p><span class="gui-object">Wallet 配置</span></p>
+
+  <p>Wallet 包含证书、密钥以及可信点。选择表中所述的四种配置方法之一。如果选择的方法是&ldquo;文件系统&rdquo;或&ldquo;委托 Wallet&rdquo;，请单击<span class="gui-object">浏览</span>以便在您的文件系统中搜索 wallet。</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr class="kadov-Cbold">
+      <td width="32%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Wallet 配置方法</b></p>
+      </td>
+
+      <td width="68%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>访问方法</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">文件系统</td>
+
+      <td valign="top">
+        <p>目录路径</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="32%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">Microsoft 证书</p>
+      </td>
+
+      <td width="68%" valign="top">无</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Microsoft 注册表</td>
+
+      <td width="68%" valign="top">
+        <p>注册表键</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">委托 Wallet</td>
+
+      <td valign="top">目录路径</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">密码组配置</span></p>
+
+  <p>默认情况下已安装有几组 SSL 密码套件。如果手动添加一组或多组密码，默认密码组就会被覆盖。</p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="此表列出具有链接的字段以及当您单击这些链接时将显示的页">
+    <tr>
+      <td width="25%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>元素</b></p>
+      </td>
+
+      <td width="75%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>说明</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">&ldquo;添加&rdquo;按钮</td>
+
+      <td valign="top">
+        <p>选择此项以调用&ldquo;选择要启用的密码套件&rdquo;对话框。在此对话框中，选择一个套件，然后选择确定。密码套件将添加到列表框中。<br>注：<strong>所有 Oracle Advanced Security 加密算法和密钥长度都适合在美国国内和国际上使用。</strong></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">&ldquo;删除&rdquo;按钮</p>
+      </td>
+
+      <td width="75%" valign="top">选择此项以删除所选的&ldquo;密码套件&rdquo;。</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">&ldquo;上移&rdquo;按钮</td>
+
+      <td width="75%" valign="top">
+        <p>选择此项以将所选的&ldquo;密码套件&rdquo;移到列表中更高的级别。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">&ldquo;下移&rdquo;按钮</td>
+
+      <td valign="top">选择此项以将所选的&ldquo;密码套件&rdquo;移到列表中更低的级别。</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">撤销检查 (仅限服务器)</span></p>
+
+  <p>为证书指定撤销检查。选择下列某个值：</p>
+
+  <ul>
+    <li>
+      <p><span class="gui-object">无</span>：选择该值可禁用证书的撤消检查。</p>
+    </li>
+
+    <li>
+      <p><span class="gui-object">必需</span>：选择此项可撤销可用的证书。如果撤销证书后，没有找到相应的&ldquo;证书撤销列表 (CRL)&rdquo;，则拒绝 SSL 连接。如果找不到相应的 CRL 来确定证书的撤销状态，而且证书尚未被撤销，则接受 SSL 连接。</p>
+    </li>
+
+    <li><span class="gui-object">请求</span>：选择该值可在找到 CRL 的情况下撤消证书。如果证书已撤消，则拒绝 SSL 连接。如果找不到相应的 CRL 来确定证书的撤消状态，而且证书尚未被撤消，则接受 SSL 连接。</li>
+  </ul>
+
+  <p><span class="gui-object">需要 SSL 版本 (可选的)</span></p>
+
+  <p>从列表中，选择 SSL 版本。客户机和服务器必须使用 SSL 的兼容版本。可以选择 SSL v3.0 或选择允许使用任何现有或将来版本的 SSL。</p>
+
+  <p><span class="gui-object">需要客户机验证 (仅用于服务器)</span></p>
+
+  <p>默认情况下已选择此复选框。如果不需要客户端验证，请取消对此复选框的选择。</p>
+
+  <p><span class="gui-object">匹配服务器 X.509 名称 (仅用于客户机)</span></p>
+
+  <p>从列表中选择是否检查该服务器的<a href="n8ahelpDistinguished_Name_DN.htm">唯一判别名 (DN)</a> 与其服务名是否互相匹配。如果选择强制匹配验证，则 SSL 将确认证书是否来自服务器。如果选择不强制匹配验证，SSL 将执行检查，但无论是否匹配，均允许连接。如果不强制匹配，则允许服务器掩饰自己的身份。选择下列某个值：</p>
+
+  <ul>
+    <li>
+      <p><span class="gui-object">是</span>：选择该值可检查服务器 DN。如果 DN 与服务名匹配，则连接成功。如果 DN 与服务名不匹配，仍可成功连接，但在 <span class="Code">sqlnet.log</span> 文件中记录一条错误。</p>
+    </li>
+
+    <li>
+      <p><span class="gui-object">否</span>：选择该值则不检查服务器 DN。忽略此检查，可使服务器掩饰自己的身份。</p>
+    </li>
+
+    <li>
+      <p><span class="gui-object">由客户机决定：</span>TBD</p>
+    </li>
+  </ul>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
 </body>
 </html>
 
@@ -2068,7 +2499,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2123,7 +2554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2134,7 +2565,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2239,7 +2670,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

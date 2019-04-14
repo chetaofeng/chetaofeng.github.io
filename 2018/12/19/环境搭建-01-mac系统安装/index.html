@@ -114,7 +114,7 @@
 <meta property="og:description" content="U盘启动 U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。  mac系统安装启动盘制作  准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料 下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。 打开">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chetaofeng.github.io/pub-images/macOS%E5%88%B6%E4%BD%9CU%E7%9B%98%E5%90%AF%E5%8A%A8.png">
-<meta property="og:updated_time" content="2019-02-14T01:54:02.000Z">
+<meta property="og:updated_time" content="2019-03-20T08:28:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac系统安装">
 <meta name="twitter:description" content="U盘启动 U盘启动：目的是为了在没有装系统的情况下进行临时启动，它可以启动DOS、备份还原软件或内存中运行的PE系统。现在大部分的电脑都支持U盘启动。U盘启动在系统奔溃和快速安装系统时能起到很大的作用。  mac系统安装启动盘制作  准备一个 8GB 或更大容量的 U盘，并备份好里面的所有资料 下载好需要安装的系统。在App Store中搜索系统，如：MacOS Sierra，完成下载。 打开">
@@ -457,6 +457,15 @@
 <li>步骤3：输入你的 开机密码</li>
 <li>步骤4：回到系统偏好设置 的“安全与隐私”，勾选 “允许任何来源”完成安装.</li>
 </ul>
+<h1 id="macbook-pro-忘记管理员名称和密码"><a class="markdownIt-Anchor" href="#macbook-pro-忘记管理员名称和密码"></a> Macbook Pro 忘记管理员名称和密码</h1>
+<ol>
+<li>开机启动时按“command+s”进入单一用户模式（Single user model）</li>
+<li>在#root&gt;下逐步输入以下命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/sbin/fsck -fy</span><br><span class="line">/sbin/mount -uw /</span><br><span class="line">rm /var/db/.applesetupdone</span><br><span class="line">reboo</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>重启开机后出现类似装机时的欢迎界面,新建一个管理员账号即可</li>
+</ol>
 <h1 id="macos一些其他维护相关知识"><a class="markdownIt-Anchor" href="#macos一些其他维护相关知识"></a> macOS一些其他维护相关知识</h1>
 <p>官方技术支持网址：<a href="https://support.apple.com/zh-cn" target="_blank" rel="noopener">https://support.apple.com/zh-cn</a></p>
 <ol>
@@ -514,7 +523,7 @@
   <p><span>本文标题:</span><a href="/2018/12/19/环境搭建-01-mac系统安装/">mac系统安装</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年12月19日 - 15:12</p>
-  <p><span>最后更新:</span>2019年02月14日 - 09:02</p>
+  <p><span>最后更新:</span>2019年03月20日 - 16:03</p>
   <p><span>原始链接:</span><a href="/2018/12/19/环境搭建-01-mac系统安装/" title="mac系统安装">https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/12/19/环境搭建-01-mac系统安装/"  aria-label="复制成功！"></i></span>
   </p>
@@ -603,8 +612,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-04-git安装配置/" rel="next" title="git安装配置">
-                <i class="fa fa-chevron-left"></i> git安装配置
+              <a href="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/" rel="next" title="mac虚拟机安装及设置">
+                <i class="fa fa-chevron-left"></i> mac虚拟机安装及设置
               </a>
             
           </div>
@@ -613,8 +622,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/19/环境搭建-03-mac虚拟机安装系统及设置/" rel="prev" title="mac虚拟机安装及设置">
-                mac虚拟机安装及设置 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/19/Java-2018-12-19-aa/" rel="prev" title="aa">
+                aa <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -709,7 +718,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -720,7 +729,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -780,7 +789,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u盘启动"><span class="nav-number">1.</span> <span class="nav-text"> U盘启动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mac系统安装启动盘制作"><span class="nav-number">2.</span> <span class="nav-text"> mac系统安装启动盘制作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mac系统u盘安装"><span class="nav-number">3.</span> <span class="nav-text"> mac系统U盘安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装软件"><span class="nav-number">4.</span> <span class="nav-text"> 安装软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#macos一些其他维护相关知识"><span class="nav-number">5.</span> <span class="nav-text"> macOS一些其他维护相关知识</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u盘启动"><span class="nav-number">1.</span> <span class="nav-text"> U盘启动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mac系统安装启动盘制作"><span class="nav-number">2.</span> <span class="nav-text"> mac系统安装启动盘制作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mac系统u盘安装"><span class="nav-number">3.</span> <span class="nav-text"> mac系统U盘安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装软件"><span class="nav-number">4.</span> <span class="nav-text"> 安装软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#macbook-pro-忘记管理员名称和密码"><span class="nav-number">5.</span> <span class="nav-text"> Macbook Pro 忘记管理员名称和密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#macos一些其他维护相关知识"><span class="nav-number">6.</span> <span class="nav-text"> macOS一些其他维护相关知识</span></a></li></ol></div>
             
 
           </div>
@@ -841,7 +850,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

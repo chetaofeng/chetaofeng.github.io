@@ -324,6 +324,480 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/04/15/环境搭建-DNS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/15/环境搭建-DNS/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T00:41:40+08:00">
+                2019-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: DNS<br>
+tags:</p>
+<ul>
+<li>DNS<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-04-15 22:10:23<br>
+categories: 环境搭建<br>
+password:</li>
+</ul>
+<hr>
+<h1 id="bind服务"><a class="markdownIt-Anchor" href="#bind服务"></a> BIND服务</h1>
+<ul>
+<li>开源、稳定、应用广泛的DNS服务</li>
+<li>提供服务：1、 域名解析服务；2、权威域名服务；3、DNS工具</li>
+</ul>
+<p><img src="/pub-images/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png" alt="image"></p>
+<h1 id="dns解析记录分析"><a class="markdownIt-Anchor" href="#dns解析记录分析"></a> DNS解析记录分析</h1>
+<ul>
+<li>A记录</li>
+<li>CNAME</li>
+<li>MX记录</li>
+<li>NS记录<br>
+<img src="/pub-images/CNAME%E8%AE%B0%E5%BD%95.png" alt="image"></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/04/10/Java-Maven详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/10/Java-Maven详解/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-10T23:12:10+08:00">
+                2019-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: Maven详解<br>
+tags:</p>
+<ul>
+<li>java<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-04-07 14:41:51<br>
+categories: Java<br>
+password:</li>
+</ul>
+<hr>
+<p><a href="http://maven.apache.org/" target="_blank" rel="noopener">http://maven.apache.org/</a></p>
+<p><modelversion>4.0.0</modelversion></p>
+<p>maven实战 许晓斌<br>
+<a href="https://juvenshun.iteye.com/category/34725" target="_blank" rel="noopener">https://juvenshun.iteye.com/category/34725</a></p>
+<p>依赖：依赖是会被传递的（依赖是基于compile依赖，test的就不会依赖过来），scope没写，默认就是compile范围</p>
+<p>作用域：</p>
+<p>聚合项目：打包方式为pom   聚合、继承</p>
+<p>mirrors 私服安装    索引更新  快照开放</p>
+<p>区分：maven中的配置文件和maven工厂中的配置文件</p>
+<p>profile</p>
+<p>设置允许发布</p>
+<p>仓库<br>
+生命周期和插件</p>
+<p><a href="https://www.cnblogs.com/wxgblogs/p/6696229.html" target="_blank" rel="noopener">https://www.cnblogs.com/wxgblogs/p/6696229.html</a></p>
+<p><a href="https://blog.csdn.net/u014238498/article/details/82729084" target="_blank" rel="noopener">https://blog.csdn.net/u014238498/article/details/82729084</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/04/10/Java-JUnit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/10/Java-JUnit/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-10T23:04:53+08:00">
+                2019-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: JUnit<br>
+tags:</p>
+<ul>
+<li>java<br>
+copyright: true<br>
+comments: true<br>
+toc: true<br>
+date: 2019-03-29 14:41:51<br>
+categories: java<br>
+password:</li>
+</ul>
+<hr>
+<p>1.@Test: 测试方法</p>
+<p>a)(expected=XXException.class)如果程序的异常和XXException.class一样，则测试通过<br>
+　　　　b)(timeout=100)如果程序的执行能在100毫秒之内完成，则测试通过</p>
+<p>2.@Ignore: 被忽略的测试方法：加上之后，暂时不运行此段代码</p>
+<p>3.@Before: 每一个测试方法之前运行</p>
+<p>4.@After: 每一个测试方法之后运行</p>
+<p>5.@BeforeClass: 方法必须必须要是静态方法（static 声明），所有测试开始之前运行，注意区分before，是所有测试方法</p>
+<p>6.@AfterClass: 方法必须要是静态方法（static 声明），所有测试结束之后运行，注意区分 @After</p>
+<p><a href="https://blog.csdn.net/ryo1060732496/article/details/80812395" target="_blank" rel="noopener">https://blog.csdn.net/ryo1060732496/article/details/80812395</a></p>
+<p>注意：编写测试类的原则：</p>
+<p>①测试方法上必须使用@Test进行修饰</p>
+<pre><code>    ②测试方法必须使用public void 进行修饰，不能带任何的参数
+
+    ③新建一个源代码目录来存放我们的测试代码，即将测试代码和项目业务代码分开
+
+    ④测试类所在的包名应该和被测试类所在的包名保持一致
+
+    ⑤测试单元中的每个方法必须可以独立测试，测试方法间不能有任何的依赖
+
+    ⑥测试类使用Test作为类名的后缀（不是必须）
+
+    ⑦测试方法使用test作为方法名的前缀（不是必须）</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/04/05/数据库-Redis入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -435,6 +909,491 @@
 <p><a href="https://blog.csdn.net/qq_15071263/article/details/79759973" target="_blank" rel="noopener">https://blog.csdn.net/qq_15071263/article/details/79759973</a><br>
 <a href="https://www.cnblogs.com/happyday56/p/3916388.html" target="_blank" rel="noopener">https://www.cnblogs.com/happyday56/p/3916388.html</a></p>
 <p><a href="https://www.cnblogs.com/it-cen/p/4295984.html" target="_blank" rel="noopener">https://www.cnblogs.com/it-cen/p/4295984.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/04/01/Java-Spring-Webflux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/01/Java-Spring-Webflux/" itemprop="url">Spring Webflux</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-01T22:00:51+08:00">
+                2019-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>SpringFramework5.0添加的新功能，WebFlux本身追随当下最火的Reactive Programming而诞生的框架</p>
+<h1 id="参考文章"><a class="markdownIt-Anchor" href="#参考文章"></a> 参考文章</h1>
+<ul>
+<li><a href="https://www.jianshu.com/p/c029de45d23b" target="_blank" rel="noopener">https://www.jianshu.com/p/c029de45d23b</a></li>
+<li><a href="https://www.cnblogs.com/niechen/p/9303451.html" target="_blank" rel="noopener">https://www.cnblogs.com/niechen/p/9303451.html</a></li>
+</ul>
+<p><a href="https://waylau.gitbooks.io/servlet-3-1-specification/" target="_blank" rel="noopener">https://waylau.gitbooks.io/servlet-3-1-specification/</a><br>
+<a href="https://blog.csdn.net/wangyangzhizhou/article/details/52753696" target="_blank" rel="noopener">https://blog.csdn.net/wangyangzhizhou/article/details/52753696</a></p>
+<p><a href="https://www.cnblogs.com/tenglongwentian/p/6219233.html" target="_blank" rel="noopener">https://www.cnblogs.com/tenglongwentian/p/6219233.html</a></p>
+<p><a href="https://www.oschina.net/news/94804/flux-replace-web-mvc" target="_blank" rel="noopener">https://www.oschina.net/news/94804/flux-replace-web-mvc</a></p>
+<p><a href="https://blog.csdn.net/qiyueqinglian/article/details/50619556" target="_blank" rel="noopener">https://blog.csdn.net/qiyueqinglian/article/details/50619556</a></p>
+<p><a href="https://blog.csdn.net/BiuBiuBiu___/article/details/82347399" target="_blank" rel="noopener">https://blog.csdn.net/BiuBiuBiu___/article/details/82347399</a></p>
+<p><a href="https://blog.csdn.net/liumiaocn/article/details/83991147" target="_blank" rel="noopener">https://blog.csdn.net/liumiaocn/article/details/83991147</a><br>
+<a href="https://blog.csdn.net/kaige8312/article/details/84334343" target="_blank" rel="noopener">https://blog.csdn.net/kaige8312/article/details/84334343</a><br>
+<a href="https://blog.csdn.net/alinyua/article/details/81103570" target="_blank" rel="noopener">https://blog.csdn.net/alinyua/article/details/81103570</a></p>
+<p><a href="http://www.cnblogs.com/ahaii/p/6868003.html" target="_blank" rel="noopener">http://www.cnblogs.com/ahaii/p/6868003.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/28/Java-SpringMVC入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/28/Java-SpringMVC入门/" itemprop="url">SpringMVC入门</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T14:41:51+08:00">
+                2019-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.imooc.com/learn/47" target="_blank" rel="noopener">https://www.imooc.com/learn/47</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/27/Java-缓存技术/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/Java-缓存技术/" itemprop="url">缓存技术与Jetcache</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T14:41:51+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://github.com/alibaba/jetcache/wiki/Home_CN" target="_blank" rel="noopener">https://github.com/alibaba/jetcache/wiki/Home_CN</a></p>
+<p>1、Cache是高速缓冲存储器 一种特殊的存储器子系统，其中复制了频繁使用的数据以利于快速访问<br>
+2、凡是位于速度相差较大的两种硬件/软件之间的，用于协调两者数据传输速度差异的结构，均可称之为 Cache</p>
+<p>1、FIFO（First In First Out）：<br>
+先入先出，很好理解，就和队列一样，先进队列的先出队列。</p>
+<p>2、LRU（Least Recently Used）：<br>
+最近最少使用，意思就是最近读取的数据放在最前面，最早读取的数据放在最后面，如果这个时候有新的数据进来，那么最后面存储的数据淘汰。</p>
+<p>3、LFU（Least Frequently Used）：<br>
+最不常使用，意思就是对存储的数据都会有一个计数引用，然后队列按数据引用次数排序，引用数多的排在最前面，引用数少的排在后面。如果这个时候有新的数据进来，把最后面的数据删除，把新进数据排在最后面，且引用次数为1</p>
+<p><a href="https://blog.csdn.net/baidu_33497625/article/details/50801571" target="_blank" rel="noopener">https://blog.csdn.net/baidu_33497625/article/details/50801571</a><br>
+<a href="https://blog.csdn.net/fouy_yun/article/details/81075344" target="_blank" rel="noopener">https://blog.csdn.net/fouy_yun/article/details/81075344</a></p>
+<p>ttl缓存：<a href="https://www.dns.com/supports/594.html" target="_blank" rel="noopener">https://www.dns.com/supports/594.html</a></p>
+<p>进程内缓存就是我们常用的存储在java虚拟机内存的缓存数据；进程外缓存就是有专门的缓存服务器(缓存数据也是存储在内存中)，对外提供统一的缓存<br>
+根据缓存数据的存储位置，把缓存分为：进程内缓存、进程外缓存，也可以看做一级缓存、二级缓存。</p>
+<ul>
+<li>JetCache支持本地TTL、两级缓存和分布式缓存自动刷新</li>
+<li>共有4个组件可以使用：RedisCache、TairCache（未在github开源）、CaffeineCache（内存）和简单的LinkedHashMapCache（内存）</li>
+</ul>
 
           
         
@@ -643,7 +1602,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/11/Java-Mockito入门/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/26/Java-Java注解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -662,7 +1621,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/11/Java-Mockito入门/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2019/03/26/Java-Java注解/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -674,8 +1633,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T10:24:21+08:00">
-                2019-03-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T00:40:17+08:00">
+                2019-03-26
               </time>
             
 
@@ -715,211 +1674,78 @@
         
           
             <hr>
-<p>title: Mockito入门<br>
+<p>title: Java注解<br>
 tags:</p>
 <ul>
 <li>java<br>
 copyright: true<br>
 comments: true<br>
 toc: true<br>
-date: 2019-02-20 21:25:33<br>
-categories: Java<br>
+date: 2019-03-24 18:41:51<br>
+categories: java<br>
 password:</li>
 </ul>
 <hr>
-<h1 id="mockito简介"><a class="markdownIt-Anchor" href="#mockito简介"></a> Mockito简介</h1>
-<ul>
-<li>官网：<a href="https://site.mockito.org/" target="_blank" rel="noopener">https://site.mockito.org/</a></li>
-<li>中文文档：<a href="https://github.com/hehonghui/mockito-doc-zh/blob/master/README.md#0" target="_blank" rel="noopener">https://github.com/hehonghui/mockito-doc-zh/blob/master/README.md#0</a></li>
-<li>英文文档：<a href="https://www.vogella.com/tutorials/Mockito/article.html" target="_blank" rel="noopener">https://www.vogella.com/tutorials/Mockito/article.html</a></li>
-<li>Mock：（mock object，也译作模仿对象）是以可控的方式模拟真实对象行为的假的对象</li>
-<li>Mockito是mocking框架，它让你用简洁的API做测试，是GitHub上使用最广泛的Mock框架,并与JUnit结合使用</li>
-<li>Mockito框架可以创建和配置mock对象.使用Mockito简化了具有外部依赖的类的测试开发</li>
-</ul>
-<h1 id="maven依赖"><a class="markdownIt-Anchor" href="#maven依赖"></a> maven依赖</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.mockito/mockito-all --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.mockito&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mockito-all&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.0.2-beta&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/junit/junit --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.12&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="参考文章"><a class="markdownIt-Anchor" href="#参考文章"></a> 参考文章</h1>
-<ul>
-<li><a href="https://www.jianshu.com/p/7d602a9f85e3" target="_blank" rel="noopener">https://www.jianshu.com/p/7d602a9f85e3</a></li>
-<li><a href="https://blog.csdn.net/xiang__liu/article/details/81147933" target="_blank" rel="noopener">https://blog.csdn.net/xiang__liu/article/details/81147933</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/10/Java-Swagger入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/10/Java-Swagger入门/" itemprop="url">Swagger入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T21:25:33+08:00">
-                2019-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p><a href="https://swagger.io/" target="_blank" rel="noopener">https://swagger.io/</a><br>
-Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务</p>
-<h1 id="基本使用使用"><a class="markdownIt-Anchor" href="#基本使用使用"></a> 基本使用使用</h1>
+<p><a href="https://www.imooc.com/learn/456" target="_blank" rel="noopener">https://www.imooc.com/learn/456</a></p>
+<h1 id="java中的常见注解"><a class="markdownIt-Anchor" href="#java中的常见注解"></a> Java中的常见注解</h1>
+<h2 id="jdk自带注解"><a class="markdownIt-Anchor" href="#jdk自带注解"></a> JDK自带注解</h2>
 <ol>
-<li>添加maven依赖</li>
+<li>@Override</li>
+<li>@Deprecated</li>
+<li>@SuppressWarnings(“deprecation”)</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- swagger RESTful API 文档 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.2.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.2.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>添加Swagger配置类</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableSwagger2</span><br><span class="line">public class Swagger2Config &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public Docket createRestApi() &#123;</span><br><span class="line"></span><br><span class="line">        ApiInfo apiInfo = new ApiInfoBuilder()</span><br><span class="line">                .title(&quot;测试Swagger项目接口文档&quot;)</span><br><span class="line">                .description(&quot;测试Swagger项目接口文档，符合RESTful API。&quot;)</span><br><span class="line">                .version(&quot;1.0&quot;)</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">        return new Docket(DocumentationType.SWAGGER_2)</span><br><span class="line">                .apiInfo(apiInfo)   //api的标题、描述、版本等信息</span><br><span class="line">                .select() // 选择那些路径和api会生成document</span><br><span class="line">                .apis(RequestHandlerSelectors.basePackage(&quot;com.test.controller&quot;)) //以扫描包的方式</span><br><span class="line">                .paths(PathSelectors.any())</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>创建接口类</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">@Api(value = &quot;用户模块&quot;)</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/user&quot;)</span><br><span class="line">public class UserController &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 获取单个用户</span><br><span class="line">     *</span><br><span class="line">     * @param id</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value = &quot;获取单个用户&quot;, notes = &quot;传入id获取单个用户&quot;)</span><br><span class="line">//    @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户id&quot;, required = true, paramType = &quot;path&quot;, dataType = &quot;Long&quot;) //注意：paramType需要指定为path,不然不能正常获取</span><br><span class="line">    @RequestMapping(value = &quot;/&#123;id&#125;&quot;, method = RequestMethod.GET)</span><br><span class="line">    public String user(@ApiParam(value = &quot;用户Id&quot;, required = true) @PathVariable Long id) &#123;</span><br><span class="line">        return &quot;user id :&quot; + id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取用户列表</span><br><span class="line">     *</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value = &quot;获取用户列表&quot;, notes = &quot;获取用户列表&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;&quot;, method = RequestMethod.GET)</span><br><span class="line">    public List list() &#123;</span><br><span class="line">        List list = new ArrayList();</span><br><span class="line">        list.add(&quot;Sam1&quot;);</span><br><span class="line">        list.add(&quot;Sam2&quot;);</span><br><span class="line">        list.add(&quot;Sam3&quot;);</span><br><span class="line">        return list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 新建用户</span><br><span class="line">     *</span><br><span class="line">     * @param user</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value = &quot;新建用户&quot;, notes = &quot;新建一个用户&quot;)</span><br><span class="line">//    @ApiImplicitParams(&#123;</span><br><span class="line">    //注意：paramType需要指定为body</span><br><span class="line">//            @ApiImplicitParam(name = &quot;user&quot;, value = &quot;用户数据&quot;, required = true, paramType = &quot;body&quot;, dataType = &quot;User&quot;)</span><br><span class="line">//    &#125;)</span><br><span class="line">    @RequestMapping(value = &quot;&quot;, method = RequestMethod.POST)</span><br><span class="line">    public String create(@ApiParam(value = &quot;用户数据&quot;, required = true) @RequestBody User user) &#123;</span><br><span class="line">        System.out.println(&quot;user : &quot; + user.getName() + &quot; &quot; + user.getAge());</span><br><span class="line">        return &quot;success 新建user : &quot; + user.getName() + &quot; &quot; + user.getAge();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 删除用户</span><br><span class="line">     *</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value = &quot;删除用户&quot;, notes = &quot;通过用户id删除用户&quot;)</span><br><span class="line">    @ApiImplicitParam(name = &quot;id&quot;, value = &quot;用户id&quot;, required = true, paramType = &quot;path&quot;, dataType = &quot;Long&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;/&#123;id&#125;&quot;, method = RequestMethod.DELETE)</span><br><span class="line">    public String delete(@PathVariable Long id) &#123;</span><br><span class="line">        System.out.println(&quot;删除用户：&quot; + id);</span><br><span class="line">        return &quot;success 删除user&quot; + id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 更新用户</span><br><span class="line">     *</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @ApiOperation(value = &quot;更新用户&quot;, notes = &quot;更新已存在用户&quot;)</span><br><span class="line">    @ApiImplicitParam(name = &quot;user&quot;, value = &quot;用户数据&quot;, required = true, paramType = &quot;body&quot;, dataType = &quot;User&quot;)</span><br><span class="line">    @RequestMapping(value = &quot;&quot;, method = RequestMethod.PUT)</span><br><span class="line">    public String update(@RequestBody User user) &#123;</span><br><span class="line">        System.out.println(&quot;更新用户：&quot; + user.getId() + &quot; &quot; + user.getName() + &quot; &quot; + user.getAge());</span><br><span class="line">        return &quot;success 更新user : &quot; + user.getId() + &quot; &quot; + user.getName() + &quot; &quot; + user.getAge();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>启动SpringBoot项目，访问 <a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="noopener">http://localhost:8080/swagger-ui.html</a> 查看效果<br>
-<img src="/pub-images/swagger2.png" alt="image"></li>
-</ol>
-<h1 id="swagger2注解"><a class="markdownIt-Anchor" href="#swagger2注解"></a> Swagger2注解</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">@EnableSwagger2：表示开启Swagger2  </span><br><span class="line">@ApiParam：单个参数描述 </span><br><span class="line">@ApiProperty：用对象接收参数时，描述对象的一个字段 </span><br><span class="line">@ApiIgnore：使用该注解忽略这个API</span><br><span class="line">@ApiError ：发生错误返回的信息 </span><br><span class="line"></span><br><span class="line">@Api：用在请求的类上，表示对类的说明</span><br><span class="line">    tags=&quot;说明该类的作用，可以在UI界面上看到的注解&quot;</span><br><span class="line">    value=&quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&quot;</span><br><span class="line">  </span><br><span class="line">@ApiOperation：用在请求的方法上，说明方法的用途、作用</span><br><span class="line">    value=&quot;说明方法的用途、作用&quot;</span><br><span class="line">    notes=&quot;方法的备注说明&quot;</span><br><span class="line">  </span><br><span class="line">@ApiImplicitParams：用在请求的方法上，表示一组参数说明</span><br><span class="line">    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面</span><br><span class="line">        name：参数名</span><br><span class="line">        value：参数的汉字说明、解释</span><br><span class="line">        required：参数是否必须传</span><br><span class="line">        paramType：参数放在哪个地方</span><br><span class="line">            · header --&gt; 请求参数的获取：@RequestHeader</span><br><span class="line">            · query --&gt; 请求参数的获取：@RequestParam</span><br><span class="line">            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable</span><br><span class="line">            · body（不常用）</span><br><span class="line">            · form（不常用）   </span><br><span class="line">        dataType：参数类型，默认String，其它值dataType=&quot;Integer&quot;      </span><br><span class="line">        defaultValue：参数的默认值</span><br><span class="line">  </span><br><span class="line">@ApiResponses：用在请求的方法上，表示一组响应</span><br><span class="line">    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息</span><br><span class="line">        code：数字，例如400</span><br><span class="line">        message：信息，例如&quot;请求参数没填好&quot;</span><br><span class="line">        response：抛出异常的类</span><br><span class="line">  </span><br><span class="line">@ApiModel：用于响应类上，表示一个返回响应数据的信息</span><br><span class="line">            （这种一般用在post创建的时候，使用@RequestBody这样的场景，</span><br><span class="line">            请求参数无法使用@ApiImplicitParam注解进行描述的时候）</span><br><span class="line">    @ApiModelProperty：用在属性上，描述响应类的属性</span><br></pre></td></tr></table></figure>
-<p>参考文章：</p>
+<h2 id="常见第三方注解"><a class="markdownIt-Anchor" href="#常见第三方注解"></a> 常见第三方注解</h2>
+<p>Spring（@Autowired,@Service,@Repository…）,Mybatis(@InsetProvider,@UpdateProvide…)…</p>
+<h2 id="自定义注解"><a class="markdownIt-Anchor" href="#自定义注解"></a> 自定义注解</h2>
+<p>Description.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import java.lang.annotation.*;</span><br><span class="line"></span><br><span class="line">@Target(&#123;ElementType.METHOD,ElementType.TYPE&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Inherited</span><br><span class="line">@Documented</span><br><span class="line">public @interface Description &#123;</span><br><span class="line">    String desc();</span><br><span class="line">    int age() default 18;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://blog.csdn.net/qq_32506963/article/details/82911455" target="_blank" rel="noopener">https://blog.csdn.net/qq_32506963/article/details/82911455</a></li>
-<li><a href="http://www.cnblogs.com/jtlgb/p/8532433.html" target="_blank" rel="noopener">http://www.cnblogs.com/jtlgb/p/8532433.html</a></li>
+<li>@interface表示是定义注解</li>
+<li>成员必须以无参无异常方式声明；可通过defalut给出默认值</li>
+<li>成员的类型是受限制的，只能是基本类型、String、Class、Annotaion、Enumeration</li>
+<li>如果注解只有一个成员，成员名称必须为value(),在使用时可忽略成员名和赋值号</li>
+<li>注解类可以没有成员，没有成员的注解称为标识注解</li>
 </ul>
+<p>元注解：注解的注解</p>
+<ul>
+<li>@Target：表示注解的作用域，如ElementType.METHOD-方法，ElementType.TYPE-类，接口</li>
+<li>@Retention：生命周期，如：SOURCE（只在源码显示）、CLASS（编译时记录到class中，运行时忽略）、RUNTIME（运行时存在，可通过反射读取）</li>
+<li>@Inherited：表示允许子注解继承,此继承表示子类如果没有自定义此注解的话会继承父类的注解信息（类注解信息）</li>
+<li>@Documented：表示生成Javadoc时包含注解的信息</li>
+</ul>
+<p>使用自定义注解的语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@注解名(成员名1=成员值1，成员名2=成员值2,...)</span><br><span class="line">==========================================</span><br><span class="line">@Description(desc=&quot;annotation test&quot;,age=20)</span><br><span class="line">public String test()&#123;</span><br><span class="line">    return &quot;test my annotation&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="注解的分类"><a class="markdownIt-Anchor" href="#注解的分类"></a> 注解的分类</h1>
+<p>按照运行机制</p>
+<ul>
+<li>源码注解：注解只在源码存在，编译成.class文件就没有了</li>
+<li>编译时注解：注解在源码和.class文件中都存在，上面JDK自带注解就属于这一类</li>
+<li>运行时注解：在运行阶段还起作用，设置会影响程序的运行逻辑，如@Autowired</li>
+</ul>
+<h1 id="解析注解"><a class="markdownIt-Anchor" href="#解析注解"></a> 解析注解</h1>
+<p>通过反射获取类、函数或成员上的运行时注解信息，从而实现动态控制程序运行的逻辑</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package com.anno.test.demo;</span><br><span class="line"></span><br><span class="line">@Description(desc=&quot;TestAnno class annotaion desc&quot;,age=10)</span><br><span class="line">public class TestAnno &#123;</span><br><span class="line">    @Description(desc=&quot;TestAnno class method annotaion desc&quot;,age=1)</span><br><span class="line">    public String test()&#123;</span><br><span class="line">        return &quot;Hello&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">    //1 使用类加载器加载类</span><br><span class="line">    Class clazz = Class.forName(&quot;com.anno.test.demo.TestAnno&quot;);</span><br><span class="line">    //2 找到类上面的注解</span><br><span class="line">    boolean isExistAnno = clazz.isAnnotationPresent(Description.class);</span><br><span class="line">    if(isExistAnno)&#123;</span><br><span class="line">        //2.1 拿到注解实例</span><br><span class="line">        Description description = (Description) clazz.getAnnotation(Description.class);</span><br><span class="line">        //2.2 获取注解值</span><br><span class="line">        System.out.println(description.desc()+&quot;   &quot;+ description.age());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //3 找到方法上的注解</span><br><span class="line">    Method[] methods = clazz.getMethods();</span><br><span class="line">    for (Method method:methods) &#123;</span><br><span class="line">        boolean isMethodExistAnno = method.isAnnotationPresent(Description.class);</span><br><span class="line">        if(isMethodExistAnno)&#123;</span><br><span class="line">            //3.1 拿到注解实例</span><br><span class="line">            Description description = (Description) method.getAnnotation(Description.class);</span><br><span class="line">            //3.2 获取注解值</span><br><span class="line">            System.out.println(description.desc()+&quot;   &quot;+ description.age());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //4 另一中方式获取方法上的注解</span><br><span class="line">    for(Method method :methods)&#123;</span><br><span class="line">        Annotation[] ans = method.getAnnotations();</span><br><span class="line">        for(Annotation an:ans)&#123;</span><br><span class="line">            if(an instanceof Description)&#123;</span><br><span class="line">                Description description = (Description)an;</span><br><span class="line">                System.out.println(description.desc()+&quot;   &quot;+ description.age());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="项目实战"><a class="markdownIt-Anchor" href="#项目实战"></a> 项目实战</h1>
+<p>Hibernate注解生成sql的模仿：</p>
+<ul>
+<li>表注解</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package com.anno.test.demo;</span><br><span class="line">import java.lang.annotation.*;</span><br><span class="line">@Target(&#123;ElementType.TYPE&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Inherited</span><br><span class="line">@Documented</span><br><span class="line">public @interface Table &#123;</span><br><span class="line">    String value();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>字段注解</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package com.anno.test.demo;</span><br><span class="line">import java.lang.annotation.*;</span><br><span class="line">@Target(&#123;ElementType.FIELD&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Inherited</span><br><span class="line">@Documented</span><br><span class="line">public @interface Column &#123;</span><br><span class="line">   String value();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>实体类</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.anno.test.demo;</span><br><span class="line">import lombok.Data;</span><br><span class="line">@Data</span><br><span class="line">@Table(&quot;User&quot;)</span><br><span class="line">public class UserFilter &#123;</span><br><span class="line">    @Column(&quot;id&quot;)</span><br><span class="line">    private long id;</span><br><span class="line">    @Column(&quot;name&quot;)</span><br><span class="line">    private String name;</span><br><span class="line">    @Column(&quot;email&quot;)</span><br><span class="line">    private String email;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">public static void testAnno()  throws Exception &#123;</span><br><span class="line">    UserFilter filter1 = new UserFilter();</span><br><span class="line">    filter1.setId(100);</span><br><span class="line"></span><br><span class="line">    UserFilter filter2 = new UserFilter();</span><br><span class="line">    filter2.setName(&quot;jack&quot;);</span><br><span class="line"></span><br><span class="line">    UserFilter filter3 = new UserFilter();</span><br><span class="line">    filter3.setEmail(&quot;abc@163.com,111@qq.com&quot;);</span><br><span class="line"></span><br><span class="line">    String sql1 = query(filter1);</span><br><span class="line">    String sql2 = query(filter2);</span><br><span class="line">    String sql3 = query(filter3);</span><br><span class="line"></span><br><span class="line">    System.out.println(sql1);   //select * from User where 1=1  and id=100</span><br><span class="line">    System.out.println(sql2);   //select * from User where 1=1  and id=0 and name=&apos;jack&apos;</span><br><span class="line">    System.out.println(sql3);   //select * from User where 1=1  and id=0 and email in(&apos;abc@163.com&apos;,&apos;111@qq.com&apos;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> public static String query(UserFilter filter) throws Exception &#123;</span><br><span class="line">    StringBuffer sb = new StringBuffer();</span><br><span class="line">    //1 获取UserFilter类类型</span><br><span class="line">    Class clazz = Class.forName(&quot;com.anno.test.demo.UserFilter&quot;);</span><br><span class="line">    //2 获取table的名称</span><br><span class="line">    boolean isExistTableAnno = clazz.isAnnotationPresent(Table.class);</span><br><span class="line">    if(isExistTableAnno)&#123;</span><br><span class="line">        Table table = (Table)clazz.getAnnotation(Table.class);</span><br><span class="line">        String tableName = table.value();</span><br><span class="line">        sb.append(&quot;select * from &quot;).append(tableName).append(&quot; where 1=1 &quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //3 遍历所有字段</span><br><span class="line">    Field[] fields = clazz.getDeclaredFields();</span><br><span class="line">    for(Field field:fields)&#123;</span><br><span class="line">        //获取字段名称及值</span><br><span class="line">        boolean isExistColumnAnno = field.isAnnotationPresent(Column.class);</span><br><span class="line">        if(isExistColumnAnno)&#123;</span><br><span class="line">            Column column = field.getAnnotation(Column.class);</span><br><span class="line">            String columnName = column.value();</span><br><span class="line">            //拼装get属性方法</span><br><span class="line">            String fieldName = field.getName();</span><br><span class="line">            String getMethodName = &quot;get&quot;+fieldName.substring(0,1).toUpperCase() + fieldName.substring(1);</span><br><span class="line">            Method getMethod = clazz.getMethod(getMethodName);</span><br><span class="line">            Object fieldValueObj = getMethod.invoke(filter);</span><br><span class="line">            if(fieldValueObj == null || (fieldValueObj instanceof Long &amp;&amp; (Long)fieldValueObj==0))</span><br><span class="line">                continue;</span><br><span class="line">            sb.append(&quot; and &quot;).append(columnName);</span><br><span class="line">            if(fieldValueObj instanceof String) &#123;</span><br><span class="line">                if(((String) fieldValueObj).contains(&quot;,&quot;))&#123;</span><br><span class="line">                    String[] values = ((String) fieldValueObj).split(&quot;,&quot;);</span><br><span class="line">                    sb.append(&quot; in(&quot;);</span><br><span class="line">                    for(String v:values)&#123;</span><br><span class="line">                        sb.append(&quot;&apos;&quot;).append(v).append(&quot;&apos;&quot;).append(&quot;,&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    sb.deleteCharAt(sb.length()-1);</span><br><span class="line">                    sb.append(&quot;)&quot;);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    sb.append(&quot;=&apos;&quot;).append(fieldValueObj).append(&quot;&apos;&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;else if(fieldValueObj instanceof Long)&#123;</span><br><span class="line">                sb.append(&quot;=&quot;).append(fieldValueObj);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return  sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试代码路径：<a href="https://gitee.com/chetaofeng/myannotation.git" target="_blank" rel="noopener">https://gitee.com/chetaofeng/myannotation.git</a></p>
 
           
         
@@ -977,7 +1803,7 @@ Swagger 是一个规范和完整的框架，用于生成、描述、调用和可
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/07/Java-IDEA快捷键/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/25/Java-网络协议/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -996,7 +1822,7 @@ Swagger 是一个规范和完整的框架，用于生成、描述、调用和可
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/07/Java-IDEA快捷键/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2019/03/25/Java-网络协议/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1008,8 +1834,8 @@ Swagger 是一个规范和完整的框架，用于生成、描述、调用和可
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T15:29:16+08:00">
-                2019-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-25T01:25:03+08:00">
+                2019-03-25
               </time>
             
 
@@ -1049,926 +1875,21 @@ Swagger 是一个规范和完整的框架，用于生成、描述、调用和可
         
           
             <hr>
-<p>title: IDEA快捷键<br>
+<p>title: 网络协议<br>
 tags:</p>
 <ul>
 <li>java<br>
 copyright: true<br>
 comments: true<br>
 toc: true<br>
-date: 2019-03-04 09:25:33<br>
-categories: Java<br>
+date: 2019-03-29 14:41:51<br>
+categories: Spring<br>
 password:</li>
 </ul>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+Shift + Enter，语句完成</span><br><span class="line">“！”，否定完成，输入表达式时按 “！”键</span><br><span class="line">Ctrl+E，最近的文件</span><br><span class="line">Ctrl+Shift+E，最近更改的文件</span><br><span class="line">Shift+Click，可以关闭文件</span><br><span class="line">Ctrl+[ OR ]，可以跑到大括号的开头与结尾</span><br><span class="line">Ctrl+F12，可以显示当前文件的结构</span><br><span class="line">Ctrl+F7，可以查询当前元素在当前文件中的引用，然后按 F3 可以选择</span><br><span class="line">Ctrl+N，可以快速打开类</span><br><span class="line">Ctrl+Shift+N，可以快速打开文件 </span><br><span class="line">Alt+Q，可以看到当前方法的声明</span><br><span class="line">Ctrl+P，可以显示参数信息</span><br><span class="line">Ctrl+Shift+Insert，可以选择剪贴板内容并插入</span><br><span class="line">Alt+Insert，可以生成构造器/Getter/Setter等</span><br><span class="line">Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义</span><br><span class="line">Ctrl+Alt+T，可以把代码包在一个块内，例如：try/catch</span><br><span class="line">Ctrl+Enter，导入包，自动修正</span><br><span class="line">Ctrl+Alt+L，格式化代码</span><br><span class="line">Ctrl+Alt+I，将选中的代码进行自动缩进编排，这个功能在编辑 JSP 文件时也可以工作</span><br><span class="line">Ctrl+Alt+O，优化导入的类和包</span><br><span class="line">Ctrl+R，替换文本</span><br><span class="line">Ctrl+F，查找文本</span><br><span class="line">Ctrl+Shift+Space，自动补全代码</span><br><span class="line">Ctrl+空格，代码提示（与系统输入法快捷键冲突）</span><br><span class="line">Ctrl+Shift+Alt+N，查找类中的方法或变量</span><br><span class="line">Alt+Shift+C，最近的更改</span><br><span class="line">Alt+Shift+Up/Down，上/下移一行</span><br><span class="line">Shift+F6，重构 – 重命名</span><br><span class="line">Ctrl+X，删除行</span><br><span class="line">Ctrl+D，复制行</span><br><span class="line">Ctrl+/或Ctrl+Shift+/，注释（//或者/**/）</span><br><span class="line">Ctrl+J，自动代码（例如：serr）</span><br><span class="line">Ctrl+Alt+J，用动态模板环绕</span><br><span class="line">Ctrl+H，显示类结构图（类的继承层次）</span><br><span class="line">Ctrl+Q，显示注释文档</span><br><span class="line">Alt+F1，查找代码所在位置</span><br><span class="line">Alt+1，快速打开或隐藏工程面板</span><br><span class="line">Ctrl+Alt+left/right，返回至上次浏览的位置</span><br><span class="line">Alt+left/right，切换代码视图</span><br><span class="line">Alt+Up/Down，在方法间快速移动定位</span><br><span class="line">Ctrl+Shift+Up/Down，向上/下移动语句</span><br><span class="line">F2 或 Shift+F2，高亮错误或警告快速定位</span><br><span class="line">Tab，代码标签输入完成后，按 Tab，生成代码</span><br><span class="line">Ctrl+Shift+F7，高亮显示所有该文本，按 Esc 高亮消失</span><br><span class="line">Alt+F3，逐个往下查找相同文本，并高亮显示</span><br><span class="line">Ctrl+Up/Down，光标中转到第一行或最后一行下</span><br><span class="line">Ctrl+B/Ctrl+Click，快速打开光标处的类或方法（跳转到定义处）</span><br><span class="line">Ctrl+Alt+B，跳转到方法实现处</span><br><span class="line">Ctrl+Shift+Backspace，跳转到上次编辑的地方</span><br><span class="line">Ctrl+O，重写方法</span><br><span class="line">Ctrl+Alt+Space，类名自动完成</span><br><span class="line">Ctrl+Alt+Up/Down，快速跳转搜索结果</span><br><span class="line">Ctrl+Shift+J，整合两行</span><br><span class="line">Alt+F8，计算变量值</span><br><span class="line">Ctrl+Shift+V，可以将最近使用的剪贴板内容选择插入到文本</span><br><span class="line">Ctrl+Alt+Shift+V，简单粘贴</span><br><span class="line">Shift+Esc，不仅可以把焦点移到编辑器上，而且还可以隐藏当前（或最后活动的）工具窗口</span><br><span class="line">F12，把焦点从编辑器移到最近使用的工具窗口</span><br><span class="line">Shift+F1，要打开编辑器光标字符处使用的类或者方法 Java 文档的浏览器</span><br><span class="line">Ctrl+W，可以选择单词继而语句继而行继而函数</span><br><span class="line">Ctrl+Shift+W，取消选择光标所在词</span><br><span class="line">Alt+F7，查找整个工程中使用地某一个类、方法或者变量的位置</span><br><span class="line">Ctrl+I，实现方法</span><br><span class="line">Ctrl+Shift+U，大小写转化</span><br><span class="line">Ctrl+Y，删除当前行</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Shift+Enter，向下插入新行</span><br><span class="line">psvm/sout，main/System.out.println(); Ctrl+J，查看更多</span><br><span class="line">Ctrl+Shift+F，全局查找</span><br><span class="line">Ctrl+F，查找/Shift+F3，向上查找/F3，向下查找</span><br><span class="line">Ctrl+Shift+S，高级搜索</span><br><span class="line">Ctrl+U，转到父类</span><br><span class="line">Ctrl+Alt+S，打开设置对话框</span><br><span class="line">Alt+Shift+Inert，开启/关闭列选择模式</span><br><span class="line">Ctrl+Alt+Shift+S，打开当前项目/模块属性</span><br><span class="line">Ctrl+G，定位行</span><br><span class="line">Alt+Home，跳转到导航栏</span><br><span class="line">Ctrl+Enter，上插一行</span><br><span class="line">Ctrl+Backspace，按单词删除</span><br><span class="line">Ctrl+”+/-”，当前方法展开、折叠</span><br><span class="line">Ctrl+Shift+”+/-”，全部展开、折叠</span><br><span class="line">【调试部分、编译】</span><br><span class="line">Ctrl+F2，停止</span><br><span class="line">Alt+Shift+F9，选择 Debug</span><br><span class="line">Alt+Shift+F10，选择 Run</span><br><span class="line">Ctrl+Shift+F9，编译</span><br><span class="line">Ctrl+Shift+F10，运行</span><br><span class="line">Ctrl+Shift+F8，查看断点</span><br><span class="line">F8，步过</span><br><span class="line">F7，步入</span><br><span class="line">Shift+F7，智能步入</span><br><span class="line">Shift+F8，步出</span><br><span class="line">Alt+Shift+F8，强制步过</span><br><span class="line">Alt+Shift+F7，强制步入</span><br><span class="line">Alt+F9，运行至光标处</span><br><span class="line">Ctrl+Alt+F9，强制运行至光标处</span><br><span class="line">F9，恢复程序</span><br><span class="line">Alt+F10，定位到断点</span><br><span class="line">Ctrl+F8，切换行断点</span><br><span class="line">Ctrl+F9，生成项目</span><br><span class="line">Alt+1，项目</span><br><span class="line">Alt+2，收藏</span><br><span class="line">Alt+6，TODO</span><br><span class="line">Alt+7，结构</span><br><span class="line">Ctrl+Shift+C，复制路径</span><br><span class="line">Ctrl+Alt+Shift+C，复制引用，必须选择类名</span><br><span class="line">Ctrl+Alt+Y，同步</span><br><span class="line">Ctrl+~，快速切换方案（界面外观、代码风格、快捷键映射等菜单）</span><br><span class="line">Shift+F12，还原默认布局</span><br><span class="line">Ctrl+Shift+F12，隐藏/恢复所有窗口</span><br><span class="line">Ctrl+F4，关闭</span><br><span class="line">Ctrl+Shift+F4，关闭活动选项卡</span><br><span class="line">Ctrl+Tab，转到下一个拆分器</span><br><span class="line">Ctrl+Shift+Tab，转到上一个拆分器</span><br><span class="line">【重构】</span><br><span class="line">Ctrl+Alt+Shift+T，弹出重构菜单</span><br><span class="line">Shift+F6，重命名</span><br><span class="line">F6，移动</span><br><span class="line">F5，复制</span><br><span class="line">Alt+Delete，安全删除</span><br><span class="line">Ctrl+Alt+N，内联</span><br><span class="line">【查找】</span><br><span class="line">Ctrl+F，查找</span><br><span class="line">Ctrl+R，替换</span><br><span class="line">F3，查找下一个</span><br><span class="line">Shift+F3，查找上一个</span><br><span class="line">Ctrl+Shift+F，在路径中查找</span><br><span class="line">Ctrl+Shift+R，在路径中替换</span><br><span class="line">Ctrl+Shift+S，搜索结构</span><br><span class="line">Ctrl+Shift+M，替换结构</span><br><span class="line">Alt+F7，查找用法</span><br><span class="line">Ctrl+Alt+F7，显示用法</span><br><span class="line">Ctrl+F7，在文件中查找用法</span><br><span class="line">Ctrl+Shift+F7，在文件中高亮显示用法</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/07/Java-Java常见异常记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/07/Java-Java常见异常记录/" itemprop="url">Java常见异常记录</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T09:25:33+08:00">
-                2019-03-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>log4j<br>
-~~<br>
-log4j:WARN No appenders could be found for logger<br>
-log4j:WARN Please initialize the log4j system properly.</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">添加log4j.properties在resources文件夹下，内容类似：</span><br></pre></td></tr></table></figure>
-<p>log4j.rootLogger=debug, stdout, R</p>
-<p>log4j.appender.stdout=org.apache.log4j.ConsoleAppender<br>
-log4j.appender.stdout.layout=org.apache.log4j.PatternLayout</p>
-<p>log4j.appender.stdout.layout.ConversionPattern=%5p - %m%n</p>
-<p>log4j.appender.R=org.apache.log4j.RollingFileAppender<br>
-log4j.appender.R.File=firestorm.log</p>
-<p>log4j.appender.R.MaxFileSize=100KB<br>
-log4j.appender.R.MaxBackupIndex=1</p>
-<p>log4j.appender.R.layout=org.apache.log4j.PatternLayout<br>
-log4j.appender.R.layout.ConversionPattern=%p %t %c - %m%n</p>
-<p>log4j.logger.com.codefutures=DEBUG</p>
-<pre class="highlight"><code class=""></code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/06/Java-Java常用技术网址收集/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/06/Java-Java常用技术网址收集/" itemprop="url">Java常用技术网址收集</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T21:25:33+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="guava"><a class="markdownIt-Anchor" href="#guava"></a> Guava</h1>
-<p><a href="https://www.yiibai.com/guava/" target="_blank" rel="noopener">https://www.yiibai.com/guava/</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/06/Linux-Linux下pid文件说明/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/06/Linux-Linux下pid文件说明/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T16:48:13+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>title: Linux下pid文件说明<br>
-tags:</p>
-<ul>
-<li>Linux<br>
-copyright: true<br>
-comments: true<br>
-toc: true<br>
-date: 2019-03-06 08:25:33<br>
-categories: Linux<br>
-password:</li>
-</ul>
-<hr>
-<p>Linux下的pid文件位于：/var/run/目录下</p>
-<ul>
-<li>内容：内容只有一行，记录了该进程的ID</li>
-<li>作用：防止启动多个进程副本</li>
-<li>原理：进程运行后会给.pid文件加一个文件锁，只有获得pid文件(固定路径固定文件名)写入权限(F_WRLCK)的进程才能正常启动并把自身的PID写入该文件中。其它同一个程序的多余进程则自动退出</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/06/Java-JOOQ入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/06/Java-JOOQ入门/" itemprop="url">JOOQ入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T09:25:33+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<p>官网： <a href="http://www.jooq.org/" target="_blank" rel="noopener">http://www.jooq.org/</a></p>
-<ul>
-<li>JOOQ（Java Object Oriented Querying）即面向Java对象查询，是一个高效地合并了复杂SQL、类型安全、源码生成、ActiveRecord、存储过程以及高级数据类型的Java API的类库</li>
-<li>JOOQ 既吸取了传统ORM操作数据的简单性和安全性，又保留了原生sql的灵活性，它更像是介于 ORMS和JDBC的中间层</li>
-</ul>
-<h1 id="mavan依赖"><a class="markdownIt-Anchor" href="#mavan依赖"></a> mavan依赖</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;$&#123;mysql.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.jooq&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jooq&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;$&#123;jooq.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.jooq&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jooq-meta&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;$&#123;jooq.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.jooq&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jooq-codegen&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;$&#123;jooq.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<p>SpringBoot依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-jooq&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<p>代码生成依赖<br>
-JOOQ需要通过APT动态生成需要的Java类，所以需要配置Maven插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.jooq&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;jooq-codegen-maven&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;$&#123;jooq.version&#125;&lt;/version&gt;</span><br><span class="line">            &lt;executions&gt;</span><br><span class="line">                &lt;execution&gt;</span><br><span class="line">                    &lt;goals&gt;</span><br><span class="line">                        &lt;goal&gt;generate&lt;/goal&gt;       //配置后mvn compile的时候执行apt</span><br><span class="line">                    &lt;/goals&gt;</span><br><span class="line">                &lt;/execution&gt;</span><br><span class="line">            &lt;/executions&gt;</span><br><span class="line">            &lt;dependencies&gt;</span><br><span class="line">                &lt;dependency&gt;</span><br><span class="line">                    &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">                    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">                    &lt;version&gt;$&#123;mysql.version&#125;&lt;/version&gt;</span><br><span class="line">                &lt;/dependency&gt;</span><br><span class="line">            &lt;/dependencies&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;jdbc&gt;</span><br><span class="line">                    &lt;url&gt;jdbc:mysql://localhost:3306/foo&lt;/url&gt;</span><br><span class="line">                    &lt;user&gt;root&lt;/user&gt;</span><br><span class="line">                    &lt;password&gt;root&lt;/password&gt;</span><br><span class="line">                &lt;/jdbc&gt;</span><br><span class="line">                &lt;generator&gt;</span><br><span class="line">                    &lt;database&gt;</span><br><span class="line">                        &lt;includes&gt;.*&lt;/includes&gt;</span><br><span class="line">                        &lt;inputSchema&gt;foo&lt;/inputSchema&gt;</span><br><span class="line">                    &lt;/database&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;target&gt;</span><br><span class="line">                        &lt;packageName&gt;jooq&lt;/packageName&gt;</span><br><span class="line">                        &lt;directory&gt;$&#123;basedir&#125;/target/generated-sources/java&lt;/directory&gt;</span><br><span class="line">                    &lt;/target&gt;</span><br><span class="line">                &lt;/generator&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
-<p>显示执行: mvn jooq-codegen:generate<br>
-隐式执行: mvn compile</p>
-<h1 id="集成数据源"><a class="markdownIt-Anchor" href="#集成数据源"></a> 集成数据源</h1>
-<p>只需要重写getDSLContext 方法，以durid数据源为例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">private DSLContext getDSLContext() &#123;</span><br><span class="line">    DruidDataSource dataSource = new DruidDataSource();</span><br><span class="line">    dataSource.setUrl(&quot;jdbc:mysql://localhost:3306/test&quot;);</span><br><span class="line">    dataSource.setUsername(&quot;root&quot;);</span><br><span class="line">    dataSource.setPassword(&quot;root&quot;);</span><br><span class="line">    dataSource.setMaxActive(20);</span><br><span class="line">    dataSource.setMaxWait(20_000);</span><br><span class="line">    dataSource.setMinIdle(0);</span><br><span class="line">    dataSource.setTestOnBorrow(true);</span><br><span class="line">    dataSource.setTestWhileIdle(true);</span><br><span class="line">    dataSource.setInitialSize(1);</span><br><span class="line">    dataSource.setMinEvictableIdleTimeMillis(1000*60*10);</span><br><span class="line">    dataSource.setTimeBetweenEvictionRunsMillis(60*1000);</span><br><span class="line">    dataSource.setPoolPreparedStatements(true);</span><br><span class="line">    dataSource.setMaxPoolPreparedStatementPerConnectionSize(20);</span><br><span class="line">    dataSource.setValidConnectionChecker(new MySqlValidConnectionChecker());</span><br><span class="line">    ConnectionProvider connectionProvider =  new DataSourceConnectionProvider(dataSource)</span><br><span class="line">    Configuration configuration = new DefaultConfiguration()</span><br><span class="line">      .set(connectionProvider)</span><br><span class="line">      .set(SQLDialect.MYSQL);</span><br><span class="line">    return DSL.using(configuration);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="事物支持"><a class="markdownIt-Anchor" href="#事物支持"></a> 事物支持</h1>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ConnectionProvider connectionProvider =  new DataSourceConnectionProvider(dataSource)</span><br><span class="line">TransactionProvider transactionProvider = new DefaultTransactionProvider(connectionProvider, false);</span><br><span class="line">Configuration configuration = new DefaultConfiguration()</span><br><span class="line">      .set(connectionProvider)</span><br><span class="line">      .set(transactionProvider)</span><br><span class="line">      .set(SQLDialect.MYSQL);</span><br><span class="line">return DSL.using(configuration);</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://www.cnblogs.com/chinajava/p/5832378.html" target="_blank" rel="noopener">https://www.cnblogs.com/chinajava/p/5832378.html</a>’</p>
-<p>Spring自定义配置的IDE提示，需要使用APT技术，需要添加依赖spring-boot-configuration-processor</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2019/03/05/Linux-鸟哥私房菜基础篇/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/05/Linux-鸟哥私房菜基础篇/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T11:48:04+08:00">
-                2019-03-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>title: 鸟哥私房菜基础篇<br>
-tags:</p>
-<ul>
-<li>Linux<br>
-copyright: true<br>
-comments: true<br>
-toc: true<br>
-date: 2019-03-05 15:29:55<br>
-categories: Linux<br>
-password:</li>
-</ul>
-<hr>
-<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
-<ul>
-<li>Linux是一个多用户、多任务环境。</li>
-<li>Linux一般将文件可存取访问的身份分为3个类别：owner、group、others，且各有read、write、execute等权限</li>
-</ul>
-<h1 id="文件权限"><a class="markdownIt-Anchor" href="#文件权限"></a> 文件权限</h1>
-<ul>
-<li>owner:文件的所有者</li>
-<li>group:每个账号都可以有多个用户组的支持</li>
-<li>others:root用户</li>
-</ul>
-<p>日常操作报“Permission deny”–权限设置错误，主要涉及文件权限<br>
-<img src="/pub-images/l0.png" alt="image"><br>
-ls:list</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[   1    ] [2]   [3]    [4]     [5]      [6]         [7]</span><br><span class="line">[   权限  ][连接][所有者][用户组][文件容量][修改日期]  [文件名称]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>1.文件类型和权限：10个字符：1+3<em>3=10，1表示文件类型，3</em>3分别是owner、group、others的权限</li>
-<li>2.表示有多少文件名连接到此节点（inode）</li>
-<li>5.文件容量，默认单位为B</li>
-<li>6.文件的创建日期或者修改日期</li>
-<li>7.文件名前多一个.表示是隐藏文件</li>
-</ul>
-<h1 id="属性组"><a class="markdownIt-Anchor" href="#属性组"></a> 属性／组</h1>
-<hr>
-<h2 id="可修改etcsysconfigi18n文件配置系统默认语言"><a class="markdownIt-Anchor" href="#可修改etcsysconfigi18n文件配置系统默认语言"></a> 可修改/etc/sysconfig/i18n文件配置系统默认语言</h2>
-<h2 id="改变文件属性与权限chgrp改变文件所属用户组chown改变文件所有者chmod改变文件权限方式一数字类型权限权重值r-4-w-2-x-1方式二符号类型chmod-ugoa-rwx-文件或目录"><a class="markdownIt-Anchor" href="#改变文件属性与权限chgrp改变文件所属用户组chown改变文件所有者chmod改变文件权限方式一数字类型权限权重值r-4-w-2-x-1方式二符号类型chmod-ugoa-rwx-文件或目录"></a> 改变文件属性与权限：<br>
-chgrp：改变文件所属用户组<br>
-chown：改变文件所有者<br>
-chmod：改变文件权限<br>
-方式一：数字类型<br>
-权限权重值：r-4  w-2 x-1<br>
-方式二：符号类型<br>
-chmod  u/g/o/a +/-/= rwx 文件或目录</h2>
-<p>权限对文件的重要性：<br>
-文件时实际含有数据的地方。<br>
-r:可读取次文件的实际内容<br>
-w:可以编辑、新建或者修改文件的内容，但不包括删除文件<br>
-x:该文件具有可以被系统执行的权限<br>
-Linux下文件是否能够被执行是由是否具有X这个权限决定的，而跟文件名没有任何关系。文件扩展名只是文件类型的一种提示。<br>
-权限对目录的重要性：<br>
-目录主要的内容就是记录文件名列表。<br>
-r:具有读取目录结构列表的权限，表示可以查询目录下的文件名数据，所以可以用ls命令列出目录下的内容<br>
-w:表示你具有更改目录结构列表的权限，包括<br>
-1.新建新的文件与目录；<br>
-2.删除已经存在的文件与目录；<br>
-3.将已存在的文件或目录进行重命名；<br>
-4.转移该目录内的文件、目录的位置。<br>
-总之，目录的w权限与该目录下面的文件名变动有关。<br>
-x:代表用户能否进入该目录成为工作目录。如果在某目录无x权限，则无法切换到该目录下，也就无法执行该目录下的命令。</p>
-<p>Linux目录标准配置：FileSystem Hierarchy Standard（FHS）其主要目的是让用户可以了解到已安装软件通常放置于哪个目录下，各个软件开发商和操作系统制作者都要遵守此规则。依据文件系统使用的频繁与否与是否允许用户随意改动，而将目录定义成四种交互作用的状态。</p>
-<table>
-<thead>
-<tr>
-<th>–</th>
-<th>可分享的</th>
-<th>不可分享的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>不可变的</td>
-<td>/usr(软件放置处)</td>
-<td>/etc（配置文件）</td>
-</tr>
-</tbody>
-</table>
-<pre><code>/opt(第三方软件)	|	/boot(开机与内核文件)	   
-</code></pre>
-<p>可变动的	/var/mail	|	/var/run	<br>
-/var/spool/news	|	/var/lock</p>
-<p>其实，FHS针对目录树架构仅定义了三层目录下面应该放置什么数据，分别是下面这三个目录的定义：</p>
-<ol>
-<li>/（root，根目录）：与开机系统有关；<br>
-FHS标准建议：根目录所在分区应该越小越好，且应用程序所安装的软件最好不要与根目录放在同一个分区内，保持根目录越小越好。如此不但性能较好，根目录所在的文件系统也较不容易发生问题。<br>
-<img src="/pub-images/l1.png" alt="image"></li>
-<li>/usr（UNIX software resource）：与软件安装/执行有关；<br>
-FHS建议所有软件开发者应该将他们的数据合理的分别放置到这个目录下的子目录。/usr里面放置的数据属于可分享的与不可变动的。</li>
-<li>/var（variable）：与系统运作过程有关。</li>
-</ol>
-<h2 id="关于执行文件路径的变量path1不同身份用户默认的path不同默认能够随意执行的命令也不同2path是可以修改的3使用绝对路径或相对路径直接指定某个命令的文件名来执行会比查询path来的正确4命令应该要放置到正确的目录下执行才会比较方便5本目录最好不要放到path当中"><a class="markdownIt-Anchor" href="#关于执行文件路径的变量path1不同身份用户默认的path不同默认能够随意执行的命令也不同2path是可以修改的3使用绝对路径或相对路径直接指定某个命令的文件名来执行会比查询path来的正确4命令应该要放置到正确的目录下执行才会比较方便5本目录最好不要放到path当中"></a> 关于执行文件路径的变量：$PATH<br>
-1.不同身份用户默认的PATH不同，默认能够随意执行的命令也不同<br>
-2.PATH是可以修改的<br>
-3.使用绝对路径或相对路径直接指定某个命令的文件名来执行，会比查询PATH来的正确<br>
-4.命令应该要放置到正确的目录下，执行才会比较方便<br>
-5.本目录(.)最好不要放到PATH当中</h2>
-<h2 id="cp的源文件与目的文件的权限是不同的目的文件的所有者通常是命令操作者本身"><a class="markdownIt-Anchor" href="#cp的源文件与目的文件的权限是不同的目的文件的所有者通常是命令操作者本身"></a> cp的源文件与目的文件的权限是不同的，目的文件的所有者通常是命令操作者本身。</h2>
-<h2 id="basename获取文件名dirname获取目录名"><a class="markdownIt-Anchor" href="#basename获取文件名dirname获取目录名"></a> basename：获取文件名<br>
-dirname：获取目录名</h2>
-<h2 id="文件内容查询1cat由第一行开始显示文件内容2tac从最后一行开始显示tac是cat的倒写3nl显示的时候顺便输出行号4more一页一页的显示文件内容5less与more类似但可以往前翻页6head只看头几行7tail只看结尾几行8od以二进制的方式读取文件内容"><a class="markdownIt-Anchor" href="#文件内容查询1cat由第一行开始显示文件内容2tac从最后一行开始显示tac是cat的倒写3nl显示的时候顺便输出行号4more一页一页的显示文件内容5less与more类似但可以往前翻页6head只看头几行7tail只看结尾几行8od以二进制的方式读取文件内容"></a> 文件内容查询：<br>
-1.cat:由第一行开始显示文件内容<br>
-2.tac:从最后一行开始显示（tac是cat的倒写）<br>
-<a href="http://3.nl" target="_blank" rel="noopener">3.nl</a>:显示的时候，顺便输出行号<br>
-4.more:一页一页的显示文件内容<br>
-5.less:与more类似，但可以往前翻页<br>
-6.head:只看头几行<br>
-7.tail:只看结尾几行<br>
-8.od:以二进制的方式读取文件内容</h2>
-<h2 id="linux下会记录许多的时间参数主要有三个变动的时间modification-timemtime当该文件的内容数据更改时就会更新这个时间status-timectime当该文件的状态改变时就会更新这个时间如权限与属性被更改时access-timeatime当该文件的内容被取用时就会更新这个时间如cat某文件时默认情况下ls显示的时间是当前文件的mtime-可以通过touch命令配合相应参数修改以上的相应时间touch命令肯定会修改的日期是mtimeatime"><a class="markdownIt-Anchor" href="#linux下会记录许多的时间参数主要有三个变动的时间modification-timemtime当该文件的内容数据更改时就会更新这个时间status-timectime当该文件的状态改变时就会更新这个时间如权限与属性被更改时access-timeatime当该文件的内容被取用时就会更新这个时间如cat某文件时默认情况下ls显示的时间是当前文件的mtime-可以通过touch命令配合相应参数修改以上的相应时间touch命令肯定会修改的日期是mtimeatime"></a> Linux下会记录许多的时间参数，主要有三个变动的时间：<br>
-modification time(mtime):<br>
-当该文件的内容数据更改时，就会更新这个时间<br>
-status time(ctime):<br>
-当该文件的状态改变时，就会更新这个时间，如权限与属性被更改时<br>
-access time(atime):<br>
-当该文件的内容被取用时，就会更新这个时间，如cat某文件时<br>
-默认情况下，ls显示的时间是当前文件的mtime。可以通过touch命令配合相应参数修改以上的相应时间，touch命令肯定会修改的日期是mtime，atime</h2>
-<h2 id="linux命令可以通过隔开之后代表多个命令的连续执行"><a class="markdownIt-Anchor" href="#linux命令可以通过隔开之后代表多个命令的连续执行"></a> Linux命令可以通过；隔开之后，代表多个命令的连续执行</h2>
-<h2 id="文件的默认权限umask就是指定目前用户在新建文件或目录时候的权限默认值可以通过umaskumask-s查看当前umaskumask的分数指的是该默认值需要减掉的权限"><a class="markdownIt-Anchor" href="#文件的默认权限umask就是指定目前用户在新建文件或目录时候的权限默认值可以通过umaskumask-s查看当前umaskumask的分数指的是该默认值需要减掉的权限"></a> 文件的默认权限：<br>
-umask就是指定“目前用户在新建文件或目录时候的权限默认值”，可以通过umask/umask -S查看当前umask；<br>
-umask的分数指的是“该默认值需要减掉的权限”</h2>
-<h2 id="文件的隐藏属性chatrr设置文件的隐藏属性格式chattr-参数-文件或目录名称lsatrr显示文件隐藏属性"><a class="markdownIt-Anchor" href="#文件的隐藏属性chatrr设置文件的隐藏属性格式chattr-参数-文件或目录名称lsatrr显示文件隐藏属性"></a> 文件的隐藏属性：<br>
-chatrr:设置文件的隐藏属性，格式chattr ±=参数 文件或目录名称<br>
-lsatrr：显示文件隐藏属性</h2>
-<h2 id="文件的特殊权限suidsgidsbitsetuidsuid仅对具有x权限的二进制程序的所有者在执行程序的过程中具有该程序所有者的权限不能够用在shell-script上面setgid对应与suid只不过是针对s所在用户组来说sticky-bit仅针对目录有效当用户对目录由wx的权限时只有自己与root可以删除该文件修改文件的特殊权限suid-4-sgid-2-sbit-1使用命令chmod如chmod-1755其中1表示添加sbit权限"><a class="markdownIt-Anchor" href="#文件的特殊权限suidsgidsbitsetuidsuid仅对具有x权限的二进制程序的所有者在执行程序的过程中具有该程序所有者的权限不能够用在shell-script上面setgid对应与suid只不过是针对s所在用户组来说sticky-bit仅针对目录有效当用户对目录由wx的权限时只有自己与root可以删除该文件修改文件的特殊权限suid-4-sgid-2-sbit-1使用命令chmod如chmod-1755其中1表示添加sbit权限"></a> 文件的特殊权限：SUID，SGID，SBIT<br>
-SetUID：SUID仅对具有x权限的二进制程序的所有者在执行程序的过程中具有该程序所有者的权限，不能够用在Shell Script上面<br>
-SetGID：对应与SUID，只不过是针对s所在用户组来说<br>
-Sticky Bit：仅针对目录有效，当用户对目录由wx的权限时，只有自己与root可以删除该文件<br>
-修改文件的特殊权限：<br>
-SUID-4  SGID-2 SBIT-1<br>
-使用命令chmod，如chmod 1755，其中1表示添加SBIT权限</h2>
-<h2 id="查看文件类型-file"><a class="markdownIt-Anchor" href="#查看文件类型-file"></a> 查看文件类型： file</h2>
-<p>文件的查询：<br>
-脚本文件名的查询：which（寻找执行文件），这个命令是根据PATH这个环境变量所规范的路径去查询执行文件的文件名<br>
-文件名的查询：<br>
-whereis和locate是通过数据库来查询数据的，所以会比find快的，但可能也会引起找不到最新新建的文件或者会找到已经被删掉的文件<br>
-whereis（寻找特定文件）<br>
-locate寻找的数据是由已创建的数据库/var/lib/mlocate里面的数据所查找到的，数据库的创建默认是每天执行一次，可以通过updatedb命令去读取/etc/updatedb.conf这个配置文件的设置，然后再去硬盘里面进行查找文件名的操作，最后就更新整个数据库文件<br>
-find：可以通过添加时间查找特定时间的文件，自动会查找子目录</p>
+<p><a href="https://www.cnblogs.com/qishui/p/5428938.html" target="_blank" rel="noopener">https://www.cnblogs.com/qishui/p/5428938.html</a><br>
+<a href="http://www.cnblogs.com/tsingke/p/8604871.html" target="_blank" rel="noopener">http://www.cnblogs.com/tsingke/p/8604871.html</a><br>
+<a href="https://www.cnblogs.com/lemo-/p/6391095.html" target="_blank" rel="noopener">https://www.cnblogs.com/lemo-/p/6391095.html</a></p>
 
           
         
@@ -2017,7 +1938,7 @@ find：可以通过添加时间查找特定时间的文件，自动会查找子�
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2072,7 +1993,7 @@ find：可以通过添加时间查找特定时间的文件，自动会查找子�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2083,7 +2004,7 @@ find：可以通过添加时间查找特定时间的文件，自动会查找子�
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2188,7 +2109,7 @@ find：可以通过添加时间查找特定时间的文件，自动会查找子�
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

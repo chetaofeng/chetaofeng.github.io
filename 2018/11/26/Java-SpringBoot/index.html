@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Spring Boot," />
+  <meta name="keywords" content="Spring Boot,Spring," />
 
 
 
@@ -106,14 +106,14 @@
 
 
 <meta name="description" content="https://www.imooc.com/video/16358 https://www.imooc.com/learn/1058 https://www.imooc.com/video/16783  简介  官网：http://spring.io/，https://spring.io/projects/spring-boot 英文文档：https://docs.spring.io/spring">
-<meta name="keywords" content="Spring Boot">
+<meta name="keywords" content="Spring Boot,Spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot入门">
 <meta property="og:url" content="https://chetaofeng.github.io/2018/11/26/Java-SpringBoot/index.html">
 <meta property="og:site_name" content="行锋">
 <meta property="og:description" content="https://www.imooc.com/video/16358 https://www.imooc.com/learn/1058 https://www.imooc.com/video/16783  简介  官网：http://spring.io/，https://spring.io/projects/spring-boot 英文文档：https://docs.spring.io/spring">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-11T09:28:53.000Z">
+<meta property="og:updated_time" content="2019-04-01T14:33:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot入门">
 <meta name="twitter:description" content="https://www.imooc.com/video/16358 https://www.imooc.com/learn/1058 https://www.imooc.com/video/16783  简介  官网：http://spring.io/，https://spring.io/projects/spring-boot 英文文档：https://docs.spring.io/spring">
@@ -525,28 +525,102 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
     <groupid>org.apache.commons</groupid>
     <artifactid>commons-pool2</artifactid>
 </dependency>
-~~~
-<h1 id="其他springboot学习资料"><a class="markdownIt-Anchor" href="#其他springboot学习资料"></a> 其他SpringBoot学习资料</h1>
-<ul>
-<li><a href="http://www.ityouknow.com/springboot/2015/12/30/springboot-collect.html" target="_blank" rel="noopener">http://www.ityouknow.com/springboot/2015/12/30/springboot-collect.html</a></li>
-</ul>
-<p>拦截器功能：<br>
-重写WebMvcConfigurerAdapter中的addInterceptors方法把自定义的拦截器类添加进来即可简单的判断是否登录的使用</p>
-<p>注解：<br>
-@SpringBootApplication是Sprnig Boot项目的核心注解，主要目的是开启自动配置<br>
-@RestController 这个注解相当于同时添加@Controller和@ResponseBody注解，用这个注解的类里面的方法都以json格式输出<br>
-@Component：让spring在启动的时候扫描到该类，并添加到spring容器中<br>
-@Bean：任何一个标注了@Bean的方法，其返回值将作为一个bean定义注册到Spring的IoC容器，方法名将默认成该bean定义的id<br>
-@ControllerAdvice 注解，可以用于定义@ExceptionHandler、@InitBinder、@ModelAttribute，并应用到所有@RequestMapping中</p>
-<p>@Configuration：任何一个标注了@Configuration的Java类定义都是一个JavaConfig配置类<br>
-@ComponentScan：</p>
-<ul>
-<li>自动扫描并加载符合条件的组件（比如@Component和@Repository等）或者bean定义，最终将这些bean定义加载到IoC容器中</li>
-<li>可以通过basePackages等属性来细粒度的定制@ComponentScan自动扫描的范围，如果不指定，则默认Spring框架实现会从声明@ComponentScan所在类的package进行扫描</li>
-<li>所以SpringBoot的启动类最好是放在root package下，因为默认不指定basePackages<br>
-@EnableAutoConfiguration：借助@Import的支持，收集和注册特定场景相关的bean定义<br>
-@EnableScheduling是通过@Import将Spring调度框架相关的bean定义都加载到IoC容器</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Spring Factories机制</span><br><span class="line">* Java SPI(Service Provider Interface)机制:为某个接口寻找服务实现的机制</span><br><span class="line">1. 当服务的提供者，提供了服务接口的一种实现之后，在jar包的META-INF/services/目录里同时创建一个以服务接口命名的文件,该文件里就是实现该服务接口的具体实现类</span><br><span class="line">2. 当外部程序装配这个模块的时候，就能通过该jar包META-INF/services/里的配置文件找到具体的实现类名，并装载实例化，完成模块的注入</span><br><span class="line">* Spring Boot中的SPI机制:Spring Factories(Spring Boot中一种非常解耦的扩展机制)</span><br><span class="line">1. 在META-INF/spring.factories文件中配置接口的实现类名称</span><br><span class="line">2. 当外部程序装配这个模块的时候，就能通过该jar包META-INF/services/里的配置文件找到具体的实现类名，并装载实例化，完成模块的注入。这种自定义的SPI机制是Spring Boot Starter实现的基础。</span><br><span class="line"></span><br><span class="line"># 自定义starter</span><br><span class="line">* starter可以理解为一个可拔插式的插件</span><br><span class="line">* starter的artifactId的命名规则</span><br><span class="line">1. 官方Starter通常命名为spring-boot-starter-&#123;name&#125;如 spring-boot-starter-web</span><br><span class="line">2. 非官方Starter命名应遵循&#123;name&#125;-spring-boot-starter的格式, 如mybatis-spring-boot-starter</span><br><span class="line"></span><br><span class="line">Starter的工作原理:</span><br><span class="line">1. Spring Boot在启动时扫描项目所依赖的JAR包，寻找包含spring.factories文件的JAR包，</span><br><span class="line">2. 读取spring.factories文件获取配置的自动配置类AutoConfiguration，</span><br><span class="line">3. 将自动配置类下满足条件(@ConditionalOnXxx)的@Bean放入到Spring容器中(Spring Context)</span><br><span class="line">4. 这样使用者就可以直接用来注入，因为该类已经在容器中了 </span><br><span class="line"></span><br><span class="line">自定义starter步骤：</span><br><span class="line">1. maven引入：</span><br></pre></td></tr></table></figure>
+<p>dependency&gt;<br>
+<groupid>org.springframework.boot</groupid><br>
+<artifactid>spring-boot-autoconfigure</artifactid><br>
+<br>
+<dependency><br>
+<groupid>org.springframework.boot</groupid><br>
+<artifactid>spring-boot-configuration-processor</artifactid><br>
+<optional>true</optional><br>
+</dependency></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* spring-boot-configuration-processor：spring默认使用yml中的配置，但有时候要用传统的xml或properties配置，则需要依赖他，这样就可以在你的配置类开头加上@PropertySource(&quot;classpath:your.properties&quot;)，其余用法与加载yml的配置一样</span><br><span class="line">* spring-boot-autoconfigure: http://ifeve.com/spring-boot-autoconfigure/</span><br><span class="line">2. 定义自己的Properties类,如PersonProperties.java：</span><br></pre></td></tr></table></figure>
+<p>@ConfigurationProperties(prefix = “spring.person”)<br>
+@Data<br>
+public class PersonProperties {<br>
+private String name;<br>
+private int age;<br>
+}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3. 核心服务类,如PersonService.java：</span><br></pre></td></tr></table></figure>
+<p>public class PersonService {<br>
+private PersonProperties properties;<br>
+public PersonService() {}<br>
+public PersonService(PersonProperties properties) {<br>
+this.properties = properties;<br>
+}<br>
+public void sayHello(){<br>
+System.out.println(&quot;大家好，我叫: &quot; + properties.getName() + “, 今年” + properties.getAge() + “岁”);<br>
+}<br>
+}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. 自动配置类:一般每个starter都至少会有一个自动配置类，一般命名规则使用XxxAutoConfiguration,如：PersonServiceAutoConfiguration</span><br></pre></td></tr></table></figure>
+<p>@Configuration<br>
+@EnableConfigurationProperties(PersonProperties.class)<br>
+@ConditionalOnClass(PersonService.class)<br>
+@ConditionalOnProperty(prefix = “spring.person”, value = “enabled”, matchIfMissing = true)<br>
+public class PersonServiceAutoConfiguration {<br>
+@Autowired<br>
+private PersonProperties properties;</p>
+<pre><code>@Bean
+@ConditionalOnMissingBean(PersonService.class)  // 当容器中没有指定Bean的情况下，自动配置PersonService类
+public PersonService personService(){
+    PersonService personService = new PersonService(properties);
+    return personService;
+}
+</code></pre>
+<p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">所用注解说明：</span><br></pre></td></tr></table></figure>
+<p>@ConditionalOnClass：当类路径classpath下有指定的类的情况下进行自动配置<br>
+@ConditionalOnMissingBean:当容器(Spring Context)中没有指定Bean的情况下进行自动配置<br>
+@ConditionalOnProperty(prefix = “example.service”, value = “enabled”, matchIfMissing = true)，当配置文件中example.service.enabled=true时进行自动配置，如果没有设置此值就默认使用matchIfMissing对应的值<br>
+@ConditionalOnMissingBean，当Spring Context中不存在该Bean时。<br>
+@ConditionalOnBean:当容器(Spring Context)中有指定的Bean的条件下<br>
+@ConditionalOnMissingClass:当类路径下没有指定的类的条件下</p>
+<p>@ConditionalOnExpression:基于SpEL表达式作为判断条件</p>
+<p>@ConditionalOnJava:基于JVM版本作为判断条件<br>
+@ConditionalOnJndi:在JNDI存在的条件下查找指定的位置<br>
+@ConditionalOnNotWebApplication:当前项目不是Web项目的条件下<br>
+@ConditionalOnWebApplication:当前项目是Web项目的条件下<br>
+@ConditionalOnResource:类路径下是否有指定的资源<br>
+@ConditionalOnSingleCandidate:当指定的Bean在容器中只有一个，或者在有多个Bean的情况下，用来指定首选的Bean</p>
+<p>@ConfigurationProperties: 主要用来把properties配置文件转化为对应的XxxProperties来使用的,并不会把该类放入到IOC容器中，想放入容器可通过@Component来标注或@EnableConfigurationProperties(XxxProperties.class)<br>
+@EnableConfigurationProperties(XxxProperties.class) 注解的作用是@ConfigurationProperties注解生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5. src/main/resources/META-INF/spring.factories</span><br><span class="line">注意：META-INF是自己手动创建的目录，spring.factories也是手动创建的文件,在该文件中配置自己的自动配置类</span><br></pre></td></tr></table></figure>
+<p>org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.my.PersonServiceAutoConfiguration</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">6. 打包mvn clean install,生成starter的jar包</span><br><span class="line">7. 使用starter </span><br><span class="line">* 创建新项目，引入starter</span><br><span class="line">* 配置application.properties，如：</span><br></pre></td></tr></table></figure>
+<p>spring.person.name=jack<br>
+spring.person.age=28</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 调用</span><br></pre></td></tr></table></figure>
+<p>@Autowired<br>
+private PersonService personService;</p>
+<p>@Test<br>
+public void testHelloWorld() {<br>
+personService.sayHello();<br>
+}</p>
+<pre class="highlight"><code class="">
+# 其他SpringBoot学习资料
+* http://www.ityouknow.com/springboot/2015/12/30/springboot-collect.html
+
+
+拦截器功能：
+重写WebMvcConfigurerAdapter中的addInterceptors方法把自定义的拦截器类添加进来即可简单的判断是否登录的使用
+
+注解：
+@SpringBootApplication是Sprnig Boot项目的核心注解，主要目的是开启自动配置
+@RestController 这个注解相当于同时添加@Controller和@ResponseBody注解，用这个注解的类里面的方法都以json格式输出
+@Component：让spring在启动的时候扫描到该类，并添加到spring容器中
+@Bean：任何一个标注了@Bean的方法，其返回值将作为一个bean定义注册到Spring的IoC容器，方法名将默认成该bean定义的id
+@ControllerAdvice 注解，可以用于定义@ExceptionHandler、@InitBinder、@ModelAttribute，并应用到所有@RequestMapping中
+
+@Configuration：任何一个标注了@Configuration的Java类定义都是一个JavaConfig配置类
+@ComponentScan：
+* 自动扫描并加载符合条件的组件（比如@Component和@Repository等）或者bean定义，最终将这些bean定义加载到IoC容器中
+* 可以通过basePackages等属性来细粒度的定制@ComponentScan自动扫描的范围，如果不指定，则默认Spring框架实现会从声明@ComponentScan所在类的package进行扫描
+* 所以SpringBoot的启动类最好是放在root package下，因为默认不指定basePackages
+@EnableAutoConfiguration：借助@Import的支持，收集和注册特定场景相关的bean定义
+@EnableScheduling是通过@Import将Spring调度框架相关的bean定义都加载到IoC容器
+
+</code></pre>
 
       
     </div>
@@ -567,7 +641,7 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
   <p><span>本文标题:</span><a href="/2018/11/26/Java-SpringBoot/">SpringBoot入门</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 行锋 的个人博客">行锋</a></p>
   <p><span>发布时间:</span>2018年11月26日 - 14:11</p>
-  <p><span>最后更新:</span>2019年03月11日 - 17:03</p>
+  <p><span>最后更新:</span>2019年04月01日 - 22:04</p>
   <p><span>原始链接:</span><a href="/2018/11/26/Java-SpringBoot/" title="SpringBoot入门">https://chetaofeng.github.io/2018/11/26/Java-SpringBoot/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://chetaofeng.github.io/2018/11/26/Java-SpringBoot/"  aria-label="复制成功！"></i></span>
   </p>
@@ -644,6 +718,8 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
         <div class="post-tags">
           
             <a href="/tags/Spring-Boot/" rel="tag"><i class="fa fa-tag"></i> Spring Boot</a>
+          
+            <a href="/tags/Spring/" rel="tag"><i class="fa fa-tag"></i> Spring</a>
           
         </div>
       
@@ -762,7 +838,7 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -773,7 +849,7 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -833,7 +909,7 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#springboot和maven"><span class="nav-number">2.</span> <span class="nav-text"> SpringBoot和Maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他springboot学习资料"><span class="nav-number">3.</span> <span class="nav-text"> 其他SpringBoot学习资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text"> 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#springboot和maven"><span class="nav-number">2.</span> <span class="nav-text"> SpringBoot和Maven</span></a></li></ol></div>
             
 
           </div>
@@ -894,7 +970,7 @@ registry.addResourceHandler(&quot;/static/**&quot;).addResourceLocations(“clas
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

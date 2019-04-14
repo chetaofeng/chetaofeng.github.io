@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpService-Identification/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCreate-a-Net-Service-Name/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -343,7 +343,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpService-Identification/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCreate-a-Net-Service-Name/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
-                2009-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
               </time>
             
 
@@ -397,181 +397,97 @@
           
             <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html lang="en-us">
+<html lang="zh_CN">
 <head>
-  <title>Service Identification</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="attributes">
+  <title>创建网络服务名</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpCreate_a_Net_Service_Name">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Service Identification</h1>
+  <h1>创建网络服务名</h1>
 
-  <p>This property sheet enables you to view or modify the network information for a selected <a href="n8ahelpnet_service_name.htm">net service name</a> or database service.</p>
+  <p><strong>注：</strong>只有 OracleNetAdmins 或 OracleContextAdmins 组的成员用户可以在<a href="n8ahelpdirectory_server.htm">目录</a>中创建<a href="n8ahelpnet_service_name.htm">网络服务名</a>条目。</p>
 
-  <p><span class="gui-object">Service Identification</span></p>
+  <p>要向 <a href="n8ahelptnsnamesora_file.htm">tnsnames.ora 文件</a>或目录服务器添加网络服务名，请执行以下操作：</p>
 
-  <p>Use the Service Identification box to view or modify <a href="n8ahelpCONNECTDATA.htm">CONNECT_DATA</a> information.</p>
+  <ol>
+    <li>
+      <p>在导航器窗格中，展开 <span class="gui-object">Oracle 网络配置 &gt; 目录/本地 &gt; 服务命名</span>。</p>
+    </li>
 
-  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
-    <tr>
-      <td width="21%" valign="bottom" scope="col">
-        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
-      </td>
+    <li>
+      <p>从工具栏中选择加号 (+)，或从菜单栏中选择<span class="gui-object">编辑 &gt; 创建</span>。将显示&ldquo;网络服务名向导&rdquo;的&ldquo;欢迎使用&rdquo;页。</p>
+    </li>
 
-      <td width="79%" valign="bottom" scope="col">
-        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
-      </td>
-    </tr>
+    <li>
+      <p>在<span class="gui-object">网络服务名</span>字段中输入任意名称。网络服务名可使用客户机的域进行限定。如果指定了客户机域，网络服务名将自动限定域。</p>
+    </li>
 
-    <tr>
-      <td valign="top" scope="row">Service Name</td>
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;协议&rdquo;页。</p>
+    </li>
 
-      <td valign="top">
-        <p>Enter a <a href="n8ahelpservice_name.htm">service name</a> if configuring this client to connect to an Oracle8 i or later database service.<br>
-        <strong>Note:</strong> For a database service stored in a <a href="n8ahelpdirectory_server.htm">directory server</a>, this field only displays the current value. Modifications are not permitted.</p>
-      </td>
-    </tr>
+    <li>
+      <p>选择配置的监听程序进行监听的协议。请注意，此协议也必须安装在客户机上。</p>
+    </li>
 
-    <tr>
-      <td width="21%" valign="top" scope="row">
-        <p style="text-align : left;" align="left">SID</p>
-      </td>
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;协议设置&rdquo;页。</p>
+    </li>
 
-      <td width="79%" valign="top">Displays the <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle System Identifier (SID)</a> for an Oracle8 database.</td>
-    </tr>
+    <li>
+      <p>在提供的字段中为所选协议输入相应的<a href="n8ahelpprotocol_parameters.htm">协议参数</a>。</p>
+    </li>
 
-    <tr>
-      <td valign="top" scope="row">Connect Type</td>
+    <li>
+      <p>选择<span class="gui-object">下一步</span>。此时将显示&ldquo;服务&rdquo;页。</p>
+    </li>
 
-      <td width="79%" valign="top">
-        <p>From the list, select if you want this net service name to use a <a href="n8ahelpdedicated_server.htm">dedicated server</a>, <a href="n8ahelpshared_server.htm">shared server</a>, or whatever the database has been configured with.<br>
-        If shared server is configured in the initialization parameter file, then select Dedicated Server to force the listener to start a dedicated server to bypass shared server configuration.<br>
-        If shared server is configured in the initialization parameter file and you want to guarantee that this connection always uses a shared server, then select Shared Server. If Database Resident Connection Pooling is enabled on the server, you can select <strong>Pooled Server</strong> to get a connection from the pool. </p>
-      </td>
-    </tr>
+    <li>
+      <p>选择一种发行版，输入目标服务，并且作为一种选择，可从 Oracle8i 或更高版本的&ldquo;连接类型&rdquo;列表中选择一种数据库连接类型。</p>
 
-    <tr>
-      <td valign="top" scope="row">Use Oracle8 Release 8.0 Compatible Identification</td>
+      <p>如果目标服务是 Oracle8<em>i</em> 或更高版本的服务，请选择 <span class="gui-object">Oracle8i 或更高版本</span>，并在<span class="gui-object">服务名</span>字段中输入<a href="n8ahelpprotocol_parameters.htm">服务名</a>，然后选择<span class="gui-object">下一步</span>。如果目标服务是 Oracle8 或 Oracle7，请选择 <span class="gui-object">Oracle8 或更低版本</span>，在<span class="gui-object">数据库 SID</span> 字段中输入 <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle 系统标识符</a>，然后选择<span class="gui-object">下一步</span>。</p>
 
-      <td valign="top">Select this option if you are configuring a client to connect to a pre-release Oracle8<em>i</em> database service. Clear this option if you are configuring for an Oracle9<em>i</em> or Oracle8<em>i</em> database service.</td>
-    </tr>
+      <p>Oracle Corporation 建议对连接类型使用&ldquo;数据库默认设置&rdquo;。如果在<a href="n8ahelpinitialization_parameter_file.htm">初始化参数文件</a>中配置了<a href="n8ahelpshared_server.htm">共享服务器</a>，就可以选择<span class="gui-object">专用服务器</span>迫使监听程序绕过共享服务器配置来衍生一个专用服务器。如果在服务器上启用了&ldquo;数据库驻留连接共享&rdquo;，您可以选择<strong>池中服务器</strong>，从池中获取连接。如果在初始化参数文件中配置了共享服务器，并且希望确保此连接始终使用共享服务器，请选择<span class="gui-object">共享服务器</span>。</p>
+    </li>
 
-    <tr>
-      <td valign="top" scope="row">Advanced</td>
+    <li>选择下一步。此时将显示&ldquo;测试&rdquo;页。</li>
 
-      <td valign="top">Choose to configure advanced <a href="n8ahelpCONNECTDATA.htm">CONNECT_DATA</a> parameters.</td>
-    </tr>
-  </table>
+    <li>选择<span class="gui-object">测试</span>以验证网络服务名是否可用，或单击&ldquo;完成&rdquo;保存配置并关闭&ldquo;网络服务名向导&rdquo;。
 
-  <p><span class="gui-object">Address Configuration</span></p>
+      <p>如果选择测试，Oracle Net 将通过使用您配置的连接描述符信息连接到数据库服务器。因此，要使测试成功，数据库和监听程序必须都在运行。如果没有运行，请参阅 <em>Oracle10i Net Administrator's Guide</em> 中的第 15 章&ldquo;Establishing a Connection and Testing the Network&rdquo;来启动这些组件。一个成功的测试将产生以下消息：</p>
 
-  <p>Use the Address box to modify, add, or delete a listener <a href="n8ahelpprotocol_address.htm">protocol address</a> .</p>
+      <p><span class="Code">连接测试成功。</span></p>
 
-  <p>If an address is already configured, then its protocol information displays in the fields.</p>
+      <p>如果测试成功，请选择<span class="gui-object">关闭</span>以关闭&ldquo;连接测试&rdquo;对话框，然后继续步骤 12。</p>
 
-  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
-    <tr>
-      <td width="22%" valign="bottom" scope="col">
-        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
-      </td>
+      <p>如果测试不成功：</p>
 
-      <td width="78%" valign="bottom" scope="col">
-        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
-      </td>
-    </tr>
+      <p>a. 确保数据库和监听程序都在运行，然后选择<span class="gui-object">测试</span>。</p>
 
-    <tr>
-      <td valign="top" scope="row">Protocol</td>
+      <p>b. 选择&ldquo;更改登录&rdquo;以更改连接的用户名和口令，然后选择<span class="gui-object">测试</span>。</p>
+    </li>
 
-      <td valign="top">
-        <p>From the list, select the protocol for the listener address. Depending on the protocol chosen, enter information in the fields as appropriate.</p>
-      </td>
-    </tr>
+    <li>
+      <p>选择<span class="gui-object">完成</span>保存配置并关闭&ldquo;网络服务名向导&rdquo;。</p>
+    </li>
 
-    <tr>
-      <td valign="top" scope="row">Show Advanced/Hide Advanced button</td>
+    <li>
+      <p>请确保<a href="n8ahelpprofile.htm">概要文件</a>反映本地 (LOCAL) 或目录命名 (LDAP) 方法。</p>
+    </li>
+  </ol>
 
-      <td valign="top">
-        <p>Use the Show Advanced/Hide Advanced toggle to display or hide settings for specifying the I/O buffer space limit for the address.</p>
+  <h2>相关主题</h2>
 
-        <p>These settings are supported by the TCP/IP, TCP/IP with SSL, and SDP protocols.</p>
+  <p><a href="n8ahelpConfigure_Default_Domains_for_Cl.htm">为客户机配置默认域</a></p>
 
-        <ul>
-          <li><span class="gui-object">Total Send Buffer Size:</span>Specify, in bytes, the buffer space for send operations of sessions.</li>
-        </ul>
+  <p><a href="n8ahelpPrioritize_Naming_Methods.htm">区分命名方法的优先次序</a></p>
 
-        <ul>
-          <li><span class="gui-object">Total Receive Buffer Size:</span> Specify, in bytes, the buffer space for receive operations of sessions.</li>
-        </ul>
-
-     
-          <p><strong>Note:</strong> Specifying these settings overrides these settings in a clientside sqlnet.ora file.</p>
-     
-      </td>
-    </tr>
-
-    <tr>
-      <td width="22%" valign="top" scope="row">
-        <p style="text-align : left;" align="left">+ button</p>
-      </td>
-
-      <td width="78%" valign="top">Choose to create a new protocol address. A new Address tab displays from which you can select the protocol and enter protocol information in the fields. The chosen protocol must be installed on both the client and server (where the listener resides).</td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row">X button</td>
-
-      <td width="78%" valign="top">
-        <p>Choose to remove the selected Address tab and its address information.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row">&lt; button</td>
-
-      <td valign="top">
-        <p>Choose to move the protocol address up in the list order.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row"><br>
-      &gt; button</td>
-
-      <td valign="top">Choose to move the protocol address down in the list order.</td>
-    </tr>
-
-    <tr>
-      <td valign="top" scope="row">Advanced button</td>
-
-      <td valign="top">Choose to configure multiple addresses options, such as <a href="n8ahelpconnecttime_failover.htm">connect-time failover</a> and <a href="n8ahelpclient_load_balancing.htm">client load balancing</a>.</td>
-    </tr>
-  </table>
-
-  <p><span class="gui-object">Apply button</span></p>
-
-  <p>Choose to apply the settings.</p>
-
-  <p><span class="gui-object">Revert button</span></p>
-
-  <p>Choose to reset the settings to their original values.</p>
-
-  <p>For more information about configuring I/O buffer space, see Chapter 14, Optimizing Performance, in the <em>Oracle10i Net Administrator's Guide.</em></p>
-
-  <h2>Related Topics</h2>
-
-  <p><a href="n8ahelpCreate_Network_Route_Information.htm">Create Network Route Information for a Database Service</a></p>
-
-  <p><a href="n8ahelpCreate_Additional_Protocol_Addre.htm">Create Additional Protocol Addresses</a></p>
-
-  <p><a href="n8ahelpConfigure_Multiple_Address_Optio.htm">Configure Multiple Address Options</a></p>
-
-  <p><a href="n8ahelpConfigure_Advanced_Connect_Data_.htm">Configure Advanced Connect Data Options</a></p>
- <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p> <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
 </body>
 </html>
 
@@ -631,7 +547,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-configuration-overview/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCyberSafe/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -650,7 +566,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-configuration-overview/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCyberSafe/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -662,8 +578,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
-                2009-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
               </time>
             
 
@@ -704,58 +620,986 @@
           
             <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html lang="en-us">
+<html lang="zh_CN">
 <head>
-  <title>Listener Configuration Overview</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="n8ahelpListener_Configuration_Overview">
+  <title>CyberSafe</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpCyberSafe">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Listener Configuration Overview</h1>
+  <h1>CyberSafe</h1>
 
-  <h2>Configuration During Installation</h2>
+  <p>CyberSafe 验证方法要求您设置以下参数：</p>
 
-  <p>During a an Enterprise Edition or Standard Edition installation on the database server, Oracle Net Configuration Assistant configures a listener called <span class="Code">LISTENER</span> that has a TCP/IP listening protocol address for the Oracle database. During a Custom installation, Oracle Net Configuration Assistant prompts you to configure a listener name and a protocol address of your choice.</p>
+  <p><span class="gui-object">GSSAPI 服务</span></p>
 
-  <p>Additionally, a listening IPC protocol address for external procedure calls is automatically configured, regardless of the installation type.</p>
+  <p>要使用的 GSSAPI 服务的名称。</p>
 
-  <p>Oracle Net Configuration Assistant also automatically configures service information for the external procedures in the <span class="Code">listener.ora</span> file.</p>
+  <h2>相关主题</h2>
 
-  <h2>Configuration with Oracle Net Manager</h2>
+  <p><a href="n8ahelpOracle_Advanced_Security_Other_P.htm">Oracle Advanced Security：其他参数</a></p>
 
-  <p>Oracle Net Manager enables you to:</p>
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p> <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Information-Tree-DIT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Information-Tree-DIT/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>目录信息树 (DIT)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpDirectory_Information_Tree_DIT">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>目录信息树 (DIT)</h1>
+
+  <p>在条目<a href="n8ahelpdirectory_server.htm">唯一判别名 (DN)</a> 的<a href="n8ahelpDistinguished_Name_DN.htm">目录服务器</a>中的树形层次结构。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Naming-Requirements-fo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Naming-Requirements-fo/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>Oracle Net Manager 的目录命名要求</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpDirectory_Naming_Requirements_fo">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Oracle Net Manager 的目录命名要求</h1>
+
+  <p>在目录服务器中，使用 Oracle Net Manager 可以创建数据库服务的网络路由信息，还可以创建<a href="n8ahelpnet_service_name.htm">网络服务名</a>。</p>
+
+  <p>为了使 Oracle Net Manager 写入目录，应具备以下条件：</p>
 
   <ul>
     <li>
-      <p>Create a listener</p>
+      <p>必须给目录配置 Oracle Schema。</p>
     </li>
 
     <li>
-      <p>Configure service information for Oracle8 or previous databases</p>
-    </li>
-
-    <li>
-      <p>Configure service information non-Oracle database services, including <a href="n8ahelpexternal_procedures.htm">external procedures</a> and <a href="n8ahelpHeterogeneous_Services.htm">Heterogeneous Services</a></p>
-    </li>
-
-    <li>
-      <p>Enable <a href="n8ahelptracing.htm">tracing</a> and <a href="n8ahelplogging.htm">logging</a> features</p>
-    </li>
-
-    <li>
-      <p>Enable password authentication for the <a href="n8ahelpLSNRCTL_utility.htm">Listener Control utility</a></p>
+      <p>运行 Oracle Net Manager 的计算机必须用默认的 <a href="n8ahelpOracle_Context.htm">Oracle Context</a> 配置才能访问和写入条目。</p>
     </li>
   </ul>
 
-  <p>To access listener configuration:</p>
+  <p>如<a href="n8ahelpDirectory_Naming_Configuration_O.htm">目录命名配置概述</a>中所述，这些配置设置都使用 <a href="n8ahelpNet8_Configuration_Assistant.htm">Oracle Net Configuration Assistant</a> 来设置。Oracle Net Manager 不提供该功能</p>
 
-  <p>From the navigator pane, expand <span class="gui-object">Oracle Net Configuration &gt; Local &gt; Listeners.</span></p>
+  <p>如果尚未配置目录访问，则导航器窗格中的 <span class="gui-object">Oracle Net 配置 &gt; 目录</span>文件夹和<span class="gui-object">命令 &gt; 目录</span>菜单将不可用。</p>
 
-  <p>For more information, see Chapter 10, Configuring and Administering the Listener, in the <em>Oracle10i Net Administrator's Guide</em>.</p>
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDistinguished-Name-DN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/06/25/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDistinguished-Name-DN/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-25T03:28:04+08:00">
+                2009-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="zh_CN">
+<head>
+  <title>唯一判别名 (DN)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="topic-id" content="n8ahelpDistinguished_Name_DN">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>唯一判别名 (DN)</h1>
+
+  <p>指定条目驻留在<a href="n8ahelpdirectory_server.htm">目录服务器</a>层次结构中的位置，与目录路径指定文件的精确位置很类似。</p>
+
+  <h2>相关主题</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services 概览</a></p>
+
+ <p class="zz-legal-notice">版权所有 &copy; 1996，2009，Oracle 和/或其子公司。保留所有权利。<br>Oracle 是 Oracle Corporation 和/或其子公司的注册商标。<br>其他名称可能是其各自所有者的商标。</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpListening-Locations/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpListening-Locations/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Listening Locations</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="listener_loc">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Listening Locations</h1>
+
+  <p>Listeners are configured to listen for incoming connection requests for a database on a specific network <a href="n8ahelpprotocol_address.htm">protocol address</a>. The <span class="gui-object">Listening Locations</span> tab enables you to configure one or more listening location addresses on which a listener will wait for client connections.</p>
+
+  <p><span class="gui-object">Protocol</span></p>
+
+  <p>From the list, select the protocol for the address. Depending on the protocol chosen, enter <a href="n8ahelpprotocol_parameters.htm">protocol parameter</a> information in the fields as appropriate.</p>
+
+  <p><span class="gui-object">Show Advanced/Hide Advanced button</span></p>
+
+  <p>Use the Show Advanced/Hide Advanced toggle to display or hide settings for specifying the I/O buffer space limit for the listener.</p>
+
+  <p>These settings are supported by the TCP/IP, TCP/IP with SSL, and SDP protocols.</p>
+
+  <ul>
+    <li><span class="gui-object">Total Send Buffer Size</span></li>
+  </ul>
+
+  
+    <p>Specify, in bytes, the buffer space for send operations of sessions.</p>
+
+    <p>Because the database server writes data to clients, setting this setting at the serverside is typically adequate. If the database server is receiving a large volume of requests, then also set the <span class="gui-object">Total Receive Buffer Size</span> setting.</p>
+
+
+  <ul>
+    <li><span class="gui-object">Total Receive Buffer Size</span></li>
+  </ul>
+
+
+    <p>Specify, in bytes, the buffer space for receive operations of sessions.</p>
+ 
+
+  <p><span class="gui-object">Statically dedicate this address for JServer connections</span></p>
+
+  <p>Choose to configure the <a href="n8ahelpprotocol_parameters.htm">listener.ora</a> file with General Inter-Orb Protocol (GIOP) endpoints for Oracle JServer release 8.1 connections.</p>
+
+  <p><span class="gui-object">Add Address</span></p>
+
+  <p>Choose to create a new <a href="n8ahelplistenerora_file.htm">protocol address</a>. A new <span class="gui-object">Address</span> tab displays where you can select the protocol and enter protocol information in the fields.</p>
+
+  <p><span class="gui-object">Remove Address</span></p>
+
+  <p>Choose to delete the selected <span class="gui-object">Address</span> tab and its address information.</p>
+
+  <p>For more information about configuring I/O buffer space, see Chapter 14, Optimizing Performance, in the <em>Oracle10i Net Administrator's Guide</em>.</p>
+
+  <h2>Related Topics</h2>
+
+  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+
+  <p><a href="n8ahelpservice_registration.htm">Service registration</a></p>
+
+  <p><a href="n8ahelpConfigure_Listener_Addresses.htm">Configure Listener Addresses</a>&#160;</p>
+ <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
+</body>
+</html>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+          
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Advanced-Security-Other-P/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/pub-images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="行锋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Advanced-Security-Other-P/" itemprop="url">未命名</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
+                2009-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+  <title>Oracle Advanced Security: Other Params</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="topic-id" content="profile_otherparams">
+  <link rel="stylesheet" href="blafdoc.css" type="text/css">
+  
+</head>
+
+<body>
+
+  <h1>Oracle Advanced Security: Other Params</h1>
+
+  <p>The <span class="gui-object">Other Params</span> tab enables you to configure additional authentication services parameters.</p>
+
+  <p>From the <span class="gui-object">Authentication Service</span> list, select the authentication method. Depending on the authentication method chosen, enter information in the fields as appropriate.</p>
+
+  <p><span class="gui-object">KERBEROS(V5)</span></p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
+    <tr>
+      <td width="15%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
+      </td>
+
+      <td width="85%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Service</td>
+
+      <td valign="top">
+        <p>Enter any string to specify the Kerberos service name.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="15%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">Credential Cache File</p>
+      </td>
+
+      <td width="85%" valign="top">Enter any valid path name to specify the Kerberos credential cache path name.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Configuration File</td>
+
+      <td width="85%" valign="top">
+        <p>Enter any valid path name to specify the Kerberos configuration file.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Realm Translation File</td>
+
+      <td valign="top">Enter any valid path name to specify the Kerberos host name to realm translation file.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Key Table</td>
+
+      <td valign="top">Enter any valid path name to specify the Kerberos secret key file.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Clock Skew</td>
+
+      <td valign="top">Enter any positive integer to specify the acceptable difference in the number of seconds between when a credential is sent and received.</td>
+    </tr>
+  </table>
+
+  <p><span class="gui-object">CYBERSAFE</span></p>
+
+  <p><span class="gui-object">GSSAPI Service:</span> Specify a CYBERSAFE service principal. Enter any correctly formatted service principal string.</p>
+
+  <p><span class="gui-object">NTS</span></p>
+
+  <p>No additional parameters are required.</p>
+
+  <p><span class="gui-object">RADIUS</span></p>
+
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
+    <tr>
+      <td width="25%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
+      </td>
+
+      <td width="75%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Host Name</td>
+
+      <td valign="top">
+        <p>Enter the name of the primary RADIUS server.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">Port Number</p>
+      </td>
+
+      <td width="75%" valign="top">Enter the port number of the primary RADIUS server.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Timeout (seconds)</td>
+
+      <td width="75%" valign="top">
+        <p>Enter the number of seconds the Oracle database server should wait for response from the primary RADIUS server.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Number of Retries</td>
+
+      <td valign="top">Enter the number of times the Oracle database server should resend messages to the primary RADIUS server.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Secret File</td>
+
+      <td valign="top">Enter the path name of the secret key file.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Send Accounting</td>
+
+      <td valign="top">Enter on to enable accounting or to disable it.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Challenge Response</td>
+
+      <td valign="top">Enter on to enable challenge-response or off to disable it.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Default Keyword</td>
+
+      <td valign="top">Enter the keyword for requesting a challenge from the RADIUS server.</td>
+    </tr>
+
+    <tr>
+      <td valign="top" scope="row">Interface Class Name</td>
+
+      <td valign="top">Enter the name of the class you have created to handle the challenge-response conversation between the Oracle client and the RADIUS server.</td>
+    </tr>
+  </table>
+
+  <p>For more information, see <em>Oracle Advanced Security Administrator's Guide.</em></p>
 
   <h2>Related Topics</h2>
 
@@ -820,7 +1664,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-overview/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Advanced-Security-SSL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -839,7 +1683,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-overview/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Advanced-Security-SSL/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -895,179 +1739,163 @@
 
 <html lang="en-us">
 <head>
-  <title>Listener Overview</title>
+  <title>Oracle Advanced Security: SSL</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="n8ahelpListener_Overview">
+  <meta name="topic-id" content="n8ahelpOracle_Advanced_Security_SSL">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Listener Overview</h1>
+  <h1>Oracle Advanced Security: SSL</h1>
 
-  <p>Services coordinate their sessions with the help of a listener, a process on the server that receives connection requests on behalf of a client application. Listeners are configured to "listen on" <a href="n8ahelpprotocol_address.htm">protocol addresses</a> for a database service or non-database service.</p>
+  <p>The <span class="gui-object">SSL</span> tab enables you to modify Secure Sockets Layer (SSL) settings. SSL is an industry standard protocol for securing network communications. SSL provides for authentication, encryption, and data integrity. Use SSL to secure communications between any client and any server. Specifically, you can use SSL to authenticate any client or server to one or more Oracle servers or an Oracle server to any client.</p>
 
-  <p>Protocol addresses are configured in the listener configuration file, <a href="n8ahelplistenerora_file.htm">listener.ora</a>, for a database service or a non-database service. An Oracle9<em>i</em> or Oracle8<em>i</em> database service automatically registers its information with the listener, such as its service names, instance names, and load information. This feature, called <a href="n8ahelpservice_registration.htm">service registration</a>, does not require service configuration in the <span class="Code">listener.ora</span> file. Other services, including Oracle8 and Oracle7 database services, and the Oracle Enterprise Manager management tools, require service configuration in the <span class="Code">listener.ora</span> file.</p>
+  <p><span class="gui-object">Configure SSL</span></p>
 
-  <p>Once the listener is configured, the listener may be managed with the <a href="n8ahelpLSNRCTL_utility.htm">Listener Control utility</a>.</p>
+  <p>From the list, select to specify settings for either the client or server.</p>
 
-  <h2>Related Topics</h2>
+  <p>The settings you need to configure for the server are similar to those you set for the client. There is one additional parameter: a check box entitled Require Client Authentication.</p>
 
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
- <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
-</body>
-</html>
+  <p><span class="gui-object">Configuration Method</span></p>
 
-          
-        
-      
-    </div>
-    
-    
-    
+  <p>TBD...From the list, select <span class="gui-object">File System</span> to...., or select <span class="gui-object">Entrust</span> to...</p>
 
-    <div>
-          
-    </div>
+  <p><span class="gui-object">Wallet Configuration</span></p>
 
-    
+  <p>A wallet is contains certificates, keys and trust points. Select one of the four configuration methods described in the table. If the method chosen is File System or Entrust Wallets, <span class="gui-object">Browse</span> to search for a wallet in your file system.</p>
 
-    <div>
-      
-    </div>
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
+    <tr class="kadov-Cbold">
+      <td width="32%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Wallet Configuration Method</b></p>
+      </td>
 
+      <td width="68%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Access Method</b></p>
+      </td>
+    </tr>
 
-    
+    <tr>
+      <td valign="top" scope="row">File system</td>
 
-    
+      <td valign="top">
+        <p>Directory path</p>
+      </td>
+    </tr>
 
-    <footer class="post-footer">
-      
+    <tr>
+      <td width="32%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">Microsoft certificate</p>
+      </td>
 
-      
+      <td width="68%" valign="top">None</td>
+    </tr>
 
-      
+    <tr>
+      <td valign="top" scope="row">Microsoft registry</td>
 
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
+      <td width="68%" valign="top">
+        <p>Registry key</p>
+      </td>
+    </tr>
 
+    <tr>
+      <td valign="top" scope="row">Entrust wallets</td>
 
-    
-      
+      <td valign="top">Directory path</td>
+    </tr>
+  </table>
 
-  
+  <p><span class="gui-object">Cipher Suite Configuration</span></p>
 
-  
-  
-  
+  <p>Several SSL cipher suites have been installed by default. These default cipher suites will be overwritten if you add one or more manually.</p>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnts/">
+  <table width="100%" border="1" cellpadding="2" cellspacing="2" summary="This table lists fields with links and the pages that appear when you click the links">
+    <tr>
+      <td width="25%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Element</b></p>
+      </td>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
+      <td width="75%" valign="bottom" scope="col">
+        <p style="text-align : left; color: #000000;" align="left"><b>Description</b></p>
+      </td>
+    </tr>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
+    <tr>
+      <td valign="top" scope="row">Add button</td>
 
-    
-      <header class="post-header">
+      <td valign="top">
+        <p>Choose to invoke the Select a Cipher Suite to enable dialog box. In the dialog box, select a suite, and then choose OK . The cipher suite is added to the list box.<br>
+        <strong>Note:</strong> All Oracle Advanced Security encryption algorithms and key lengths are available for both U.S. domestic and international use.</p>
+      </td>
+    </tr>
 
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnts/" itemprop="url">未命名</a></h2>
-        
+    <tr>
+      <td width="25%" valign="top" scope="row">
+        <p style="text-align : left;" align="left">Remove button</p>
+      </td>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
-                2009-05-28
-              </time>
-            
+      <td width="75%" valign="top">Choose to remove a selected Cipher Suite.</td>
+    </tr>
 
-            
+    <tr>
+      <td valign="top" scope="row">Promote button</td>
 
-            
-          </span>
+      <td width="75%" valign="top">
+        <p>Choose to move a selected Cipher Suite to a higher level in the list.</p>
+      </td>
+    </tr>
 
-          
+    <tr>
+      <td valign="top" scope="row">Demote button</td>
 
-          
-            
-          
+      <td valign="top">Choose to move a selected Cipher Suite to a lower level in the list.</td>
+    </tr>
+  </table>
 
-          
-          
+  <p><span class="gui-object">Revocation Check (Server only)</span></p>
 
-          
+  <p>Specify a revocation check for a certificate. Select from one of the following values:</p>
 
-          
+  <ul>
+    <li>
+      <p><span class="gui-object">None:</span> Select to turn off certificate revocation checking.</p>
+    </li>
 
-          
+    <li>
+      <p><span class="gui-object">Required:</span> Select to perform certificate revocation when a certificate is available. If a certificate is revoked and no appropriate Certificate Revocation List (CRL) is found, then reject the SSL connection If no appropriate CRL is found to ascertain the revocation status of the certificate and the certificate is not revoked. then accept the SSL connection.</p>
+    </li>
 
-        </div>
-      </header>
-    
+    <li><span class="gui-object">Requested:</span> Select to perform certificate revocation in case a CRL is available. Reject SSL connection if the certificate is revoked. If no appropriate CRL is found to determine the revocation status of the certificate and the certificate is not revoked, then accept the SSL connection</li>
+  </ul>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  <p><span class="gui-object">Require SSL Version (optional)</span></p>
 
-      
-      
+  <p>From the list, select the version of SSL. The client and the server must use a compatible versions of SSL. You can select SSL v3.0 or choose to allow any existing or future version of SSL to be used.</p>
 
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <p><span class="gui-object">Require Client Authentication (Server only)</span></p>
 
-<html lang="en-us">
-<head>
-  <title>NTS</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="n8ahelpNTS">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
+  <p>This check box is selected by default. Deselect this check box if you do not want to require client-side authentication.</p>
 
-<body>
+  <p><span class="gui-object">Match server X.509 name (Client only)</span></p>
 
-  <h1>NTS</h1>
+  <p>From the list, select whether or not check to see if the server's <a href="n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> matches its service name. If you enforce the match verifications, then SSL ensures that the certificate is from the server. If you select to not enforce the match verification, then SSL performs the check but allows the connection, regardless if there is a match. Not enforcing the match allows the server to potentially fake its identify. Select from one of the following values:</p>
 
-  <p>The <a href="n8ahelpWindows_NT_native_authentication.htm">Windows NT native authentication</a> method does not require additional parameters.</p>
+  <ul>
+    <li>
+      <p><span class="gui-object">Yes:</span> Select to check the server DN. If the DN matches the service name, the connection succeeds. If the DN does not match the service name, the connection is successful, but an error is logged in the <span class="Code">sqlnet.log</span> file..</p>
+    </li>
 
-  <p>For more information, see Windows NT documentation.</p>
+    <li>
+      <p><span class="gui-object">No:</span> Select to not check the server DN. Ignoring this check can enable the server to fake its identity.</p>
+    </li>
 
-  <h2>Related Topics</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
+    <li>
+      <p><span class="gui-object">Let Client Decide:</span> TBD</p>
+    </li>
+  </ul>
 
  <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
 </body>
@@ -1129,7 +1957,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelppooled-server/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Enterprise-Manager/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1148,7 +1976,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelppooled-server/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Enterprise-Manager/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1204,26 +2032,18 @@
 
 <html lang="en-us">
 <head>
-  <title>shared server</title>
+  <title>Oracle Enterprise Manager</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="n8ahelpshared_server">
+  <meta name="topic-id" content="n8ahelpOracle_Enterprise_Manager">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  <style type="text/css">
-  <!--
-  .style1 {font-size: 10px}
-  -->
-  </style>
+  
 </head>
 
 <body>
 
-  <h1>Database Resident Connection Pooling</h1>
+  <h1>Oracle Enterprise Manager</h1>
 
-  <p>Database Resident Connection Pooling provides for the pooling of "Dedicated" connections across client applications or processes. A dedicated connection refers to a dedicated server along with its database session. Use Database Resident Connection Pooling when multiple client applications (like mid-tiers) need to maintain persistent connections to the database, or when server resources (such as memory) need to be optimized.</p>
-
-  <p>In Database Resident Connection Pooling, clients are connected to a background process called the Connection Broker that provides the pooling functionality.</p>
-
-  <p>Contrast with <a href="n8ahelpdedicated_server.htm">dedicated server</a> and <a href="n8ahelpshared_server.htm">shared server</a>.</p>
+  <p>A product family that consists of system management tools designed to efficiently manage the complete Oracle environment.</p>
 
   <h2>Related Topics</h2>
 
@@ -1288,7 +2108,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-create-net-service-alias/">
+    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOther-Services/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行锋">
@@ -1307,7 +2127,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-create-net-service-alias/" itemprop="url">未命名</a></h2>
+                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOther-Services/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1363,852 +2183,66 @@
 
 <html lang="en-us">
 <head>
-  <title>Create Net Service Alias dialog box</title>
+  <title>Other Services</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="nmhelp_create_net_service_alias">
+  <meta name="topic-id" content="listener_oservices">
   <link rel="stylesheet" href="blafdoc.css" type="text/css">
   
 </head>
 
 <body>
 
-  <h1>Creating Net Service Alias dialog box</h1>
+  <h1>Other Services</h1>
 
-  <p>The Create Net Service Alias dialog box enables you to create <a href="nmhelp_net_service_alias.htm">net service aliases</a> in a directory server.</p>
+  <p>The <span class="gui-object">Other Services</span> tab enables you to specify the non-database services for which the listener is to receive connect requests. Non-database services can be <a href="n8ahelpexternal_procedures.htm">external procedures</a> or <a href="n8ahelpHeterogeneous_Services.htm">Heterogeneous Services</a>.</p>
 
-  <p>A net service alias is an alternative name for a <a href="n8ahelpnet_service_name.htm">net service name</a> or database service. A net service alias entry does not have connect descriptor information. Instead, it only references the location of the object for which it is an alias. When a client requests a directory lookup of a net service alias, the directory determines that the entry is a net service alias and completes the lookup as if it is the referenced entry. For example, a net service alias of <span class="Code">db1alias</span> can be created for a database service of <span class="Code">db1</span>. When <span class="Code">db1alias</span> is used to connect to a database service, as in <span class="Code">CONNECT scott/tiger@db1alias</span> , it will actually resolve to and use the connect descriptor information for db1 .</p>
+  <p><span class="gui-object">Global Service Name</span></p>
 
-  <p>There are two main uses of net service aliases:</p>
+  <p>Enter the service name and domain name of the service.</p>
 
-  <ul>
-    <li>
-      <p>Use a net service alias as a way for clients to refer to a database service or net service name by another name.</p>
-    </li>
+  <p><span class="gui-object">Program Name</span></p>
 
-    <li>
-      <p>Use a net service alias in one <a href="n8ahelpOracle_Context.htm">Oracle Context</a> for a database service or net service name in a different Oracle Context. This enables a database service or net service name to be defined once in the directory server, but referred to by clients that use other Oracle Contexts.</p>
-    </li>
-  </ul>
+  <p>Enter the executable program name. For example, <span class="Code">extproc.exe.</span></p>
 
-  <p><span class="gui-object">Net Service Alias</span></p>
+  <p><span class="gui-object">Program Argument Zero</span></p>
 
-  <p>Enter the name of the net service alias.</p>
+  <p>Enter the internal first argument, which is often used as an alternative program name. For example: <span class="Code">argv0</span></p>
 
-  <p><span class="gui-object">Net Service Name or Database Service</span></p>
+  <p><span class="gui-object">Program Arguments</span></p>
 
-  <p>Use the Net Service Name or Database Service box to enter information about the database service or net service name:</p>
+  <p>Enter the command line arguments that should be passed when starting the service. For example, <span class="Code">-mode=5.</span></p>
 
-  <p><span class="gui-object">Oracle Context:</span> Specify the Oracle Context of the database service or net service name by selecting one from the list or entering one in the field.</p>
+  <p><span class="gui-object">Environment</span></p>
 
-  <p><span class="gui-object">Name:</span> Specify the <a href="n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> of the database service or net service name by selecting one from the list or entering one in the field.</p>
+  <p>Enter any environment variables that should be set prior to starting the service. Environment variables are specified in the following format:</p>
 
-  <h2>Related Topics</h2>
+  <p><span class="Code"><em>environment_variable=values</em></span></p>
 
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
- <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
-</body>
-</html>
+  <p>For example, <span class="Code">user=scott, start=immediate.</span></p>
 
-          
-        
-      
-    </div>
-    
-    
-    
+  <p>Note that variables are separated by commas.</p>
 
-    <div>
-          
-    </div>
+  <p><span class="gui-object">SID</span></p>
 
-    
+  <p>Enter the program name or <a href="n8ahelpOracle_System_Identifier_SID.htm">Oracle System Identifier (SID)</a> for the service.</p>
 
-    <div>
-      
-    </div>
+  <p><span class="gui-object">Oracle Home Directory</span></p>
 
+  <p>Enter the location of the program executable.</p>
 
-    
+  <p><span class="gui-object">Add Service button</span></p>
 
-    
+  <p>Choose to configure non-database service information. A new <span class="gui-object">Service</span> tab displays where you can enter information for another service.</p>
 
-    <footer class="post-footer">
-      
+  <p><span class="gui-object">Remove Service button</span></p>
 
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-easyconnect/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-easyconnect/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
-                2009-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en-us">
-<head>
-  <title>easy connect naming</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="nmhelp_easyconnect">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>easy connect naming</h1>
-
-  <p>A <a href="n8ahelpnaming_method.htm">naming method</a> that enables clients to connect to a database server without any configuration. Clients use a simple TCP/IP address, consisting of a host name and optional port and service name:</p>
-
-  <p><span class="Code">CONNECT <em>username/password@host[:port][/service_name]</em></span></p>
-
-  <p>For information about using the easy connect naming method, see Chapter 8, Configuring Naming Methods, in the <em>Oracle10i Net Services Administrator's Guide</em>.</p>
+  <p>Choose to delete the selected <span class="gui-object">Service</span> tab and its service information.</p>
 
   <h2>Related Topics</h2>
 
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
- <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
-</body>
-</html>
+  <p><a href="n8ahelpConfigure_External_Procedures_fo.htm">Configure External Procedures for the Listener</a></p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-net-service-alias-details/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-net-service-alias-details/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
-                2009-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en-us">
-<head>
-  <title>Net Service Alias Details</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="alias_details">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1>Net Service Alias Details</h1>
-
-  <p>This property sheet enables you to view the details of the selected <a href="nmhelp_net_service_alias.htm">net service alias</a>.</p>
-
-  <p><span class="gui-object">Net Service Alias</span></p>
-
-  <p>View or modify the name of the net service alias.</p>
-
-  <p><span class="gui-object">Net Service Name or Database Service</span></p>
-
-  <p>View or modify the following information for the database service or net service name:</p>
-
-  <ul>
-    <li><span class="gui-object">Oracle Context:</span> View or modify the <a href="n8ahelpOracle_Context.htm">Oracle Context</a> of the database service or net service name.</li>
-
-    <li><span class="gui-object">Name:</span> View or modify the <a href="n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> of the database service or net service name.</li>
-  </ul>
-
-  <h2>Related Topics</h2>
-
-  <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
- <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpssl-profile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpssl-profile/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:22+08:00">
-                2009-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en-us">
-<head>
-  <title>ssl Profile</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <meta name="topic-id" content="profile_ssl">
-  <meta name="Description" content="enter description here...">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  <style type="text/css">
-  <!--
-  .style1 {font-size: 9px}
-  -->
-  </style>
-</head><!--(Body)==========================================================-->
-
-<body>
-
-  <h1 class="gui-object">SSL Profile</h1>
-
-  <p>The <span class="gui-object">SSL</span> tab enables you to modify Secure Sockets Layer (SSL) settings. SSL is an industry standard protocol for securing network communications. SSL provides for authentication, encryption, and data integrity. Use SSL to secure communications between any client and any server. Specifically, you can use SSL to authenticate any client or server to one or more Oracle servers or an Oracle server to any client.</p>
-
-  <p><span class="gui-object">Configure SSL</span></p>
-
-  <p>From the list, select to specify settings for either the client or server.</p>
-
-  <p>The settings you need to configure for the server are similar to those you set for the client. There is one additional parameter: a check box entitled Require Client Authentication.</p>
-
-  <p><span class="gui-object">Configuration Method</span></p>
-
-  <p>TBD...From the list, select <span class="gui-object">File System</span> to...., or select <span class="gui-object">Entrust</span> to...</p>
-
-  <p><span class="gui-object">Wallet Configuration</span></p>
-
-  <p>A wallet is contains certificates, keys and trust points. Select one of the four configuration methods described in the table. If the method chosen is File System or Entrust Wallets, <span class="gui-object">Browse</span> to search for a wallet in your file system.</p><!--(Table)=========================================================-->
-
-  <table summary="This table lists fields with links and the pages that appear when you click the links" x-use-null-cells="" style="width: 100%; x-border-left: 1px table-solid; x-border-top: 1px table-solid; x-border-right: 1px table-solid; x-border-bottom: 1px table-solid; border-collapse: separate; border-spacing: 2px;" cellspacing="2" width="100%" border="1">
-    <tr class="kadov-Cbold">
-      <td scope="col" style="x-cell-content-align: bottom; width: 32%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="32%">
-        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Wallet Configuration Method</b></p>
-      </td>
-
-      <td scope="col" style="x-cell-content-align: bottom; width: 68%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="68%">
-        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Access Method</b></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">File system</td>
-
-      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">
-        <p>Directory path</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; width: 32%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="32%">
-        <p style="text-align: left;" align="left">Microsoft certificate</p>
-      </td>
-
-      <td style="x-cell-content-align: top; width: 68%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="68%">None</td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Microsoft registry</td>
-
-      <td style="x-cell-content-align: top; width: 68%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="68%">
-        <p>Registry key</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Entrust wallets</td>
-
-      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Directory path</td>
-    </tr>
-  </table>
-
-  <p><span class="gui-object">Cipher Suite Configuration</span></p>
-
-  <p>Several SSL cipher suites have been installed by default. These default cipher suites will be overwritten if you add one or more manually.</p><!--(Table)=========================================================-->
-
-  <table summary="This table lists fields with links and the pages that appear when you click the links" x-use-null-cells="" style="width: 100%; x-border-left: 1px table-solid; x-border-top: 1px table-solid; x-border-right: 1px table-solid; x-border-bottom: 1px table-solid; border-collapse: separate; border-spacing: 2px;" cellspacing="2" width="100%" border="1">
-    <tr>
-      <td scope="col" style="x-cell-content-align: bottom; width: 25%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="25%">
-        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Element</b></p>
-      </td>
-
-      <td scope="col" style="x-cell-content-align: bottom; width: 75%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="bottom" width="75%">
-        <p style="text-align: left; color: #000000;" align="left"><b style="font-weight: bold;">Description</b></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Add button</td>
-
-      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">
-        <p>Choose to invoke the Select a Cipher Suite to enable dialog box. In the dialog box, select a suite, and then choose OK . The cipher suite is added to the list box.<strong><br>
-        Note:</strong> All Oracle Advanced Security encryption algorithms and key lengths are available for both U.S. domestic and international use.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; width: 25%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="25%">
-        <p style="text-align: left;" align="left">Remove button</p>
-      </td>
-
-      <td style="x-cell-content-align: top; width: 75%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="75%">Choose to remove a selected Cipher Suite.</td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Promote button</td>
-
-      <td style="x-cell-content-align: top; width: 75%; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top" width="75%">
-        <p>Choose to move a selected Cipher Suite to a higher level in the list.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td scope="row" style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Demote button</td>
-
-      <td style="x-cell-content-align: top; padding-left: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px;" valign="top">Choose to move a selected Cipher Suite to a lower level in the list.</td>
-    </tr>
-  </table>
-
-  <p><span class="gui-object">Revocation Check (Server only)</span></p>
-
-  <p>Specify a revocation check for a certificate. Select from one of the following values:</p>
-
-  <ul>
-    <li class="kadov-p">
-      <p><span class="gui-object">None:</span> Select to turn off certificate revocation checking.</p>
-    </li>
-
-    <li class="kadov-p">
-      <p><span class="gui-object">Required:</span> Select to perform certificate revocation when a certificate is available. If a certificate is revoked and no appropriate Certificate Revocation List (CRL) is found, then reject the SSL connection If no appropriate CRL is found to ascertain the revocation status of the certificate and the certificate is not revoked. then accept the SSL connection.</p>
-    </li>
-
-    <li class="kadov-p"><span class="gui-object">Requested:</span> Select to perform certificate revocation in case a CRL is available. Reject SSL connection if the certificate is revoked. If no appropriate CRL is found to determine the revocation status of the certificate and the certificate is not revoked, then accept the SSL connection</li>
-  </ul>
-
-  <p><span class="gui-object">Require SSL Version (optional)</span></p>
-
-  <p>From the list, select the version of SSL. The client and the server must use a compatible versions of SSL. You can select SSL v3.0 or choose to allow any existing or future version of SSL to be used.</p>
-
-  <p><span class="gui-object">Require Client Authentication (Server only)</span></p>
-
-  <p>This check box is selected by default. Deselect this check box if you do not want to require client-side authentication.</p>
-
-  <p><span class="gui-object">Match server X.509 name (Client only)</span></p>
-
-  <p>From the list, select whether or not check to see if the server's <a href="../April%20Updates/mgr/n8ahelpDistinguished_Name_DN.htm">distinguished name (DN)</a> matches its service name. If you enforce the match verifications, then SSL ensures that the certificate is from the server. If you select to not enforce the match verification, then SSL performs the check but allows the connection, regardless if there is a match. Not enforcing the match allows the server to potentially fake its identify. Select from one of the following values:</p>
-
-  <ul>
-    <li class="kadov-p">
-      <p><span class="gui-object">Yes:</span> Select to check the server DN. If the DN matches the service name, the connection succeeds. If the DN does not match the service name, the connection is successful, but an error is logged in the <span class="Code">sqlnet.log</span> file..</p>
-    </li>
-
-    <li class="kadov-p">
-      <p><span class="gui-object">No:</span> Select to not check the server DN. Ignoring this check can enable the server to fake its identity.</p>
-    </li>
-
-    <li class="kadov-p">
-      <p><span class="gui-object">Let Client Decide:</span> TBD</p>
-    </li>
-  </ul>
- <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
-</body>
-</html>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chetaofeng.github.io/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpAddress-List-Options-dialog-box/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="行锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/pub-images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="行锋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2009/05/28/数据库-plsql-工具-PLSQLDeveloper绿色版-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpAddress-List-Options-dialog-box/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-05-28T09:38:20+08:00">
-                2009-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en-us">
-<head>
-  <title>Address List Options dialog box</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="topic-id" content="address_options">
-  <link rel="stylesheet" href="blafdoc.css" type="text/css">
-  
-</head>
-
-<body>
-
-  <h1 class="gui-object">Address List Options dialog box</h1>
-
-  <p>The Address List Options dialog box enables you to specify the order and how the <a href="n8ahelpprotocol_address.htm">protocol addresses</a> in <a href="n8ahelpconnect_descriptor.htm">connect descriptors</a> are used in a connections.</p>
-
-  <p><span class="gui-object">Try each address, in order, until one succeeds</span></p>
-
-  <p>Select to enable <a href="n8ahelpconnecttime_failover.htm">connect-time failover</a> for an Oracle9<em>i</em> or Oracle8<em>i</em> client. If the first address cannot be reached, then failover enables the client to use the next listener protocol address. Select this option and the <span class="gui-object">Use Options Compatible with Net8 8.0 Clients</span> option to turn <a href="n8ahelpsource_routing.htm">source routing</a> off for a release 8.0 or previous client.</p>
-
-  <p><span class="gui-object">Try each address, randomly, until one succeeds</span></p>
-
-  <p>Select to enable <a href="n8ahelpclient_load_balancing.htm">client load balancing</a> and connect-time failover for an Oracle9<em>i</em> or Oracle8<em>i</em> client.</p>
-
-  <p><span class="gui-object">Try one address, selected at random</span></p>
-
-  <p>Select to enable client load balancing feature for an Oracle9<em>i</em> or Oracle8<em>i</em> client.</p>
-
-  <p><span class="gui-object">Use each address in order until destination is reached</span></p>
-
-  <p>Select to enable source routing for an Oracle8<em>i</em> or Oracle8 client.</p>
-
-  <p>This option is required when reaching the destination requires more than one address stop. This feature is typically used to enable Oracle Connection Manager features.</p>
-
-  <p>This parameter is not required for an Oracle9<em>i</em> client.</p>
-
-  <p><span class="gui-object">Use only the first address</span></p>
-
-  <p>Select to disable source routing, connect-time failover, and client load balancing features.</p>
-
-  <p><span class="gui-object">Use Options Compatible with Net8 8.0 Clients</span></p>
-
-  <p>Select if you are configuring a release 8.0 client. You will only be able to select among the following options:</p>
-
-  <p><span class="gui-object">-Try each address, in order, until one succeeds</span></p>
-
-  <p>-<span class="gui-object">Use each address in order until destination is reached</span></p>
-
-  <p>Clear this option if you are configuring a Oracle9<em>i</em> or Oracle8<em>i</em> client.</p>
-
-  <h2>Related Topics</h2>
-
-  <p><a href="n8ahelpConfigure_a_Connect_Desc00000028.htm">Configure a Connect Descriptor for Connections to Oracle Connection Manager</a></p>
-
-  <p><a href="n8ahelpConfigure_Multiple_Address_Optio.htm">Configure Multiple Address Options</a></p>
+  <p><a href="n8ahelpConfigure_Heterogeneous_Services.htm">Configure Heterogeneous Services for the Listener</a></p>
 
   <p><a href="n8ahelpnet8_overview.htm">Oracle Net Services Overview</a></p>
  <p class="zz-legal-notice">Copyright &copy; 1996, 2009, Oracle and/or its affiliates. All rights reserved.<br> Oracle is a registered trademark of Oracle Corporation and/or its affiliates. <br>Other names may be trademarks of their respective owners.</p>
@@ -2262,7 +2296,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/50/">50</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2317,7 +2351,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">484</span>
+                  <span class="site-state-item-count">496</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2328,7 +2362,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2433,7 +2467,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共223.6k字</span>
+  <span class="post-count">博客全站共229.9k字</span>
 </div>
 
 

@@ -1,20 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://chetaofeng.github.io/2019/02/20/Java-zookeeper%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2019-03-19</lastmod>
+    <loc>https://chetaofeng.github.io/2019/04/15/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-DNS/</loc>
+    <lastmod>2019-04-14</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/04/10/Java-Maven%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2019-04-10</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/04/10/Java-JUnit/</loc>
+    <lastmod>2019-04-10</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/04/01/Java-Spring-Webflux/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/11/26/Java-SpringBoot/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/10/18/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-vagrant/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/01/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-docker%E7%BD%91%E7%BB%9C%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/02/24/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/10/18/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-docker%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/26/Java-Java%E6%B3%A8%E8%A7%A3/</loc>
+    <lastmod>2019-03-25</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/25/Java-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2019-03-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/27/Java-%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2019-03-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2013/03/24/Java-RPC%E3%80%81http%E4%B8%8ERestful/</loc>
+    <lastmod>2019-03-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/28/Java-SpringMVC%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-03-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/24/Java-Spring%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-03-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/24/Java-Java%E5%8F%8D%E5%B0%84/</loc>
+    <lastmod>2019-03-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/24/Java-IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2019-03-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/12/19/%E5%85%B6%E4%BB%96-02-Homebrew/</loc>
+    <lastmod>2019-03-21</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-01-mac%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2019-03-20</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/02/20/Java-zookeeper%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-03-20</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/24/Java-LDAP/</loc>
+    <lastmod>2019-03-19</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2019/03/19/%E5%85%B6%E4%BB%96-SourceTree%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-03-19</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-04-git%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2019-03-19</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-09-JetBrains%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-03-19</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2019/04/05/%E6%95%B0%E6%8D%AE%E5%BA%93-Redis%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2019-03-19</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2019/02/24/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2019-03-11</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/11/26/Java-SpringBoot/</loc>
-    <lastmod>2019-03-11</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/05/CI-Jekins/</loc>
     <lastmod>2019-03-11</lastmod>
@@ -49,9 +109,6 @@
     <loc>https://chetaofeng.github.io/2019/03/07/Java-Java%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2019-03-07</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2019/03/07/Java-IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2019-03-07</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2019/03/06/Linux-Linux%E4%B8%8Bpid%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2019-03-06</lastmod>
   </url>  <url>
@@ -73,9 +130,6 @@
     <loc>https://chetaofeng.github.io/2019/03/05/Java-Lodop/</loc>
     <lastmod>2019-03-05</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/18/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-docker%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2019-03-04</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2019/03/04/Java-%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2019-03-04</lastmod>
   </url>  <url>
@@ -87,12 +141,6 @@
   </url>  <url>
     <loc>https://chetaofeng.github.io/2019/03/02/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-k8s%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2019-03-02</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2019/03/01/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-docker%E7%BD%91%E7%BB%9C%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-03-01</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/18/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-vagrant/</loc>
-    <lastmod>2019-02-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/04/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-11-MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2019-02-28</lastmod>
@@ -137,9 +185,6 @@
     <lastmod>2019-02-15</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2019/02/15/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91-Android%E4%B8%AD%E4%B8%BB%E9%A2%98-Theme-%E5%92%8C%E6%A0%B7%E5%BC%8F-Style-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-02-15</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-04-git%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2019-02-15</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/15/react-rn-2018-10-15-React%E5%85%A8%E5%AE%B6%E6%A1%B6/</loc>
@@ -349,28 +394,22 @@
     <loc>https://chetaofeng.github.io/2018/10/04/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-10-hexo%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2019-02-14</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-09-JetBrains%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-02-14</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-08-Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2019-02-14</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-05-node%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2019-02-14</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/01/02/%E5%85%B6%E4%BB%96-2019-1-02-iphone8p%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2019-02-14</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/12/19/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-01-mac%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2019-02-14</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-ASP-NET-MVC%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-01-10</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-ASP-NET-WebForms%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-Razor%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-01-10</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-ASP-NET-MVC%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-01-10</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/10/06/C-%E5%BC%80%E5%8F%91-2018-10-06-ASP-NET-HTML%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-WebPages/</loc>
@@ -379,22 +418,16 @@
     <loc>https://chetaofeng.github.io/2018/10/05/C-%E5%BC%80%E5%8F%91-2018-10-05-Windows%E4%B8%8BSVN%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%8F%8AVS2015%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E8%81%94%E5%8A%A8/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/06/C-%E5%BC%80%E5%8F%91-2018-10-06-ASP-NET-HTML%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/</loc>
-    <lastmod>2019-01-10</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2018/11/02/C-%E5%BC%80%E5%8F%91-2018-11-02-NuGet/</loc>
-    <lastmod>2019-01-10</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/12/10/Java-MyBatis/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React-Router/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React%E7%9B%B8%E5%85%B3%E9%9C%80%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-middleware/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-middleware/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React%E7%9B%B8%E5%85%B3%E9%9C%80%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-redux-thunk/</loc>
@@ -406,19 +439,22 @@
     <loc>https://chetaofeng.github.io/2018/10/06/%E5%85%B6%E4%BB%96-2018-10-06-ngrok%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2018/12/10/Java-MyBatis/</loc>
+    <lastmod>2019-01-10</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-2018-10-26-CommonJS%E8%A7%84%E8%8C%83-AMD-CMD/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-2018-10-26-ECMAScript%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-2018-10-06-%E5%BE%AE%E4%BF%A1%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/05/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-10-05-MySQL%E5%AE%89%E8%A3%85-Windows/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-2018-10-06-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2018/10/05/%E6%95%B0%E6%8D%AE%E5%BA%93-2018-10-05-MySQL%E5%AE%89%E8%A3%85-Windows/</loc>
+    <loc>https://chetaofeng.github.io/2018/10/06/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-2018-10-06-%E5%BE%AE%E4%BF%A1%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2018/10/26/react-rn-2018-10-26-React%E5%85%A5%E9%97%A8/</loc>
@@ -433,13 +469,13 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDomain-Name-System-DNS/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpGeneral-Advanced/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpGeneral-Access-Rights/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpGeneral-Logging/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpGeneral-Advanced/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpGeneral-Parameters-Authenticatio/</loc>
@@ -451,13 +487,13 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpGeneral-Tracing/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpIP-address/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpHeterogeneous-Services/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpKERBEROSv5/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpIP-address/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpLSNRCTL-utility/</loc>
@@ -466,10 +502,10 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpLightweight-Directory-Access-Pro/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpListening-Locations/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpMicrosoft-Active-Directory/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpMicrosoft-Active-Directory/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpListening-Locations/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNaming-External/</loc>
@@ -478,10 +514,10 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNaming-Methods/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNet8-Configuration-Assistant/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNetwork-Information-Service-NIS/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNetwork-Information-Service-NIS/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpNet8-Configuration-Assistant/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security/</loc>
@@ -490,34 +526,34 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Authent/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Integri/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Encrypt/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Other-P/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-Integri/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Connection-Manager/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Advanced-Security-SSL/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Connection-Manager/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Context/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Enterprise-Manager/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Context/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-System-Identifier-SID/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Internet-Directory/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOther-Services/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-System-Identifier-SID/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpOracle-Rdb-database/</loc>
@@ -529,19 +565,19 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpProfile-Overview/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRecommended-Port-Numbers/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRADIUS/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRADIUS/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRecommended-Port-Numbers/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRejected/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRequested/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRoute-Connection-Requests/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRoute-Connection-Requests/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRequested/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpRequired/</loc>
@@ -553,34 +589,34 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpService-Identification/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpSet-Authentication-Credentials/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpTask-Overview/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpTask-Overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpSet-Authentication-Credentials/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpToolbar/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpTree-Structure-and-Hierarchical/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpaccepted/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpWindows-NT-native-authentication/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpTree-Structure-and-Hierarchical/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpabout-oracle-advanced-security/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpaccepted/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpaddress/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpadvanced-service-options-dialog/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpaddresslist/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpaddresslist/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpadvanced-service-options-dialog/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpauthentication-method/</loc>
@@ -595,31 +631,28 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpclient-load-balancing/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-a-connect-desc00000029/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-advanced-profile-infor/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpcmanora-file/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpcommand-menu/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-a-connect-desc00000029/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-default-domains-for-cl/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-advanced-profile-infor/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-encryption/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-external-naming-method/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-integrity/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-encryption/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-listener-addresses/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-integrity/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-listener-logging-and-t/</loc>
@@ -629,6 +662,9 @@
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-profile-logging-and-tr/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconfigure-listener-addresses/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconnect-data/</loc>
@@ -643,6 +679,9 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconnect-string/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpcreate-additional-protocol-addre/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpconnecttime-failover/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
@@ -652,46 +691,40 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpcreate-a-listener/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpcreate-additional-protocol-addre/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdatabase-identification-by-servi/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpcreate-network-route-information/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdatabase-link/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdedicated-server/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming-configuration-o/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdatabase-services/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-server-authentication/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdatabase-identification-by-servi/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-server/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdatabase-link/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming-configuration-o/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming-context/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming-overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdedicated-server/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-server/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-server-authentication/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdiscovery/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdomain/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdirectory-naming-overview/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpedit-menu/</loc>
@@ -700,16 +733,19 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpencryption/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpexport-oracle-names-entries-to-d/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpdomain/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpexport-tnsnamesora-file-entries/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpexport-oracle-names-entries-to-d/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpexternal-naming/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpexternal-procedures/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpexport-tnsnamesora-file-entries/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpfile-menu/</loc>
@@ -724,19 +760,19 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpglobal-database-name/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphelp-menu/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphost-naming/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphost-naming/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelphelp-menu/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinitialization-parameter-file/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance-name/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinstance-name/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpinitialization-parameter-file/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpintegrity/</loc>
@@ -757,10 +793,10 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistener-overview/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistenerora-file/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000018/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000018/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplistenerora-file/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplocal-naming00000153/</loc>
@@ -772,13 +808,10 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelplogging/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-assistant-key-features/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnaming-method/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-configuration-overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-assistant-key-features/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-entries-in-a-directory/</loc>
@@ -787,16 +820,19 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-connectivity-overview/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-configuration-overview/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet8-overview/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet-service-name/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpoverview-of-the-net8-assistant-e/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnts/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpoverview-of-the-net8-assistant-e/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpnet-service-name/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelppooled-server/</loc>
@@ -805,13 +841,13 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpprofile/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpprotocol-address/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpprotocol/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpprotocol-parameters/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpprotocol-address/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelprecord-type/</loc>
@@ -838,25 +874,25 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpsession-data-unit-SDU/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpsingle-signon/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpshared-server/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpsource-routing/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpsingle-signon/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpsqlnetora-file/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelptimetolive-ttl/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpstatically-configure-database-se/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelptest-connectivity/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelptimetolive-ttl/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelptnsnamesora-file/</loc>
@@ -868,16 +904,16 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpwelcome-to-the-net8-assistant/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-create-net-service-alias/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-create-an-alias/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-easyconnect/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-net-service-alias/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-net-service-alias/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-create-net-service-alias/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-easyconnect/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-nmhelp-net-service-alias-details/</loc>
@@ -889,19 +925,16 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-blafdoc/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCONNECTDATA/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpAddress-List-Options-dialog-box/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-External-Procedures-fo/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpChoose-New-Context-dialog-box/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCONNECTDATA/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Advanced-Connect-Data/</loc>
-    <lastmod>2009-06-24</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpChoose-New-Context-dialog-box/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Heterogeneous-Services/</loc>
@@ -910,7 +943,7 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Oracle-Advance00000211/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Desc00000028/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-External-Procedures-fo/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Multiple-Address-Optio/</loc>
@@ -919,10 +952,13 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-Oracle-Advance00000212/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descheterog/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descrdb/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descrdb/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Desc00000028/</loc>
+    <lastmod>2009-06-24</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpConfigure-a-Connect-Descheterog/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpCreate-a-Net-Service-Name/</loc>
@@ -934,10 +970,10 @@
     <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Information-Tree-DIT/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDistinguished-Name-DN/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Naming-Requirements-fo/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDirectory-Naming-Requirements-fo/</loc>
+    <loc>https://chetaofeng.github.io/2009/06/25/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-zh-CN-n8ahelpDistinguished-Name-DN/</loc>
     <lastmod>2009-06-24</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpListening-Locations/</loc>
@@ -964,10 +1000,10 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpService-Identification/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-configuration-overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-overview/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener-configuration-overview/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnts/</loc>
@@ -988,28 +1024,28 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpssl-profile/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpAddress-List-Options-dialog-box/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpCONNECTDATA/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpChoose-New-Context-dialog-box/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-Advanced-Connect-Data/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-External-Procedures-fo/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpAddress-List-Options-dialog-box/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpChoose-New-Context-dialog-box/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-Heterogeneous-Services/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-Oracle-Advance00000211/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-External-Procedures-fo/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-Multiple-Address-Optio/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-Oracle-Advance00000211/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-Oracle-Advance00000212/</loc>
@@ -1021,10 +1057,10 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-a-Connect-Descheterog/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpCreate-a-Net-Service-Name/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-a-Connect-Descrdb/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpConfigure-a-Connect-Descrdb/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpCreate-a-Net-Service-Name/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpCyberSafe/</loc>
@@ -1033,10 +1069,10 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpDirectory-Information-Tree-DIT/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpDistinguished-Name-DN/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpDirectory-Naming-Requirements-fo/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpDirectory-Naming-Requirements-fo/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpDistinguished-Name-DN/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpDomain-Name-System-DNS/</loc>
@@ -1045,16 +1081,19 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Access-Rights/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Advanced/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Logging/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Parameters-Authenticatio/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Advanced/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Parameters-Logging-Trac/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Parameters-Logging-Trac/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpHeterogeneous-Services/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpGeneral-Tracing/</loc>
@@ -1063,19 +1102,19 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpIP-address/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpHeterogeneous-Services/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpKERBEROSv5/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpLSNRCTL-utility/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpLightweight-Directory-Access-Pro/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpKERBEROSv5/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpMicrosoft-Active-Directory/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpNaming-External/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpNaming-Methods/</loc>
@@ -1084,13 +1123,10 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpNet8-Configuration-Assistant/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpNaming-External/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpNetwork-Information-Service-NIS/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Advanced-Security/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpNetwork-Information-Service-NIS/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Advanced-Security-Authent/</loc>
@@ -1105,19 +1141,22 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Connection-Manager/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Context/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Internet-Directory/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Internet-Directory/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Context/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-Rdb-database/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-System-Identifier-SID/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpPrioritize-Naming-Methods/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpOracle-System-Identifier-SID/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpRADIUS/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpProfile-Overview/</loc>
@@ -1129,34 +1168,34 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpRoute-Connection-Requests/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpRADIUS/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpRequired/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpSSL-authentication-method/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpTask-Overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpToolbar/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpSet-Authentication-Credentials/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpToolbar/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpTask-Overview/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpTree-Structure-and-Hierarchical/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpWindows-NT-native-authentication/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpabout-oracle-advanced-security/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpWindows-NT-native-authentication/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpaccepted/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpaddress/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpaddresslist/</loc>
@@ -1165,25 +1204,19 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpadvanced-service-options-dialog/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpaddress/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpauthentication-method/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpchoose-listener-name-dialog-box/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpclient-load-balancing/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpchange-the-oracle-context/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpclient-load-balancing/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpcmanora-file/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-a-connect-desc00000029/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpchoose-listener-name-dialog-box/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpcommand-menu/</loc>
@@ -1192,19 +1225,22 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-advanced-profile-infor/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-default-domains-for-cl/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-integrity/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-encryption/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-a-connect-desc00000029/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-external-naming-method/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-default-domains-for-cl/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-encryption/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-listener-addresses/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-integrity/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconfigure-listener-logging-and-t/</loc>
@@ -1234,64 +1270,64 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpconnecttime-failover/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpcreate-additional-protocol-addre/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdatabase-identification-by-servi/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpcreate-a-listener/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpcreate-network-route-information/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdatabase-identification-by-servi/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpcreate-additional-protocol-addre/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdatabase-link/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdedicated-server/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdatabase-services/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdedicated-server/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-naming-configuration-o/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdatabase-link/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-naming/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-naming-overview/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-naming-configuration-o/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-naming-context/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-server-authentication/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-naming-overview/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-server/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdirectory-server-authentication/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdiscovery/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdomain/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpencryption/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpedit-menu/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpexternal-naming/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpdomain/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpexport-tnsnamesora-file-entries/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpexport-oracle-names-entries-to-d/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpencryption/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpexternal-naming/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpexternal-procedures/</loc>
@@ -1312,13 +1348,16 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelphelp-menu/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelphost-naming/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpinitialization-parameter-file/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpinstance/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelphost-naming/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpintegrity/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpldapora-file/</loc>
@@ -1327,40 +1366,40 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpinstance-name/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpintegrity/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplink-qualifier/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistener/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistenerora-file/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplocal-naming00000153/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplocal-naming00000018/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplistenerora-file/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplocal-naming-configuration-overv/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplogging/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplocal-naming00000153/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-configuration-overview/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-assistant-key-features/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnaming-method/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelplogging/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-assistant-key-features/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-configuration-overview/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-connectivity-overview/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet-service-name/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-overview/</loc>
@@ -1369,7 +1408,7 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet8-entries-in-a-directory/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpnet-service-name/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpprofile/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpoverview-of-the-net8-assistant-e/</loc>
@@ -1378,19 +1417,16 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpprotocol/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpprofile/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpprotocol-address/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpprotocol-address/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelprecord-type/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpprotocol-parameters/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpregion-database/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelprecord-type/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelprelative-distinguished-name-rdn/</loc>
@@ -1402,13 +1438,13 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpservice-handler/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpservice-name/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpsession-data-unit-SDU/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpservice-registration/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpservice-name/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpshared-server/</loc>
@@ -1417,31 +1453,31 @@
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpsingle-signon/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpstatically-configure-database-se/</loc>
-    <lastmod>2009-05-28</lastmod>
-  </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpsqlnetora-file/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpsource-routing/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelptest-connectivity/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelptnsnamesora-file/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelptimetolive-ttl/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelptnsnamesora-file/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpstatically-configure-database-se/</loc>
+    <lastmod>2009-05-28</lastmod>
+  </url>  <url>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelptest-connectivity/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelptracing/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpwelcome-to-the-net8-assistant/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-create-an-alias/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
-    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-create-an-alias/</loc>
+    <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-n8ahelpwelcome-to-the-net8-assistant/</loc>
     <lastmod>2009-05-28</lastmod>
   </url>  <url>
     <loc>https://chetaofeng.github.io/2009/05/28/%E6%95%B0%E6%8D%AE%E5%BA%93-plsql-%E5%B7%A5%E5%85%B7-PLSQLDeveloper%E7%BB%BF%E8%89%B2%E7%89%88-PLSQL-Developer-NETWORK-tools-help-mgr-help-nmhelp-net-service-alias/</loc>
